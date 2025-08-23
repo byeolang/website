@@ -1,0 +1,13 @@
+# main links
+main:
+  - title: "🗞"
+    url: /posts/
+    image: "https://jekyllrb.com/img/logo-2x.png"
+  - title: "📩"
+    url: /download/
+  - title: "📚"
+    url: /guide/
+  - title: "▶"
+    url: /play/
+  - title: "ref"
+    url: /ref/

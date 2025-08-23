@@ -1,0 +1,761 @@
+/* ==========================================================================
+   BASE ELEMENTS
+   ========================================================================== */
+
+$white: #E9EBF2;
+$night: #0B1C26;
+$night2: #112A40;
+$night3: #2E4559;
+$grass: #6AB04B;
+$point: #4189A6;
+$moon: #D9B29C;
+$nebular: #ca5fa4;
+$nebular2: #F2B6D7;
+
+html {
+  /* sticky footer fix */
+  position: relative;
+  min-height: 100%;
+}
+
+a.site-logo {
+  width: 40px;
+}
+
+div#main-content {
+  position: relative;
+  top: 20%;
+}
+
+img.star {
+  position: fixed;
+  z-index: 0;
+}
+
+#main-content-navi a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration-line: none;
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    outline: 0;
+  }
+}
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+button.learn-more {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  &.learn-more {
+    width: 12rem;
+    height: auto;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      margin-left: 10px;
+      margin-top: 3px;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid $night;
+            border-right: 0.125rem solid $night;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+        transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $night;
+    }
+  }
+}
+
+html button.learn-more {
+  &.learn-more {
+    .circle {
+      background: $white;
+      .icon {
+        background: $white;
+        &.arrow {
+          background: none;
+        }
+      }
+    }
+    .button-text {
+      color: $night3;
+    }
+  }
+  &:hover {
+    .circle {
+      background: $white;
+      .icon {
+        background: $white;
+        &.arrow {
+          background: $night;
+        }
+      }
+    }
+    .button-text {
+      color: $night;
+    }
+  }
+}
+
+html.dark-mode button.learn-more {
+  &.learn-more {
+    .circle {
+      background: $white;
+      .icon {
+        background: $white;
+        &.arrow {
+          background: none;
+        }
+      }
+    }
+    .button-text {
+      color: $white;
+    }
+  }
+  &:hover {
+    .circle {
+      background: $white;
+      .icon {
+        background: $white;
+        &.arrow {
+          background: $night;
+        }
+      }
+    }
+    .button-text {
+      color: $night;
+    }
+  }
+}
+
+
+a#main-content-download {
+    border-right: 2px solid #8C7765;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #222429;
+  --primary-bg-color: #333740;
+  --primary-color: #2c62f6;
+  --text-color: #b1b8ca;
+  --text-active: #ffffff;
+  --button-hover-bg-color: #2b2e34;
+  --border-color: #494d59;
+  --dropdown-height: 0;
+  --rotate-arrow: 0;
+  --translate-value: 10;
+  --list-opacity: 0;
+  --transition-time: 0.2s;
+  --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --border-radius: 1.4rem;
+  --list-button-height: 2.0rem;
+  --floating-icon-size: 26;
+  --floating-icon-top: 0;
+  --floating-icon-left: 0;
+}
+
+svg#download-icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.text-truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dropdown-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.dropdown-title-icon,
+.dropdown-arrow {
+  display: inline-flex;
+}
+
+.dropdown-title {
+  margin: 0 auto 0 1.8rem;
+  text-transform: capitalize;
+}
+
+.dropdown-button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.0rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1.8rem;
+}
+
+.dropdown-button svg {
+  transition: all var(--transition-time) var(--transition-timing);
+  fill: var(--text-color);
+}
+
+.dropdown-button svg,
+.dropdown-button span {
+  pointer-events: none;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+  color: var(--text-active);
+}
+
+.dropdown-button:hover svg,
+.dropdown-button:focus svg {
+  fill: var(--text-active);
+}
+
+.main-button {
+  height: 3rem;
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  background-color: var(--primary-bg-color);
+  border: 0.1rem solid var(--border-color);
+  transition: all var(--transition-time) var(--transition-timing);
+}
+
+.main-button:focus {
+  border: 0.1rem solid var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(44, 98, 246, 0.4);
+}
+
+.main-button .dropdown-arrow {
+  transition: transform var(--transition-time) var(--transition-timing);
+  transform: rotate(var(--rotate-arrow));
+  margin-left: 1.8rem;
+}
+
+.list-button {
+  margin-top: 2px;
+  transition: color var(--transition-time) var(--transition-timing);
+  color: var(--text-color);
+  overflow: hidden;
+  cursor: none;
+}
+
+.dropdown-list-container {
+  margin-top: -16px;
+  overflow: hidden;
+  max-height: var(--dropdown-height);
+  transition: max-height var(--transition-time) var(--transition-timing);
+}
+
+.dropdown-list-wrapper {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-bg-color);
+  border-radius: var(--border-radius);
+  border: 0.1rem solid var(--border-color);
+  position: relative;
+}
+
+ul.dropdown-list {
+  position: relative;
+  list-style-type: none;
+}
+
+ul.dropdown-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  height: var(--list-button-height);
+  background-color: var(--button-hover-bg-color);
+  transition: all var(--transition-time) linear;
+  transform: translateY(calc(var(--translate-value) - 10px));
+  border-radius: var(--border-radius);
+  pointer-events: none;
+}
+ul.dropdown-list:hover::before,
+ul.dropdown-list:hover ~ .floating-icon {
+  opacity: 1;
+}
+
+li.dropdown-list-item {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  opacity: var(--list-opacity);
+  transition: opacity 0.8s var(--transition-timing);
+}
+
+.floating-icon {
+  height: calc(var(--floating-icon-size) * 1px);
+  width: calc(var(--floating-icon-size) * 1px);
+  position: absolute;
+  top: var(--floating-icon-top);
+  left: var(--floating-icon-left);
+  background-color: var(--border-color);
+  border-radius: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-time) var(--transition-timing);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-icon svg {
+  fill: var(--text-active);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $global-font-family;
+  line-height: 1.3;
+
+  &.overflow--hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
+    overflow: hidden;
+  }
+}
+
+html > body {
+  color: var(--byeol-night3);
+}
+
+html.dark-mode > body {
+  color: var(--byeol-white2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 3em 0 0.5em;
+  line-height: 1.2;
+  font-family: $header-font-family;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: $h-size-1;
+}
+
+h2 {
+  font-size: $h-size-2;
+}
+
+h3 {
+  font-size: $h-size-3;
+}
+
+h4 {
+  font-size: $h-size-4;
+}
+
+h5 {
+  font-size: $h-size-5;
+}
+
+h6 {
+  font-size: $h-size-6;
+}
+
+small,
+.small {
+  font-size: $type-size-6;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+u,
+ins {
+  text-decoration: none;
+  border-bottom: 1px solid $text-color;
+  a {
+    color: inherit;
+  }
+}
+
+del a {
+  color: inherit;
+}
+
+/* reduce orphans and widows when printing */
+
+p,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+figure,
+table,
+fieldset {
+  orphans: 3;
+  widows: 3;
+}
+
+/* abbreviations */
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 1px dotted $text-color;
+}
+
+/* blockquotes */
+
+blockquote {
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-style: italic;
+  border-left: 0.25em solid $primary-color;
+
+  cite {
+    font-style: italic;
+
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
+}
+
+/* links */
+
+a {
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    outline: 0;
+  }
+}
+
+/* buttons */
+
+button:focus {
+  @extend %tab-focus;
+}
+
+/* code */
+
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: $monospace;
+}
+
+code.hljs {
+  white-space: pre-wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* horizontal rule */
+
+hr {
+  display: block;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+}
+
+/* lists */
+
+ul li,
+ol li {
+  margin-bottom: 0.5em;
+}
+
+li ul,
+li ol {
+  margin-top: 0.5em;
+}
+
+/*
+   Media and embeds
+   ========================================================================== */
+
+/* Figures and images */
+
+figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
+
+  img,
+  iframe,
+  .fluid-width-video-wrapper {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+  }
+
+  > a {
+    display: block;
+  }
+
+  &.half {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(50% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+
+  &.third {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(33.3333% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+}
+
+/* Figure captions */
+
+figcaption {
+  margin-bottom: 0.5em;
+  color: $muted-text-color;
+  font-family: $caption-font-family;
+  font-size: $type-size-6;
+
+  a {
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
+/* Fix IE9 SVG bug */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*
+   Navigation lists
+   ========================================================================== */
+
+/**
+ * Removes margins, padding, and bullet points from navigation lists
+ *
+ * Example usage:
+ * <nav>
+ *    <ul>
+ *      <li><a href="#link-1">Link 1</a></li>
+ *      <li><a href="#link-2">Link 2</a></li>
+ *      <li><a href="#link-3">Link 3</a></li>
+ *    </ul>
+ *  </nav>
+ */
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* override white-space for nested lists */
+  ul li,
+  ol li {
+    margin-bottom: 0;
+  }
+
+  li ul,
+  li ol {
+    margin-top: 0;
+  }
+}
+
+/*
+   Global animation transition
+   ========================================================================== */
+
+b,
+i,
+strong,
+em,
+blockquote,
+p,
+q,
+span,
+figure,
+img,
+h1,
+h2,
+header,
+input,
+a,
+tr,
+td,
+form button,
+input[type="submit"],
+.btn,
+.highlight,
+.archive__item-teaser {
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+}
+
+a.language {
+    font-size: 50px;
+    margin-top: 100px;
+}
+a.left-lang {
+    float: left;
+    margin-left: 100px;
+}
+a.right-lang {
+    float: right;
+    margin-right: 100px;
+}
+
+div.embed_holder {
+    width: 100%;
+    height: 100px;
+}
+div.embed_src {
+    display: none
+}
+input.embed_src {
+    position: absolute;
+    margin-top: 50px;
+    transform: translate(0, -50%);
+    left: 50%;
+}
+iframe.embed_src {
+    width: 100%;
+    height: 100%;
+}

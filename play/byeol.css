@@ -1,0 +1,46 @@
+:root {
+    --byeol-white: #FFFFFF;
+    --byeol-white2: #E9EBF2;
+    --byeol-night: #0B1C26;
+    --byeol-night2: #112A40;
+    --byeol-night3: #2E4559;
+    --byeol-grass: #6AB04B;
+    --byeol-point: #4189A6;
+    --byeol-moon: #E0B88D;
+    --byeol-nebular: #ca5fa4;
+    --byeol-nebular2: #F2B6D7;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+textarea#output {
+    display: none;
+    background-color: var(--byeol-night2);
+    color: var(--byeol-white);
+    height: 100vh;
+    width: calc(100% - 100px);
+
+    border: 0px solid;
+
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+
+    font-size: 15px;
+    font-family: Retro Gaming;
+}
+
+textarea#output:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+div#playbt {
+    width: 100vw;
+    height: 100vh;
+    background-color: #204261;
+}

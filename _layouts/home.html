@@ -1,0 +1,83 @@
+---
+layout: default2
+---
+
+<script type="module" src="assets/js/doxygen-awesome-darkmode-toggle.mjs"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/doxygen-awesome-darkmode-toggle.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="assets/js/bg.js"></script>
+<script type='module' src='assets/js/homeBg.mjs'></script>
+<script type="module" src="assets/js/seaBg.mjs"></script>
+
+<div id="main-bg" role="main">
+  {% include sidebar.html %}+
+  <div id="main-content">
+    <div id='main-content-header'>
+      <img src='assets/images/logo.png' id='main-content-logo' />
+      <div id="main-content-logo-aura-line" class="logo-aura"></div>
+      <div id="main-content-logo-aura" class="logo-aura">
+        <div id="main-content-logo-rays" class="logo-aura">
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="ray ray4"></div>
+          <div class="ray ray5"></div>
+          <div class="ray ray6"></div>
+          <div class="ray ray7"></div>
+          <div class="ray ray8"></div>
+          <div class="ray ray9"></div>
+          <div class="ray ray10"></div>
+        </div>
+      </div>
+      <div id="main-content-title">The Byeol Programming Language</div>
+    </div>
+
+    <div id='main-content-navi'>
+      <a id='main-content-feature' href='/guide/'>
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Learn More</span>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="mountain1" class='svg-container mountain'>
+  <object data='assets/images/mountain1.svg' type='image/svg+xml'></object>
+</div>
+<div id="mountain2" class='svg-container mountain'>
+  <object data='assets/images/mountain2.svg' type='image/svg+xml'></object>
+</div>
+<div id="mountain3" class='svg-container mountain'>
+  <object data='assets/images/mountain3.svg' type='image/svg+xml'></object>
+</div>
+<div id="reflection-light"></div>
+<div id="grass" class="svg-container grass">
+  <object data="assets/images/grass.svg" type="image/svg+xml"></object>
+</div>
+<div id="main-bg-sea"></div>
+<div id="hill1" class="svg-container grass">
+  <object data="assets/images/hill1.svg" type="image/svg+xml"></object>
+</div>
+<style>
+  div.initial-content {
+    flex: 0;
+  }
+</style>
