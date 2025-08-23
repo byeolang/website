@@ -1,0 +1,268 @@
+:root {
+    --byeol-white: #FFFFFF;
+    --byeol-white2: #E9EBF2;
+    --byeol-night: #0B1C26;
+    --byeol-night2: #112A40;
+    --byeol-night3: #2E4559;
+    --byeol-grass: #6AB04B;
+    --byeol-point: #4189A6;
+    --byeol-moon: #E0B88D;
+    --byeol-nebular: #ca5fa4;
+    --byeol-nebular2: #F2B6D7;
+}
+
+iframe#byeol {
+    width: 100%;
+    height:calc(100% - 45px);
+    border: 0px solid;
+}
+div#top_pane {
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+}
+
+html div#top_pane {
+    background-color: var(--byeol-white);
+}
+html.dark-mode div#top_pane {
+    background-color: var(--byeol-night);
+}
+
+div.initial-content {
+    display: flex;
+    flex-direction: column;
+}
+
+div#codepad{
+  width: 100%;
+  height: 100%;
+}
+
+div#bottom_pane {
+  display: flex;
+}
+
+div#result{
+  background-color: var(--byeol-night2);
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  border: 2px solid #333;
+  border-radius: 16px;
+  box-shadow: 5px 11px 14px 9px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+div.hidden-popup {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+}
+
+div.search-content {
+    flex: 0;
+    display: none;
+    height: 0px;
+}
+
+@font-face {
+    font-family: 'Retro Gaming';
+    font-style: 'normal';
+    font-weight: 400;
+    src: url('Retro Gaming.ttf') format('truetype');
+}
+
+label#lb_verbose {
+    display:inline;
+    margin-right: 20px;
+}
+
+.bin_ver {
+    font-size: smaller;
+    display: contents;
+}
+
+input#runbt {
+    border-radius: 1.4rem;
+    background-color: var(--byeol-moon);
+    width: 80px;
+}
+
+input#runbt:hover {
+    background-color: var(--byeol-white2); /* $white */
+}
+
+select#dd-srcs {
+    hegith: 27px;
+    margin-left: 10px;
+    border-radius: 1.4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+html.dark-mode select#dd-srcs {
+    background-color: var(--byeol-night3);
+    color: var(--byeol-white2);
+}
+html select#dd-srcs {
+    background-color: var(--byeol-white2);
+    color: var(--byeol-night3);
+}
+
+input#bt-close {
+    float: right;
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: var(--byeol-moon);
+    border-radius: 15px;
+    padding-top: 5px;
+}
+
+input#bt-close:hover {
+    background-color: var(--byeol-white2);
+}
+
+div#result b {
+    color: #fff;
+}
+
+div#result img {
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.slider {
+    border-radius: 24px !important;
+    transition: background-color 0.2s ease;
+}
+
+
+/* checkbox: */
+div.checkboxes__item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 27px;
+  justify-content: center;
+  align-content: center;
+  margin-right: 40px;
+}
+
+html div.checkbox__body {
+  color: var(--byeol-night2);
+}
+html.dark-mode div.checkbox__body {
+  color: var(--byeol-white);
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+html .checkbox input:checked ~ .checkbox__checkmark {
+  background-color: var(--byeol-white2);
+  border: 2px solid transparent;
+}
+
+html.dark-mode .checkbox input:checked ~ .checkbox__checkmark {
+  background-color: var(--byeol-night3);
+  border: 2px solid transparent;
+}
+
+.checkbox input:checked ~ .checkbox__checkmark:after {
+  left: 21px;
+}
+
+/* hover: */
+html .checkbox:hover input ~ .checkbox__checkmark {
+  background-color: var(--byeol-night2);
+  border: 2px solid var(--byeol-white);
+}
+html .checkbox:hover input ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-white);
+}
+html .checkbox:hover input:checked ~ .checkbox__checkmark {
+  background-color: var(--byeol-moon);
+  border: 2px solid var(--byeol-white);
+}
+html .checkbox:hover input:checked ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-white);
+}
+
+html.dark-mode .checkbox:hover input ~ .checkbox__checkmark {
+  background-color: var(--byeol-white);
+}
+html.dark-mode .checkbox:hover input ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-night2);
+}
+html.dark-mode .checkbox:hover input:checked ~ .checkbox__checkmark {
+  background-color: var(--byeol-moon);
+}
+html.dark-mode .checkbox:hover input:checked ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-white);
+}
+
+
+.checkbox .checkbox__checkmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 29px;
+  width: 40px;
+  transition: background-color 0.25s ease;
+  border-radius: 15px;
+  border: 2px solid transparent;
+}
+html .checkbox .checkbox__checkmark {
+  background-color: var(--byeol-white2);
+}
+html.dark-mode .checkbox .checkbox__checkmark {
+  background-color: var(--byeol-night3);
+}
+
+.checkbox .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-radius: 50%;
+  transition: left 0.25s ease;
+}
+html .checkbox input ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-night2);
+}
+html .checkbox input:checked ~ .checkbox__checkmark:after {
+  background-color: var(--byeol-moon);
+}
+html.dark-mode .checkbox .checkbox__checkmark:after {
+  background-color: var(--byeol-white2);
+}
+
+.checkbox .checkbox__body {
+  color: #333;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}

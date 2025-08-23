@@ -1,0 +1,46 @@
+---
+layout: page
+permalink: play/
+---
+<link rel="stylesheet" type="text/css" href="../assets/css/doxygen-awesome-darkmode-toggle.css" />
+
+<link rel="stylesheet" type="text/css" href="index.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/highlightjs-theme-byeol.css" />
+<script type="module" src='../assets/js/editor.mjs'></script>
+<script type="module" src="../assets/js/doxygen-awesome-darkmode-toggle.mjs"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/masthead.css" />
+<script src="../assets/js/bg.js"></script>
+<script type="module" src="../assets/js/masthead.mjs"></script>
+
+<div class="initial-content">
+  <div id="top_pane">
+    <div class="bin_ver">powered by</div>
+    <a id="version" class="bin_ver" href="https://github.com/byeolang/byeol/releases/latest">byeol</a>
+    <select id='dd-srcs'>
+        <option value='your-codes'>your codes</option>
+        <option value='hello-world'>hello world!</option>
+        <option value='bow-to-everyone'>bow to mike's</option>
+    </select>
+    <div class="checkboxes__item">
+      <label class="checkbox">
+        <input type="checkbox" id='verbose' />
+        <div class="checkbox__checkmark"></div>
+        <div class="checkbox__body">verbose</div>
+      </label>
+    </div>
+    <input type='button' id='runbt' value='▶' />
+  </div>
+  <div id="bottom_pane">
+    <div id="codepad"></div>
+    <div id="result">
+        <img src='../assets/images/output.svg' />
+        <b>output</b>
+        <input type='button' id='bt-close' value='×' />
+        {% raw %}
+        <iframe scrolling=no id='byeol' src='byeol.html'> </iframe>
+        {% endraw %}
+    </div>
+  </div>
+</div>
