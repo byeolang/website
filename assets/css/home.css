@@ -6,7 +6,7 @@ div.initial-content {
 
 div#footer {
   position: absolute;
-  top: calc(100vh - 110px);
+  top: calc(100dvh - 110px);
 }
 
 div#main-content {
@@ -308,7 +308,7 @@ html.dark-mode div#reflection-light {
 div#main-bg-sea {
   width: 100%;
   position: absolute;
-  top: calc(100vh - 100px - 100px);
+  top: calc(100dvh - 100px - 100px);
   height: 100px;
   z-index: 2
 }
