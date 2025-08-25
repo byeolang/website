@@ -20,7 +20,7 @@ textarea#output {
     display: none;
     background-color: var(--byeol-night2);
     color: var(--byeol-white);
-    height: 100vh;
+    height: 100dvh;
     width: calc(100% - 100px);
 
     border: 0px solid;
@@ -40,7 +40,7 @@ textarea#output:focus {
 }
 
 div#playbt {
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: #204261;
 }
