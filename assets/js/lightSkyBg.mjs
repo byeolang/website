@@ -64,24 +64,32 @@ function getColor(isBlur) {
   return `filter: ${blur} brightness(0) saturate(100%) invert(63%) sepia(53%) saturate(348%) hue-rotate(160deg) brightness(87%) contrast(98%);`;
 }
 
+function getScreenAreaRate() {
+  let realArea = window.innerWidth * window.innerHeight;
+  let targetArea = 2073600; // usual screen size is 1920 * 1080, 2073600.
+  return realArea / targetArea;
+}
 
 function SmallLeaf(new_owner, isMasthead) {
   let grade = Math.random()
-  Leaf.call(this, 8 + (grade * 15), 90 - grade * 30, 100 + grade * 200, getColor(false), isMasthead, new_owner);
+  let w = (8 + grade * 15) * getScreenAreaRate();
+  Leaf.call(this, w, 90 - grade * 30, 100 + grade * 200, getColor(false), isMasthead, new_owner);
 }
 SmallLeaf.prototype = new Leaf();
 
 
 function MediumLeaf(new_owner, isMasthead) {
   let grade = Math.random()
-  Leaf.call(this, 45 + (grade * 50), 30 - grade * 15, 100 + grade * 200, getColor(false), isMasthead, new_owner);
+  let w = (35 + grade * 45) * getScreenAreaRate();
+  Leaf.call(this, w, 30 - grade * 15, 100 + grade * 200, getColor(false), isMasthead, new_owner);
 }
 MediumLeaf.prototype = new Leaf();
 
 
 function BigLeaf(new_owner, isMasthead) {
   let grade = Math.random()
-  Leaf.call(this, 500 + (grade * 300), 4 - grade * 3, 100 + grade * 200, getColor(true), isMasthead, new_owner);
+  let w = 400 + (grade * 250) * getScreenAreaRate();
+  Leaf.call(this, w, 4 - grade * 3, 100 + grade * 200, getColor(true), isMasthead, new_owner);
 }
 BigLeaf.prototype = new Leaf();
 
