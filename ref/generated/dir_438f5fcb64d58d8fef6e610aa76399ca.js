@@ -6,5 +6,5 @@ var dir_438f5fcb64d58d8fef6e610aa76399ca =
     [ "graphVisitor.hpp", "graph_visitor_8hpp.html", null ],
     [ "verifier.hpp", "verifier_8hpp.html", null ],
     [ "visitInfo.hpp", "visit_info_8hpp.html", null ],
-    [ "visitor.hpp", "visitor_2visitor_8hpp.html", "visitor_2visitor_8hpp" ]
+    [ "visitor.hpp", "visitor_2visitor_8hpp.html", null ]
 ];

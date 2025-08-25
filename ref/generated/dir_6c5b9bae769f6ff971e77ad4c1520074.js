@@ -6,8 +6,8 @@ var dir_6c5b9bae769f6ff971e77ad4c1520074 =
     [ "mgd.hpp", "mgd_8hpp.html", null ],
     [ "native.hpp", "native_8hpp.html", null ],
     [ "tarrayable.hpp", "tarrayable_8hpp.html", [
-      [ "tarrayable", "classby_1_1tarrayable.html", "classby_1_1tarrayable" ]
+      [ "by::tarrayable< T, R, RSquare >", "classby_1_1tarrayable.html", "classby_1_1tarrayable" ]
     ] ],
-    [ "tbicontainable.hpp", "tbicontainable_8hpp.html", "tbicontainable_8hpp" ],
-    [ "tucontainable.hpp", "tucontainable_8hpp.html", "tucontainable_8hpp" ]
+    [ "tbicontainable.hpp", "tbicontainable_8hpp.html", null ],
+    [ "tucontainable.hpp", "tucontainable_8hpp.html", null ]
 ];

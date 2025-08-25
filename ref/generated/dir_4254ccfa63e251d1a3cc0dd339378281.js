@@ -4,6 +4,6 @@ var dir_4254ccfa63e251d1a3cc0dd339378281 =
     [ "as.hpp", "as_8hpp.html", null ],
     [ "funcMgdType.hpp", "func_mgd_type_8hpp.html", null ],
     [ "mgdType.hpp", "mgd_type_8hpp.html", null ],
-    [ "ntype.hpp", "ntype_8hpp.html", "ntype_8hpp" ],
+    [ "ntype.hpp", "ntype_8hpp.html", null ],
     [ "typeMaker.hpp", "type_maker_8hpp.html", null ]
 ];

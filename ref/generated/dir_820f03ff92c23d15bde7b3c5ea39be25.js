@@ -8,8 +8,8 @@ var dir_820f03ff92c23d15bde7b3c5ea39be25 =
     [ "nStr.hpp", "n_str_8hpp.html", null ],
     [ "nVoid.hpp", "n_void_8hpp.html", null ],
     [ "primitiveObj.hpp", "primitive_obj_8hpp.html", [
-      [ "primitiveObj", "classby_1_1primitive_obj.html", "classby_1_1primitive_obj" ],
-      [ "asPrimitive", "classby_1_1primitive_obj_1_1as_primitive.html", "classby_1_1primitive_obj_1_1as_primitive" ],
-      [ "primitiveObj< void >", "classby_1_1primitive_obj_3_01void_01_4.html", "classby_1_1primitive_obj_3_01void_01_4" ]
+      [ "by::primitiveObj< T >", "classby_1_1primitive_obj.html", "classby_1_1primitive_obj" ],
+      [ "by::primitiveObj< T >::asPrimitive< E, RAW >", "classby_1_1primitive_obj_1_1as_primitive.html", null ],
+      [ "by::primitiveObj< void >", "classby_1_1primitive_obj_3_01void_01_4.html", null ]
     ] ]
 ];

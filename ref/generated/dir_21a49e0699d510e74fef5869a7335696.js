@@ -9,7 +9,7 @@ var dir_21a49e0699d510e74fef5869a7335696 =
     [ "smartDedent.hpp", "smart_dedent_8hpp.html", null ],
     [ "supply.hpp", "supply_8hpp.html", null ],
     [ "tokenDispatcher.hpp", "token_dispatcher_8hpp.html", null ],
-    [ "tokenScanable.hpp", "token_scanable_8hpp.html", "token_scanable_8hpp" ],
+    [ "tokenScanable.hpp", "token_scanable_8hpp.html", null ],
     [ "visitor.hpp", "visitor_8hpp.html", null ],
-    [ "worker.hpp", "worker_2worker_8hpp.html", "worker_2worker_8hpp" ]
+    [ "worker.hpp", "worker_2worker_8hpp.html", null ]
 ];
