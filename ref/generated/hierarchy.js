@@ -35,6 +35,15 @@ var hierarchy =
     [ "by::buildFeature", "classby_1_1build_feature.html", null ],
     [ "by::cli", "structby_1_1cli.html", null ],
     [ "by::clonable", "classby_1_1clonable.html", [
+      [ "by::worker< tstr< slot >, slot >", "classby_1_1worker.html", [
+        [ "by::interpreter", "classby_1_1interpreter.html", null ]
+      ] ],
+      [ "by::worker< str, slot >", "classby_1_1worker.html", [
+        [ "by::parser", "classby_1_1parser.html", null ]
+      ] ],
+      [ "by::worker< str, node >", "classby_1_1worker.html", [
+        [ "by::starter", "classby_1_1starter.html", null ]
+      ] ],
       [ "by::worker< void, node >", "classby_1_1worker.html", [
         [ "by::visitor", "classby_1_1visitor.html", [
           [ "by::expander", "classby_1_1expander.html", null ],
@@ -43,15 +52,6 @@ var hierarchy =
           [ "by::verifier", "classby_1_1verifier.html", null ]
         ] ]
       ] ],
-      [ "by::worker< str, node >", "classby_1_1worker.html", [
-        [ "by::starter", "classby_1_1starter.html", null ]
-      ] ],
-      [ "by::worker< str, slot >", "classby_1_1worker.html", [
-        [ "by::parser", "classby_1_1parser.html", null ]
-      ] ],
-      [ "by::worker< tstr< slot >, slot >", "classby_1_1worker.html", [
-        [ "by::interpreter", "classby_1_1interpreter.html", null ]
-      ] ],
       [ "by::exprMaker", "classby_1_1expr_maker.html", null ],
       [ "by::instance", "classby_1_1instance.html", [
         [ "by::tnucontainer< nInt, nInt, nInt >", "classby_1_1tnucontainer.html", [
@@ -59,14 +59,14 @@ var hierarchy =
         ] ],
         [ "by::aser", "classby_1_1aser.html", null ],
         [ "by::baseConvergence", "classby_1_1base_convergence.html", [
+          [ "by::tbaseConvergence< void >", "classby_1_1tbase_convergence.html", [
+            [ "by::convergence", "classby_1_1convergence.html", null ]
+          ] ],
           [ "by::tbaseConvergence< node >", "classby_1_1tbase_convergence.html", [
             [ "by::evalConvergence", "classby_1_1eval_convergence.html", [
               [ "by::paramConvergence", "classby_1_1param_convergence.html", null ],
               [ "by::retConvergence", "classby_1_1ret_convergence.html", null ]
             ] ]
-          ] ],
-          [ "by::tbaseConvergence< void >", "classby_1_1tbase_convergence.html", [
-            [ "by::convergence", "classby_1_1convergence.html", null ]
           ] ],
           [ "by::tbaseConvergence< T >", "classby_1_1tbase_convergence.html", null ]
         ] ],
@@ -133,20 +133,20 @@ var hierarchy =
               ] ]
             ] ],
             [ "by::arithmeticObj", "classby_1_1arithmetic_obj.html", [
-              [ "by::primitiveObj< nflt >", "classby_1_1primitive_obj.html", [
-                [ "by::nFlt", "classby_1_1n_flt.html", null ]
-              ] ],
-              [ "by::primitiveObj< std::string >", "classby_1_1primitive_obj.html", [
-                [ "by::nStr", "classby_1_1n_str.html", null ]
-              ] ],
-              [ "by::primitiveObj< nint >", "classby_1_1primitive_obj.html", [
-                [ "by::nInt", "classby_1_1n_int.html", null ]
+              [ "by::primitiveObj< nbool >", "classby_1_1primitive_obj.html", [
+                [ "by::nBool", "classby_1_1n_bool.html", null ]
               ] ],
               [ "by::primitiveObj< nuchar >", "classby_1_1primitive_obj.html", [
                 [ "by::nByte", "classby_1_1n_byte.html", null ]
               ] ],
-              [ "by::primitiveObj< nbool >", "classby_1_1primitive_obj.html", [
-                [ "by::nBool", "classby_1_1n_bool.html", null ]
+              [ "by::primitiveObj< nflt >", "classby_1_1primitive_obj.html", [
+                [ "by::nFlt", "classby_1_1n_flt.html", null ]
+              ] ],
+              [ "by::primitiveObj< nint >", "classby_1_1primitive_obj.html", [
+                [ "by::nInt", "classby_1_1n_int.html", null ]
+              ] ],
+              [ "by::primitiveObj< std::string >", "classby_1_1primitive_obj.html", [
+                [ "by::nStr", "classby_1_1n_str.html", null ]
               ] ],
               [ "by::primitiveObj< T >", "classby_1_1primitive_obj.html", null ],
               [ "by::primitiveObj< void >", "classby_1_1primitive_obj_3_01void_01_4.html", [
@@ -237,33 +237,29 @@ var hierarchy =
           [ "by::tnmap< K, V, TACTIC >", "classby_1_1tnmap.html", null ]
         ] ],
         [ "by::tnucontainer< T, R, RSquare >", "classby_1_1tnucontainer.html", [
-          [ "by::tnarr< V, by::strTactic >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< endExpr, strTactic >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< node >", "classby_1_1tnarr.html", [
-            [ "by::args", "classby_1_1args.html", null ]
+          [ "by::tnarr< aser >", "classby_1_1tnarr.html", [
+            [ "by::ases", "classby_1_1ases.html", null ]
           ] ],
           [ "by::tnarr< calltrace >", "classby_1_1tnarr.html", [
             [ "by::callstack", "classby_1_1callstack.html", null ]
           ] ],
-          [ "by::tnarr< aser >", "classby_1_1tnarr.html", [
-            [ "by::ases", "classby_1_1ases.html", null ]
-          ] ],
-          [ "by::tnarr< me >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< srcSupply >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< src >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< T, strTactic >", "classby_1_1tnarr.html", [
-            [ "by::tndumArr< T, TACTIC >", "classby_1_1tndum_arr.html", null ]
+          [ "by::tnarr< frame >", "classby_1_1tnarr.html", [
+            [ "by::frames", "classby_1_1frames.html", null ]
           ] ],
           [ "by::tnarr< param >", "classby_1_1tnarr.html", [
             [ "by::params", "classby_1_1params.html", [
               [ "by::dumParams", "classby_1_1dum_params.html", null ]
             ] ]
           ] ],
-          [ "by::tnarr< by::baseFunc >", "classby_1_1tnarr.html", null ],
-          [ "by::tnarr< frame >", "classby_1_1tnarr.html", [
-            [ "by::frames", "classby_1_1frames.html", null ]
+          [ "by::tnarr< T, strTactic >", "classby_1_1tnarr.html", [
+            [ "by::tndumArr< T, TACTIC >", "classby_1_1tndum_arr.html", null ]
           ] ],
-          [ "by::tnarr< by::baseConvergence >", "classby_1_1tnarr.html", null ],
+          [ "by::tnarr< src >", "classby_1_1tnarr.html", null ],
+          [ "by::tnarr< node >", "classby_1_1tnarr.html", [
+            [ "by::args", "classby_1_1args.html", null ]
+          ] ],
+          [ "by::tnarr< endExpr, strTactic >", "classby_1_1tnarr.html", null ],
+          [ "by::tnarr< srcSupply >", "classby_1_1tnarr.html", null ],
           [ "by::tnarr< T, TACTIC >", "classby_1_1tnarr.html", [
             [ "by::tpriorities< T >", "classby_1_1tpriorities.html", null ]
           ] ]
@@ -358,6 +354,10 @@ var hierarchy =
       [ "by::tmarshaling< T, tifSub< T, node >::is >", "structby_1_1tmarshaling.html", [
         [ "by::tgenericMarshaling< T, isNode >", "structby_1_1tgeneric_marshaling.html", null ]
       ] ],
+      [ "by::tnormalMarshaling< const nchar *, nStr >", "structby_1_1tnormal_marshaling.html", [
+        [ "by::tmarshaling< const nchar *, false >", "structby_1_1tmarshaling_3_01const_01nchar_01_5_00_01false_01_4.html", null ],
+        [ "by::tmarshaling< nchar *, false >", "structby_1_1tmarshaling_3_01nchar_01_5_00_01false_01_4.html", null ]
+      ] ],
       [ "by::tnormalMarshaling< nint, nInt >", "structby_1_1tnormal_marshaling.html", [
         [ "by::tmarshaling< const nint &, false >", "structby_1_1tmarshaling_3_01const_01nint_01_6_00_01false_01_4.html", null ],
         [ "by::tmarshaling< nint &, false >", "structby_1_1tmarshaling_3_01nint_01_6_00_01false_01_4.html", null ],
@@ -369,18 +369,14 @@ var hierarchy =
         [ "by::tmarshaling< std::string &, false >", "structby_1_1tmarshaling_3_01std_1_1string_01_6_00_01false_01_4.html", null ],
         [ "by::tmarshaling< std::string, false >", "structby_1_1tmarshaling_3_01std_1_1string_00_01false_01_4.html", null ]
       ] ],
-      [ "by::tnormalMarshaling< const nchar *, nStr >", "structby_1_1tnormal_marshaling.html", [
-        [ "by::tmarshaling< const nchar *, false >", "structby_1_1tmarshaling_3_01const_01nchar_01_5_00_01false_01_4.html", null ],
-        [ "by::tmarshaling< nchar *, false >", "structby_1_1tmarshaling_3_01nchar_01_5_00_01false_01_4.html", null ]
-      ] ],
-      [ "by::tnormalMarshaling< nflt, nFlt >", "structby_1_1tnormal_marshaling.html", [
-        [ "by::tmarshaling< nflt, false >", "structby_1_1tmarshaling_3_01nflt_00_01false_01_4.html", null ]
+      [ "by::tnormalMarshaling< nbool, nBool >", "structby_1_1tnormal_marshaling.html", [
+        [ "by::tmarshaling< nbool, false >", "structby_1_1tmarshaling_3_01nbool_00_01false_01_4.html", null ]
       ] ],
       [ "by::tnormalMarshaling< nchar, nStr >", "structby_1_1tnormal_marshaling.html", [
         [ "by::tmarshaling< nchar, false >", "structby_1_1tmarshaling_3_01nchar_00_01false_01_4.html", null ]
       ] ],
-      [ "by::tnormalMarshaling< nbool, nBool >", "structby_1_1tnormal_marshaling.html", [
-        [ "by::tmarshaling< nbool, false >", "structby_1_1tmarshaling_3_01nbool_00_01false_01_4.html", null ]
+      [ "by::tnormalMarshaling< nflt, nFlt >", "structby_1_1tnormal_marshaling.html", [
+        [ "by::tmarshaling< nflt, false >", "structby_1_1tmarshaling_3_01nflt_00_01false_01_4.html", null ]
       ] ],
       [ "by::tadaptiveSuper< T, typedefsuper >", "structby_1_1tadaptive_super.html", null ],
       [ "by::tgenericMarshaling< const node &, true >", "structby_1_1tgeneric_marshaling_3_01const_01node_01_6_00_01true_01_4.html", null ],
@@ -449,18 +445,14 @@ var hierarchy =
     [ "by::tadaptiveSuper< T, true >", "structby_1_1tadaptive_super_3_01_t_00_01true_01_4.html", null ],
     [ "by::taEmptyCan< T >", "structby_1_1ta_empty_can.html", null ],
     [ "by::tarrayable< T, R, RSquare >", "classby_1_1tarrayable.html", [
-      [ "by::tnarr< V, by::strTactic >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< endExpr, strTactic >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< calltrace >", "classby_1_1tnarr.html", null ],
       [ "by::tnarr< aser >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< me >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< srcSupply >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< src >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< T, strTactic >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< param >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< by::baseFunc >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< calltrace >", "classby_1_1tnarr.html", null ],
       [ "by::tnarr< frame >", "classby_1_1tnarr.html", null ],
-      [ "by::tnarr< by::baseConvergence >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< param >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< T, strTactic >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< src >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< endExpr, strTactic >", "classby_1_1tnarr.html", null ],
+      [ "by::tnarr< srcSupply >", "classby_1_1tnarr.html", null ],
       [ "by::tnarr< T, TACTIC >", "classby_1_1tnarr.html", null ]
     ] ],
     [ "by::tarrayable< nInt, nInt, nInt >", "classby_1_1tarrayable.html", [
@@ -478,32 +470,11 @@ var hierarchy =
     [ "by::tbindable< instance >", "classby_1_1tbindable.html", [
       [ "by::bindTag", "classby_1_1bind_tag.html", null ],
       [ "by::binder", "classby_1_1binder.html", [
-        [ "by::tweak< by::func >", "classby_1_1tweak.html", null ],
-        [ "by::tweak< by::obj >", "classby_1_1tweak.html", null ],
         [ "by::tweak< T, strTactic >", "classby_1_1tweak.html", [
           [ "by::tstr< T, TACTIC >", "classby_1_1tstr.html", null ]
         ] ],
         [ "by::tweak< T, TACTIC >", "classby_1_1tweak.html", [
-          [ "by::tstr< node >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::srcFile >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::callstack >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::tnarr >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::baseObj >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::blockExpr >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< super >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::errReport >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::nStr >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::obj >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::func >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::tnchain >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::frame >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::leaf >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::src >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::args >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::arr >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::baseFunc >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::modifier >", "classby_1_1tstr.html", null ],
-          [ "by::tstr< by::tnmap >", "classby_1_1tstr.html", null ]
+          [ "by::tstr< node >", "classby_1_1tstr.html", null ]
         ] ]
       ] ]
     ] ],
@@ -552,10 +523,10 @@ var hierarchy =
     ] ],
     [ "by::typeMaker", "classby_1_1type_maker.html", null ],
     [ "by::typeProvidable", "classby_1_1type_providable.html", [
-      [ "by::worker< void, node >", "classby_1_1worker.html", null ],
-      [ "by::worker< str, node >", "classby_1_1worker.html", null ],
-      [ "by::worker< str, slot >", "classby_1_1worker.html", null ],
       [ "by::worker< tstr< slot >, slot >", "classby_1_1worker.html", null ],
+      [ "by::worker< str, slot >", "classby_1_1worker.html", null ],
+      [ "by::worker< str, node >", "classby_1_1worker.html", null ],
+      [ "by::worker< void, node >", "classby_1_1worker.html", null ],
       [ "by::bindTag", "classby_1_1bind_tag.html", null ],
       [ "by::binder", "classby_1_1binder.html", null ],
       [ "by::exprMaker", "classby_1_1expr_maker.html", null ],

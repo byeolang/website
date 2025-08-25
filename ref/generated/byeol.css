@@ -5,8 +5,8 @@ div#projectname p {
 
 @media screen and (min-width: 768px) {
     #doc-content {
-        height: calc(100vh) !important;
-        width: calc(100vw - 340px) !important;
+        height: calc(100dvh) !important;
+        width: calc(100dvw - 340px) !important;
         padding-right: 10px;
         float: right;
     }
@@ -35,6 +35,10 @@ div#nav-sync {
     --byeol-moon: #E0B88D;
     --byeol-nebular: #ca5fa4;
     --byeol-nebular-light: #F2B6D7;
+}
+
+div.fragment pre {
+    position: relative;
 }
 
 #nav-tree, div.fragment, pre.fragment, div.memproto, .contents center, .contents .center, .contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname) tbody, div.contents .toc, .contents .dotgraph, .contents .tabs-overview-container {
