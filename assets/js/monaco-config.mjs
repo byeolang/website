@@ -63,13 +63,21 @@ monaco.editor.defineTheme('byeolTheme-light', {
   }
 });
 
+function getFontSize() {
+  let width = window.innerWidth;
+  if (width < 500) return 13;
+  if (width < 900) return 17;
+  return 20
+}
+
 export const editor = monaco.editor.create(document.getElementById('codepad'), {
   language: 'byeol',
   minimap: { enabled: false },
   renderLineHighlight: "none",
   automaticLayout: true,
   fontFamily: 'Retro Gaming',
-  fontSize: '20',
+  fontSize: getFontSize(),
+  wordWrap: 'on',
   scrollbar: {
     horizontal: 'hidden',
     verticalScrollbarSize: 10,
