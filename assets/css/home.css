@@ -6,7 +6,7 @@ div.initial-content {
 
 div#footer {
   position: absolute;
-  top: calc(100dvh - 110px);
+  top: var(--footer-top);
 }
 
 div#main-content {
@@ -15,18 +15,26 @@ div#main-content {
 
 @media(max-height: 699px) {
   :root {
-    --mountain-top: -75px;
-    --reflection-light: -110px;
+    --mountain-top: -40px;
+    --reflection-light: -75px;
     --reflection-light-height: 35px;
     --grass-top: -35px;
+    --footer-top: calc(100dvh - 62px);
+    --footer-vertical-margin: 0.5em;
+    --bg-gradient-light: linear-gradient(180deg,rgba(8, 112, 209, 1) 1%, rgba(58, 148, 232, 1) 26%, rgba(39, 195, 242, 1) 46%, rgba(255, 255, 255, 1) 89%, rgba(37, 130, 250, 1) 95%, rgba(34, 125, 181, 1) 100%);
+    --bg-gradient-dark: linear-gradient(180deg,rgba(11, 28, 38, 1) 1%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 74%, rgba(97, 166, 208, 1) 92%, rgba(97, 166, 208, 1) 90%, rgba(37, 110, 156, 1) 95%);
   }
 }
 @media(min-height: 700px) {
   :root {
-    --mountain-top: -70px;
-    --reflection-light: -120px;
+    --mountain-top: -55px;
+    --reflection-light: -105px;
     --reflection-light-height: 50px;
     --grass-top: -50px;
+    --footer-top: calc(100dvh - 110px);
+    --footer-vertical-margin: 2em;
+    --bg-gradient-light: linear-gradient(180deg,rgba(8, 112, 209, 1) 1%, rgba(58, 148, 232, 1) 26%, rgba(39, 195, 242, 1) 46%, rgba(255, 255, 255, 1) 85%, rgba(138, 199, 237, 1) 87%, rgba(37, 130, 250, 1) 92%, rgba(34, 125, 181, 1) 100%);
+    --bg-gradient-dark: linear-gradient(180deg,rgba(11, 28, 38, 1) 1%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 83%, rgba(97, 166, 208, 1) 84%, rgba(37, 110, 156, 1) 95%);
   }
 }
 @media(min-height: 1080px) {
@@ -35,6 +43,12 @@ div#main-content {
     --reflection-light: -170px;
     --reflection-light-height: 70px;
     --grass-top: -60px;
+    --footer-top: calc(100dvh - 110px);
+    --footer-vertical-margin: 2em;
+    --bg-gradient-light: linear-gradient(180deg,rgba(8, 112, 209, 1) 1%, rgba(58, 148, 232, 1) 26%, rgba(39, 195, 242, 1) 46%, rgba(255, 255, 255, 1) 85%, rgba(138, 199, 237, 1) 87%, rgba(37, 130, 250, 1) 92%, rgba(34, 125, 181, 1) 100%);
+    --bg-gradient-dark: linear-gradient(180deg,rgba(11, 28, 38, 1) 1%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 83%, rgba(97, 166, 208, 1) 84%, rgba(37, 110, 156, 1) 95%);
+
+    /*linear-gradient(180deg,rgba(11, 28, 38, 1) 1%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 74%, rgba(97, 166, 208, 1) 92%, rgba(97, 166, 208, 1) 90%, rgba(37, 110, 156, 1) 95%);*/
   }
 }
 
@@ -124,6 +138,11 @@ div#main-content {
     --ray10-top: -115px;
     --ray10-left: 10px;
   }
+}
+
+.page__footer footer {
+    margin-top: var(--footer-vertical-margin);
+    padding-bottom: var(--footer-vertical-margin);
 }
 
 .logo-aura {
@@ -285,18 +304,16 @@ div#main-content-title {
 
 div#main-bg {
   overflow: hidden;
-  background: linear-gradient(180deg,rgba(11, 28, 38, 1) 0%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 74%, rgba(97, 166, 208, 1) 92%, rgba(97, 166, 208, 1) 90%, rgba(37, 110, 156, 1) 95%);
-
   width: 100%;
   height: calc(var(--vh, 1vh) * 100 + 1px - var(--vfooter));
   transition: all .45s cubic-bezier(0.65, 0, 0.076, 1)
 }
 
 html div#main-bg {
-  background: linear-gradient(180deg,rgba(8, 112, 209, 1) 1%, rgba(58, 148, 232, 1) 26%, rgba(39, 195, 242, 1) 46%, rgba(255, 255, 255, 1) 85%, rgba(138, 199, 237, 1) 87%, rgba(37, 130, 250, 1) 92%, rgba(34, 125, 181, 1) 100%);
+  background: var(--bg-gradient-light);
 }
 html.dark-mode div#main-bg {
-  background: linear-gradient(180deg,rgba(11, 28, 38, 1) 0%, rgba(17, 42, 64, 1) 39%, rgba(46, 69, 89, 1) 55%, rgba(65, 137, 166, 1) 74%, rgba(97, 166, 208, 1) 92%, rgba(97, 166, 208, 1) 90%, rgba(37, 110, 156, 1) 95%);
+  background: var(--bg-gradient-dark);
 }
 
 span#dark-mode-wrapper {
