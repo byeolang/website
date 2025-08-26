@@ -13,6 +13,31 @@ div#main-content {
   z-index: 9;
 }
 
+@media(max-height: 699px) {
+  :root {
+    --mountain-top: -75px;
+    --reflection-light: -110px;
+    --reflection-light-height: 35px;
+    --grass-top: -35px;
+  }
+}
+@media(min-height: 700px) {
+  :root {
+    --mountain-top: -70px;
+    --reflection-light: -120px;
+    --reflection-light-height: 50px;
+    --grass-top: -50px;
+  }
+}
+@media(min-height: 1080px) {
+  :root {
+    --mountain-top: -100px;
+    --reflection-light: -170px;
+    --reflection-light-height: 70px;
+    --grass-top: -60px;
+  }
+}
+
 @media(max-width: 499px) {
   :root {
     --logo-width: 70px;
@@ -354,29 +379,29 @@ html.dark-mode [data-tooltip]:after {
 }
 
 div#mountain1 {
-  top: -100px;
+  top: var(--mountain-top);
   filter: brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(1354%) hue-rotate(164deg) brightness(84%) contrast(90%);
   opacity: 1;
 }
 
 div#mountain2 {
-  top: -100px;
+  top: var(--mountain-top);
   filter: brightness(0) saturate(100%) invert(63%) sepia(53%) saturate(348%) hue-rotate(160deg) brightness(87%) contrast(98%);
   opacity: 1;
   z-index: 1;
 }
 
 div#mountain3 {
-  top: -100px;
+  top: var(--mountain-top);
   opacity: 1;
   z-index: 1;
 }
 
 div#reflection-light {
-  top: -170px;
+  top: var(--reflection-light);
   width: 100%;
   position: relative;
-  height: 70px;
+  height: var(--reflection-light-height);
   z-index: 4;
   transition: all .45s cubic-bezier(0.65, 0, 0.076, 1)
 }
@@ -412,11 +437,11 @@ img.leaf {
 div#grass {
   filter: brightness(0) saturate(100%) invert(26%) sepia(25%) saturate(1458%) hue-rotate(150deg) brightness(97%) contrast(97%);
   z-index: 6;
-  top: -60px;
+  top: var(--grass-top);
 }
 
 div#hill1 {
-  top: -60px;
+  top: var(--grass-top);
   filter: brightness(0) saturate(100%) invert(43%) sepia(39%) saturate(351%) hue-rotate(135deg) brightness(94%) contrast(95%);
   z-index: 5;
 }
