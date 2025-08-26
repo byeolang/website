@@ -13,12 +13,96 @@ div#main-content {
   z-index: 9;
 }
 
-:root {
-  --logo-width: 192px;
+@media(max-width: 499px) {
+  :root {
+    --logo-width: 70px;
+    --aura-top: -90px;
+    --aura-rays-box-top: -150px;
+    --main-title-top: -135px;
+    --main-title-font-size: 15px;
+    --ray1-top: -140px;
+    --ray1-left: 8px;
+    --ray2-top: -160px;
+    --ray2-left: 90px;
+    --ray3-top: -80px;
+    --ray3-left: 85px;
+    --ray4-top: -10px;
+    --ray4-left: 100px;
+    --ray5-top: 25px;
+    --ray5-left: 40px;
+    --ray6-top: 20px;
+    --ray6-left: -30px;
+    --ray7-top: -30px;
+    --ray7-left: -60px;
+    --ray8-top: -50px;
+    --ray8-left: -60px;
+    --ray9-top: -85px;
+    --ray9-left: -40px;
+    --ray10-top: -145px;
+    --ray10-left: -30px;
+  }
+}
+@media(min-width: 500px) {
+  :root {
+    --logo-width: 128px;
+    --aura-top: -145px;
+    --aura-rays-box-top: -270px;
+    --main-title-top: -250px;
+    --main-title-font-size: 25px;
+    --ray1-top: -110px;
+    --ray1-left: 42px;
+    --ray2-top: -140px;
+    --ray2-left: 120px;
+    --ray3-top: -50px;
+    --ray3-left: 130px;
+    --ray4-top: 30px;
+    --ray4-left: 130px;
+    --ray5-top: 80px;
+    --ray5-left: 80px;
+    --ray6-top: 70px;
+    --ray6-left: -15px;
+    --ray7-top: 15px;
+    --ray7-left: -42px;
+    --ray8-top: -18px;
+    --ray8-left: -43px;
+    --ray9-top: -65px;
+    --ray9-left: -25px;
+    --ray10-top: -125px;
+    --ray10-left: -10px;
+  }
+}
+@media(min-width: 900px) {
+  :root {
+    --logo-width: 192px;
+    --aura-top: -210px;
+    --aura-rays-box-top: -399px;
+    --main-title-top: -370px;
+    --main-title-font-size: 30px;
+    --ray1-top: -110px;
+    --ray1-left: 72px;
+    --ray2-top: -20px;
+    --ray2-left: 130px;
+    --ray3-top: -30px;
+    --ray3-left: 170px;
+    --ray4-top: 75px;
+    --ray4-left: 150px;
+    --ray5-top: 110px;
+    --ray5-left: 100px;
+    --ray6-top: 1250px;
+    --ray6-left: 150px;
+    --ray7-top: 35px;
+    --ray7-left: -40px;
+    --ray8-top: 5px;
+    --ray8-left: -20px;
+    --ray9-top: -15px;
+    --ray9-left: 0px;
+    --ray10-top: -115px;
+    --ray10-left: 10px;
+  }
 }
 
 .logo-aura {
-  top: -210px;
+  top: var(--aura-top);
   position: relative;
   margin: 0 auto;
 	width: calc(var(--logo-width) - 5px);
@@ -28,7 +112,7 @@ div#main-content {
 }
 
 div#main-content-logo-aura {
-  top: -399px;
+  top: var(--aura-rays-box-top);
 }
 
 html div#main-content-logo-aura {
@@ -51,8 +135,8 @@ html.dark-mode div#main-content-logo-aura-line {
 div#main-content-logo-rays {
   position: absolute;
   margin: 0 auto;
-	top: -2px;
-	left: -3px;
+	top: 0px;
+	left: 0px;
   width: var(--logo-width);
   height: var(--logo-width);
   animation: ray_anim 120s linear infinite;
@@ -70,71 +154,71 @@ div.ray {
    height: 170px;
    width: 30px;
    transform: rotate(180deg);
-   top: -110px;
-   left: 72px;
+   top: var(--ray1-top);
+   left: var(--ray1-left);
 }
 .ray2 {
-   height:100px;
-   width:8px;
+   height: 220px;
+   width: 8px;
    transform: rotate(220deg);
-   top: -20px;
-   left: 130px;
+   top: var(--ray2-top);
+   left: var(--ray2-left);
 }
 .ray3 {
    height: 170px;
    width: 50px;
    transform: rotate(250deg);
-   top: -30px;
-   left: 170px;
+   top: var(--ray3-top);
+   left: var(--ray3-left);
 }
 .ray4 {
-   height: 120px;
-   width: 14px;
+   height: 190px;
+   width: 15px;
    transform: rotate(305deg);
-   top: 75px;
-   left: 150px;
+   top: var(--ray4-top);
+   left: var(--ray4-left);
 }
 .ray5 {
-   height: 140px;
+   height: 170px;
    width: 30px;
    transform: rotate(-15deg);
-   top: 110px;
-   left: 100px;
+   top: var(--ray5-top);
+   left: var(--ray5-left);
 }
 .ray6 {
-   height: 90px;
+   height: 140px;
    width: 50px;
    transform: rotate(30deg);
-   top: 125px;
-   left: 15px;
+   top: var(--ray6-top);
+   left: var(--ray6-left);
 }
 .ray7 {
    height: 180px;
    width: 10px;
    transform: rotate(70deg);
-   top: 35px;
-   left: -40px;
+   top: var(--ray7-top);
+   left: var(--ray7-left);
 }
 .ray8 {
-   height: 120px;
+   height: 140px;
    width: 30px;
    transform: rotate(100deg);
-   top: 5px;
-   left: -20px;
+   top: var(--ray8-top);
+   left: var(--ray8-left);
 }
 .ray9 {
-   height: 80px;
-   width: 10px;
-   transform: rotate(120deg);
-   top: -15px;
-   left: 0px;
+   height: 140px;
+   width: 13px;
+   transform: rotate(130deg);
+   top: var(--ray9-top);
+   left: var(--ray9-left);
 }
 .ray10 {
    height: 190px;
    width: 23px;
    transform: rotate(150deg);
-   top: -115px;
-   left: 10px;
+   top: var(--ray10-top);
+   left: var(--ray10-left);
 }
 
 @keyframes ray_anim {
@@ -145,7 +229,7 @@ div.ray {
 #main-content-header  {
   background: transparent;
   text-align: center;
-  font-size: 30px;
+  font-size: var(--main-title-font-size);
   transition: all .45s cubic-bezier(0.65, 0, 0.076, 1)
 }
 html #main-content-header {
@@ -165,13 +249,13 @@ img#main-content-logo {
 
 div#main-content-title {
   position: relative;
-  top: -370px;
+  top: var(--main-title-top);
 }
 
 #main-content-navi {
   text-align: center;
   position: relative;
-  top: -370px;
+  top: var(--main-title-top);
 }
 
 div#main-bg {
