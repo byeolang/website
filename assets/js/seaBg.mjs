@@ -1,11 +1,22 @@
 var __tide_dom_id_generator = 0;
+
+function getTideY(ownerObj) {
+  let top = ownerObj.position().top;
+  let height = ownerObj.height();
+  let winHeight = window.innerHeight;
+
+  if(winHeight > 1080) return top;
+  else if(winHeight > 700) return top + height * 0.5;
+  return top + height * 0.9;
+}
+
 function Tide(new_owner) {
 	this.grade = Math.random() * 100;
 	var life = 2.5 + (Math.random() * 3);
 
   let ownerObj = new_owner.getJQObject();
   let ownerWidthRatio = (ownerObj.width() / 1000) * 23;
-  let baseY = ownerObj.position().top,
+  let baseY = getTideY(ownerObj),
 	    h = 1 + (this.grade * 0.05),
       w = h * ownerWidthRatio,
 	    x = Math.random() * ownerObj.width() - w,
