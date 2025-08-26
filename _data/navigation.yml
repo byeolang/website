@@ -3,6 +3,8 @@ main:
   - title: "🗞"
     url: /posts/
     image: "https://jekyllrb.com/img/logo-2x.png"
+  - title: "roadmap"
+    url: /roadmap/
   - title: "📩"
     url: /download/
   - title: "📚"
