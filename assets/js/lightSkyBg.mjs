@@ -114,7 +114,7 @@ LightSkyBackGrounder.prototype.resize = function(w, h) {
 }
 LightSkyBackGrounder.prototype.onCreateUnit = function() {
   var dice = Math.random() * 100;
-  if(dice > 96)
+  if(dice > 94)
     return new BigLeaf(this, this.isMasthead);
   else if(dice > 55)
     return new MediumLeaf(this, this.isMasthead);
