@@ -1,0 +1,96 @@
+const TILE_WIDTH = 32;
+const MAX_X = 5;
+const MAX_Y = 5;
+
+class layer {
+  constructor(map, zIndex) {
+    this.map = map;
+    this.zIndex = zIndex;
+  }
+
+  layoutTiles(elem) {
+    for(let y = 0; y < MAX_Y; y++) {
+      for(let x = 0; x < MAX_X; x++) {
+        const tileId = this.map[y][x];
+        if(tileId == undefined) continue;
+
+        elem.appendChild(this._makeTile(tileId, x, y));
+      }
+    }
+  }
+
+  _makeTile(tileId, x, y) {
+    const tile = document.createElement('img');
+    //tile.src = `../assets/images/tile${tileId}.png`;
+    tile.classList.add('tile');
+    tile.style.width = `${TILE_WIDTH}px`;
+    tile.style.height = `${TILE_WIDTH}px`;
+    tile.style.left = `${x * TILE_WIDTH}px`;
+    tile.style.top = `${y * TILE_WIDTH}px`;
+    tile.zIndex = this.zIndex;
+
+    ///////
+    if(tileId == 0) {
+      tile.style.backgroundColor = 'transparent';
+    } else if(tileId == 1) {
+      tile.style.backgroundColor = 'red';
+    } else if(tileId == 2) {
+      tile.style.backgroundColor = 'blue';
+    }
+    ///////
+
+    return tile
+  }
+}
+
+class worldMap {
+  constructor(name, layers) {
+    this.name = name;
+    this.layers = layers;
+  }
+
+  layoutTiles(elem) {
+    this.layers.forEach(l => {
+      const layerElem = document.createElement('div');
+      layerElem.classList.add("layer");
+      const width = (MAX_X * TILE_WIDTH) / 2;
+      layerElem.style.position = 'absolute';
+      layerElem.style.left = `calc(50dvh - ${width}px)`;
+      elem.appendChild(layerElem);
+      l.layoutTiles(layerElem);
+    });
+  }
+}
+
+window.addEventListener('load', function() {
+  // Layer1:
+  const layer1 = new layer(
+    [
+      [1, 0, 0, 0, 0],
+      [0, 1, 0, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1],
+    ],
+    1
+  );
+
+  const layer2 = new layer(
+    [
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 2, 0, 2],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ],
+    2
+  );
+
+  const map = new worldMap("Roadmap", [
+    layer1, layer2
+  ]);
+  const main = document.getElementById('main');
+  if(main == undefined) return;
+
+  map.layoutTiles(main);
+});
