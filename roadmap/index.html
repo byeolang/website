@@ -1,83 +1,10 @@
 ---
+layout: default
 ---
 
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+<link rel="stylesheet" type="text/css" href="../assets/css/roadmap.css" />
+<script type="module" src="../assets/js/roadmap.mjs"></script>
 
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <script type="module" src="../assets/js/doxygen-awesome-darkmode-toggle.mjs"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/doxygen-awesome-darkmode-toggle.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/masthead.css" />
-    <script src="../assets/js/bg.js"></script>
-    <script type="module" src="../assets/js/masthead.mjs"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/notice.css" />
-
-    <link rel="stylesheet" type="test/css" href="../assets/css/roadmap.css" />
-
-  </head>
-
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include skip-links.html %}
-    {% include masthead.html %}
-
-    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-    <script>
-      addBackToTop({
-        diameter: 56,
-        backgroundColor: '#11999e',
-        textColor: '#fff'
-      })
-    </script>
-
-    <div class="initial-content">
-      <div id="main" role="main">
-
-      </div>
-    </div>
-
-    {% if site.search == true %}
-      <div class="search-content">
-        {% include search/search_form.html %}
-      </div>
-    {% endif %}
-
-    <div id="footer" class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
-</html>
+<div id="main" role="main">
+  <div id="main-bg"></div>
+</div>
