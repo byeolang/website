@@ -26,5 +26,23 @@ div#main-bg {
   top: 0;
   left: 0;
   z-index: 0;
-  background-image: url('./../images/kr.png');
+  animation-name: bgSprite;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+}
+
+@keyframes bgSprite {
+  0% {
+    background-image: url('./../images/kr.png');
+  }
+  25% {
+    background-image: url('./../images/en.png');
+  }
+  50% {
+    background-image: url('./../images/star.png');
+  }
+  75% {
+    background-image: url('./../images/tide.png');
+  }
 }
