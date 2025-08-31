@@ -2,19 +2,31 @@ div.initial-content {
   display: flex;
 }
 
+div#masthead {
+  position: fixed !important;
+}
+
 div#main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex: 1 0 auto;
   position: relative;
+  margin-top: 50px;
+  margin-bottom: 500px;
+}
+
+div#footer {
+  position: fixed !important;
+  top: var(--footer-top);
 }
 
 div.layer {
   position: absolute;
   display: flex;
-  margin-top: 50px;
   flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 500px;
 }
 
 div.layer-row {
