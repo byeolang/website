@@ -58,7 +58,6 @@ img.tile {
 }
 
 div#main-bg {
-  visibility: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
