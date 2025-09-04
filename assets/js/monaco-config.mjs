@@ -80,7 +80,7 @@ export const editor = monaco.editor.create(document.getElementById('codepad'), {
   wordWrap: 'on',
   scrollbar: {
     horizontal: 'hidden',
-    verticalScrollbarSize: 10,
+    verticalScrollbarSize: 20,
   }
 });
 
