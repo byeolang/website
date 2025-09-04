@@ -75,7 +75,7 @@ export const editor = monaco.editor.create(document.getElementById('codepad'), {
   minimap: { enabled: false },
   renderLineHighlight: "none",
   automaticLayout: true,
-  fontFamily: 'Retro Gaming',
+  fontFamily: 'Galmuri9',
   fontSize: getFontSize(),
   wordWrap: 'on',
   scrollbar: {

@@ -68,13 +68,6 @@ div.search-content {
     height: 0px;
 }
 
-@font-face {
-    font-family: 'Retro Gaming';
-    font-style: 'normal';
-    font-weight: 400;
-    src: url('Retro Gaming.ttf') format('truetype');
-}
-
 label#lb_verbose {
     display:inline;
     margin-right: 20px;

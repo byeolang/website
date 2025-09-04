@@ -34,7 +34,7 @@ span#dark-mode-wrapper {
 	white-space: nowrap;
 	transition: all 0.2s ease;
 	font-size: 11px;
-	font-family: dotum;
+	font-family: Galmuri9;
 	letter-spacing: -1px;
 }
 [data-tooltip]:before {
