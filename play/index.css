@@ -9,6 +9,8 @@
     --byeol-moon: #E0B88D;
     --byeol-nebular: #ca5fa4;
     --byeol-nebular2: #F2B6D7;
+    --byeol-handheld-frame-light: #EFEFEF;
+    --byeol-handheld-frame-dark: #2d3943;
 }
 
 iframe#byeol {
@@ -22,11 +24,30 @@ div#top_pane {
     padding: 5px;
 }
 
+div.monaco-editor {
+  border-radius: 45px;
+}
+div.overflow-guard {
+  border-radius: 45px;
+}
+html.dark-mode div.overflow-guard {
+  border-top: 3px solid #444;
+  border-left: 3px solid #222;
+  border-right: 6px solid #444;
+  border-bottom: 2px solid #000;
+}
+html .overflow-guard {
+  border-top: 10px solid #ddd;
+  border-left: 3px solid #bbb;
+  border-right: 3px solid #bbb;
+  border-bottom: 4px solid #888;
+}
+
 html div#top_pane {
-    background-color: var(--byeol-white);
+    background-color: var(--byeol-handheld-frame-light);
 }
 html.dark-mode div#top_pane {
-    background-color: var(--byeol-night);
+    background-color: var(--byeol-handheld-frame-dark);
 }
 
 div.initial-content {
@@ -37,6 +58,34 @@ div.initial-content {
 div#codepad{
   width: 100%;
   height: 100%;
+  padding-top: 0px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 499px) {
+  div#codepad{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+@media screen and (min-width: 500px) {
+  div#codepad{
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  div#codepad{
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+html div#codepad {
+    background-color: var(--byeol-handheld-frame-light);
+}
+html.dark-mode div#codepad {
+    background-color: var(--byeol-handheld-frame-dark);
 }
 
 div#bottom_pane {
