@@ -72,15 +72,9 @@ div#main-bg {
 
 @keyframes bgSprite {
   0% {
-    background-image: url('./../images/kr.png');
-  }
-  25% {
-    background-image: url('./../images/en.png');
+    background-image: url('./../images/tile/12.png');
   }
   50% {
-    background-image: url('./../images/star.png');
-  }
-  75% {
-    background-image: url('./../images/tide.png');
+    background-image: url('./../images/tile/12.png');
   }
 }
