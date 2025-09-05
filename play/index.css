@@ -203,6 +203,12 @@ div#result{
   opacity: 0;
 }
 
+div#result-titlebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 899px) {
   div#result {
     width: calc(100dvw - 100px);
