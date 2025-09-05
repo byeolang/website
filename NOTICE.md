@@ -1,6 +1,5 @@
-======
-doxygen-awesome-css
-======
+# doxygen-awesome-css
+
 MIT License
 
 Copyright (c) 2021 - 2023 jothepro
@@ -24,9 +23,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-======
-Button Hover
-======
+
+
+# Button Hover
 
 Copyright (c) 2023 by Katherine Kato (https://codepen.io/kathykato/pen/rZRaNe)
 
@@ -38,9 +37,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-=======
-Minimal Mistakes
-=======
+
+# Minimal Mistakes
 
 The MIT License (MIT)
 
@@ -67,9 +65,9 @@ THE SOFTWARE.
 
 
 
-=======
-Galmuri9
-=======
+
+# Galmuri9
+
 Copyright &copy; 2019–2025 Lee Minseo (quiple@quiple.dev)
 
 This font software is licensed under the SIL Open Font License, Version 1.1.
