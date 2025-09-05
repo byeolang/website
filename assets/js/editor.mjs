@@ -10,7 +10,6 @@ function onClickRunButton() {
     const code = model.getValue()
     run(code);
     showCloseButton();
-    resizeCodePad();
 }
 
 function resizeCodePad() {

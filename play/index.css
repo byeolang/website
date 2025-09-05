@@ -191,8 +191,8 @@ div#bottom_pane {
 
 div#result{
   background-color: var(--byeol-night2);
-  display: none;
-  position: absolute;
+  visibility: hidden;
+  position: fixed;
   z-index: 1000;
   border: 2px solid #333;
   border-radius: 16px;
