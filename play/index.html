@@ -45,12 +45,18 @@ permalink: play/
     </div>
     <div id="codepad"></div>
     <div id="result">
-        <img src='../assets/images/output.svg' />
-        <b>output</b>
-        <input type='button' id='bt-close' value='×' />
-        {% raw %}
-        <iframe scrolling=no id='byeol' src='byeol.html'> </iframe>
-        {% endraw %}
+      <div id="result-titlebar">
+        <div id="result-titlebar-left">
+          <img src='../assets/images/output.svg' />
+          <b>output</b>
+        </div>
+        <div id="result-titlebar-right">
+          <input type='button' id='bt-close' value='×' />
+        </div>
+      </div>
+      {% raw %}
+      <iframe scrolling=no id='byeol' src='byeol.html'> </iframe>
+      {% endraw %}
     </div>
   </div>
 </div>
