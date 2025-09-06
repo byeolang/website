@@ -23,7 +23,6 @@ iframe#byeol {
 div#top_pane {
     width: 100%;
     padding: 5px;
-    height: 55px;
 }
 div.top-pane-sub {
   position: absolute;
@@ -116,9 +115,12 @@ html.dark-mode div#lamp-label {
   }
   div#top-pane-left {
     left: 15px;
+    position: relative;
   }
   div#top-pane-right {
     right: 15px;
+    display: inline;
+    position: static;
   }
 }
 @media screen and (min-width: 500px) {
@@ -132,10 +134,25 @@ html.dark-mode div#lamp-label {
     width: 10vw;
   }
   div#top-pane-left {
+    position: relative;
     left: 10vw;
   }
   div#top-pane-right {
     right: 10vw;
+    display: inline;
+    position: static;
+  }
+}
+@media screen and (min-width: 700px) {
+  div#top_pane {
+    height: 55px;
+  }
+  div#top-pane-left {
+    position: absolute;
+  }
+  div#top-pane-right {
+    display: inline;
+    position: absolute;
   }
 }
 @media screen and (min-width: 900px) {
@@ -148,11 +165,16 @@ html.dark-mode div#lamp-label {
     top: calc(50vh - 100px);
     width: 120px;
   }
+  div#top_pane {
+    height: 55px;
+  }
   div#top-pane-left {
     left: 120px;
   }
   div#top-pane-right {
     right: 120px;
+    position: absolute;
+    display: inline;
   }
 }
 
