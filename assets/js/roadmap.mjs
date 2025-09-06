@@ -1,7 +1,7 @@
 import { layers } from './roadmap_maps.mjs'
 import { worldMap } from './tileset.mjs'
 
-const map = new worldMap("Roadmap", layers);
+const map = new worldMap("Roadmap", layers, 1);
 
 window.addEventListener('load', function() {
   // Layer1:
