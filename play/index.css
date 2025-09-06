@@ -10,7 +10,9 @@
     --byeol-nebular: #ca5fa4;
     --byeol-nebular2: #F2B6D7;
     --byeol-handheld-frame-light: #EFEFEF;
+    --byeol-handheld-frame-bump-light: #D8D8D8;
     --byeol-handheld-frame-dark: #2d3943;
+    --byeol-handheld-frame-bump-dark: #1a293d;
 }
 
 iframe#byeol {
@@ -170,6 +172,12 @@ label#lb_verbose {
     font-size: smaller;
     display: contents;
 }
+html .bin_ver {
+    text-shadow: -2px -2px 1px #b5b5b5;
+}
+html.dark-mode .bin_ver {
+    text-shadow: -2px -2px 1px #000;
+}
 
 input#runbt {
     border-radius: 1.4rem;
@@ -182,21 +190,25 @@ input#runbt:hover {
 }
 
 select#dd-srcs {
-    hegith: 27px;
+    height: 39px;
     margin-left: 10px;
-    border-radius: 1.4rem;
+    border-radius: 13px;
     padding-left: 5px;
     padding-right: 5px;
     margin-right: 10px;
 }
 
 html.dark-mode select#dd-srcs {
-    background-color: var(--byeol-night3);
+    background-color: var(--byeol-handheld-frame-bump-dark);
     color: var(--byeol-white2);
+    border-top: 3px solid #444;
+    border-left: 2px solid #222;
 }
 html select#dd-srcs {
-    background-color: var(--byeol-white2);
+    background-color: var(--byeol-handheld-frame-bump-light);
     color: var(--byeol-night3);
+    border-top: 3px solid #999;
+    border-left: 2px solid #fff;
 }
 
 input#bt-close {
@@ -240,6 +252,21 @@ div.checkboxes__item {
   justify-content: center;
   align-content: center;
   margin-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 15px;
+}
+html div.checkboxes__item {
+  background-color: var(--byeol-handheld-frame-bump-light);
+  border-top: 3px solid #999;
+  border-left: 1px solid #fff;
+}
+html.dark-mode div.checkboxes__item {
+  background-color: var(--byeol-handheld-frame-bump-dark);
+  border-top: 3px solid #444;
+  border-left: 1px solid #222;
 }
 
 html div.checkbox__body {
