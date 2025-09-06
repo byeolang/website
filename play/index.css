@@ -82,6 +82,7 @@ div#lamp {
   background-color: #F00;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 0px 2px, inset #441313 0px 0px 5px, rgba(255, 0, 0, 0.5) 0 2px 12px
+  border-bottom: 3px solid #300;
 }
 div#lamp-light {
   position: absolute;
@@ -96,6 +97,12 @@ div#lamp-light {
 div#lamp-label {
   position: relative;
   top: 30px;
+}
+html div#lamp-label {
+    text-shadow: -2px -2px 1px #b5b5b5;
+}
+html.dark-mode div#lamp-label {
+    text-shadow: -2px -2px 1px #000;
 }
 
 @media screen and (max-width: 499px) {
