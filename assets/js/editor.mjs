@@ -1,6 +1,6 @@
 import { examples } from './examples.mjs';
 import { editor, model } from './monaco-config.mjs'
-import { showCloseButton, onClickCloseButton, showPopup, onResizePopup } from './result-popup.mjs'
+import { showCloseButton, onClickCloseButton, showPopup } from './result-popup.mjs'
 import { loadStorage, saveStorage } from './code-storage.mjs'
 
 let isEditingYourCodes = true;
@@ -24,8 +24,6 @@ function resizeCodePad() {
     codepad.style.height = newHeight;
     codepad.style.maxHeight = newHeight;
     editor.layout();
-
-    onResizePopup()
 }
 
 function onChangeSrc(option) {

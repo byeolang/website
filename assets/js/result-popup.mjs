@@ -19,34 +19,4 @@ export function showPopup() {
     result.style.display = 'block';
     result.style.opacity = '0.8';
     result.classList.remove('hidden-popup');
-
-    onResizePopup()
-}
-
-export function onResizePopup() {
-    const winWidth = window.innerWidth;
-    const winHeight = window.innerHeight;
-    const codepad = document.getElementById('codepad');
-    const rect = codepad.getBoundingClientRect();
-    const popup = document.getElementById('result');
-    const padding = 50;
-
-    if (winWidth > 950) {
-      const width = 500;
-      const height = winHeight - (rect.top + padding * 2);
-
-      popup.style.left = (winWidth - (padding + 500)) + 'px';
-      popup.style.top = (rect.top + padding) + 'px';
-      popup.style.width = width + 'px';
-      popup.style.height = height + 'px';
-
-    } else {
-      const width = winWidth - padding * 2;
-      const height = 250;
-
-      popup.style.left = padding + 'px';
-      popup.style.top = (winHeight - (height + padding)) + 'px';
-      popup.style.width = width + 'px';
-      popup.style.height = height + 'px';
-    }
 }
