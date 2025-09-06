@@ -64,8 +64,8 @@ div#codepad{
 }
 @media screen and (max-width: 499px) {
   div#codepad{
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (min-width: 500px) {
