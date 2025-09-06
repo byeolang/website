@@ -22,8 +22,12 @@ iframe#byeol {
 }
 div#top_pane {
     width: 100%;
-    text-align: center;
     padding: 5px;
+    height: 55px;
+}
+div.top-pane-sub {
+  position: absolute;
+  display: inline;
 }
 
 div.monaco-editor {
@@ -110,6 +114,12 @@ html.dark-mode div#lamp-label {
     padding-left: 15px;
     padding-right: 15px;
   }
+  div#top-pane-left {
+    left: 15px;
+  }
+  div#top-pane-right {
+    right: 15px;
+  }
 }
 @media screen and (min-width: 500px) {
   div#codepad{
@@ -121,6 +131,12 @@ html.dark-mode div#lamp-label {
     top: calc(50vh - 100px);
     width: 10vw;
   }
+  div#top-pane-left {
+    left: 10vw;
+  }
+  div#top-pane-right {
+    right: 10vw;
+  }
 }
 @media screen and (min-width: 900px) {
   div#codepad{
@@ -131,6 +147,12 @@ html.dark-mode div#lamp-label {
     visibility: visible;
     top: calc(50vh - 100px);
     width: 120px;
+  }
+  div#top-pane-left {
+    left: 120px;
+  }
+  div#top-pane-right {
+    right: 120px;
   }
 }
 
@@ -207,6 +229,7 @@ input#runbt {
     border-radius: 1.4rem;
     background-color: var(--byeol-moon);
     width: 80px;
+    margin-top: 8px;
 }
 
 input#runbt:hover {
