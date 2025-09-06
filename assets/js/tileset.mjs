@@ -1,10 +1,12 @@
 export class layer {
-  constructor(map, zIndex) {
+  constructor(map) {
     this.map = map;
-    this.zIndex = zIndex;
+    this.zIndex = 0;
   }
 
-  layoutTiles(elem) {
+  layoutTiles(elem, zIndex) {
+    this.zIndex = zIndex;
+
     for(let y = 0; y < this.map.length; y++) {
       const rowMap = this.map[y];
       const row = this._makeRow();
@@ -39,9 +41,10 @@ export class layer {
 }
 
 export class worldMap {
-  constructor(name, layers) {
+  constructor(name, layers, baseZIndex) {
     this.name = name;
     this.layers = layers;
+    this.baseZIndex = baseZIndex;
   }
 
   layoutTiles(elem) {
@@ -49,7 +52,7 @@ export class worldMap {
       const layerElem = document.createElement('div');
       layerElem.classList.add("layer");
       elem.appendChild(layerElem);
-      l.layoutTiles(layerElem);
+      l.layoutTiles(layerElem, this.baseZIndex + index);
     });
   }
 }
