@@ -38,23 +38,9 @@ img.tile {
   position: relative;
 }
 
-@media(max-width: 499px) {
-  img.tile {
-    width: 8dvw;
-    height: 8dvw;
-  }
-}
-@media(min-width: 500px) {
-  img.tile {
-    width: 8dvw;
-    height: 8dvw;
-  }
-}
-@media(min-width: 900px) {
-  img.tile {
-    width: 8dvw;
-    height: 8dvw;
-  }
+img.tile {
+  width: 3dvw;
+  height: 3dvw;
 }
 
 div#main-bg {
