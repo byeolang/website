@@ -16,21 +16,25 @@ permalink: play/
 
 <div class="initial-content">
   <div id="top_pane">
-    <div class="bin_ver">powered by</div>
-    <a id="version" class="bin_ver" href="https://github.com/byeolang/byeol/releases/latest">byeol</a>
-    <select id='dd-srcs'>
-        <option value='your-codes'>your codes</option>
-        <option value='hello-world'>hello world!</option>
-        <option value='bow-to-everyone'>bow to mike's</option>
-    </select>
-    <div class="checkboxes__item">
-      <label class="checkbox">
-        <input type="checkbox" id='verbose' />
-        <div class="checkbox__checkmark"></div>
-        <div class="checkbox__body">verbose</div>
-      </label>
+    <div id="top-pane-left" class="top-pane-sub">
+      <div class="bin_ver">powered by</div>
+      <a id="version" class="bin_ver" href="https://github.com/byeolang/byeol/releases/latest">byeol</a>
+      <select id='dd-srcs'>
+          <option value='your-codes'>your codes</option>
+          <option value='hello-world'>hello world!</option>
+          <option value='bow-to-everyone'>bow to mike's</option>
+      </select>
+      <div class="checkboxes__item">
+        <label class="checkbox">
+          <input type="checkbox" id='verbose' />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">verbose</div>
+        </label>
+      </div>
     </div>
-    <input type='button' id='runbt' value='▶' />
+    <div id="top-pane-right" class="top-pane-sub">
+      <input type='button' id='runbt' value='▶' />
+    </div>
   </div>
   <div id="bottom_pane">
     <div id="lamp-section">
