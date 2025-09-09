@@ -87,3 +87,13 @@ html.dark-mode [data-tooltip]:after {
 	opacity: 1;
 	top: 36px;
 }
+
+.masthead__menu-item img {
+  margin-top: 1px;
+  width: 24px;
+  height: 24px;
+}
+
+div#language-toggle {
+  margin-left: 3px;
+}
