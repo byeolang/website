@@ -3,8 +3,13 @@ import * as en from './lang-en.mjs';
 
 class I18n {
   constructor() {
-    this.currentLanguage = localStorage.getItem('language') || 'en';
+    this.currentLanguage = localStorage.getItem('language') || this.pickDefaultLang();
     this.translations = { "ko": ko.default, "en": en.default };
+  }
+
+  pickDefaultLang() {
+    const lang = navigator.language;
+    return lang == 'ko' || lang == 'ko-KR' ? 'ko' : 'en';
   }
 
   t(key, defaultValue = key) {
