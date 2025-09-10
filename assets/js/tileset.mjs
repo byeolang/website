@@ -103,6 +103,12 @@ export class character {
   }
 
   adjustDescriptionWindowPos(elem, handleElem) {
+    document.getElementById("description-title").textContent = this.name;
+    document.getElementById('description-content').innerHTML = this.description;
+
+    if(window.innerWidth < 500)
+      return this.adjustDescriptionWindowPosWithSmallBrowser(elem, handleElem);
+
     // window:
     const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
     const characterLeft = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
@@ -118,9 +124,6 @@ export class character {
       `50px`;
     elem.style.top = newTop;
 
-    document.getElementById("description-title").textContent = this.name;
-    document.getElementById('description-content').innerHTML = this.description;
-
     // handle:
     handleElem.style.visibility = 'visible';
     handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - ${getHandleSize()}px + 2px)` : `calc(${elem.style.left} + 40dvw)`;
@@ -135,6 +138,17 @@ export class character {
       handleElem.style.borderLeft = `${getHandleSize()}px solid #fff`;
       handleElem.style.borderRight = '';
     }
+  }
+
+  adjustDescriptionWindowPosWithSmallBrowser(elem, handleElem) {
+    elem.style.visibility = 'visible';
+    elem.style.marginTop = '20dvh';
+    elem.style.marginBottom = '20dvh';
+    elem.style.marginLeft = '20px';
+    elem.style.marginRight = '20px';
+    elem.style.width = 'calc(100% - 40px)';
+
+    handleElem.style.visibility = 'hidden';
   }
 }
 
