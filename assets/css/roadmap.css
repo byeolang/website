@@ -23,38 +23,15 @@ div#footer {
 
 div.layer {
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   padding-top: 50px;
   padding-bottom: 500px;
 }
 
-div.layer-row {
-  display: flex;
-  flex-direction: row;
-}
-
 img.tile {
-  position: relative;
-}
-
-@media screen and (max-width: 499px) {
-  img.tile {
-    width: 5dvw;
-    height: 5dvw;
-  }
-}
-@media screen and (min-width: 500px) {
-  img.tile {
-    width: 5dvw;
-    height: 5dvw;
-  }
-}
-@media screen and (min-width: 700px) {
-  img.tile {
-    width: 4dvw;
-    height: 4dvw;
-  }
+  position: absolute;
+  width: 4dvw;
+  height: 4dvw;
 }
 
 div#main-bg {
