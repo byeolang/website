@@ -14,7 +14,7 @@ var searchData=
   ['params_11',['params',['../classby_1_1params.html',1,'by']]],
   ['params_2ehpp_12',['params.hpp',['../params_8hpp.html',1,'']]],
   ['parser_13',['parser',['../classby_1_1parser.html',1,'by']]],
-  ['parser_2ehpp_14',['parser.hpp',['../leaf_2parser_8hpp.html',1,'(Global Namespace)'],['../core_2worker_2parser_8hpp.html',1,'(Global Namespace)']]],
+  ['parser_2ehpp_14',['parser.hpp',['../core_2worker_2parser_8hpp.html',1,'(Global Namespace)'],['../leaf_2parser_8hpp.html',1,'(Global Namespace)']]],
   ['pkgs_2ehpp_15',['pkgs.hpp',['../pkgs_8hpp.html',1,'']]],
   ['platform_16',['platform',['../structby_1_1build_feature_1_1platform.html',1,'by::buildFeature']]],
   ['platformapi_2ehpp_17',['platformAPI.hpp',['../platform_a_p_i_8hpp.html',1,'']]],
