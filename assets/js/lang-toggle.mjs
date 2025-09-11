@@ -40,7 +40,6 @@ class I18n {
   }
 
   init() {
-    console.log("i18n.init()");
     this.updateTooltips();
     this.updateLanguageFlag(this.currentLanguage);
   }

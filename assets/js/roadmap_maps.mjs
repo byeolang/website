@@ -217,9 +217,6 @@ const deco = new tileset.layer(
   ]
 )
 
-console.log("roadmap_maps.mjs");
-console.log(i18n.t("milestone1-title"));
-
 // character:
 //  literally, characters are placed at here. these characters aren't just people.
 //  a character is defined as an object that has coordinates, a name, and a description.
