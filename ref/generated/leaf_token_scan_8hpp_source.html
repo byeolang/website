@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/byeol/byeol/module/leaf/parser/bison/leafTokenScan.hpp Source File</title>
+<title>byeol: /Users/kniz/repo/byeolang/byeol/module/leaf/parser/bison/leafTokenScan.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../assets/css/galmuri.css" />
@@ -113,8 +113,8 @@ $(document).ready(function(){initNavTree('leaf_token_scan_8hpp_source.html','');
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="leaf_token_scanable_8hpp.html">leaf/parser/leafTokenScanable.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> <span class="keyword">union </span>ZZSTYPE ZZSTYPE;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">typedef</span> <span class="keyword">struct </span>lloc ZZLTYPE;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> <span class="keyword">union </span><a class="code hl_union" href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a> <a class="code hl_union" href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlloc.html">lloc</a> <a class="code hl_struct" href="structlloc.html">ZZLTYPE</a>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">typedef</span> <span class="keywordtype">void</span>* zzscan_t;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>by {</div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('leaf_token_scan_8hpp_source.html','');
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">using</span> leafTokenScanable::onScan;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">virtual</span> nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, ZZSTYPE* yylval, ZZLTYPE* loc, zzscan_t yyscanner,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">virtual</span> nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, <a class="code hl_union" href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a>* yylval, <a class="code hl_struct" href="structlloc.html">ZZLTYPE</a>* loc, zzscan_t yyscanner,</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            nbool&amp; isBypass) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('leaf_token_scan_8hpp_source.html','');
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">using</span> super::onScan;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, ZZSTYPE* yylval, ZZLTYPE* loc, zzscan_t yyscanner,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, <a class="code hl_union" href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a>* yylval, <a class="code hl_struct" href="structlloc.html">ZZLTYPE</a>* loc, zzscan_t yyscanner,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            nbool&amp; isBypass) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span>:</div>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('leaf_token_scan_8hpp_source.html','');
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">using</span> super::onScan;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, ZZSTYPE* yylval, ZZLTYPE* loc, zzscan_t yyscanner,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        nint onScan(<a class="code hl_class" href="classby_1_1leaf_parser.html">leafParser</a>&amp; ps, <a class="code hl_union" href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a>* yylval, <a class="code hl_struct" href="structlloc.html">ZZLTYPE</a>* loc, zzscan_t yyscanner,</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            nbool&amp; isBypass) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span>:</div>
@@ -167,6 +167,8 @@ $(document).ready(function(){initNavTree('leaf_token_scan_8hpp_source.html','');
 <div class="ttc" id="aclassby_1_1leaf_token_scan_html"><div class="ttname"><a href="classby_1_1leaf_token_scan.html">by::leafTokenScan</a></div><div class="ttdoc">Base class for token scanning strategies.</div><div class="ttdef"><b>Definition:</b> leafTokenScan.hpp:19</div></div>
 <div class="ttc" id="aclassby_1_1leaf_token_scanable_html"><div class="ttname"><a href="classby_1_1leaf_token_scanable.html">by::leafTokenScanable</a></div><div class="ttdoc">Interface for token scanning during leaf parsing.</div><div class="ttdef"><b>Definition:</b> leafTokenScanable.hpp:18</div></div>
 <div class="ttc" id="aleaf_token_scanable_8hpp_html"><div class="ttname"><a href="leaf_token_scanable_8hpp.html">leafTokenScanable.hpp</a></div></div>
+<div class="ttc" id="astructlloc_html"><div class="ttname"><a href="structlloc.html">lloc</a></div><div class="ttdef"><b>Definition:</b> lowparser.hpp:60</div></div>
+<div class="ttc" id="aunion_z_z_s_t_y_p_e_html"><div class="ttname"><a href="union_z_z_s_t_y_p_e.html">ZZSTYPE</a></div><div class="ttdef"><b>Definition:</b> leafLowparser.hpp:115</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

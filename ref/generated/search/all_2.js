@@ -10,7 +10,7 @@ var searchData=
   ['basefunc_2ehpp_7',['baseFunc.hpp',['../base_func_8hpp.html',1,'']]],
   ['baseobj_8',['baseObj',['../classby_1_1base_obj.html#ad609f260424cc64ca4141c93513aeae2',1,'by::baseObj::baseObj()'],['../classby_1_1base_obj.html',1,'by::baseObj']]],
   ['baseobj_2ehpp_9',['baseObj.hpp',['../base_obj_8hpp.html',1,'']]],
-  ['bind_10',['bind',['../classby_1_1binder.html#a69159b910a8dbc6b07409dfe68da90de',1,'by::binder::bind()'],['../classby_1_1tbindable.html#a69159b910a8dbc6b07409dfe68da90de',1,'by::tbindable::bind()']]],
+  ['bind_10',['bind',['../classby_1_1tbindable.html#a69159b910a8dbc6b07409dfe68da90de',1,'by::tbindable::bind()'],['../classby_1_1binder.html#a69159b910a8dbc6b07409dfe68da90de',1,'by::binder::bind()']]],
   ['binder_11',['binder',['../classby_1_1binder.html',1,'by']]],
   ['binder_2ehpp_12',['binder.hpp',['../binder_8hpp.html',1,'(Global Namespace)'],['../binder_2binder_8hpp.html',1,'(Global Namespace)']]],
   ['bindtacticable_13',['bindTacticable',['../classby_1_1bind_tacticable.html',1,'by']]],

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/byeol/byeol/module/core/worker/tokenScanable.hpp Source File</title>
+<title>byeol: /Users/kniz/repo/byeolang/byeol/module/core/worker/tokenScanable.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../assets/css/galmuri.css" />
@@ -113,8 +113,8 @@ $(document).ready(function(){initNavTree('token_scanable_8hpp_source.html',''); 
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="ntype_8hpp.html">core/type/ntype.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> <span class="keyword">union </span>YYSTYPE YYSTYPE;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">typedef</span> <span class="keyword">struct </span>lloc YYLTYPE;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> <span class="keyword">union </span><a class="code hl_union" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> <a class="code hl_union" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlloc.html">lloc</a> <a class="code hl_struct" href="structlloc.html">YYLTYPE</a>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">typedef</span> <span class="keywordtype">void</span>* yyscan_t;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>by {</div>
@@ -125,13 +125,15 @@ $(document).ready(function(){initNavTree('token_scanable_8hpp_source.html',''); 
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        BY(ME(<a class="code hl_class" href="classby_1_1token_scanable.html">tokenScanable</a>))</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        nint onScan(<a class="code hl_class" href="classby_1_1parser.html">parser</a>&amp; ps, YYSTYPE* val, YYLTYPE* loc, yyscan_t scanner);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">virtual</span> nint onScan(<a class="code hl_class" href="classby_1_1parser.html">parser</a>&amp; ps, YYSTYPE* yylval, YYLTYPE* loc, yyscan_t yyscanner, nbool&amp; isBypass) = 0;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        nint onScan(<a class="code hl_class" href="classby_1_1parser.html">parser</a>&amp; ps, <a class="code hl_union" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a>* val, <a class="code hl_struct" href="structlloc.html">YYLTYPE</a>* loc, yyscan_t scanner);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">virtual</span> nint onScan(<a class="code hl_class" href="classby_1_1parser.html">parser</a>&amp; ps, <a class="code hl_union" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a>* yylval, <a class="code hl_struct" href="structlloc.html">YYLTYPE</a>* loc, yyscan_t yyscanner, nbool&amp; isBypass) = 0;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 <div class="ttc" id="aclassby_1_1parser_html"><div class="ttname"><a href="classby_1_1parser.html">by::parser</a></div><div class="ttdoc">Parser for byeol language source code.</div><div class="ttdef"><b>Definition:</b> parser.hpp:43</div></div>
 <div class="ttc" id="aclassby_1_1token_scanable_html"><div class="ttname"><a href="classby_1_1token_scanable.html">by::tokenScanable</a></div><div class="ttdoc">Interface for token scanning functionality.</div><div class="ttdef"><b>Definition:</b> tokenScanable.hpp:18</div></div>
 <div class="ttc" id="antype_8hpp_html"><div class="ttname"><a href="ntype_8hpp.html">ntype.hpp</a></div></div>
+<div class="ttc" id="astructlloc_html"><div class="ttname"><a href="structlloc.html">lloc</a></div><div class="ttdef"><b>Definition:</b> lowparser.hpp:60</div></div>
+<div class="ttc" id="aunion_y_y_s_t_y_p_e_html"><div class="ttname"><a href="union_y_y_s_t_y_p_e.html">YYSTYPE</a></div><div class="ttdef"><b>Definition:</b> lowparser.hpp:153</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
