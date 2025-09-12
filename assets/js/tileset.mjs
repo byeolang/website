@@ -45,28 +45,39 @@ export class layer {
 }
 
 export class character {
-  constructor(name, animId, description, x, y, height) {
+  constructor(name, animId, description, x, y, height, classes) {
     this.name = name;
     this.animId = animId;
     this.description = description;
     this.x = x;
     this.y = y;
     this.height = height;
+    this.classes = classes;
   }
 
   layout(layerElem) {
     const elem = document.createElement('div');
     layerElem.appendChild(elem);
-    elem.classList.add('character');
+
+    const clsList = elem.classList;
+    clsList.add('character');
+    const cls = this.classes;
+    if(cls != null)
+      for(let n = 0; n < cls.length; n++)
+        clsList.add(cls[n]);
+
     elem.style.animationName = this.animId;
     elem.style.left = `${this.x * 4}dvw`;
     elem.style.top = `calc(${this.y * 4}dvh - calc(${this.height} - 4dvh))`;
     elem.style.height = this.height;
+    elem.style.zIndex = this.zIndex;
 
     this.addEvent(elem);
   }
 
   addEvent(elem) {
+    if(this.description == null) return;
+
     const jq = $(elem);
     jq.hover(function() {
       elem.style.filter = 'brightness(1.5) saturate(2.5)';
