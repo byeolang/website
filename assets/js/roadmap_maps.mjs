@@ -228,7 +228,17 @@ const character = new tileset.characterLayer(
       'some description',
       17,
       3,
-      '9dvh'
+      '9dvh',
+      null
+    ),
+    new tileset.character(
+      'effect',
+      'nodeSprite',
+      null,
+      17,
+      3,
+      '4dvh',
+      ['effect']
     )
   ]
 )

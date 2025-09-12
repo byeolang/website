@@ -43,6 +43,11 @@ div.character {
   animation-timing-function: steps(1);
 }
 
+div.effect {
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+}
+
 div#main-bg {
   position: absolute;
   width: 100%;
