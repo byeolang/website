@@ -56,12 +56,27 @@ export class character {
 
   layout(layerElem) {
     const elem = document.createElement('div');
+    layerElem.appendChild(elem);
     elem.classList.add('character');
     elem.style.animationName = this.animId;
     elem.style.left = `${this.x * 4}dvw`;
     elem.style.top = `calc(${this.y * 4}dvh - calc(${this.height} - 4dvh))`;
     elem.style.height = this.height;
-    layerElem.appendChild(elem);
+
+    this.addEvent(elem);
+  }
+
+  addEvent(elem) {
+    const jq = $(elem);
+    jq.hover(function() {
+      elem.style.filter = 'brightness(1.5) saturate(2.5)';
+    }, function() {
+      elem.style.filter = '';
+    });
+
+    jq.click(function() {
+      console.log("click");
+    });
   }
 }
 
