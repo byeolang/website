@@ -34,6 +34,15 @@ img.tile {
   height: 4dvw;
 }
 
+div.character {
+  position: absolute;
+  width: 4dvw;
+  background-size: 100% 100%; /* this ignores ratio of original image */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+}
+
 div#main-bg {
   position: absolute;
   width: 100%;
@@ -45,6 +54,15 @@ div#main-bg {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(1);
+}
+
+@keyframes nodeSprite {
+  0% {
+    background-image: url('./../images/tile/44.png');
+  }
+  50% {
+    background-image: url('./../images/tile/45.png');
+  }
 }
 
 @keyframes bgSprite {

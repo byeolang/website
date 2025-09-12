@@ -3,14 +3,21 @@ export class layer {
     this.map = map;
   }
 
-  layoutTiles(parentElem, zIndex) {
+  getHeight() {
+  }
+
+  layoutTiles(parentElem, height, zIndex) {
     const layerElem = document.createElement('div');
     layerElem.classList.add("layer");
-    layerElem.style.height = `${4 * this.map.length}dvh`;
+    layerElem.style.height = height;
     layerElem.style.zIndex = zIndex;
 
     parentElem.appendChild(layerElem);
 
+    this.onLayoutTiles(layerElem)
+  }
+
+  onLayoutTiles(layerElem) {
     for(let y = 0; y < this.map.length; y++) {
       const rowMap = this.map[y];
 
@@ -30,11 +37,44 @@ export class layer {
 
     const tile = document.createElement('img');
     tile.classList.add('tile');
+    tile.src = `../assets/images/tile/${tileId}.png`;
     tile.style.left = `${x * 4}dvw`;
     tile.style.top = `${y * 4}dvw`;
-    tile.src = `../assets/images/tile/${tileId}.png`;
-
     return tile
+  }
+}
+
+export class character {
+  constructor(name, animId, description, x, y, height) {
+    this.name = name;
+    this.animId = animId;
+    this.description = description;
+    this.x = x;
+    this.y = y;
+    this.height = height;
+  }
+
+  layout(layerElem) {
+    const elem = document.createElement('div');
+    elem.classList.add('character');
+    elem.style.animationName = this.animId;
+    elem.style.left = `${this.x * 4}dvw`;
+    elem.style.top = `calc(${this.y * 4}dvh - calc(${this.height} - 4dvh))`;
+    elem.style.height = this.height;
+    layerElem.appendChild(elem);
+  }
+}
+
+export class characterLayer extends layer {
+  constructor(characterMap) {
+    super(characterMap)
+  }
+
+  onLayoutTiles(layerElem) {
+    for(let n = 0; n < this.map.length; n++) {
+      const chr = this.map[n];
+      chr.layout(layerElem);
+    }
   }
 }
 
@@ -46,8 +86,9 @@ export class worldMap {
   }
 
   layoutTiles(elem) {
+    const height = `${4 * this.layers[0].map.length}dvh`;
     this.layers.forEach((l, index) => {
-      l.layoutTiles(elem, this.baseZIndex + index);
+      l.layoutTiles(elem, height, this.baseZIndex + index);
     });
   }
 }

@@ -1,11 +1,11 @@
-import { layer } from './tileset.mjs'
+import * as tileset from './tileset.mjs'
 
 // grassland:
 //  since the `sea` is designed to be drawn repeatedly, the bottom layer is
 //  grassland, not the `sea`.
 //  only values between 8 and 11 are allowed here. in particular, never use 12.
 //  for optimization, use -1 instead of 12 to further reduce the number of tiles.
-const glassland = new layer(
+const glassland = new tileset.layer(
   [
   // 1:
   //  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
@@ -79,7 +79,7 @@ const glassland = new layer(
 //  `grassland` layer.
 //  all structures have transparent background on its image. so you have to put
 //  some grass underneath it to the same coordinates in `grassland` layer.
-const structure = new layer(
+const structure = new tileset.layer(
   [
   // 1:
   //  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
@@ -149,7 +149,7 @@ const structure = new layer(
 // deco:
 //  this layer is rarely used. it's used for thinks like characters or bridges
 //  in the background, and things that are decorated on top of the structure layer.
-const deco = new layer(
+const deco = new tileset.layer(
   [
   // 1:
   //  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
@@ -216,6 +216,23 @@ const deco = new layer(
   ]
 )
 
+// character:
+//  literally, characters are placed at here. these characters aren't just people.
+//  a character is defined as an object that has coordinates, a name, and a description.
+//  they should be clickable.
+const character = new tileset.characterLayer(
+  [
+    new tileset.character(
+      'milestone1',
+      'nodeSprite',
+      'some description',
+      17,
+      3,
+      '9dvh'
+    )
+  ]
+)
+
 export const layers = [
-  glassland, structure, deco
+  glassland, structure, deco, character
 ]
