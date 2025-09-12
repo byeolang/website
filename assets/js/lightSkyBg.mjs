@@ -104,7 +104,6 @@ export function LightSkyBackGrounder(id, isMasthead, leafCount) {
 LightSkyBackGrounder.prototype = new BackGrounder();
 LightSkyBackGrounder.prototype.initialize = function() {
 	BackGrounder.prototype.initialize.call(this);
-  this.setJQObject($("body"));
 
 	for(var n=0; n < this.leafCount; n++)
     this.createUnit();
