@@ -124,7 +124,7 @@ BackGrounder.prototype.initialize = function() {
 	//
 	//	this.release();
 
-	this.setJQObject($("div#" + this.getID()));
+	this.setJQObject($(this.getID()));
 
 	this.units = [];
 	this.is_initialized = true;

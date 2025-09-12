@@ -3,8 +3,8 @@ import * as LightBg from './lightSkyBg.mjs'
 import { DoxygenAwesomeDarkModeToggle, setBg } from './doxygen-awesome-darkmode-toggle.mjs'
 import { animateNaviIcon } from './masthead-icon-animation.mjs'
 
-var nightBg = new NightBg.NightSkyBackGrounder("main-bg", 60);
-var lightBg = new LightBg.LightSkyBackGrounder("main-bg", false, 20);
+var nightBg = new NightBg.NightSkyBackGrounder("div#main-bg", 60);
+var lightBg = new LightBg.LightSkyBackGrounder("div#main-bg", false, 20);
 setBg(nightBg, lightBg);
 
 window.addEventListener('load', function(event) {

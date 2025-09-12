@@ -2,8 +2,8 @@ import * as NightBg from './nightSkyBg.mjs'
 import * as LightBg from './lightSkyBg.mjs'
 import { DoxygenAwesomeDarkModeToggle, setBg } from './doxygen-awesome-darkmode-toggle.mjs'
 
-var nightBg = new NightBg.NightSkyBackGrounder('masthead', 20);
-var lightBg = new LightBg.LightSkyBackGrounder('masthead', true, 10);
+var nightBg = new NightBg.NightSkyBackGrounder('div#masthead', 20);
+var lightBg = new LightBg.LightSkyBackGrounder('body', true, 10);
 setBg(nightBg, lightBg);
 
 window.addEventListener('resize', function(event) {
