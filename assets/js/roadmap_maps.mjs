@@ -228,6 +228,7 @@ const character = new tileset.characterLayer(
       'some description',
       17,
       3,
+      '4dvw',
       '9dvh',
       null
     ),
@@ -237,7 +238,8 @@ const character = new tileset.characterLayer(
       null,
       17,
       3,
-      '4dvh',
+      '8dvw',
+      '3dvh',
       ['effect']
     )
   ]

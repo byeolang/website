@@ -45,12 +45,13 @@ export class layer {
 }
 
 export class character {
-  constructor(name, animId, description, x, y, height, classes) {
+  constructor(name, animId, description, x, y, width, height, classes) {
     this.name = name;
     this.animId = animId;
     this.description = description;
     this.x = x;
     this.y = y;
+    this.width = width;
     this.height = height;
     this.classes = classes;
   }
@@ -67,8 +68,9 @@ export class character {
         clsList.add(cls[n]);
 
     elem.style.animationName = this.animId;
-    elem.style.left = `${this.x * 4}dvw`;
+    elem.style.left = `calc(${this.x * 4}dvw - calc(calc(${this.width} - 4dvw) / 2))`;
     elem.style.top = `calc(${this.y * 4}dvh - calc(${this.height} - 4dvh))`;
+    elem.style.width = this.width;
     elem.style.height = this.height;
     elem.style.zIndex = this.zIndex;
 
