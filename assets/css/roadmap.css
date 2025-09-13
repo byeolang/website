@@ -16,6 +16,10 @@ div#main {
   margin-bottom: 500px;
 }
 
+img.star {
+  z-index: 10;
+}
+
 div#footer {
   position: fixed !important;
   top: var(--footer-top);
