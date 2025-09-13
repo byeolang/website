@@ -62,6 +62,18 @@ div#main-bg {
   animation-timing-function: steps(1);
 }
 
+div#description-window {
+  position: absolute;
+  width: 40dvw;
+  height: 40dvh;
+  margin-top: 50px;
+  border-radius: 30px;
+  background-color: red;
+  z-index: 99;
+  opacity: 0.9;
+  visibility: hidden;
+}
+
 @keyframes nodeSprite {
   0% {
     background-image: url('./../images/tile/44.png');

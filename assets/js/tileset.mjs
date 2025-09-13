@@ -87,10 +87,23 @@ export class character {
     });
 
     jq.click(function() {
-      console.log("click");
+      $("div#description-window").css("visibility", "visible");
+      setTimeout(() => {
+        document.addEventListener('click', onClickGlobal);
+      }, 500);
     });
   }
 }
+
+function onClickGlobal(e) {
+    const popup = document.getElementById("description-window");
+    if(popup == null) return;
+
+    if(!popup.contains(e.target)) {
+      popup.style.visibility = 'hidden';
+      document.removeEventListener('click', onClickGlobal);
+    }
+  }
 
 export class characterLayer extends layer {
   constructor(characterMap) {
