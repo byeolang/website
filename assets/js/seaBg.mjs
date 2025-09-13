@@ -81,7 +81,7 @@ SeaBackGrounder.prototype.onReleaseUnit = function(unit) {
 	this.createUnit();
 }
 
-var seaBg = new SeaBackGrounder("main-bg-sea", 10);
+var seaBg = new SeaBackGrounder("div#main-bg-sea", 10);
 window.addEventListener('load', function(event) {
 	seaBg.initialize();
 });
