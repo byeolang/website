@@ -46,6 +46,7 @@ div.character {
 div.effect {
   opacity: 0.5;
   mix-blend-mode: color-dodge;
+  z-index: 5;
 }
 
 div#main-bg {
