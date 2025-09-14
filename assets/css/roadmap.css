@@ -74,6 +74,17 @@ div#description-window {
   visibility: hidden;
 }
 
+div#description-window-handle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: 50px;
+  background-color: red;
+  z-index: 99;
+  opacity: 0.9;
+  visibility: hidden;
+}
+
 @keyframes nodeSprite {
   0% {
     background-image: url('./../images/tile/44.png');

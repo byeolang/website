@@ -88,21 +88,50 @@ export class character {
       elem.style.filter = '';
     });
 
+    const ch = this;
     jq.click(function() {
-      $("div#description-window").css("visibility", "visible");
+      const elem = document.getElementById("description-window");
+      const handleElem = document.getElementById("description-window-handle");
+      ch.adjustDescriptionWindowPos(elem, handleElem);
+
       setTimeout(() => {
         document.addEventListener('click', onClickGlobal);
       }, 500);
     });
+  }
+
+  adjustDescriptionWindowPos(elem, handleElem) {
+    // window:
+    const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
+    const characterLeft = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
+    const characterTop = `calc(${this.y * 4}dvh - (${this.height} - 4dvh))`;
+
+    const isFacingRight = this.x <= 10;
+    elem.style.visibility = "visible";
+    elem.style.left = isFacingRight ?
+      `calc(${characterLeft} + 4dvw + 25px)` :
+      `calc(${characterLeft} - 40vw - 25px)`;
+    const newTop = this.y > 15 ?
+      `calc(${characterTop} - 20dvh)` :
+      `50px`;
+    elem.style.top = newTop;
+
+    // handle:
+    handleElem.style.visibility = 'visible';
+    handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - 25px)` : `calc(${elem.style.left} + 40dvw)`;
+    handleElem.style.top = `${(this.y - 1) * 4}dvh`;
   }
 }
 
 function onClickGlobal(e) {
     const popup = document.getElementById("description-window");
     if(popup == null) return;
+    const handle = document.getElementById('description-window-handle');
+    if(handle == null) return;
 
-    if(!popup.contains(e.target)) {
+    if(!popup.contains(e.target) && !handle.contains(e.target)) {
       popup.style.visibility = 'hidden';
+      handle.style.visibility = 'hidden';
       document.removeEventListener('click', onClickGlobal);
     }
   }
