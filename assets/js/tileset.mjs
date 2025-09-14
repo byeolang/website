@@ -38,7 +38,8 @@ export class layer {
     const tile = document.createElement('img');
     tile.classList.add('tile');
     tile.src = `../assets/images/tile/${tileId}.png`;
-    tile.style.left = `${x * 4}dvw`;
+    const leftPadding = `((100dvw - ${20 * 4}dvw) / 2)`;
+    tile.style.left = `calc(${x * 4}dvw + ${leftPadding})`;
     tile.style.top = `${y * 4}dvw`;
     return tile
   }
@@ -68,7 +69,8 @@ export class character {
         clsList.add(cls[n]);
 
     elem.style.animationName = this.animId;
-    elem.style.left = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2)`;
+    const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
+    elem.style.left = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
     elem.style.top = `calc(${this.y * 4}dvh - (${this.height} - 4dvh))`;
     elem.style.width = this.width;
     elem.style.height = this.height;
