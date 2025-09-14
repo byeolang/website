@@ -90,6 +90,8 @@ export class character {
 
     const ch = this;
     jq.click(function() {
+      document.removeEventListener('click', onClickGlobal);
+
       const elem = document.getElementById("description-window");
       const handleElem = document.getElementById("description-window-handle");
       ch.adjustDescriptionWindowPos(elem, handleElem);
