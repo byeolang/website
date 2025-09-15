@@ -111,8 +111,8 @@ export class character {
     const isFacingRight = this.x <= 10;
     elem.style.visibility = "visible";
     elem.style.left = isFacingRight ?
-      `calc(${characterLeft} + ${this.width} + 30px)` :
-      `calc(${characterLeft} - 40vw - 25px)`;
+      `calc(${characterLeft} + ${this.width} + ${getHandleSize()}px + 2px)` :
+      `calc(${characterLeft} - 40vw - ${getHandleSize()}px)`;
     const newTop = this.y > 10 ?
       `calc(${characterTop} - 20dvw)` :
       `50px`;
@@ -120,16 +120,26 @@ export class character {
 
     // handle:
     handleElem.style.visibility = 'visible';
-    handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - 30px)` : `calc(${elem.style.left} + 40dvw)`;
-    handleElem.style.top = `calc(${characterTop} + (2dvw - 15px))`;
+    handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - ${getHandleSize()}px + 2px)` : `calc(${elem.style.left} + 40dvw)`;
+    handleElem.style.top = `calc(${characterTop} + (2dvw - ${getHandleSize() / 2}px))`;
+    handleElem.style.borderTop = `${getHandleSize() / 2}px solid transparent`;
+    handleElem.style.borderBottom = `${getHandleSize() / 2}px solid transparent`;
+
     if(isFacingRight) {
       handleElem.style.borderLeft = '';
-      handleElem.style.borderRight = '30px solid red';
+      handleElem.style.borderRight = `${getHandleSize()}px solid red`;
     } else {
-      handleElem.style.borderLeft = '30px solid red';
+      handleElem.style.borderLeft = `${getHandleSize()}px solid red`;
       handleElem.style.borderRight = '';
     }
   }
+}
+
+function getHandleSize() {
+  let width = window.innerWidth;
+  if (width < 500) return 10;
+  if (width < 900) return 20;
+  return 40;
 }
 
 function onClickGlobal(e) {
