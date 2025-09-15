@@ -111,7 +111,7 @@ export class character {
     const isFacingRight = this.x <= 10;
     elem.style.visibility = "visible";
     elem.style.left = isFacingRight ?
-      `calc(${characterLeft} + 4dvw + 25px)` :
+      `calc(${characterLeft} + ${this.width} + 30px)` :
       `calc(${characterLeft} - 40vw - 25px)`;
     const newTop = this.y > 15 ?
       `calc(${characterTop} - 20dvh)` :
@@ -120,8 +120,15 @@ export class character {
 
     // handle:
     handleElem.style.visibility = 'visible';
-    handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - 25px)` : `calc(${elem.style.left} + 40dvw)`;
+    handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - 30px)` : `calc(${elem.style.left} + 40dvw)`;
     handleElem.style.top = `${(this.y - 1) * 4}dvh`;
+    if(isFacingRight) {
+      handleElem.style.borderLeft = '';
+      handleElem.style.borderRight = '30px solid red';
+    } else {
+      handleElem.style.borderLeft = '30px solid red';
+      handleElem.style.borderRight = '';
+    }
   }
 }
 
