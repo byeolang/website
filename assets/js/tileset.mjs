@@ -71,7 +71,7 @@ export class character {
     elem.style.animationName = this.animId;
     const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
     elem.style.left = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
-    elem.style.top = `calc(${this.y * 4}dvh - (${this.height} - 4dvh))`;
+    elem.style.top = `calc(${this.y * 4}dvw - (${this.height} - 4dvw))`;
     elem.style.width = this.width;
     elem.style.height = this.height;
 
@@ -106,22 +106,22 @@ export class character {
     // window:
     const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
     const characterLeft = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
-    const characterTop = `calc(${this.y * 4}dvh - (${this.height} - 4dvh))`;
+    const characterTop = `${this.y * 4}dvw`;
 
     const isFacingRight = this.x <= 10;
     elem.style.visibility = "visible";
     elem.style.left = isFacingRight ?
       `calc(${characterLeft} + ${this.width} + 30px)` :
       `calc(${characterLeft} - 40vw - 25px)`;
-    const newTop = this.y > 15 ?
-      `calc(${characterTop} - 20dvh)` :
+    const newTop = this.y > 10 ?
+      `calc(${characterTop} - 20dvw)` :
       `50px`;
     elem.style.top = newTop;
 
     // handle:
     handleElem.style.visibility = 'visible';
     handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - 30px)` : `calc(${elem.style.left} + 40dvw)`;
-    handleElem.style.top = `${(this.y - 1) * 4}dvh`;
+    handleElem.style.top = `calc(${characterTop} + (2dvw - 15px))`;
     if(isFacingRight) {
       handleElem.style.borderLeft = '';
       handleElem.style.borderRight = '30px solid red';

@@ -226,20 +226,20 @@ const character = new tileset.characterLayer(
       'milestone1',
       'nodeSprite',
       'some description',
-      17,
-      3,
+      13,
+      13,
       '4dvw',
-      '9dvh',
+      '4dvw', // NOTICE: don't use dvh.
       null
     ),
     new tileset.character(
       'effect',
       'nodeSprite',
-      null,
-      17,
+      'description',
+      14,
       3,
       '8dvw',
-      '3dvh',
+      '3dvw',
       ['effect']
     ),
     new tileset.character(
@@ -249,7 +249,7 @@ const character = new tileset.characterLayer(
       3,
       22,
       '4dvw',
-      '6dvh',
+      '4dvw',
       null
     ),
   ]
