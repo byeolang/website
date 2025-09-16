@@ -19,4 +19,8 @@ export default {
   "my codes": "내 코드",
   "hello world": "헬로 월드",
   "mike's clones": "복제 인간 마이크",
+
+  // home:
+  "The Byeol Programming Language": "'별' 프로그래밍 언어",
+  "Learn More": "살펴보기",
 };
