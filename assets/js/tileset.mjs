@@ -118,6 +118,9 @@ export class character {
       `50px`;
     elem.style.top = newTop;
 
+    document.getElementById("description-title").textContent = this.name;
+    document.getElementById('description-content').innerHTML = this.description;
+
     // handle:
     handleElem.style.visibility = 'visible';
     handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - ${getHandleSize()}px + 2px)` : `calc(${elem.style.left} + 40dvw)`;
@@ -127,9 +130,9 @@ export class character {
 
     if(isFacingRight) {
       handleElem.style.borderLeft = '';
-      handleElem.style.borderRight = `${getHandleSize()}px solid red`;
+      handleElem.style.borderRight = `${getHandleSize()}px solid #fff`;
     } else {
-      handleElem.style.borderLeft = `${getHandleSize()}px solid red`;
+      handleElem.style.borderLeft = `${getHandleSize()}px solid #fff`;
       handleElem.style.borderRight = '';
     }
   }
