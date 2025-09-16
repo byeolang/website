@@ -225,7 +225,7 @@ const character = new tileset.characterLayer(
     new tileset.character(
       'milestone1',
       'nodeSprite',
-      'some description',
+      'some description<br/>long long description<br/>very long description',
       13,
       13,
       '4dvw',
