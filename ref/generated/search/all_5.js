@@ -9,7 +9,7 @@ var searchData=
   ['entrypoint_6',['entrypoint',['../structby_1_1entrypoint.html',1,'by']]],
   ['erase_7',['erase',['../classby_1_1smultimap.html#ad04bcd2ad41339d5a7b49c5eb07aa9c0',1,'by::smultimap']]],
   ['err_8',['err',['../classby_1_1err.html',1,'by']]],
-  ['err_2ehpp_9',['err.hpp',['../err_2err_8hpp.html',1,'(Global Namespace)'],['../err_8hpp.html',1,'(Global Namespace)']]],
+  ['err_2ehpp_9',['err.hpp',['../err_8hpp.html',1,'(Global Namespace)'],['../err_2err_8hpp.html',1,'(Global Namespace)']]],
   ['errcode_2ehpp_10',['errCode.hpp',['../err_code_8hpp.html',1,'']]],
   ['errlv_11',['errLv',['../classby_1_1err_lv.html',1,'by']]],
   ['errlv_2ehpp_12',['errLv.hpp',['../err_lv_8hpp.html',1,'']]],

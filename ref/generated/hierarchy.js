@@ -11,10 +11,7 @@ var hierarchy =
       [ "by::seq", "classby_1_1seq.html", null ]
     ] ],
     [ "by::adam", "classby_1_1adam.html", null ],
-    [ "by::area", "structby_1_1area.html", [
-      [ "lloc", "structlloc.html", null ],
-      [ "lloc", "structlloc.html", null ]
-    ] ],
+    [ "by::area", "structby_1_1area.html", null ],
     [ "by::asable", "classby_1_1asable.html", [
       [ "by::aser", "classby_1_1aser.html", [
         [ "by::tas< E >", "structby_1_1tas.html", [
@@ -574,15 +571,5 @@ var hierarchy =
     [ "by::watchCell", "structby_1_1watch_cell.html", null ],
     [ "by::workerAdapter< R, T >", "structby_1_1worker_adapter.html", null ],
     [ "by::workerAdapter< void, T >", "structby_1_1worker_adapter_3_01void_00_01_t_01_4.html", null ],
-    [ "by::smultimap< K, V >::wrap", "classby_1_1smultimap_1_1wrap.html", null ],
-    [ "yy_buffer_state", "structyy__buffer__state.html", null ],
-    [ "yy_trans_info", "structyy__trans__info.html", null ],
-    [ "yyGLRStack", "structyy_g_l_r_stack.html", null ],
-    [ "yyGLRStackItem", "unionyy_g_l_r_stack_item.html", null ],
-    [ "yyGLRState", "structyy_g_l_r_state.html", null ],
-    [ "yyGLRStateSet", "structyy_g_l_r_state_set.html", null ],
-    [ "yyguts_t", "structyyguts__t.html", null ],
-    [ "yySemanticOption", "structyy_semantic_option.html", null ],
-    [ "YYSTYPE", "union_y_y_s_t_y_p_e.html", null ],
-    [ "ZZSTYPE", "union_z_z_s_t_y_p_e.html", null ]
+    [ "by::smultimap< K, V >::wrap", "classby_1_1smultimap_1_1wrap.html", null ]
 ];

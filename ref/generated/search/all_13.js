@@ -17,5 +17,5 @@ var searchData=
   ['visitinfo_14',['visitInfo',['../classby_1_1visit_info.html',1,'by']]],
   ['visitinfo_2ehpp_15',['visitInfo.hpp',['../visit_info_8hpp.html',1,'']]],
   ['visitor_16',['visitor',['../classby_1_1visitor.html',1,'by']]],
-  ['visitor_2ehpp_17',['visitor.hpp',['../visitor_8hpp.html',1,'(Global Namespace)'],['../visitor_2visitor_8hpp.html',1,'(Global Namespace)']]]
+  ['visitor_2ehpp_17',['visitor.hpp',['../visitor_2visitor_8hpp.html',1,'(Global Namespace)'],['../visitor_8hpp.html',1,'(Global Namespace)']]]
 ];

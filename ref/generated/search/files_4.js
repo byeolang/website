@@ -14,7 +14,7 @@ var searchData=
   ['defseqexpr_2ehpp_11',['defSeqExpr.hpp',['../def_seq_expr_8hpp.html',1,'']]],
   ['defthis_2ehpp_12',['defThis.hpp',['../def_this_8hpp.html',1,'']]],
   ['defvarexpr_2ehpp_13',['defVarExpr.hpp',['../def_var_expr_8hpp.html',1,'']]],
-  ['dep_2ehpp_14',['dep.hpp',['../meta_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../memlite_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../leaf_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../indep_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../frontend_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../core_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../clog_2common_2dep_8hpp.html',1,'(Global Namespace)']]],
+  ['dep_2ehpp_14',['dep.hpp',['../clog_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../meta_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../memlite_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../leaf_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../indep_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../frontend_2common_2dep_8hpp.html',1,'(Global Namespace)'],['../core_2common_2dep_8hpp.html',1,'(Global Namespace)']]],
   ['dlib_2ehpp_15',['dlib.hpp',['../dlib_8hpp.html',1,'(Global Namespace)'],['../helper_2dlib_8hpp.html',1,'(Global Namespace)']]],
   ['dummodifier_2ehpp_16',['dumModifier.hpp',['../dum_modifier_8hpp.html',1,'']]],
   ['dumpable_2ehpp_17',['dumpable.hpp',['../dumpable_8hpp.html',1,'']]],

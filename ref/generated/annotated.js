@@ -317,19 +317,8 @@ var annotated =
     [ "iter", "classiter.html", "classiter" ],
     [ "iterable", "classiterable.html", "classiterable" ],
     [ "iteration", "classiteration.html", null ],
-    [ "lloc", "structlloc.html", null ],
     [ "narrIteration", "classnarr_iteration.html", "classnarr_iteration" ],
     [ "nchainIteration", "classnchain_iteration.html", "classnchain_iteration" ],
     [ "nmapIteration", "classnmap_iteration.html", "classnmap_iteration" ],
-    [ "nseqIteration", "classnseq_iteration.html", "classnseq_iteration" ],
-    [ "yy_buffer_state", "structyy__buffer__state.html", "structyy__buffer__state" ],
-    [ "yy_trans_info", "structyy__trans__info.html", null ],
-    [ "yyGLRStack", "structyy_g_l_r_stack.html", null ],
-    [ "yyGLRStackItem", "unionyy_g_l_r_stack_item.html", null ],
-    [ "yyGLRState", "structyy_g_l_r_state.html", "structyy_g_l_r_state" ],
-    [ "yyGLRStateSet", "structyy_g_l_r_state_set.html", "structyy_g_l_r_state_set" ],
-    [ "yyguts_t", "structyyguts__t.html", "structyyguts__t" ],
-    [ "yySemanticOption", "structyy_semantic_option.html", "structyy_semantic_option" ],
-    [ "YYSTYPE", "union_y_y_s_t_y_p_e.html", null ],
-    [ "ZZSTYPE", "union_z_z_s_t_y_p_e.html", null ]
+    [ "nseqIteration", "classnseq_iteration.html", "classnseq_iteration" ]
 ];

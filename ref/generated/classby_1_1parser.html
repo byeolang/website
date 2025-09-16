@@ -167,7 +167,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pushState</b> (int new
 <tr class="memitem:a39e0cbda536ac4abf37885c3b90d9b63"><td class="memItemLeft" align="right" valign="top"><a id="a39e0cbda536ac4abf37885c3b90d9b63" name="a39e0cbda536ac4abf37885c3b90d9b63"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>popState</b> ()</td></tr>
 <tr class="separator:a39e0cbda536ac4abf37885c3b90d9b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f16ab848d06c543653cf4cfbb5fc1aa"><td class="memItemLeft" align="right" valign="top">nint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a7f16ab848d06c543653cf4cfbb5fc1aa">onScan</a> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, <a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *val, <a class="el" href="structlloc.html">YYLTYPE</a> *loc, yyscan_t scanner, nbool &amp;isBypass) override</td></tr>
+<tr class="memitem:a7f16ab848d06c543653cf4cfbb5fc1aa"><td class="memItemLeft" align="right" valign="top">nint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a7f16ab848d06c543653cf4cfbb5fc1aa">onScan</a> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner, nbool &amp;isBypass) override</td></tr>
 <tr class="separator:a7f16ab848d06c543653cf4cfbb5fc1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12ddc909e18de2881e40173a45f62778"><td class="memItemLeft" align="right" valign="top"><a id="a12ddc909e18de2881e40173a45f62778" name="a12ddc909e18de2881e40173a45f62778"></a>
 nint&#160;</td><td class="memItemRight" valign="bottom"><b>onTokenEndOfFile</b> ()</td></tr>
@@ -541,9 +541,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onEndFunc</b> ()</td>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onParseErr</b> (const std::string &amp;msg, const nchar *symbolName)</td></tr>
 <tr class="separator:a85450077b0ac7149f8df24a632e09ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9d2bac3fab34cab03c0b916e2fc786d"><td class="memItemLeft" align="right" valign="top"><a id="ac9d2bac3fab34cab03c0b916e2fc786d" name="ac9d2bac3fab34cab03c0b916e2fc786d"></a>
-nint&#160;</td><td class="memItemRight" valign="bottom"><b>onScan</b> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, <a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *val, <a class="el" href="structlloc.html">YYLTYPE</a> *loc, yyscan_t scanner)</td></tr>
+nint&#160;</td><td class="memItemRight" valign="bottom"><b>onScan</b> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner)</td></tr>
 <tr class="separator:ac9d2bac3fab34cab03c0b916e2fc786d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc0f62c3b21da42fdabef0ed5f4f8e7"><td class="memItemLeft" align="right" valign="top">virtual nint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#acbc0f62c3b21da42fdabef0ed5f4f8e7">onScan</a> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, <a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *yylval, <a class="el" href="structlloc.html">YYLTYPE</a> *loc, yyscan_t yyscanner, nbool &amp;isBypass)=0</td></tr>
+<tr class="memitem:acbc0f62c3b21da42fdabef0ed5f4f8e7"><td class="memItemLeft" align="right" valign="top">virtual nint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#acbc0f62c3b21da42fdabef0ed5f4f8e7">onScan</a> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, YYSTYPE *yylval, YYLTYPE *loc, yyscan_t yyscanner, nbool &amp;isBypass)=0</td></tr>
 <tr class="separator:acbc0f62c3b21da42fdabef0ed5f4f8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1worker"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1worker')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1worker.html">by::worker&lt; str, slot &gt;</a></td></tr>
 <tr class="memitem:a811fa3248ee24b0ca009ee73301bf357 inherit pub_methods_classby_1_1worker"><td class="memItemLeft" align="right" valign="top"><a id="a811fa3248ee24b0ca009ee73301bf357" name="a811fa3248ee24b0ca009ee73301bf357"></a>
@@ -650,7 +650,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</
 <tr class="separator:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1token_scanable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1token_scanable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1token_scanable.html">by::tokenScanable</a></td></tr>
 <tr class="memitem:ac9d2bac3fab34cab03c0b916e2fc786d inherit pub_methods_classby_1_1token_scanable"><td class="memItemLeft" align="right" valign="top"><a id="ac9d2bac3fab34cab03c0b916e2fc786d" name="ac9d2bac3fab34cab03c0b916e2fc786d"></a>
-nint&#160;</td><td class="memItemRight" valign="bottom"><b>onScan</b> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, <a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *val, <a class="el" href="structlloc.html">YYLTYPE</a> *loc, yyscan_t scanner)</td></tr>
+nint&#160;</td><td class="memItemRight" valign="bottom"><b>onScan</b> (<a class="el" href="classby_1_1parser.html">parser</a> &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner)</td></tr>
 <tr class="separator:ac9d2bac3fab34cab03c0b916e2fc786d inherit pub_methods_classby_1_1token_scanable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -807,13 +807,13 @@ me setTask *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *&#160;</td>
+          <td class="paramtype">YYSTYPE *&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structlloc.html">YYLTYPE</a> *&#160;</td>
+          <td class="paramtype">YYLTYPE *&#160;</td>
           <td class="paramname"><em>loc</em>, </td>
         </tr>
         <tr>
@@ -863,13 +863,13 @@ me setTask *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="union_y_y_s_t_y_p_e.html">YYSTYPE</a> *&#160;</td>
+          <td class="paramtype">YYSTYPE *&#160;</td>
           <td class="paramname"><em>yylval</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structlloc.html">YYLTYPE</a> *&#160;</td>
+          <td class="paramtype">YYLTYPE *&#160;</td>
           <td class="paramname"><em>loc</em>, </td>
         </tr>
         <tr>
@@ -902,7 +902,7 @@ me setTask *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/kniz/repo/byeolang/byeol/module/core/worker/<a class="el" href="core_2worker_2parser_8hpp_source.html">parser.hpp</a></li>
+<li>/home/runner/work/byeol/byeol/module/core/worker/<a class="el" href="core_2worker_2parser_8hpp_source.html">parser.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
