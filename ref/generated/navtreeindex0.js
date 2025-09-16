@@ -73,7 +73,6 @@ var NAVTREEINDEX0 =
 "buffer_src_flag_8hpp_source.html":[6,0,2,1,0,0],
 "build_feature_8hpp.html":[6,0,3,3,0],
 "build_feature_8hpp_source.html":[6,0,3,3,0],
-"build_information_8hpp_source.html":[6,0,3,1,1],
 "builtin_8hpp.html":[6,0,1,10],
 "builtin_8hpp_source.html":[6,0,1,10],
 "byeol_meta_8hpp.html":[6,0,3,4,2],
@@ -86,8 +85,8 @@ var NAVTREEINDEX0 =
 "chunk_8hpp_source.html":[6,0,5,3,1],
 "chunks_8hpp.html":[6,0,5,3,2],
 "chunks_8hpp_source.html":[6,0,5,3,2],
-"classby_1_1_____w_h_e_n___o_b_j_e_c_t____.html":[1,1,8],
 "classby_1_1_____w_h_e_n___o_b_j_e_c_t____.html":[1,5,103],
+"classby_1_1_____w_h_e_n___o_b_j_e_c_t____.html":[1,1,8],
 "classby_1_1_f_b_o_expr.html":[1,5,30],
 "classby_1_1_f_b_o_expr.html#a7086ee17d4c24d7f691319fb56e3f492":[1,5,30,0],
 "classby_1_1_f_u_o_expr.html":[1,5,32],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classby_1_1instance.html":[1,3,9],
 "classby_1_1instance_1_1vault.html":[1,3,9,0],
 "classby_1_1instancer.html":[1,3,10],
-"classby_1_1interpreter.html":[1,5,133]
+"classby_1_1interpreter.html":[1,5,133],
+"classby_1_1is_expr.html":[1,5,36]
 };
