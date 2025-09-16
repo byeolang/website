@@ -19,4 +19,8 @@ export default {
   "my codes": "my codes",
   "hello world": "hello world",
   "mike's clones": "mike's clones",
+
+  // home:
+  "The Byeol Programming Language": "The Byeol Programming Language",
+  "Learn More", "Learn More",
 };
