@@ -72,10 +72,20 @@ div#description-window {
   border: 7px solid #fff;
   box-shadow: 10px 15px 0px 0px #00000047;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 div#description-title {
   font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+div#description-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+  min-height: 0;
 }
 
 @media screen and (max-width: 499px) {
