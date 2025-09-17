@@ -114,7 +114,7 @@ export class character {
       `calc(${characterLeft} + ${this.width} + ${getHandleSize()}px + 2px)` :
       `calc(${characterLeft} - 40vw - ${getHandleSize()}px)`;
     const newTop = this.y > 10 ?
-      `calc(${characterTop} - 20dvw)` :
+      `calc(${characterTop} - 20dvh)` :
       `50px`;
     elem.style.top = newTop;
 
