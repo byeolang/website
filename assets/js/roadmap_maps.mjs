@@ -1,4 +1,5 @@
 import * as tileset from './tileset.mjs'
+import { i18n } from './lang-toggle.mjs'
 
 // grassland:
 //  since the `sea` is designed to be drawn repeatedly, the bottom layer is
@@ -216,6 +217,9 @@ const deco = new tileset.layer(
   ]
 )
 
+console.log("roadmap_maps.mjs");
+console.log(i18n.t("milestone1-title"));
+
 // character:
 //  literally, characters are placed at here. these characters aren't just people.
 //  a character is defined as an object that has coordinates, a name, and a description.
@@ -223,23 +227,9 @@ const deco = new tileset.layer(
 const character = new tileset.characterLayer(
   [
     new tileset.character(
-      'milestone1',
+      i18n.t('milestone1-title'),
       'nodeSprite',
-      `
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/FChatxFF_XA' frameborder='0' allowfullscreen></iframe></div>
-        1some description<br/>
-        2long long description<br/>
-        3very long descriptionsome description<br/>
-        4long long description<br/>
-        5very long descriptionsome description<br/>
-        6long long description<br/>
-        7long long description<br/>
-        8very long descriptionsome description<br/>
-        9long long description<br/>
-        10very long descriptionsome description<br/>
-        11long long description<br/>
-        12very long description<br/>
-      `,
+      i18n.t('milestone1-desc'),
       13,
       13,
       '4dvw',

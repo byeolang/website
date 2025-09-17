@@ -1,22 +1,11 @@
+import * as ko from './lang-ko.mjs';
+import * as en from './lang-en.mjs';
+
 class I18n {
   constructor() {
     this.currentLanguage = localStorage.getItem('language') || 'en';
-    this.translations = {};
+    this.translations = { "ko": ko.default, "en": en.default };
   }
-
-  async loadLang(lang) {
-    if (!this.translations[lang]) {
-      try {
-        const module = await import(`./lang-${lang}.mjs`);
-        this.translations[lang] = module.default;
-      } catch (error) {
-        console.error(`Failed to load language ${lang}:`, error);
-        return false;
-      }
-    }
-    return true;
-  }
-
 
   t(key, defaultValue = key) {
     const translation = this.translations[this.currentLanguage];
@@ -45,11 +34,8 @@ class I18n {
     }
   }
 
-  async init() {
-    await Promise.all([
-      this.loadLang('ko'),
-      this.loadLang('en')
-    ]);
+  init() {
+    console.log("i18n.init()");
     this.updateTooltips();
     this.updateLanguageFlag(this.currentLanguage);
   }
@@ -67,10 +53,10 @@ class I18n {
   }
 }
 
-const i18n = new I18n();
+export const i18n = new I18n();
+i18n.init();
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await i18n.init();
 
   const toggleButton = document.getElementById('language-toggle');
   if (toggleButton) {
