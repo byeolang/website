@@ -1,6 +1,10 @@
+import { i18n } from './lang-toggle.mjs';
+
 class Package {
     constructor() {
         this.pkg = document.getElementById('package');
+        this.messageDiv = document.getElementById('packaging-message');
+        this.messageText = document.getElementById('packaging-text');
     }
 
     animate() {
@@ -11,9 +15,9 @@ class Package {
               <div class="package__shadow"></div>
               <div class="package">
                 <div class="package__content">
-                  <img class="package__icon package__icon--html" src="svg1.svg" />
-                  <img class="package__icon package__icon--css" src="svg2.svg" />
-                  <img class="package__icon package__icon--js" src="svg3.svg" />
+                  <img class="package__icon package__icon--html" src="../assets/images/svg1.svg" />
+                  <img class="package__icon package__icon--css" src="../assets/images/svg2.svg" />
+                  <img class="package__icon package__icon--js" src="../assets/images/svg3.svg" />
                 </div>
                 <div class="package__side package__side--main">
                   <div class="package__flap package__flap--top">
@@ -32,9 +36,9 @@ class Package {
                     <div class="package__flap package__flap--bottom"></div>
                     <div class="package__side package__side--flipped">
                         <span class="package__direction">
-                          <img src="svg4.svg" />
+                          <img src="../assets/images/svg4.svg" />
                           <span>THIS WAY UP</span>
-                          <img src="svg4.svg" />
+                          <img src="../assets/images/svg4.svg" />
                         </span>
                         <span class="package__label package__label--shadow"></span>
                         <span class="package__label"></span>
@@ -47,8 +51,13 @@ class Package {
             </div>
           </div>
         `;
-        // 초기 상태: 완전히 안 보이도록
+        const button = document.getElementById('downloadButton');
+        button.onclick = null;
         this.pkg.classList.remove('fade-in', 'fade-out');
+
+        // 포장 메시지 표시
+        this.messageText.textContent = i18n.t('packaging message');
+        this.messageDiv.style.display = 'block';
 
         // 약간 지연 후 fade-in
         setTimeout(() => {
@@ -58,21 +67,35 @@ class Package {
         // 패키지 애니메이션 실행
         setTimeout(() => {
           document.documentElement.style.setProperty('--packaged', 1);
-        }, 750);
+        }, 950);
+
+        // 박스가 거의 완료될 때 감사 메시지로 변경
+        setTimeout(() => {
+          this.messageText.textContent = i18n.t('thank you message');
+        }, 4500);
 
         // 끝나면 fade-out
         setTimeout(() => {
           this.pkg.classList.remove('fade-in');
           this.pkg.classList.add('fade-out');
-        }, 5750);
+          // 포장 메시지 숨기기
+          this.messageDiv.style.display = 'none';
+          setTimeout(() => {
+            this.pkg.classList.remove('fade-out');
+            button.onclick = onClick;
+          }, 700);
+        }, 5950);
     }
 };
 
-export const pkgAnimation = new Package();
+const pkgAnimation = new Package();
+
+function onClick() {
+    pkgAnimation.animate();
+}
+
 
 window.addEventListener('load', function() {
   const button = document.getElementById('downloadButton');
-  button.onclick = function() {
-    pkgAnimation.animate();
-  };
+  button.onclick = onClick;
 });

@@ -24,6 +24,10 @@ export default {
   "The Byeol Programming Language": "'별' 프로그래밍 언어",
   "Learn More": "살펴보기",
 
+  // download:
+  "packaging message": "=ㅅ= 열심히 포장 중...",
+  "thank you message": ">_<  다운 받아줘서 고마워!",
+
   // roadmap:
   'milestone1-title': 'Node Engine Dust',
   'milestone1-desc': `
