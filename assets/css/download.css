@@ -290,8 +290,8 @@ div#package.fade-out {
   --speed: 1;
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 40%;
+  left: 30%;
+  width: 90%;
   transform: translate(-50%, -50%) translate3d(calc(var(--x, 0) * 1%), calc((((1 - var(--packaged, 0)) * (var(--y, 0) * (max(var(--height), var(--depth), var(--width)))))) * -1vmin), calc(var(--z, 0) * 1vmin));
   opacity: var(--packaged);
 }
@@ -299,19 +299,16 @@ div#package.fade-out {
   --x: 60;
   --y: 1.4;
   --z: 0;
- filter: brightness(0) saturate(100%) invert(84%) sepia(93%) saturate(3215%) hue-rotate(336deg) brightness(97%) contrast(100%);
 }
 .package__icon--html {
   --x: 0;
   --y: 1.6;
   --z: -3;
-  filter: brightness(0) saturate(100%) invert(52%) sepia(62%) saturate(5970%) hue-rotate(348deg) brightness(93%) contrast(90%);
 }
 .package__icon--css {
   --x: -50;
   --y: 1.2;
   --z: 3;
-  filter: brightness(0) saturate(100%) invert(26%) sepia(56%) saturate(5167%) hue-rotate(191deg) brightness(91%) contrast(84%);
 }
 .package__content {
   width: calc(min(var(--height), var(--width)) * 1vmin);

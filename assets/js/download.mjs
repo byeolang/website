@@ -15,8 +15,8 @@ class Package {
               <div class="package__shadow"></div>
               <div class="package">
                 <div class="package__content">
-                  <img class="package__icon package__icon--html" src="../assets/images/svg1.svg" />
-                  <img class="package__icon package__icon--css" src="../assets/images/svg2.svg" />
+                  <img class="package__icon package__icon--html" src="../assets/images/cdcase.png" />
+                  <img class="package__icon package__icon--css" src="../assets/images/manual.png" />
                   <img class="package__icon package__icon--js" src="../assets/images/svg3.svg" />
                 </div>
                 <div class="package__side package__side--main">
