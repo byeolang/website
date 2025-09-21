@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="../assets/css/download.css">
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 % elsif page.header.video.id and page.header.video.provider %}
@@ -13,6 +15,8 @@ layout: default
     {% include breadcrumbs.html %}
   {% endunless %}
 {% endif %}
+
+<script type="module" src="../assets/js/download.mjs"></script>
 
 <div id="main" role="main">
   {% include sidebar.html %}
@@ -39,6 +43,12 @@ layout: default
         </div>
       </div>
     </div>
+
+    <div id="downloadButton">click me!</div>
+    <div id="packaging-message" style="display: none;">
+      <span id="packaging-text"></span>
+    </div>
+    <div id="package"></div>
 
     <script>
 const root = document.documentElement;

@@ -24,6 +24,10 @@ export default {
   "The Byeol Programming Language": "The Byeol Programming Language",
   "Learn More": "Learn More",
 
+  // download:
+  "packaging message": ":> Packaging for you...",
+  "thank you message": ";) Thank you for downloading!",
+
   // roadmap:
   'milestone1-title': 'Node Engine Dust',
   'milestone1-desc': `
