@@ -17,7 +17,7 @@ class Package {
                 <div class="package__content">
                   <img class="package__icon package__icon--html" src="../assets/images/cdcase.png" />
                   <img class="package__icon package__icon--css" src="../assets/images/manual.png" />
-                  <img class="package__icon package__icon--js" src="../assets/images/svg3.svg" />
+                  <img class="package__icon package__icon--js" src="../assets/images/thankyou.png" />
                 </div>
                 <div class="package__side package__side--main">
                   <div class="package__flap package__flap--top">
