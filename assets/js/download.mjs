@@ -54,37 +54,31 @@ class Package {
         const button = document.getElementById('downloadButton');
         button.onclick = null;
         this.pkg.classList.remove('fade-in', 'fade-out');
-
-        // 포장 메시지 표시
         this.messageText.textContent = i18n.t('packaging message');
         this.messageDiv.style.display = 'block';
 
-        // 약간 지연 후 fade-in
         setTimeout(() => {
           this.pkg.classList.add('fade-in');
         }, 50);
 
-        // 패키지 애니메이션 실행
         setTimeout(() => {
           document.documentElement.style.setProperty('--packaged', 1);
         }, 950);
 
-        // 박스가 거의 완료될 때 감사 메시지로 변경
         setTimeout(() => {
           this.messageText.textContent = i18n.t('thank you message');
-        }, 4500);
+        }, 5800);
 
-        // 끝나면 fade-out
         setTimeout(() => {
           this.pkg.classList.remove('fade-in');
           this.pkg.classList.add('fade-out');
-          // 포장 메시지 숨기기
+
           this.messageDiv.style.display = 'none';
           setTimeout(() => {
             this.pkg.classList.remove('fade-out');
             button.onclick = onClick;
           }, 700);
-        }, 5950);
+        }, 8200);
     }
 };
 
