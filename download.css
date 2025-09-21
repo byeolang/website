@@ -2,9 +2,10 @@
  * original codes made by Jhey,
  * ref. https://codepen.io/jh3y/pen/XWaGEgO
  */
-*,
-*:after,
-*:before {
+.scene,
+.scene *:after,
+.scene *:before,
+.scene * {
   box-sizing: border-box;
   transform-style: preserve-3d;
 }
@@ -18,8 +19,8 @@ body {
 }
 :root {
   --steps: 23;
-  --delay: 0.3;
-  --speed: 0.3;
+  --delay: 0.2;
+  --speed: 0.2;
   --face-1: #be8e64;
   --face-2: #dba776;
   --face-3: #e7b37e;
@@ -44,6 +45,20 @@ input {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+div#package {
+  position: fixed;
+  transition: all 0.7s ease-in-out;
+  margin-top: 250px;
+  opacity: 0;
+}
+div#package.fade-in {
+  margin-top: 125px;
+  opacity: 1;
+}
+div#package.fade-out {
+  margin-top: 0px;
+  opacity: 0;
 }
 .scene .package__side--main > .package__flap--top:before {
   --bg-step: 9;
@@ -128,7 +143,7 @@ input {
 .scene .package__label:before {
   --step: 23;
 }
-.scene {
+.scene .package__wrapper {
   transform: rotateX(-24deg) rotateY(-32deg) rotateX(90deg);
 }
 .package,
