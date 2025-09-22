@@ -25,8 +25,12 @@ export default {
   "Learn More": "Learn More",
 
   // download:
-  "packaging message": ":> Packaging for you...",
-  "thank you message": ";) Thank you for downloading!",
+  "packaging message": ":> packaging for you...",
+  "thank you message": ";) thank you for downloading!",
+  "download": "download",
+  "windows": "windows",
+  "ubuntu": "ubuntu",
+  "mac": "mac",
 
   // roadmap:
   'milestone1-title': 'Node Engine Dust',

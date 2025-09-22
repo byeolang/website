@@ -27,6 +27,10 @@ export default {
   // download:
   "packaging message": "=ㅅ= 열심히 포장 중...",
   "thank you message": ">_<  다운 받아줘서 고마워!",
+  "download": "다운로드",
+  "windows": "윈도우",
+  "ubuntu": "우분투",
+  "mac": "맥",
 
   // roadmap:
   'milestone1-title': 'Node Engine Dust',
