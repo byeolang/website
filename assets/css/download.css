@@ -1,7 +1,8 @@
-/**
- * original codes made by Jhey,
- * ref. https://codepen.io/jh3y/pen/XWaGEgO
- */
+/******************************************************************************
+ * CSS for the packaging animation when downloading source code
+ *  original codes made by Jhey,
+ *  ref. https://codepen.io/jh3y/pen/XWaGEgO
+ *****************************************************************************/
 .scene,
 .scene *:after,
 .scene *:before,
@@ -440,4 +441,156 @@ div#package.fade-out {
 .package__side--flipped > .package__flap {
   height: calc(var(--depth) * 0.495vmin);
   background: var(--face-4);
+}
+
+/** end of packaging animation CSS **/
+
+:root {
+    --byeol-white: #FFFFFF;
+    --byeol-white2: #E9EBF2;
+    --byeol-night: #0B1C26;
+    --byeol-night2: #112A40;
+    --byeol-night3: #2E4559;
+    --byeol-grass: #6AB04B;
+    --byeol-point: #4189A6;
+    --byeol-moon: #E0B88D;
+    --byeol-nebular: #ca5fa4;
+    --byeol-nebular2: #F2B6D7;
+    --byeol-handheld-frame-light: #EFEFEF;
+    --byeol-handheld-frame-bump-light: #D8D8D8;
+    --byeol-handheld-frame-dark: #2d3943;
+    --byeol-handheld-frame-bump-dark: #1a293d;
+}
+
+
+
+div#download {
+  position: relative;
+  margin-top: 200px;
+  display: flex;
+  font-family: Galmuri9;
+  align-items: center;
+  margin-bottom: 150px;
+  justify-content: center;
+}
+
+button#download-button {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: 130px;
+  color: var(--byeol-handheld-text-light);
+  background-color: var(--byeol-handheld-accent-light);
+  transition: all 0.3s ease;
+
+  background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+button#download-button:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 2s ease-in-out infinite;
+}
+button#download-button:hover {
+  opacity: 0.7;
+}
+button#download-button:active {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2),
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+@keyframes shiny-btn1 {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+details {
+  position: relative;
+}
+summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  height: 39px;
+  color: var(--byeol-handheld-text-light);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+
+html summary {
+  background-color: var(--byeol-handheld-frame-light);
+}
+html summary:hover {
+  background-color: var(--byeol-handheld-frame-bump-light);
+}
+html summary:active {
+  background-color: var(--byeol-night3);
+}
+html.dark-mode summary {
+  background-color: var(--byeol-handheld-frame-dark);
+}
+html.dark-mode summary:hover {
+  background-color: var(--byeol-handheld-frame-bump-dark);
+}
+html.dark-mode summary:active {
+  background-color: var(--byeol-white2);
+}
+
+summary:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+summary:active {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2),
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+div#download-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: var(--byeol-handheld-frame-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 160px;
+  overflow: hidden;
+}
+div#download-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--byeol-handheld-text-light);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+div#download-dropdown a:hover {
+  background-color: var(--byeol-handheld-frame-hover-light);
 }

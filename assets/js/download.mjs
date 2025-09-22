@@ -7,7 +7,7 @@ class Package {
         this.messageText = document.getElementById('packaging-text');
     }
 
-    animate() {
+    animate(url) {
         document.documentElement.style.setProperty('--packaged', 0);
         this.pkg.innerHTML = `
           <div class="scene">
@@ -79,17 +79,51 @@ class Package {
             button.onclick = onClick;
           }, 700);
         }, 8200);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '';
+        a.click();
     }
 };
 
+function getDefaultUrl() {
+  const ua = navigator.userAgent;
+  if (ua.includes("Windows NT"))
+    return "https://github.com/byeolang/byeol/releases/latest/download/byeol-win-x64.msi";
+  else if (ua.includes("Ubuntu"))
+    return "https://github.com/byeolang/byeol/releases/latest/download/byeol-ubuntu-x64.deb";
+  else if (ua.includes("Mac OS X"))
+    return "https://github.com/byeolang/byeol/releases/latest/download/byeol-macos-arm64.zip";
+  else
+    return null;
+}
+
 const pkgAnimation = new Package();
 
-function onClick() {
-    pkgAnimation.animate();
+function onClick(url) {
+  const dropdown = document.getElementById('dropdown');
+  if (url == null) {
+    dropdown.setAttribute('open', 'true');
+    return;
+  }
+
+  dropdown.removeAttribute('open');
+  pkgAnimation.animate(url);
 }
 
 
 window.addEventListener('load', function() {
-  const button = document.getElementById('downloadButton');
-  button.onclick = onClick;
+  const button = document.getElementById('download-button');
+  button.onclick = function() {
+    onClick(getDefaultUrl());
+  };
+
+  const dropdown = document.getElementById('dropdown');
+  const options = dropdown.querySelectorAll('#download-dropdown a');
+  options.forEach(option => {
+    option.onclick = function() {
+      onClick(option.href);
+    }
+  });
 });
