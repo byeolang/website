@@ -22,7 +22,7 @@ export default {
 
   // home:
   "The Byeol Programming Language": "The Byeol Programming Language",
-  "Learn More": "Learn More",
+  "start": "BEGIN QUEST",
 
   // download:
   "packaging message": ":> packaging for you...",
