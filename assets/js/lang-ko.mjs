@@ -22,7 +22,7 @@ export default {
 
   // home:
   "The Byeol Programming Language": "'별' 프로그래밍 언어",
-  "Learn More": "살펴보기",
+  "start": "시작하기",
 
   // download:
   "packaging message": "=ㅅ= 열심히 포장 중...",
