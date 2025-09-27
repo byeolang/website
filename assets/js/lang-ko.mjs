@@ -31,6 +31,12 @@ export default {
   "windows": "윈도우",
   "ubuntu": "우분투",
   "mac": "맥",
+  "feature-title1": "feature1-title",
+  "feature-desc1": "feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
+  "feature-title2": "feature2-title",
+  "feature-desc2": "feature2 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
+  "feature-title3": "feature3-title",
+  "feature-desc3": "feature3 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
 
   // roadmap:
   'milestone1-title': 'Node Engine Dust',
