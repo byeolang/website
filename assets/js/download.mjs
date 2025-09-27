@@ -36,9 +36,9 @@ class Package {
                     <div class="package__flap package__flap--bottom"></div>
                     <div class="package__side package__side--flipped">
                         <span class="package__direction">
-                          <img src="../assets/images/svg4.svg" />
+                          <img src="../assets/images/arrow.svg" />
                           <span>THIS WAY UP</span>
-                          <img src="../assets/images/svg4.svg" />
+                          <img src="../assets/images/arrow.svg" />
                         </span>
                         <span class="package__label package__label--shadow"></span>
                         <span class="package__label"></span>
@@ -51,7 +51,7 @@ class Package {
             </div>
           </div>
         `;
-        const button = document.getElementById('downloadButton');
+        const button = document.getElementById('download-button');
         button.onclick = null;
         this.pkg.classList.remove('fade-in', 'fade-out');
         this.messageText.textContent = i18n.t('packaging message');
