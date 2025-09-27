@@ -486,7 +486,8 @@ button#download-button {
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   width: 130px;
   color: var(--byeol-handheld-text-light);
   background-color: var(--byeol-handheld-accent-light);
@@ -533,9 +534,10 @@ summary {
   align-items: center;
   justify-content: center;
   padding: 8px 8px;
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   font-size: 13px;
-  height: 39px;
+  height: 37px;
   color: var(--byeol-handheld-text-light);
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
@@ -544,19 +546,19 @@ summary {
 }
 
 html summary {
-  background-color: var(--byeol-handheld-frame-light);
+  background-color: var(--byeol-handheld-frame-bump-light);
 }
 html summary:hover {
-  background-color: var(--byeol-handheld-frame-bump-light);
+  background-color: var(--byeol-handheld-frame-light);
 }
 html summary:active {
   background-color: var(--byeol-night3);
 }
 html.dark-mode summary {
-  background-color: var(--byeol-handheld-frame-dark);
+  background-color: var(--byeol-handheld-frame-bump-dark);
 }
 html.dark-mode summary:hover {
-  background-color: var(--byeol-handheld-frame-bump-dark);
+  background-color: var(--byeol-handheld-frame-dark);
 }
 html.dark-mode summary:active {
   background-color: var(--byeol-white2);
