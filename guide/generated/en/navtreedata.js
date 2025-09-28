@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "byeol", "index.html", [
+    [ "시작하면서", "index.html", [
+      [ "안녕하세요!", "index.html#autotoc_md67", null ]
+    ] ],
     [ "서론", "md__home_runner_work_byeol_byeol_doc_guide_en_quick_start.html", [
       [ "IDEA: 작은 장난감 같은 언어를 만든다.", "md__home_runner_work_byeol_byeol_doc_guide_en_quick_start.html#autotoc_md1", null ],
       [ "IDEA: 기본 언어 기능", "md__home_runner_work_byeol_byeol_doc_guide_en_quick_start.html#autotoc_md2", [
@@ -98,9 +101,6 @@ var NAVTREE =
       ] ],
       [ "IDEA: 속도보다 유지보수를 우선한다.", "md__home_runner_work_byeol_byeol_doc_guide_en_quick_start.html#autotoc_md64", null ],
       [ "끝맺으면서", "md__home_runner_work_byeol_byeol_doc_guide_en_quick_start.html#autotoc_md65", null ]
-    ] ],
-    [ "시작하면서", "md__home_runner_work_byeol_byeol_doc_guide_en__r_e_a_d_m_e.html", [
-      [ "안녕하세요!", "md__home_runner_work_byeol_byeol_doc_guide_en__r_e_a_d_m_e.html#autotoc_md67", null ]
     ] ]
   ] ]
 ];
