@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['서론_0',['서론',['../md__home_runner_work_byeol_byeol_doc_guide_ko_quick_start.html',1,'']]]
+  ['개발자_20속성_20가이드_0',['개발자 속성 가이드',['../quick-guide.html',1,'']]]
 ];
