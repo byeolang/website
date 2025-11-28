@@ -2,19 +2,45 @@ followDarkModeWithParent();
 
 document.addEventListener('DOMContentLoaded', function() {
     function makeJson(raw) {
-        function emptyJson(raw) {
+
+        function emptyJson(raw, style) {
+            if(style == null) {
+                return {
+                    code: raw.replace(/\"/g, '$quot;'),
+                    shown: raw.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+                    classList: `language-cpp verified`
+                };
+            }
+
             return {
-                code: raw,
-                shown: raw,
-                classList: ""
+                code: raw.replace(/\"/g, '$quot;'),
+                shown: raw.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+                classList: style
             };
         }
 
-        if(raw[0] != '{') return emptyJson(raw);
+        function getStyle(rows) {
+            if (rows.length <= 0) return null;
+
+            const match = rows[0].match(/^@style:\s*([^\n]+)/);
+            if(match == null) return null;
+
+            return match[1];
+        }
+
+        const rows = raw.split("\n");
+        const style = getStyle(rows);
+        codes = raw;
+        if(style != null) {
+            rows.shift();
+            codes = rows.join("\n");
+        }
+        if(codes[0] != '{') return emptyJson(codes, style);
+
         try {
-            return eval(`(${raw})`);
+            return eval(`(${codes})`);
         } catch (ex) {
-            return emptyJson(raw);
+            return emptyJson(codes, style);
         }
     }
 
@@ -26,17 +52,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const fragments = document.querySelectorAll('.fragment, div.fragment, pre.fragment');
     fragments.forEach(fragment => {
         let json = makeJson(fragment.textContent);
-        fragment.innerHTML = `<pre><code class="language-byeol ${json.classList}" src="${json.code}">${json.shown}</code></pre>`;
+        fragment.innerHTML = `<pre><code class="hljs ${json.classList}" src="${json.code}">${json.shown}</code></pre>`;
     });
 });
 
 window.addEventListener('load', function() {
-    const codeBlocks = document.querySelectorAll('pre code.language-byeol');
+    const codeBlocks = document.querySelectorAll('pre code.hljs');
     codeBlocks.forEach(block => {
         hljs.highlightElement(block);
     });
 
-    $('code.hljs.verified').hover(function() {
+    $('code.hljs.verified.runnable').hover(function() {
         var codeTag = $(this)[0]
         if($(this).find(".play_button").length) return
         $(this).append('<a class="play_button"><span/></a>')

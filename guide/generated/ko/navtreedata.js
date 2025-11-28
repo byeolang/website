@@ -107,5 +107,5 @@ var NAVTREEINDEX =
 "design-philosophy.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';
+var SYNCOFFMSG = '패널 동기화를 활성화하기 위해 클릭하십시오';

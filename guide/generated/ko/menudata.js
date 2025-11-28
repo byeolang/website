@@ -23,5 +23,5 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"}]}
+{text:"메인 페이지",url:"index.html"},
+{text:"관련된 페이지",url:"pages.html"}]}
