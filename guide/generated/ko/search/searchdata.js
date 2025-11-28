@@ -12,7 +12,7 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Pages"
+  0: "모두",
+  1: "페이지들"
 };
 
