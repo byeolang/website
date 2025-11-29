@@ -206,7 +206,7 @@ void <a class="el" href="namespaceby_1_1platform_a_p_i.html#aecc5d148e6ef94b4f51
 <div class="textblock"><p >Platform-independent API wrapper for OS-specific operations </p>
 <p >Provides a unified interface for platform-dependent operations, acting as a buffer layer between platform-specific APIs and the rest of the codebase.</p>
 <p >For example, colored text output requires different approaches on different platforms: POSIX systems use ANSI escape sequences, while Windows uses WINAPI. Using <a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246" title="Returns platform-specific string for console foreground color">platformAPI::foreColor()</a> allows writing platform-independent code.</p>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Example of platform-independent colored console output: </p><div class="fragment"><div class="line">cout &lt;&lt; <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot;(&quot;</span></div>
 <div class="line">     &lt;&lt; <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(YELLOW) &lt;&lt; _encodeNewLine(rightName)</div>

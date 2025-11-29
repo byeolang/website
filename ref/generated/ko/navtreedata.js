@@ -65,7 +65,7 @@ var NAVTREE =
           [ "간략화된 주소값", "architecture-and-class-design.html#autotoc_md25", null ]
         ] ],
         [ "richLog - 다형성 로깅", "architecture-and-class-design.html#autotoc_md26", [
-          [ "<strong>convert</strong>()", "architecture-and-class-design.html#autotoc_md27", null ],
+          [ "convert()", "architecture-and-class-design.html#autotoc_md27", null ],
           [ "wrap", "architecture-and-class-design.html#autotoc_md28", null ],
           [ "richLog 확장 예제", "architecture-and-class-design.html#autotoc_md29", null ]
         ] ],
@@ -230,21 +230,7 @@ var NAVTREE =
       [ "다음 단계", "architecture-and-class-design.html#autotoc_md157", null ]
     ] ],
     [ "모듈", "modules.html", "modules" ],
-    [ "네임스페이스", "namespaces.html", [
-      [ "네임스페이스 목록", "namespaces.html", "namespaces_dup" ],
-      [ "네임스페이스 멤버", "namespacemembers.html", [
-        [ "모두", "namespacemembers.html", null ],
-        [ "함수", "namespacemembers_func.html", null ]
-      ] ]
-    ] ],
-    [ "클래스 목록", "annotated.html", "annotated" ],
     [ "클래스 색인", "classes.html", null ],
-    [ "클래스 계통도", "hierarchy.html", "hierarchy" ],
-    [ "클래스 멤버", "functions.html", [
-      [ "모두", "functions.html", "functions_dup" ],
-      [ "함수", "functions_func.html", "functions_func" ],
-      [ "변수", "functions_vars.html", null ]
-    ] ],
     [ "파일 목록", "files.html", "files" ]
   ] ]
 ];
@@ -252,13 +238,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"classby_1_1arr.html",
-"classby_1_1logger.html#ab1920d09c867647e5249ff0f677e98b3",
-"classby_1_1thread.html#a83196c76226b9b2a3e89b5e90f2e778a",
-"dir_533ae6b4eb6026944d796b6fb12b0256.html",
-"life_8hpp_source.html",
-"structby_1_1marshal_err.html",
-"type_providable_8hpp.html"
+"classby_1_1arr.html#a00cbe2dba2983ec0a31f0006f555b4ec",
+"classby_1_1n_byte.html",
+"classby_1_1val_stela.html#a2c6b8c1214253068af60f9a016af77d4",
+"frame_interact_8hpp.html",
+"signaler_8hpp.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

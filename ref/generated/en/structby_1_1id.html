@@ -155,15 +155,15 @@ nuint&#160;</td><td class="memItemRight" valign="bottom"><b>serial</b>: 21</td><
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Unique identifier for instances in memlite system. </p>
 <p >64-bit integer instance identifier. tagN identifies <a class="el" href="classby_1_1life.html">life</a>, chkN indicates which <a class="el" href="classby_1_1chunk.html">chunk</a>, and serial is used for object validation.</p>
-<h1><a class="anchor" id="serial"></a>
-is instance creation count during process execution</h1>
-<p >As seen from <a class="el" href="classby_1_1pool.html#pool">lazily has chunks per allocatable size</a> and chunk, using a custom memory pool means when memory is released, only the destructor is called without initializing all memory. Previously allocated and destroyed data remains, and accessing this data is even possible. (If accessing used data causes exceptions or UB, implementing <a class="el" href="classby_1_1binder.html">binder</a> with weak or strong pointers would be impossible.) binder additionally compares serial to distinguish whether retrieved data is truly valid.</p>
-<h1><a class="anchor" id="tagN"></a>
-used for accessing life objects</h1>
+<h1><a class="anchor" id="serial_field"></a>
+serial is instance creation count during process execution</h1>
+<p >As seen from <a class="el" href="classby_1_1pool.html">pool</a> and chunk, using a custom memory pool means when memory is released, only the destructor is called without initializing all memory. Previously allocated and destroyed data remains, and accessing this data is even possible. (If accessing used data causes exceptions or UB, implementing <a class="el" href="classby_1_1binder.html">binder</a> with weak or strong pointers would be impossible.) binder additionally compares serial to distinguish whether retrieved data is truly valid.</p>
+<h1><a class="anchor" id="tagn_field"></a>
+tagN used for accessing life objects</h1>
 <p ><a class="el" href="classby_1_1watcher.html">watcher</a> uses this value to retrieve the tagN-th <a class="el" href="classby_1_1life.html">life</a> object from its array.</p>
-<h1><a class="anchor" id="chkN"></a>
-used for retrieving chunk objects</h1>
-<p ><a class="el" href="classby_1_1pool.html#pool">lazily has chunks per allocatable size</a> first calculates instance size mapped to id to retrieve <a class="el" href="classby_1_1chunks.html#chunks">also provides only fixed memory</a>. Then chunks returns the memory block at its chkN-th element. Externally, the received memory address and serial value are compared to verify it's the same instance. </p>
+<h1><a class="anchor" id="chkn_field"></a>
+chkN used for retrieving chunk objects</h1>
+<p ><a class="el" href="classby_1_1pool.html">pool</a> first calculates instance size mapped to id to retrieve <a class="el" href="classby_1_1chunks.html">chunks</a>. Then chunks returns the memory block at its chkN-th element. Externally, the received memory address and serial value are compared to verify it's the same instance. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2a827f9a34a3e6569d795fccfcf6f5e9" name="a2a827f9a34a3e6569d795fccfcf6f5e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a827f9a34a3e6569d795fccfcf6f5e9">&#9670;&nbsp;</a></span>isHeap()</h2>

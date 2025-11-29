@@ -243,14 +243,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Parser for stela configuration language. </p>
 <p >Entry point for the <a class="el" href="group__stela.html">Stela</a> parsing component. Specify scripts through <code><a class="el" href="classby_1_1stela_parser.html#a99b018f229e9ba106315b0fcda3ae9d5" title="Parses the given string of stela code.">parse()</a></code> or <code><a class="el" href="classby_1_1stela_parser.html#a2fcb5c29a8a1e05416a050599e5fc49c" title="Parses stela code from the specified file path.">parseFromFile()</a></code>, and the parsed result is returned in <a class="el" href="group__stela.html">Stela</a> structure.</p>
-<h1><a class="anchor" id="Similar"></a>
-structure to byeol parser</h1>
+<h1><a class="anchor" id="similar_structure"></a>
+Similar structure to byeol parser</h1>
 <p >Since the stela language itself is a specialized language of byeol, the parser is also based on the byeol language parser. Since it's a less complex language than byeol, it's recommended to examine this parser code before looking at the core module.</p>
 <h1><a class="anchor" id="scanner"></a>
 - bison - stelaParser structure</h1>
 <p >Uses flex and bison, with flex named lowscanner and bison named lowparser. These low-level scanner and parser exist only within the parser component and are never exposed externally. When <a class="el" href="classby_1_1stela_parser.html#a99b018f229e9ba106315b0fcda3ae9d5" title="Parses the given string of stela code.">stelaParser::parse()</a> executes, it runs lowscanner. lowscanner tokenizes and passes tokens to lowparser. When lowparser matches rules on received tokens, it passes events back to <a class="el" href="classby_1_1stela_parser.html" title="Parser for stela configuration language.">stelaParser</a>. Therefore, <a class="el" href="classby_1_1stela_parser.html" title="Parser for stela configuration language.">stelaParser</a>'s functions starting with <code>on</code> are event handling functions that define how to create nodes and build the AST.</p>
-<h1><a class="anchor" id="Indentation"></a>
-rule</h1>
+<h1><a class="anchor" id="indentation_rule"></a>
+Indentation Rule</h1>
 <p >Like the byeol language, stela applies the offside rule, making it very sensitive to indentation. Unlike typical languages, it must count whitespace after newlines. Once indentation is confirmed and determines which scope the code line belongs to, whitespace should be ignored afterward. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae86562b13cfeec03f8bf61ccc0226154" name="ae86562b13cfeec03f8bf61ccc0226154"></a>

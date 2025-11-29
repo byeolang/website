@@ -206,8 +206,8 @@ const <a class="el" href="classby_1_1stream.html">stream</a> *getStream(const nc
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Main logging interface for the byeol language system. </p>
-<p >A lightweight C++ logging framework facade that enables systematic logging through multiple logging destinations called <a class="el" href="classby_1_1logger.html#stream">stream</a>. Typically used through accompanying macros.</p>
-<h1><a class="anchor" id="Usage"></a>
+<p >A lightweight C++ logging framework facade that enables systematic logging through multiple logging destinations called <a class="el" href="classby_1_1stream.html">stream</a>. Typically used through accompanying macros.</p>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Basic usage with macros: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;slot[%s] origins loaded.&quot;</span>, getName());</div>
 </div><!-- fragment --><p >This produces output like: </p><div class="fragment"><div class="line">Oct 22 2025  21:26:13 I cppPackLo &lt;_loadLibs#49&gt; slot[cpp] origins loaded.</div>
@@ -218,25 +218,25 @@ Usage</h1>
 <li>Function (_loadLibs) and line number (49)</li>
 <li>Log message (slot[cpp] origins loaded)</li>
 </ol>
-<h1><a class="anchor" id="stream"></a>
+<h1><a class="anchor" id="stream_concept"></a>
 stream</h1>
-<p >The core of the clog module is <a class="el" href="classby_1_1logger.html#stream">stream</a>. A stream represents the logging output destination. Currently <a class="el" href="classby_1_1console_stream.html">consoleStream</a> and <a class="el" href="classby_1_1file_log_stream.html">fileLogStream</a> exist. All streams are owned by the logger class from the start.</p>
+<p >The core of the clog module is <a class="el" href="classby_1_1stream.html">stream</a>. A stream represents the logging output destination. Currently <a class="el" href="classby_1_1console_stream.html">consoleStream</a> and <a class="el" href="classby_1_1file_log_stream.html">fileLogStream</a> exist. All streams are owned by the logger class from the start.</p>
 <p >Each stream follows the standard byeol state diagram: </p><div class="fragment"><div class="line">RELEASED ---init()---&gt; INITIALIZED</div>
 <div class="line">RELEASED &lt;--rel()----- INITIALIZED</div>
 </div><!-- fragment --><p >Streams also manage enable status. Using setEnable(false) disables a specific stream. The logger class itself inherits from stream, so it provides the same API. Logger redirects each API call to all owned streams. For example, <code><a class="el" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc" title="Get singleton logger instance.">logger::get()</a>.setEnable(false)</code> disables all streams.</p>
-<h1><a class="anchor" id="macro"></a>
+<h1><a class="anchor" id="logging_macros"></a>
 macro</h1>
 <p >Use logging macros for advanced features like filename, function name, and line numbers: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;just message.&quot;</span>);</div>
 <div class="line">BY_DE(<span class="stringliteral">&quot;leaf: ERR: %s&quot;</span>, e); <span class="comment">// Debug-only error log with format specifiers</span></div>
 </div><!-- fragment --><p >Macros follow byeol convention with <code>BY_</code> prefix, followed by log level (E/W/I). Add <code>D</code> prefix for debug-only logs (e.g., BY_DE, BY_DW, BY_DI).</p>
-<h1><a class="anchor" id="richLog"></a>
+<h1><a class="anchor" id="rich_log"></a>
 richLog</h1>
-<p >The <a class="el" href="classby_1_1logger.html#richLog">richLog</a> feature uses polymorphism to convert format specifier arguments to appropriate types: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;make a closure for %s.%s&quot;</span>, meObj, cast.getSrc().getName());</div>
+<p >The richLog feature uses polymorphism to convert format specifier arguments to appropriate types: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;make a closure for %s.%s&quot;</span>, meObj, cast.getSrc().getName());</div>
 </div><!-- fragment --><p >Output: <code>Oct 22 2025 22:01:12 I closure &lt;_make#73&gt; make a closure for obj.foo</code></p>
 <p >Both tstr&lt;obj&gt; and std::string are properly converted to strings. Since clog is a low-level module in the architecture, richLog is defined per-module to handle module-specific class conversions.</p>
-<h1><a class="anchor" id="filterable"></a>
+<h1><a class="anchor" id="filtering"></a>
 filterable</h1>
-<p >Log messages can be filtered based on specific conditions. The <a class="el" href="classby_1_1logger.html#filterable">filterable</a> interface's <code>filt()</code> function determines filtering. Add filters using <code><a class="el" href="classby_1_1logger.html#a67776480bd4461e1f3301f73bda384b2" title="Set logging filters.">setFilters(const filters&amp;)</a></code>. For example, <a class="el" href="classby_1_1err_pass_filter.html">errPassFilter</a> only passes ERR level messages. </p>
+<p >Log messages can be filtered based on specific conditions. The <a class="el" href="classby_1_1filterable.html">filterable</a> interface's <code>filt()</code> function determines filtering. Add filters using <code><a class="el" href="classby_1_1logger.html#a67776480bd4461e1f3301f73bda384b2" title="Set logging filters.">setFilters(const filters&amp;)</a></code>. For example, <a class="el" href="classby_1_1err_pass_filter.html">errPassFilter</a> only passes ERR level messages. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3df10fe126022e45f0f51001665a470d" name="a3df10fe126022e45f0f51001665a470d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3df10fe126022e45f0f51001665a470d">&#9670;&nbsp;</a></span>getName()</h2>

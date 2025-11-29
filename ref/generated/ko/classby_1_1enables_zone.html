@@ -140,9 +140,9 @@ const enables &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPre
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Temporary scope-based enable/disable zone for logging streams </p>
-<p >The <a class="el" href="classby_1_1logger.html">logger</a> class has multiple <a class="el" href="classby_1_1logger.html#stream">stream</a> objects, and you can control output destinations by enabling or disabling specific streams. However, it's very common to need to control streams only within a specific code block or function, then restore the original state when leaving that block.</p>
+<p >The <a class="el" href="classby_1_1logger.html">logger</a> class has multiple <a class="el" href="classby_1_1stream.html">stream</a> objects, and you can control output destinations by enabling or disabling specific streams. However, it's very common to need to control streams only within a specific code block or function, then restore the original state when leaving that block.</p>
 <p ><a class="el" href="classby_1_1enables_zone.html" title="Temporary scope-based enable/disable zone for logging streams">enablesZone</a> is designed for this use case. Implemented using the RAII idiom, it records the enable state of streams upon object creation, then restores each stream's enable status to its initial state when the <a class="el" href="classby_1_1enables_zone.html" title="Temporary scope-based enable/disable zone for logging streams">enablesZone</a> is destroyed.</p>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Typical usage pattern: </p><div class="fragment"><div class="line"><span class="comment">// Assume all streams in logger are enabled</span></div>
 <div class="line">{</div>

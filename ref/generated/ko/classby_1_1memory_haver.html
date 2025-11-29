@@ -163,11 +163,11 @@ Protected 멤버 함수</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Abstract interface for objects that own memory </p>
 <p >Base interface for classes that directly or indirectly own memory in the memory pool and can READ that memory. Defines interfaces for querying memory size and state.</p>
-<h1><a class="anchor" id="Indirect"></a>
-ownership?</h1>
+<h1><a class="anchor" id="indirect_ownership"></a>
+Indirect ownership?</h1>
 <p >"Indirect ownership" means the object doesn't directly allocate and use memory, but internal member variables handle it. If memory allocation must be done through internal members, the class should only inherit <a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a>. If allocation is also possible, inherit <a class="el" href="classby_1_1allocator.html">allocator</a>.</p>
-<h1><a class="anchor" id="len"></a>
-and size</h1>
+<h1><a class="anchor" id="len_and_size"></a>
+len and size</h1>
 <p >Allocatable memory size is expressed as size, while allocated memory is expressed as len. Control is based solely on void* and byte units.</p>
 <dl class="section remark"><dt>Remarks</dt><dd><a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a> derivatives manage different memory sizes Note that <a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a> derived classes each manage different sizes of memory. </dd></dl>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>

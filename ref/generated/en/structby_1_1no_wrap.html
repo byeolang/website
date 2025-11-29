@@ -138,6 +138,13 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 struct by::noWrap&lt; T &gt;</div><p >Rich logging support with polymorphic type conversion. </p>
 <p >Uses polymorphism to convert format specifier arguments into appropriate types for logging. Since the clog module is positioned at a lower level in the architecture, it cannot know what classes depend on it. Therefore, richLog is defined in each module to specify how to convert classes in that module to strings.</p>
 <p >richLog consists of two main parts: <b>convert</b> and wrap.</p>
+<h1><a class="anchor" id="convert"></a>
+&lt;strong&gt;convert&lt;/strong&gt;</h1>
+<p >Defines how to convert each module's classes into types that are easy to log. Callers simply pass their concrete type to <b>convert</b>(), and the most appropriate <b>convert</b> is called via overloading. This means you can define both generic <b>convert</b>() and type-specific <b>convert</b>() simultaneously. A notable example is <b>convert</b>(void*), which is called when no other T* matches.</p>
+<h1><a class="anchor" id="wrap"></a>
+wrap</h1>
+<p >Wrap is needed to unpack values received from <b>convert</b>() so they can pass through variadic arguments. Variadic argument functions can only pass scalar types or T*, not values. Since some <b>convert</b>() functions create new values that need to be passed by value, wrap is essential as long as <a class="el" href="classby_1_1logger.html#a704d20510894ee46cdfa91687ba7e0e8" title="Main logging function with full context information.">logger::log()</a> uses variadic arguments.</p>
+<p ><b>convert</b>() functions return either <a class="el" href="structby_1_1str_wrap.html">strWrap</a> or noWrap&lt;T&gt;. <a class="el" href="structby_1_1no_wrap.html" title="Rich logging support with polymorphic type conversion.">noWrap</a> returns the received value as-is without processing, while <a class="el" href="structby_1_1str_wrap.html">strWrap</a> internally calls std::string::c_str(). </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/runner/work/byeol/byeol/module/clog/<a class="el" href="clog_2rich_log_8hpp_source.html">richLog.hpp</a></li>
 </ul>

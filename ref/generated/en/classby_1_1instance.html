@@ -276,8 +276,8 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>::byeolTest</b></td
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base class for all managed instances in memlite system. </p>
 <p >Objects managed by memlite's custom memory pool must inherit from instance. Only by inheriting instance can objects be referenced through <a class="el" href="classby_1_1binder.html">binder</a> as weak or strong pointers. Instances are identified through <a class="el" href="structby_1_1id.html">id</a>.</p>
-<h1><a class="anchor" id="ID"></a>
-assignment algorithm</h1>
+<h1><a class="anchor" id="id_assignment_algorithm"></a>
+ID assignment algorithm</h1>
 <p >The weakest part of memlite is this id assignment algorithm. Instance creation is done by <a class="el" href="classby_1_1instancer.html">instancer</a> which manages the memory pool. The instancer pushes the instance address and id to a map in the internal vault class. When instance::operator new() is called, it internally accesses vault using code like <code>map[this]</code> to retrieve the id value.</p>
 <p >While seemingly fine, it has many disadvantages:</p><ol type="1">
 <li>Accessing vault during constructor phase is not truly safe</li>

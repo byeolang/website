@@ -134,9 +134,9 @@ Public 멤버 함수</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Filter that passes through error-level log messages only </p>
-<p >As the name implies, a <a class="el" href="classby_1_1logger.html#filterable">filterable</a> class that only allows error-level logs to pass through. When this filter is registered with <a class="el" href="classby_1_1logger.html">logger</a>, warning and info logs will not be output.</p>
+<p >As the name implies, a <a class="el" href="classby_1_1filterable.html">filterable</a> class that only allows error-level logs to pass through. When this filter is registered with <a class="el" href="classby_1_1logger.html">logger</a>, warning and info logs will not be output.</p>
 <p >Not used directly; instead, create an instance and add it to logger.</p>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Example of using <a class="el" href="classby_1_1err_pass_filter.html" title="Filter that passes through error-level log messages only">errPassFilter</a>: </p><div class="fragment"><div class="line"><span class="keyword">const</span> filters&amp; prevFilters = <a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().getFilters();</div>
 <div class="line">filters fs(<span class="keyword">new</span> errPassFilter());</div>
