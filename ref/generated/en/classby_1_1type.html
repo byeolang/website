@@ -235,15 +235,15 @@ virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="botto
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Core class for runtime type information in byeol language. </p>
 <p >The central class of the meta module. Provides fundamental type information APIs.</p>
-<h1><a class="anchor" id="Basic"></a>
-type identification</h1>
+<h1><a class="anchor" id="basic_type_identification"></a>
+Basic type identification</h1>
 <ul>
 <li>isTemplate(): Returns whether this is a template class</li>
 <li>isAbstract(): Returns whether this is an abstract class</li>
 <li>getName(): Returns class name (demangled)</li>
 </ul>
-<h1><a class="anchor" id="Class"></a>
-hierarchy information</h1>
+<h1><a class="anchor" id="class_hierarchy_information"></a>
+Class hierarchy information</h1>
 <ul>
 <li>getSupers(): Returns list of super classes, with direct parent at the end</li>
 <li>getSubs(): Returns list of sub classes, with closest descendants first</li>
@@ -251,20 +251,20 @@ hierarchy information</h1>
 <li>isSub(const type&amp; rhs): Checks if this is a sub class of rhs</li>
 </ul>
 <p >Performance note: <a class="el" href="classby_1_1type.html#ab88ce436da22fc488bf6865cdd1b9ad3" title="Checks if this type is a super class of the given type.">isSuper()</a> and <a class="el" href="classby_1_1type.html#a7511efc747aeb12a6b3fc2e2971eb31f" title="Checks if this type is a sub class of the given type.">isSub()</a> are more efficient than dynamic_cast. While dynamic_cast typically loops through vtables, the meta module uses a tier algorithm that compares tier values and char* addresses for O(1) type checking.</p>
-<h1><a class="anchor" id="Instance"></a>
-creation</h1>
+<h1><a class="anchor" id="instance_creation"></a>
+Instance creation</h1>
 <ul>
 <li><a class="el" href="classby_1_1type.html#a0ada2d17adf7691a294b682f4e340aeb" title="create an instance to be refered this type.">make()</a>: Creates instance using default constructor. Returns nullptr if no default constructor exists.</li>
 </ul>
-<h1><a class="anchor" id="Meta"></a>
-type information management</h1>
+<h1><a class="anchor" id="meta_type_information_management"></a>
+Meta type information management</h1>
 <ul>
 <li><a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">init()</a>: Initializes type information</li>
 <li>rel(): Releases type information</li>
 </ul>
 <p >These are typically handled automatically via BY_INIT_META macro and rarely need direct invocation.</p>
-<h1><a class="anchor" id="How"></a>
-meta information is generated</h1>
+<h1><a class="anchor" id="how_meta_information_is_generated"></a>
+How meta information is generated</h1>
 <p >Type information like isTemplate(), isAbstract(), and getName() is filled by ttypeBase&lt;T&gt; through metaprogramming. The purpose of <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">type::init()</a> is to construct the class hierarchy.</p>
 <p >The hierarchy is built using the constraint that "all classes must define super
 as a typedef". With super defined for all classes, ttype&lt;super&gt;().<a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">init()</a> can be called, enabling recursive class hierarchy construction:</p>
@@ -281,12 +281,12 @@ as a typedef". With super defined for all classes, ttype&lt;super&gt;().<a class
 <div class="line">    mySupers.push_back(&amp;super);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1type_html_a656d9a54739f8457195da12567e4410a"><div class="ttname"><a href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a">by::type::init</a></div><div class="ttdeci">virtual nbool init()</div><div class="ttdoc">Initializes type metadata and constructs class hierarchy.</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="Automatic"></a>
-meta information generation</h1>
+</div><!-- fragment --><h1><a class="anchor" id="automatic_meta_information_generation"></a>
+Automatic meta information generation</h1>
 <p >Type objects are initialized via <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">init()</a> calls, but manually calling <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">init()</a> for every class would be inefficient. The BY_INIT_META macro solves this by using BY_INITIATOR to execute <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a" title="Initializes type metadata and constructs class hierarchy.">init()</a> before main() via static object initialization with lambda functions.</p>
 <p >The constraint is that each class declaration must include BY_INIT_META(MyClass). These meta DSL-style macros are executed through the BY macro convention, and core module adds additional meta DSL macros, so use BY(CLASS()) or BY(ADT()) instead of calling BY_INIT_META directly.</p>
-<h1><a class="anchor" id="Adding"></a>
-custom meta information</h1>
+<h1><a class="anchor" id="adding_custom_meta_information"></a>
+Adding custom meta information</h1>
 <p >While type provides substantial type information, language implementations like byeol may need additional information like parameters or return types. You might think to inherit from type, but since the user entry point must always be ttype&lt;T&gt;, and you cannot modify ttype&lt;T&gt; code from modules depending on meta, inheritance isn't possible. Instead, inject custom meta types.</p>
 <p >The core code is in ttypeBase&lt;T&gt;: </p><div class="fragment"><div class="line">template &lt;typename T, typename S = typename tmetaTypeDef&lt;T&gt;::is&gt;</div>
 <div class="line"><span class="keyword">class </span>ttypeBase: <span class="keyword">public</span> S { }</div>

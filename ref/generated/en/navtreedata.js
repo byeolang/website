@@ -27,21 +27,7 @@ var NAVTREE =
   [ "byeol", "index.html", [
     [ "Hello!", "index.html", null ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
-      ] ]
-    ] ],
-    [ "Class List", "annotated.html", "annotated" ],
     [ "Class Index", "classes.html", null ],
-    [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-    [ "Class Members", "functions.html", [
-      [ "All", "functions.html", "functions_dup" ],
-      [ "Functions", "functions_func.html", "functions_func" ],
-      [ "Variables", "functions_vars.html", null ]
-    ] ],
     [ "File List", "files.html", "files" ]
   ] ]
 ];
@@ -49,12 +35,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"classby_1_1file_log_stream.html#aeff5dad63b9817e4e5bd9b6274316bb7",
-"classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650",
-"clog_2when_8hpp.html",
-"functions_func_v.html",
-"rtti_2rtti_8hpp_source.html",
-"tas_8hpp_source.html"
+"classby_1_1filters.html#a9c802685b95256a394d5450791dfebe5",
+"classby_1_1stela_smart_dedent.html#a7bc29e06927de235262827df9d1211ec",
+"dir_9c491cd6a7a0a997625920616d7f9d57.html",
+"narr_iteration_8hpp_source.html",
+"tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608eaa46a6304fe04a7aad112e4e1ebd40c4d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

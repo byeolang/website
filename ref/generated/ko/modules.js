@@ -7,5 +7,5 @@ var modules =
     [ "Stela", "group__stela.html", "group__stela" ],
     [ "Core", "group__core.html", "group__core" ],
     [ "Sys", "group__sys.html", null ],
-    [ "Frontend", "group__frontend.html", null ]
+    [ "Frontend", "group__frontend.html", "group__frontend" ]
 ];

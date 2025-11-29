@@ -196,14 +196,14 @@ nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () con
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Collection of memory chunks for scalable allocation </p>
 <p >Manages multiple <a class="el" href="classby_1_1chunk.html">chunk</a> instances. Since chunk uses only fixed-size memory created at initialization, chunks adds/removes multiple chunks to manage memory dynamically.</p>
-<h1><a class="anchor" id="chunks"></a>
-also provides only fixed memory</h1>
+<h1><a class="anchor" id="fixed_memory_only"></a>
+chunks also provides only fixed memory</h1>
 <p >Since chunks adds or removes chunks, and each chunk cell uses only fixed size, chunks can also only allocate fixed-size memory.</p>
-<h1><a class="anchor" id="Coordination"></a>
-with pool</h1>
-<p >The first to receive memory requests is <a class="el" href="classby_1_1pool.html#pool">lazily has chunks per allocatable size</a> class. When pool receives a memory size to allocate, it lazily retrieves a chunks instance capable of handling that memory size and requests new1(). chunks::new1() finds a chunk capable of allocating memory, and if none exists, creates an additional chunk.</p>
-<h1><a class="anchor" id="Available"></a>
-chunk search algorithm</h1>
+<h1><a class="anchor" id="pool_coordination"></a>
+Coordination with pool</h1>
+<p >The first to receive memory requests is <a class="el" href="classby_1_1pool.html">pool</a> class. When pool receives a memory size to allocate, it lazily retrieves a chunks instance capable of handling that memory size and requests new1(). chunks::new1() finds a chunk capable of allocating memory, and if none exists, creates an additional chunk.</p>
+<h1><a class="anchor" id="chunk_search_algorithm"></a>
+Available chunk search algorithm</h1>
 <p >The most recently memory-allocated chunk has the highest probability of being able to allocate additionally. Member variable <code>_s</code> holds the index of the most recently allocated chunk. If _chunks[_s] has no available memory, increment _s. Like a circular array, _chunks' end connects to its beginning. If _s loops back to its pre-traversal value and still no available memory exists, the entire chunks has no available memory, so enters <a class="el" href="classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c">resize()</a>.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Cannot use vector Obviously, vector is managed on heap, so shouldn't use vector while making a custom memory pool. Planned for future modification. </dd></dl>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>

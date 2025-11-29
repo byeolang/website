@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('group__indep.html',''); initResizable(
 
 <p>Early-return pattern macro for exception handling </p>
 <p >The byeol project actively applies the early-return pattern throughout. This helps reduce code depth, improve code flow clarity, and handle exceptional situations immediately. However, traditional <code>if</code> statements make it difficult to distinguish between normal branching logic and early-return exception handling.</p>
-<h1><a class="anchor" id="Problem"></a>
+<h1><a class="anchor" id="problem"></a>
 Problem</h1>
 <p >Consider this traditional early-return code: </p><div class="fragment"><div class="line">str me::eval(<span class="keyword">const</span> args&amp; a) {</div>
 <div class="line">    std::string key = _makeKey(a);</div>
@@ -340,7 +340,7 @@ Problem</h1>
 <div class="line">}</div>
 <div class="ttc" id="aclog_2common_2macro_8hpp_html_a39decaf05c8269cf9d21c83ff19014a4"><div class="ttname"><a href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a></div><div class="ttdeci">#define BY_E(fmt,...)</div><div class="ttdoc">Log macro: prints debug log on console and file.</div><div class="ttdef"><b>Definition:</b> macro.hpp:20</div></div>
 </div><!-- fragment --><p >The WHEN macro solves this by explicitly marking early-return cases. It is used exclusively for early-return patterns. Additionally, since over 90% of early-returns involve logging an error and returning an error value, WHEN supports chaining to express both operations in a single line.</p>
-<h1><a class="anchor" id="Solution"></a>
+<h1><a class="anchor" id="solution"></a>
 Solution</h1>
 <p >The same code becomes much clearer with WHEN: </p><div class="fragment"><div class="line">str me::eval(<span class="keyword">const</span> args&amp; a) {</div>
 <div class="line">    std::string key = _makeKey(a);</div>

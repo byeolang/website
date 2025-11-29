@@ -147,10 +147,10 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base class for token scanning strategies. </p>
 <p >As mentioned in <a class="el" href="classby_1_1stela_parser.html">stelaParser</a>, the parser must dynamically change scan mode to precisely measure indentation. <a class="el" href="classby_1_1token_scan.html" title="Base class for token scanning strategies.">tokenScan</a> handles one such scan mode strategy.</p>
-<h1><a class="anchor" id="Command"></a>
-tokens</h1>
+<h1><a class="anchor" id="command_tokens"></a>
+Command Tokens</h1>
 <p >Among tokens exist command tokens like <code>SCAN_AGAIN</code>, <code>SCAN_EXIT</code> that give commands to the scanner or parser. See zztokenType enum in <code><a class="el" href="stela_parser_8hpp.html">stelaParser.hpp</a></code> for details.</p>
-<h1><a class="anchor" id="isBypass"></a>
+<h1><a class="anchor" id="is_bypass"></a>
 isBypass</h1>
 <p >IndentScan ignores most tokens and focuses solely on counting whitespace. However, if multiple tokens were pushed from the previous line, it operates in bypass mode internally. During this time, it skips indentation counting and simply reads and returns the stored tokens. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>

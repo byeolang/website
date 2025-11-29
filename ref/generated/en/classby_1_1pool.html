@@ -174,9 +174,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Memory pool manager for efficient instance allocation. </p>
-<p >The first class to handle memory allocation requests from external sources. Internally has an array of <a class="el" href="classby_1_1chunks.html#chunks">also provides only fixed memory</a>, and since chunks has <a class="el" href="classby_1_1chunk.html">chunk</a>, effectively manages all low-level memory-related classes.</p>
-<h1><a class="anchor" id="pool"></a>
-lazily has chunks per allocatable size</h1>
+<p >The first class to handle memory allocation requests from external sources. Internally has an array of <a class="el" href="classby_1_1chunks.html">chunks</a>, and since chunks has <a class="el" href="classby_1_1chunk.html">chunk</a>, effectively manages all low-level memory-related classes.</p>
+<h1><a class="anchor" id="lazy_chunks_allocation"></a>
+pool lazily has chunks per allocatable size</h1>
 <p >A key point in creating a custom memory pool is increasing speed by listing same-size memory in one place. chunks has a block concept where each block can only allocate/ deallocate pre-specified sized memory. pool creates chunks with fixed block size. When external requests memory allocation of a specific size, pool finds chunks handling that block size. If none exist, creates lazily. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a62e78fd3266d503de837ba2053a696e6" name="a62e78fd3266d503de837ba2053a696e6"></a>

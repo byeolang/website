@@ -235,8 +235,8 @@ static constexpr ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Memory watcher for tracking instance lifecycle and allocation. </p>
 <p >One pillar of memory management that manages created object lifecycles. Whenever an instance is created, watcher additionally allocates a <a class="el" href="classby_1_1life.html">life</a> object and uses reference counting to determine object destruction timing.</p>
-<h1><a class="anchor" id="Reference"></a>
-counting</h1>
+<h1><a class="anchor" id="reference_counting"></a>
+Reference counting</h1>
 <p >When <a class="el" href="classby_1_1binder.html">binder</a> binds an instance, life increments its strong count by 1. When binder calls rel() on instance, decrements count by 1. At 0, deletes from memory. instance uses <code>operator delete()</code> to make <a class="el" href="classby_1_1instancer.html">instancer</a> execute memory release work. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9ac64ea8049bb936fd8152d2f6799553" name="a9ac64ea8049bb936fd8152d2f6799553"></a>

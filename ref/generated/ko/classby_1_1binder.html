@@ -314,7 +314,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>::binderTest</b></t
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Generalized binding class for managing instance lifecycles </p>
 <p >Can bind any object inheriting from instance. Uses reference counting to properly destroy objects at appropriate times. Similar to std::weak_ptr and std::shared_ptr, with <a class="el" href="classby_1_1tweak.html">tweak</a> handling weak pointers and <a class="el" href="classby_1_1tstr.html">tstr</a> handling strong pointers.</p>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Basic usage with <a class="el" href="classby_1_1binder.html#a876d0a090326604be8e4116408ea734f" title="Binds instance to this binder with reference counting">bind()</a>, isBind(), and get(): </p><div class="fragment"><div class="line"><span class="keyword">class </span>A : <span class="keyword">public</span> instance {}; <span class="comment">// Inherits instance, so bindable</span></div>
 <div class="line">A* a = <span class="keyword">new</span> A();</div>
@@ -344,8 +344,8 @@ Usage</h1>
 <div class="line">    <span class="keywordflow">return</span> ptr; <span class="comment">// Returns by value, count maintained</span></div>
 <div class="line">                <span class="comment">// shell object created with new won&#39;t be destroyed</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="Why"></a>
-not use shared_ptr?</h1>
+</div><!-- fragment --><h1><a class="anchor" id="why_not_shared_ptr"></a>
+Why not use shared_ptr?</h1>
 <p >Several advantages over shared_ptr:</p>
 <ol type="1">
 <li>Reference counting block attached to instance itself<ul>
@@ -372,14 +372,14 @@ not use shared_ptr?</h1>
 </li>
 </ol>
 <dl class="section remark"><dt>Remarks</dt><dd>Abstract nature binder is abstract, so cannot create objects. Only meaningful for generic logic using already created tstr or tweak binders.</dd></dl>
-<h1><a class="anchor" id="Custom"></a>
-memory pool</h1>
+<h1><a class="anchor" id="custom_memory_pool"></a>
+Custom memory pool</h1>
 <p >Ultimate goal of memlite is lightweight C++ memory management for byeol managed environment. Requires GC and additional memory management, implying custom memory pool and instance lifecycle management. All instance allocation starts with <a class="el" href="classby_1_1instancer.html">instancer</a>.</p>
-<h1><a class="anchor" id="Performance"></a>
-improvements</h1>
+<h1><a class="anchor" id="performance_improvements"></a>
+Performance improvements</h1>
 <p >shared_ptr's algorithm stores reference counting info on heap. Using faster custom memory pool instead of heap and optimizing binding speed provides performance gains. Binding is one of the hotspots consuming most performance in byeol.</p>
-<h1><a class="anchor" id="Additional"></a>
-information</h1>
+<h1><a class="anchor" id="additional_information"></a>
+Additional information</h1>
 <p >shared_ptr creates objects on heap for reference counting. memlite uses <a class="el" href="classby_1_1watcher.html">watcher</a> to lend empty <a class="el" href="classby_1_1life.html">life</a> objects from pre-allocated memory, using them as reference counting space for instances. If GC features are added later, instances may require additional lifecycle information. Unlike shared_ptr, managing each instance's lifecycle information internally allows appropriate handling of such requirements. </p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
 <a id="a49b4b4287d4d23a1b5f4475a81a5e31f" name="a49b4b4287d4d23a1b5f4475a81a5e31f"></a>

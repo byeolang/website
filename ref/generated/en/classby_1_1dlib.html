@@ -173,7 +173,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <dl class="section remark"><dt>Remarks</dt><dd>Requires familiarity with tmay Uses <a class="el" href="classby_1_1tmay.html">tmay</a>, so it's recommended to familiarize yourself with tmay beforehand.</dd>
 <dd>
 RAII idiom dlib is implemented using RAII idiom. When the instance is destroyed, function pointers returned externally become unusable.</dd></dl>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Example showing the complete process of loading a dynamic library and calling a function. Note that <code>rel()</code> explicitly releases resources. When an error occurs, the comma operator <code>(rel(), false)</code> is used to clean up the dlib object before returning: </p><div class="fragment"><div class="line">dlib lib = dlib(path); <span class="comment">// Performs steps 1 and 2 simultaneously</span></div>
 <div class="line"><span class="keyword">auto</span> res = lib.load(); <span class="comment">// `res` evaluated as true when it has an error</span></div>

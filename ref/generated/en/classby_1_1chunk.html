@@ -203,14 +203,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>watcher</b></td></tr
 <div class="textblock"><p >Memory chunk for block-based allocation. </p>
 <p >The minimum unit class that can actually allocate memory in memlite. All memory management is performed by linking chunks together.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Fixed memory size chunk has a _resize() function for flexible memory growth, but following memlite's concept, this is not exposed publicly. Consequently, chunk memory is fixed at object creation. If additional memory is needed, create and operate more chunk objects.</dd></dl>
-<h1><a class="anchor" id="Block"></a>
-size</h1>
+<h1><a class="anchor" id="block_size"></a>
+Block size</h1>
 <p >chunk receives blockSize and size at creation. blockSize is the minimum unit size one instance occupies in memory. size defines how many such instances can fit. For example, to create a chunk holding 100 int64 values: </p><div class="fragment"><div class="line"><span class="keyword">new</span> chunk(<span class="keyword">sizeof</span>(int64), 100)</div>
-</div><!-- fragment --><h1><a class="anchor" id="Real"></a>
-block size</h1>
+</div><!-- fragment --><h1><a class="anchor" id="real_block_size"></a>
+Real block size</h1>
 <p >Actual memory allocation uses real block size instead of block size for optimization. Rather than allocating in small 1 or 2 byte units during CPU operations, it's more efficient to allocate minimum bytes appropriate for the CPU level, like 4 or 8 bytes.</p>
-<h1><a class="anchor" id="ArrayList"></a>
-implementation</h1>
+<h1><a class="anchor" id="arraylist_implementation"></a>
+ArrayList implementation</h1>
 <p >chunk is implemented as an ArrayList. Size is fixed, but addition and deletion are free within size limits, with very fast random access.</p>
 <p >Algorithm: 0. Precondition: Each element's byte size must be &gt;= 4. All elements have identical byte sizes. Since chunk handles everything as void*, elements without values are treated as int type.</p><ol type="1">
 <li>On array initialization with size, place integer value n+1 before the bytes occupied by nth element. Example: size=4 results in [1, 2, 3, 4]</li>

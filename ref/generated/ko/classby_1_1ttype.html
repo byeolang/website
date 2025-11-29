@@ -228,7 +228,7 @@ class by::ttype&lt; T &gt;</div><p >Template type wrapper providing entry point 
 <p >The entry point class for users to access meta information. Always create a new object when using ttype&lt;T&gt;. The entire design uses the monostate pattern, so creating objects each time shares values internally with no additional cost.</p>
 <p >To understand the overall design of the meta module, first examine the core <a class="el" href="classby_1_1type.html">type</a> class.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Custom meta type injection If a class T defines <code>typedef metaType MyType</code>, then ttype&lt;T&gt; will be based on MyType instead of the default type class. This allows modules depending on meta to inject additional type information. For example, the core module uses this to inject <a class="el" href="classby_1_1ntype.html">ntype</a>.</dd></dl>
-<h1><a class="anchor" id="Usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p >Basic usage pattern: </p><div class="fragment"><div class="line"><span class="comment">// Always create new ttype&lt;T&gt; objects</span></div>
 <div class="line">ttype&lt;MyClass&gt; t1;</div>
