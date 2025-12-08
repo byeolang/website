@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['시작하면서_0',['시작하면서',['../index.html',1,'']]]
+  ['디자인_20철학_0',['디자인 철학',['../design-philosophy.html',1,'']]]
 ];

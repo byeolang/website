@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['디자인_20철학_0',['디자인 철학',['../design-philosophy.html',1,'']]]
+  ['기본_20사용법_0',['기본 사용법',['../basic-usage.html',1,'']]]
 ];
