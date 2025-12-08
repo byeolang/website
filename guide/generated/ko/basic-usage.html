@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: 디자인 철학</title>
+<title>byeol: 기본 사용법</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -87,7 +87,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('design-philosophy.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('basic-usage.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -106,46 +106,77 @@ $(document).ready(function(){initNavTree('design-philosophy.html',''); initResiz
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">디자인 철학 </div></div>
+  <div class="headertitle"><div class="title">기본 사용법 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_guide_ko_design_philosophy"></a> </p>
-<h1><a class="anchor" id="autotoc_md73"></a>
-작은 장난감 같은 언어를 만든다.</h1>
-<ul>
-<li>TODO</li>
+<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_guide_ko_basic_usage"></a></p><ul>
+<li><code>byeol -h</code> 명령을 통해 사용 가능한 옵션을 모두 볼 수 있습니다.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md74"></a>
-기본 언어 기능</h1>
+<h1><a class="anchor" id="autotoc_md9"></a>
+filePath</h1>
 <ul>
-<li>TODO</li>
+<li>기본적으로 <code>.byeol</code> 파일에 대한 경로를 입력해서 해당 코드를 실행할 수 있습니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol your/path/test.byeol</div>
+</div><!-- fragment --></li>
+<li>wildcard는 아직 인식이 안됩니다.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md75"></a>
-한곳에서 되었다면, 다른 곳에도 되어야 한다.</h1>
+<h1><a class="anchor" id="autotoc_md10"></a>
+스크립트 직접 실행</h1>
 <ul>
-<li>TODO</li>
+<li>&lsquo;-s &rsquo;&lt;byeol 코드&gt;'<code>를 사용하면</code>.byeol` 파일 필요없이 cli 환경에서 직접 코드를 입력해서 실행합니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol -s &#39;main() void&lt;br/&gt;</div>
+<div class="line">    print(&quot;hello&quot;)&lt;br/&gt;</div>
+<div class="line">&#39;</div>
+</div><!-- fragment --></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md76"></a>
-간결함을 추구한다.</h1>
+<h1><a class="anchor" id="autotoc_md11"></a>
+상세 로그 출력</h1>
 <ul>
-<li>TODO</li>
+<li><code>-v</code> 옵션을 주면 파싱/검증 과정에서 발생하는 상세 로그를 확인할 수 있습니다.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md77"></a>
-무조건적으로 하나의 기능을 위한 기능은 만들지 않는다.</h1>
+<h1><a class="anchor" id="autotoc_md12"></a>
+AST 구조 출력</h1>
 <ul>
-<li>생각을 해본다.</li>
-<li>조립할 수 있어야 한다.</li>
-<li>개념을 압축한다.</li>
+<li><code>-S</code> 혹은 <code>--show-structure</code> 옵션을 사용하면 파싱 후의 AST 구조를 CUI로 표현합니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol -S -s &#39;main() void</div>
+<div class="line">    print(&quot;hello&quot;)</div>
+<div class="line">&#39;</div>
+<div class="line">   ┗━[0] #root slot@6b00</div>
+<div class="line">      ┣━[0] @2770 main(?) ?</div>
+<div class="line">      ┃  ┗━[0] codes blockExpr@e290</div>
+<div class="line">      ┃     ┗━[0]  runExpr@6d90</div>
+<div class="line">      ┃        ┣━[0] subject getExpr@0010 = ?.print(?)</div>
+<div class="line">      ┃        ┃  ┗━[0] subArg str = &quot;hello&quot;</div>
+<div class="line">      ┣━[1] @6c68 @ctor(?) ?</div>
+<div class="line">      ┗━[2] @6dd0 @ctor(?) ?</div>
+<div class="line">   ┗━[0] #root slot@6b00</div>
+<div class="line">      ┣━[0] @2770 main() void</div>
+<div class="line">      ┃  ┗━[0] codes blockExpr@e290</div>
+<div class="line">      ┃     ┗━[0]  runExpr@6d90 = frame.print(str)</div>
+<div class="line">      ┃        ┣━[0] subject getExpr@0010 = frame.print(str)</div>
+<div class="line">      ┃        ┃  ┣━[0] me frame@c290</div>
+<div class="line">      ┃        ┃  ┗━[1] subArg str = &quot;hello&quot;</div>
+<div class="line">      ┣━[1] @6c68 @ctor() {default}</div>
+<div class="line">      ┗━[2] @6dd0 @ctor(rhs {default}) {default}</div>
+<div class="line">hello</div>
+</div><!-- fragment --></li>
+<li>위 로그의 각 값의 상세 정보에 대해서는 <a href="https://byeol.io/ref">reference가이드</a>에서 <code>아키텍쳐와 설계</code> 를 참고하세요.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md78"></a>
-모든 기능을 제공하는 언어를 만들지 않는다.</h1>
+<h1><a class="anchor" id="autotoc_md13"></a>
+버전 표기</h1>
 <ul>
-<li>TODO</li>
+<li><code>--version</code> 옵션을 사용하면 현재 byeol 바이너리의 버전과 빌드 정보가 표시됩니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol --version</div>
+<div class="line">🌟 &#39;byeol&#39; Mana Update 0.2.10</div>
+<div class="line">Built on Nov 04 2025 (build 1378, git 5ae19ea79, Release, 64-bit)</div>
+<div class="line">© 2010-2025 Taehun Lee(kniz) and contributors. All rights reserved.</div>
+</div><!-- fragment --></li>
+<li>위 예시처럼 버전(0.2.10)과 빌드 날짜(Nov 04 2025), 빌드카운트(1378), git commitId(5ae19ea79), 바이너리 타입(Debug or Release) 등이 표시됩니다</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md79"></a>
-속도보다 유지보수를 우선한다.</h1>
+<h1><a class="anchor" id="autotoc_md14"></a>
+다음은,</h1>
 <ul>
-<li>TODO: 기능소개는 아니고, byeol의 비전 공유. 왜 이 언어를 만들었는가? AST를 그대로 취급하는 언어. 빠른 수정이 가능한 언어. </li>
+<li><a class="el" href="quick-guide.html">언어를 배워서</a> 한번 사용해 보세요. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
