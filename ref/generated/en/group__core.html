@@ -108,7 +108,8 @@ $(document).ready(function(){initNavTree('group__core.html',''); initResizable()
   <div class="summary">
 <a href="#files">Files</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Core</div></div>
 </div><!--header-->
 <div class="contents">
@@ -233,9 +234,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1loop_expr.html">by::loopExpr</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for loop expressions.  <a href="classby_1_1loop_expr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1loop_expr_1_1loop.html">by::loopExpr::loop</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop execution controller.  <a href="classby_1_1loop_expr_1_1loop.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1next_ret.html">by::nextRet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return state for continue statements.  <a href="classby_1_1next_ret.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,9 +254,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1func.html">by::func</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function definition in byeol language.  <a href="classby_1_1func.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1generic_origin.html">by::genericOrigin</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic type origin with type parameters.  <a href="classby_1_1generic_origin.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1immutable_tactic.html">by::immutableTactic</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable type binding strategy.  <a href="classby_1_1immutable_tactic.html#details">More...</a><br /></td></tr>
@@ -460,6 +455,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread_use.html">by::threadUse</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread usage wrapper.  <a href="classby_1_1thread_use.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1core_internal.html">by::coreInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1cpp_pack_loading.html">by::cppPackLoading</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ native pack loading implementation.  <a href="classby_1_1cpp_pack_loading.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -562,13 +559,42 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:gae7bef416778c285966d6b55c2184d722"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1obj.html">obj</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gae7bef416778c285966d6b55c2184d722">by::orgCache</a></td></tr>
+<tr class="memdesc:gae7bef416778c285966d6b55c2184d722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic type origin with type parameters.  <a href="group__core.html#gae7bef416778c285966d6b55c2184d722">More...</a><br /></td></tr>
+<tr class="separator:gae7bef416778c285966d6b55c2184d722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaec057623c97cf8804f9f793f36f492df"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classby_1_1tnchain.html">tnchain</a>&lt; std::string, <a class="el" href="classby_1_1node.html">node</a>, <a class="el" href="classby_1_1tnmap.html">tnmap</a>&lt; std::string, <a class="el" href="classby_1_1node.html">node</a>, <a class="el" href="classby_1_1immutable_tactic.html">immutableTactic</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">by::scope</a></td></tr>
 <tr class="memdesc:gaec057623c97cf8804f9f793f36f492df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbol scope container.  <a href="group__core.html#gaec057623c97cf8804f9f793f36f492df">More...</a><br /></td></tr>
 <tr class="separator:gaec057623c97cf8804f9f793f36f492df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga494838df7950fa14a036d73e544f82a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga494838df7950fa14a036d73e544f82a6">by::loopExpr::loopExpr</a> (const <a class="el" href="classby_1_1block_expr.html">blockExpr</a> &amp;blk)</td></tr>
+<tr class="memdesc:ga494838df7950fa14a036d73e544f82a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop execution controller.  <a href="group__core.html#ga494838df7950fa14a036d73e544f82a6">More...</a><br /></td></tr>
+<tr class="separator:ga494838df7950fa14a036d73e544f82a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Core language layer containing byeol AST and core language features. Contains the byeol Abstract Syntax Tree (AST), handles package loading and management, and implements the fundamental features of the byeol programming language. </p>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="gae7bef416778c285966d6b55c2184d722" name="gae7bef416778c285966d6b55c2184d722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7bef416778c285966d6b55c2184d722">&#9670;&nbsp;</a></span>orgCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt; std::string, <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1obj.html">obj</a> &gt; &gt; <a class="el" href="group__core.html#gae7bef416778c285966d6b55c2184d722">by::orgCache</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generic type origin with type parameters. </p>
+<p >Basically performs the same role as origin class, but differs in that it supports generics and that this instance itself is not responsible for origin but creates/manages origin as needed.</p>
+<h1><a class="anchor" id="operation_method"></a>
+Operation Method</h1>
+<p ><a class="el" href="classby_1_1generic_origin.html">genericOrigin</a> manages origin objects with a map. When there's no <code>myObj</code> key in it, it deepClones the original origin object _org to create a new <a class="el" href="classby_1_1origin.html">origin</a> object. Then it puts generalizer into that object to perform the operation of replacing all type parameter T with myObj, changing the existing <a class="el" href="classby_1_1get_expr.html" title="Expression for property and method access.">getExpr</a>(args = T) parts to <a class="el" href="classby_1_1get_expr.html" title="Expression for property and method access.">getExpr</a>(args = myObj). The replaced origin is registered in subs() so that when called later with the same key, it's returned immediately without generalizer. </p>
+
+</div>
+</div>
 <a id="gaec057623c97cf8804f9f793f36f492df" name="gaec057623c97cf8804f9f793f36f492df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaec057623c97cf8804f9f793f36f492df">&#9670;&nbsp;</a></span>scope</h2>
 
@@ -605,6 +631,28 @@ File Scope</h1>
 <h1><a class="anchor" id="pack_scope"></a>
 Pack Scope</h1>
 <p >Scope where symbols defined directly under pack are located. Functions defined in pack have their me as <code>pack</code>, and defined <a class="el" href="classby_1_1origin.html">origin</a> objects have their obj scope chain pack scope. See <a class="el" href="classby_1_1frames.html">frames</a> for why this chaining happens. Unlike file scope, pack scope can be accessed externally if dependencies are defined in <a class="el" href="structby_1_1manifest.html">manifest</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga494838df7950fa14a036d73e544f82a6" name="ga494838df7950fa14a036d73e544f82a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga494838df7950fa14a036d73e544f82a6">&#9670;&nbsp;</a></span>loopExpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">by::loopExpr::loopExpr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classby_1_1block_expr.html">blockExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>blk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loop execution controller. </p>
+<p >Manages loop iteration state and execution flow. </p>
 
 </div>
 </div>

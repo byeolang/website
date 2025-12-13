@@ -133,12 +133,6 @@ by::evalExpr에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a14e9bc053c259643b672f0e5f9f36b61"><td class="memItemLeft" align="right" valign="top"><a id="a14e9bc053c259643b672f0e5f9f36b61" name="a14e9bc053c259643b672f0e5f9f36b61"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>evalExpr</b> (const <a class="el" href="classby_1_1node.html">node</a> *meObj, const <a class="el" href="classby_1_1node.html">node</a> &amp;subject, const <a class="el" href="classby_1_1args.html">args</a> &amp;a)</td></tr>
-<tr class="separator:a14e9bc053c259643b672f0e5f9f36b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac50d810d785187000dd553f9df9d8da7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1eval_expr.html#ac50d810d785187000dd553f9df9d8da7">evalExpr</a> (const <a class="el" href="classby_1_1node.html">node</a> *meObj, const <a class="el" href="classby_1_1args.html">args</a> &amp;a)</td></tr>
-<tr class="memdesc:ac50d810d785187000dd553f9df9d8da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classby_1_1eval_expr.html" title="Function/method call expression">evalExpr</a> where the <code>meObj</code> itself is implicitly the subject of the evaluation.  <a href="classby_1_1eval_expr.html#ac50d810d785187000dd553f9df9d8da7">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ac50d810d785187000dd553f9df9d8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a26a1a2a09cf05339077b79faae9225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1eval_expr.html#a7a26a1a2a09cf05339077b79faae9225">eval</a> (const <a class="el" href="classby_1_1args.html">args</a> &amp;a) override</td></tr>
 <tr class="separator:a7a26a1a2a09cf05339077b79faae9225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9c95959869c3fa5b2812553b078e0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1eval_expr.html#acf9c95959869c3fa5b2812553b078e0a">infer</a> () const override</td></tr>
@@ -493,6 +487,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () const<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
+<tr class="memitem:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="adc7c4424f664c4e5ac0f55d981bf93da" name="adc7c4424f664c4e5ac0f55d981bf93da"></a>
+static <a class="el" href="classby_1_1instance_1_1vault.html">vault</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVault</b> ()</td></tr>
+<tr class="separator:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classby_1_1node"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 속성</td></tr>
 <tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a61a558262f0785eeb3af4024c3e81d2e" name="a61a558262f0785eeb3af4024c3e81d2e"></a>
 T sub&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
@@ -538,45 +536,7 @@ static <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p >Function/method call expression </p>
 <p >Represents function and method invocation with arguments. Handles subject evaluation, <a class="el" href="classby_1_1args.html">args</a> passing, and <a class="el" href="classby_1_1func.html">func</a> execution. </p>
-</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
-<a id="ac50d810d785187000dd553f9df9d8da7" name="ac50d810d785187000dd553f9df9d8da7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50d810d785187000dd553f9df9d8da7">&#9670;&nbsp;</a></span>evalExpr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">by::evalExpr::evalExpr </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1node.html">node</a> *&#160;</td>
-          <td class="paramname"><em>meObj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classby_1_1args.html">args</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs an <a class="el" href="classby_1_1eval_expr.html" title="Function/method call expression">evalExpr</a> where the <code>meObj</code> itself is implicitly the subject of the evaluation. </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">meObj</td><td>The "me" object, which also acts as the subject of the evaluation. </td></tr>
-    <tr><td class="paramname">a</td><td>The arguments for the evaluation. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">멤버 함수 문서화</h2>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a7a26a1a2a09cf05339077b79faae9225" name="a7a26a1a2a09cf05339077b79faae9225"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a26a1a2a09cf05339077b79faae9225">&#9670;&nbsp;</a></span>eval()</h2>
 

@@ -10,7 +10,8 @@ var searchData=
   ['convergence_7',['convergence',['../classby_1_1convergence.html',1,'by']]],
   ['convergenceclosure_8',['ConvergenceClosure',['../structby_1_1_convergence_closure.html',1,'by']]],
   ['convergenceclosure_3c_20void_20_3e_9',['ConvergenceClosure&lt; void &gt;',['../structby_1_1_convergence_closure_3_01void_01_4.html',1,'by']]],
-  ['cpiter_10',['cpIter',['../classby_1_1cp_iter.html',1,'by']]],
-  ['cpppackloading_11',['cppPackLoading',['../classby_1_1cpp_pack_loading.html',1,'by']]],
-  ['ctor_12',['ctor',['../classby_1_1ctor.html',1,'by']]]
+  ['coreinternal_10',['coreInternal',['../classby_1_1core_internal.html',1,'by']]],
+  ['cpiter_11',['cpIter',['../classby_1_1cp_iter.html',1,'by']]],
+  ['cpppackloading_12',['cppPackLoading',['../classby_1_1cpp_pack_loading.html',1,'by']]],
+  ['ctor_13',['ctor',['../classby_1_1ctor.html',1,'by']]]
 ];

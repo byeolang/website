@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macro_2ehpp_0',['macro.hpp',['../meta_2common_2macro_8hpp.html',1,'(Global Namespace)'],['../clog_2common_2macro_8hpp.html',1,'(Global Namespace)'],['../indep_2macro_8hpp.html',1,'(Global Namespace)']]],
+  ['macro_2ehpp_0',['macro.hpp',['../meta_2common_2macro_8hpp.html',1,'(Global Namespace)'],['../indep_2macro_8hpp.html',1,'(Global Namespace)'],['../clog_2common_2macro_8hpp.html',1,'(Global Namespace)']]],
   ['make_1',['make',['../classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa',1,'by::exprMaker::make()'],['../classby_1_1params.html#a020d01e2e85f3c525c3bd829d4ef2aad',1,'by::params::make(const strings &amp;names, const narr &amp;args)'],['../classby_1_1params.html#af04eca49ae0028058a6be7d061c068c8',1,'by::params::make(const narr &amp;args)'],['../classby_1_1mgd_type.html#aef1673945bda18fb8287deb0905871a1',1,'by::mgdType::make()'],['../classby_1_1ttype_base_3_01void_00_01type_01_4.html#ac30f3b021276b3d284b2ff975da7588c',1,'by::ttypeBase&lt; void, type &gt;::make()'],['../classby_1_1type.html#a0ada2d17adf7691a294b682f4e340aeb',1,'by::type::make()']]],
   ['makeassignexprfrom_2',['makeAssignExprFrom',['../classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d',1,'by::exprMaker']]],
   ['makecommonfunc_3',['makeCommonFunc',['../classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2',1,'by::exprMaker']]],
@@ -11,15 +11,16 @@ var searchData=
   ['marshalerr_8',['marshalErr',['../structby_1_1marshal_err.html',1,'by']]],
   ['marshaling_2ehpp_9',['marshaling.hpp',['../marshaling_8hpp.html',1,'']]],
   ['memlite_10',['Memlite',['../group__memlite.html',1,'']]],
-  ['memoryhaver_11',['memoryHaver',['../classby_1_1memory_haver.html',1,'by']]],
-  ['memoryhaver_2ehpp_12',['memoryHaver.hpp',['../memory_haver_8hpp.html',1,'']]],
-  ['meta_13',['Meta',['../group__meta.html',1,'']]],
-  ['metaif_14',['metaIf',['../structby_1_1meta_if.html',1,'by']]],
-  ['mgd_2ehpp_15',['mgd.hpp',['../mgd_8hpp.html',1,'']]],
-  ['mgdtype_16',['mgdType',['../classby_1_1mgd_type.html',1,'by']]],
-  ['mgdtype_2ehpp_17',['mgdType.hpp',['../mgd_type_8hpp.html',1,'']]],
-  ['modifier_18',['modifier',['../classby_1_1modifier.html',1,'by']]],
-  ['modifier_2ehpp_19',['modifier.hpp',['../modifier_2modifier_8hpp.html',1,'(Global Namespace)'],['../modifier_8hpp.html',1,'(Global Namespace)']]],
-  ['modules_2edox_20',['modules.dox',['../modules_8dox.html',1,'']]],
-  ['mov_21',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]]
+  ['memliteinternal_11',['memliteInternal',['../classby_1_1memlite_internal.html',1,'by']]],
+  ['memoryhaver_12',['memoryHaver',['../classby_1_1memory_haver.html',1,'by']]],
+  ['memoryhaver_2ehpp_13',['memoryHaver.hpp',['../memory_haver_8hpp.html',1,'']]],
+  ['meta_14',['Meta',['../group__meta.html',1,'']]],
+  ['metaif_15',['metaIf',['../structby_1_1meta_if.html',1,'by']]],
+  ['mgd_2ehpp_16',['mgd.hpp',['../mgd_8hpp.html',1,'']]],
+  ['mgdtype_17',['mgdType',['../classby_1_1mgd_type.html',1,'by']]],
+  ['mgdtype_2ehpp_18',['mgdType.hpp',['../mgd_type_8hpp.html',1,'']]],
+  ['modifier_19',['modifier',['../classby_1_1modifier.html',1,'by']]],
+  ['modifier_2ehpp_20',['modifier.hpp',['../modifier_2modifier_8hpp.html',1,'(Global Namespace)'],['../modifier_8hpp.html',1,'(Global Namespace)']]],
+  ['modules_2edox_21',['modules.dox',['../modules_8dox.html',1,'']]],
+  ['mov_22',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]]
 ];

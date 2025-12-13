@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classby_1_1instance.html',''); initRes
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -134,17 +135,16 @@ Inheritance diagram for by::instance:</div>
 <area href="classby_1_1def_block.html" title="Definition block for organizing object definitions." alt="by::defBlock" shape="rect" coords="325,280,532,304"/>
 <area href="classby_1_1err_report.html" title="Error report collector." alt="by::errReport" shape="rect" coords="325,336,532,360"/>
 <area href="classby_1_1flag.html" title="Base class for command-line flag handling." alt="by::flag" shape="rect" coords="325,392,532,416"/>
-<area href="classby_1_1loop_expr_1_1loop.html" title="Loop execution controller." alt="by::loopExpr::loop" shape="rect" coords="325,448,532,472"/>
-<area href="classby_1_1modifier.html" title="Access modifier for type members." alt="by::modifier" shape="rect" coords="325,504,532,528"/>
-<area href="classby_1_1node.html" title="Base class for all AST nodes in the byeol language." alt="by::node" shape="rect" coords="325,560,532,584"/>
-<area href="classby_1_1pack_loading.html" title="Base class for pack loading strategies." alt="by::packLoading" shape="rect" coords="325,616,532,640"/>
-<area href="classby_1_1param.html" title="Function parameter." alt="by::param" shape="rect" coords="325,672,532,696"/>
-<area href="classby_1_1src.html" title="Source location information." alt="by::src" shape="rect" coords="325,728,532,752"/>
-<area href="classby_1_1src_supply.html" title="Source code supply interface." alt="by::srcSupply" shape="rect" coords="325,784,532,808"/>
-<area href="classby_1_1stela.html" title="Core AST node for stela configuration language." alt="by::stela" shape="rect" coords="325,840,532,864"/>
-<area href="classby_1_1tnbicontainer.html" alt="by::tnbicontainer&lt; K, V &gt;" shape="rect" coords="325,896,532,920"/>
-<area href="classby_1_1tnucontainer.html" alt="by::tnucontainer&lt; T, R, RSquare &gt;" shape="rect" coords="325,952,532,976"/>
-<area href="structby_1_1tprior.html" title="Priority wrapper for type matching." alt="by::tprior&lt; T &gt;" shape="rect" coords="325,1008,532,1032"/>
+<area href="classby_1_1modifier.html" title="Access modifier for type members." alt="by::modifier" shape="rect" coords="325,448,532,472"/>
+<area href="classby_1_1node.html" title="Base class for all AST nodes in the byeol language." alt="by::node" shape="rect" coords="325,504,532,528"/>
+<area href="classby_1_1pack_loading.html" title="Base class for pack loading strategies." alt="by::packLoading" shape="rect" coords="325,560,532,584"/>
+<area href="classby_1_1param.html" title="Function parameter." alt="by::param" shape="rect" coords="325,616,532,640"/>
+<area href="classby_1_1src.html" title="Source location information." alt="by::src" shape="rect" coords="325,672,532,696"/>
+<area href="classby_1_1src_supply.html" title="Source code supply interface." alt="by::srcSupply" shape="rect" coords="325,728,532,752"/>
+<area href="classby_1_1stela.html" title="Core AST node for stela configuration language." alt="by::stela" shape="rect" coords="325,784,532,808"/>
+<area href="classby_1_1tnbicontainer.html" alt="by::tnbicontainer&lt; K, V &gt;" shape="rect" coords="325,840,532,864"/>
+<area href="classby_1_1tnucontainer.html" alt="by::tnucontainer&lt; T, R, RSquare &gt;" shape="rect" coords="325,896,532,920"/>
+<area href="structby_1_1tprior.html" title="Priority wrapper for type matching." alt="by::tprior&lt; T &gt;" shape="rect" coords="325,952,532,976"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -243,6 +243,12 @@ virtual me *&#160;</td><td class="memItemRight" valign="bottom"><b>cloneDeep</b>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</b> (const me &amp;from)</td></tr>
 <tr class="separator:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adc7c4424f664c4e5ac0f55d981bf93da"><td class="memItemLeft" align="right" valign="top"><a id="adc7c4424f664c4e5ac0f55d981bf93da" name="adc7c4424f664c4e5ac0f55d981bf93da"></a>
+static <a class="el" href="classby_1_1instance_1_1vault.html">vault</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVault</b> ()</td></tr>
+<tr class="separator:adc7c4424f664c4e5ac0f55d981bf93da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a067b78083e79bea14beb1d015283019f"><td class="memItemLeft" align="right" valign="top"><a id="a067b78083e79bea14beb1d015283019f" name="a067b78083e79bea14beb1d015283019f"></a>
@@ -257,21 +263,9 @@ static <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ad21134b2b475e03d1ebe793240980593"><td class="memItemLeft" align="right" valign="top"><a id="ad21134b2b475e03d1ebe793240980593" name="ad21134b2b475e03d1ebe793240980593"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>life</b></td></tr>
-<tr class="separator:ad21134b2b475e03d1ebe793240980593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1ffdab9f4319520dcf8416846fe276b"><td class="memItemLeft" align="right" valign="top"><a id="ab1ffdab9f4319520dcf8416846fe276b" name="ab1ffdab9f4319520dcf8416846fe276b"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>watcher</b></td></tr>
-<tr class="separator:ab1ffdab9f4319520dcf8416846fe276b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd6238737e093c2d50fb7df6c06ed2e0"><td class="memItemLeft" align="right" valign="top"><a id="afd6238737e093c2d50fb7df6c06ed2e0" name="afd6238737e093c2d50fb7df6c06ed2e0"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>chunks</b></td></tr>
-<tr class="separator:afd6238737e093c2d50fb7df6c06ed2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964677938a490439c7c0510b7b0d22dd"><td class="memItemLeft" align="right" valign="top"><a id="a964677938a490439c7c0510b7b0d22dd" name="a964677938a490439c7c0510b7b0d22dd"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>instancer</b></td></tr>
-<tr class="separator:a964677938a490439c7c0510b7b0d22dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37288782a5e0eb93879b472e09c562ce"><td class="memItemLeft" align="right" valign="top"><a id="a37288782a5e0eb93879b472e09c562ce" name="a37288782a5e0eb93879b472e09c562ce"></a>
-struct&#160;</td><td class="memItemRight" valign="bottom"><b>::byeolTest</b></td></tr>
-<tr class="separator:a37288782a5e0eb93879b472e09c562ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbff7fcc5b740f143aeb8ee79d9d62c8"><td class="memItemLeft" align="right" valign="top"><a id="afbff7fcc5b740f143aeb8ee79d9d62c8" name="afbff7fcc5b740f143aeb8ee79d9d62c8"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>memliteInternal</b></td></tr>
+<tr class="separator:afbff7fcc5b740f143aeb8ee79d9d62c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base class for all managed instances in memlite system. </p>
@@ -335,9 +329,8 @@ ID assignment algorithm</h1>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/byeol/byeol/module/memlite/interface/<a class="el" href="instance_8hpp_source.html">instance.hpp</a></li>
-<li>/home/runner/work/byeol/byeol/module/memlite/interface/instance.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

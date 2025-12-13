@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('classby_1_1base_obj.html',''); initRes
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
 <a href="#pub-static-attribs">정적 Public 속성</a> &#124;
 <a href="#pro-methods">Protected 멤버 함수</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classby_1_1base_obj-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">by::baseObj 클래스 참조<div class="ingroups"><a class="el" href="group__core.html">Core</a></div></div></div>
@@ -133,7 +134,7 @@ by::baseObj에 대한 상속 다이어그램 : </div>
 <area href="classby_1_1clonable.html" title="Interface for objects that can be cloned" alt="by::clonable" shape="rect" coords="314,0,461,24"/>
 <area href="classby_1_1tbridge.html" alt="by::tbridge&lt; narr &gt;" shape="rect" coords="0,224,147,248"/>
 <area href="classby_1_1base_err.html" title="Base class for error hierarchy" alt="by::baseErr" shape="rect" coords="157,224,304,248"/>
-<area href="classby_1_1generic_origin.html" title="Generic type origin with type parameters" alt="by::genericOrigin" shape="rect" coords="314,224,461,248"/>
+<area href="classby_1_1generic_origin.html" alt="by::genericOrigin" shape="rect" coords="314,224,461,248"/>
 <area href="classby_1_1obj.html" title="Managed environment object" alt="by::obj" shape="rect" coords="471,224,618,248"/>
 <area href="classby_1_1scalar.html" title="Base class for arithmetic operations on primitive types" alt="by::scalar" shape="rect" coords="628,224,775,248"/>
 <area href="classby_1_1tbridge.html" title="C++ native class bridge" alt="by::tbridge&lt; T &gt;" shape="rect" coords="785,224,932,248"/>
@@ -516,9 +517,6 @@ Protected 멤버 함수</h2></td></tr>
 <tr class="memitem:a6175e6b5b998d999ff41259e0a66516e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1base_obj.html#a6175e6b5b998d999ff41259e0a66516e">_inFrame</a> (<a class="el" href="classby_1_1frame.html">frame</a> &amp;fr, const <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> *<a class="el" href="classby_1_1args.html">args</a>) const</td></tr>
 <tr class="memdesc:a6175e6b5b998d999ff41259e0a66516e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enters this object's frame into the current execution stack.  <a href="classby_1_1base_obj.html#a6175e6b5b998d999ff41259e0a66516e">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a6175e6b5b998d999ff41259e0a66516e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4c15e1e877bd13ea8c97e9a543c75aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1base_obj.html#ab4c15e1e877bd13ea8c97e9a543c75aa">_setOrigin</a> (const <a class="el" href="classby_1_1base_obj.html">baseObj</a> &amp;newOrg)</td></tr>
-<tr class="memdesc:ab4c15e1e877bd13ea8c97e9a543c75aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the origin pointer of this object.  <a href="classby_1_1base_obj.html#ab4c15e1e877bd13ea8c97e9a543c75aa">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ab4c15e1e877bd13ea8c97e9a543c75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41dc8db8b0cf3bd1e8f9f01aca01908c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1base_obj.html#a41dc8db8b0cf3bd1e8f9f01aca01908c">_setType</a> (const <a class="el" href="classby_1_1mgd_type.html">mgdType</a> &amp;new1)</td></tr>
 <tr class="memdesc:a41dc8db8b0cf3bd1e8f9f01aca01908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the managed type for this base object.  <a href="classby_1_1base_obj.html#a41dc8db8b0cf3bd1e8f9f01aca01908c">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a41dc8db8b0cf3bd1e8f9f01aca01908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -537,36 +535,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_setSrc</b> (const <a
 nbool&#160;</td><td class="memItemRight" valign="bottom"><b>_setId</b> (<a class="el" href="structby_1_1id.html">id</a> new1)</td></tr>
 <tr class="separator:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:a0ce0ae157001cc825d118d572ef41038"><td class="memItemLeft" align="right" valign="top"><a id="a0ce0ae157001cc825d118d572ef41038" name="a0ce0ae157001cc825d118d572ef41038"></a>
+<a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1base_obj.html">baseObj</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_org</b></td></tr>
+<tr class="separator:a0ce0ae157001cc825d118d572ef41038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ac2b63ef45aa76a62faa4216ee954c0df"><td class="memItemLeft" align="right" valign="top"><a id="ac2b63ef45aa76a62faa4216ee954c0df" name="ac2b63ef45aa76a62faa4216ee954c0df"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>verifier</b></td></tr>
-<tr class="separator:ac2b63ef45aa76a62faa4216ee954c0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24ec25a21b433e519ae9b888cf8511d9"><td class="memItemLeft" align="right" valign="top"><a id="a24ec25a21b433e519ae9b888cf8511d9" name="a24ec25a21b433e519ae9b888cf8511d9"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>obj</b></td></tr>
-<tr class="separator:a24ec25a21b433e519ae9b888cf8511d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7f2b0b2407c300e6639daba70f71c3"><td class="memItemLeft" align="right" valign="top"><a id="a5c7f2b0b2407c300e6639daba70f71c3" name="a5c7f2b0b2407c300e6639daba70f71c3"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>defaultMakeCtor</b></td></tr>
-<tr class="separator:a5c7f2b0b2407c300e6639daba70f71c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de78aa991dff0fc519d5c721ea49733"><td class="memItemLeft" align="right" valign="top"><a id="a8de78aa991dff0fc519d5c721ea49733" name="a8de78aa991dff0fc519d5c721ea49733"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>parser</b></td></tr>
-<tr class="separator:a8de78aa991dff0fc519d5c721ea49733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab7c001275ccb143c7af1a9c5c88387"><td class="memItemLeft" align="right" valign="top"><a id="a8ab7c001275ccb143c7af1a9c5c88387" name="a8ab7c001275ccb143c7af1a9c5c88387"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>genericOrigin</b></td></tr>
-<tr class="separator:a8ab7c001275ccb143c7af1a9c5c88387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19ecb7a635b6e120bffce6c43ecd457"><td class="memItemLeft" align="right" valign="top"><a id="aa19ecb7a635b6e120bffce6c43ecd457" name="aa19ecb7a635b6e120bffce6c43ecd457"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>exprMaker</b></td></tr>
-<tr class="separator:aa19ecb7a635b6e120bffce6c43ecd457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b43bada3490896357432eba00360dbe"><td class="memItemLeft" align="right" valign="top"><a id="a0b43bada3490896357432eba00360dbe" name="a0b43bada3490896357432eba00360dbe"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>defVarExpr</b></td></tr>
-<tr class="separator:a0b43bada3490896357432eba00360dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363f134817b5e9dbf3dbbbeadfe9ff69"><td class="memTemplParams" colspan="2"><a id="a363f134817b5e9dbf3dbbbeadfe9ff69" name="a363f134817b5e9dbf3dbbbeadfe9ff69"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a363f134817b5e9dbf3dbbbeadfe9ff69"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tbaseObjOrigin</b></td></tr>
-<tr class="separator:a363f134817b5e9dbf3dbbbeadfe9ff69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41bef8186e6a81a9dc0ec6b6e3b680c9"><td class="memItemLeft" align="right" valign="top"><a id="a41bef8186e6a81a9dc0ec6b6e3b680c9" name="a41bef8186e6a81a9dc0ec6b6e3b680c9"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>coreInternal</b></td></tr>
+<tr class="separator:a41bef8186e6a81a9dc0ec6b6e3b680c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
+<tr class="memitem:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="adc7c4424f664c4e5ac0f55d981bf93da" name="adc7c4424f664c4e5ac0f55d981bf93da"></a>
+static <a class="el" href="classby_1_1instance_1_1vault.html">vault</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVault</b> ()</td></tr>
+<tr class="separator:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classby_1_1node"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 속성</td></tr>
 <tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a61a558262f0785eeb3af4024c3e81d2e" name="a61a558262f0785eeb3af4024c3e81d2e"></a>
 T sub&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
@@ -822,41 +808,6 @@ Unlike obj, baseObj's Origin Object Exists Only Once</h1>
 <p><a class="el" href="classby_1_1node.html#a3bf7de9c828022e0eb5dde3d462d645c">by::node</a>(으)로부터 재구현되었습니다.</p>
 
 <p><a class="el" href="classby_1_1generic_origin.html#a76b7c3e191ba5c5c21fa4caa6217a810">by::genericOrigin</a>에서 재구현되었습니다.</p>
-
-</div>
-</div>
-<a id="ab4c15e1e877bd13ea8c97e9a543c75aa" name="ab4c15e1e877bd13ea8c97e9a543c75aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4c15e1e877bd13ea8c97e9a543c75aa">&#9670;&nbsp;</a></span>_setOrigin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void by::baseObj::_setOrigin </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1base_obj.html">baseObj</a> &amp;&#160;</td>
-          <td class="paramname"><em>newOrg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the origin pointer of this object. </p>
-<dl class="section warning"><dt>경고</dt><dd>Modifying the origin pointer is a very dangerous operation and should only be performed by permitted modules or internal mechanisms. Incorrect usage can lead to severe inconsistencies in the object model. </dd></dl>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">newOrg</td><td>The new origin <a class="el" href="classby_1_1base_obj.html" title="Base class for representing byeol objects">baseObj</a> to set. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

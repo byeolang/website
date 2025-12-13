@@ -25,7 +25,6 @@ var group__core =
       [ "_inFrame", "classby_1_1base_obj.html#a6175e6b5b998d999ff41259e0a66516e", null ],
       [ "_onBeforeCtor", "classby_1_1base_obj.html#a04c1e9184180f0274c067aee68487c76", null ],
       [ "_onEvalSub", "classby_1_1base_obj.html#a7612588286f4ab3d4410b2e2597fd80a", null ],
-      [ "_setOrigin", "classby_1_1base_obj.html#ab4c15e1e877bd13ea8c97e9a543c75aa", null ],
       [ "_setType", "classby_1_1base_obj.html#a41dc8db8b0cf3bd1e8f9f01aca01908c", null ],
       [ "getSubPack", "classby_1_1base_obj.html#abe28469d0e87ccc15b6de4c55ad42462", null ]
     ] ],
@@ -54,7 +53,6 @@ var group__core =
       [ "infer", "classby_1_1assign_expr.html#a0be6cf2710a51c84eac22503825ea101", null ]
     ] ],
     [ "by::blockExpr", "classby_1_1block_expr.html", [
-      [ "blockExpr", "classby_1_1block_expr.html#adb5f66722e41a16e2203925b28345307", null ],
       [ "infer", "classby_1_1block_expr.html#a953330b9d03e803e3b040b04840aac4e", null ],
       [ "isAbstract", "classby_1_1block_expr.html#a33a6811496006241b1c9d4d1206e06b5", null ],
       [ "rel", "classby_1_1block_expr.html#a5b63daeb5b5caff442a5be3936acf177", null ],
@@ -85,7 +83,6 @@ var group__core =
       [ "infer", "classby_1_1end_expr.html#a6012dac87e80856bf6a2b7bad39a7845", null ]
     ] ],
     [ "by::evalExpr", "classby_1_1eval_expr.html", [
-      [ "evalExpr", "classby_1_1eval_expr.html#ac50d810d785187000dd553f9df9d8da7", null ],
       [ "infer", "classby_1_1eval_expr.html#acf9c95959869c3fa5b2812553b078e0a", null ]
     ] ],
     [ "by::exprMaker", "classby_1_1expr_maker.html", [
@@ -120,14 +117,10 @@ var group__core =
       [ "infer", "classby_1_1is_expr.html#a4f8a94d672719bf55781617ae9176866", null ]
     ] ],
     [ "by::loopExpr", "classby_1_1loop_expr.html", [
+      [ "loopExpr", "group__core.html#ga494838df7950fa14a036d73e544f82a6", null ],
       [ "_makeEval", "classby_1_1loop_expr.html#a1ccf692ed850122856785fcc969b0825", null ],
       [ "_makeLoop", "classby_1_1loop_expr.html#a6fde83d445e11fb2ff01d555dc3f9919", null ],
       [ "infer", "classby_1_1loop_expr.html#ad57cf07c970ff1a390d4cb24b281392b", null ]
-    ] ],
-    [ "by::loopExpr::loop", "classby_1_1loop_expr_1_1loop.html", [
-      [ "eval", "classby_1_1loop_expr_1_1loop.html#a1b81b18277cff24803647fb4efe3c8d9", null ],
-      [ "isLooping", "classby_1_1loop_expr_1_1loop.html#a223e2625b2d1fc5621a9e4dba02a412f", null ],
-      [ "postprocess", "classby_1_1loop_expr_1_1loop.html#a5bfb3eda4274a7f1f7bc8c87ec0ad6d0", null ]
     ] ],
     [ "by::nextRet", "classby_1_1next_ret.html", null ],
     [ "by::nextExpr", "classby_1_1next_expr.html", null ],
@@ -143,10 +136,6 @@ var group__core =
     [ "by::func", "classby_1_1func.html", [
       [ "_interactFrame", "classby_1_1func.html#ad723b43b064a585d5a3c02678cac3bff", null ],
       [ "getEnds", "classby_1_1func.html#a7098397640285074b13cdc0206b87217", null ]
-    ] ],
-    [ "by::genericOrigin", "classby_1_1generic_origin.html", [
-      [ "_onEvalSub", "classby_1_1generic_origin.html#a76b7c3e191ba5c5c21fa4caa6217a810", null ],
-      [ "infer", "classby_1_1generic_origin.html#a8d9438eed9c149f2ce6f4b53bb5c4c39", null ]
     ] ],
     [ "by::immutableTactic", "classby_1_1immutable_tactic.html", null ],
     [ "by::entrypoint", "structby_1_1entrypoint.html", null ],
@@ -312,6 +301,7 @@ var group__core =
       [ "rel", "classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343", null ]
     ] ],
     [ "by::threadUse", "classby_1_1thread_use.html", null ],
+    [ "by::coreInternal", "classby_1_1core_internal.html", null ],
     [ "by::cppPackLoading", "classby_1_1cpp_pack_loading.html", [
       [ "parse", "classby_1_1cpp_pack_loading.html#af6eade51ac36c938f8fc6039c3954356", null ]
     ] ],
@@ -429,5 +419,7 @@ var group__core =
       [ "_prepare", "classby_1_1visitor.html#aca5e48ce20607999b9872becae86e92c", null ],
       [ "setReturnable", "classby_1_1visitor.html#a30e01f0ab6bf62cb9bb5a75e3a70c728", null ]
     ] ],
-    [ "by::scope", "group__core.html#gaec057623c97cf8804f9f793f36f492df", null ]
+    [ "by::orgCache", "group__core.html#gae7bef416778c285966d6b55c2184d722", null ],
+    [ "by::scope", "group__core.html#gaec057623c97cf8804f9f793f36f492df", null ],
+    [ "by::loopExpr::loopExpr", "group__core.html#ga494838df7950fa14a036d73e544f82a6", null ]
 ];
