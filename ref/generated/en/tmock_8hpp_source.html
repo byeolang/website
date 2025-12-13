@@ -113,12 +113,12 @@ $(document).ready(function(){initNavTree('tmock_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="node_8hpp.html">core/ast/node.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="dum_scope_8hpp.html">core/ast/dumScope.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>by {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classby_1_1tmock.html">   18</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1tmock.html">tmock</a>: <span class="keyword">public</span> T {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        BY(ME(<a class="code hl_class" href="classby_1_1tmock.html">tmock</a>, T))</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;core/internal/coreInternal.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>by {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classby_1_1tmock.html">   19</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1tmock.html">tmock</a>: <span class="keyword">public</span> T {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        BY(ME(<a class="code hl_class" href="classby_1_1tmock.html">tmock</a>, T))</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classby_1_1tmock.html">tmock</a>(): super() {}</div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('tmock_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">void</span> _setSrc(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src.html">src</a>&amp; s)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span>(!_org) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            _org-&gt;_setSrc(s);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            coreInternal::setSrc(*_org, s);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">private</span>:</div>
@@ -192,10 +192,9 @@ $(document).ready(function(){initNavTree('tmock_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments.</div><div class="ttdef"><b>Definition:</b> args.hpp:22</div></div>
 <div class="ttc" id="aclassby_1_1clonable_html"><div class="ttname"><a href="classby_1_1clonable.html">by::clonable</a></div><div class="ttdoc">Interface for objects that can be cloned.</div><div class="ttdef"><b>Definition:</b> clonable.hpp:13</div></div>
-<div class="ttc" id="aclassby_1_1expr_maker_html"><div class="ttname"><a href="classby_1_1expr_maker.html">by::exprMaker</a></div><div class="ttdoc">Factory for creating expressions with source location information.</div><div class="ttdef"><b>Definition:</b> exprMaker.hpp:18</div></div>
 <div class="ttc" id="aclassby_1_1ntype_html"><div class="ttname"><a href="classby_1_1ntype.html">by::ntype</a></div><div class="ttdoc">represents native c++ type system for byeol language</div><div class="ttdef"><b>Definition:</b> ntype.hpp:33</div></div>
 <div class="ttc" id="aclassby_1_1src_html"><div class="ttname"><a href="classby_1_1src.html">by::src</a></div><div class="ttdoc">Source location information.</div><div class="ttdef"><b>Definition:</b> src.hpp:15</div></div>
-<div class="ttc" id="aclassby_1_1tmock_html"><div class="ttname"><a href="classby_1_1tmock.html">by::tmock</a></div><div class="ttdoc">Proxy template for type parameter T.</div><div class="ttdef"><b>Definition:</b> tmock.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1tmock_html"><div class="ttname"><a href="classby_1_1tmock.html">by::tmock</a></div><div class="ttdoc">Proxy template for type parameter T.</div><div class="ttdef"><b>Definition:</b> tmock.hpp:19</div></div>
 <div class="ttc" id="aclassby_1_1tnchain_html"><div class="ttname"><a href="classby_1_1tnchain.html">by::tnchain&lt; std::string, node, tnmap&lt; std::string, node, immutableTactic &gt; &gt;</a></div></div>
 <div class="ttc" id="aclassby_1_1tstr_html"><div class="ttname"><a href="classby_1_1tstr.html">by::tstr&lt; node &gt;</a></div></div>
 <div class="ttc" id="aclassby_1_1ttype_html"><div class="ttname"><a href="classby_1_1ttype.html">by::ttype</a></div><div class="ttdoc">Template type wrapper providing entry point for meta information.</div><div class="ttdef"><b>Definition:</b> ttype.hpp:37</div></div>

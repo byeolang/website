@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scope_0',['scope',['../group__core.html#gaec057623c97cf8804f9f793f36f492df',1,'by']]]
+  ['orgcache_0',['orgCache',['../group__core.html#gae7bef416778c285966d6b55c2184d722',1,'by']]]
 ];

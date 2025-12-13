@@ -62,6 +62,7 @@ var group__memlite =
     [ "by::life", "classby_1_1life.html", [
       [ "bind", "classby_1_1life.html#a46b382f50b4e59dd6f4d692e5bfa0529", null ],
       [ "getStrongCnt", "classby_1_1life.html#a66ba365b6d156e251dfa34d98386964d", null ],
+      [ "onStrong", "classby_1_1life.html#aa3c93c105c20c6601c5a2e71836922de", null ],
       [ "rel", "classby_1_1life.html#a5043e2e9c0a659a1ad2db1ece7e6da2a", null ]
     ] ],
     [ "by::watcher", "classby_1_1watcher.html", [

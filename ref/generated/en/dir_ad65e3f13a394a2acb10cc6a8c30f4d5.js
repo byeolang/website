@@ -3,7 +3,7 @@ var dir_ad65e3f13a394a2acb10cc6a8c30f4d5 =
     [ "nseq.hpp", "nseq_8hpp.html", null ],
     [ "smultimap.hpp", "smultimap_8hpp.html", [
       [ "by::smultimap< K, V >", "classby_1_1smultimap.html", "classby_1_1smultimap" ],
-      [ "by::smultimap< K, V >::wrap", "classby_1_1smultimap_1_1wrap.html", null ],
+      [ "by::smultimap< K, V >::wrap", "structby_1_1smultimap_1_1wrap.html", null ],
       [ "by::smultimap< K, V >::iterator", "classby_1_1smultimap_1_1iterator.html", null ]
     ] ],
     [ "tnarr.hpp", "tnarr_8hpp.html", "tnarr_8hpp" ],
