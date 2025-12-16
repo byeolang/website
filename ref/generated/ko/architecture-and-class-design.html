@@ -228,6 +228,52 @@ tres 클래스</h3>
 <div class="line">} else {</div>
 <div class="line">    std::string error = result.getErr(); // 에러 메시지 확인</div>
 <div class="line">}</div>
+</div><!-- fragment --><p ><b>tmay와 tres 실전 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// tres: 에러 원인을 알아야 하는 경우</div>
+<div class="line">enum class ErrorCode { NONE, ZERO_DIV, OVERFLOW };</div>
+<div class="line"> </div>
+<div class="line">tres&lt;int, ErrorCode&gt; betterDivide(int a, int b) {</div>
+<div class="line">    if(b == 0)</div>
+<div class="line">        return tres&lt;int, ErrorCode&gt;(ErrorCode::ZERO_DIV);</div>
+<div class="line"> </div>
+<div class="line">    if(a == INT_MAX &amp;&amp; b == -1)</div>
+<div class="line">        return tres&lt;int, ErrorCode&gt;(ErrorCode::OVERFLOW);</div>
+<div class="line"> </div>
+<div class="line">    return tres&lt;int, ErrorCode&gt;(a / b);  // 성공</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 사용</div>
+<div class="line">auto result2 = betterDivide(10, 0);</div>
+<div class="line">if(result2.has()) {</div>
+<div class="line">    int value = result2.get();</div>
+<div class="line">} else {</div>
+<div class="line">    ErrorCode err = result2.getErr();</div>
+<div class="line">    switch(err) {</div>
+<div class="line">        case ErrorCode::ZERO_DIV:</div>
+<div class="line">            BY_E(&quot;division by zero&quot;);</div>
+<div class="line">            break;</div>
+<div class="line">        case ErrorCode::OVERFLOW:</div>
+<div class="line">            BY_E(&quot;integer overflow&quot;);</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// WHEN 매크로와 함께 사용</div>
+<div class="line">tmay&lt;File*&gt; openFile(const std::string&amp; path) {</div>
+<div class="line">    File* f = File::open(path);</div>
+<div class="line">    if(!f)</div>
+<div class="line">        return tmay&lt;File*&gt;();  // 실패</div>
+<div class="line">    return tmay&lt;File*&gt;(*f);    // 성공</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void processFile(const std::string&amp; path) {</div>
+<div class="line">    auto result = openFile(path);</div>
+<div class="line">    WHEN(!result.has()).err(&quot;failed to open: %s&quot;, path.c_str()).ret();</div>
+<div class="line"> </div>
+<div class="line">    File* file = result.get();</div>
+<div class="line">    // file 사용...</div>
+<div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
 플랫폼 추상화</h2>
 <h3><a class="anchor" id="autotoc_md9"></a>
@@ -384,7 +430,25 @@ stream 클래스</h3>
 <p >stream은 또한 enable 여부를 관리합니다. setEnable(false)를 통해 특정 stream을 disable 시키면 해당 stream은 동작하지 않습니다.</p>
 <p >또하나 중요한 점은 <a class="el" href="classby_1_1logger.html">logger</a> 클래스 자체도 <a class="el" href="classby_1_1stream.html">stream</a> 에서 상속하기 때문에 <a class="el" href="classby_1_1stream.html">stream</a> 과 동일한 API를 제공한다는 점입니다. <a class="el" href="classby_1_1logger.html">logger</a> 는 각 API에 대해 소유한 모든 <a class="el" href="classby_1_1stream.html">stream</a> 들에 대해 redirection 하는 구성으로 구현되어 있습니다. 예를들어 <code>logger::get().setEnable(false)</code>를 하게 되면, 모든 <a class="el" href="classby_1_1stream.html">stream</a> 이 disable 됩니다.</p>
 <p ><a class="el" href="classby_1_1stream.html">stream</a> 은 logBypass(const nchar*) 라는 함수를 제공하는데, 이것은 어떠한 가공도 없이 문자열을 그대로 지정한 <a class="el" href="classby_1_1stream.html">stream</a> 으로 로그 메시지를 보냅니다.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<p ><b>stream 제어 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">logger&amp; log = logger::get();</div>
+<div class="line"> </div>
+<div class="line">// 특정 stream 가져오기</div>
+<div class="line">stream* console = log.getStream(&quot;consoleStream&quot;);</div>
+<div class="line">stream* fileLog = log.getStream(&quot;fileLogStream&quot;);</div>
+<div class="line"> </div>
+<div class="line">// stream별로 enable/disable 제어</div>
+<div class="line">console-&gt;setEnable(true);   // console 출력 활성화</div>
+<div class="line">fileLog-&gt;setEnable(false);  // 파일 로깅 비활성화</div>
+<div class="line"> </div>
+<div class="line">// 로깅 - console에만 출력됨</div>
+<div class="line">BY_I(&quot;This goes to console only&quot;);</div>
+<div class="line"> </div>
+<div class="line">// 모든 stream disable</div>
+<div class="line">log.setEnable(false);</div>
+<div class="line">BY_I(&quot;This won&#39;t be logged anywhere&quot;);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
 로깅 매크로 시스템</h2>
 <p >앞서 언급한 <code>logByPass()</code>를 통해서 직접 로깅을 해도 되지만, 파일명이나 함수명, 라인번호 등 좀 더 고급스러운 로깅을 하고 싶다면 로깅 매크로를 사용하면 됩니다.</p>
 <p >다음과 같이 사용합니다.</p>
@@ -517,7 +581,32 @@ meta 모듈 - 런타임 타입 시스템</h1>
 ttype&lt;T&gt; 클래스</h3>
 <p ><a class="el" href="classby_1_1ttype.html">ttype</a> 클래스는 사용자가 메타 정보를 다루고자할때 진입점이 되는 클래스입니다. <a class="el" href="classby_1_1ttype.html">ttype</a> 를 사용할때는 매번 객체를 생성해서 사용해야 합니다. 전체적으로 monostate 패턴으로 설계 되어있어서 매번 객체를 만들어 사용하더라도 값은 공유하기 때문에 추가비용은 들지 않습니다.</p>
 <p ><a class="el" href="group__meta.html">Meta</a> 모듈의 전체적인 설계에 대해 파악하고자 한다면 핵심이 되는 <a class="el" href="classby_1_1type.html">type</a> 을 먼저 살펴보세요.</p>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<p ><b>ttype 기본 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class myClass {};</div>
+<div class="line"> </div>
+<div class="line">class myDerivedClass : public myClass {</div>
+<div class="line">    typedef myClass super;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 타입 정보 조회</div>
+<div class="line">const type&amp; typeInfo = ttype&lt;myClass&gt;();</div>
+<div class="line">std::cout &lt;&lt; typeInfo.getName();  // &quot;myClass&quot; 출력</div>
+<div class="line"> </div>
+<div class="line">// 템플릿 여부 확인</div>
+<div class="line">bool isTemplate = ttype&lt;myClass&gt;().isTemplate();  // false</div>
+<div class="line"> </div>
+<div class="line">// 추상 클래스 여부 확인</div>
+<div class="line">bool isAbstract = ttype&lt;myClass&gt;().isAbstract();  // false</div>
+<div class="line"> </div>
+<div class="line">// 부모 타입 확인</div>
+<div class="line">const type&amp; superType = ttype&lt;myDerivedClass&gt;().getSuper();</div>
+<div class="line">std::cout &lt;&lt; superType.getName();  // &quot;myClass&quot; 출력</div>
+<div class="line"> </div>
+<div class="line">// 인스턴스 생성 (기본 생성자 필요)</div>
+<div class="line">myClass* instance = ttype&lt;myClass&gt;().makeAs&lt;myClass&gt;();</div>
+<div class="line">delete instance;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
 type 클래스의 기능</h2>
 <p ><a class="el" href="classby_1_1type.html">type</a> 클래스는 <a class="el" href="group__meta.html">Meta</a> 모듈의 핵심이 되는 클래스입니다. <a class="el" href="classby_1_1type.html">type</a> 에 대한 다음의 기본적인 API를 제공합니다.</p>
 <h3><a class="anchor" id="autotoc_md41"></a>
@@ -547,7 +636,38 @@ type 클래스의 기능</h2>
 <p >일반적으로 dynamic_cast는 vtable을 순회해서 체크합니다. 반면 meta는 메타 정보 생성시 super 클래스 계층도를 통해서 자신이 몇 tier의 자손인지를 바로 알 수 있습니다. 이 tier값과 char*의 주소값을 비교해서 타입정보를 비교합니다.</p>
 <p ><b>isSub(const rhs&amp; type)</b></p>
 <p >isSuper와 반대로 동작합니다.</p>
-<h3><a class="anchor" id="autotoc_md43"></a>
+<p ><b>타입 계층 검사 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class Animal {};</div>
+<div class="line"> </div>
+<div class="line">class Dog : public Animal {</div>
+<div class="line">    typedef Animal super;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">class Puppy : public Dog {</div>
+<div class="line">    typedef Dog super;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 상속 관계 확인</div>
+<div class="line">const type&amp; animalType = ttype&lt;Animal&gt;();</div>
+<div class="line">const type&amp; dogType = ttype&lt;Dog&gt;();</div>
+<div class="line">const type&amp; puppyType = ttype&lt;Puppy&gt;();</div>
+<div class="line"> </div>
+<div class="line">// Animal이 Dog의 부모인가?</div>
+<div class="line">bool isParent = animalType.isSuper(dogType);  // true</div>
+<div class="line"> </div>
+<div class="line">// Dog가 Animal의 자식인가?</div>
+<div class="line">bool isChild = dogType.isSub(animalType);  // true</div>
+<div class="line"> </div>
+<div class="line">// Puppy는 Animal의 자식인가? (간접 상속도 체크)</div>
+<div class="line">bool isDescendant = puppyType.isSub(animalType);  // true</div>
+<div class="line"> </div>
+<div class="line">// 형제 관계는 false</div>
+<div class="line">class Cat : public Animal {</div>
+<div class="line">    typedef Animal super;</div>
+<div class="line">};</div>
+<div class="line">bool areSiblings = ttype&lt;Dog&gt;().isSub(ttype&lt;Cat&gt;());  // false</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md43"></a>
 인스턴스 생성</h3>
 <p ><b>make()</b></p>
 <p >이 type의 기본생성자로 인스턴스를 생성합니다. 만약, 기본생성자가 없다면 nullptr가 반환되니 주의하세요.</p>
@@ -608,6 +728,32 @@ adam - 최상위 타입</h2>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">for(const auto&amp; t : ttype&lt;adam&gt;().getSubs())</div>
 <div class="line">    cout &lt;&lt; t.getName() &lt;&lt; &quot;\n&quot;;</div>
+</div><!-- fragment --><p ><b>adam을 활용한 타입 순회 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 부모가 없는 여러 클래스들 정의</div>
+<div class="line">class Shape {</div>
+<div class="line">    // 부모가 없으므로 자동으로 adam이 부모가 됨</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">class Vehicle {</div>
+<div class="line">    // 부모가 없으므로 자동으로 adam이 부모가 됨</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">class Animal {</div>
+<div class="line">    typedef adam super;  // 명시적으로 adam을 부모로 지정</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 모든 최상위 타입들을 순회</div>
+<div class="line">const types&amp; allTopLevelTypes = ttype&lt;adam&gt;().getSubs();</div>
+<div class="line"> </div>
+<div class="line">for(const type* t : allTopLevelTypes) {</div>
+<div class="line">    std::cout &lt;&lt; &quot;Top-level type: &quot; &lt;&lt; t-&gt;getName() &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="line">// 출력: Shape, Vehicle, Animal 등 모든 최상위 클래스들</div>
+<div class="line"> </div>
+<div class="line">// adam을 통해 특정 타입이 최상위 타입인지 확인</div>
+<div class="line">const type&amp; shapeType = ttype&lt;Shape&gt;();</div>
+<div class="line">bool isTopLevel = (shapeType.getSuper() == ttype&lt;adam&gt;());  // true</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
 메타 타입 확장하기</h2>
 <p ><a class="el" href="classby_1_1type.html">type</a> 은 기본적으로도 비교적 많은 타입 정보를 제공하지만, byeol 처럼 언어를 다루는 경우에는 parameter나 return type과 같이 추가적인 정보를 담고 싶은 경우가 있습니다.</p>
@@ -674,6 +820,43 @@ binder 클래스</h3>
 <div class="line">    return ptr; // tstr을 값으로 반환하므로 count는 유지된다.</div>
 <div class="line">                // 따라서 foo() 안에서 new 로 생성한 shell객체는 소멸되지 않는다.</div>
 <div class="line">}</div>
+</div><!-- fragment --><p ><b>tstr 기본 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class Person : public instance {</div>
+<div class="line">public:</div>
+<div class="line">    Person(int newAge) : age(newAge) {}</div>
+<div class="line">    int age;</div>
+<div class="line"> </div>
+<div class="line">    const type&amp; getType() const override { return ttype&lt;Person&gt;::get(); }</div>
+<div class="line">    clonable* clone() const override { return new Person(age); }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 1. 생성과 동시에 바인딩</div>
+<div class="line">tstr&lt;Person&gt; person1(new Person(25));</div>
+<div class="line">person1-&gt;age;  // 25</div>
+<div class="line"> </div>
+<div class="line">// 2. isBind()로 바인딩 상태 확인</div>
+<div class="line">tstr&lt;Person&gt; person2;  // 빈 바인더</div>
+<div class="line">person2.isBind();  // false</div>
+<div class="line"> </div>
+<div class="line">// 3. bind()로 나중에 바인딩</div>
+<div class="line">person2.bind(new Person(30));</div>
+<div class="line">person2.isBind();  // true</div>
+<div class="line"> </div>
+<div class="line">// 4. get()으로 원시 포인터 접근</div>
+<div class="line">Person* raw = person2.get();</div>
+<div class="line">raw-&gt;age;  // 30</div>
+<div class="line"> </div>
+<div class="line">// 5. rel()로 바인딩 해제</div>
+<div class="line">person2.rel();</div>
+<div class="line">person2.isBind();  // false</div>
+<div class="line">person2.get();     // nullptr</div>
+<div class="line"> </div>
+<div class="line">// 6. 스코프를 벗어나면 자동으로 소멸</div>
+<div class="line">{</div>
+<div class="line">    tstr&lt;Person&gt; person3(new Person(40));</div>
+<div class="line">    // person3-&gt;age 사용 가능</div>
+<div class="line">}  // 여기서 reference count가 0이 되어 Person 객체 자동 소멸</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md54"></a>
 std::shared_ptr 대비 장점</h2>
 <p >이쯤되면, 아마도 왜 shared_ptr를 사용하지 않고 굳이 tstr을 만들었는가에 대해 의문을 가질 것입니다. shared_ptr이 제공하지 못하는 몇가지 장점이 있기 때문입니다.</p>
@@ -699,7 +882,46 @@ ADT 제공</h3>
 <div class="line">    if(l) l-&gt;_onStrong(-1);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p ><a class="el" href="classby_1_1binder.html">binder</a> 는 abstract 하므로 객체 생성이 불가능합니다. <a class="el" href="classby_1_1tstr.html">tstr</a> 이나 <a class="el" href="classby_1_1tweak.html">tweak</a> 로 이미 생성된 바인더들을 범용적인 로직을 작성할때만 의의를 갖습니다.</p>
-<h3><a class="anchor" id="autotoc_md57"></a>
+<p ><b>tstr과 tweak 강한/약한 참조 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class Data : public instance {</div>
+<div class="line">public:</div>
+<div class="line">    int value;</div>
+<div class="line">    const type&amp; getType() const override { return ttype&lt;Data&gt;::get(); }</div>
+<div class="line">    clonable* clone() const override { return new Data(); }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 1. tstr은 강한 참조 (strong reference)</div>
+<div class="line">tstr&lt;Data&gt; strong(new Data());</div>
+<div class="line">strong-&gt;value = 100;</div>
+<div class="line"> </div>
+<div class="line">const life&amp; lifeTag = strong-&gt;getBindTag();</div>
+<div class="line">lifeTag.getStrongCnt();  // 1</div>
+<div class="line"> </div>
+<div class="line">// 2. tweak은 약한 참조 (weak reference)</div>
+<div class="line">tweak&lt;Data&gt; weak(*strong);</div>
+<div class="line">lifeTag.getStrongCnt();  // 여전히 1 (weak은 strong count를 증가시키지 않음)</div>
+<div class="line"> </div>
+<div class="line">// 3. weak은 strong이 유효한 동안만 접근 가능</div>
+<div class="line">weak-&gt;value;  // 100, strong이 살아있으므로 접근 가능</div>
+<div class="line"> </div>
+<div class="line">// 4. strong을 해제하면 weak도 무효화</div>
+<div class="line">strong.rel();</div>
+<div class="line">weak.isBind();  // false</div>
+<div class="line">weak.get();     // nullptr - 원본 객체가 소멸되었으므로 접근 불가</div>
+<div class="line"> </div>
+<div class="line">// 5. 여러 strong 참조는 count 증가</div>
+<div class="line">tstr&lt;Data&gt; strong1(new Data());</div>
+<div class="line">tstr&lt;Data&gt; strong2 = strong1;</div>
+<div class="line">tstr&lt;Data&gt; strong3 = strong1;</div>
+<div class="line">strong1-&gt;getBindTag().getStrongCnt();  // 3</div>
+<div class="line"> </div>
+<div class="line">strong2.rel();</div>
+<div class="line">strong1-&gt;getBindTag().getStrongCnt();  // 2</div>
+<div class="line"> </div>
+<div class="line">strong3.rel();</div>
+<div class="line">strong1-&gt;getBindTag().getStrongCnt();  // 1</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md57"></a>
 동적 타입 체킹</h3>
 <p ><a class="el" href="classby_1_1binder.html">binder</a> 는 ADT이며 클래스 템플릿 조차 아닙니다. 따라서 binder::bind() 함수는 parameter가 <a class="el" href="classby_1_1instance.html">instance</a> 타입으로 되어있습니다. 이 말은 tstr라고 할지라도 bind(new B()); 컴파일 에러가 발생하지 않는다는 걸 의미합니다.</p>
 <p >bind() 안쪽에서 <a class="el" href="group__meta.html">Meta</a> 모듈을 사용하여 동적으로 타입을 검사해서 올바른 경우만 인스턴스가 바인딩 됩니다. 타입이 일치하지 않을 경우, bind()는 <code>false</code>를 반환하고 바인딩을 수행하지 않습니다. 따라서 타입 안정성이 필요한 경우 bind()의 반환값을 확인해야 합니다.</p>
@@ -728,7 +950,43 @@ ADT 제공</h3>
 chunk - 최소 할당 단위</h3>
 <p ><a class="el" href="classby_1_1chunk.html">chunk</a> 클래스는 <a class="el" href="group__memlite.html">Memlite</a> 에서 메모리를 실제로 할당 가능한 최소 단위 클래스입니다. 모든 메모리 관리는 <a class="el" href="classby_1_1chunk.html">chunk</a> 들을 엮어서 수행합니다.</p>
 <p ><a class="el" href="classby_1_1chunk.html">chunk</a> 는 메모리가 flexible하게 늘어나도록 하는 _resize() 함수가 있지만, <a class="el" href="group__memlite.html">Memlite</a> 의 컨셉상 이를 public으로 공개하지 않습니다. 결과적으로 <a class="el" href="classby_1_1chunk.html">chunk</a> 의 메모리는 객체 생성시 고정되며, 추가 메모리가 필요하다면 <a class="el" href="classby_1_1chunk.html">chunk</a> 객체를 더 생성해서 운영해야 합니다.</p>
-<p ><b>Block size</b></p>
+<p ><b>chunk 기본 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// int를 100개 담을 수 있는 chunk 생성</div>
+<div class="line">chunk myChunk(sizeof(int), 100);</div>
+<div class="line"> </div>
+<div class="line">// 상태 확인</div>
+<div class="line">myChunk.len();        // 0 (아직 할당 안함)</div>
+<div class="line">myChunk.size();       // 100 (최대 용량)</div>
+<div class="line">myChunk.getBlkSize(); // sizeof(int)와 동일하거나 큰 값 (정렬됨)</div>
+<div class="line"> </div>
+<div class="line">// 메모리 할당</div>
+<div class="line">int* ptr1 = (int*) myChunk.new1();</div>
+<div class="line">*ptr1 = 42;</div>
+<div class="line"> </div>
+<div class="line">int* ptr2 = (int*) myChunk.new1();</div>
+<div class="line">*ptr2 = 57;</div>
+<div class="line"> </div>
+<div class="line">myChunk.len();  // 2</div>
+<div class="line"> </div>
+<div class="line">// 인덱스로 접근</div>
+<div class="line">int* elem0 = (int*) myChunk[0];</div>
+<div class="line">*elem0;  // 42</div>
+<div class="line"> </div>
+<div class="line">int* elem1 = (int*) myChunk[1];</div>
+<div class="line">*elem1;  // 57</div>
+<div class="line"> </div>
+<div class="line">// 메모리 해제 (순서 무관)</div>
+<div class="line">myChunk.del(ptr2, 0);</div>
+<div class="line">myChunk.len();  // 1</div>
+<div class="line"> </div>
+<div class="line">myChunk.del(ptr1, 0);</div>
+<div class="line">myChunk.len();  // 0</div>
+<div class="line"> </div>
+<div class="line">// chunk 전체 해제</div>
+<div class="line">myChunk.rel();</div>
+<div class="line">myChunk.size();  // 0</div>
+</div><!-- fragment --><p ><b>Block size</b></p>
 <p >chunk 는 생성시 block size와 size 2개를 입력받습니다. blockSize는 메모리에 인스턴스 하나가 차지하게 될 최소 단위 크기입니다. 반면 size는 그러한 인스턴스가 몇개 까지 들어갈 지를 정합니다.</p>
 <p >예를들어 만약 int64만 100개 담는 chunk를 만든다고 한다면, 다음과 같이 됩니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -903,7 +1161,28 @@ id 클래스</h3>
 <p ><a class="el" href="classby_1_1pool.html">pool</a> 과 <a class="el" href="classby_1_1chunk.html">chunk</a> 를 먼저 봤다면 알겠지만, 자체 메모리 풀을 사용하기 때문에 메모리가 해제 될때는 소멸자만 호출할 뿐, 모든 메모리를 초기화 하지 않습니다.</p>
 <p >그러니 이전에 할당해서 사용후 소멸된 데이터가 그대로 남아있으며, 심지어 이 데이터에 접근도 가능합니다. (이미 사용한 데이터에 접근시 exception이나 UB가 된다면 weak pointer나 strong pointer를 구현한 <a class="el" href="classby_1_1binder.html">binder</a> 를 구현할 수 없었을 것입니다)</p>
 <p ><a class="el" href="classby_1_1binder.html">binder</a> 에서는 이렇게 해서 가져온 데이터가 정말로 유효한 데이터인지 구분하기 위해서 serial을 추가로 비교합니다.</p>
-<p ><b>tagN은 life 객체에 접근할때 사용한다</b></p>
+<p ><b>id 구성 요소 확인 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class MyData : public instance {</div>
+<div class="line">public:</div>
+<div class="line">    int value;</div>
+<div class="line">    const type&amp; getType() const override { return ttype&lt;MyData&gt;::get(); }</div>
+<div class="line">    clonable* clone() const override { return new MyData(); }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">MyData* obj = new MyData();</div>
+<div class="line"> </div>
+<div class="line">// id 구조 확인</div>
+<div class="line">id objId = obj-&gt;getId();</div>
+<div class="line">objId.tagN;    // watcher의 life 배열 인덱스</div>
+<div class="line">objId.chkN;    // chunks의 chunk 인덱스</div>
+<div class="line">objId.serial;  // 생성 카운터 (유효성 검증용)</div>
+<div class="line">objId.isHeap();  // true - heap에 할당된 객체</div>
+<div class="line"> </div>
+<div class="line">// life 정보 접근</div>
+<div class="line">const life&amp; lifeTag = obj-&gt;getBindTag();</div>
+<div class="line">lifeTag.getId();  // objId와 동일</div>
+</div><!-- fragment --><p ><b>tagN은 life 객체에 접근할때 사용한다</b></p>
 <p ><a class="el" href="classby_1_1watcher.html">watcher</a> 는 자신의 배열에서 tagN 번째 <a class="el" href="classby_1_1life.html">life</a> 객체를 가져올때 이 값을 사용합니다.</p>
 <p ><b>chkN은 chunk 객체를 가져올 때 사용한다</b></p>
 <p ><a class="el" href="classby_1_1pool.html">pool</a> 은 먼저 id와 매핑된 <a class="el" href="classby_1_1instance.html">instance</a> 의 size를 계산해 <a class="el" href="classby_1_1chunks.html">chunks</a> 를 가져옵니다. 그리고 <a class="el" href="classby_1_1chunks.html">chunks</a> 는 자신의 chkN 번째 원소인 메모리블록을 반환합니다. 외부에서는 전달 받은 메모리 주소와 serial 값을 비교해서 같은 인스턴스인지를 검증합니다.</p>
@@ -916,7 +1195,34 @@ watcher 클래스</h3>
 <p ><a class="el" href="classby_1_1watcher.html">watcher</a> 클래스는 메모리 관리의 한 축을 담당하는 클래스로, 생성된 객체의 라이프사이클을 관리합니다. <a class="el" href="classby_1_1instance.html">instance</a> 가 생성될때마다 <a class="el" href="classby_1_1watcher.html">watcher</a> 는 <a class="el" href="classby_1_1life.html">life</a> 객체를 추가로 할당해 reference counting으로 객체의 소멸시점을 판별합니다.</p>
 <p ><b>reference counting</b></p>
 <p ><a class="el" href="classby_1_1binder.html">binder</a> 에 의해서 <a class="el" href="classby_1_1instance.html">instance</a> 가 바인딩 될때마다 <a class="el" href="classby_1_1life.html">life</a> 가 count 하는 strong 값을 1 증가시킵니다. <a class="el" href="classby_1_1binder.html">binder</a> 가 <a class="el" href="classby_1_1instance.html">instance</a> 를 rel() 할때 count를 1 감소하며, 0이 되는 순간 delete로 메모리에서 해제합니다. <a class="el" href="classby_1_1instance.html">instance</a> 는 <code>operator delete()</code>를 통해 <a class="el" href="classby_1_1instancer.html">instancer</a> 에게 메모리 해제 작업을 실행하도록 합니다.</p>
-<h2><a class="anchor" id="autotoc_md71"></a>
+<p ><b>watcher와 life 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class MyData : public instance {</div>
+<div class="line">public:</div>
+<div class="line">    int age;</div>
+<div class="line">    const type&amp; getType() const override { return ttype&lt;MyData&gt;::get(); }</div>
+<div class="line">    clonable* clone() const override { return new MyData(); }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// heap에 객체 생성</div>
+<div class="line">MyData* obj = new MyData();</div>
+<div class="line"> </div>
+<div class="line">// life 정보 확인</div>
+<div class="line">const life&amp; lifeTag = obj-&gt;getBindTag();</div>
+<div class="line">lifeTag.isBind();  // true</div>
+<div class="line">lifeTag.getId().serial;  // &gt; 0</div>
+<div class="line">lifeTag.getId().isHeap();  // true</div>
+<div class="line"> </div>
+<div class="line">// chunk 정보 접근</div>
+<div class="line">const chunk&amp; chk = lifeTag.getChunk();</div>
+<div class="line">chk.has(*obj);  // true - 이 chunk에 obj가 있음</div>
+<div class="line">chk.len();  // &gt; 0 - 할당된 블록 개수</div>
+<div class="line">chk.size();  // &gt; 0 - 총 용량</div>
+<div class="line"> </div>
+<div class="line">// 바인딩 가능 타입 확인</div>
+<div class="line">lifeTag.canBind(ttype&lt;instance&gt;());  // true</div>
+<div class="line">lifeTag.getBindable();  // instance의 type 반환</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md71"></a>
 메모리 관리 인터페이스</h2>
 <h3><a class="anchor" id="autotoc_md72"></a>
 memoryHaver 클래스</h3>
@@ -1279,7 +1585,26 @@ node 클래스 - AST의 기반</h3>
 <p >byeol은 함수 오버로딩을 지원하므로 어떤 객체에는 같은 이름을 가졌으되, 파라메터가 다른 함수가 여럿 있을 수 있습니다. 어떤 함수는 인자에 대해서 정확하게 일치할 것이고, 어떤 함수는 약간의 타입변환이 필요할 지도 모릅니다.</p>
 <p ><a class="el" href="classby_1_1node.html">node</a> 는 자식 <a class="el" href="classby_1_1node.html">node</a> 들에 대해서 주어진 args에 대해 얼마나 잘 일치하는 가를 <code>prioritize()</code> 함수를 통해 판단결과를 받습니다. 이때 각 <a class="el" href="classby_1_1node.html">node</a> 의 파생클래스는 args가 정확하게 일치하면 EXACT_MATCH로 반환하며, 일치하지 않으면 NO_MATCH로 반환됩니다.</p>
 <p >정확한 판단기준이나 알고리즘은 <a class="el" href="structby_1_1tprior.html">tprior</a> 과 priorType 을 참고하세요.</p>
-<h3><a class="anchor" id="autotoc_md90"></a>
+<p ><b>prioritize() 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 함수 오버로딩 시나리오</div>
+<div class="line">// def print(val int) void</div>
+<div class="line">// def print(val str) void</div>
+<div class="line"> </div>
+<div class="line">obj myObj;</div>
+<div class="line">myObj.subs().add(&quot;print&quot;, new funcInt());   // print(int) 함수</div>
+<div class="line">myObj.subs().add(&quot;print&quot;, new funcStr());   // print(str) 함수</div>
+<div class="line"> </div>
+<div class="line">// int 인자로 호출</div>
+<div class="line">args intArgs;</div>
+<div class="line">intArgs.add(new nInt(42));</div>
+<div class="line"> </div>
+<div class="line">// 각 함수의 우선순위 계산</div>
+<div class="line">priorType prior1 = funcInt.prioritize(intArgs);   // EXACT_MATCH</div>
+<div class="line">priorType prior2 = funcStr.prioritize(intArgs);   // IMPLICIT_MATCH (타입 변환 필요)</div>
+<div class="line"> </div>
+<div class="line">// EXACT_MATCH가 더 높은 우선순위를 가지므로 funcInt가 선택됨</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md90"></a>
 src, srcFile 클래스 - 소스 위치 정보</h3>
 <p ><a class="el" href="classby_1_1src_file.html">srcFile</a> 은 AST의 출처가 되는 소스코드 파일에 대한 정보를 담습니다. <a class="el" href="classby_1_1src.html">src</a> 는 생성된 AST <a class="el" href="classby_1_1node.html">node</a> 가 어떠한 <a class="el" href="classby_1_1src_file.html">srcFile</a> 안의 어느 위치에서 생성된 것인지를 담고있습니다.</p>
 <p >이 정보는 byeol 언어의 Context 기반 REPL의 핵심 기능에 사용됩니다. <a class="el" href="classby_1_1src.html">src</a> 정보는 managed 환경에 국한하며, native에서 생성된 객체는 <a class="el" href="classby_1_1src.html">src</a> 에 더미 값이 들어갑니다.</p>
@@ -1289,10 +1614,49 @@ args 클래스 - 함수 인자</h3>
 <p ><b>me 객체</b></p>
 <p >args는 <code>me</code> 객체가 포함되어 전달되는 게 특징입니다. 함수는 현재 런타임의 어떤 객체로부터 <code>eval()</code> 요청이 왔는지 기본적으로 알 수 없습니다. 별도로 <code>setMe()</code>를 통해 args를 사용하는 함수나 property는 어떤 객체로부터 이 args가 전달되었는지를 알 수 있습니다.</p>
 <p >참고로, <a class="el" href="classby_1_1base_obj.html">baseObj</a> 는 <code>eval(name, args)</code>를 호출받으면 <code>setMe(this)</code>를 호출해 자신을 args에 넣습니다.</p>
-<h3><a class="anchor" id="autotoc_md92"></a>
+<p ><b>args 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 함수 호출을 위한 args 생성</div>
+<div class="line">args myArgs;</div>
+<div class="line"> </div>
+<div class="line">// 인자 추가 (narr 인터페이스 사용)</div>
+<div class="line">myArgs.add(new nInt(10));</div>
+<div class="line">myArgs.add(new nStr(&quot;hello&quot;));</div>
+<div class="line">myArgs.len();  // 2</div>
+<div class="line"> </div>
+<div class="line">// me 객체 설정</div>
+<div class="line">obj* caller = new obj();</div>
+<div class="line">myArgs.setMe(*caller);</div>
+<div class="line"> </div>
+<div class="line">// 함수 호출 시 args 전달</div>
+<div class="line">func myFunc(*new modifier(), typeMaker::make&lt;func&gt;(params(), new nInt()));</div>
+<div class="line">str result = myFunc.eval(myArgs);</div>
+<div class="line"> </div>
+<div class="line">// args는 narr을 상속하므로 배열 접근 가능</div>
+<div class="line">node&amp; firstArg = myArgs[0];  // nInt(10)</div>
+<div class="line">node&amp; secondArg = myArgs[1];  // nStr(&quot;hello&quot;)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md92"></a>
 param 클래스 - 파라메터 정의</h3>
 <p >param은 말 그대로 파라메터를 표현합니다. 이름과 타입을 표현하기 위한 origin 객체에 대한 참조가 있습니다.</p>
-<h2><a class="anchor" id="autotoc_md93"></a>
+<p ><b>params 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 함수 타입 정의에 params 사용</div>
+<div class="line">// int add(x int, y int) int</div>
+<div class="line"> </div>
+<div class="line">// 파라메터 정의</div>
+<div class="line">params funcParams;</div>
+<div class="line">funcParams.add(new param(&quot;x&quot;, new nInt()));  // x: int</div>
+<div class="line">funcParams.add(new param(&quot;y&quot;, new nInt()));  // y: int</div>
+<div class="line"> </div>
+<div class="line">// 함수 타입 생성</div>
+<div class="line">const type&amp; funcType = typeMaker::make&lt;func&gt;(funcParams, new nInt());</div>
+<div class="line"> </div>
+<div class="line">// 파라메터 정보 확인</div>
+<div class="line">funcParams.len();  // 2</div>
+<div class="line">param&amp; firstParam = funcParams[0];</div>
+<div class="line">firstParam.getName();  // &quot;x&quot;</div>
+<div class="line">firstParam.getOrigin().getType();  // ttype&lt;nInt&gt;()</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
 객체 모델</h2>
 <p >Byeol의 객체 모델은 native(C++)와 managed(Byeol 언어) 환경을 모두 지원하도록 설계되었습니다. 두 환경의 객체가 동일한 인터페이스로 사용될 수 있으며, 이를 통해 seamless한 상호작용이 가능합니다.</p>
 <h3><a class="anchor" id="autotoc_md94"></a>
@@ -1520,7 +1884,27 @@ modifier 클래스 - 접근 제한자</h3>
 defaultCopyCtor 클래스 - 기본 복사 생성자</h3>
 <p >managed 환경에서 byeol 타입에 대해 사용자가 복사 생성자를 정의하지 않은 경우 parser에 의해 추가되는 기본 복사생성자입니다. 복사 생성자 호출 시 <a class="el" href="classby_1_1args.html">args</a> 의 첫 번째 인자로 복사 대상 객체가 전달되며, 이 객체의 property들을 얇은 복사를 수행합니다.</p>
 <p >참고로 scalar는 immutable 객체이므로 얇은 복사를 시도해도 깊은 복사처럼 동작합니다.</p>
-<h3><a class="anchor" id="autotoc_md100"></a>
+<p ><b>defaultCopyCtor 동작 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// origin 객체 생성</div>
+<div class="line">origin myObj(typeMaker::make&lt;obj&gt;(&quot;myObj&quot;));</div>
+<div class="line">myObj.setCallComplete(new evalExpr(&amp;myObj, args()));</div>
+<div class="line">myObj.getOwns().add(&quot;age&quot;, new nInt(23));</div>
+<div class="line"> </div>
+<div class="line">// 기본 복사 생성자 생성</div>
+<div class="line">defaultCopyCtor copyCtor(myObj);</div>
+<div class="line"> </div>
+<div class="line">// 복사할 새 객체</div>
+<div class="line">obj cloned;</div>
+<div class="line"> </div>
+<div class="line">// 복사 생성자 호출 - args에 복사 대상을 넣음</div>
+<div class="line">args a{&amp;cloned, narr{myObj}};</div>
+<div class="line">str result = copyCtor.eval(a);</div>
+<div class="line"> </div>
+<div class="line">// 복사 완료</div>
+<div class="line">cloned.getOwns().len();  // 1 - property가 복사됨</div>
+<div class="line">int value = cloned.getOwns()[&quot;age&quot;].cast&lt;int&gt;();  // 23 - 얇은 복사</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md100"></a>
 immutableTactic 클래스 - Immutable 타입 처리</h3>
 <p >str, int 등 scalar타입은 모두 immutable 타입입니다. 이는 byeol의 호출 전략이 <code>by object</code>를 따르기 때문입니다.</p>
 <p >단 이를 책임져야 하는 부분은 <a class="el" href="classby_1_1node.html">node</a> 나 <a class="el" href="classby_1_1obj.html">obj</a> 와 같이 컨테이너를 소유한 객체가 아니라 <a class="el" href="classby_1_1tnmap.html">tnmap</a> 과 같은 컨테이너 클래스 자체가 되어야 합니다.</p>
@@ -1576,7 +1960,29 @@ blockExpr 클래스 - 블록 표현식</h3>
 defArrayExpr 클래스 - 배열 리터럴</h3>
 <p >배열 리터럴 표현식을 담당합니다. 어떠한 타입의 배열인지는 배열의 원소로 적은 리터럴 상수들의 타입들을 type promotion을 통해 추론됩니다. Type promotion은 여러 타입 중 가장 넓은 범위의 타입으로 승격하는 과정입니다 (예: <code>[1, 2.5, 3]</code>이라는 배열이 있다면 int와 flt 타입이 섞여있으므로 flt 배열로 승격됩니다).</p>
 <p ><a class="el" href="classby_1_1tnarr.html">tnarr</a> 은 native 환경에서 배열을 담당하는 클래스입니다. <a class="el" href="classby_1_1arr.html">arr</a> 은 <a class="el" href="classby_1_1tnarr.html">tnarr</a> 을 managed 환경에 맞게 확장한 것입니다. 이렇게 함으로써 C++에서도 byeol에서도 서로 유사한 API를 사용 가능하게 됩니다.</p>
-<h3><a class="anchor" id="autotoc_md108"></a>
+<p ><b>tnarr 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// native 배열 생성</div>
+<div class="line">tnarr&lt;node&gt; arr1;</div>
+<div class="line">arr1.add(new nInt(10));</div>
+<div class="line">arr1.add(new nInt(20));</div>
+<div class="line">arr1.add(new nInt(30));</div>
+<div class="line"> </div>
+<div class="line">// 배열 접근</div>
+<div class="line">arr1.len();  // 3</div>
+<div class="line">node&amp; first = arr1[0];  // nInt(10)</div>
+<div class="line">node&amp; last = arr1[2];   // nInt(30)</div>
+<div class="line"> </div>
+<div class="line">// 배열 순회</div>
+<div class="line">for(auto&amp; elem : arr1) {</div>
+<div class="line">    int value = elem.cast&lt;nInt&gt;()-&gt;get();</div>
+<div class="line">    // value: 10, 20, 30</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 타입 승격 예시 (byeol 코드)</div>
+<div class="line">// [1, 2.5, 3] -&gt; flt 배열로 승격</div>
+<div class="line">// int와 flt이 섞여있으면 더 넓은 flt로 승격됨</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md108"></a>
 defNestedFuncExpr 클래스 - 중첩 함수 정의</h3>
 <p >byeol 언어의 중첩 함수인 <a class="el" href="classby_1_1nested_func.html">nestedFunc</a> 을 생성합니다. 중첩함수는 정의할때는 이름을 생략할 수 있으며, <code>closure</code>로도 활용될 수 있습니다.</p>
 <h3><a class="anchor" id="autotoc_md109"></a>
@@ -1659,7 +2065,52 @@ tnchain 클래스 - Chain으로 연결되는 컨테이너</h3>
 <div class="line">chn1.link(chn2);  // chn1 -&gt; chn2</div>
 <div class="line">chn2.link(chn3);  // chn1 -&gt; chn2 -&gt; chn3</div>
 </div><!-- fragment --><p >이제 chn1을 순회하면 {0, 1, 6, 5, 2, 3} 순서로 모든 원소에 접근할 수 있습니다. 하지만 <b>실제로는 어떠한 복사도 일어나지 않았습니다</b>. 단지 참조를 chain으로 연결했을 뿐입니다.</p>
-<p ><b>순회 예제</b></p>
+<p ><b>tnchain link() 실전 사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">class Item : public node {</div>
+<div class="line">public:</div>
+<div class="line">    Item(int val) : value(val) {}</div>
+<div class="line">    int value;</div>
+<div class="line"> </div>
+<div class="line">    scope&amp; subs() override { return dumScope::singleton(); }</div>
+<div class="line">    priorType prioritize(const args&amp; a) const override { return NO_MATCH; }</div>
+<div class="line">    str eval(const args&amp; a) override { return str(); }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// 세 개의 독립적인 컨테이너 생성</div>
+<div class="line">tnchain&lt;std::string, Item&gt; localVars;</div>
+<div class="line">localVars.add(&quot;x&quot;, new Item(10));</div>
+<div class="line">localVars.add(&quot;y&quot;, new Item(20));</div>
+<div class="line"> </div>
+<div class="line">tnchain&lt;std::string, Item&gt; funcParams;</div>
+<div class="line">funcParams.add(&quot;arg1&quot;, new Item(100));</div>
+<div class="line">funcParams.add(&quot;arg2&quot;, new Item(200));</div>
+<div class="line"> </div>
+<div class="line">tnchain&lt;std::string, Item&gt; globalVars;</div>
+<div class="line">globalVars.add(&quot;PI&quot;, new Item(314));</div>
+<div class="line">globalVars.add(&quot;MAX&quot;, new Item(999));</div>
+<div class="line"> </div>
+<div class="line">// 체이닝: local -&gt; params -&gt; global</div>
+<div class="line">localVars.link(funcParams);</div>
+<div class="line">funcParams.link(globalVars);</div>
+<div class="line"> </div>
+<div class="line">// localVars를 통해 모든 변수에 접근 가능 (복사 없음!)</div>
+<div class="line">localVars.len();  // 6 (2 + 2 + 2)</div>
+<div class="line"> </div>
+<div class="line">// &quot;arg1&quot; 검색: local에 없으면 params에서 찾음</div>
+<div class="line">Item* found = localVars.get(&quot;arg1&quot;);</div>
+<div class="line">found-&gt;value;  // 100</div>
+<div class="line"> </div>
+<div class="line">// &quot;PI&quot; 검색: local, params 없으면 global에서 찾음</div>
+<div class="line">found = localVars.get(&quot;PI&quot;);</div>
+<div class="line">found-&gt;value;  // 314</div>
+<div class="line"> </div>
+<div class="line">// 순회: 모든 체인을 자동으로 순회</div>
+<div class="line">for(auto&amp; elem : localVars) {</div>
+<div class="line">    std::cout &lt;&lt; elem.value &lt;&lt; &quot; &quot;;</div>
+<div class="line">}</div>
+<div class="line">// 출력: 10 20 100 200 314 999</div>
+</div><!-- fragment --><p ><b>순회 예제</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">// chn1을 순회하면 chain으로 연결된 모든 원소에 접근 가능</div>
 <div class="line">for(auto&amp; pair : chn1) {</div>
@@ -1687,7 +2138,25 @@ arr 클래스 - Managed 배열</h3>
 nseq 클래스 - 범위형 컨테이너</h3>
 <p ><code>seq</code>의 기반이 되는 <code>ucontainable</code>를 구현한 클래스로, int를 받아서 적절한 int를 반환하는 범위형 컨테이너입니다.</p>
 <p >예를들어 byeol 코드로 <code>3..5</code>라고 정의한 seq가 있다면 해당 seq[0]은 3, seq.len()은 2가 나오게 됩니다.</p>
-<h3><a class="anchor" id="autotoc_md117"></a>
+<p ><b>사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 1부터 4까지의 범위 (1, 2, 3)</div>
+<div class="line">nseq s(nInt(1), nInt(4));</div>
+<div class="line"> </div>
+<div class="line">// 반복자를 통한 순회</div>
+<div class="line">auto e = s.begin();</div>
+<div class="line">int expects[] = {1, 2, 3};</div>
+<div class="line">for(int n = 0; n &lt; 3; n++, ++e) {</div>
+<div class="line">    int value = (*e).get();  // 1, 2, 3 순서대로</div>
+<div class="line">    // value 사용...</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 역방향 반복자</div>
+<div class="line">auto re = s.rbegin();  // 3부터 시작</div>
+<div class="line">++re;  // 2</div>
+<div class="line">++re;  // 1</div>
+<div class="line">int value = (*re).get();  // 1</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md117"></a>
 smultimap 클래스 - 삽입 순서를 기억하는 Multimap</h3>
 <p >byeol에서는 AST에서 node를 구성할때 단순하게 map을 사용할 순 없으며 multimap을 사용해야 합니다. (함수 오버로딩 때문입니다. 자세한 내용은 <code>node</code>를 참조하세요.)</p>
 <p >다만 여기서 중요한 점은 원소의 <b>삽입 순서가 scope의 검색 우선순위를 결정</b>한다는 것입니다. scope에서 같은 이름의 여러 심볼(예: 오버로딩된 함수들)을 찾을 때, 먼저 삽입된 것을 우선적으로 검색하고 매칭을 시도합니다. 따라서 삽입된 순서를 기억하고 유지할 필요가 있어 삽입 순서를 기억하는 multimap을 별도로 구현해 사용하고 있습니다.</p>
@@ -1697,14 +2166,48 @@ smultimap 클래스 - 삽입 순서를 기억하는 Multimap</h3>
 <p >중첩 함수가 closure로 export될 때, 그 시점의 local scope를 capture하고 유지해야 하는 요구사항이 있습니다. 하지만 capture 시점 이후에 발생한 local 변수들은 중첩 함수와 아무런 관련이 없어야 합니다.</p>
 <p >이러한 이유로 closure는 전체 scope를 capture하지 않고, closure가 생성되는 시점까지의 local scope에 속한 변수들만 capture합니다. 이를 구현하려면 scope의 얕은 복사가 필요하다고 생각하기 쉽지만, <code>tnchain</code>과 <code>link()</code>를 사용해서 복사 없이 이 문제를 해결합니다.</p>
 <p >하지만 이를 위해서는 tnchain이 반복자가 삽입 순서대로 순회하는 것을 보장해야 하므로, STL의 multimap을 직접 사용할 수 없어서 smultimap을 별도로 구현했습니다.</p>
-<h2><a class="anchor" id="autotoc_md118"></a>
+<p ><b>삽입 순서 보장 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">smultimap&lt;std::string, str&gt; scope;</div>
+<div class="line"> </div>
+<div class="line">// 같은 키에 여러 값을 삽입 - 삽입 순서가 유지됨</div>
+<div class="line">for(nint n = 0; n &lt; 10; ++n) {</div>
+<div class="line">    scope.insert(&quot;apple&quot;, *new nInt(n));  // 0, 1, 2, 3, ..., 9 순서대로</div>
+<div class="line">    if(n == 5)</div>
+<div class="line">        scope.insert(&quot;banana&quot;, *new nInt(-1));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 삽입 순서대로 순회됨</div>
+<div class="line">auto e = scope.begin(&quot;apple&quot;);</div>
+<div class="line">for(nint n = 0; n &lt; 10; n++) {</div>
+<div class="line">    int value = *e-&gt;get()-&gt;cast&lt;nint&gt;();  // 0, 1, 2, ..., 9 (삽입 순서 유지)</div>
+<div class="line">    ++e;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 함수 오버로딩 검색 시 삽입 순서가 우선순위를 결정</div>
+<div class="line">// 먼저 삽입된 함수가 우선적으로 매칭 시도됨</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md118"></a>
 Generic 시스템</h2>
 <p >Byeol은 C++의 템플릿과 유사한 generic 타입 시스템을 제공합니다. 하지만 C++ 템플릿과 달리, byeol의 generic은 <b>지연 인스턴스화(lazy instantiation)</b> 방식으로 동작합니다. 즉, generic 타입이 실제로 사용될 때만 해당 타입의 구체화된 인스턴스가 생성됩니다.</p>
 <h3><a class="anchor" id="autotoc_md119"></a>
 getGenericExpr 클래스 - Generic 타입 참조의 진입점</h3>
 <p >generic 클래스의 참조를 담당하며 generic 타입 생성의 진입점을 담당합니다. 사용자가 <code>SomeGeneric&lt;MyObj&gt;()</code>처럼 generic 타입을 사용하면, 이 표현식이 <code>getGenericExpr</code>로 표현됩니다.</p>
 <p >내부적으로는 <code>genericOrigin</code>에게 generic 타입을 줄 것을 요청하며, genericOrigin은 해당 타입에 대한 generic이 있다면 그걸 바로 주고, 없다면 <code>generalizer</code>를 통해 generic 타입을 생성 후, 그 새로운 인스턴스를 반환합니다.</p>
-<p ><b>설계는 Lazy, 실제는 Eager</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// generic origin 생성 (타입 파라메터 T를 가진 Optional 클래스)</div>
+<div class="line">origin org(typeMaker::make&lt;obj&gt;(&quot;Optional&quot;));</div>
+<div class="line">org.getOwns().add(&quot;value&quot;, *new getExpr(&quot;T&quot;));</div>
+<div class="line">genericOrigin genericOrg(org, {&quot;T&quot;});  // &quot;T&quot;가 타입 파라메터</div>
+<div class="line"> </div>
+<div class="line">// scope에 Optional 등록</div>
+<div class="line">obj myScope;</div>
+<div class="line">myScope.getOwns().add(&quot;Optional&quot;, genericOrg);</div>
+<div class="line"> </div>
+<div class="line">// Optional&lt;nInt&gt; 타입 생성</div>
+<div class="line">myScope.inFrame();</div>
+<div class="line">getGenericExpr expr(&quot;Optional&quot;, *new args{narr{*new nInt()}});</div>
+<div class="line">str result = expr.eval();  // Optional&lt;nInt&gt; 타입의 origin 반환</div>
+</div><!-- fragment --><p ><b>설계는 Lazy, 실제는 Eager</b></p>
 <p >genericOrigin은 설계상 lazy instantiation을 지원합니다. 즉, <code>eval()</code> 호출 시점에 주어진 type parameter로 generic 타입을 생성합니다. 하지만 <code>verifier</code>가 프로그램 실행 전에 모든 타입을 검증하면서 필요한 generic 인스턴스를 미리 생성하므로, 실제로는 eager instantiation처럼 동작합니다.</p>
 <h3><a class="anchor" id="autotoc_md120"></a>
 genericOrigin 클래스 - Generic 타입의 생성과 관리</h3>
@@ -2006,7 +2509,31 @@ thread 클래스 - 실행 흐름의 관리자</h3>
 <div class="line">// 블록을 빠져나오면 원본 thread로 자동 교체</div>
 <div class="line">// 블록 진입 전의 실행 상태로 복원됨</div>
 </div><!-- fragment --><p ><code>threadUse</code>는 생성과 동시에 내부에서 thread 객체를 자동 생성까지 해주므로 편리합니다.</p>
-<h2><a class="anchor" id="autotoc_md131"></a>
+<p ><b>threadUse RAII 패턴 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 외부 컨텍스트에서 작업 수행</div>
+<div class="line">thread&amp; originalThread = thread::get();</div>
+<div class="line"> </div>
+<div class="line">{</div>
+<div class="line">    // 새로운 thread 컨텍스트 생성</div>
+<div class="line">    errReport myReport;</div>
+<div class="line">    threadUse newThread(myReport);</div>
+<div class="line"> </div>
+<div class="line">    // 이 블록 내에서는 thread::get()이 newThread의 thread를 반환</div>
+<div class="line">    thread&amp; currentThread = thread::get();</div>
+<div class="line">    // currentThread != originalThread</div>
+<div class="line"> </div>
+<div class="line">    // 이 thread에서 코드 검증/실행</div>
+<div class="line">    obj myObj;</div>
+<div class="line">    myObj.inFrame();</div>
+<div class="line">    // frames에 frame 추가됨 (newThread의 frames)</div>
+<div class="line"> </div>
+<div class="line">    myObj.outFrame();</div>
+<div class="line">}  // RAII: threadUse 소멸 시 자동으로 originalThread로 복원</div>
+<div class="line"> </div>
+<div class="line">// 다시 원래 thread로 돌아옴</div>
+<div class="line">thread::get();  // originalThread 반환</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md131"></a>
 패키지 시스템</h2>
 <p >Byeol은 <code>pack</code>이라는 단위로 라이브러리를 배포합니다. 패키지 시스템은 pack을 동적으로 lazy 로딩하며, 종속성 관리와 검증을 담당합니다.</p>
 <h3><a class="anchor" id="autotoc_md132"></a>
@@ -2124,7 +2651,46 @@ visitor 클래스 - AST 순회의 핵심</h3>
 <p >AST는 참조가 서로 순환하는 경우도 종종 발생합니다 (예: A가 B를 참조하고 B가 다시 A를 참조). 이 경우 아무런 예외처리 없이 순회하면 이미 방문했던 <a class="el" href="classby_1_1node.html">node</a> 를 다시 방문하면서 <b>무한 순회</b>에 빠집니다.</p>
 <p ><a class="el" href="classby_1_1visitor.html">visitor</a> 는 <code>_visited</code>라는 map을 소유하고 있습니다. 이를 통해서 <code>visit()</code>이 호출 되었을 때 이미 방문한 <a class="el" href="classby_1_1node.html">node</a> 인지를 판단해서 예외처리를 해주고 있습니다.</p>
 <p >이 방문 기록 정보는 매번 <a class="el" href="classby_1_1visitor.html">visitor</a> 가 방문을 시작하기 직전에 초기화됩니다. 만약 재방문이 가능하도록 하고 싶다면 <code>setReturnable(true)</code>로 값을 변경하면 됩니다.</p>
-<h3><a class="anchor" id="autotoc_md140"></a>
+<p ><b>visitor 구현 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 커스텀 visitor로 AST를 순회하며 특정 노드 찾기</div>
+<div class="line">struct myVisitor: public visitor {</div>
+<div class="line">    nbool foundInt;</div>
+<div class="line">    nbool foundFunc;</div>
+<div class="line"> </div>
+<div class="line">    myVisitor(): foundInt(false), foundFunc(false) {}</div>
+<div class="line"> </div>
+<div class="line">    // nInt 노드 방문시 호출</div>
+<div class="line">    nbool onVisit(const visitInfo&amp; i, nInt&amp; o, nbool) override {</div>
+<div class="line">        if(i.name == &quot;value&quot;)</div>
+<div class="line">            foundInt = true;</div>
+<div class="line">        return true;  // 계속 순회</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // func 노드 방문시 호출</div>
+<div class="line">    nbool onVisit(const visitInfo&amp; i, func&amp; fun, nbool) override {</div>
+<div class="line">        if(i.name == &quot;myFunc&quot;) {</div>
+<div class="line">            foundFunc = true;</div>
+<div class="line">            // 반환 타입 확인</div>
+<div class="line">            fun.getRet()-&gt;isSub&lt;nFlt&gt;();</div>
+<div class="line">        }</div>
+<div class="line">        return true;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">// AST 객체 생성</div>
+<div class="line">obj myObj;</div>
+<div class="line">myObj.subs().add(&quot;myFunc&quot;, new func(*new modifier(),</div>
+<div class="line">                                     typeMaker::make&lt;func&gt;(params(), new nFlt())));</div>
+<div class="line">myObj.subs().add(&quot;value&quot;, new nInt());</div>
+<div class="line"> </div>
+<div class="line">// visitor로 순회</div>
+<div class="line">myVisitor v;</div>
+<div class="line">v.setTask(myObj).work();  // AST 전체를 전위 순회</div>
+<div class="line"> </div>
+<div class="line">v.foundInt;   // true - nInt 노드를 찾음</div>
+<div class="line">v.foundFunc;  // true - func 노드를 찾음</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md140"></a>
 graphVisitor 클래스 - AST 로깅</h3>
 <p ><code>visitor</code> 기반의 AST 로깅 클래스로, 주어진 root <code>node</code>를 순회하면서 상세 정보를 모두 로깅합니다.</p>
 <p >다음과 같은 상황에서 사용됩니다:</p><ul>
@@ -2301,7 +2867,37 @@ starter 클래스 - AST 실행</h3>
 <li><b>내용</b>: 최소 1개 이상의 구문을 포함해야 함</li>
 </ul>
 <p ><a class="el" href="classby_1_1starter.html">starter</a> 는 <a class="el" href="classby_1_1interpreter.html">interpreter</a> 와 함께 사용하면 byeol 코드를 파싱해서 실행할 수 있습니다.</p>
-<h3><a class="anchor" id="autotoc_md150"></a>
+<p ><b>interpreter와 starter를 사용한 코드 실행 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// byeol 코드 파싱 및 실행</div>
+<div class="line">const char* code = R&quot;(</div>
+<div class="line">pack myPack</div>
+<div class="line"> </div>
+<div class="line">main() void</div>
+<div class="line">    print(&quot;Hello from Byeol!&quot;)</div>
+<div class="line">)&quot;;</div>
+<div class="line"> </div>
+<div class="line">// 1. interpreter로 파싱 및 검증</div>
+<div class="line">errReport report;</div>
+<div class="line">interpreter ip;</div>
+<div class="line">ip.setTask(*new slot(manifest(&quot;myPack&quot;)))</div>
+<div class="line">  .setReport(report)</div>
+<div class="line">  .getParser().addSupply(*new bufSupply(std::string(code)));</div>
+<div class="line">ip.work();  // 파싱 및 검증 수행</div>
+<div class="line"> </div>
+<div class="line">// 2. 검증 결과 확인</div>
+<div class="line">if(!ip.isVerified()) {</div>
+<div class="line">    // 에러 출력</div>
+<div class="line">    for(const auto&amp; err : report)</div>
+<div class="line">        err-&gt;dump();</div>
+<div class="line">    return;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 3. starter로 실행</div>
+<div class="line">starter st;</div>
+<div class="line">st.setTask(ip.getTask()).setReport(report);</div>
+<div class="line">st.work();  // main() 함수 실행</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md150"></a>
 sigZone 클래스 - Signal 처리</h3>
 <p ><code>signaler</code>에 RAII를 적용한 클래스입니다.</p>
 <p ><a class="el" href="classby_1_1sig_zone.html">sigZone</a> 인스턴스가 정의된 블록문 안의 코드를 실행할 때 signal이 오면 람다를 수행하도록 <a class="el" href="classby_1_1signaler.html">signaler</a> 를 사용합니다. RAII 패턴을 통해 블록을 벗어나면 자동으로 signal handler가 해제됩니다.</p>
@@ -2343,7 +2939,27 @@ errReport 클래스 - 에러 수집</h3>
 <p ><a class="el" href="classby_1_1err_report.html">errReport</a> 는 거의 모든 기능이 <code>baseErr</code> 객체에 대한 관리이기 때문에 <code>tucontainable</code>과 유사한 인터페이스를 가지고 있습니다.</p>
 <p ><b>noisy</b></p>
 <p >어떠한 <a class="el" href="classby_1_1err_report.html">errReport</a> 는 새로운 <a class="el" href="classby_1_1err.html">err</a> 객체가 add될 때마다 자동으로 <code>log()</code>를 수행하고 싶을 때가 있습니다. 이때 <code>setNoisy(true)</code>를 지정합니다. 이렇게 하면 에러가 추가되는 즉시 로그가 남아 디버깅이 더 쉬워집니다.</p>
-<h1><a class="anchor" id="autotoc_md154"></a>
+<p ><b>사용 예제</b></p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// 여러 파일을 파싱하는 배치 작업</div>
+<div class="line">errReport report;</div>
+<div class="line">report.setNoisy(true);  // 에러 발생 즉시 로깅</div>
+<div class="line"> </div>
+<div class="line">// 여러 파일 파싱 - 에러가 발생해도 계속 진행</div>
+<div class="line">for(const auto&amp; file : files) {</div>
+<div class="line">    parser p;</div>
+<div class="line">    p.setReport(report);  // errReport를 parser에 전달</div>
+<div class="line">    p.work(file);  // 파싱 실패 시 report에 에러 추가</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// 작업 완료 후 에러 확인</div>
+<div class="line">if(report.len() &gt; 0) {</div>
+<div class="line">    // 발생한 에러들을 순회</div>
+<div class="line">    for(const auto&amp; err : report) {</div>
+<div class="line">        err-&gt;dump();  // 각 에러의 상세 정보 출력 (callstack 포함)</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md154"></a>
 frontend 모듈 - CLI 인터페이스</h1>
 <p >frontend모듈은 Byeol 언어의 명령줄 인터페이스(CLI)를 제공합니다. 이 모듈은 core모듈의 기능들을 조합하여 사용자가 Byeol 프로그램을 실행할 수 있도록 합니다.</p>
 <h2><a class="anchor" id="autotoc_md155"></a>
