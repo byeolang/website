@@ -38,7 +38,7 @@ var NAVTREEINDEX =
 "classby_1_1flag.html",
 "classby_1_1stela_token_scan.html#a90e07f1a1661efce2498fe520694fd0c",
 "dir_b4057d32adea66b3514a221b35f9d43e.html",
-"native_8hpp_source.html",
+"native_8hpp.html",
 "tres_8hpp.html"
 ];
 

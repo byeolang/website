@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"frames_8hpp.html":[5,0,1,4,4],
 "frames_8hpp_source.html":[5,0,1,4,4],
 "frontend_2common_2dep_8hpp.html":[5,0,2,0,0],
 "frontend_2common_2dep_8hpp_source.html":[5,0,2,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "pool_8hpp_source.html":[5,0,4,4,4],
 "print_func_8hpp.html":[5,0,1,2,2,0,1],
 "print_func_8hpp_source.html":[5,0,1,2,2,0,1],
-"ret_convergence_8hpp.html":[5,0,1,8,2,0,0,4],
-"ret_convergence_8hpp_source.html":[5,0,1,8,2,0,0,4]
+"ret_convergence_8hpp.html":[5,0,1,8,2,0,0,4]
 };
