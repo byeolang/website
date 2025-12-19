@@ -10,5 +10,5 @@ var searchData=
   ['point_7',['point',['../structby_1_1point.html',1,'by']]],
   ['pool_8',['pool',['../classby_1_1pool.html',1,'by']]],
   ['printfunc_9',['printFunc',['../classby_1_1print_func.html',1,'by']]],
-  ['programres_10',['programRes',['../structby_1_1cli_1_1program_res.html',1,'by::cli']]]
+  ['programres_10',['programRes',['../structby_1_1program_res.html',1,'by']]]
 ];

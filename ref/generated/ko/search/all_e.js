@@ -30,7 +30,7 @@ var searchData=
   ['printfunc_2ehpp_27',['printFunc.hpp',['../print_func_8hpp.html',1,'']]],
   ['prioritize_28',['prioritize',['../classby_1_1ret_expr.html#aea39c3c888feaf0bbe8371e4ed3ee171',1,'by::retExpr::prioritize()'],['../classby_1_1expr.html#a31d760e6647054482a123889b4261799',1,'by::expr::prioritize()']]],
   ['priortype_29',['priorType',['../tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e',1,'by']]],
-  ['programres_30',['programRes',['../structby_1_1cli_1_1program_res.html',1,'by::cli']]],
+  ['programres_30',['programRes',['../structby_1_1program_res.html',1,'by']]],
   ['promote_31',['promote',['../classby_1_1node.html#a3c27e99e2b0d28af967ea721acc3df40',1,'by::node::promote()'],['../classby_1_1ntype.html#a9d1dcd0f80540899c91258702275d3a4',1,'by::ntype::promote(const ntype &amp;r) const'],['../classby_1_1ntype.html#ab303c05ede5fe2308c449613a649a455',1,'by::ntype::promote(const ntype &amp;l, const ntype &amp;r)']]],
   ['pushstate_32',['pushState',['../classby_1_1parser.html#acace2571483d9c20c3bd15fd78f7f3f9',1,'by::parser::pushState()'],['../classby_1_1stela_parser.html#a63a5fe6808ca92c6c8f3a97bebe50ff7',1,'by::stelaParser::pushState()']]],
   ['pushstream_33',['pushStream',['../classby_1_1logger.html#ab1920d09c867647e5249ff0f677e98b3',1,'by::logger::pushStream(stream *new_stream)'],['../classby_1_1logger.html#a05375c314048dd5971fa836cd8758bc5',1,'by::logger::pushStream(stream &amp;new_stream)']]]

@@ -150,28 +150,29 @@ $(document).ready(function(){initNavTree('graph_visitor_8hpp_source.html',''); i
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> _drawIndent();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> _onIndent();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">void</span> _drawFrame(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; nbool _onVisitPrimitive(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, T&amp; e) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            _drawFrame(i);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">using</span> <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">platformAPI::foreColor</a>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            _showModifier(e.getModifier());</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            std::cout &lt;&lt; foreColor(LIGHTRED) &lt;&lt; i.name &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; foreColor(CYAN) &lt;&lt; e.getType().getName()</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                      &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; foreColor(YELLOW) &lt;&lt; e.get();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::string _encodeNewLine(<span class="keyword">const</span> std::string&amp; msg) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::string _getNameFrom(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; it) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        std::string _getNameFrom(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1node.html">node</a>* it) <span class="keyword">const</span> <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it, _getNameFrom(*it), <span class="stringliteral">&quot;frame&quot;</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> _showModifier(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1modifier.html">modifier</a>&amp; mod);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::vector&lt;nbool&gt; _parentsLast;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::vector&lt;const char*&gt; _indents;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        nbool _isStart;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        nbool _isShowData;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <span class="comment">// namespace by</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        nbool _isLastFrame(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; nbool _onVisitPrimitive(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, T&amp; e) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            _drawFrame(i);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keyword">using</span> <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">platformAPI::foreColor</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            _showModifier(e.getModifier());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            std::cout &lt;&lt; foreColor(LIGHTRED) &lt;&lt; i.name &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; foreColor(CYAN) &lt;&lt; e.getType().getName()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                      &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; foreColor(YELLOW) &lt;&lt; e.get();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::string _encodeNewLine(<span class="keyword">const</span> std::string&amp; msg) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        std::string _getNameFrom(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; it) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::string _getNameFrom(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1node.html">node</a>* it) <span class="keyword">const</span> <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it, _getNameFrom(*it), <span class="stringliteral">&quot;frame&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">void</span> _showModifier(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1modifier.html">modifier</a>&amp; mod);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::vector&lt;nbool&gt; _parentsLast;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        std::vector&lt;const char*&gt; _indents;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        nbool _isStart;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        nbool _isShowData;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="aclassby_1_1_f_b_o_expr_html"><div class="ttname"><a href="classby_1_1_f_b_o_expr.html">by::FBOExpr</a></div><div class="ttdoc">Fundamental Binary Operator expression</div><div class="ttdef"><b>Definition:</b> FBOExpr.hpp:18</div></div>
 <div class="ttc" id="aclassby_1_1_f_u_o_expr_html"><div class="ttname"><a href="classby_1_1_f_u_o_expr.html">by::FUOExpr</a></div><div class="ttdoc">Fundamental Unary Operator expression</div><div class="ttdef"><b>Definition:</b> FUOExpr.hpp:17</div></div>
 <div class="ttc" id="aclassby_1_1assign_expr_html"><div class="ttname"><a href="classby_1_1assign_expr.html">by::assignExpr</a></div><div class="ttdoc">Assignment expression</div><div class="ttdef"><b>Definition:</b> assignExpr.hpp:19</div></div>

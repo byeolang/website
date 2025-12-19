@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"native_8hpp.html":[3,0,1,2,0,4],
 "native_8hpp_source.html":[3,0,1,2,0,4],
 "nchain_iteration_8hpp.html":[3,0,1,2,0,0,4],
 "nchain_iteration_8hpp_source.html":[3,0,1,2,0,0,4],
@@ -149,7 +150,6 @@ var NAVTREEINDEX4 =
 "structby_1_1build_feature_1_1time.html":[1,0,4],
 "structby_1_1build_feature_1_1version.html":[1,0,5],
 "structby_1_1cli.html":[1,7,0],
-"structby_1_1cli_1_1program_res.html":[1,7,0,0],
 "structby_1_1entrypoint.html":[1,5,46],
 "structby_1_1id.html":[1,3,8],
 "structby_1_1id.html#a2a827f9a34a3e6569d795fccfcf6f5e9":[1,3,8,0],

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('classby_1_1flag.html',''); initResizab
 <p>Base class for command-line flag handling.  
  <a href="classby_1_1flag.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="flag_8hpp_source.html">flag.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="flag_2flag_8hpp_source.html">flag.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for by::flag:</div>
 <div class="dyncontent">
@@ -152,7 +152,7 @@ virtual const nchar *&#160;</td><td class="memItemRight" valign="bottom"><b>getN
 <tr class="memitem:aeff574748deda95a22b9a8881cd56fd2"><td class="memItemLeft" align="right" valign="top"><a id="aeff574748deda95a22b9a8881cd56fd2" name="aeff574748deda95a22b9a8881cd56fd2"></a>
 virtual const nchar *&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> () const =0</td></tr>
 <tr class="separator:aeff574748deda95a22b9a8881cd56fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7424d288c3dc958a9862f40086054650"><td class="memItemLeft" align="right" valign="top">virtual res&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1flag.html#a7424d288c3dc958a9862f40086054650">take</a> (<a class="el" href="classby_1_1interpreter.html">interpreter</a> &amp;ip, <a class="el" href="classby_1_1starter.html">starter</a> &amp;s, <a class="el" href="structby_1_1cli.html">cli</a> &amp;c, flagArgs &amp;a, <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt) const</td></tr>
+<tr class="memitem:a7424d288c3dc958a9862f40086054650"><td class="memItemLeft" align="right" valign="top">virtual res&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1flag.html#a7424d288c3dc958a9862f40086054650">take</a> (<a class="el" href="classby_1_1interpreter.html">interpreter</a> &amp;ip, <a class="el" href="classby_1_1starter.html">starter</a> &amp;s, <a class="el" href="structby_1_1cli.html">cli</a> &amp;c, <a class="el" href="classby_1_1tnarr.html">flagArgs</a> &amp;a, <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt) const</td></tr>
 <tr class="separator:a7424d288c3dc958a9862f40086054650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1instance.html">by::instance</a></td></tr>
 <tr class="memitem:a16469e451673fecd6f99c75c1d584c78 inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a16469e451673fecd6f99c75c1d584c78" name="a16469e451673fecd6f99c75c1d584c78"></a>
@@ -247,14 +247,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a88f0f09b363f10bc97ccf1da9e6d8399"><td class="memItemLeft" align="right" valign="top">virtual ncnt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1flag.html#a88f0f09b363f10bc97ccf1da9e6d8399">getArgCount</a> () const</td></tr>
 <tr class="separator:a88f0f09b363f10bc97ccf1da9e6d8399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7cc06260459ed20c610c3b6ce5ad7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1flag.html#aa7cc06260459ed20c610c3b6ce5ad7d2">_delArgs</a> (flagArgs &amp;a, ncnt deleteOptionCnt) const</td></tr>
+<tr class="memitem:aa7cc06260459ed20c610c3b6ce5ad7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1flag.html#aa7cc06260459ed20c610c3b6ce5ad7d2">_delArgs</a> (<a class="el" href="classby_1_1tnarr.html">flagArgs</a> &amp;a, ncnt deleteOptionCnt) const</td></tr>
 <tr class="memdesc:aa7cc06260459ed20c610c3b6ce5ad7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes arguments from the <code>flagArgs</code> list.  <a href="classby_1_1flag.html#aa7cc06260459ed20c610c3b6ce5ad7d2">More...</a><br /></td></tr>
 <tr class="separator:aa7cc06260459ed20c610c3b6ce5ad7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6bc943f26ff81276e3e5c7293b80805"><td class="memItemLeft" align="right" valign="top"><a id="ac6bc943f26ff81276e3e5c7293b80805" name="ac6bc943f26ff81276e3e5c7293b80805"></a>
 virtual const strings &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_getRegExpr</b> () const =0</td></tr>
 <tr class="separator:ac6bc943f26ff81276e3e5c7293b80805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488e71298df1d366d88625ce3d10139d"><td class="memItemLeft" align="right" valign="top"><a id="a488e71298df1d366d88625ce3d10139d" name="a488e71298df1d366d88625ce3d10139d"></a>
-virtual res&#160;</td><td class="memItemRight" valign="bottom"><b>_onTake</b> (const flagArgs &amp;tray, <a class="el" href="structby_1_1cli.html">cli</a> &amp;c, <a class="el" href="classby_1_1interpreter.html">interpreter</a> &amp;ip, <a class="el" href="classby_1_1starter.html">starter</a> &amp;s, <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt) const =0</td></tr>
+virtual res&#160;</td><td class="memItemRight" valign="bottom"><b>_onTake</b> (const <a class="el" href="classby_1_1tnarr.html">flagArgs</a> &amp;tray, <a class="el" href="structby_1_1cli.html">cli</a> &amp;c, <a class="el" href="classby_1_1interpreter.html">interpreter</a> &amp;ip, <a class="el" href="classby_1_1starter.html">starter</a> &amp;s, <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt) const =0</td></tr>
 <tr class="separator:a488e71298df1d366d88625ce3d10139d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classby_1_1instance.html">by::instance</a></td></tr>
 <tr class="memitem:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a067b78083e79bea14beb1d015283019f" name="a067b78083e79bea14beb1d015283019f"></a>
@@ -309,7 +309,7 @@ Terminating flags</h1>
         <tr>
           <td class="memname">void by::flag::_delArgs </td>
           <td>(</td>
-          <td class="paramtype">flagArgs &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tnarr.html">flagArgs</a> &amp;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -400,7 +400,7 @@ Terminating flags</h1>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">flagArgs &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tnarr.html">flagArgs</a> &amp;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -426,7 +426,7 @@ Terminating flags</h1>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/frontend/flag/<a class="el" href="flag_8hpp_source.html">flag.hpp</a></li>
+<li>/home/runner/work/byeol/byeol/module/frontend/flag/<a class="el" href="flag_2flag_8hpp_source.html">flag.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
