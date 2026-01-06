@@ -1,7 +1,19 @@
 var statusElement = document.getElementById('status');
 var progressElement = document.getElementById('progress');
 
+// Initialize arguments from sessionStorage before byeol.js loads
+var code = sessionStorage.getItem('byeol_code');
+var verbose = sessionStorage.getItem('byeol_verbose') === 'true';
+var args = code ? (verbose ? ["--show-structure", "-v", "-s", code] : ["-s", code]) : [];
+
+// Clear sessionStorage after reading
+if (code) {
+    sessionStorage.removeItem('byeol_code');
+    sessionStorage.removeItem('byeol_verbose');
+}
+
 var Module = {
+  arguments: args,  // This will be used by byeol.js to set arguments_
   preRun: [],
   postRun: [],
   print: (function() {
@@ -43,23 +55,14 @@ var Module = {
 };
 Module.setStatus('click to run');
 
-function runModule() {
-    var playbt = document.getElementById('playbt')
-    var output = document.getElementById('output')
-    output.style.display = 'block';
-    playbt.style.display = 'none';
-    Module.setStatus('downloading...');
-    createWasm();
+// Show output area if we have code to run
+if (code) {
+    var playbt = document.getElementById('playbt');
+    var output = document.getElementById('output');
+    if (output) output.style.display = 'block';
+    if (playbt) playbt.style.display = 'none';
 }
 
-window.addEventListener('message', function(msg) {
-    var check = parent.document.getElementById('verbose')
-    if(check != undefined && check.checked)
-      arguments_ = ["--show-structure", "-v", "-s", msg.data];
-    else
-      arguments_ = ["-s", msg.data];
-    runModule();
-});
 window.onerror = function(event) {
   // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
   Module.setStatus('Exception thrown, see JavaScript console');
