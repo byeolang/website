@@ -64,9 +64,11 @@ window.onbeforeunload = function() {
 
 function run(src) {
     var iframe = document.getElementById('byeol');
-    var win = iframe.contentWindow;
-    iframe.onload = function() {
-        win.postMessage(src, '*');
-    }
-    win.location.reload();
+    var verbose = document.getElementById('verbose');
+
+    // Store code in sessionStorage before reload
+    sessionStorage.setItem('byeol_code', src);
+    sessionStorage.setItem('byeol_verbose', verbose?.checked || false);
+
+    iframe.contentWindow.location.reload();
 }
