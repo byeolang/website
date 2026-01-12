@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -142,8 +143,16 @@ Usage</h1>
 <div class="line">        doSomething(e-&gt;getDir()); <span class="comment">// Returns the folder path of the found file</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1fsystem_html_ad73b86716bdac2f73d88cd315fc00332"><div class="ttname"><a href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">by::fsystem::find</a></div><div class="ttdeci">static iterator find(const std::string &amp;path)</div><div class="ttdoc">Creates iterator for recursive filesystem traversal</div></div>
-</div><!-- fragment --><dl class="section remark"><dt>Remarks</dt><dd>Always iterates files only Empty folders are skipped during iteration. </dd></dl>
-</div><h2 class="groupheader">멤버 함수 문서화</h2>
+</div><!-- fragment --><dl class="section remark"><dt>Remarks</dt><dd>Always iterates files only Empty folders are skipped during iteration.</dd></dl>
+<h1><a class="anchor" id="this"></a>
+supports partial glob patterns</h1>
+<p >You can use aterisk (*) and question mark (?) wildcards in the pattern. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> e = <a class="code hl_function" href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">fsystem::find</a>(<span class="stringliteral">&quot;*.cpp&quot;</span>); <span class="comment">// the only difference is here</span></div>
+<div class="line"><span class="keywordflow">while</span>(e.next()) {</div>
+<div class="line">    <span class="keyword">const</span> std::string&amp; path = *e;</div>
+<div class="line">    <span class="keywordflow">if</span>(*e == <span class="stringliteral">&quot;your/path/child/helloWorld.cpp&quot;</span>)</div>
+<div class="line">        doSomething(e-&gt;getDir());</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="ad73b86716bdac2f73d88cd315fc00332" name="ad73b86716bdac2f73d88cd315fc00332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad73b86716bdac2f73d88cd315fc00332">&#9670;&nbsp;</a></span>find()</h2>
 

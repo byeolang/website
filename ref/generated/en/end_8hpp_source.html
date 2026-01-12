@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -133,9 +134,14 @@ $(document).ready(function(){initNavTree('end_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//  });</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//      or,</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//  BY_END(doSomething());</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define BY_END_BLOCK(blockStmt) auto __defer__##__COUNTER__ = end([&amp;]() blockStmt)</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define BY_END(stmt) auto __defer__##__COUNTER__ = end([&amp;]() { stmt; })</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define BY_END_BLOCK_2(__class, blockStmt) auto BY_CONCAT(__defer__, __COUNTER__) = __class(blockStmt)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define BY_END_BLOCK_1(blockStmt) BY_END_BLOCK_2(end, [&amp;]() blockStmt)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define BY_END_BLOCK(...) BY_OVERLOAD(BY_END_BLOCK, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define BY_END_2(__class, stmt) auto BY_CONCAT(__defer__, __COUNTER__) = __class(stmt)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define BY_END_1(stmt) BY_END_2(end, ([&amp;]() { stmt; }))</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define BY_END(...) BY_OVERLOAD(BY_END, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 <div class="ttc" id="aclassby_1_1end_html"><div class="ttname"><a href="classby_1_1end.html">by::end</a></div><div class="ttdoc">Deferred execution utility similar to defer keyword in other languages.</div><div class="ttdef"><b>Definition:</b> end.hpp:35</div></div>
 <div class="ttc" id="aindep_2common_8hpp_html"><div class="ttname"><a href="indep_2common_8hpp.html">common.hpp</a></div></div>
 <div class="ttc" id="aindep_2macro_8hpp_html"><div class="ttname"><a href="indep_2macro_8hpp.html">macro.hpp</a></div></div>

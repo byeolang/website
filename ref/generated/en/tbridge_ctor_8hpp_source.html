@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -117,25 +118,24 @@ $(document).ready(function(){initNavTree('tbridge_ctor_8hpp_source.html',''); in
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="tbridge_func_8hpp.html">core/bridge/cpp/tbridgeFunc.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>by {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">template</span> &lt;<span class="keyword">typename</span>, n<span class="keywordtype">bool</span>&gt; <span class="keyword">class </span>Marshaling = tmarshaling, <span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classby_1_1tbridge_ctor.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tbridge_func.html">tbridgeFunc</a>&lt;T, T, tifSub&lt;typename tadaptiveSuper&lt;T&gt;::super, baseObj&gt;::is, tmarshaling, Args...&gt; {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">typedef</span> <a class="code hl_class" href="classby_1_1tbridge_func.html">tbridgeFunc&lt;T, T, tifSub&lt;typename tadaptiveSuper&lt;T&gt;::super</a>, <a class="code hl_class" href="classby_1_1base_obj.html">baseObj</a>&gt;::is, <a class="code hl_struct" href="structby_1_1tmarshaling.html">tmarshaling</a>, Args...&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_class" href="classby_1_1tbridge_func.html">__super9</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        BY(ME(<a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>, <a class="code hl_class" href="classby_1_1tbridge_func.html">__super9</a>), CLONE(<a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>))</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>(): super(<span class="keyword">nullptr</span>) {}</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="classby_1_1tstr.html">str</a> _runNative(<a class="code hl_class" href="classby_1_1args.html">args</a>&amp; <a class="code hl_class" href="classby_1_1args.html">args</a>)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> _marshal(<a class="code hl_class" href="classby_1_1args.html">args</a>, std::index_sequence_for&lt;Args...&gt;()); }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span>... index&gt; <a class="code hl_class" href="classby_1_1tstr.html">str</a> _marshal(<a class="code hl_class" href="classby_1_1args.html">args</a>&amp; a, std::index_sequence&lt;index...&gt;) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">return</span> <a class="code hl_struct" href="structby_1_1tmarshaling.html">tmarshaling&lt;T*, tifSub&lt;T, node&gt;::is</a>&gt;::toMgd(</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keyword">new</span> T(<a class="code hl_struct" href="structby_1_1tmarshaling.html">tmarshaling</a>&lt;Args, <a class="code hl_struct" href="structby_1_1tif_sub.html">tifSub&lt;Args, node&gt;::is</a>&gt;::toNative(a[index])...));</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    };</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tbridge_func.html">tbridgeFunc</a>&lt;T, T, tifSub&lt;typename tadaptiveSuper&lt;T&gt;::super, baseObj&gt;::is, Marshaling, Args...&gt; {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">typedef</span> <a class="code hl_class" href="classby_1_1tbridge_func.html">tbridgeFunc&lt;T, T, tifSub&lt;typename tadaptiveSuper&lt;T&gt;::super</a>, <a class="code hl_class" href="classby_1_1base_obj.html">baseObj</a>&gt;::is, Marshaling, Args...&gt; <a class="code hl_class" href="classby_1_1tbridge_func.html">__super9</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        BY(ME(<a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>, <a class="code hl_class" href="classby_1_1tbridge_func.html">__super9</a>), CLONE(<a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>))</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classby_1_1tbridge_ctor.html">tbridgeCtor</a>(): super(<span class="keyword">nullptr</span>) {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="classby_1_1tstr.html">str</a> _runNative(<a class="code hl_class" href="classby_1_1args.html">args</a>&amp; <a class="code hl_class" href="classby_1_1args.html">args</a>)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> _marshal(<a class="code hl_class" href="classby_1_1args.html">args</a>, std::index_sequence_for&lt;Args...&gt;()); }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span>... index&gt; <a class="code hl_class" href="classby_1_1tstr.html">str</a> _marshal(<a class="code hl_class" href="classby_1_1args.html">args</a>&amp; a, std::index_sequence&lt;index...&gt;) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">return</span> Marshaling&lt;T*, tifSub&lt;T, node&gt;::is&gt;::toMgd(</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keyword">new</span> T(Marshaling&lt;Args, <a class="code hl_struct" href="structby_1_1tif_sub.html">tifSub&lt;Args, node&gt;::is</a>&gt;::toNative(a[index])...));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 <div class="ttc" id="abase_func_8hpp_html"><div class="ttname"><a href="base_func_8hpp.html">baseFunc.hpp</a></div></div>
 <div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments.</div><div class="ttdef"><b>Definition:</b> args.hpp:22</div></div>
 <div class="ttc" id="aclassby_1_1base_obj_html"><div class="ttname"><a href="classby_1_1base_obj.html">by::baseObj</a></div><div class="ttdoc">Base class for representing byeol objects.</div><div class="ttdef"><b>Definition:</b> baseObj.hpp:72</div></div>
@@ -144,7 +144,6 @@ $(document).ready(function(){initNavTree('tbridge_ctor_8hpp_source.html',''); in
 <div class="ttc" id="aclassby_1_1tstr_html"><div class="ttname"><a href="classby_1_1tstr.html">by::tstr&lt; node &gt;</a></div></div>
 <div class="ttc" id="aparams_8hpp_html"><div class="ttname"><a href="params_8hpp.html">params.hpp</a></div></div>
 <div class="ttc" id="astructby_1_1tif_sub_html"><div class="ttname"><a href="structby_1_1tif_sub.html">by::tifSub</a></div><div class="ttdoc">Type trait to check if T is subclass of super.</div><div class="ttdef"><b>Definition:</b> rtti.hpp:53</div></div>
-<div class="ttc" id="astructby_1_1tmarshaling_html"><div class="ttname"><a href="structby_1_1tmarshaling.html">by::tmarshaling</a></div><div class="ttdoc">Template marshaling interface for C++ bridge.</div><div class="ttdef"><b>Definition:</b> tmarshaling.hpp:19</div></div>
 <div class="ttc" id="atbridge_func_8hpp_html"><div class="ttname"><a href="tbridge_func_8hpp.html">tbridgeFunc.hpp</a></div></div>
 <div class="ttc" id="atmarshaling_8hpp_html"><div class="ttname"><a href="tmarshaling_8hpp.html">tmarshaling.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

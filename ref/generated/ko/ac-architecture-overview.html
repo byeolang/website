@@ -1,0 +1,156 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>byeol: 아키텍쳐와 설계</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="../../assets/css/galmuri.css" />
+<script type="text/javascript" src="dynsections.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="byeol.css" rel="stylesheet" type="text/css"/>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<!-- extensions: -->
+<!--    fragement copy to clipboard: -->
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!--    paragraph linking: -->
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<!--    interactive toc: -->
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+<!-- end of extension -->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ac-architecture-overview.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">아키텍쳐와 설계 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_ref_ko_ac_architecture_overview"></a> 이 문서는 Byeol 프로그래밍 언어의 구현을 이해하기 위한 가이드입니다. Byeol은 추상 구문 트리(AST)를 직접 실행하는 강타입 인터프리터 언어로, 계층형 아키텍처를 기반으로 설계되었습니다.</p>
+<p >이 가이드는 각 모듈의 설계, 알고리즘, 클래스들이 어떻게 상호작용하는지를 중점적으로 다룹니다. byeol 언어 문법을 알고 있는, 코드베이스를 처음 접하는, 경험이 풍부한 C++개발자가 체계적으로 이해할 수 있도록 구성되었습니다. byeol 언어의 문법에 대해 이해하고 있다는 전제로 시작하기 때문에 필요하다면 먼저 <a href="https://byeol.io/guide/">언어 가이드</a> 를 참고하세요.</p>
+<p >필요하다면 다음 하위 문서들로 바로 이동할 수 있어요:</p>
+<ul>
+<li><a class="el" href="ad-architecture-indep.html">indep 모듈 - 플랫폼 추상화 계층</a></li>
+<li><a class="el" href="ae-architecture-clog.html">clog 모듈 - 로깅 시스템</a></li>
+<li><a class="el" href="af-architecture-meta.html">meta 모듈 - 런타임 타입 시스템</a></li>
+<li><a class="el" href="ag-architecture-memlite.html">memlite 모듈 - 커스텀 메모리 관리</a></li>
+<li><a class="el" href="ah-architecture-stela.html">stela 모듈 - 경량 설정 언어</a></li>
+<li><a class="el" href="ai-architecture-core.html">core 모듈 - 언어 구현의 핵심</a></li>
+<li><a class="el" href="aj-architecture-frontend.html">frontend 모듈 - CLI 인터페이스</a></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md81"></a>
+아키텍처 개요</h1>
+<p >Byeol 프로젝트는 엄격한 계층형 아키텍처를 따릅니다. 각 계층은 하위 계층에만 의존할 수 있으며, <a class="el" href="group__indep.html">Indep</a> 모듈 위로는 플랫폼 독립성이 유지됩니다.</p>
+<h2><a class="anchor" id="autotoc_md82"></a>
+계층 구조</h2>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">┌───────────────────┐</div>
+<div class="line">│         frontend (CLI)               │  ← 사용자 인터페이스</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         core (언어 구현)             │  ← AST, Parser, Verifier</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         stela (설정 파싱)            │  ← Manifest 파싱</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         memlite (메모리 관리)        │  ← 커스텀 메모리 관리</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         meta (타입 시스템)           │  ← 런타임 타입 정보</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         clog (로깅)                  │  ← 로깅 프레임워크</div>
+<div class="line">├───────────────────┤</div>
+<div class="line">│         indep (플랫폼 추상화)        │  ← 플랫폼 종속 코드</div>
+<div class="line">└───────────────────┘</div>
+</div><!-- fragment --><p >각 모듈은 하위 계층의 모듈에만 접근할 수 있습니다. 예를 들어, <a class="el" href="group__core.html">Core</a> 는 <a class="el" href="group__stela.html">Stela</a>, <a class="el" href="group__memlite.html">Memlite</a>, <a class="el" href="group__meta.html">Meta</a>, <a class="el" href="group__clog.html">Clog</a>, <a class="el" href="group__indep.html">Indep</a> 에 의존하지만, <a class="el" href="group__frontend.html">Frontend</a> 나 다른 상위 모듈에는 의존하지 않습니다.</p>
+<p >이러한 아키텍처는 플랫폼 독립성, 테스트 용이성, 명확한 의존성 관리를 제공합니다. 플랫폼 종속 코드는 <a class="el" href="group__indep.html">Indep</a> 모듈에만 격리되어 있어, 다른 모듈들은 플랫폼에 관계없이 동일한 방식으로 동작합니다.</p>
+<hr  />
+<p ><b>다음 문서</b>: <a class="el" href="ad-architecture-indep.html">indep 모듈 - 플랫폼 추상화 계층</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+</body>
+</html>

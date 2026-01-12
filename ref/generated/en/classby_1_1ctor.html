@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -107,7 +108,6 @@ $(document).ready(function(){initNavTree('classby_1_1ctor.html',''); initResizab
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classby_1_1ctor-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">by::ctor Class Reference<div class="ingroups"><a class="el" href="group__core.html">Core</a></div></div></div>
 </div><!--header-->
@@ -499,20 +499,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</
 void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () const</td></tr>
 <tr class="separator:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1frame_interactable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ad2858f91e49f2a4a1a1508128b5fd31b"><td class="memItemLeft" align="right" valign="top"><a id="ad2858f91e49f2a4a1a1508128b5fd31b" name="ad2858f91e49f2a4a1a1508128b5fd31b"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CTOR_NAME</b> = &quot;@ctor&quot;</td></tr>
-<tr class="separator:ad2858f91e49f2a4a1a1508128b5fd31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classby_1_1func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classby_1_1func')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classby_1_1func.html">by::func</a></td></tr>
-<tr class="memitem:a19bd539f0dd9f2628c8f2cd9a3ca79f7 inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top"><a id="a19bd539f0dd9f2628c8f2cd9a3ca79f7" name="a19bd539f0dd9f2628c8f2cd9a3ca79f7"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_NAME</b> = &quot;@lambda&quot;</td></tr>
-<tr class="separator:a19bd539f0dd9f2628c8f2cd9a3ca79f7 inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classby_1_1base_func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classby_1_1base_func')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classby_1_1base_func.html">by::baseFunc</a></td></tr>
-<tr class="memitem:a30c65617b7e9a71051844a88ed0fa319 inherit pub_static_attribs_classby_1_1base_func"><td class="memItemLeft" align="right" valign="top"><a id="a30c65617b7e9a71051844a88ed0fa319" name="a30c65617b7e9a71051844a88ed0fa319"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ME</b> = &quot;me&quot;</td></tr>
-<tr class="separator:a30c65617b7e9a71051844a88ed0fa319 inherit pub_static_attribs_classby_1_1base_func"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classby_1_1base_func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classby_1_1base_func')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classby_1_1base_func.html">by::baseFunc</a></td></tr>
@@ -545,6 +531,25 @@ T sub&#160;</td><td class="memItemRight" valign="bottom"><b>nullptr</b></td></tr
 <tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a61a558262f0785eeb3af4024c3e81d2e" name="a61a558262f0785eeb3af4024c3e81d2e"></a>
 <a class="el" href="classby_1_1tstr.html">str</a> eval&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classby_1_1func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classby_1_1func')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classby_1_1func.html">by::func</a></td></tr>
+<tr class="memitem:a19bd539f0dd9f2628c8f2cd9a3ca79f7 inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top"><a id="a19bd539f0dd9f2628c8f2cd9a3ca79f7" name="a19bd539f0dd9f2628c8f2cd9a3ca79f7"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_NAME</b> = &quot;@lambda&quot;</td></tr>
+<tr class="separator:a19bd539f0dd9f2628c8f2cd9a3ca79f7 inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fdecdb06fa75e4c7f4565ffb4d6579 inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top"><a id="a21fdecdb06fa75e4c7f4565ffb4d6579" name="a21fdecdb06fa75e4c7f4565ffb4d6579"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CTOR_NAME</b> = &quot;@ctor&quot;</td></tr>
+<tr class="separator:a21fdecdb06fa75e4c7f4565ffb4d6579 inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feca494e1f3b3c5d678210a69c03ffc inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top"><a id="a1feca494e1f3b3c5d678210a69c03ffc" name="a1feca494e1f3b3c5d678210a69c03ffc"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GETTER_NAME</b> = &quot;@get&quot;</td></tr>
+<tr class="separator:a1feca494e1f3b3c5d678210a69c03ffc inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4d2667ed150371efdac1cbcfa54d4c inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top"><a id="adc4d2667ed150371efdac1cbcfa54d4c" name="adc4d2667ed150371efdac1cbcfa54d4c"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>SETTER_NAME</b> = &quot;@set&quot;</td></tr>
+<tr class="separator:adc4d2667ed150371efdac1cbcfa54d4c inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49912e515d081da76a07d63ab0f80f4 inherit pub_static_attribs_classby_1_1func"><td class="memItemLeft" align="right" valign="top">static const std::array&lt; std::string, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1func.html#aa49912e515d081da76a07d63ab0f80f4">SPECIAL_FUNC_NAMES</a></td></tr>
+<tr class="separator:aa49912e515d081da76a07d63ab0f80f4 inherit pub_static_attribs_classby_1_1func"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classby_1_1base_func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classby_1_1base_func')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classby_1_1base_func.html">by::baseFunc</a></td></tr>
+<tr class="memitem:a30c65617b7e9a71051844a88ed0fa319 inherit pub_static_attribs_classby_1_1base_func"><td class="memItemLeft" align="right" valign="top"><a id="a30c65617b7e9a71051844a88ed0fa319" name="a30c65617b7e9a71051844a88ed0fa319"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ME</b> = &quot;me&quot;</td></tr>
+<tr class="separator:a30c65617b7e9a71051844a88ed0fa319 inherit pub_static_attribs_classby_1_1base_func"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classby_1_1func"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1func')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classby_1_1func.html">by::func</a></td></tr>
 <tr class="memitem:ad723b43b064a585d5a3c02678cac3bff inherit pro_methods_classby_1_1func"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1func.html#ad723b43b064a585d5a3c02678cac3bff">_interactFrame</a> (<a class="el" href="classby_1_1node.html">node</a> &amp;meObj, <a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp;s, nidx exN)</td></tr>
 <tr class="memdesc:ad723b43b064a585d5a3c02678cac3bff inherit pro_methods_classby_1_1func"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected virtual method to interact with the execution frame during function evaluation.  <a href="classby_1_1func.html#ad723b43b064a585d5a3c02678cac3bff">More...</a><br /></td></tr>

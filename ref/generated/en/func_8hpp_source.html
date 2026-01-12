@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -168,16 +169,22 @@ $(document).ready(function(){initNavTree('func_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span> _runEnds();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    public:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        inline static const std::<span class="keywordtype">string</span> LAMBDA_NAME = &quot;@lambda&quot;;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    private:</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr</a>&lt;<a class="code hl_class" href="classby_1_1obj.html">obj</a>&gt; _org;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_class" href="classby_1_1func_type.html">funcType</a> _type;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_class" href="classby_1_1tnchain.html">scope</a> _subs;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr</a>&lt;<a class="code hl_class" href="classby_1_1block_expr.html">blockExpr</a>&gt; _blk;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_class" href="classby_1_1tnarr.html">ends</a> _ends;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    };</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// namespace by</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// special funcs:</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        inline static const std::<span class="keywordtype">string</span> LAMBDA_NAME = &quot;@lambda&quot;;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        inline static const std::<span class="keywordtype">string</span> CTOR_NAME = &quot;@<a class="code hl_class" href="classby_1_1ctor.html">ctor</a>&quot;;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        inline static const std::<span class="keywordtype">string</span> GETTER_NAME = &quot;@get&quot;;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        inline static const std::<span class="keywordtype">string</span> SETTER_NAME = &quot;@set&quot;;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        inline static const std::array&lt;std::<span class="keywordtype">string</span>, 4&gt; SPECIAL_FUNC_NAMES = {LAMBDA_NAME, CTOR_NAME, GETTER_NAME,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            SETTER_NAME};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr&lt;obj&gt;</a> _org;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_class" href="classby_1_1func_type.html">funcType</a> _type;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_class" href="classby_1_1tnchain.html">scope</a> _subs;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr&lt;blockExpr&gt;</a> _blk;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_class" href="classby_1_1tnarr.html">ends</a> _ends;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    };</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="abase_func_8hpp_html"><div class="ttname"><a href="base_func_8hpp.html">baseFunc.hpp</a></div></div>
 <div class="ttc" id="ablock_expr_8hpp_html"><div class="ttname"><a href="block_expr_8hpp.html">blockExpr.hpp</a></div></div>
 <div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments.</div><div class="ttdef"><b>Definition:</b> args.hpp:22</div></div>
@@ -186,13 +193,13 @@ $(document).ready(function(){initNavTree('func_8hpp_source.html',''); initResiza
 <div class="ttc" id="aclassby_1_1block_expr_html"><div class="ttname"><a href="classby_1_1block_expr.html">by::blockExpr</a></div><div class="ttdoc">Block expression.</div><div class="ttdef"><b>Definition:</b> blockExpr.hpp:24</div></div>
 <div class="ttc" id="aclassby_1_1clonable_html"><div class="ttname"><a href="classby_1_1clonable.html">by::clonable</a></div><div class="ttdoc">Interface for objects that can be cloned.</div><div class="ttdef"><b>Definition:</b> clonable.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1core_internal_html"><div class="ttname"><a href="classby_1_1core_internal.html">by::coreInternal</a></div><div class="ttdef"><b>Definition:</b> coreInternal.hpp:39</div></div>
+<div class="ttc" id="aclassby_1_1ctor_html"><div class="ttname"><a href="classby_1_1ctor.html">by::ctor</a></div><div class="ttdoc">Constructor function for byeol objects.</div><div class="ttdef"><b>Definition:</b> ctor.hpp:12</div></div>
 <div class="ttc" id="aclassby_1_1func_html"><div class="ttname"><a href="classby_1_1func.html">by::func</a></div><div class="ttdoc">Function definition in byeol language.</div><div class="ttdef"><b>Definition:</b> func.hpp:38</div></div>
 <div class="ttc" id="aclassby_1_1func_html_a7098397640285074b13cdc0206b87217"><div class="ttname"><a href="classby_1_1func.html#a7098397640285074b13cdc0206b87217">by::func::getEnds</a></div><div class="ttdeci">ends &amp; getEnds()</div><div class="ttdoc">Gets the list of endExpr (defer-like statements) registered for this function.</div></div>
 <div class="ttc" id="aclassby_1_1func_type_html"><div class="ttname"><a href="classby_1_1func_type.html">by::funcType</a></div><div class="ttdoc">Managed type for function objects in byeol language.</div><div class="ttdef"><b>Definition:</b> funcType.hpp:11</div></div>
 <div class="ttc" id="aclassby_1_1modifier_html"><div class="ttname"><a href="classby_1_1modifier.html">by::modifier</a></div><div class="ttdoc">Access modifier for type members.</div><div class="ttdef"><b>Definition:</b> modifier.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language.</div><div class="ttdef"><b>Definition:</b> node.hpp:195</div></div>
 <div class="ttc" id="aclassby_1_1ntype_html"><div class="ttname"><a href="classby_1_1ntype.html">by::ntype</a></div><div class="ttdoc">represents native c++ type system for byeol language</div><div class="ttdef"><b>Definition:</b> ntype.hpp:33</div></div>
-<div class="ttc" id="aclassby_1_1obj_html"><div class="ttname"><a href="classby_1_1obj.html">by::obj</a></div><div class="ttdoc">Managed environment object.</div><div class="ttdef"><b>Definition:</b> obj.hpp:62</div></div>
 <div class="ttc" id="aclassby_1_1tbicontainable_html"><div class="ttname"><a href="classby_1_1tbicontainable.html">by::tbicontainable</a></div><div class="ttdoc">Template bidirectional container interface.</div><div class="ttdef"><b>Definition:</b> tbicontainable.hpp:18</div></div>
 <div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr&lt; endExpr, strTactic &gt;</a></div></div>
 <div class="ttc" id="aclassby_1_1tnchain_html"><div class="ttname"><a href="classby_1_1tnchain.html">by::tnchain&lt; std::string, node, tnmap&lt; std::string, node, immutableTactic &gt; &gt;</a></div></div>

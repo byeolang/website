@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -107,6 +108,7 @@ $(document).ready(function(){initNavTree('classby_1_1generalizer.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classby_1_1generalizer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">by::generalizer Class Reference<div class="ingroups"><a class="el" href="group__core.html">Core</a></div></div></div>
 </div><!--header-->
@@ -354,18 +356,10 @@ virtual me *&#160;</td><td class="memItemRight" valign="bottom"><b>cloneDeep</b>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</b> (const me &amp;from)</td></tr>
 <tr class="separator:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classby_1_1tworker"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classby_1_1tworker')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classby_1_1tworker.html">by::tworker&lt; void, node &gt;</a></td></tr>
-<tr class="memitem:ac908a13be8f4ac219e6992e06b420d60 inherit pub_types_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="ac908a13be8f4ac219e6992e06b420d60" name="ac908a13be8f4ac219e6992e06b420d60"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>logFlag</b> </td></tr>
-<tr class="separator:ac908a13be8f4ac219e6992e06b420d60 inherit pub_types_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classby_1_1tworker"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classby_1_1tworker')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classby_1_1tworker.html">by::tworker&lt; void, node &gt;</a></td></tr>
-<tr class="memitem:a1480a76960d5f076249ba9f66b625ec2 inherit pub_attribs_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="a1480a76960d5f076249ba9f66b625ec2" name="a1480a76960d5f076249ba9f66b625ec2"></a>
-me setTask&#160;</td><td class="memItemRight" valign="bottom"><b>it</b></td></tr>
-<tr class="separator:a1480a76960d5f076249ba9f66b625ec2 inherit pub_attribs_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afda9ab20279bdcf33033e13c24afe7e5 inherit pub_attribs_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="afda9ab20279bdcf33033e13c24afe7e5" name="afda9ab20279bdcf33033e13c24afe7e5"></a>
-me setTask *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td></tr>
-<tr class="separator:afda9ab20279bdcf33033e13c24afe7e5 inherit pub_attribs_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af25a2c0b71d7ff8a1c286af826778876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1generalizer.html#af25a2c0b71d7ff8a1c286af826778876">_onWork</a> () override</td></tr>
+<tr class="separator:af25a2c0b71d7ff8a1c286af826778876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classby_1_1visitor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1visitor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classby_1_1visitor.html">by::visitor</a></td></tr>
 <tr class="memitem:ad71f05e91d834cbf51bd63b500d44e48 inherit pro_methods_classby_1_1visitor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1visitor.html#ad71f05e91d834cbf51bd63b500d44e48">_onWork</a> () override</td></tr>
 <tr class="separator:ad71f05e91d834cbf51bd63b500d44e48 inherit pro_methods_classby_1_1visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,11 +379,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_report</b> (<a class
 <tr class="memitem:a85f03ec4c9e6642358c0917603629a62 inherit pro_methods_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="a85f03ec4c9e6642358c0917603629a62" name="a85f03ec4c9e6642358c0917603629a62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>_onEndErrReport</b> (const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt) const</td></tr>
 <tr class="separator:a85f03ec4c9e6642358c0917603629a62 inherit pro_methods_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classby_1_1tworker"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classby_1_1tworker')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classby_1_1tworker.html">by::tworker&lt; void, node &gt;</a></td></tr>
+<tr class="memitem:ac908a13be8f4ac219e6992e06b420d60 inherit pub_types_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="ac908a13be8f4ac219e6992e06b420d60" name="ac908a13be8f4ac219e6992e06b420d60"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>logFlag</b> </td></tr>
+<tr class="separator:ac908a13be8f4ac219e6992e06b420d60 inherit pub_types_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classby_1_1tworker"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classby_1_1tworker')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classby_1_1tworker.html">by::tworker&lt; void, node &gt;</a></td></tr>
+<tr class="memitem:a1480a76960d5f076249ba9f66b625ec2 inherit pub_attribs_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="a1480a76960d5f076249ba9f66b625ec2" name="a1480a76960d5f076249ba9f66b625ec2"></a>
+me setTask&#160;</td><td class="memItemRight" valign="bottom"><b>it</b></td></tr>
+<tr class="separator:a1480a76960d5f076249ba9f66b625ec2 inherit pub_attribs_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda9ab20279bdcf33033e13c24afe7e5 inherit pub_attribs_classby_1_1tworker"><td class="memItemLeft" align="right" valign="top"><a id="afda9ab20279bdcf33033e13c24afe7e5" name="afda9ab20279bdcf33033e13c24afe7e5"></a>
+me setTask *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td></tr>
+<tr class="separator:afda9ab20279bdcf33033e13c24afe7e5 inherit pub_attribs_classby_1_1tworker"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Visitor for generic type parameter replacement. </p>
 <p >A class that handles generic type creation based on <a class="el" href="classby_1_1visitor.html">visitor</a>. Mainly used by <a class="el" href="classby_1_1get_generic_expr.html">getGenericExpr</a>, so refer to that class first. The most important part is the first line where inside a <a class="el" href="classby_1_1generic_origin.html">genericOrigin</a> instance called SomeGeneric, an origin object called SomeGeneric&lt;myObj&gt; is stored with the key <code>myObj</code>. generalizer is used to create SomeGeneric&lt;myObj&gt; from SomeGeneric&lt;T&gt;, and at this time it simply finds <code><a class="el" href="classby_1_1get_expr.html" title="Expression for property and method access.">getExpr</a> objects whose args is T</code> and replaces them with <code><a class="el" href="classby_1_1get_expr.html" title="Expression for property and method access.">getExpr</a> whose args is myObj</code>, performing this across all nodes. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af25a2c0b71d7ff8a1c286af826778876" name="af25a2c0b71d7ff8a1c286af826778876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25a2c0b71d7ff8a1c286af826778876">&#9670;&nbsp;</a></span>_onWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void by::generalizer::_onWork </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classby_1_1tworker.html">by::tworker&lt; void, node &gt;</a>.</p>
+
+</div>
+</div>
 <a id="aba2bc4b6a62a45135d4cf99e67041221" name="aba2bc4b6a62a45135d4cf99e67041221"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba2bc4b6a62a45135d4cf99e67041221">&#9670;&nbsp;</a></span>add()</h2>
 

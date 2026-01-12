@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -161,7 +162,35 @@ Macros</h2></td></tr>
 <tr class="memitem:a94e2fe16299b08ad1c9d64f8cdc45d6a"><td class="memItemLeft" align="right" valign="top"><a id="a94e2fe16299b08ad1c9d64f8cdc45d6a" name="a94e2fe16299b08ad1c9d64f8cdc45d6a"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>myExWarn</b>(...)&#160;&#160;&#160;<a class="el" href="group__indep.html#ga898e125d079d4eb8d0b9f339c0fa259f">BY_OVERLOAD</a>(myExWarn, __VA_ARGS__)</td></tr>
 <tr class="separator:a94e2fe16299b08ad1c9d64f8cdc45d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b086ba680dc1418a8ba167726c241c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tworker_8hpp.html#ad7b086ba680dc1418a8ba167726c241c">BY_WORKER_GUARD</a>(msg)</td></tr>
+<tr class="separator:ad7b086ba680dc1418a8ba167726c241c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad7b086ba680dc1418a8ba167726c241c" name="ad7b086ba680dc1418a8ba167726c241c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b086ba680dc1418a8ba167726c241c">&#9670;&nbsp;</a></span>BY_WORKER_GUARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BY_WORKER_GUARD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    BY_I(<span class="stringliteral">&quot;▶ &#39;%s&#39; %s@%s: &quot;</span> msg, i, me.getType(), &amp;me);     \</div>
+<div class="line">    line::incLv();                                        \</div>
+<div class="line">    _stepN = 0;                                           \</div>
+<div class="line">    BY_END_BLOCK({                                        \</div>
+<div class="line">        line::decLv();                                    \</div>
+<div class="line">        BY_I(<span class="stringliteral">&quot;◀ &#39;%s&#39; %s@%s: &quot;</span> msg, i, me.getType(), &amp;me); \</div>
+<div class="line">    });</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
