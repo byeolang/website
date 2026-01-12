@@ -30,6 +30,7 @@ var group__indep =
       [ "log", "classby_1_1errorable.html#a9986916851293c590d4b0fca53fbe922", null ],
       [ "logStack", "classby_1_1errorable.html#ab149ee2a13c9a0f90ac9a3937f553254", null ]
     ] ],
+    [ "by::line", "classby_1_1line.html", null ],
     [ "by::tmay< T >", "classby_1_1tmay.html", [
       [ "get", "classby_1_1tmay.html#af76f377d208aa339337c0c4a486e9110", null ],
       [ "get", "classby_1_1tmay.html#a8b74d95455c8c7906c75b253d86d6640", null ]

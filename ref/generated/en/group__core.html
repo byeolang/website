@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -345,7 +346,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbridge_closure_3_01void_00_01_t_00_01_marshaling_00_01_args_8_8_8_01_4.html">by::tbridgeClosure&lt; void, T, Marshaling, Args... &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge closure specialization for void return type.  <a href="classby_1_1tbridge_closure_3_01void_00_01_t_00_01_marshaling_00_01_args_8_8_8_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbridge_ctor.html">by::tbridgeCtor&lt; T, Args &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbridge_ctor.html">by::tbridgeCtor&lt; T, Marshaling, Args &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge constructor for C++ objects.  <a href="classby_1_1tbridge_ctor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbase_bridge_func.html">by::tbaseBridgeFunc&lt; Ret, T, Marshaling, Args &gt;</a></td></tr>
@@ -614,7 +615,7 @@ Scope Concept in Byeol</h1>
 <p >scope is classified into 5 types based on who created it: local scope (created by <a class="el" href="classby_1_1block_expr.html">blockExpr</a>), func scope (created by <a class="el" href="classby_1_1base_func.html">baseFunc</a>), obj scope (created by <a class="el" href="classby_1_1base_obj.html">baseObj</a>), file scope, and pack scope. (Note: pack is the same as <a class="el" href="classby_1_1obj.html">obj</a> derived from <a class="el" href="classby_1_1base_obj.html" title="Base class for representing byeol objects.">baseObj</a> code-wise, but byeol conceptually treats pack scope separately.)</p>
 <h1><a class="anchor" id="scope_usage"></a>
 How Scope is Used</h1>
-<p >scope is <code>add()</code>ed to <a class="el" href="classby_1_1frames.html">frames</a> owned by the <a class="el" href="classby_1_1thread.html">thread</a> object, allowing <a class="el" href="classby_1_1node.html">node</a> objects in the program's AST to access symbols registered in the scope. Here we only explain each scope conceptually. See <a class="el" href="classby_1_1frame_interact.html">frameInteract</a> or <a class="el" href="classby_1_1frames.html">frames</a> for how scopes are actually created, registered, and released.</p>
+<p >scope is <code>add()</code>ed to <a class="el" href="classby_1_1frames.html">frames</a> owned by the <a class="el" href="classby_1_1autoslot.html#thread">is required to run an autoslot</a> object, allowing <a class="el" href="classby_1_1node.html">node</a> objects in the program's AST to access symbols registered in the scope. Here we only explain each scope conceptually. See <a class="el" href="classby_1_1frame_interact.html">frameInteract</a> or <a class="el" href="classby_1_1frames.html">frames</a> for how scopes are actually created, registered, and released.</p>
 <h1><a class="anchor" id="local_scope"></a>
 Local Scope</h1>
 <p >Local scope is created when a block statement executes within a function. When the block statement ends, the scope disappears and instances referenced in that scope lose 1 reference count. For optimization, the local scope creation itself isn't done directly by <a class="el" href="classby_1_1block_expr.html">blockExpr</a>; instead, the side executing <a class="el" href="classby_1_1block_expr.html" title="Block expression.">blockExpr</a> has the <a class="el" href="classby_1_1frame_interactable.html">frameInteractable</a> <a class="el" href="classby_1_1block_expr.html" title="Block expression.">blockExpr</a> create it.</p>

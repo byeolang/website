@@ -109,35 +109,30 @@ $(document).ready(function(){initNavTree('basic-usage.html',''); initResizable()
   <div class="headertitle"><div class="title">기본 사용법 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_guide_ko_basic_usage"></a></p><ul>
-<li><code>byeol -h</code> 명령을 통해 사용 가능한 옵션을 모두 볼 수 있습니다.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_guide_ko_basic_usage"></a> <code>byeol -h</code> 명령을 통해 사용 가능한 모든 옵션을 확인할 수 있습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
 filePath</h1>
-<ul>
-<li>기본적으로 <code>.byeol</code> 파일에 대한 경로를 입력해서 해당 코드를 실행할 수 있습니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<p >기본적으로 <code>.byeol</code> 파일에 대한 경로를 입력해서 해당 코드를 실행할 수 있습니다.</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">$ byeol your/path/test.byeol</div>
-</div><!-- fragment --></li>
-<li>wildcard는 아직 인식이 안됩니다.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><p >wildcard는 아직 지원되지 않습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md15"></a>
 스크립트 직접 실행</h1>
-<ul>
-<li>&lsquo;-s &rsquo;&lt;byeol 코드&gt;'<code>를 사용하면</code>.byeol` 파일 필요없이 cli 환경에서 직접 코드를 입력해서 실행합니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<p >&lsquo;-s &rsquo;&lt;byeol 코드&gt;'<code>를 사용하면</code>.byeol` 파일 필요 없이 cli 환경에서 직접 코드를 입력해서 실행할 수 있습니다.</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">$ byeol -s &#39;main() void&lt;br/&gt;</div>
 <div class="line">    print(&quot;hello&quot;)&lt;br/&gt;</div>
 <div class="line">&#39;</div>
-</div><!-- fragment --></li>
-</ul>
-<h1><a class="anchor" id="autotoc_md11"></a>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md17"></a>
 상세 로그 출력</h1>
-<ul>
-<li><code>-v</code> 옵션을 주면 파싱/검증 과정에서 발생하는 상세 로그를 확인할 수 있습니다.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<p ><code>-v</code> 옵션을 주면 파싱/검증 과정에서 발생하는 상세 로그를 확인할 수 있습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md19"></a>
 AST 구조 출력</h1>
-<ul>
-<li><code>-S</code> 혹은 <code>--show-structure</code> 옵션을 사용하면 파싱 후의 AST 구조를 CUI로 표현합니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<p ><code>-S</code> 혹은 <code>--show-structure</code> 옵션을 사용하면 파싱 후의 AST 구조를 CUI로 표현합니다. </p><div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">$ byeol -S -s &#39;main() void</div>
 <div class="line">    print(&quot;hello&quot;)</div>
 <div class="line">&#39;</div>
@@ -159,25 +154,18 @@ AST 구조 출력</h1>
 <div class="line">      ┣━[1] @6c68 @ctor() {default}</div>
 <div class="line">      ┗━[2] @6dd0 @ctor(rhs {default}) {default}</div>
 <div class="line">hello</div>
-</div><!-- fragment --></li>
-<li>위 로그의 각 값의 상세 정보에 대해서는 <a href="https://byeol.io/ref">reference가이드</a>에서 <code>아키텍쳐와 설계</code> 를 참고하세요.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><p> 위 로그의 각 값에 대한 상세 정보는 <a href="https://byeol.io/ref">reference가이드</a>에서 <code>아키텍쳐와 설계</code>를 참고하세요.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md21"></a>
 버전 표기</h1>
-<ul>
-<li><code>--version</code> 옵션을 사용하면 현재 byeol 바이너리의 버전과 빌드 정보가 표시됩니다. <div class="fragment"><div class="line">@style: language-txt verified</div>
+<p ><code>--version</code> 옵션을 사용하면 현재 byeol 바이너리의 버전과 빌드 정보가 표시됩니다. </p><div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">$ byeol --version</div>
 <div class="line">🌟 &#39;byeol&#39; Mana Update 0.2.10</div>
 <div class="line">Built on Nov 04 2025 (build 1378, git 5ae19ea79, Release, 64-bit)</div>
 <div class="line">© 2010-2025 Taehun Lee(kniz) and contributors. All rights reserved.</div>
-</div><!-- fragment --></li>
-<li>위 예시처럼 버전(0.2.10)과 빌드 날짜(Nov 04 2025), 빌드카운트(1378), git commitId(5ae19ea79), 바이너리 타입(Debug or Release) 등이 표시됩니다</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
-다음은,</h1>
-<ul>
-<li><a class="el" href="quick-guide.html">언어를 배워서</a> 한번 사용해 보세요. </li>
-</ul>
+</div><!-- fragment --><p> 위 예시처럼 버전(0.2.10), 빌드 날짜(Nov 04 2025), 빌드 카운트(1378), git commitId(5ae19ea79), 바이너리 타입(Debug or Release) 등이 표시됩니다.</p>
+<hr  />
+<p> <b>다음 문서</b>: <a class="el" href="how-to-code.html">언어 배우기</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

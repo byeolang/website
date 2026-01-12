@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -194,6 +195,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> () override</
 <tr class="memitem:a623cfd253a321c0926f86da7d1e860f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a623cfd253a321c0926f86da7d1e860f4">onTokenStartOfStrTemplateBrace</a> ()</td></tr>
 <tr class="memdesc:a623cfd253a321c0926f86da7d1e860f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the start of a string template brace (e.g., <code>${</code>).  <a href="classby_1_1parser.html#a623cfd253a321c0926f86da7d1e860f4">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a623cfd253a321c0926f86da7d1e860f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04acb2126d3e158cef0d8cd294341d3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a04acb2126d3e158cef0d8cd294341d3a">onTokenBeginStr</a> (nchar token)</td></tr>
+<tr class="memdesc:a04acb2126d3e158cef0d8cd294341d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the start of a string literal.  <a href="classby_1_1parser.html#a04acb2126d3e158cef0d8cd294341d3a">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a04acb2126d3e158cef0d8cd294341d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f0c7d7638a086e4ff3afa82b6759d7"><td class="memItemLeft" align="right" valign="top">nchar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a06f0c7d7638a086e4ff3afa82b6759d7">getOpenStrToken</a> ()</td></tr>
+<tr class="memdesc:a06f0c7d7638a086e4ff3afa82b6759d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns quote character which used to start current string sequence.  <a href="classby_1_1parser.html#a06f0c7d7638a086e4ff3afa82b6759d7">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a06f0c7d7638a086e4ff3afa82b6759d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba8c6b10a1ac7309f63c243b325d842"><td class="memItemLeft" align="right" valign="top">nint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1parser.html#a3ba8c6b10a1ac7309f63c243b325d842">onIndent</a> (ncnt col, nint tok)</td></tr>
 <tr class="memdesc:a3ba8c6b10a1ac7309f63c243b325d842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an increase in indentation.  <a href="classby_1_1parser.html#a3ba8c6b10a1ac7309f63c243b325d842">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a3ba8c6b10a1ac7309f63c243b325d842"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -850,6 +857,26 @@ tokenScan</h1>
 
 </div>
 </div>
+<a id="a06f0c7d7638a086e4ff3afa82b6759d7" name="a06f0c7d7638a086e4ff3afa82b6759d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f0c7d7638a086e4ff3afa82b6759d7">&#9670;&nbsp;</a></span>getOpenStrToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nchar by::parser::getOpenStrToken </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns quote character which used to start current string sequence. </p>
+<dl class="section return"><dt>반환값</dt><dd>quote or double quote to be used to open string literal. </dd></dl>
+
+</div>
+</div>
 <a id="a6db028bb170fc622e012ff80c08b4558" name="a6db028bb170fc622e012ff80c08b4558"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6db028bb170fc622e012ff80c08b4558">&#9670;&nbsp;</a></span>getSubPack()</h2>
 
@@ -1267,6 +1294,32 @@ tokenScan</h1>
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">area</td><td>The source area (e.g., line, column) information. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04acb2126d3e158cef0d8cd294341d3a" name="a04acb2126d3e158cef0d8cd294341d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04acb2126d3e158cef0d8cd294341d3a">&#9670;&nbsp;</a></span>onTokenBeginStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void by::parser::onTokenBeginStr </td>
+          <td>(</td>
+          <td class="paramtype">nchar&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the start of a string literal. </p>
+<p >Stores the opening quote character ('"' or '\'') to distinguish between double-quoted and single-quoted strings during parsing. This enables support for both quote types using the same scanner state. </p><dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The opening quote character ('"' or '\'') </td></tr>
   </table>
   </dd>
 </dl>

@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -110,7 +111,8 @@ $(document).ready(function(){initNavTree('clog_2common_2macro_8hpp.html',''); in
   <div class="headertitle"><div class="title">macro.hpp 파일 참조</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="clog_2common_2dep_8hpp_source.html">clog/common/dep.hpp</a>&quot;</code><br />
+</div>
 <p><a href="clog_2common_2macro_8hpp_source.html">이 파일의 소스 코드 페이지로 가기</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -124,6 +126,13 @@ $(document).ready(function(){initNavTree('clog_2common_2macro_8hpp.html',''); in
 <tr class="memitem:ac0ecfab9c033d2bcc0e123bdf4e764d9"><td class="memItemLeft" align="right" valign="top"><a id="ac0ecfab9c033d2bcc0e123bdf4e764d9" name="ac0ecfab9c033d2bcc0e123bdf4e764d9"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_I</b>(fmt, ...)&#160;&#160;&#160;::by::richLog(::by::errLv::INFO, __FILENAME__, __func__, __LINE__, fmt &quot;\n&quot;, ##__VA_ARGS__)</td></tr>
 <tr class="separator:ac0ecfab9c033d2bcc0e123bdf4e764d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862837f5771166743978a6d8f69fbf39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39">BY_E_SCOPE</a>(fmt, ...)</td></tr>
+<tr class="memdesc:a862837f5771166743978a6d8f69fbf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs scope entry and exit with execution time and depth visualization.  <a href="clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a862837f5771166743978a6d8f69fbf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0938f6b6e9471cd775ee95e0a532413e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clog_2common_2macro_8hpp.html#a0938f6b6e9471cd775ee95e0a532413e">BY_W_SCOPE</a>(fmt, ...)</td></tr>
+<tr class="separator:a0938f6b6e9471cd775ee95e0a532413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bbfa1bc2350832769021e2cb7693e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clog_2common_2macro_8hpp.html#ac0bbfa1bc2350832769021e2cb7693e2">BY_I_SCOPE</a>(fmt, ...)</td></tr>
+<tr class="separator:ac0bbfa1bc2350832769021e2cb7693e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a5261a95466d02505b3d8566197ce3"><td class="memItemLeft" align="right" valign="top"><a id="ae0a5261a95466d02505b3d8566197ce3" name="ae0a5261a95466d02505b3d8566197ce3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_DE</b>(fmt, ...)&#160;&#160;&#160;void()</td></tr>
 <tr class="separator:ae0a5261a95466d02505b3d8566197ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +142,15 @@ $(document).ready(function(){initNavTree('clog_2common_2macro_8hpp.html',''); in
 <tr class="memitem:af7f8213f3bcd4b37f2a05d7ea9cdfaa0"><td class="memItemLeft" align="right" valign="top"><a id="af7f8213f3bcd4b37f2a05d7ea9cdfaa0" name="af7f8213f3bcd4b37f2a05d7ea9cdfaa0"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_DI</b>(fmt, ...)&#160;&#160;&#160;void()</td></tr>
 <tr class="separator:af7f8213f3bcd4b37f2a05d7ea9cdfaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8f3325108c90cd657285feca3ad409"><td class="memItemLeft" align="right" valign="top"><a id="a2e8f3325108c90cd657285feca3ad409" name="a2e8f3325108c90cd657285feca3ad409"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_DE_SCOPE</b>(fmt, ...)&#160;&#160;&#160;void()</td></tr>
+<tr class="separator:a2e8f3325108c90cd657285feca3ad409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2d9becf81ed1ee76551e60e9b061a1"><td class="memItemLeft" align="right" valign="top"><a id="aec2d9becf81ed1ee76551e60e9b061a1" name="aec2d9becf81ed1ee76551e60e9b061a1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_DW_SCOPE</b>(fmt, ...)&#160;&#160;&#160;void()</td></tr>
+<tr class="separator:aec2d9becf81ed1ee76551e60e9b061a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc51f996ef3ba593edbbffb77995fa98"><td class="memItemLeft" align="right" valign="top"><a id="acc51f996ef3ba593edbbffb77995fa98" name="acc51f996ef3ba593edbbffb77995fa98"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_DI_SCOPE</b>(fmt, ...)&#160;&#160;&#160;void()</td></tr>
+<tr class="separator:acc51f996ef3ba593edbbffb77995fa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a429ca1c6e36600b33738c15cdadac06e"><td class="memItemLeft" align="right" valign="top"><a id="a429ca1c6e36600b33738c15cdadac06e" name="a429ca1c6e36600b33738c15cdadac06e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_SIDE_FUNC_3</b>(paramPtr,  expr,  ret)&#160;&#160;&#160;    { return paramPtr ? expr : ret; }</td></tr>
 <tr class="separator:a429ca1c6e36600b33738c15cdadac06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +190,132 @@ $(document).ready(function(){initNavTree('clog_2common_2macro_8hpp.html',''); in
 <div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;just message.&quot;</span>)</div>
 <div class="line">BY_I(&quot;with format=%x <span class="keywordtype">string</span>=%s&quot;, &amp;format, format.c_str())</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a862837f5771166743978a6d8f69fbf39" name="a862837f5771166743978a6d8f69fbf39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862837f5771166743978a6d8f69fbf39">&#9670;&nbsp;</a></span>BY_E_SCOPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BY_E_SCOPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>값:</b><div class="fragment"><div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();            \</div>
+<div class="line">        BY_E(<span class="stringliteral">&quot;▶  &quot;</span> fmt, ##__VA_ARGS__); \</div>
+<div class="line">        BY_END(scopeLog, [&amp;](nllong elapsed) { <a class="code hl_define" href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a>(<span class="stringliteral">&quot;◀  &quot;</span> fmt, ##__VA_ARGS__); });</div>
+<div class="ttc" id="aclassby_1_1line_html_a4edc878d49948fd15dc8bff7fcb88915"><div class="ttname"><a href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">by::line::incLv</a></div><div class="ttdeci">static void incLv()</div><div class="ttdoc">Increases the current depth level.</div><div class="ttdef"><b>Definition:</b> line.cpp:33</div></div>
+<div class="ttc" id="aclog_2common_2macro_8hpp_html_a39decaf05c8269cf9d21c83ff19014a4"><div class="ttname"><a href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a></div><div class="ttdeci">#define BY_E(fmt,...)</div><div class="ttdoc">Log macro: prints debug log on console and file.</div><div class="ttdef"><b>Definition:</b> macro.hpp:22</div></div>
+</div><!-- fragment -->
+<p>Logs scope entry and exit with execution time and depth visualization. </p>
+<p >Uses BY_END and scopeLog for RAII-based scope logging. Graph depth is automatically incremented on entry and decremented on exit. </p><dl class="section warning"><dt>경고</dt><dd>Arguments are evaluated twice. Avoid side-effect expressions. <div class="fragment"><div class="line"><span class="keywordtype">void</span> good(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line">    <a class="code hl_define" href="clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39">BY_E_SCOPE</a>(<span class="stringliteral">&quot;good id=%d&quot;</span>, <span class="keywordtype">id</span>);  <span class="comment">// OK</span></div>
+<div class="line">    <span class="comment">// ... work ...</span></div>
+<div class="line">    BY_I(<span class="stringliteral">&quot;hello log!&quot;</span>)</div>
+<div class="line">}</div>
+<div class="line">Outputs:</div>
+<div class="line">   E &lt;good#130&gt; ▶ good <span class="keywordtype">id</span>=123</div>
+<div class="line">   I &lt;good#131&gt; ┣ hello log!</div>
+<div class="line">   E &lt;good#130&gt; ◀ good <span class="keywordtype">id</span>=123</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> bad() {</div>
+<div class="line">    <a class="code hl_define" href="clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39">BY_E_SCOPE</a>(<span class="stringliteral">&quot;count=%d&quot;</span>, counter++);  <span class="comment">// WRONG: counter increments twice!</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclog_2common_2macro_8hpp_html_a862837f5771166743978a6d8f69fbf39"><div class="ttname"><a href="clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39">BY_E_SCOPE</a></div><div class="ttdeci">#define BY_E_SCOPE(fmt,...)</div><div class="ttdoc">Logs scope entry and exit with execution time and depth visualization.</div><div class="ttdef"><b>Definition:</b> macro.hpp:72</div></div>
+</div><!-- fragment --></dd></dl>
+<h1><a class="anchor" id="be"></a>
+careful when you use BY_?_SCOPE macro in 'if' block statement</h1>
+<p >as you can see below, it defines 'end' instance to catch when the scope ends. so if you use BY_E_SCOPE inside of block statement by expecting it works when the func ends, it won't work as you expected. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> foo() {</div>
+<div class="line">    <span class="keywordflow">if</span>(isVerbose) BY_I_SCOPE(<span class="stringliteral">&quot;okay, verbose mode is on.&quot;</span>);</div>
+<div class="line">    BY_I(<span class="stringliteral">&quot;hello&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >in above example, macro will expand like below, </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> foo() {</div>
+<div class="line">    <span class="keywordflow">if</span>(isVerbose)</div>
+<div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();</div>
+<div class="line">    <a class="code hl_define" href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a>(<span class="stringliteral">&quot;▶  okay, verbose mode is on.&quot;</span>);</div>
+<div class="line">    BY_END(scopeLog, ...., <span class="stringliteral">&quot;◀  okay, verbose mode is on.&quot;</span>)</div>
+<div class="line">    BY_I(&quot;hello&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >so the start and end of scope logs always printed. </p>
+
+</div>
+</div>
+<a id="ac0bbfa1bc2350832769021e2cb7693e2" name="ac0bbfa1bc2350832769021e2cb7693e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0bbfa1bc2350832769021e2cb7693e2">&#9670;&nbsp;</a></span>BY_I_SCOPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BY_I_SCOPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>값:</b><div class="fragment"><div class="line">        BY_I(<span class="stringliteral">&quot;▶  &quot;</span> fmt, ##__VA_ARGS__); <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">\</a></div>
+<div class="line"><a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">        ::by::line::incLv</a>();            \</div>
+<div class="line">        BY_END(scopeLog, [&amp;](nllong elapsed) { BY_I(<span class="stringliteral">&quot;◀  &quot;</span> fmt, ##__VA_ARGS__); });</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0938f6b6e9471cd775ee95e0a532413e" name="a0938f6b6e9471cd775ee95e0a532413e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0938f6b6e9471cd775ee95e0a532413e">&#9670;&nbsp;</a></span>BY_W_SCOPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BY_W_SCOPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>값:</b><div class="fragment"><div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();            \</div>
+<div class="line">        BY_W(<span class="stringliteral">&quot;▶  &quot;</span> fmt, ##__VA_ARGS__); \</div>
+<div class="line">        BY_END(scopeLog, [&amp;](nllong elapsed) { BY_W(<span class="stringliteral">&quot;◀  &quot;</span> fmt, ##__VA_ARGS__); });</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

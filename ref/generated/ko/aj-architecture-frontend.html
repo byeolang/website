@@ -1,0 +1,216 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>byeol: frontend 모듈 - CLI 인터페이스</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="../../assets/css/galmuri.css" />
+<script type="text/javascript" src="dynsections.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="byeol.css" rel="stylesheet" type="text/css"/>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<!-- extensions: -->
+<!--    fragement copy to clipboard: -->
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!--    paragraph linking: -->
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<!--    interactive toc: -->
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+<!-- end of extension -->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('aj-architecture-frontend.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">frontend 모듈 - CLI 인터페이스 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_ref_ko_aj_architecture_frontend"></a> frontend모듈은 Byeol 언어의 명령줄 인터페이스(CLI)를 제공합니다. 이 모듈은 core모듈의 기능들을 조합하여 사용자가 Byeol 프로그램을 실행할 수 있도록 합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md273"></a>
+cli 클래스 - Frontend의 핵심</h1>
+<p ><a class="el" href="structby_1_1cli.html">cli</a> 클래스는 frontend모듈의 핵심 클래스로, core모듈의 <a class="el" href="classby_1_1interpreter.html">interprete</a> 를 사용해서 코드를 파싱하고 검증하고 평가하는 일련의 과정들을 위해 적절한 클래스를 호출해서 제어합니다.</p>
+<p >즉, <a class="el" href="structby_1_1cli.html">cli</a> 는 뭔가 알고리즘을 만들어서 동작하는 클래스가 아니라 <b>이미 잘 짜여진 클래스들을 조합하는 역할</b>을 해요.</p>
+<p >파라메터로 <a class="el" href="structby_1_1cli.html">cli</a> 프로그램에 사용자가 입력한 인자를 받으며, 이를 적절히 파싱해서 추가로 명령을 수행합니다. 자세한 내용은 <code>flags</code> 폴더를 참조하세요.</p>
+<p ><b>핵심 알고리즘</b></p>
+<p >사용자가 파라메터로 flagArgs를 줘서 eval()을 호출하면 다음과 같이 실행됩니다:</p>
+<ol type="1">
+<li><code>interpreter</code>, <code>errReport</code>, <code>starter</code> 객체를 생성한다.</li>
+<li>interpreter, starter에 flag를 set한다. 이 <code>tworker</code>의 flag를 말하는 것으로, cli의 <code>flag</code>와 다른 것이다. 자세한 내용은 <a class="el" href="classby_1_1tworker.html">tworker</a> 를 참조.</li>
+<li>flagArgs를 파싱해서 사전 작업 수행 - flag 객체에 <code>take()</code> 함수를 호출해서 수행한다.</li>
+<li><a class="el" href="classby_1_1interpreter.html">interpreter</a> 를 수행한다.</li>
+<li>인터프리트 결과를 체크한다. 이상이 있으면 결과를 내보내고 종료한다.</li>
+<li>이상이 없으면 <a class="el" href="classby_1_1starter.html">starter</a> 에 검증된 AST를 넣고 실행한다.</li>
+<li><a class="el" href="classby_1_1starter.html">starter</a> 의 결과를 반환한다.</li>
+</ol>
+<hr  />
+<h1><a class="anchor" id="autotoc_md275"></a>
+flag 클래스 - 명령줄 플래그 처리</h1>
+<p >shell 기반 프로그램에서 흔히 볼 수 있는 플래그들을 처리하는 클래스예요.</p>
+<p >한가지 착각하기 쉬운 포인트는 이 클래스는 <code>--version</code>과 같은 플래그를 표현하는 클래스가 아니라 <b>그러한 플래그가 존재하는지, 존재한다면 어떤 동작을 해야 하는지를 담당</b>한다는 것입니다.</p>
+<p ><b>Flag의 설명</b></p>
+<p >각 <a class="el" href="classby_1_1flag.html">flag</a> 는 자신의 이름 뿐만 아니라 어떠한 기능인지 description을 정의해두고 있습니다. 이들은 <code>helpFlag</code>에 의해서 사용됩니다.</p>
+<p ><b>정규식에 의한 패턴매칭</b></p>
+<p >각 <a class="el" href="classby_1_1flag.html">flag</a> 클래스는, 자신이 찾고자 하는 패턴이 정해져 있습니다.</p>
+<p >예를들어 <code>verFlag</code>는 <code>--version</code>이라는 문자열이 프로그램 인자로 들어와 있는지를 찾아, 들어와 있을 경우 <code>buildFeature</code>로부터 version 정보를 가져와 출력합니다.</p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// -- verFlag.cpp</div>
+<div class="line">const strings&amp; verFlag::_getRegExpr() const {</div>
+<div class="line">    static strings inner{&quot;^\\--version$&quot;}; // 이 정규식이 매치되면, _onTake()가 실행됩니다.</div>
+<div class="line">    return inner;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">me::res verFlag::_onTake(const flagArgs&amp; tray, cli&amp; c, interpreter&amp; ip, starter&amp; s) const {</div>
+<div class="line">    std::cout &lt;&lt; &quot;🌟 &#39;byeol&#39; &quot; &lt;&lt; buildFeature::version::get() &lt;&lt; &quot;\n&quot;</div>
+<div class="line">              &lt;&lt; &quot;Built on &quot; &lt;&lt; buildFeature::date::get() &lt;&lt; &quot; (build &quot; &lt;&lt; buildFeature::version::getBuildCount()</div>
+<div class="line">              &lt;&lt; &quot;, git &quot; &lt;&lt; buildFeature::version::getCommitHash() &lt;&lt; &quot;, &quot; &lt;&lt; buildFeature::config::getName()</div>
+<div class="line">              &lt;&lt; &quot;, &quot; &lt;&lt; buildFeature::platform::getArchBits() &lt;&lt; &quot;-bit)\n&quot;</div>
+<div class="line">              &lt;&lt; &quot;© 2010-&quot; &lt;&lt; buildFeature::date::getYear()</div>
+<div class="line">              &lt;&lt; &quot; Taehun Lee(kniz) and contributors. All rights reserved.\n&quot;;</div>
+<div class="line"> </div>
+<div class="line">    return EXIT_PROGRAM;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >이 동작은 <a class="el" href="classby_1_1flag.html">flag</a> 의 <code>take()</code>가 호출되면 파생클래스의 <code>_getRegExpr()</code>에 정의해둔 정규식 표현으로 각 <a class="el" href="classby_1_1flag.html">flag</a> 객체가 원하는 패턴을 찾는 형태로 동작합니다. 정규식으로 찾기 때문에 flag 간 순서는 무시됩니다.</p>
+<p >또한 정규식 패턴을 정의할 때는 여러개 패턴을 정의할 수 있습니다:</p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// -- logStructureFlag.cpp</div>
+<div class="line">const strings&amp; me::_getRegExpr() const {</div>
+<div class="line">    static strings inner{&quot;^\\-S$&quot;, &quot;^\\--show-structure$&quot;};</div>
+<div class="line">    return inner;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">me::res me::_onTake(const flagArgs&amp; tray, cli&amp; c, interpreter&amp; ip, starter&amp; s) const {</div>
+<div class="line">    ip.addFlag(interpreter::LOG_STRUCTURE);</div>
+<div class="line">    s.addFlag(starter::LOG_STRUCTURE);</div>
+<div class="line">    return MATCH;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >위는 <code>-S</code> 혹은 <code>--show-structure</code> 둘 중 하나라도 매칭되면, 파싱된 AST의 구조와 프레임 정보를 로깅하도록 플래그를 설정합니다.</p>
+<p ><b>복수의 flag 인자를 consume하기</b></p>
+<p >위에서 예로 들었던 <a class="el" href="classby_1_1ver_flag.html">verFlag</a> 를 다시 봅시다. <code>--version</code>이라는 문자열이 프로그램 인자에 있는 경우, 버전을 출력합니다. 단, 이때 또 다시 <a class="el" href="classby_1_1ver_flag.html">verFlag</a> 가 동작하지 않도록, 동작을 마치면 <code>--version</code>이라는 문자열을 flagArgs 에서 제거합니다.</p>
+<p >그러면 다음으로 <code>bufferSrcFlag</code>를 봅시다. 다음과 같이 사용합니다:</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol --script &quot;main() void: print(&quot;wow!)&quot;</div>
+</div><!-- fragment --><p >이 명령은 파일 없이 byeol 코드를 직접 실행합니다. 위 한 줄 코드를 풀어쓰면:</p>
+<div class="fragment"><div class="line">@style: language-byeol verified</div>
+<div class="line">main() void</div>
+<div class="line">    print(&quot;wow!&quot;)</div>
+</div><!-- fragment --><p >실행 결과는 <code>wow!</code>가 화면에 출력됩니다.</p>
+<p >이처럼 어떤 <a class="el" href="classby_1_1flag.html">flag</a> 는 패턴과 일치하는 부분만을 consume하지 않습니다. <code>--script</code>을 찾으면 거기서 추가적으로 1개의 인자를 더 뜯어내서 <code>bufferSrcFlag::_onTake()</code>로 전달해 함수의 본문이 _onTake()로 전달되도록 해야 합니다.</p>
+<p >각 <a class="el" href="classby_1_1flag.html">flag</a> 의 파생클래스는 원할 경우, <code>getArgCount()</code>를 오버라이드해서 몇개의 인자를 더 뜯어낼 것인지를 명시합니다:</p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">// -- bufferSrcFlag.cpp</div>
+<div class="line">ncnt me::getArgCount() const { return 1; } // 1개 더 뜯을 거임.</div>
+<div class="line"> </div>
+<div class="line">me::res me::_onTake(const flagArgs&amp; tray, cli&amp; c, interpreter&amp; ip, starter&amp; s) const {</div>
+<div class="line">    // main()의 argc, argv를 잘 알고 있을 것이다. 그것과 비슷하게,</div>
+<div class="line">    // 매칭된 문자열이 tray에 담겨있다.</div>
+<div class="line">    // 즉 tray[0]은 &quot;--script&quot;</div>
+<div class="line">    //    tray[1]은 &quot;main() void: print(\&quot;wow\&quot;)&quot;</div>
+<div class="line">    // 가 들어있게 된다.</div>
+<div class="line">    if(tray.size() &lt; 2) return BY_E(&quot;invalid flagArgument size &lt; 2&quot;), EXIT_PROGRAM;</div>
+<div class="line"> </div>
+<div class="line">    ip.addSupply(*new bufSupply(tray[1]));</div>
+<div class="line">    return MATCH;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p ><b>중단 가능한 flag</b></p>
+<p ><a class="el" href="classby_1_1buffer_src_flag.html">bufferSrcFlag</a> 는 프로그램 시작 전에 사전 작업을 필요로 하는 <a class="el" href="classby_1_1flag.html">flag</a> 입니다. 반면 <a class="el" href="classby_1_1ver_flag.html">verFlag</a> 같은 경우는 일단 매칭이 되면 어떠한 인터프리팅도 하지 않고 그대로 버전을 출력하고 종료합니다. (대다수 프로그램이 이렇게 동작한다는 걸 알고 있을 것입니다.)</p>
+<p >이처럼 <a class="el" href="classby_1_1flag.html">flag</a> 의 패턴이 매칭이 되면 동작을 하고 바로 종료하고 싶을 때는, <code>_onTake()</code>를 오버라이딩할 때 반환값을 <b>EXIT_PROGRAM</b>으로 줍니다. <a class="el" href="classby_1_1buffer_src_flag.html">bufferSrcFlag</a> 처럼 계속 동작을 하는 경우에는 <b>MATCH</b>로 반환합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md277"></a>
+긴 여정을 함께하느라 고생하셨습니다.</h1>
+<p >지금까지 byeol 언어의 아키텍처, 설계 그리고 핵심 클래스들을 설명했습니다. 가급적 예제를 직접 넣긴 했지만 그래도 완전히 이해하기에는 많이 부족했을 거라 생각되네요. 역시 좀 더 깊이 이해하고 싶다면, 실제 구현코드와 함께 <code>test</code> 모듈의 unit test 코드들을 직접 읽어보는 것을 강력히 권장합니다.</p>
+<p >각 모듈별로 작성된 테스트 케이스들은 실제 사용 예제를 담고 있으며, 특정 기능이 어떻게 구체적으로 동작하는지 가장 명확하게 보여줍니다. 코드 기여하기 전에 관련 테스트들을 먼저 살펴보시면 이해에 큰 도움이 될 것입니다.</p>
+<p >&ndash; Nov 2025, kniz</p>
+<hr  />
+<p ><b>다음 문서</b>: <a class="el" href="ak-testing-guide.html">테스트 케이스 작성 가이드</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+</body>
+</html>

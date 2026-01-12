@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -162,6 +163,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1errorable.html">by::errorable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for objects that can report errors.  <a href="classby_1_1errorable.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1line.html">by::line</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages hierarchical depth visualization for logging and tracing.  <a href="classby_1_1line.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tmay.html">by::tmay&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional value wrapper for error indication without exceptions.  <a href="classby_1_1tmay.html#details">More...</a><br /></td></tr>
@@ -338,7 +342,7 @@ Problem</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> _cache[key];</div>
 <div class="line">}</div>
-<div class="ttc" id="aclog_2common_2macro_8hpp_html_a39decaf05c8269cf9d21c83ff19014a4"><div class="ttname"><a href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a></div><div class="ttdeci">#define BY_E(fmt,...)</div><div class="ttdoc">Log macro: prints debug log on console and file.</div><div class="ttdef"><b>Definition:</b> macro.hpp:20</div></div>
+<div class="ttc" id="aclog_2common_2macro_8hpp_html_a39decaf05c8269cf9d21c83ff19014a4"><div class="ttname"><a href="clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a></div><div class="ttdeci">#define BY_E(fmt,...)</div><div class="ttdoc">Log macro: prints debug log on console and file.</div><div class="ttdef"><b>Definition:</b> macro.hpp:22</div></div>
 </div><!-- fragment --><p >The WHEN macro solves this by explicitly marking early-return cases. It is used exclusively for early-return patterns. Additionally, since over 90% of early-returns involve logging an error and returning an error value, WHEN supports chaining to express both operations in a single line.</p>
 <h1><a class="anchor" id="solution"></a>
 Solution</h1>

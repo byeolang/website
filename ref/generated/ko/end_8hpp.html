@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -124,12 +125,24 @@ $(document).ready(function(){initNavTree('end_8hpp.html',''); initResizable(); }
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 매크로</h2></td></tr>
-<tr class="memitem:ab465a8d11aa610349b7dc4999cf3a656"><td class="memItemLeft" align="right" valign="top"><a id="ab465a8d11aa610349b7dc4999cf3a656" name="ab465a8d11aa610349b7dc4999cf3a656"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_BLOCK</b>(blockStmt)&#160;&#160;&#160;auto __defer__##__COUNTER__ = end([&amp;]() blockStmt)</td></tr>
-<tr class="separator:ab465a8d11aa610349b7dc4999cf3a656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0868be2c429b9670da768c4ad52eb575"><td class="memItemLeft" align="right" valign="top"><a id="a0868be2c429b9670da768c4ad52eb575" name="a0868be2c429b9670da768c4ad52eb575"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END</b>(stmt)&#160;&#160;&#160;auto __defer__##__COUNTER__ = end([&amp;]() { stmt; })</td></tr>
-<tr class="separator:a0868be2c429b9670da768c4ad52eb575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23349d392c2651c7cc7285a46093432f"><td class="memItemLeft" align="right" valign="top"><a id="a23349d392c2651c7cc7285a46093432f" name="a23349d392c2651c7cc7285a46093432f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_BLOCK_2</b>(__class,  blockStmt)&#160;&#160;&#160;auto BY_CONCAT(__defer__, __COUNTER__) = __class(blockStmt)</td></tr>
+<tr class="separator:a23349d392c2651c7cc7285a46093432f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ed682897e713f4269287640aac94f8"><td class="memItemLeft" align="right" valign="top"><a id="a37ed682897e713f4269287640aac94f8" name="a37ed682897e713f4269287640aac94f8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_BLOCK_1</b>(blockStmt)&#160;&#160;&#160;BY_END_BLOCK_2(end, [&amp;]() blockStmt)</td></tr>
+<tr class="separator:a37ed682897e713f4269287640aac94f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6924c8a07aa9ba457d5e7b16816ab6"><td class="memItemLeft" align="right" valign="top"><a id="a9d6924c8a07aa9ba457d5e7b16816ab6" name="a9d6924c8a07aa9ba457d5e7b16816ab6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_BLOCK</b>(...)&#160;&#160;&#160;<a class="el" href="group__indep.html#ga898e125d079d4eb8d0b9f339c0fa259f">BY_OVERLOAD</a>(BY_END_BLOCK, __VA_ARGS__)</td></tr>
+<tr class="separator:a9d6924c8a07aa9ba457d5e7b16816ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fae915cd0a4d4ffda5d1e0117879162"><td class="memItemLeft" align="right" valign="top"><a id="a6fae915cd0a4d4ffda5d1e0117879162" name="a6fae915cd0a4d4ffda5d1e0117879162"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_2</b>(__class,  stmt)&#160;&#160;&#160;auto BY_CONCAT(__defer__, __COUNTER__) = __class(stmt)</td></tr>
+<tr class="separator:a6fae915cd0a4d4ffda5d1e0117879162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ff6f6ae549732a0804a788a6157d36"><td class="memItemLeft" align="right" valign="top"><a id="a66ff6f6ae549732a0804a788a6157d36" name="a66ff6f6ae549732a0804a788a6157d36"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END_1</b>(stmt)&#160;&#160;&#160;BY_END_2(end, ([&amp;]() { stmt; }))</td></tr>
+<tr class="separator:a66ff6f6ae549732a0804a788a6157d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f5ced2aac1936f47bb9353e045d865"><td class="memItemLeft" align="right" valign="top"><a id="a99f5ced2aac1936f47bb9353e045d865" name="a99f5ced2aac1936f47bb9353e045d865"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BY_END</b>(...)&#160;&#160;&#160;<a class="el" href="group__indep.html#ga898e125d079d4eb8d0b9f339c0fa259f">BY_OVERLOAD</a>(BY_END, __VA_ARGS__)</td></tr>
+<tr class="separator:a99f5ced2aac1936f47bb9353e045d865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

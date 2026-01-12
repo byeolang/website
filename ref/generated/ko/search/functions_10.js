@@ -13,14 +13,13 @@ var searchData=
   ['setorigin_10',['setOrigin',['../classby_1_1param.html#a8d2ec5c9052adc25218750933691e5be',1,'by::param']]],
   ['setpath_11',['setPath',['../classby_1_1file_log_stream.html#ac5a80015b2cbeff0afd8568df80ba822',1,'by::fileLogStream']]],
   ['setprev_12',['setPrev',['../classby_1_1enables_zone.html#ab15830fd79d375b7067163c1dc903e72',1,'by::enablesZone']]],
-  ['setreport_13',['setReport',['../classby_1_1autoslot.html#aa4ac999ca868249c5d7322f054a1744b',1,'by::autoslot']]],
-  ['setret_14',['setRet',['../classby_1_1frame.html#a990636d0626c72b90533641cf2bd8e9d',1,'by::frame']]],
-  ['setreturnable_15',['setReturnable',['../classby_1_1visitor.html#a30e01f0ab6bf62cb9bb5a75e3a70c728',1,'by::visitor']]],
-  ['setscan_16',['setScan',['../classby_1_1parser.html#a111606c5231246d600574b78e3e32e6c',1,'by::parser::setScan()'],['../classby_1_1stela_parser.html#a14a128112208d683b787a5e94f5291bc',1,'by::stelaParser::setScan()']]],
-  ['stela_17',['stela',['../classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163',1,'by::stela']]],
-  ['stepbackward_18',['stepBackward',['../classby_1_1cp_iter.html#a90054a273758c9e9fa4d744ac439ab77',1,'by::cpIter']]],
-  ['stepforward_19',['stepForward',['../classnarr_iteration.html#a58ef53cbe1221dd4560a482033f0fc55',1,'narrIteration::stepForward()'],['../classnmap_iteration.html#a872350a8c8fee2a00e0b8d2bd856b19f',1,'nmapIteration::stepForward()'],['../classnseq_iteration.html#a76ea358588e27c62f8d99077a4f13c28',1,'nseqIteration::stepForward()'],['../classby_1_1cp_iter.html#ab1311b55812e45195bf668ee4f71e5b7',1,'by::cpIter::stepForward()']]],
-  ['suball_20',['subAll',['../classby_1_1node.html#a331ff4f9b78b53cb893dfaaa6d9645de',1,'by::node']]],
-  ['subs_21',['subs',['../classby_1_1node.html#a5e1d3547d21b47a47734d0a13959cb60',1,'by::node']]],
-  ['substr_22',['substr',['../classby_1_1n_str.html#a76eee990d666244b7873bf19e66e39c5',1,'by::nStr']]]
+  ['setret_13',['setRet',['../classby_1_1frame.html#a990636d0626c72b90533641cf2bd8e9d',1,'by::frame']]],
+  ['setreturnable_14',['setReturnable',['../classby_1_1visitor.html#a30e01f0ab6bf62cb9bb5a75e3a70c728',1,'by::visitor']]],
+  ['setscan_15',['setScan',['../classby_1_1parser.html#a111606c5231246d600574b78e3e32e6c',1,'by::parser::setScan()'],['../classby_1_1stela_parser.html#a14a128112208d683b787a5e94f5291bc',1,'by::stelaParser::setScan()']]],
+  ['stela_16',['stela',['../classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163',1,'by::stela']]],
+  ['stepbackward_17',['stepBackward',['../classby_1_1cp_iter.html#a90054a273758c9e9fa4d744ac439ab77',1,'by::cpIter']]],
+  ['stepforward_18',['stepForward',['../classnarr_iteration.html#a58ef53cbe1221dd4560a482033f0fc55',1,'narrIteration::stepForward()'],['../classnmap_iteration.html#a872350a8c8fee2a00e0b8d2bd856b19f',1,'nmapIteration::stepForward()'],['../classnseq_iteration.html#a76ea358588e27c62f8d99077a4f13c28',1,'nseqIteration::stepForward()'],['../classby_1_1cp_iter.html#ab1311b55812e45195bf668ee4f71e5b7',1,'by::cpIter::stepForward()']]],
+  ['suball_19',['subAll',['../classby_1_1node.html#a331ff4f9b78b53cb893dfaaa6d9645de',1,'by::node']]],
+  ['subs_20',['subs',['../classby_1_1node.html#a5e1d3547d21b47a47734d0a13959cb60',1,'by::node']]],
+  ['substr_21',['substr',['../classby_1_1n_str.html#a76eee990d666244b7873bf19e66e39c5',1,'by::nStr']]]
 ];

@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -504,6 +505,17 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a19bd539f0dd9f2628c8f2cd9a3ca79f7"><td class="memItemLeft" align="right" valign="top"><a id="a19bd539f0dd9f2628c8f2cd9a3ca79f7" name="a19bd539f0dd9f2628c8f2cd9a3ca79f7"></a>
 static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_NAME</b> = &quot;@lambda&quot;</td></tr>
 <tr class="separator:a19bd539f0dd9f2628c8f2cd9a3ca79f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fdecdb06fa75e4c7f4565ffb4d6579"><td class="memItemLeft" align="right" valign="top"><a id="a21fdecdb06fa75e4c7f4565ffb4d6579" name="a21fdecdb06fa75e4c7f4565ffb4d6579"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CTOR_NAME</b> = &quot;@ctor&quot;</td></tr>
+<tr class="separator:a21fdecdb06fa75e4c7f4565ffb4d6579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feca494e1f3b3c5d678210a69c03ffc"><td class="memItemLeft" align="right" valign="top"><a id="a1feca494e1f3b3c5d678210a69c03ffc" name="a1feca494e1f3b3c5d678210a69c03ffc"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GETTER_NAME</b> = &quot;@get&quot;</td></tr>
+<tr class="separator:a1feca494e1f3b3c5d678210a69c03ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4d2667ed150371efdac1cbcfa54d4c"><td class="memItemLeft" align="right" valign="top"><a id="adc4d2667ed150371efdac1cbcfa54d4c" name="adc4d2667ed150371efdac1cbcfa54d4c"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>SETTER_NAME</b> = &quot;@set&quot;</td></tr>
+<tr class="separator:adc4d2667ed150371efdac1cbcfa54d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49912e515d081da76a07d63ab0f80f4"><td class="memItemLeft" align="right" valign="top">static const std::array&lt; std::string, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1func.html#aa49912e515d081da76a07d63ab0f80f4">SPECIAL_FUNC_NAMES</a></td></tr>
+<tr class="separator:aa49912e515d081da76a07d63ab0f80f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classby_1_1base_func"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classby_1_1base_func')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classby_1_1base_func.html">by::baseFunc</a></td></tr>
 <tr class="memitem:a30c65617b7e9a71051844a88ed0fa319 inherit pub_static_attribs_classby_1_1base_func"><td class="memItemLeft" align="right" valign="top"><a id="a30c65617b7e9a71051844a88ed0fa319" name="a30c65617b7e9a71051844a88ed0fa319"></a>
 static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ME</b> = &quot;me&quot;</td></tr>
@@ -581,7 +593,7 @@ static <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td>
 <h1><a class="anchor" id="function_execution"></a>
 Function Execution</h1>
 <p >When a func is evaluated:</p><ol type="1">
-<li>Creates a new <a class="el" href="classby_1_1frame.html">frame</a> and registers it with <a class="el" href="classby_1_1thread.html">thread</a></li>
+<li>Creates a new <a class="el" href="classby_1_1frame.html">frame</a> and registers it with <a class="el" href="classby_1_1autoslot.html#thread">is required to run an autoslot</a></li>
 <li>Binds arguments to parameters in the frame's scope</li>
 <li>Executes the <a class="el" href="classby_1_1block_expr.html">blockExpr</a> body</li>
 <li>Processes return value and cleans up the frame</li>
@@ -831,6 +843,31 @@ Abstract Functions</h1>
 
 <p>Reimplemented from <a class="el" href="classby_1_1base_func.html">by::baseFunc</a>.</p>
 
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa49912e515d081da76a07d63ab0f80f4" name="aa49912e515d081da76a07d63ab0f80f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49912e515d081da76a07d63ab0f80f4">&#9670;&nbsp;</a></span>SPECIAL_FUNC_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt;std::string, 4&gt; by::func::SPECIAL_FUNC_NAMES</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {LAMBDA_NAME, CTOR_NAME, GETTER_NAME,</div>
+<div class="line">            SETTER_NAME}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

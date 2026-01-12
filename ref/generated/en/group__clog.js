@@ -31,6 +31,7 @@ var group__clog =
       [ "setFilters", "classby_1_1logger.html#a67776480bd4461e1f3301f73bda384b2", null ]
     ] ],
     [ "by::noWrap< T >", "structby_1_1no_wrap.html", null ],
+    [ "by::scopeLog", "classby_1_1scope_log.html", null ],
     [ "by::consoleStream", "classby_1_1console_stream.html", [
       [ "logBypass", "classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b", null ]
     ] ],

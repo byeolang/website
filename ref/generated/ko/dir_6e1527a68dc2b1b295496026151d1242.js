@@ -7,6 +7,7 @@ var dir_6e1527a68dc2b1b295496026151d1242 =
     [ "end.hpp", "end_8hpp.html", null ],
     [ "errLv.hpp", "err_lv_8hpp.html", null ],
     [ "errorable.hpp", "errorable_8hpp.html", null ],
+    [ "line.hpp", "line_8hpp.html", null ],
     [ "platformAPI.hpp", "platform_a_p_i_8hpp.html", "platform_a_p_i_8hpp" ],
     [ "tmay.hpp", "tmay_8hpp.html", "tmay_8hpp" ],
     [ "tmedium.hpp", "tmedium_8hpp.html", null ],

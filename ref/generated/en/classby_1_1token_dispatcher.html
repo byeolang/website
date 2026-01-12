@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
@@ -137,7 +138,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Token queue management for parser. </p>
-<p >Manages a queue of tokens for lookahead and token reordering during parsing. Provides FIFO token dispatch with front insertion capability. </p>
+<p >Manages a queue of tokens for lookahead and token reordering during parsing. Provides FIFO token dispatch with front insertion capability.</p>
+<h1><a class="anchor" id="you"></a>
+must return token in your rule after using dispatcher</h1>
+<p >if you don't return a token in flex file, dispatcher won't work. it's by implementation of flex. for example, </p><div class="fragment"><div class="line">yourRule {</div>
+<div class="line">    PS.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
+<div class="line">    <span class="comment">// you didn&#39;t return here because you want to feed &#39;+&#39; back.</span></div>
+<div class="line">    <span class="comment">// however, by implementation of flex, there is no chance</span></div>
+<div class="line">    <span class="comment">// to trigger tokenDispatcher.</span></div>
+<div class="line">}</div>
+<div class="line">yourSecondRule {</div>
+<div class="line">    PS.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> STRVAL; <span class="comment">// you returns some token. now next token will be &#39;+&#39;.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="it"></a>
+only takes token, not character</h1>
+<p >you may confuse that this class is just like <code>unput()</code>, but it's totally different. unput() affects stream itself. however, tokenDispatchers skips lexer and returns determined token forcely, not a single character. for example, </p><div class="fragment"><div class="line"><span class="keyword">auto</span>&amp; disp = PS.getDispatcher();</div>
+<div class="line">disp.add(<span class="charliteral">&#39;n&#39;</span>);</div>
+<div class="line">disp.add(<span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line">disp.add(<span class="charliteral">&#39;m&#39;</span>);</div>
+<div class="line">disp.add(<span class="charliteral">&#39;e&#39;</span>);</div>
+</div><!-- fragment --><p> you may think that above codes exactly same to &lsquo;unput('e&rsquo;); unput('m'); ....`. but that's not true. if you use unput(), lexer will judge the token as STRVAL which contains string value, "name". however, above codes, returns 'n' token individually to parser which makes it fail to continue. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac08e499a3917cd55bb0ec98747effa90" name="ac08e499a3917cd55bb0ec98747effa90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac08e499a3917cd55bb0ec98747effa90">&#9670;&nbsp;</a></span>pop()</h2>

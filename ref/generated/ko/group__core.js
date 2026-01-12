@@ -12,8 +12,7 @@ var group__core =
     [ "by::autoslot", "classby_1_1autoslot.html", [
       [ "_invalidate", "classby_1_1autoslot.html#ab2bbc64cb982237737668d53165a4997", null ],
       [ "getPack", "classby_1_1autoslot.html#ab836f025ea6a7d158e48cf8c6e89b2d9", null ],
-      [ "rel", "classby_1_1autoslot.html#a1144881a1256d6fd289636d07f92caba", null ],
-      [ "setReport", "classby_1_1autoslot.html#aa4ac999ca868249c5d7322f054a1744b", null ]
+      [ "rel", "classby_1_1autoslot.html#a1144881a1256d6fd289636d07f92caba", null ]
     ] ],
     [ "by::baseFunc", "classby_1_1base_func.html", [
       [ "getParams", "classby_1_1base_func.html#a0831818b9fea50494e5fff9426f96b2e", null ],
@@ -206,7 +205,7 @@ var group__core =
     ] ],
     [ "by::tbridgeClosure< Ret, T, Marshaling, Args >", "classby_1_1tbridge_closure.html", null ],
     [ "by::tbridgeClosure< void, T, Marshaling, Args... >", "classby_1_1tbridge_closure_3_01void_00_01_t_00_01_marshaling_00_01_args_8_8_8_01_4.html", null ],
-    [ "by::tbridgeCtor< T, Args >", "classby_1_1tbridge_ctor.html", null ],
+    [ "by::tbridgeCtor< T, Marshaling, Args >", "classby_1_1tbridge_ctor.html", null ],
     [ "by::tbaseBridgeFunc< Ret, T, Marshaling, Args >", "classby_1_1tbase_bridge_func.html", null ],
     [ "by::tbridger< T, isBaseObj >", "classby_1_1tbridger.html", null ],
     [ "iter", "classiter.html", [
@@ -355,6 +354,7 @@ var group__core =
       [ "_onEndWork", "classby_1_1parser.html#a2c65085b53d53162c979afa9969e1034", null ],
       [ "_onWork", "classby_1_1parser.html#a5175321205e6e612594a80348c8346cb", null ],
       [ "_prepare", "classby_1_1parser.html#addcf80deb87e1b80db57480a03462094", null ],
+      [ "getOpenStrToken", "classby_1_1parser.html#a06f0c7d7638a086e4ff3afa82b6759d7", null ],
       [ "getSubPack", "classby_1_1parser.html#a6db028bb170fc622e012ff80c08b4558", null ],
       [ "onDedent", "classby_1_1parser.html#a1b1c47a63550fa9c235afc171ef5bf78", null ],
       [ "onEndFunc", "classby_1_1parser.html#a4b04d156df1721fd4094e31faa6a86ee", null ],
@@ -366,6 +366,7 @@ var group__core =
       [ "onScan", "classby_1_1parser.html#acbc0f62c3b21da42fdabef0ed5f4f8e7", null ],
       [ "onScanUnexpected", "classby_1_1parser.html#acc9168a8f5b7183cacbc91673bfa82e9", null ],
       [ "onSrcArea", "classby_1_1parser.html#a821207dfefc5f268f8b0dd41afd845c0", null ],
+      [ "onTokenBeginStr", "classby_1_1parser.html#a04acb2126d3e158cef0d8cd294341d3a", null ],
       [ "onTokenColon", "classby_1_1parser.html#ac9015b56982ef9aa4a9098dd4a1b4800", null ],
       [ "onTokenComma", "classby_1_1parser.html#ae72c80c30ee2a7a86bd423953d558ef8", null ],
       [ "onTokenEndOfBraces", "classby_1_1parser.html#ac53999dfca7615c3671860bc92e28a72", null ],
