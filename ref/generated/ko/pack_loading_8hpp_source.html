@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/loader/pack/packLoading.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,11 +70,16 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('pack_loading_8hpp_source.html',''); initResizable(); });
+$(function(){initNavTree('pack_loading_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +106,16 @@ $(document).ready(function(){initNavTree('pack_loading_8hpp_source.html',''); in
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -123,10 +136,11 @@ $(document).ready(function(){initNavTree('pack_loading_8hpp_source.html',''); in
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">struct </span>manifest;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">typedef</span> tnchain&lt;std::string, slot&gt; slotChain;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classby_1_1pack_loading.html">   20</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1pack_loading.html">packLoading</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1instance.html">instance</a>, <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1pack_makable.html">packMakable</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        BY(ADT(<a class="code hl_class" href="classby_1_1pack_loading.html">packLoading</a>, <a class="code hl_class" href="classby_1_1instance.html">instance</a>))</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        BY(<a class="code hl_struct" href="structby_1_1no_wrap.html">ADT</a>(<a class="code hl_class" href="classby_1_1pack_loading.html">packLoading</a>, <a class="code hl_class" href="classby_1_1instance.html">instance</a>))</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">typedef</span> nbool (me::*packEvent)(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1tnchain.html">slotChain</a>&amp;);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">typedef</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> (me::*packEvent)(<span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">slotChain</a>&amp;);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> addPath(<span class="keyword">const</span> std::string&amp; filePath);</div>
@@ -142,15 +156,16 @@ $(document).ready(function(){initNavTree('pack_loading_8hpp_source.html',''); in
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::vector&lt;std::string&gt; _paths;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">typedef</span> std::vector&lt;packLoading*&gt; packLoadings;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="ttc" id="aclassby_1_1instance_html"><div class="ttname"><a href="classby_1_1instance.html">by::instance</a></div><div class="ttdoc">Base class for all managed instances in memlite system</div><div class="ttdef"><b>Definition:</b> instance.hpp:41</div></div>
-<div class="ttc" id="aclassby_1_1pack_loading_html"><div class="ttname"><a href="classby_1_1pack_loading.html">by::packLoading</a></div><div class="ttdoc">Base class for pack loading strategies</div><div class="ttdef"><b>Definition:</b> packLoading.hpp:20</div></div>
-<div class="ttc" id="aclassby_1_1pack_makable_html"><div class="ttname"><a href="classby_1_1pack_makable.html">by::packMakable</a></div><div class="ttdoc">Interface for pack creation and verification</div><div class="ttdef"><b>Definition:</b> packMakable.hpp:21</div></div>
-<div class="ttc" id="aclassby_1_1tnchain_html"><div class="ttname"><a href="classby_1_1tnchain.html">by::tnchain</a></div><div class="ttdef"><b>Definition:</b> tnchain.hpp:11</div></div>
+<div class="ttc" id="aclassby_1_1instance_html"><div class="ttname"><a href="classby_1_1instance.html">by::instance</a></div><div class="ttdoc">Base class for all managed instances in memlite system</div><div class="ttdef"><b>Definition</b> instance.hpp:41</div></div>
+<div class="ttc" id="aclassby_1_1pack_loading_html"><div class="ttname"><a href="classby_1_1pack_loading.html">by::packLoading</a></div><div class="ttdoc">Base class for pack loading strategies</div><div class="ttdef"><b>Definition</b> packLoading.hpp:20</div></div>
+<div class="ttc" id="aclassby_1_1pack_makable_html"><div class="ttname"><a href="classby_1_1pack_makable.html">by::packMakable</a></div><div class="ttdoc">Interface for pack creation and verification</div><div class="ttdef"><b>Definition</b> packMakable.hpp:21</div></div>
 <div class="ttc" id="aobj_8hpp_html"><div class="ttname"><a href="obj_8hpp.html">obj.hpp</a></div></div>
 <div class="ttc" id="apack_makable_8hpp_html"><div class="ttname"><a href="pack_makable_8hpp.html">packMakable.hpp</a></div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 <div class="ttc" id="atnarr_8hpp_html"><div class="ttname"><a href="tnarr_8hpp.html">tnarr.hpp</a></div></div>
 <div class="ttc" id="atnchain_8hpp_html"><div class="ttname"><a href="tnchain_8hpp.html">tnchain.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

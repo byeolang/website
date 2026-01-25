@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::allocator 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1allocator.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1allocator.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1allocator.html',''); initRe
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,7 +122,7 @@ $(document).ready(function(){initNavTree('classby_1_1allocator.html',''); initRe
 <div class="contents">
 
 <p>Abstract allocator interface for memory management  
- <a href="classby_1_1allocator.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="allocator_8hpp_source.html">allocator.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -132,56 +140,56 @@ by::allocator에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a3166f6f1bb9bf5db1c253478f3c0fed9"><td class="memItemLeft" align="right" valign="top"><a id="a3166f6f1bb9bf5db1c253478f3c0fed9" name="a3166f6f1bb9bf5db1c253478f3c0fed9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b> (ncnt blksize=1)</td></tr>
+<tr class="memitem:a3166f6f1bb9bf5db1c253478f3c0fed9" id="r_a3166f6f1bb9bf5db1c253478f3c0fed9"><td class="memItemLeft" align="right" valign="top"><a id="a3166f6f1bb9bf5db1c253478f3c0fed9" name="a3166f6f1bb9bf5db1c253478f3c0fed9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b> (ncnt <a class="el" href="structby_1_1no_wrap.html">blksize</a>=1)</td></tr>
 <tr class="separator:a3166f6f1bb9bf5db1c253478f3c0fed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae288acc7adf77302f35a85c0e0392e21"><td class="memItemLeft" align="right" valign="top"><a id="ae288acc7adf77302f35a85c0e0392e21" name="ae288acc7adf77302f35a85c0e0392e21"></a>
-virtual void *&#160;</td><td class="memItemRight" valign="bottom"><b>new1</b> ()=0</td></tr>
+<tr class="memitem:ae288acc7adf77302f35a85c0e0392e21" id="r_ae288acc7adf77302f35a85c0e0392e21"><td class="memItemLeft" align="right" valign="top"><a id="ae288acc7adf77302f35a85c0e0392e21" name="ae288acc7adf77302f35a85c0e0392e21"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>new1</b> ()=0</td></tr>
 <tr class="separator:ae288acc7adf77302f35a85c0e0392e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fa0c05a62cf21a9d44239c1c2c2b556"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1allocator.html#a1fa0c05a62cf21a9d44239c1c2c2b556">del</a> (void *used, ncnt sz)=0</td></tr>
+<tr class="memitem:a1fa0c05a62cf21a9d44239c1c2c2b556" id="r_a1fa0c05a62cf21a9d44239c1c2c2b556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fa0c05a62cf21a9d44239c1c2c2b556">del</a> (void *<a class="el" href="structby_1_1no_wrap.html">used</a>, ncnt <a class="el" href="structby_1_1no_wrap.html">sz</a>)=0</td></tr>
 <tr class="separator:a1fa0c05a62cf21a9d44239c1c2c2b556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae165e9c6d13169011b455f14d3337cab"><td class="memItemLeft" align="right" valign="top"><a id="ae165e9c6d13169011b455f14d3337cab" name="ae165e9c6d13169011b455f14d3337cab"></a>
-ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>getBlkSize</b> () const</td></tr>
+<tr class="memitem:ae165e9c6d13169011b455f14d3337cab" id="r_ae165e9c6d13169011b455f14d3337cab"><td class="memItemLeft" align="right" valign="top"><a id="ae165e9c6d13169011b455f14d3337cab" name="ae165e9c6d13169011b455f14d3337cab"></a>
+ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>getBlkSize</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ae165e9c6d13169011b455f14d3337cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a1ec7fcb4322c082bbca8ce12f761fd2b inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b">has</a> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) const =0</td></tr>
-<tr class="memdesc:a1ec7fcb4322c082bbca8ce12f761fd2b inherit pub_methods_classby_1_1memory_haver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this memory manager "owns" or contains the given instance.  <a href="classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b">더 자세히 ...</a><br /></td></tr>
+<tr class="inherit_header pub_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a1ec7fcb4322c082bbca8ce12f761fd2b inherit pub_methods_classby_1_1memory_haver" id="r_a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b">has</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
+<tr class="memdesc:a1ec7fcb4322c082bbca8ce12f761fd2b inherit pub_methods_classby_1_1memory_haver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this memory manager "owns" or contains the given instance.  <br /></td></tr>
 <tr class="separator:a1ec7fcb4322c082bbca8ce12f761fd2b inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a069727df2ae0b05181db801680235701" name="a069727df2ae0b05181db801680235701"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (const <a class="el" href="classby_1_1instance.html">instance</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
+<tr class="memitem:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver" id="r_a069727df2ae0b05181db801680235701"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
 <tr class="separator:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c4717f3f6caafa5039e2c305eec5cf inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a16c4717f3f6caafa5039e2c305eec5cf" name="a16c4717f3f6caafa5039e2c305eec5cf"></a>
-virtual ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () const =0</td></tr>
+<tr class="memitem:a16c4717f3f6caafa5039e2c305eec5cf inherit pub_methods_classby_1_1memory_haver" id="r_a16c4717f3f6caafa5039e2c305eec5cf"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a16c4717f3f6caafa5039e2c305eec5cf inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a296a2b3fa6fb5130649dfff73443968e inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a296a2b3fa6fb5130649dfff73443968e" name="a296a2b3fa6fb5130649dfff73443968e"></a>
-virtual ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const =0</td></tr>
+<tr class="memitem:a296a2b3fa6fb5130649dfff73443968e inherit pub_methods_classby_1_1memory_haver" id="r_a296a2b3fa6fb5130649dfff73443968e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a296a2b3fa6fb5130649dfff73443968e inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0939ac7a052f7ce429471433637efaa5 inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a0939ac7a052f7ce429471433637efaa5">rel</a> ()=0</td></tr>
+<tr class="memitem:a0939ac7a052f7ce429471433637efaa5 inherit pub_methods_classby_1_1memory_haver" id="r_a0939ac7a052f7ce429471433637efaa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a0939ac7a052f7ce429471433637efaa5">rel</a> ()=0</td></tr>
 <tr class="separator:a0939ac7a052f7ce429471433637efaa5 inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a0fa515bcc8063aa8b757249d4f3a4a90" name="a0fa515bcc8063aa8b757249d4f3a4a90"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () const</td></tr>
+<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver" id="r_a0fa515bcc8063aa8b757249d4f3a4a90"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="ad3c722229dbf04bbb7f3226589849bad" name="ad3c722229dbf04bbb7f3226589849bad"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () const</td></tr>
+<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver" id="r_ad3c722229dbf04bbb7f3226589849bad"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
-<tr class="inherit_header pro_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
-<tr class="memitem:aece93fd77185150a504c4c31a3a03b16 inherit pro_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#aece93fd77185150a504c4c31a3a03b16">_get</a> (nidx n)=0</td></tr>
-<tr class="memdesc:aece93fd77185150a504c4c31a3a03b16 inherit pro_methods_classby_1_1memory_haver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to get a pointer to memory at a specific index.  <a href="classby_1_1memory_haver.html#aece93fd77185150a504c4c31a3a03b16">더 자세히 ...</a><br /></td></tr>
+<tr class="inherit_header pro_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
+<tr class="memitem:aece93fd77185150a504c4c31a3a03b16 inherit pro_methods_classby_1_1memory_haver" id="r_aece93fd77185150a504c4c31a3a03b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#aece93fd77185150a504c4c31a3a03b16">_get</a> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>)=0</td></tr>
+<tr class="memdesc:aece93fd77185150a504c4c31a3a03b16 inherit pro_methods_classby_1_1memory_haver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to get a pointer to memory at a specific index.  <br /></td></tr>
 <tr class="separator:aece93fd77185150a504c4c31a3a03b16 inherit pro_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Abstract allocator interface for memory management </p>
-<p >Inherits from <a class="el" href="classby_1_1memory_haver.html">memoryHaver</a>, so can measure state and size of managed memory. Additionally can allocate and deallocate memory.</p>
+<div class="textblock"><p>Abstract allocator interface for memory management </p>
+<p>Inherits from <a class="el" href="classby_1_1memory_haver.html">memoryHaver</a>, so can measure state and size of managed memory. Additionally can allocate and deallocate memory.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>void* and byte-only perspective Following memlite's concept of viewing all memory only as void* and bytes, new() and del() parameters only provide void*.</dd></dl>
 <h1><a class="anchor" id="naming_conventions"></a>
 naming conventions</h1>
-<p >Allocation uses new1() (meaning "new one"), deallocation uses del(). This naming is frequently used not only in memlite but throughout the byeol project. </p>
+<p>Allocation uses new1() (meaning "new one"), deallocation uses del(). This naming is frequently used not only in memlite but throughout the byeol project. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a1fa0c05a62cf21a9d44239c1c2c2b556" name="a1fa0c05a62cf21a9d44239c1c2c2b556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fa0c05a62cf21a9d44239c1c2c2b556">&#9670;&nbsp;</a></span>del()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa0c05a62cf21a9d44239c1c2c2b556">&#9670;&#160;</a></span>del()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,21 +198,14 @@ naming conventions</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::allocator::del </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::allocator::del </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>used</em>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>used</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ncnt&#160;</td>
-          <td class="paramname"><em>sz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">ncnt</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::statable 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1statable.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1statable.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1statable.html',''); initRes
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,7 +122,7 @@ $(document).ready(function(){initNavTree('classby_1_1statable.html',''); initRes
 <div class="contents">
 
 <p>Interface for objects with compilation state  
- <a href="classby_1_1statable.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="statable_8hpp_source.html">statable.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -147,16 +155,16 @@ by::statable에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a40f8e087b73dcdcfee3b2f8104e5f51c"><td class="memItemLeft" align="right" valign="top"><a id="a40f8e087b73dcdcfee3b2f8104e5f51c" name="a40f8e087b73dcdcfee3b2f8104e5f51c"></a>
-virtual state&#160;</td><td class="memItemRight" valign="bottom"><b>getState</b> () const =0</td></tr>
+<tr class="memitem:a40f8e087b73dcdcfee3b2f8104e5f51c" id="r_a40f8e087b73dcdcfee3b2f8104e5f51c"><td class="memItemLeft" align="right" valign="top"><a id="a40f8e087b73dcdcfee3b2f8104e5f51c" name="a40f8e087b73dcdcfee3b2f8104e5f51c"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> state&#160;</td><td class="memItemRight" valign="bottom"><b>getState</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a40f8e087b73dcdcfee3b2f8104e5f51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbf471434725d15eb27d5b96e3233f4"><td class="memItemLeft" align="right" valign="top"><a id="adfbf471434725d15eb27d5b96e3233f4" name="adfbf471434725d15eb27d5b96e3233f4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (state new1)=0</td></tr>
+<tr class="memitem:adfbf471434725d15eb27d5b96e3233f4" id="r_adfbf471434725d15eb27d5b96e3233f4"><td class="memItemLeft" align="right" valign="top"><a id="adfbf471434725d15eb27d5b96e3233f4" name="adfbf471434725d15eb27d5b96e3233f4"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (state new1)=0</td></tr>
 <tr class="separator:adfbf471434725d15eb27d5b96e3233f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Interface for objects with compilation state </p>
-<p >Provides state management for compilation phases (parsed, verified, linked). </p>
+<div class="textblock"><p>Interface for objects with compilation state </p>
+<p>Provides state management for compilation phases (parsed, verified, linked). </p>
 </div><hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
 <li>/home/runner/work/byeol/byeol/module/core/ast/<a class="el" href="statable_8hpp_source.html">statable.hpp</a></li>
 </ul>

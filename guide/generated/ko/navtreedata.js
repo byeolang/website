@@ -26,29 +26,29 @@ var NAVTREE =
 [
   [ "byeol", "index.html", [
     [ "안녕하세요", "index.html", null ],
-    [ "설치 방법", "how-to-install.html", [
-      [ "다운로드", "how-to-install.html#autotoc_md2", null ],
-      [ "Windows", "how-to-install.html#autotoc_md4", null ],
-      [ "ubuntu", "how-to-install.html#autotoc_md6", null ],
-      [ "Mac OS", "how-to-install.html#autotoc_md8", null ],
-      [ "WASM", "how-to-install.html#autotoc_md10", null ]
-    ] ],
     [ "기본 사용법", "basic-usage.html", [
-      [ "filePath", "basic-usage.html#autotoc_md13", null ],
-      [ "스크립트 직접 실행", "basic-usage.html#autotoc_md15", null ],
-      [ "상세 로그 출력", "basic-usage.html#autotoc_md17", null ],
-      [ "AST 구조 출력", "basic-usage.html#autotoc_md19", null ],
-      [ "버전 표기", "basic-usage.html#autotoc_md21", null ]
+      [ "filePath", "basic-usage.html#autotoc_md1", null ],
+      [ "스크립트 직접 실행", "basic-usage.html#autotoc_md3", null ],
+      [ "상세 로그 출력", "basic-usage.html#autotoc_md5", null ],
+      [ "AST 구조 출력", "basic-usage.html#autotoc_md7", null ],
+      [ "버전 표기", "basic-usage.html#autotoc_md9", null ]
+    ] ],
+    [ "디자인 철학", "design-philosophy.html", [
+      [ "작은 장난감 같은 언어를 만든다", "design-philosophy.html#autotoc_md12", null ],
+      [ "기본 언어 기능", "design-philosophy.html#autotoc_md14", null ],
+      [ "한곳에서 되었다면, 다른 곳에도 되어야 한다", "design-philosophy.html#autotoc_md16", null ],
+      [ "간결함을 추구한다", "design-philosophy.html#autotoc_md18", null ],
+      [ "무조건적으로 하나의 기능을 위한 기능은 만들지 않는다", "design-philosophy.html#autotoc_md20", null ],
+      [ "모든 기능을 제공하는 언어를 만들지 않는다", "design-philosophy.html#autotoc_md22", null ],
+      [ "속도보다 유지보수를 우선한다", "design-philosophy.html#autotoc_md24", null ]
     ] ],
     [ "언어 배우기", "how-to-code.html", "how-to-code" ],
-    [ "디자인 철학", "design-philosophy.html", [
-      [ "작은 장난감 같은 언어를 만든다", "design-philosophy.html#autotoc_md144", null ],
-      [ "기본 언어 기능", "design-philosophy.html#autotoc_md146", null ],
-      [ "한곳에서 되었다면, 다른 곳에도 되어야 한다", "design-philosophy.html#autotoc_md148", null ],
-      [ "간결함을 추구한다", "design-philosophy.html#autotoc_md150", null ],
-      [ "무조건적으로 하나의 기능을 위한 기능은 만들지 않는다", "design-philosophy.html#autotoc_md152", null ],
-      [ "모든 기능을 제공하는 언어를 만들지 않는다", "design-philosophy.html#autotoc_md154", null ],
-      [ "속도보다 유지보수를 우선한다", "design-philosophy.html#autotoc_md156", null ]
+    [ "설치 방법", "how-to-install.html", [
+      [ "다운로드", "how-to-install.html#autotoc_md28", null ],
+      [ "Windows", "how-to-install.html#autotoc_md30", null ],
+      [ "ubuntu", "how-to-install.html#autotoc_md32", null ],
+      [ "Mac OS", "how-to-install.html#autotoc_md34", null ],
+      [ "WASM", "how-to-install.html#autotoc_md36", null ]
     ] ]
   ] ]
 ];

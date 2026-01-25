@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::platformAPI 네임스페이스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('namespaceby_1_1platform_a_p_i.html',''); initResizable(); });
+$(function(){initNavTree('namespaceby_1_1platform_a_p_i.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('namespaceby_1_1platform_a_p_i.html',''
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,123 +122,123 @@ $(document).ready(function(){initNavTree('namespaceby_1_1platform_a_p_i.html',''
 <div class="contents">
 
 <p>Platform-independent API wrapper for OS-specific operations  
-<a href="namespaceby_1_1platform_a_p_i.html#details">더 자세히 ...</a></p>
+<a href="#details">더 자세히 ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 함수</h2></td></tr>
-<tr class="memitem:a050387b0ba726cc4aa5ef7275f914246"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a> (consoleColor fore)</td></tr>
-<tr class="memdesc:a050387b0ba726cc4aa5ef7275f914246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns platform-specific string for console foreground color  <a href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a050387b0ba726cc4aa5ef7275f914246" id="r_a050387b0ba726cc4aa5ef7275f914246"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a050387b0ba726cc4aa5ef7275f914246">foreColor</a> (consoleColor <a class="el" href="structby_1_1no_wrap.html">fore</a>)</td></tr>
+<tr class="memdesc:a050387b0ba726cc4aa5ef7275f914246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns platform-specific string for console foreground color  <br /></td></tr>
 <tr class="separator:a050387b0ba726cc4aa5ef7275f914246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8ebe746694a265b6f99e864875dd1f4"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#af8ebe746694a265b6f99e864875dd1f4">backColor</a> (consoleColor back)</td></tr>
-<tr class="memdesc:af8ebe746694a265b6f99e864875dd1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns platform-specific string for console background color  <a href="namespaceby_1_1platform_a_p_i.html#af8ebe746694a265b6f99e864875dd1f4">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:af8ebe746694a265b6f99e864875dd1f4" id="r_af8ebe746694a265b6f99e864875dd1f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8ebe746694a265b6f99e864875dd1f4">backColor</a> (consoleColor <a class="el" href="structby_1_1no_wrap.html">back</a>)</td></tr>
+<tr class="memdesc:af8ebe746694a265b6f99e864875dd1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns platform-specific string for console background color  <br /></td></tr>
 <tr class="separator:af8ebe746694a265b6f99e864875dd1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2840dec61ecf01da1bf7dbe221f3d919"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a2840dec61ecf01da1bf7dbe221f3d919">createNowTime</a> (const std::string &amp;strftime_format)</td></tr>
-<tr class="memdesc:a2840dec61ecf01da1bf7dbe221f3d919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates formatted timestamp using strftime format  <a href="namespaceby_1_1platform_a_p_i.html#a2840dec61ecf01da1bf7dbe221f3d919">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a2840dec61ecf01da1bf7dbe221f3d919" id="r_a2840dec61ecf01da1bf7dbe221f3d919"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2840dec61ecf01da1bf7dbe221f3d919">createNowTime</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">strftime_format</a>)</td></tr>
+<tr class="memdesc:a2840dec61ecf01da1bf7dbe221f3d919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates formatted timestamp using strftime format  <br /></td></tr>
 <tr class="separator:a2840dec61ecf01da1bf7dbe221f3d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab41d43afb78c3a6c583400afe1b02f82"><td class="memItemLeft" align="right" valign="top"><a id="ab41d43afb78c3a6c583400afe1b02f82" name="ab41d43afb78c3a6c583400afe1b02f82"></a>
+<tr class="memitem:ab41d43afb78c3a6c583400afe1b02f82" id="r_ab41d43afb78c3a6c583400afe1b02f82"><td class="memItemLeft" align="right" valign="top"><a id="ab41d43afb78c3a6c583400afe1b02f82" name="ab41d43afb78c3a6c583400afe1b02f82"></a>
 nuint64&#160;</td><td class="memItemRight" valign="bottom"><b>getNowMs</b> ()</td></tr>
 <tr class="separator:ab41d43afb78c3a6c583400afe1b02f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b2317ee32d074d0bfa4e87a5e1d0ec3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a4b2317ee32d074d0bfa4e87a5e1d0ec3">toAddrId</a> (const void *inst)</td></tr>
-<tr class="memdesc:a4b2317ee32d074d0bfa4e87a5e1d0ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts pointer to 4-character hexadecimal identifier  <a href="namespaceby_1_1platform_a_p_i.html#a4b2317ee32d074d0bfa4e87a5e1d0ec3">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a4b2317ee32d074d0bfa4e87a5e1d0ec3" id="r_a4b2317ee32d074d0bfa4e87a5e1d0ec3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b2317ee32d074d0bfa4e87a5e1d0ec3">toAddrId</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> void *<a class="el" href="structby_1_1no_wrap.html">inst</a>)</td></tr>
+<tr class="memdesc:a4b2317ee32d074d0bfa4e87a5e1d0ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts pointer to 4-character hexadecimal identifier  <br /></td></tr>
 <tr class="separator:a4b2317ee32d074d0bfa4e87a5e1d0ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d28583fadc3e4dade36900e54a1f53b"><td class="memItemLeft" align="right" valign="top"><a id="a2d28583fadc3e4dade36900e54a1f53b" name="a2d28583fadc3e4dade36900e54a1f53b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (const std::string &amp;msg)</td></tr>
+<tr class="memitem:a2d28583fadc3e4dade36900e54a1f53b" id="r_a2d28583fadc3e4dade36900e54a1f53b"><td class="memItemLeft" align="right" valign="top"><a id="a2d28583fadc3e4dade36900e54a1f53b" name="a2d28583fadc3e4dade36900e54a1f53b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;msg)</td></tr>
 <tr class="separator:a2d28583fadc3e4dade36900e54a1f53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea22e5b8db505bf2d9ab9e816030c64e"><td class="memItemLeft" align="right" valign="top"><a id="aea22e5b8db505bf2d9ab9e816030c64e" name="aea22e5b8db505bf2d9ab9e816030c64e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (const std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(log)</td></tr>
+<tr class="memitem:aea22e5b8db505bf2d9ab9e816030c64e" id="r_aea22e5b8db505bf2d9ab9e816030c64e"><td class="memItemLeft" align="right" valign="top"><a id="aea22e5b8db505bf2d9ab9e816030c64e" name="aea22e5b8db505bf2d9ab9e816030c64e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(log)</td></tr>
 <tr class="separator:aea22e5b8db505bf2d9ab9e816030c64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fba162025b71f4f0cda36e02203d3bc"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a9fba162025b71f4f0cda36e02203d3bc">getExecPath</a> ()</td></tr>
-<tr class="memdesc:a9fba162025b71f4f0cda36e02203d3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves absolute path of currently running executable  <a href="namespaceby_1_1platform_a_p_i.html#a9fba162025b71f4f0cda36e02203d3bc">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a9fba162025b71f4f0cda36e02203d3bc" id="r_a9fba162025b71f4f0cda36e02203d3bc"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fba162025b71f4f0cda36e02203d3bc">getExecPath</a> ()</td></tr>
+<tr class="memdesc:a9fba162025b71f4f0cda36e02203d3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves absolute path of currently running executable  <br /></td></tr>
 <tr class="separator:a9fba162025b71f4f0cda36e02203d3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab336fc4ff297b656668cca8d5cf4c408"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#ab336fc4ff297b656668cca8d5cf4c408">exec</a> (const std::string &amp;cmd)</td></tr>
-<tr class="memdesc:ab336fc4ff297b656668cca8d5cf4c408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes shell command and captures output  <a href="namespaceby_1_1platform_a_p_i.html#ab336fc4ff297b656668cca8d5cf4c408">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ab336fc4ff297b656668cca8d5cf4c408" id="r_ab336fc4ff297b656668cca8d5cf4c408"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab336fc4ff297b656668cca8d5cf4c408">exec</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">cmd</a>)</td></tr>
+<tr class="memdesc:ab336fc4ff297b656668cca8d5cf4c408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes shell command and captures output  <br /></td></tr>
 <tr class="separator:ab336fc4ff297b656668cca8d5cf4c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1a15d1d98c786b15d833722ec9a23b"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a5b1a15d1d98c786b15d833722ec9a23b">callstack</a> ()</td></tr>
-<tr class="memdesc:a5b1a15d1d98c786b15d833722ec9a23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures current call stack for debugging  <a href="namespaceby_1_1platform_a_p_i.html#a5b1a15d1d98c786b15d833722ec9a23b">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a5b1a15d1d98c786b15d833722ec9a23b" id="r_a5b1a15d1d98c786b15d833722ec9a23b"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b1a15d1d98c786b15d833722ec9a23b">callstack</a> ()</td></tr>
+<tr class="memdesc:a5b1a15d1d98c786b15d833722ec9a23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures current call stack for debugging  <br /></td></tr>
 <tr class="separator:a5b1a15d1d98c786b15d833722ec9a23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a67611bf094a32d4c21a5f0d907cf81"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a6a67611bf094a32d4c21a5f0d907cf81">demangle</a> (const nchar *org)</td></tr>
-<tr class="memdesc:a6a67611bf094a32d4c21a5f0d907cf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles C++ symbol name to human-readable form  <a href="namespaceby_1_1platform_a_p_i.html#a6a67611bf094a32d4c21a5f0d907cf81">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a6a67611bf094a32d4c21a5f0d907cf81" id="r_a6a67611bf094a32d4c21a5f0d907cf81"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a67611bf094a32d4c21a5f0d907cf81">demangle</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *<a class="el" href="structby_1_1no_wrap.html">org</a>)</td></tr>
+<tr class="memdesc:a6a67611bf094a32d4c21a5f0d907cf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles C++ symbol name to human-readable form  <br /></td></tr>
 <tr class="separator:a6a67611bf094a32d4c21a5f0d907cf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf4779c99dfd2f8c277a156a285231e1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#adf4779c99dfd2f8c277a156a285231e1">filterDemangle</a> (const nchar *org)</td></tr>
-<tr class="memdesc:adf4779c99dfd2f8c277a156a285231e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles C++ symbol and extracts only the function name portion  <a href="namespaceby_1_1platform_a_p_i.html#adf4779c99dfd2f8c277a156a285231e1">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:adf4779c99dfd2f8c277a156a285231e1" id="r_adf4779c99dfd2f8c277a156a285231e1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf4779c99dfd2f8c277a156a285231e1">filterDemangle</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *<a class="el" href="structby_1_1no_wrap.html">org</a>)</td></tr>
+<tr class="memdesc:adf4779c99dfd2f8c277a156a285231e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles C++ symbol and extracts only the function name portion  <br /></td></tr>
 <tr class="separator:adf4779c99dfd2f8c277a156a285231e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad300424a438a21d5d726d44152c55638"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#ad300424a438a21d5d726d44152c55638">format</a> (const nchar *fmt,...)</td></tr>
-<tr class="memdesc:ad300424a438a21d5d726d44152c55638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats string using printf-style specifiers  <a href="namespaceby_1_1platform_a_p_i.html#ad300424a438a21d5d726d44152c55638">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ad300424a438a21d5d726d44152c55638" id="r_ad300424a438a21d5d726d44152c55638"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad300424a438a21d5d726d44152c55638">format</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *fmt,...)</td></tr>
+<tr class="memdesc:ad300424a438a21d5d726d44152c55638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats string using printf-style specifiers  <br /></td></tr>
 <tr class="separator:ad300424a438a21d5d726d44152c55638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad639ecf17e7e639316eaa169b015f9af"><td class="memItemLeft" align="right" valign="top"><a id="ad639ecf17e7e639316eaa169b015f9af" name="ad639ecf17e7e639316eaa169b015f9af"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (const std::string &amp;fmt, va_list <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
+<tr class="memitem:ad639ecf17e7e639316eaa169b015f9af" id="r_ad639ecf17e7e639316eaa169b015f9af"><td class="memItemLeft" align="right" valign="top"><a id="ad639ecf17e7e639316eaa169b015f9af" name="ad639ecf17e7e639316eaa169b015f9af"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;fmt, <a class="el" href="structby_1_1no_wrap.html">va_list</a> <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
 <tr class="separator:ad639ecf17e7e639316eaa169b015f9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a593171b24645ae89b9ba3c7c7ef3dff9"><td class="memItemLeft" align="right" valign="top"><a id="a593171b24645ae89b9ba3c7c7ef3dff9" name="a593171b24645ae89b9ba3c7c7ef3dff9"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (const std::string *fmt, va_list <a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(fmt</td></tr>
+<tr class="memitem:a593171b24645ae89b9ba3c7c7ef3dff9" id="r_a593171b24645ae89b9ba3c7c7ef3dff9"><td class="memItemLeft" align="right" valign="top"><a id="a593171b24645ae89b9ba3c7c7ef3dff9" name="a593171b24645ae89b9ba3c7c7ef3dff9"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *fmt, <a class="el" href="structby_1_1no_wrap.html">va_list</a> <a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(fmt</td></tr>
 <tr class="separator:a593171b24645ae89b9ba3c7c7ef3dff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3cf9badd146c6e090ab8f7e3bf5c8be"><td class="memItemLeft" align="right" valign="top"><a id="af3cf9badd146c6e090ab8f7e3bf5c8be" name="af3cf9badd146c6e090ab8f7e3bf5c8be"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (const nchar *fmt, va_list <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
+<tr class="memitem:af3cf9badd146c6e090ab8f7e3bf5c8be" id="r_af3cf9badd146c6e090ab8f7e3bf5c8be"><td class="memItemLeft" align="right" valign="top"><a id="af3cf9badd146c6e090ab8f7e3bf5c8be" name="af3cf9badd146c6e090ab8f7e3bf5c8be"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *fmt, <a class="el" href="structby_1_1no_wrap.html">va_list</a> <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
 <tr class="separator:af3cf9badd146c6e090ab8f7e3bf5c8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecc5d148e6ef94b4f5112b0014c95bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a> (const nchar *msg,...)</td></tr>
-<tr class="memdesc:aecc5d148e6ef94b4f5112b0014c95bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates program with error message and call stack dump  <a href="namespaceby_1_1platform_a_p_i.html#aecc5d148e6ef94b4f5112b0014c95bb7">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:aecc5d148e6ef94b4f5112b0014c95bb7" id="r_aecc5d148e6ef94b4f5112b0014c95bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *msg,...)</td></tr>
+<tr class="memdesc:aecc5d148e6ef94b4f5112b0014c95bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates program with error message and call stack dump  <br /></td></tr>
 <tr class="separator:aecc5d148e6ef94b4f5112b0014c95bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87df9f1bbfb0f27469b13371858738c2"><td class="memItemLeft" align="right" valign="top"><a id="a87df9f1bbfb0f27469b13371858738c2" name="a87df9f1bbfb0f27469b13371858738c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (const std::string &amp;msg, va_list <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
+<tr class="memitem:a87df9f1bbfb0f27469b13371858738c2" id="r_a87df9f1bbfb0f27469b13371858738c2"><td class="memItemLeft" align="right" valign="top"><a id="a87df9f1bbfb0f27469b13371858738c2" name="a87df9f1bbfb0f27469b13371858738c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;msg, <a class="el" href="structby_1_1no_wrap.html">va_list</a> <a class="el" href="classby_1_1args.html">args</a>)</td></tr>
 <tr class="separator:a87df9f1bbfb0f27469b13371858738c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8cb57bff02ad692c20442e5b08b5fb"><td class="memItemLeft" align="right" valign="top"><a id="abd8cb57bff02ad692c20442e5b08b5fb" name="abd8cb57bff02ad692c20442e5b08b5fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (const std::string *msg, va_list <a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(msg</td></tr>
+<tr class="memitem:abd8cb57bff02ad692c20442e5b08b5fb" id="r_abd8cb57bff02ad692c20442e5b08b5fb"><td class="memItemLeft" align="right" valign="top"><a id="abd8cb57bff02ad692c20442e5b08b5fb" name="abd8cb57bff02ad692c20442e5b08b5fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *msg, <a class="el" href="structby_1_1no_wrap.html">va_list</a> <a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(msg</td></tr>
 <tr class="separator:abd8cb57bff02ad692c20442e5b08b5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a353f2bc5894c60777033a80d170d88fa"><td class="memItemLeft" align="right" valign="top"><a id="a353f2bc5894c60777033a80d170d88fa" name="a353f2bc5894c60777033a80d170d88fa"></a>
-void <a class="el" href="namespaceby_1_1platform_a_p_i.html#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>void</b> ())</td></tr>
+<tr class="memitem:a353f2bc5894c60777033a80d170d88fa" id="r_a353f2bc5894c60777033a80d170d88fa"><td class="memItemLeft" align="right" valign="top"><a id="a353f2bc5894c60777033a80d170d88fa" name="a353f2bc5894c60777033a80d170d88fa"></a>
+void <a class="el" href="#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>void</b> ())</td></tr>
 <tr class="separator:a353f2bc5894c60777033a80d170d88fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7d230b06fa06f1f584cf656488d105f"><td class="memItemLeft" align="right" valign="top"><a id="ab7d230b06fa06f1f584cf656488d105f" name="ab7d230b06fa06f1f584cf656488d105f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (const std::string &amp;msg)</td></tr>
+<tr class="memitem:ab7d230b06fa06f1f584cf656488d105f" id="r_ab7d230b06fa06f1f584cf656488d105f"><td class="memItemLeft" align="right" valign="top"><a id="ab7d230b06fa06f1f584cf656488d105f" name="ab7d230b06fa06f1f584cf656488d105f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;msg)</td></tr>
 <tr class="separator:ab7d230b06fa06f1f584cf656488d105f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b68f119509593965373deb864dc2659"><td class="memItemLeft" align="right" valign="top"><a id="a4b68f119509593965373deb864dc2659" name="a4b68f119509593965373deb864dc2659"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (const std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(crash)</td></tr>
+<tr class="memitem:a4b68f119509593965373deb864dc2659" id="r_a4b68f119509593965373deb864dc2659"><td class="memItemLeft" align="right" valign="top"><a id="a4b68f119509593965373deb864dc2659" name="a4b68f119509593965373deb864dc2659"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crash</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(crash)</td></tr>
 <tr class="separator:a4b68f119509593965373deb864dc2659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d0627a3307cd33ee3c9460b071ef53a"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceby_1_1platform_a_p_i.html#a8d0627a3307cd33ee3c9460b071ef53a">unlimitCoreDump</a> ()</td></tr>
-<tr class="memdesc:a8d0627a3307cd33ee3c9460b071ef53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables unlimited core dump size for debugging  <a href="namespaceby_1_1platform_a_p_i.html#a8d0627a3307cd33ee3c9460b071ef53a">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a8d0627a3307cd33ee3c9460b071ef53a" id="r_a8d0627a3307cd33ee3c9460b071ef53a"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d0627a3307cd33ee3c9460b071ef53a">unlimitCoreDump</a> ()</td></tr>
+<tr class="memdesc:a8d0627a3307cd33ee3c9460b071ef53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables unlimited core dump size for debugging  <br /></td></tr>
 <tr class="separator:a8d0627a3307cd33ee3c9460b071ef53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 변수</h2></td></tr>
-<tr class="memitem:af79ecbfbc02e80974f66e45dd316e158"><td class="memItemLeft" align="right" valign="top"><a id="af79ecbfbc02e80974f66e45dd316e158" name="af79ecbfbc02e80974f66e45dd316e158"></a>
-constexpr nint&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_MAX_LEN</b> = 256</td></tr>
+<tr class="memitem:af79ecbfbc02e80974f66e45dd316e158" id="r_af79ecbfbc02e80974f66e45dd316e158"><td class="memItemLeft" align="right" valign="top"><a id="af79ecbfbc02e80974f66e45dd316e158" name="af79ecbfbc02e80974f66e45dd316e158"></a>
+<a class="el" href="structby_1_1no_wrap.html">constexpr</a> <a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_MAX_LEN</b> = 256</td></tr>
 <tr class="separator:af79ecbfbc02e80974f66e45dd316e158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7dd9b52071b6be204abf9f01f9c8a59"><td class="memItemLeft" align="right" valign="top"><a id="ab7dd9b52071b6be204abf9f01f9c8a59" name="ab7dd9b52071b6be204abf9f01f9c8a59"></a>
-constexpr nint&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BUF</b> = 512</td></tr>
+<tr class="memitem:ab7dd9b52071b6be204abf9f01f9c8a59" id="r_ab7dd9b52071b6be204abf9f01f9c8a59"><td class="memItemLeft" align="right" valign="top"><a id="ab7dd9b52071b6be204abf9f01f9c8a59" name="ab7dd9b52071b6be204abf9f01f9c8a59"></a>
+<a class="el" href="structby_1_1no_wrap.html">constexpr</a> <a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BUF</b> = 512</td></tr>
 <tr class="separator:ab7dd9b52071b6be204abf9f01f9c8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19f0232ac6e86f91026c1d0a5cc47766"><td class="memItemLeft" align="right" valign="top"><a id="a19f0232ac6e86f91026c1d0a5cc47766" name="a19f0232ac6e86f91026c1d0a5cc47766"></a>
-std::string <a class="el" href="namespaceby_1_1platform_a_p_i.html#ad300424a438a21d5d726d44152c55638">format</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fmt</b></td></tr>
+<tr class="memitem:a19f0232ac6e86f91026c1d0a5cc47766" id="r_a19f0232ac6e86f91026c1d0a5cc47766"><td class="memItemLeft" align="right" valign="top"><a id="a19f0232ac6e86f91026c1d0a5cc47766" name="a19f0232ac6e86f91026c1d0a5cc47766"></a>
+std::string <a class="el" href="#ad300424a438a21d5d726d44152c55638">format</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fmt</b></td></tr>
 <tr class="separator:a19f0232ac6e86f91026c1d0a5cc47766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26fe99f5ef1a5a9cc3269c1d005d3e6b"><td class="memItemLeft" align="right" valign="top"><a id="a26fe99f5ef1a5a9cc3269c1d005d3e6b" name="a26fe99f5ef1a5a9cc3269c1d005d3e6b"></a>
-void <a class="el" href="namespaceby_1_1platform_a_p_i.html#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg</b></td></tr>
+<tr class="memitem:a26fe99f5ef1a5a9cc3269c1d005d3e6b" id="r_a26fe99f5ef1a5a9cc3269c1d005d3e6b"><td class="memItemLeft" align="right" valign="top"><a id="a26fe99f5ef1a5a9cc3269c1d005d3e6b" name="a26fe99f5ef1a5a9cc3269c1d005d3e6b"></a>
+void <a class="el" href="#aecc5d148e6ef94b4f5112b0014c95bb7">crash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg</b></td></tr>
 <tr class="separator:a26fe99f5ef1a5a9cc3269c1d005d3e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Platform-independent API wrapper for OS-specific operations </p>
-<p >Provides a unified interface for platform-dependent operations, acting as a buffer layer between platform-specific APIs and the rest of the codebase.</p>
-<p >For example, colored text output requires different approaches on different platforms: POSIX systems use ANSI escape sequences, while Windows uses WINAPI. Using <a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246" title="Returns platform-specific string for console foreground color">platformAPI::foreColor()</a> allows writing platform-independent code.</p>
+<div class="textblock"><p>Platform-independent API wrapper for OS-specific operations </p>
+<p>Provides a unified interface for platform-dependent operations, acting as a buffer layer between platform-specific APIs and the rest of the codebase.</p>
+<p>For example, colored text output requires different approaches on different platforms: POSIX systems use ANSI escape sequences, while Windows uses WINAPI. Using <a class="el" href="#a050387b0ba726cc4aa5ef7275f914246" title="Returns platform-specific string for console foreground color">platformAPI::foreColor()</a> allows writing platform-independent code.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p >Example of platform-independent colored console output: </p><div class="fragment"><div class="line">cout &lt;&lt; <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot;(&quot;</span></div>
-<div class="line">     &lt;&lt; <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(YELLOW) &lt;&lt; _encodeNewLine(rightName)</div>
-<div class="line">     &lt;&lt; <a class="code hl_function" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="ttc" id="anamespaceby_1_1platform_a_p_i_html_a050387b0ba726cc4aa5ef7275f914246"><div class="ttname"><a href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">by::platformAPI::foreColor</a></div><div class="ttdeci">const string &amp; foreColor(consoleColor fore)</div><div class="ttdoc">Returns platform-specific string for console foreground color</div><div class="ttdef"><b>Definition:</b> platformAPI.cpp:51</div></div>
-</div><!-- fragment --><p >Other common operations include:</p><ul>
-<li>Demangling C++ names with <a class="el" href="namespaceby_1_1platform_a_p_i.html#a6a67611bf094a32d4c21a5f0d907cf81" title="Demangles C++ symbol name to human-readable form">demangle()</a></li>
-<li>Getting call stacks with <a class="el" href="namespaceby_1_1platform_a_p_i.html#a5b1a15d1d98c786b15d833722ec9a23b" title="Captures current call stack for debugging">callstack()</a></li>
-<li>Cross-platform command execution with <a class="el" href="namespaceby_1_1platform_a_p_i.html#ab336fc4ff297b656668cca8d5cf4c408" title="Executes shell command and captures output">exec()</a></li>
-<li>Core dump limit management with <a class="el" href="namespaceby_1_1platform_a_p_i.html#a8d0627a3307cd33ee3c9460b071ef53a" title="Enables unlimited core dump size for debugging">unlimitCoreDump()</a> </li>
+<p>Example of platform-independent colored console output: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">cout</a> &lt;&lt; <a class="code hl_function" href="#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot;(&quot;</span></div>
+<div class="line">     &lt;&lt; <a class="code hl_function" href="#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(YELLOW) &lt;&lt; _encodeNewLine(<a class="code hl_struct" href="structby_1_1no_wrap.html">rightName</a>)</div>
+<div class="line">     &lt;&lt; <a class="code hl_function" href="#a050387b0ba726cc4aa5ef7275f914246">foreColor</a>(LIGHTGRAY) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="ttc" id="anamespaceby_1_1platform_a_p_i_html_a050387b0ba726cc4aa5ef7275f914246"><div class="ttname"><a href="#a050387b0ba726cc4aa5ef7275f914246">by::platformAPI::foreColor</a></div><div class="ttdeci">const string &amp; foreColor(consoleColor fore)</div><div class="ttdoc">Returns platform-specific string for console foreground color</div><div class="ttdef"><b>Definition</b> platformAPI.cpp:51</div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+</div><!-- fragment --><p>Other common operations include:</p><ul>
+<li>Demangling C++ names with <a class="el" href="#a6a67611bf094a32d4c21a5f0d907cf81" title="Demangles C++ symbol name to human-readable form">demangle()</a></li>
+<li>Getting call stacks with <a class="el" href="#a5b1a15d1d98c786b15d833722ec9a23b" title="Captures current call stack for debugging">callstack()</a></li>
+<li>Cross-platform command execution with <a class="el" href="#ab336fc4ff297b656668cca8d5cf4c408" title="Executes shell command and captures output">exec()</a></li>
+<li>Core dump limit management with <a class="el" href="#a8d0627a3307cd33ee3c9460b071ef53a" title="Enables unlimited core dump size for debugging">unlimitCoreDump()</a> </li>
 </ul>
 </div><h2 class="groupheader">함수 문서화</h2>
 <a id="af8ebe746694a265b6f99e864875dd1f4" name="af8ebe746694a265b6f99e864875dd1f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8ebe746694a265b6f99e864875dd1f4">&#9670;&nbsp;</a></span>backColor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ebe746694a265b6f99e864875dd1f4">&#9670;&#160;</a></span>backColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const _nout std::string &amp; by::platformAPI::backColor </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> _nout std::string &amp; by::platformAPI::backColor </td>
           <td>(</td>
-          <td class="paramtype">consoleColor&#160;</td>
-          <td class="paramname"><em>back</em></td><td>)</td>
+          <td class="paramtype">consoleColor</td>          <td class="paramname"><span class="paramname"><em>back</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,7 +250,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a5b1a15d1d98c786b15d833722ec9a23b" name="a5b1a15d1d98c786b15d833722ec9a23b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b1a15d1d98c786b15d833722ec9a23b">&#9670;&nbsp;</a></span>callstack()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1a15d1d98c786b15d833722ec9a23b">&#9670;&#160;</a></span>callstack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +258,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::vector&lt; std::string &gt; by::platformAPI::callstack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -263,7 +271,7 @@ Usage</h1>
 </div>
 </div>
 <a id="aecc5d148e6ef94b4f5112b0014c95bb7" name="aecc5d148e6ef94b4f5112b0014c95bb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc5d148e6ef94b4f5112b0014c95bb7">&#9670;&nbsp;</a></span>crash()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc5d148e6ef94b4f5112b0014c95bb7">&#9670;&#160;</a></span>crash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,19 +279,12 @@ Usage</h1>
         <tr>
           <td class="memname">_nout void by::platformAPI::crash </td>
           <td>(</td>
-          <td class="paramtype">const nchar *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> nchar *</td>          <td class="paramname"><span class="paramname"><em>msg</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -294,7 +295,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a2840dec61ecf01da1bf7dbe221f3d919" name="a2840dec61ecf01da1bf7dbe221f3d919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2840dec61ecf01da1bf7dbe221f3d919">&#9670;&nbsp;</a></span>createNowTime()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2840dec61ecf01da1bf7dbe221f3d919">&#9670;&#160;</a></span>createNowTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,8 +303,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::createNowTime </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strftime_format</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>strftime_format</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -315,7 +315,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a6a67611bf094a32d4c21a5f0d907cf81" name="a6a67611bf094a32d4c21a5f0d907cf81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a67611bf094a32d4c21a5f0d907cf81">&#9670;&nbsp;</a></span>demangle()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a67611bf094a32d4c21a5f0d907cf81">&#9670;&#160;</a></span>demangle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,8 +323,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::demangle </td>
           <td>(</td>
-          <td class="paramtype">const nchar *&#160;</td>
-          <td class="paramname"><em>org</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> nchar *</td>          <td class="paramname"><span class="paramname"><em>org</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -336,7 +335,7 @@ Usage</h1>
 </div>
 </div>
 <a id="ab336fc4ff297b656668cca8d5cf4c408" name="ab336fc4ff297b656668cca8d5cf4c408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab336fc4ff297b656668cca8d5cf4c408">&#9670;&nbsp;</a></span>exec()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab336fc4ff297b656668cca8d5cf4c408">&#9670;&#160;</a></span>exec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,8 +343,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::exec </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -358,7 +356,7 @@ Usage</h1>
 </div>
 </div>
 <a id="adf4779c99dfd2f8c277a156a285231e1" name="adf4779c99dfd2f8c277a156a285231e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf4779c99dfd2f8c277a156a285231e1">&#9670;&nbsp;</a></span>filterDemangle()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4779c99dfd2f8c277a156a285231e1">&#9670;&#160;</a></span>filterDemangle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,8 +364,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::filterDemangle </td>
           <td>(</td>
-          <td class="paramtype">const nchar *&#160;</td>
-          <td class="paramname"><em>org</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> nchar *</td>          <td class="paramname"><span class="paramname"><em>org</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -379,16 +376,15 @@ Usage</h1>
 </div>
 </div>
 <a id="a050387b0ba726cc4aa5ef7275f914246" name="a050387b0ba726cc4aa5ef7275f914246"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a050387b0ba726cc4aa5ef7275f914246">&#9670;&nbsp;</a></span>foreColor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a050387b0ba726cc4aa5ef7275f914246">&#9670;&#160;</a></span>foreColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const _nout std::string &amp; by::platformAPI::foreColor </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> _nout std::string &amp; by::platformAPI::foreColor </td>
           <td>(</td>
-          <td class="paramtype">consoleColor&#160;</td>
-          <td class="paramname"><em>fore</em></td><td>)</td>
+          <td class="paramtype">consoleColor</td>          <td class="paramname"><span class="paramname"><em>fore</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -400,7 +396,7 @@ Usage</h1>
 </div>
 </div>
 <a id="ad300424a438a21d5d726d44152c55638" name="ad300424a438a21d5d726d44152c55638"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad300424a438a21d5d726d44152c55638">&#9670;&nbsp;</a></span>format()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad300424a438a21d5d726d44152c55638">&#9670;&#160;</a></span>format()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,19 +404,12 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::format </td>
           <td>(</td>
-          <td class="paramtype">const nchar *&#160;</td>
-          <td class="paramname"><em>fmt</em>, </td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> nchar *</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -431,7 +420,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a9fba162025b71f4f0cda36e02203d3bc" name="a9fba162025b71f4f0cda36e02203d3bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fba162025b71f4f0cda36e02203d3bc">&#9670;&nbsp;</a></span>getExecPath()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fba162025b71f4f0cda36e02203d3bc">&#9670;&#160;</a></span>getExecPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -439,7 +428,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::getExecPath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -452,7 +441,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a4b2317ee32d074d0bfa4e87a5e1d0ec3" name="a4b2317ee32d074d0bfa4e87a5e1d0ec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b2317ee32d074d0bfa4e87a5e1d0ec3">&#9670;&nbsp;</a></span>toAddrId()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2317ee32d074d0bfa4e87a5e1d0ec3">&#9670;&#160;</a></span>toAddrId()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,8 +449,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout std::string by::platformAPI::toAddrId </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>inst</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -474,7 +462,7 @@ Usage</h1>
 </div>
 </div>
 <a id="a8d0627a3307cd33ee3c9460b071ef53a" name="a8d0627a3307cd33ee3c9460b071ef53a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d0627a3307cd33ee3c9460b071ef53a">&#9670;&nbsp;</a></span>unlimitCoreDump()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0627a3307cd33ee3c9460b071ef53a">&#9670;&#160;</a></span>unlimitCoreDump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +470,7 @@ Usage</h1>
         <tr>
           <td class="memname">_nout nbool by::platformAPI::unlimitCoreDump </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

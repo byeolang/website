@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/ast/exprs/exprMaker.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,11 +70,16 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('expr_maker_8hpp_source.html',''); initResizable(); });
+$(function(){initNavTree('expr_maker_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +106,16 @@ $(document).ready(function(){initNavTree('expr_maker_8hpp_source.html',''); init
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -121,21 +134,22 @@ $(document).ready(function(){initNavTree('expr_maker_8hpp_source.html',''); init
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span>assignExpr;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">class </span>defVarExpr;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html">   18</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1type_providable.html">typeProvidable</a>, <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1clonable.html">clonable</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        BY(CLASS(<a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>))</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        BY(<a class="code hl_struct" href="structby_1_1no_wrap.html">CLASS</a>(<a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>))</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src_file.html">srcFile</a>&amp; s, ncnt row, ncnt col);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classby_1_1expr_maker.html">exprMaker</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src_file.html">srcFile</a>&amp; s, <a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> row, <a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> col);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        me&amp; addRow();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        me&amp; addRow(ncnt step);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        me&amp; addRow(<a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">step</a>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        me&amp; addCol();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        me&amp; addCol(ncnt step);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        me&amp; addCol(<a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">step</a>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        me&amp; setRow(ncnt row);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        me&amp; setCol(ncnt col);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        me&amp; setRow(<a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> row);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        me&amp; setCol(<a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> col);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        me&amp; setSrcFile(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src_file.html">srcFile</a>&amp; s);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> rel();</div>
@@ -143,53 +157,58 @@ $(document).ready(function(){initNavTree('expr_maker_8hpp_source.html',''); init
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1point.html">point</a>&amp; getPos() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src_file.html">srcFile</a>&amp; getSrcFile() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr&lt;src&gt;</a> makeSrc(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;src&gt;</a> makeSrc(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a71152826f778ea093cab58f6e34a824b">   45</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt; T* <a class="code hl_function" href="classby_1_1expr_maker.html#a71152826f778ea093cab58f6e34a824b">birth</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> Args&amp;... <a class="code hl_class" href="classby_1_1args.html">args</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            T* ret = <span class="keyword">new</span> T(<a class="code hl_class" href="classby_1_1args.html">args</a>...);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span>(_file) _setSrc(*ret, *makeSrc(name));</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa">   58</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt; T* <a class="code hl_function" href="classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa">make</a>(<span class="keyword">const</span> Args&amp;... <a class="code hl_class" href="classby_1_1args.html">args</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            T* ret = <span class="keyword">new</span> T(<a class="code hl_class" href="classby_1_1args.html">args</a>...);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">if</span>(_file) _setSrc(*ret, *makeSrc(<span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4">   69</a></span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4">makeExpandFunc</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_block.html">defBlock</a>&amp; blk) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d">   75</a></span>        <a class="code hl_class" href="classby_1_1assign_expr.html">assignExpr</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d">makeAssignExprFrom</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_var_expr.html">defVarExpr</a>&amp; e) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2">   81</a></span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2">makeCommonFunc</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_block.html">defBlock</a>&amp; blk) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4">   69</a></span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4">makeExpandFunc</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_block.html">defBlock</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">blk</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d">   75</a></span>        <a class="code hl_class" href="classby_1_1assign_expr.html">assignExpr</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d">makeAssignExprFrom</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_var_expr.html">defVarExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2">   81</a></span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* <a class="code hl_function" href="classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2">makeCommonFunc</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1def_block.html">defBlock</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">blk</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* _makeFunc(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>&amp; stmts) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> _setSrc(<a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src.html">src</a>&amp; newSrc) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_class" href="classby_1_1func.html">func</a>* _makeFunc(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">stmts</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> _setSrc(<a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1src.html">src</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">newSrc</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_class" href="classby_1_1tstr.html">tstr&lt;srcFile&gt;</a> _file;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;srcFile&gt;</a> _file;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_struct" href="structby_1_1point.html">point</a> _pos;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    };</div>
+</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace by</span></div>
-<div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments</div><div class="ttdef"><b>Definition:</b> args.hpp:22</div></div>
-<div class="ttc" id="aclassby_1_1assign_expr_html"><div class="ttname"><a href="classby_1_1assign_expr.html">by::assignExpr</a></div><div class="ttdoc">Assignment expression</div><div class="ttdef"><b>Definition:</b> assignExpr.hpp:19</div></div>
-<div class="ttc" id="aclassby_1_1clonable_html"><div class="ttname"><a href="classby_1_1clonable.html">by::clonable</a></div><div class="ttdoc">Interface for objects that can be cloned</div><div class="ttdef"><b>Definition:</b> clonable.hpp:13</div></div>
-<div class="ttc" id="aclassby_1_1def_block_html"><div class="ttname"><a href="classby_1_1def_block.html">by::defBlock</a></div><div class="ttdoc">Definition block for organizing object definitions</div><div class="ttdef"><b>Definition:</b> defBlock.hpp:16</div></div>
-<div class="ttc" id="aclassby_1_1def_var_expr_html"><div class="ttname"><a href="classby_1_1def_var_expr.html">by::defVarExpr</a></div><div class="ttdoc">Variable definition expression base class</div><div class="ttdef"><b>Definition:</b> defVarExpr.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1expr_maker_html"><div class="ttname"><a href="classby_1_1expr_maker.html">by::exprMaker</a></div><div class="ttdoc">Factory for creating expressions with source location information</div><div class="ttdef"><b>Definition:</b> exprMaker.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1expr_maker_html_a36b4004da75841c637b06de1951b84aa"><div class="ttname"><a href="classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa">by::exprMaker::make</a></div><div class="ttdeci">T * make(const Args &amp;... args) const</div><div class="ttdoc">Creates a new expression object without a specific name and sets its source location.</div><div class="ttdef"><b>Definition:</b> exprMaker.hpp:58</div></div>
+<div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments</div><div class="ttdef"><b>Definition</b> args.hpp:22</div></div>
+<div class="ttc" id="aclassby_1_1assign_expr_html"><div class="ttname"><a href="classby_1_1assign_expr.html">by::assignExpr</a></div><div class="ttdoc">Assignment expression</div><div class="ttdef"><b>Definition</b> assignExpr.hpp:19</div></div>
+<div class="ttc" id="aclassby_1_1clonable_html"><div class="ttname"><a href="classby_1_1clonable.html">by::clonable</a></div><div class="ttdoc">Interface for objects that can be cloned</div><div class="ttdef"><b>Definition</b> clonable.hpp:13</div></div>
+<div class="ttc" id="aclassby_1_1def_block_html"><div class="ttname"><a href="classby_1_1def_block.html">by::defBlock</a></div><div class="ttdoc">Definition block for organizing object definitions</div><div class="ttdef"><b>Definition</b> defBlock.hpp:16</div></div>
+<div class="ttc" id="aclassby_1_1def_var_expr_html"><div class="ttname"><a href="classby_1_1def_var_expr.html">by::defVarExpr</a></div><div class="ttdoc">Variable definition expression base class</div><div class="ttdef"><b>Definition</b> defVarExpr.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1expr_maker_html"><div class="ttname"><a href="classby_1_1expr_maker.html">by::exprMaker</a></div><div class="ttdoc">Factory for creating expressions with source location information</div><div class="ttdef"><b>Definition</b> exprMaker.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1expr_maker_html_a36b4004da75841c637b06de1951b84aa"><div class="ttname"><a href="classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa">by::exprMaker::make</a></div><div class="ttdeci">T * make(const Args &amp;... args) const</div><div class="ttdoc">Creates a new expression object without a specific name and sets its source location.</div><div class="ttdef"><b>Definition</b> exprMaker.hpp:58</div></div>
 <div class="ttc" id="aclassby_1_1expr_maker_html_a6bec7515d346e0b50a84d6835c6adaf2"><div class="ttname"><a href="classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2">by::exprMaker::makeCommonFunc</a></div><div class="ttdeci">func * makeCommonFunc(const defBlock &amp;blk) const</div><div class="ttdoc">Creates a &quot;common&quot; function associated with a definition block.</div></div>
-<div class="ttc" id="aclassby_1_1expr_maker_html_a71152826f778ea093cab58f6e34a824b"><div class="ttname"><a href="classby_1_1expr_maker.html#a71152826f778ea093cab58f6e34a824b">by::exprMaker::birth</a></div><div class="ttdeci">T * birth(const std::string &amp;name, const Args &amp;... args) const</div><div class="ttdef"><b>Definition:</b> exprMaker.hpp:45</div></div>
+<div class="ttc" id="aclassby_1_1expr_maker_html_a71152826f778ea093cab58f6e34a824b"><div class="ttname"><a href="classby_1_1expr_maker.html#a71152826f778ea093cab58f6e34a824b">by::exprMaker::birth</a></div><div class="ttdeci">T * birth(const std::string &amp;name, const Args &amp;... args) const</div><div class="ttdef"><b>Definition</b> exprMaker.hpp:45</div></div>
 <div class="ttc" id="aclassby_1_1expr_maker_html_a9163bf3827592ae12814af872fad6dd4"><div class="ttname"><a href="classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4">by::exprMaker::makeExpandFunc</a></div><div class="ttdeci">func * makeExpandFunc(const defBlock &amp;blk) const</div><div class="ttdoc">Creates a function specifically for handling &quot;expand&quot; logic within definition blocks.</div></div>
 <div class="ttc" id="aclassby_1_1expr_maker_html_a995aac9d52dbe3287e6727eb895ef88d"><div class="ttname"><a href="classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d">by::exprMaker::makeAssignExprFrom</a></div><div class="ttdeci">assignExpr * makeAssignExprFrom(const defVarExpr &amp;e) const</div><div class="ttdoc">Creates an assignment expression from a variable definition expression.</div></div>
-<div class="ttc" id="aclassby_1_1func_html"><div class="ttname"><a href="classby_1_1func.html">by::func</a></div><div class="ttdoc">Function definition in byeol language</div><div class="ttdef"><b>Definition:</b> func.hpp:38</div></div>
-<div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language</div><div class="ttdef"><b>Definition:</b> node.hpp:195</div></div>
-<div class="ttc" id="aclassby_1_1src_file_html"><div class="ttname"><a href="classby_1_1src_file.html">by::srcFile</a></div><div class="ttdoc">Source code file information</div><div class="ttdef"><b>Definition:</b> srcFile.hpp:14</div></div>
-<div class="ttc" id="aclassby_1_1src_html"><div class="ttname"><a href="classby_1_1src.html">by::src</a></div><div class="ttdoc">Source location information</div><div class="ttdef"><b>Definition:</b> src.hpp:15</div></div>
+<div class="ttc" id="aclassby_1_1func_html"><div class="ttname"><a href="classby_1_1func.html">by::func</a></div><div class="ttdoc">Function definition in byeol language</div><div class="ttdef"><b>Definition</b> func.hpp:38</div></div>
+<div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language</div><div class="ttdef"><b>Definition</b> node.hpp:195</div></div>
+<div class="ttc" id="aclassby_1_1src_file_html"><div class="ttname"><a href="classby_1_1src_file.html">by::srcFile</a></div><div class="ttdoc">Source code file information</div><div class="ttdef"><b>Definition</b> srcFile.hpp:14</div></div>
+<div class="ttc" id="aclassby_1_1src_html"><div class="ttname"><a href="classby_1_1src.html">by::src</a></div><div class="ttdoc">Source location information</div><div class="ttdef"><b>Definition</b> src.hpp:15</div></div>
 <div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr&lt; node &gt;</a></div></div>
-<div class="ttc" id="aclassby_1_1tstr_html"><div class="ttname"><a href="classby_1_1tstr.html">by::tstr</a></div><div class="ttdoc">Strong reference smart pointer with strict type checking</div><div class="ttdef"><b>Definition:</b> tstr.hpp:14</div></div>
-<div class="ttc" id="aclassby_1_1type_providable_html"><div class="ttname"><a href="classby_1_1type_providable.html">by::typeProvidable</a></div><div class="ttdoc">Interface for objects that can provide their type information</div><div class="ttdef"><b>Definition:</b> typeProvidable.hpp:13</div></div>
+<div class="ttc" id="aclassby_1_1type_providable_html"><div class="ttname"><a href="classby_1_1type_providable.html">by::typeProvidable</a></div><div class="ttdoc">Interface for objects that can provide their type information</div><div class="ttdef"><b>Definition</b> typeProvidable.hpp:13</div></div>
 <div class="ttc" id="aexpr_8hpp_html"><div class="ttname"><a href="expr_8hpp.html">expr.hpp</a></div></div>
-<div class="ttc" id="astructby_1_1point_html"><div class="ttname"><a href="structby_1_1point.html">by::point</a></div><div class="ttdoc">Source code position tracking structure</div><div class="ttdef"><b>Definition:</b> point.hpp:12</div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+<div class="ttc" id="astructby_1_1point_html"><div class="ttname"><a href="structby_1_1point.html">by::point</a></div><div class="ttdoc">Source code position tracking structure</div><div class="ttdef"><b>Definition</b> point.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

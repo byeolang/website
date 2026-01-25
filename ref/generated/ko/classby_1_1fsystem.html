@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::fsystem 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1fsystem.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1fsystem.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,14 +101,20 @@ $(document).ready(function(){initNavTree('classby_1_1fsystem.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">클래스</a> &#124;
 <a href="#pub-static-methods">정적 Public 멤버 함수</a> &#124;
 <a href="classby_1_1fsystem-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">by::fsystem 클래스 참조<div class="ingroups"><a class="el" href="group__indep.html">Indep</a></div></div></div>
@@ -115,46 +122,47 @@ $(document).ready(function(){initNavTree('classby_1_1fsystem.html',''); initResi
 <div class="contents">
 
 <p>Cross-platform filesystem utilities for recursive file traversal  
- <a href="classby_1_1fsystem.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="fsystem_2fsystem_8hpp_source.html">fsystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 정적 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ad73b86716bdac2f73d88cd315fc00332"><td class="memItemLeft" align="right" valign="top">static iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">find</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:ad73b86716bdac2f73d88cd315fc00332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates iterator for recursive filesystem traversal  <a href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ad73b86716bdac2f73d88cd315fc00332" id="r_ad73b86716bdac2f73d88cd315fc00332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad73b86716bdac2f73d88cd315fc00332">find</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;path)</td></tr>
+<tr class="memdesc:ad73b86716bdac2f73d88cd315fc00332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates iterator for recursive filesystem traversal  <br /></td></tr>
 <tr class="separator:ad73b86716bdac2f73d88cd315fc00332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ccfd39966e8a0d3a9dd32b4499e0b35"><td class="memItemLeft" align="right" valign="top"><a id="a3ccfd39966e8a0d3a9dd32b4499e0b35" name="a3ccfd39966e8a0d3a9dd32b4499e0b35"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentDir</b> ()</td></tr>
+<tr class="memitem:a3ccfd39966e8a0d3a9dd32b4499e0b35" id="r_a3ccfd39966e8a0d3a9dd32b4499e0b35"><td class="memItemLeft" align="right" valign="top"><a id="a3ccfd39966e8a0d3a9dd32b4499e0b35" name="a3ccfd39966e8a0d3a9dd32b4499e0b35"></a>
+<a class="el" href="structby_1_1no_wrap.html">static</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentDir</b> ()</td></tr>
 <tr class="separator:a3ccfd39966e8a0d3a9dd32b4499e0b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae440769e6cd8537c97c6cdaa19890436"><td class="memItemLeft" align="right" valign="top"><a id="ae440769e6cd8537c97c6cdaa19890436" name="ae440769e6cd8537c97c6cdaa19890436"></a>
-static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDelimiter</b> ()</td></tr>
+<tr class="memitem:ae440769e6cd8537c97c6cdaa19890436" id="r_ae440769e6cd8537c97c6cdaa19890436"><td class="memItemLeft" align="right" valign="top"><a id="ae440769e6cd8537c97c6cdaa19890436" name="ae440769e6cd8537c97c6cdaa19890436"></a>
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDelimiter</b> ()</td></tr>
 <tr class="separator:ae440769e6cd8537c97c6cdaa19890436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Cross-platform filesystem utilities for recursive file traversal </p>
-<p >A simple class for recursively traversing files in a specified folder. Provides platform-independent API that works on both Windows and POSIX-compliant operating systems. Core functionality is provided through the iterator class.</p>
+<div class="textblock"><p>Cross-platform filesystem utilities for recursive file traversal </p>
+<p>A simple class for recursively traversing files in a specified folder. Provides platform-independent API that works on both Windows and POSIX-compliant operating systems. Core functionality is provided through the iterator class.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p >Basic usage example: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> e = <a class="code hl_function" href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">fsystem::find</a>(<span class="stringliteral">&quot;../your/path&quot;</span>);</div>
-<div class="line"><span class="keywordflow">while</span>(e.next()) { <span class="comment">// Returns false when all files are traversed</span></div>
-<div class="line">    <span class="keyword">const</span> std::string&amp; path = *e; <span class="comment">// Path of the found file</span></div>
-<div class="line">    <span class="keywordflow">if</span>(*e == <span class="stringliteral">&quot;../your/path/child/helloWorld.cpp&quot;</span>) <span class="comment">// Always uses relative paths</span></div>
-<div class="line">        doSomething(e-&gt;getDir()); <span class="comment">// Returns the folder path of the found file</span></div>
+<p>Basic usage example: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a> = <a class="code hl_function" href="#ad73b86716bdac2f73d88cd315fc00332">fsystem::find</a>(<span class="stringliteral">&quot;../your/path&quot;</span>);</div>
+<div class="line"><span class="keywordflow">while</span>(<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>.next()) { <span class="comment">// Returns false when all files are traversed</span></div>
+<div class="line">    <span class="keyword">const</span> std::string&amp; path = *<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>; <span class="comment">// Path of the found file</span></div>
+<div class="line">    <span class="keywordflow">if</span>(*<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a> == <span class="stringliteral">&quot;../your/path/child/helloWorld.cpp&quot;</span>) <span class="comment">// Always uses relative paths</span></div>
+<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">doSomething</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>-&gt;getDir()); <span class="comment">// Returns the folder path of the found file</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassby_1_1fsystem_html_ad73b86716bdac2f73d88cd315fc00332"><div class="ttname"><a href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">by::fsystem::find</a></div><div class="ttdeci">static iterator find(const std::string &amp;path)</div><div class="ttdoc">Creates iterator for recursive filesystem traversal</div></div>
+<div class="ttc" id="aclassby_1_1fsystem_html_ad73b86716bdac2f73d88cd315fc00332"><div class="ttname"><a href="#ad73b86716bdac2f73d88cd315fc00332">by::fsystem::find</a></div><div class="ttdeci">static iterator find(const std::string &amp;path)</div><div class="ttdoc">Creates iterator for recursive filesystem traversal</div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --><dl class="section remark"><dt>Remarks</dt><dd>Always iterates files only Empty folders are skipped during iteration.</dd></dl>
 <h1><a class="anchor" id="this"></a>
 supports partial glob patterns</h1>
-<p >You can use aterisk (*) and question mark (?) wildcards in the pattern. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> e = <a class="code hl_function" href="classby_1_1fsystem.html#ad73b86716bdac2f73d88cd315fc00332">fsystem::find</a>(<span class="stringliteral">&quot;*.cpp&quot;</span>); <span class="comment">// the only difference is here</span></div>
-<div class="line"><span class="keywordflow">while</span>(e.next()) {</div>
-<div class="line">    <span class="keyword">const</span> std::string&amp; path = *e;</div>
-<div class="line">    <span class="keywordflow">if</span>(*e == <span class="stringliteral">&quot;your/path/child/helloWorld.cpp&quot;</span>)</div>
-<div class="line">        doSomething(e-&gt;getDir());</div>
+<p>You can use aterisk (*) and question mark (?) wildcards in the pattern. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a> = <a class="code hl_function" href="#ad73b86716bdac2f73d88cd315fc00332">fsystem::find</a>(<span class="stringliteral">&quot;*.cpp&quot;</span>); <span class="comment">// the only difference is here</span></div>
+<div class="line"><span class="keywordflow">while</span>(<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>.next()) {</div>
+<div class="line">    <span class="keyword">const</span> std::string&amp; path = *<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>;</div>
+<div class="line">    <span class="keywordflow">if</span>(*<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a> == <span class="stringliteral">&quot;your/path/child/helloWorld.cpp&quot;</span>)</div>
+<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">doSomething</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>-&gt;getDir());</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="ad73b86716bdac2f73d88cd315fc00332" name="ad73b86716bdac2f73d88cd315fc00332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73b86716bdac2f73d88cd315fc00332">&#9670;&nbsp;</a></span>find()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73b86716bdac2f73d88cd315fc00332">&#9670;&#160;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,10 +171,9 @@ supports partial glob patterns</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static iterator by::fsystem::find </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">static</a> iterator by::fsystem::find </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/worker/visitor/visitor.hpp 파일 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('visitor_2visitor_8hpp.html',''); initResizable(); });
+$(function(){initNavTree('visitor_2visitor_8hpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp.html',''); initR
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -128,15 +136,15 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp.html',''); initR
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 매크로</h2></td></tr>
-<tr class="memitem:adca1c983a98dba734ec82a49766ac278"><td class="memItemLeft" align="right" valign="top"><a id="adca1c983a98dba734ec82a49766ac278" name="adca1c983a98dba734ec82a49766ac278"></a>
+<tr class="memitem:adca1c983a98dba734ec82a49766ac278" id="r_adca1c983a98dba734ec82a49766ac278"><td class="memItemLeft" align="right" valign="top"><a id="adca1c983a98dba734ec82a49766ac278" name="adca1c983a98dba734ec82a49766ac278"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>X</b>(T)&#160;&#160;&#160;class T;</td></tr>
 <tr class="separator:adca1c983a98dba734ec82a49766ac278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca1c983a98dba734ec82a49766ac278"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visitor_2visitor_8hpp.html#adca1c983a98dba734ec82a49766ac278">X</a>(T)</td></tr>
+<tr class="memitem:adca1c983a98dba734ec82a49766ac278" id="r_adca1c983a98dba734ec82a49766ac278"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adca1c983a98dba734ec82a49766ac278">X</a>(T)</td></tr>
 <tr class="separator:adca1c983a98dba734ec82a49766ac278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">매크로 문서화</h2>
 <a id="adca1c983a98dba734ec82a49766ac278" name="adca1c983a98dba734ec82a49766ac278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca1c983a98dba734ec82a49766ac278">&#9670;&nbsp;</a></span>X</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adca1c983a98dba734ec82a49766ac278">&#9670;&#160;</a></span>X</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,15 +152,14 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp.html',''); initR
         <tr>
           <td class="memname">#define X</td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">T</td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">T</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>값:</b><div class="fragment"><div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> visit(<span class="keyword">const</span> visitInfo&amp; i, T&amp; me);                          \</div>
-<div class="line">    virtual nbool onVisit(<span class="keyword">const</span> visitInfo&amp; i, T&amp; me, nbool alreadyVisited); \</div>
-<div class="line">    virtual <span class="keywordtype">void</span> onLeave(<span class="keyword">const</span> visitInfo&amp; i, T&amp; me, nbool alreadyVisited);</div>
+<div class="line">    <span class="keyword">virtual</span> nbool onVisit(<span class="keyword">const</span> visitInfo&amp; i, T&amp; me, nbool alreadyVisited); \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLeave(<span class="keyword">const</span> visitInfo&amp; i, T&amp; me, nbool alreadyVisited);</div>
 </div><!-- fragment -->
 </div>
 </div>

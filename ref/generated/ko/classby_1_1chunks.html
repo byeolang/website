@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::chunks 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1chunks.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1chunks.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1chunks.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,7 +122,7 @@ $(document).ready(function(){initNavTree('classby_1_1chunks.html',''); initResiz
 <div class="contents">
 
 <p>Collection of memory chunks for scalable allocation  
- <a href="classby_1_1chunks.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="chunks_8hpp_source.html">chunks.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -130,86 +138,86 @@ by::chunks에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a4df82ca7ec50b56cc16795a3eb541b19"><td class="memItemLeft" align="right" valign="top"><a id="a4df82ca7ec50b56cc16795a3eb541b19" name="a4df82ca7ec50b56cc16795a3eb541b19"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>chunks</b> (ncnt blkbyte=0)</td></tr>
+<tr class="memitem:a4df82ca7ec50b56cc16795a3eb541b19" id="r_a4df82ca7ec50b56cc16795a3eb541b19"><td class="memItemLeft" align="right" valign="top"><a id="a4df82ca7ec50b56cc16795a3eb541b19" name="a4df82ca7ec50b56cc16795a3eb541b19"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>chunks</b> (ncnt <a class="el" href="structby_1_1no_wrap.html">blkbyte</a>=0)</td></tr>
 <tr class="separator:a4df82ca7ec50b56cc16795a3eb541b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65b6ae9a9e37bcd9748acf458a89bde9"><td class="memItemLeft" align="right" valign="top"><a id="a65b6ae9a9e37bcd9748acf458a89bde9" name="a65b6ae9a9e37bcd9748acf458a89bde9"></a>
-<a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (nidx n)</td></tr>
+<tr class="memitem:a65b6ae9a9e37bcd9748acf458a89bde9" id="r_a65b6ae9a9e37bcd9748acf458a89bde9"><td class="memItemLeft" align="right" valign="top"><a id="a65b6ae9a9e37bcd9748acf458a89bde9" name="a65b6ae9a9e37bcd9748acf458a89bde9"></a>
+<a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>)</td></tr>
 <tr class="separator:a65b6ae9a9e37bcd9748acf458a89bde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665c52c97c3804852b34bdec925ada05"><td class="memItemLeft" align="right" valign="top"><a id="a665c52c97c3804852b34bdec925ada05" name="a665c52c97c3804852b34bdec925ada05"></a>
-const <a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (nidx n) const BY_CONST_FUNC(operator[](n))</td></tr>
+<tr class="memitem:a665c52c97c3804852b34bdec925ada05" id="r_a665c52c97c3804852b34bdec925ada05"><td class="memItemLeft" align="right" valign="top"><a id="a665c52c97c3804852b34bdec925ada05" name="a665c52c97c3804852b34bdec925ada05"></a>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](<a class="el" href="structby_1_1no_wrap.html">n</a>))</td></tr>
 <tr class="separator:a665c52c97c3804852b34bdec925ada05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27fe42b54e39bb907b07be224be65e0"><td class="memItemLeft" align="right" valign="top"><a id="af27fe42b54e39bb907b07be224be65e0" name="af27fe42b54e39bb907b07be224be65e0"></a>
-<a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it)</td></tr>
+<tr class="memitem:af27fe42b54e39bb907b07be224be65e0" id="r_af27fe42b54e39bb907b07be224be65e0"><td class="memItemLeft" align="right" valign="top"><a id="af27fe42b54e39bb907b07be224be65e0" name="af27fe42b54e39bb907b07be224be65e0"></a>
+<a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it)</td></tr>
 <tr class="separator:af27fe42b54e39bb907b07be224be65e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19cbf4191eac501105fbf17add04080c"><td class="memItemLeft" align="right" valign="top"><a id="a19cbf4191eac501105fbf17add04080c" name="a19cbf4191eac501105fbf17add04080c"></a>
-const <a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) const BY_CONST_FUNC(operator[](it))</td></tr>
+<tr class="memitem:a19cbf4191eac501105fbf17add04080c" id="r_a19cbf4191eac501105fbf17add04080c"><td class="memItemLeft" align="right" valign="top"><a id="a19cbf4191eac501105fbf17add04080c" name="a19cbf4191eac501105fbf17add04080c"></a>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1chunk.html">chunk</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](it))</td></tr>
 <tr class="separator:a19cbf4191eac501105fbf17add04080c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a749e5089bd141d6be2959c38e6844c0f"><td class="memItemLeft" align="right" valign="top"><a id="a749e5089bd141d6be2959c38e6844c0f" name="a749e5089bd141d6be2959c38e6844c0f"></a>
-<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (nidx n)</td></tr>
+<tr class="memitem:a749e5089bd141d6be2959c38e6844c0f" id="r_a749e5089bd141d6be2959c38e6844c0f"><td class="memItemLeft" align="right" valign="top"><a id="a749e5089bd141d6be2959c38e6844c0f" name="a749e5089bd141d6be2959c38e6844c0f"></a>
+<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>)</td></tr>
 <tr class="separator:a749e5089bd141d6be2959c38e6844c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58032d4a81717c75b0a98de778108db9"><td class="memItemLeft" align="right" valign="top"><a id="a58032d4a81717c75b0a98de778108db9" name="a58032d4a81717c75b0a98de778108db9"></a>
-<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it)</td></tr>
+<tr class="memitem:a58032d4a81717c75b0a98de778108db9" id="r_a58032d4a81717c75b0a98de778108db9"><td class="memItemLeft" align="right" valign="top"><a id="a58032d4a81717c75b0a98de778108db9" name="a58032d4a81717c75b0a98de778108db9"></a>
+<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it)</td></tr>
 <tr class="separator:a58032d4a81717c75b0a98de778108db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ab1fd8f93d46bbd78ed70610db9ba5"><td class="memItemLeft" align="right" valign="top"><a id="a85ab1fd8f93d46bbd78ed70610db9ba5" name="a85ab1fd8f93d46bbd78ed70610db9ba5"></a>
-<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(get)</td></tr>
+<tr class="memitem:a85ab1fd8f93d46bbd78ed70610db9ba5" id="r_a85ab1fd8f93d46bbd78ed70610db9ba5"><td class="memItemLeft" align="right" valign="top"><a id="a85ab1fd8f93d46bbd78ed70610db9ba5" name="a85ab1fd8f93d46bbd78ed70610db9ba5"></a>
+<a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(get)</td></tr>
 <tr class="separator:a85ab1fd8f93d46bbd78ed70610db9ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3178169d95e5a5f37e406772293a51b7"><td class="memItemLeft" align="right" valign="top"><a id="a3178169d95e5a5f37e406772293a51b7" name="a3178169d95e5a5f37e406772293a51b7"></a>
-const <a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (nidx n) const BY_CONST_FUNC(get(n)) const <a class="el" href="classby_1_1chunk.html">chunk</a> *get(const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) const BY_CONST_FUNC(get(it)) const <a class="el" href="classby_1_1chunk.html">chunk</a> *get(const <a class="el" href="classby_1_1instance.html">instance</a> *it) const BY_CONST_FUNC(get(it)) void *new 1() override</td></tr>
+<tr class="memitem:a3178169d95e5a5f37e406772293a51b7" id="r_a3178169d95e5a5f37e406772293a51b7"><td class="memItemLeft" align="right" valign="top"><a id="a3178169d95e5a5f37e406772293a51b7" name="a3178169d95e5a5f37e406772293a51b7"></a>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1chunk.html">chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(get(<a class="el" href="structby_1_1no_wrap.html">n</a>)) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1chunk.html">chunk</a> *get(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(get(it)) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1chunk.html">chunk</a> *get(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(get(it)) void *<a class="el" href="structby_1_1no_wrap.html">new</a> 1() <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a3178169d95e5a5f37e406772293a51b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a044ed72cf9d11e91a730db9b75864d91"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#a044ed72cf9d11e91a730db9b75864d91">del</a> (void *pt, ncnt sz) override</td></tr>
+<tr class="memitem:a044ed72cf9d11e91a730db9b75864d91" id="r_a044ed72cf9d11e91a730db9b75864d91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a044ed72cf9d11e91a730db9b75864d91">del</a> (void *<a class="el" href="structby_1_1no_wrap.html">pt</a>, ncnt <a class="el" href="structby_1_1no_wrap.html">sz</a>) <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a044ed72cf9d11e91a730db9b75864d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7761ce857f3989c96b8ea553230da06c"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c">resize</a> (ncnt new1)</td></tr>
+<tr class="memitem:a7761ce857f3989c96b8ea553230da06c" id="r_a7761ce857f3989c96b8ea553230da06c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7761ce857f3989c96b8ea553230da06c">resize</a> (ncnt new1)</td></tr>
 <tr class="separator:a7761ce857f3989c96b8ea553230da06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa326054a3541992f15545483117c9013"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#aa326054a3541992f15545483117c9013">has</a> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) const override</td></tr>
-<tr class="memdesc:aa326054a3541992f15545483117c9013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any of the managed chunks contain the memory allocated for the given instance.  <a href="classby_1_1chunks.html#aa326054a3541992f15545483117c9013">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:aa326054a3541992f15545483117c9013" id="r_aa326054a3541992f15545483117c9013"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa326054a3541992f15545483117c9013">has</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memdesc:aa326054a3541992f15545483117c9013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any of the managed chunks contain the memory allocated for the given instance.  <br /></td></tr>
 <tr class="separator:aa326054a3541992f15545483117c9013"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a242b52435b461eeb8fedfc3793950ed7"><td class="memItemLeft" align="right" valign="top">ncnt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#a242b52435b461eeb8fedfc3793950ed7">len</a> () const override</td></tr>
+<tr class="memitem:a242b52435b461eeb8fedfc3793950ed7" id="r_a242b52435b461eeb8fedfc3793950ed7"><td class="memItemLeft" align="right" valign="top">ncnt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a242b52435b461eeb8fedfc3793950ed7">len</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a242b52435b461eeb8fedfc3793950ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdd69c86091664c4f1395b6e55869a59"><td class="memItemLeft" align="right" valign="top">ncnt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#afdd69c86091664c4f1395b6e55869a59">size</a> () const override</td></tr>
+<tr class="memitem:afdd69c86091664c4f1395b6e55869a59" id="r_afdd69c86091664c4f1395b6e55869a59"><td class="memItemLeft" align="right" valign="top">ncnt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdd69c86091664c4f1395b6e55869a59">size</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:afdd69c86091664c4f1395b6e55869a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51bbdafb94c7bd5ca20a2e5cfd1452bf"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1chunks.html#a51bbdafb94c7bd5ca20a2e5cfd1452bf">rel</a> () override</td></tr>
+<tr class="memitem:a51bbdafb94c7bd5ca20a2e5cfd1452bf" id="r_a51bbdafb94c7bd5ca20a2e5cfd1452bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51bbdafb94c7bd5ca20a2e5cfd1452bf">rel</a> () <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a51bbdafb94c7bd5ca20a2e5cfd1452bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1allocator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1allocator')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1allocator.html">by::allocator</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a3166f6f1bb9bf5db1c253478f3c0fed9 inherit pub_methods_classby_1_1allocator"><td class="memItemLeft" align="right" valign="top"><a id="a3166f6f1bb9bf5db1c253478f3c0fed9" name="a3166f6f1bb9bf5db1c253478f3c0fed9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b> (ncnt blksize=1)</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1allocator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1allocator')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1allocator.html">by::allocator</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a3166f6f1bb9bf5db1c253478f3c0fed9 inherit pub_methods_classby_1_1allocator" id="r_a3166f6f1bb9bf5db1c253478f3c0fed9"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b> (ncnt <a class="el" href="structby_1_1no_wrap.html">blksize</a>=1)</td></tr>
 <tr class="separator:a3166f6f1bb9bf5db1c253478f3c0fed9 inherit pub_methods_classby_1_1allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae288acc7adf77302f35a85c0e0392e21 inherit pub_methods_classby_1_1allocator"><td class="memItemLeft" align="right" valign="top"><a id="ae288acc7adf77302f35a85c0e0392e21" name="ae288acc7adf77302f35a85c0e0392e21"></a>
-virtual void *&#160;</td><td class="memItemRight" valign="bottom"><b>new1</b> ()=0</td></tr>
+<tr class="memitem:ae288acc7adf77302f35a85c0e0392e21 inherit pub_methods_classby_1_1allocator" id="r_ae288acc7adf77302f35a85c0e0392e21"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>new1</b> ()=0</td></tr>
 <tr class="separator:ae288acc7adf77302f35a85c0e0392e21 inherit pub_methods_classby_1_1allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae165e9c6d13169011b455f14d3337cab inherit pub_methods_classby_1_1allocator"><td class="memItemLeft" align="right" valign="top"><a id="ae165e9c6d13169011b455f14d3337cab" name="ae165e9c6d13169011b455f14d3337cab"></a>
-ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>getBlkSize</b> () const</td></tr>
+<tr class="memitem:ae165e9c6d13169011b455f14d3337cab inherit pub_methods_classby_1_1allocator" id="r_ae165e9c6d13169011b455f14d3337cab"><td class="memItemLeft" align="right" valign="top">
+ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>getBlkSize</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ae165e9c6d13169011b455f14d3337cab inherit pub_methods_classby_1_1allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a069727df2ae0b05181db801680235701" name="a069727df2ae0b05181db801680235701"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (const <a class="el" href="classby_1_1instance.html">instance</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1memory_haver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1memory_haver')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1memory_haver.html">by::memoryHaver</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver" id="r_a069727df2ae0b05181db801680235701"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
 <tr class="separator:a069727df2ae0b05181db801680235701 inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="a0fa515bcc8063aa8b757249d4f3a4a90" name="a0fa515bcc8063aa8b757249d4f3a4a90"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () const</td></tr>
+<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver" id="r_a0fa515bcc8063aa8b757249d4f3a4a90"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a0fa515bcc8063aa8b757249d4f3a4a90 inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver"><td class="memItemLeft" align="right" valign="top"><a id="ad3c722229dbf04bbb7f3226589849bad" name="ad3c722229dbf04bbb7f3226589849bad"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () const</td></tr>
+<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver" id="r_ad3c722229dbf04bbb7f3226589849bad"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ad3c722229dbf04bbb7f3226589849bad inherit pub_methods_classby_1_1memory_haver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Collection of memory chunks for scalable allocation </p>
-<p >Manages multiple <a class="el" href="classby_1_1chunk.html">chunk</a> instances. Since chunk uses only fixed-size memory created at initialization, chunks adds/removes multiple chunks to manage memory dynamically.</p>
+<div class="textblock"><p>Collection of memory chunks for scalable allocation </p>
+<p>Manages multiple <a class="el" href="classby_1_1chunk.html">chunk</a> instances. Since chunk uses only fixed-size memory created at initialization, chunks adds/removes multiple chunks to manage memory dynamically.</p>
 <h1><a class="anchor" id="fixed_memory_only"></a>
 chunks also provides only fixed memory</h1>
-<p >Since chunks adds or removes chunks, and each chunk cell uses only fixed size, chunks can also only allocate fixed-size memory.</p>
+<p>Since chunks adds or removes chunks, and each chunk cell uses only fixed size, chunks can also only allocate fixed-size memory.</p>
 <h1><a class="anchor" id="pool_coordination"></a>
 Coordination with pool</h1>
-<p >The first to receive memory requests is <a class="el" href="classby_1_1pool.html">pool</a> class. When pool receives a memory size to allocate, it lazily retrieves a chunks instance capable of handling that memory size and requests new1(). chunks::new1() finds a chunk capable of allocating memory, and if none exists, creates an additional chunk.</p>
+<p>The first to receive memory requests is <a class="el" href="classby_1_1pool.html">pool</a> class. When pool receives a memory size to allocate, it lazily retrieves a chunks instance capable of handling that memory size and requests new1(). chunks::new1() finds a chunk capable of allocating memory, and if none exists, creates an additional chunk.</p>
 <h1><a class="anchor" id="chunk_search_algorithm"></a>
 Available chunk search algorithm</h1>
-<p >The most recently memory-allocated chunk has the highest probability of being able to allocate additionally. Member variable <code>_s</code> holds the index of the most recently allocated chunk. If _chunks[_s] has no available memory, increment _s. Like a circular array, _chunks' end connects to its beginning. If _s loops back to its pre-traversal value and still no available memory exists, the entire chunks has no available memory, so enters <a class="el" href="classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c">resize()</a>.</p>
+<p>The most recently memory-allocated chunk has the highest probability of being able to allocate additionally. Member variable <code>_s</code> holds the index of the most recently allocated chunk. If _chunks[_s] has no available memory, increment _s. Like a circular array, _chunks' end connects to its beginning. If _s loops back to its pre-traversal value and still no available memory exists, the entire chunks has no available memory, so enters <a class="el" href="#a7761ce857f3989c96b8ea553230da06c">resize()</a>.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Cannot use vector Obviously, vector is managed on heap, so shouldn't use vector while making a custom memory pool. Planned for future modification. </dd></dl>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a044ed72cf9d11e91a730db9b75864d91" name="a044ed72cf9d11e91a730db9b75864d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a044ed72cf9d11e91a730db9b75864d91">&#9670;&nbsp;</a></span>del()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a044ed72cf9d11e91a730db9b75864d91">&#9670;&#160;</a></span>del()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,21 +226,14 @@ Available chunk search algorithm</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::chunks::del </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::chunks::del </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pt</em>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pt</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ncnt&#160;</td>
-          <td class="paramname"><em>sz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">ncnt</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -247,7 +248,7 @@ Available chunk search algorithm</h1>
 </div>
 </div>
 <a id="aa326054a3541992f15545483117c9013" name="aa326054a3541992f15545483117c9013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa326054a3541992f15545483117c9013">&#9670;&nbsp;</a></span>has()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa326054a3541992f15545483117c9013">&#9670;&#160;</a></span>has()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,10 +257,9 @@ Available chunk search algorithm</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::chunks::has </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::chunks::has </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1instance.html">instance</a> &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -284,7 +284,7 @@ Available chunk search algorithm</h1>
 </div>
 </div>
 <a id="a242b52435b461eeb8fedfc3793950ed7" name="a242b52435b461eeb8fedfc3793950ed7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a242b52435b461eeb8fedfc3793950ed7">&#9670;&nbsp;</a></span>len()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a242b52435b461eeb8fedfc3793950ed7">&#9670;&#160;</a></span>len()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +295,7 @@ Available chunk search algorithm</h1>
         <tr>
           <td class="memname">ncnt by::chunks::len </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -311,7 +311,7 @@ Available chunk search algorithm</h1>
 </div>
 </div>
 <a id="a51bbdafb94c7bd5ca20a2e5cfd1452bf" name="a51bbdafb94c7bd5ca20a2e5cfd1452bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51bbdafb94c7bd5ca20a2e5cfd1452bf">&#9670;&nbsp;</a></span>rel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a51bbdafb94c7bd5ca20a2e5cfd1452bf">&#9670;&#160;</a></span>rel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,9 +320,9 @@ Available chunk search algorithm</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::chunks::rel </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::chunks::rel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -338,7 +338,7 @@ Available chunk search algorithm</h1>
 </div>
 </div>
 <a id="a7761ce857f3989c96b8ea553230da06c" name="a7761ce857f3989c96b8ea553230da06c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7761ce857f3989c96b8ea553230da06c">&#9670;&nbsp;</a></span>resize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7761ce857f3989c96b8ea553230da06c">&#9670;&#160;</a></span>resize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,10 +347,9 @@ Available chunk search algorithm</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::chunks::resize </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::chunks::resize </td>
           <td>(</td>
-          <td class="paramtype">ncnt&#160;</td>
-          <td class="paramname"><em>new1</em></td><td>)</td>
+          <td class="paramtype">ncnt</td>          <td class="paramname"><span class="paramname"><em>new1</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -365,7 +364,7 @@ Available chunk search algorithm</h1>
 </div>
 </div>
 <a id="afdd69c86091664c4f1395b6e55869a59" name="afdd69c86091664c4f1395b6e55869a59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdd69c86091664c4f1395b6e55869a59">&#9670;&nbsp;</a></span>size()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd69c86091664c4f1395b6e55869a59">&#9670;&#160;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,7 +375,7 @@ Available chunk search algorithm</h1>
         <tr>
           <td class="memname">ncnt by::chunks::size </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

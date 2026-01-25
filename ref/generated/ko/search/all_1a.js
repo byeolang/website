@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['프로젝트_20구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../al-build-structure.html',1,'']]]
+  ['❌_20불필요하게_20긴_20예제_0',['❌ 불필요하게 긴 예제',['../ab-convention-rules.html#autotoc_md44',1,'']]],
+  ['❌_20잘못된_20예제_1',['❌ 잘못된 예제',['../ab-convention-rules.html#autotoc_md37',1,'❌ 잘못된 예제'],['../ab-convention-rules.html#autotoc_md40',1,'❌ 잘못된 예제']]]
 ];

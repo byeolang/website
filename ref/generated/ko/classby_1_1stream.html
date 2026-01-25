@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::stream 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1stream.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1stream.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1stream.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,7 +122,7 @@ $(document).ready(function(){initNavTree('classby_1_1stream.html',''); initResiz
 <div class="contents">
 
 <p>Base class for all logging output streams  
- <a href="classby_1_1stream.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="stream_2stream_8hpp_source.html">stream.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -131,43 +139,43 @@ by::stream에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a7325447d6475e8262e96f8b3502ce70a"><td class="memItemLeft" align="right" valign="top"><a id="a7325447d6475e8262e96f8b3502ce70a" name="a7325447d6475e8262e96f8b3502ce70a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b> (nbool isEnable=true)</td></tr>
+<tr class="memitem:a7325447d6475e8262e96f8b3502ce70a" id="r_a7325447d6475e8262e96f8b3502ce70a"><td class="memItemLeft" align="right" valign="top"><a id="a7325447d6475e8262e96f8b3502ce70a" name="a7325447d6475e8262e96f8b3502ce70a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b> (nbool isEnable=<a class="el" href="structby_1_1no_wrap.html">true</a>)</td></tr>
 <tr class="separator:a7325447d6475e8262e96f8b3502ce70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c4052659a2241932fe3b9c8b2f80804"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stream.html#a3c4052659a2241932fe3b9c8b2f80804">logBypass</a> (const nchar *message)</td></tr>
-<tr class="memdesc:a3c4052659a2241932fe3b9c8b2f80804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message directly without formatting  <a href="classby_1_1stream.html#a3c4052659a2241932fe3b9c8b2f80804">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a3c4052659a2241932fe3b9c8b2f80804" id="r_a3c4052659a2241932fe3b9c8b2f80804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4052659a2241932fe3b9c8b2f80804">logBypass</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *<a class="el" href="structby_1_1no_wrap.html">message</a>)</td></tr>
+<tr class="memdesc:a3c4052659a2241932fe3b9c8b2f80804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message directly without formatting  <br /></td></tr>
 <tr class="separator:a3c4052659a2241932fe3b9c8b2f80804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfa1566a39193d8449835b86332d1a90"><td class="memItemLeft" align="right" valign="top"><a id="adfa1566a39193d8449835b86332d1a90" name="adfa1566a39193d8449835b86332d1a90"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>logBypass</b> (const std::string &amp;message)</td></tr>
+<tr class="memitem:adfa1566a39193d8449835b86332d1a90" id="r_adfa1566a39193d8449835b86332d1a90"><td class="memItemLeft" align="right" valign="top"><a id="adfa1566a39193d8449835b86332d1a90" name="adfa1566a39193d8449835b86332d1a90"></a>
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>logBypass</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">message</a>)</td></tr>
 <tr class="separator:adfa1566a39193d8449835b86332d1a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7398d28be5cd2e0cb2d61e7838300ae3"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stream.html#a7398d28be5cd2e0cb2d61e7838300ae3">isNull</a> () const</td></tr>
-<tr class="memdesc:a7398d28be5cd2e0cb2d61e7838300ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this stream is a null object.  <a href="classby_1_1stream.html#a7398d28be5cd2e0cb2d61e7838300ae3">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a7398d28be5cd2e0cb2d61e7838300ae3" id="r_a7398d28be5cd2e0cb2d61e7838300ae3"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7398d28be5cd2e0cb2d61e7838300ae3">isNull</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memdesc:a7398d28be5cd2e0cb2d61e7838300ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this stream is a null object.  <br /></td></tr>
 <tr class="separator:a7398d28be5cd2e0cb2d61e7838300ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061d9d47ff18fe75632ac7d1080dafa8"><td class="memItemLeft" align="right" valign="top"><a id="a061d9d47ff18fe75632ac7d1080dafa8" name="a061d9d47ff18fe75632ac7d1080dafa8"></a>
-virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnable</b> () const</td></tr>
+<tr class="memitem:a061d9d47ff18fe75632ac7d1080dafa8" id="r_a061d9d47ff18fe75632ac7d1080dafa8"><td class="memItemLeft" align="right" valign="top"><a id="a061d9d47ff18fe75632ac7d1080dafa8" name="a061d9d47ff18fe75632ac7d1080dafa8"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnable</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a061d9d47ff18fe75632ac7d1080dafa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0725b4d3ca2a0fc114bda7eb6daae3b5"><td class="memItemLeft" align="right" valign="top"><a id="a0725b4d3ca2a0fc114bda7eb6daae3b5" name="a0725b4d3ca2a0fc114bda7eb6daae3b5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnable</b> (nbool isEnable)</td></tr>
+<tr class="memitem:a0725b4d3ca2a0fc114bda7eb6daae3b5" id="r_a0725b4d3ca2a0fc114bda7eb6daae3b5"><td class="memItemLeft" align="right" valign="top"><a id="a0725b4d3ca2a0fc114bda7eb6daae3b5" name="a0725b4d3ca2a0fc114bda7eb6daae3b5"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnable</b> (nbool isEnable)</td></tr>
 <tr class="separator:a0725b4d3ca2a0fc114bda7eb6daae3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e50ea1fa90fc78746b5eb875835c97"><td class="memItemLeft" align="right" valign="top"><a id="a62e50ea1fa90fc78746b5eb875835c97" name="a62e50ea1fa90fc78746b5eb875835c97"></a>
-virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const =0</td></tr>
+<tr class="memitem:a62e50ea1fa90fc78746b5eb875835c97" id="r_a62e50ea1fa90fc78746b5eb875835c97"><td class="memItemLeft" align="right" valign="top"><a id="a62e50ea1fa90fc78746b5eb875835c97" name="a62e50ea1fa90fc78746b5eb875835c97"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a62e50ea1fa90fc78746b5eb875835c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061d678d31efbf65fa3bff94f10da2a3"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stream.html#a061d678d31efbf65fa3bff94f10da2a3">init</a> ()</td></tr>
-<tr class="memdesc:a061d678d31efbf65fa3bff94f10da2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stream, transitioning its state from RELEASED to INITIALIZED.  <a href="classby_1_1stream.html#a061d678d31efbf65fa3bff94f10da2a3">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a061d678d31efbf65fa3bff94f10da2a3" id="r_a061d678d31efbf65fa3bff94f10da2a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061d678d31efbf65fa3bff94f10da2a3">init</a> ()</td></tr>
+<tr class="memdesc:a061d678d31efbf65fa3bff94f10da2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stream, transitioning its state from RELEASED to INITIALIZED.  <br /></td></tr>
 <tr class="separator:a061d678d31efbf65fa3bff94f10da2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04f79c5589ac41a08e4388e681e9225"><td class="memItemLeft" align="right" valign="top"><a id="af04f79c5589ac41a08e4388e681e9225" name="af04f79c5589ac41a08e4388e681e9225"></a>
-virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</td></tr>
+<tr class="memitem:af04f79c5589ac41a08e4388e681e9225" id="r_af04f79c5589ac41a08e4388e681e9225"><td class="memItemLeft" align="right" valign="top"><a id="af04f79c5589ac41a08e4388e681e9225" name="af04f79c5589ac41a08e4388e681e9225"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:af04f79c5589ac41a08e4388e681e9225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bf81760fc4ddedd5e773644357cbc6"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stream.html#ad9bf81760fc4ddedd5e773644357cbc6">rel</a> ()</td></tr>
-<tr class="memdesc:ad9bf81760fc4ddedd5e773644357cbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the stream's resources, transitioning its state from INITIALIZED to RELEASED.  <a href="classby_1_1stream.html#ad9bf81760fc4ddedd5e773644357cbc6">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ad9bf81760fc4ddedd5e773644357cbc6" id="r_ad9bf81760fc4ddedd5e773644357cbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9bf81760fc4ddedd5e773644357cbc6">rel</a> ()</td></tr>
+<tr class="memdesc:ad9bf81760fc4ddedd5e773644357cbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the stream's resources, transitioning its state from INITIALIZED to RELEASED.  <br /></td></tr>
 <tr class="separator:ad9bf81760fc4ddedd5e773644357cbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Base class for all logging output streams </p>
-<p >Provides the fundamental interface for logging destinations such as console output, file output, or network logging. </p>
+<div class="textblock"><p>Base class for all logging output streams </p>
+<p>Provides the fundamental interface for logging destinations such as console output, file output, or network logging. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a061d678d31efbf65fa3bff94f10da2a3" name="a061d678d31efbf65fa3bff94f10da2a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a061d678d31efbf65fa3bff94f10da2a3">&#9670;&nbsp;</a></span>init()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a061d678d31efbf65fa3bff94f10da2a3">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,9 +184,9 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::stream::init </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool by::stream::init </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -195,7 +203,7 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
 </div>
 </div>
 <a id="a7398d28be5cd2e0cb2d61e7838300ae3" name="a7398d28be5cd2e0cb2d61e7838300ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7398d28be5cd2e0cb2d61e7838300ae3">&#9670;&nbsp;</a></span>isNull()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7398d28be5cd2e0cb2d61e7838300ae3">&#9670;&#160;</a></span>isNull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +211,7 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
         <tr>
           <td class="memname">nbool by::stream::isNull </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -215,7 +223,7 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
 </div>
 </div>
 <a id="a3c4052659a2241932fe3b9c8b2f80804" name="a3c4052659a2241932fe3b9c8b2f80804"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c4052659a2241932fe3b9c8b2f80804">&#9670;&nbsp;</a></span>logBypass()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4052659a2241932fe3b9c8b2f80804">&#9670;&#160;</a></span>logBypass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,10 +232,9 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::stream::logBypass </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool by::stream::logBypass </td>
           <td>(</td>
-          <td class="paramtype">const nchar *&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> nchar *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -246,7 +253,7 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
 </div>
 </div>
 <a id="ad9bf81760fc4ddedd5e773644357cbc6" name="ad9bf81760fc4ddedd5e773644357cbc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9bf81760fc4ddedd5e773644357cbc6">&#9670;&nbsp;</a></span>rel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bf81760fc4ddedd5e773644357cbc6">&#9670;&#160;</a></span>rel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,9 +262,9 @@ virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::stream::rel </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool by::stream::rel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

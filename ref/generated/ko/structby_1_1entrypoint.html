@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::entrypoint 구조체 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('structby_1_1entrypoint.html',''); initResizable(); });
+$(function(){initNavTree('structby_1_1entrypoint.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('structby_1_1entrypoint.html',''); init
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -115,7 +123,7 @@ $(document).ready(function(){initNavTree('structby_1_1entrypoint.html',''); init
 <div class="contents">
 
 <p>Entry point definition for <a class="el" href="classby_1_1pack_loading.html">pack loading</a>  
- <a href="structby_1_1entrypoint.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="manifest_8hpp_source.html">manifest.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -130,27 +138,27 @@ by::entrypoint에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a39f6cfc85c1a06be9d2025c395d80236"><td class="memItemLeft" align="right" valign="top"><a id="a39f6cfc85c1a06be9d2025c395d80236" name="a39f6cfc85c1a06be9d2025c395d80236"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>entrypoint</b> (const std::string &amp;newLang, const std::vector&lt; std::string &gt; &amp;newPaths)</td></tr>
+<tr class="memitem:a39f6cfc85c1a06be9d2025c395d80236" id="r_a39f6cfc85c1a06be9d2025c395d80236"><td class="memItemLeft" align="right" valign="top"><a id="a39f6cfc85c1a06be9d2025c395d80236" name="a39f6cfc85c1a06be9d2025c395d80236"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>entrypoint</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">newLang</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::vector&lt; std::string &gt; &amp;<a class="el" href="structby_1_1no_wrap.html">newPaths</a>)</td></tr>
 <tr class="separator:a39f6cfc85c1a06be9d2025c395d80236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad716ef7e8440a227fd8bc807b986c52f"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structby_1_1entrypoint.html#ad716ef7e8440a227fd8bc807b986c52f">isValid</a> () const override</td></tr>
+<tr class="memitem:ad716ef7e8440a227fd8bc807b986c52f" id="r_ad716ef7e8440a227fd8bc807b986c52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad716ef7e8440a227fd8bc807b986c52f">isValid</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:ad716ef7e8440a227fd8bc807b986c52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:ac8ed88686a95c9fbef8f0bf1a56c52ba"><td class="memItemLeft" align="right" valign="top"><a id="ac8ed88686a95c9fbef8f0bf1a56c52ba" name="ac8ed88686a95c9fbef8f0bf1a56c52ba"></a>
+<tr class="memitem:ac8ed88686a95c9fbef8f0bf1a56c52ba" id="r_ac8ed88686a95c9fbef8f0bf1a56c52ba"><td class="memItemLeft" align="right" valign="top"><a id="ac8ed88686a95c9fbef8f0bf1a56c52ba" name="ac8ed88686a95c9fbef8f0bf1a56c52ba"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>lang</b></td></tr>
 <tr class="separator:ac8ed88686a95c9fbef8f0bf1a56c52ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa9cccf6463c6bf8a2dc539ed7261673"><td class="memItemLeft" align="right" valign="top"><a id="afa9cccf6463c6bf8a2dc539ed7261673" name="afa9cccf6463c6bf8a2dc539ed7261673"></a>
+<tr class="memitem:afa9cccf6463c6bf8a2dc539ed7261673" id="r_afa9cccf6463c6bf8a2dc539ed7261673"><td class="memItemLeft" align="right" valign="top"><a id="afa9cccf6463c6bf8a2dc539ed7261673" name="afa9cccf6463c6bf8a2dc539ed7261673"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>paths</b></td></tr>
 <tr class="separator:afa9cccf6463c6bf8a2dc539ed7261673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Entry point definition for <a class="el" href="classby_1_1pack_loading.html">pack loading</a> </p>
-<p >Defines language and file paths for pack entry points. </p>
+<div class="textblock"><p>Entry point definition for <a class="el" href="classby_1_1pack_loading.html">pack loading</a> </p>
+<p>Defines language and file paths for pack entry points. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="ad716ef7e8440a227fd8bc807b986c52f" name="ad716ef7e8440a227fd8bc807b986c52f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad716ef7e8440a227fd8bc807b986c52f">&#9670;&nbsp;</a></span>isValid()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad716ef7e8440a227fd8bc807b986c52f">&#9670;&#160;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,9 +167,9 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::entrypoint::isValid </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::entrypoint::isValid </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -178,7 +186,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
 <li>/home/runner/work/byeol/byeol/module/core/ast/<a class="el" href="manifest_8hpp_source.html">manifest.hpp</a></li>
-<li>/home/runner/work/byeol/byeol/module/core/ast/manifest.cpp</li>
+<li>/home/runner/work/byeol/byeol/module/core/ast/<b>manifest.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

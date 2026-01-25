@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/builtin/container/iter/uiteration.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,11 +70,16 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('uiteration_8hpp_source.html',''); initResizable(); });
+$(function(){initNavTree('uiteration_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +106,16 @@ $(document).ready(function(){initNavTree('uiteration_8hpp_source.html',''); init
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -120,7 +133,7 @@ $(document).ready(function(){initNavTree('uiteration_8hpp_source.html',''); init
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classiteration.html">iteration</a>(nbool isReversed): _isReversed(isReversed) {}</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using</span> iterable::isFrom;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using </span>iterable::isFrom;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    nbool isFrom(<span class="keyword">const</span> tucontainable&amp; rhs)<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> this-&gt;getContainer() == &amp;rhs; }</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
@@ -129,9 +142,9 @@ $(document).ready(function(){initNavTree('uiteration_8hpp_source.html',''); init
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    nbool _isReversed;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
-<div class="ttc" id="aclassiter_html"><div class="ttname"><a href="classiter.html">iter</a></div><div class="ttdoc">Bidirectional iterator for key-value containers</div><div class="ttdef"><b>Definition:</b> biter.hpp:10</div></div>
-<div class="ttc" id="aclassiterable_html"><div class="ttname"><a href="classiterable.html">iterable</a></div><div class="ttdef"><b>Definition:</b> biterable.hpp:4</div></div>
-<div class="ttc" id="aclassiteration_html"><div class="ttname"><a href="classiteration.html">iteration</a></div><div class="ttdef"><b>Definition:</b> biteration.hpp:5</div></div>
+<div class="ttc" id="aclassiter_html"><div class="ttname"><a href="classiter.html">iter</a></div><div class="ttdoc">Bidirectional iterator for key-value containers</div><div class="ttdef"><b>Definition</b> biter.hpp:10</div></div>
+<div class="ttc" id="aclassiterable_html"><div class="ttname"><a href="classiterable.html">iterable</a></div><div class="ttdef"><b>Definition</b> biterable.hpp:4</div></div>
+<div class="ttc" id="aclassiteration_html"><div class="ttname"><a href="classiteration.html">iteration</a></div><div class="ttdef"><b>Definition</b> biteration.hpp:5</div></div>
 <div class="ttc" id="auiterable_8hpp_html"><div class="ttname"><a href="uiterable_8hpp.html">uiterable.hpp</a></div><div class="ttdoc">Iterable interface for unidirectional containers</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['위한_20기능은_20만들지_20않는다_0',['무조건적으로 하나의 기능을 위한 기능은 만들지 않는다',['../design-philosophy.html#autotoc_md20',1,'']]]
+];

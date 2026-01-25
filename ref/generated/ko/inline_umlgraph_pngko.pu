@@ -1,0 +1,4140 @@
+@startuml inline_umlgraph_1.png
+skinparam ranksep 1
+skinparam packagePadding 1
+
+frame "Byeol Interpreter" {
+  package "frontend module" as f {
+    rectangle "cli"
+    rectangle "flag"
+  }
+  package "core module" as co {
+    rectangle "ASTs"
+    rectangle "parser"
+    rectangle "verifier"
+    rectangle "expander"
+    rectangle "interpreter"
+    rectangle "starter"
+    rectangle "thread"
+    rectangle "frame"
+    rectangle "func"
+    rectangle "obj"
+    rectangle "closure"
+  }
+  package "stela module" as s {
+    rectangle "stelaParser"
+    rectangle "stelaScanner"
+    rectangle "stelaTokenDispatcher"
+    rectangle "stela"
+  }
+  package "memlite module" as mem {
+    rectangle "tstr"
+    rectangle "tweak"
+    rectangle "instance"
+    rectangle "instancer"
+    rectangle "watcher"
+  }
+  package "meta module" as met {
+    rectangle "ttype"
+    rectangle "type"
+  }
+  package "clog module" as cl {
+    rectangle "logger"
+    rectangle "stream"
+  }
+  package "indep module" as i {
+    rectangle "platformAPI"
+    rectangle "buildFeature"
+  }
+
+  f -down-> co
+  co -down-> s
+  s -down-> mem
+  mem -down-> met
+  met -down-> cl
+  cl -down-> i
+}
+@enduml
+@startuml inline_umlgraph_2.png
+package "에러 처리" {
+  class "tmay<T>" as tmay {
+    - _val : tmedium<T>
+    + has() : nbool
+    + get() : T&
+    + rel() : void
+    + set(T&) : void
+    --
+    <b>Optional 타입</b>
+    std::optional과 유사
+  }
+
+  class "tres<T, E>" as tres {
+    - _val : tmedium<T>
+    - _err : E
+    + has() : nbool
+    + get() : T&
+    + getErr() : E&
+    --
+    <b>Result/Either 타입</b>
+    값 또는 에러 반환
+  }
+
+  class "tmedium<T>" as tmedium {
+    - _ptr : T*
+    + has() : nbool
+    + get() : T&
+    + operator=(T*) : void
+    --
+    <b>내부 구현 클래스</b>
+    T&와 nullptr 처리
+  }
+}
+
+package "플랫폼 추상화" {
+  class platformAPI {
+    + {static} foreColor(color) : string
+    + {static} unlimitCoreDump() : void
+    + {static} getCpuCount() : nint
+    + {static} getPageSize() : nint
+    --
+    <b>Facade 패턴</b>
+    플랫폼 종속 API 통합
+  }
+
+  class buildFeature {
+    + {static} version::get() : string
+    + {static} date::get() : string
+    + {static} platform::getName() : string
+    + {static} config::isDbg() : nbool
+    --
+    CMake 자동 생성
+    빌드 정보 제공
+  }
+
+  class fsystem {
+    + {static} scan(path) : iterator
+    - _impl : OS별 구현
+    --
+    <b>Adapter 패턴</b>
+    파일 시스템 추상화
+  }
+
+  class dlib {
+    - _handle : void*
+    + load(path) : nbool
+    + getFunc(name) : void*
+    + close() : void
+    --
+    동적 라이브러리 로딩
+    dlopen/LoadLibrary 추상화
+  }
+
+  note bottom of platformAPI
+    <b>플랫폼별 분기:</b>
+    #ifdef BY_PLATFORM_WINDOWS
+        // Windows API 사용
+    #else
+        // POSIX API 사용
+    #endif
+  end note
+}
+
+tmay --> tmedium
+tres --> tmedium
+@enduml
+@startuml inline_umlgraph_3.png
+class "tmedium<T>" as tmedium {
+    - _ptr : T*
+    + has() : nbool
+    + get() : T&
+    + get() const : const T&
+    + rel() : T*
+    + operator=(T*) : void
+    + operator=(T&) : void
+    --
+    <b>indep 모듈 내부 전용 타입</b>
+}
+
+class "tmay<T>" as tmay {
+    - _val : tmedium<T>
+    --
+    + tmay()
+    + tmay(T&)
+    + has() : nbool
+    + get() : T&
+    + rel() : void
+    + set(T&) : void
+    --
+    <b>std::optional과 유사</b>
+    T값이 있거나 없음을 표현 가능
+}
+
+class "tres<T, E>" as tres {
+    - _val : tmedium<T>
+    - _err : E
+    --
+    + tres(T&)
+    + tres(E&)
+    + has() : nbool
+    + get() : T&
+    + getErr() : E&
+    + isErr() : nbool
+    --
+    <b>std::exepcted와 유사:</b>
+    T값이 없을 경우 E값을 소유함.
+}
+
+tmay *-- tmedium
+tres *-- tmedium
+@enduml
+@startuml inline_umlgraph_4.png
+class logger {
+    - _streams : map<string, stream*>
+    - _filters : filters
+    + {static} get() : logger&
+    + logBypass(level, msg) : void
+    + getStream(name) : stream*
+    + setFilters(filters&) : void
+    + setEnable(bool) : void
+    --
+    <b>Facade 패턴</b>
+    <b>Singleton 패턴</b>
+    로깅 시스템 진입점
+}
+
+abstract class stream {
+    - _enable : nbool
+    - _state : State
+    + dump(level, msg) : void
+    + setEnable(bool) : void
+    + rel() : void
+    --
+    <b>State Machine</b>
+    로깅 메시지를 출력하게될 목적지
+}
+
+class consoleStream {
+    + dump(level, msg) : void
+    --
+    콘솔 출력 스트림
+    stdout/stderr 사용
+}
+
+class fileLogStream {
+    - _file : FILE*
+    + dump(level, msg) : void
+    --
+    파일 출력 스트림
+    로그 파일에 기록
+}
+
+abstract class filterable {
+    + {abstract} filt(Log&) : nbool
+    --
+    <b>필터 인터페이스</b>
+}
+
+class filters {
+    - _container : vector<filterable*>
+    + filt(Log&) : nbool
+    + add(filterable*) : void
+    --
+    <b>Composite 패턴</b>
+    여러 필터 통합 관리
+}
+
+class errPassFilter {
+    + filt(Log&) : nbool
+    --
+    ERR 레벨만 통과
+}
+
+class warnPassFilter {
+    + filt(Log&) : nbool
+    --
+    WARN 레벨만 통과
+}
+
+logger "1" *-- "0..*" stream
+logger *-- filters
+
+stream <|-- consoleStream
+stream <|-- fileLogStream
+
+filterable <|-- filters
+filterable <|-- errPassFilter
+filterable <|-- warnPassFilter
+
+filters "1" o-- "0..*" filterable
+@enduml
+@startuml inline_umlgraph_5.png
+package "richLog 시스템" {
+    abstract class "convert(T)" as convert {
+        + {static} convert(tstr<obj>&) : strWrap
+        + {static} convert(int) : noWrap<int>
+        + {static} convert(void*) : strWrap
+        --
+        <b>컴파일 타임 디스패칭</b>
+        각 타입별로 오버로드
+    }
+
+    class strWrap {
+        - _val : std::string
+        + unwrap() : const char*
+        --
+        문자열 래퍼
+        c_str() 반환
+    }
+
+    class "noWrap<T>" as noWrap {
+        - _val : T
+        + unwrap() : T
+        --
+        값 그대로 전달
+        스칼라 타입용
+    }
+}
+
+convert ..> strWrap : 생성
+convert ..> noWrap : 생성
+@enduml
+@startuml inline_umlgraph_6.png
+participant "사용자 코드" as user
+participant "BY_I 매크로" as macro
+participant "richLog" as richLog
+participant "convert()\n(오버로드)" as convert
+participant "wrap" as wrap
+participant "logger" as logger
+
+user -> macro : BY_I("obj: %s, val: %d", meObj, count)
+activate macro
+
+note right of macro
+  매크로 확장:
+  richLog("obj: %s, val: %d",
+          meObj, count)
+end note
+
+macro -> richLog : richLog(format, meObj, count)
+activate richLog
+
+richLog -> convert : convert(meObj)
+activate convert
+
+note right of convert
+  <b>적절한 오버로딩 convert() 중 호출:</b>
+  예: meObj는 tstr<obj>* 타입
+
+  convert(tstr<obj>*) 호출.
+  (없을 경우 convert(void*) 호출)
+
+  return strWrap(obj.getName())을 반환.
+end note
+
+convert --> richLog : strWrap("obj")
+deactivate convert
+
+richLog -> convert : convert(count)
+activate convert
+
+note right of convert
+  <b>적절한 오버로딩 convert() 중 호출:</b>
+
+  count는 int 타입.
+  convert(int) 호출.
+
+  return noWrap<int>(count)
+end note
+
+convert --> richLog : noWrap<int>(count)
+deactivate convert
+
+richLog -> wrap : strWrap.unwrap()
+activate wrap
+wrap --> richLog : "obj"
+deactivate wrap
+
+richLog -> wrap : noWrap.unwrap()
+activate wrap
+wrap --> richLog : 3 (count의 값)
+deactivate wrap
+
+richLog -> logger : log(level, "obj: %s, val: %d", "obj", 3)
+activate logger
+
+note right of logger
+  가변인자 함수 호출:
+  - 모든 인자가 scalar나 포인터
+  - printf 스타일 포매팅 가능
+end note
+
+logger -> logger : filters 체크
+logger -> logger : stream들에 출력
+
+logger --> richLog : void
+deactivate logger
+
+richLog --> macro : void
+deactivate richLog
+
+macro --> user : void
+deactivate macro
+
+note right of user
+  <b>출력 결과:</b>
+  Oct 22 2025  22:01:12 I obj: obj, val: 42
+end note
+@enduml
+@startuml inline_umlgraph_7.png
+class "adam" as adam {
+    최상위 타입
+}
+
+class "type" as type {
+    - _name : string
+    - _isTemplate : nbool
+    - _isAbstract : nbool
+    - _supers : types
+    - _subs : types
+    - _isInit : nbool
+    ---
+    + getName() : string
+    + isTemplate() : nbool
+    + isAbstract() : nbool
+    + getSupers() : types
+    + getSubs() : types
+    + isSub(type) : nbool
+    + isSuper(type) : nbool
+    + make() : instance*
+    + init() : nbool
+    + rel() : nbool
+}
+
+class "ttypeBase<T, S>" as ttypeBase {
+    + get() : S&
+    + getStatic() : S&
+}
+
+class "ttype<T>" as ttype {
+    사용자 진입점
+}
+
+note right of type
+  <b>Monostate 패턴:</b>
+  모든 멤버 변수가 static
+
+  ttype<T>()를 여러 번
+  생성해도 내부 상태 공유
+end note
+
+ttype --|> ttypeBase : 상속
+ttypeBase --|> type : S=type일 때 상속
+adam <-- type : 최상위 타입으로 사용
+@enduml
+@startuml inline_umlgraph_8.png
+participant "사용자코드" as user
+participant "ttype<Dog>" as ttypeDog
+participant "Dog::type" as dogType
+participant "ttype<Animal>" as ttypeAnimal
+participant "Animal::type" as animalType
+participant "ttype<adam>" as ttypeAdam
+participant "adam::type" as adamType
+
+note over user, ttypeDog
+프로세스 시작시, BY_INITIATOR에 의해,
+혹은 사용자의 명시적인 호출에 의해,
+end note
+
+user -> ttypeDog : ttype<Dog>().init()
+activate ttypeDog
+
+ttypeDog -> dogType : init()
+activate dogType
+
+note right of dogType
+  <b>재진입 방지:</b>
+  if(_isInit) return false;
+  _isInit = true;
+end note
+
+dogType -> dogType : getSuper()
+note right of dogType
+  typedef Animal super;
+  return ttype<Animal>::get()
+end note
+
+dogType -> ttypeAnimal : getSuper().init()
+activate ttypeAnimal
+
+ttypeAnimal -> animalType : init()
+activate animalType
+
+animalType -> animalType : getSuper()
+note right of animalType
+  typedef adam super;
+  return ttype<adam>::get()
+end note
+
+animalType -> ttypeAdam : getSuper().init()
+activate ttypeAdam
+
+ttypeAdam -> adamType : init()
+activate adamType
+
+adamType -> adamType : getSuper()
+note right of adamType
+  <b>재귀 종료:</b>
+  adam은 부모가 없음
+  빈 type 반환
+end note
+
+adamType --> ttypeAdam : 초기화 완료
+deactivate adamType
+deactivate ttypeAdam
+
+animalType -> animalType : getSupers() = super.getSupers()
+animalType -> animalType : getSupers().push_back(&super)
+
+note right of animalType
+  <b>계층 구성:</b>
+  mySupers = [adam]
+  mySupers.push_back(adam)
+
+  Animal의 supers = [adam]
+end note
+
+animalType --> dogType : 초기화 완료
+deactivate animalType
+
+dogType -> dogType : getSupers() = super.getSupers()
+dogType -> dogType : getSupers().push_back(&super)
+
+note right of dogType
+  <b>계층 구성:</b>
+  mySupers = [adam, Animal]
+
+  Dog의 supers = [adam, Animal]
+end note
+
+dogType --> ttypeDog : 초기화 완료
+deactivate dogType
+
+ttypeDog --> user : 초기화 완료
+deactivate ttypeDog
+
+note over user, adamType
+  <b>재귀적 초기화 패턴의 특징:</b>
+
+  1. 한 번만 실행: _isInit 플래그로 재진입 방지
+  2. 상향식 초기화: 자식이 부모를 먼저 초기화
+  3. 계층 구성: 부모의 supers를 복사 후 부모 추가
+  4. 안전한 종료: adam에서 재귀 종료
+end note
+@enduml
+@startuml inline_umlgraph_9.png
+package "메모리 관리 패키지" {
+    class "instancer" as instancer {
+        - _pool : pool
+        - _watcher : watcher
+        ---
+        + make(size) : void*
+        + destroy(void*) : void
+    }
+
+    class "pool" as pool {
+        - _chunks : chunks[]
+        ---
+        + get(size) : chunks*
+        + new1(size) : void*
+        + del(ptr, size) : void
+    }
+
+    class "chunks" as chunks {
+        - _chunks : chunk[]
+        - _s : ncnt
+        - _blkSize : ncnt
+        ---
+        + new1() : void*
+        + del(ptr, size) : void
+        + resize() : void
+    }
+
+    class "chunk" as chunk {
+        - _heap : void*
+        - _head : ncnt
+        - _len : ncnt
+        - _size : ncnt
+        - _blkSize : ncnt
+        ---
+        + new1() : void*
+        + del(ptr, size) : void
+        + has(ptr) : nbool
+        + operator[](idx) : void*
+    }
+
+    class "watcher" as watcher {
+        - _lives : life[]
+        ---
+        + reg(instance*) : life*
+        + unreg(id) : void
+        + get(id) : life*
+    }
+
+    class "life" as life {
+        - _pt : instance*
+        - _strong : ncnt
+        - _id : id
+        ---
+        + onStrong(delta) : void
+        + getStrongCnt() : ncnt
+        + isBind() : nbool
+        + canBind(type) : nbool
+    }
+}
+
+package "사용자 인터페이스 패키지" {
+    class "instance" as instance {
+        - _id : id
+        ---
+        + getId() : id
+        + getBindTag() : life&
+    }
+
+    class "binder" as binder {
+        + bind(instance*) : nbool
+        + rel() : void
+        + isBind() : nbool
+        + get() : instance*
+    }
+
+    class "tstr<T>" as tstr
+    class "tweak<T>" as tweak
+}
+
+instancer *-- pool
+instancer *-- watcher
+pool *-- "n" chunks : lazy하게 생성
+chunks *-- "n" chunk
+watcher *-- "n" life
+life --> instance : 참조
+
+binder --> life : 간접 참조
+tstr --|> binder
+tweak --|> binder
+instance --> life : getBindTag()
+@enduml
+@startuml inline_umlgraph_10.png
+package "사용자 인터페이스 패키지" {
+    class "instance" as instance {
+        - _id : id
+        ---
+        + getId() : id
+        + getBindTag() : life&
+    }
+
+    class "binder" as binder {
+        + bind(instance*) : nbool
+        + rel() : void
+        + isBind() : nbool
+        + get() : instance*
+    }
+
+    class "tstr<T>" as tstr
+    class "tweak<T>" as tweak
+}
+
+package "메모리 풀 패키지" {
+  class life {}
+}
+
+life --> instance : 참조
+
+binder --> life : 간접 참조
+tstr --|> binder
+tweak --|> binder
+instance --> life : getBindTag()
+@enduml
+@startuml inline_umlgraph_11.png
+package "메모리 관리 패키지" {
+    class "instancer" as instancer {
+        - _pool : pool
+        - _watcher : watcher
+        ---
+        + make(size) : void*
+        + destroy(void*) : void
+    }
+
+    class "pool" as pool {
+        - _chunks : chunks[]
+        ---
+        + get(size) : chunks*
+        + new1(size) : void*
+        + del(ptr, size) : void
+    }
+
+    class "chunks" as chunks {
+        - _chunks : chunk[]
+        - _s : ncnt
+        - _blkSize : ncnt
+        ---
+        + new1() : void*
+        + del(ptr, size) : void
+        + resize() : void
+    }
+
+    class "chunk" as chunk {
+        - _heap : void*
+        - _head : ncnt
+        - _len : ncnt
+        - _size : ncnt
+        - _blkSize : ncnt
+        ---
+        + new1() : void*
+        + del(ptr, size) : void
+        + has(ptr) : nbool
+        + operator[](idx) : void*
+    }
+
+    class "watcher" as watcher {
+        - _lives : life[]
+        ---
+        + reg(instance*) : life*
+        + unreg(id) : void
+        + get(id) : life*
+    }
+
+    class "life" as life {
+        - _pt : instance*
+        - _strong : ncnt
+        - _id : id
+        ---
+        + onStrong(delta) : void
+        + getStrongCnt() : ncnt
+        + isBind() : nbool
+        + canBind(type) : nbool
+    }
+}
+
+instancer *-- pool
+instancer *-- watcher
+pool *-- "n" chunks : lazy하게 생성
+chunks *-- "n" chunk
+watcher *-- "n" life
+
+instance --> instancer: ID 요청
+@enduml
+@startuml inline_umlgraph_12.png
+participant "chunk" as chunk
+participant "_heap[0]" as heap0
+participant "_heap[1]" as heap1
+participant "_heap[2]" as heap2
+participant "_heap[3]" as heap3
+
+note over chunk
+  <b>초기화 (size=4):</b>
+  _head = 0
+  _len = 0
+  각 원소에 다음 인덱스 저장
+end note
+
+chunk -> heap0 : *(_heap[0]) = 1
+chunk -> heap1 : *(_heap[1]) = 2
+chunk -> heap2 : *(_heap[2]) = 3
+chunk -> heap3 : *(_heap[3]) = 4
+
+note over chunk, heap3
+  초기 상태: [1, 2, 3, 4]
+  _head = 0 (다음 할당 가능 인덱스)
+end note
+
+== 첫 번째 할당: new1() ==
+
+chunk -> heap0 : ptr1 = _heap + (_head * blkSize)
+activate heap0 #lightgreen
+
+note right of chunk
+  _head를 _heap[_head] 값으로 업데이트
+  _head = _heap[0] = 1
+  _len = 1
+end note
+
+note over heap0, heap3
+  상태: [<b>사용중</b>, 2, 3, 4]
+  _head = 1
+end note
+
+== 두 번째 할당: new1() ==
+
+chunk -> heap1 : ptr2 = _heap + (_head * blkSize)
+activate heap1 #lightgreen
+
+note right of chunk
+  _head = _heap[1] = 2
+  _len = 2
+end note
+
+note over heap0, heap3
+  상태: [<b>사용중</b>, <b>사용중</b>, 3, 4]
+  _head = 2
+end note
+
+== 세 번째 할당: new1() ==
+
+chunk -> heap2 : ptr3 = _heap + (_head * blkSize)
+activate heap2 #lightgreen
+
+note right of chunk
+  _head = _heap[2] = 3
+  _len = 3
+end note
+
+note over heap0, heap3
+  상태: [<b>사용중</b>, <b>사용중</b>, <b>사용중</b>, 4]
+  _head = 3
+end note
+
+== 첫 번째 블록 해제: del(ptr1) ==
+
+note right of chunk
+  1. ptr1 위치에 현재 _head 저장
+  *ptr1 = _head = 3
+
+  2. _head를 해제한 블록 인덱스로 업데이트
+  _head = (ptr1 - _heap) / blkSize = 0
+
+  3. _len 감소
+  _len = 2
+end note
+
+chunk -> heap0 : *(_heap[0]) = 3
+deactivate heap0
+
+note over heap0, heap3
+  상태: [3, <b>사용중</b>, <b>사용중</b>, 4]
+  _head = 0
+
+  <b>Free List 구조:</b>
+  _heap[0] → _heap[3] → _heap[4] (없음)
+end note
+
+== 네 번째 할당: new1() ==
+
+chunk -> heap0 : ptr4 = _heap + (_head * blkSize)
+activate heap0 #lightgreen
+
+note right of chunk
+  <b>재사용:</b>
+  해제된 블록 0을 재사용
+  _head = _heap[0] = 3
+  _len = 3
+end note
+
+note over heap0, heap3
+  상태: [<b>사용중</b>, <b>사용중</b>, <b>사용중</b>, 4]
+  _head = 3
+
+  <b>메모리 지역성 향상:</b>
+  해제된 블록을 즉시 재사용
+end note
+
+note over chunk, heap3
+  <b>Free List 알고리즘의 특징:</b>
+
+  1. <b>Intrusive Linked List:</b>
+     빈 블록 자체에 다음 빈 블록 인덱스 저장
+     별도의 메타데이터 불필요
+
+  2. <b>O(1) 할당/해제:</b>
+     _head만 업데이트하면 되므로 상수 시간
+
+  3. <b>메모리 지역성:</b>
+     최근 해제된 블록을 먼저 재사용
+
+  4. <b>단편화 방지:</b>
+     고정 크기 블록 사용
+end note
+@enduml
+@startuml inline_umlgraph_13.png
+actor "클라이언트" as client
+participant "new" as new
+participant "instancer" as instancer
+participant "pool" as pool
+participant "chunks" as chunks
+participant "chunk" as chunk
+participant "watcher" as watcher
+participant "life" as life
+participant "instance" as instance
+participant "binder" as binder
+
+== 인스턴스 생성 단계 ==
+
+client -> new : MyClass* obj = new MyClass()
+activate new
+
+new -> instancer : operator new(size)
+activate instancer
+
+note right of instancer
+  <b>1. 메모리 할당:</b>
+  pool을 통해 메모리 확보
+end note
+
+instancer -> pool : new1(size)
+activate pool
+
+pool -> pool : get(size)
+note right of pool
+  해당 크기의 chunks를 찾음
+  없으면 lazy 생성
+end note
+
+pool -> chunks : new1()
+activate chunks
+
+chunks -> chunks : 가용 chunk 검색
+note right of chunks
+  _chunks[_s]부터 순회
+  가용 메모리 없으면 resize()
+end note
+
+chunks -> chunk : new1()
+activate chunk
+
+note right of chunk
+  <b>Free List 알고리즘:</b>
+  ptr = _heap + (_head * blkSize)
+  _head = _heap[_head]
+  _len++
+end note
+
+chunk --> chunks : void* ptr
+deactivate chunk
+
+chunks --> pool : void* ptr
+deactivate chunks
+
+pool --> instancer : void* ptr
+deactivate pool
+
+note right of instancer
+  <b>2. 생명주기 관리:</b>
+  watcher에 등록하여 life 할당
+end note
+
+instancer -> watcher : new1()
+activate watcher
+
+watcher -> watcher : 사용 가능한 life 찾기
+note right of watcher
+  life 풀에서 빈 life 할당
+  Object Pool 패턴
+end note
+
+watcher -> life : 초기화
+activate life
+
+note right of life
+  _pt = ptr
+  _strong = 0
+  _id = 생성 (tagN, chkN, serial)
+end note
+
+life --> watcher : life*
+deactivate life
+watcher --> instancer : life*
+deactivate watcher
+
+note right of instancer
+  <b>3. ID 부여:</b>
+  vault에 인스턴스 등록
+end note
+
+instancer -> instancer : vault[ptr] = id
+
+instancer --> new : void* ptr
+deactivate instancer
+
+new -> instance : 생성자 호출
+activate instance
+
+instance -> instance : _id = vault[this]
+note right of instance
+  vault에서 id 가져오기
+end note
+
+instance --> new : 초기화 완료
+deactivate instance
+
+new --> client : MyClass* obj
+deactivate new
+
+== 바인딩 단계 ==
+
+client -> binder : tstr<MyClass> ptr(obj)
+activate binder
+
+binder -> instance : getBindTag()
+instance --> binder : life&
+
+binder -> life : onStrong(+1)
+activate life
+
+note right of life
+  <b>Reference Counting:</b>
+  _strong++
+  _strong = 1
+end note
+
+life --> binder : void
+deactivate life
+
+binder --> client : 바인딩 완료
+deactivate binder
+
+== 소멸 단계 ==
+
+client -> binder : ptr.rel() 또는 스코프 종료
+activate binder
+
+binder -> life : onStrong(-1)
+activate life
+
+note right of life
+  <b>Count 감소:</b>
+  _strong--
+  _strong = 0
+end note
+
+life -> life : if(_strong == 0)
+note right of life
+  참조 카운트가 0이 되면
+  인스턴스 소멸 시작
+end note
+
+life -> instance : delete _pt
+activate instance
+
+instance -> instance : ~MyClass() 소멸자 호출
+
+instance -> instancer : operator delete(ptr)
+activate instancer
+
+note right of instancer
+  <b>1. 생명주기 해제:</b>
+  watcher에서 등록 해제
+end note
+
+instancer -> watcher : del()
+activate watcher
+
+watcher -> watcher : 사용 가능 상태로 표시
+note right of life
+  _pt = nullptr
+  _strong = 0
+  _id 초기화
+
+  나중에 재사용 가능
+end note
+
+watcher --> instancer : void
+deactivate watcher
+
+note right of instancer
+  <b>2. 메모리 반환:</b>
+  pool에 메모리 반환
+end note
+
+instancer -> pool : del(ptr, size)
+activate pool
+
+pool -> chunks : del(ptr, size)
+activate chunks
+
+chunks -> chunk : del(ptr, size)
+activate chunk
+
+note right of chunk
+  <b>Free List 업데이트:</b>
+  *ptr = _head
+  _head = (ptr - _heap) / blkSize
+  _len--
+
+  메모리 초기화 안함
+  (재사용 위해)
+end note
+
+chunk --> chunks : void
+deactivate chunk
+
+chunks --> pool : void
+deactivate chunks
+
+pool --> instancer : void
+deactivate pool
+
+instancer --> instance : void
+deactivate instancer
+
+instance --> life : void
+deactivate instance
+
+life --> binder : void
+deactivate life
+
+binder --> client : 소멸 완료
+deactivate binder
+@enduml
+@startuml inline_umlgraph_14.png
+package "파서 패키지" {
+    class "stelaParser" as stelaParser {
+        - _scanner : stelaLowscanner*
+        - _normalScan : normalScan*
+        - _indentScan : indentScan*
+        - _currentScan : stelaTokenScan*
+        - _indents : smartDedent
+        ---
+        + parse(script) : stela&
+        + parseFromFile(path) : stela&
+        ---
+        <b>Callback 함수들:</b>
+        + onIndent(cur, tok) : nint
+        + onDedent(cur, tok) : nint
+        + onBlock() : void
+        + onStatement() : void
+        + onExpression() : void
+    }
+
+    class "stelaLowscanner" as scanner {
+        - _dispatcher : tokenDispatcher*
+        - _parser : stelaParser*
+        ---
+        + yylex() : nint
+        + getDispatcher() : tokenDispatcher&
+    }
+
+    class "stelaLowparser" as parser {
+        - _parser : stelaParser*
+        ---
+        + yyparse() : nint
+    }
+
+    class "tokenDispatcher" as dispatcher {
+        - _queue : deque<Token>
+        ---
+        + pushFront(tok) : void
+        + pushBack(tok) : void
+        + pop() : Token
+        + isEmpty() : nbool
+    }
+
+    class "stelaTokenScan" as tokenScan <<abstract>> {
+        + onScan(parser, ...) : nint
+    }
+
+    class "normalScan" as normalScan {
+        + onScan(parser, ...) : nint
+    }
+
+    class "indentScan" as indentScan {
+        + onScan(parser, ...) : nint
+        ---
+        - 공백 갯수 계산
+        - INDENT/DEDENT 생성
+    }
+
+    class "stelaSmartDedent" as smartDedent {
+        - _indents : vector<ncnt>
+        ---
+        + push(indent) : void
+        + pop() : void
+        + back() : ncnt
+        + len() : ncnt
+    }
+}
+
+package "AST 패키지" {
+    class "stela" as stela {
+        + asInt() : int
+        + asStr() : string
+        + sub(name) : stela&
+        + operator[](name) : stela&
+    }
+
+    class "valStela" as valStela
+    class "verStela" as verStela
+    class "nulStela" as nulStela
+}
+
+stelaParser *-- scanner
+stelaParser *-- smartDedent
+stelaParser --> parser : 생성
+stelaParser o-- tokenScan : 필요시 전략 교체
+scanner *-- dispatcher
+scanner --> parser : 토큰 전달
+
+normalScan --|> tokenScan
+indentScan --|> tokenScan
+
+parser ..> stelaParser : 이벤트 콜백
+
+stelaParser ..> stela : 생성
+
+valStela --|> stela
+verStela --|> stela
+nulStela --|> stela
+@enduml
+@startuml inline_umlgraph_15.png
+package "결과 계층" {
+    class "stela" as stela {
+        + asInt() : int
+        + asStr() : string
+        + sub(name) : stela&
+        + operator[](name) : stela&
+    }
+
+    class "valStela" as valStela
+    class "verStela" as verStela
+    class "nulStela" as nulStela
+}
+
+stelaParser ..> stela : 생성
+
+valStela --|> stela
+verStela --|> stela
+nulStela --|> stela
+@enduml
+@startuml inline_umlgraph_16.png
+package "파서 계층" {
+    class "stelaParser" as stelaParser {
+        - _scanner : stelaLowscanner*
+        - _normalScan : normalScan*
+        - _indentScan : indentScan*
+        - _currentScan : stelaTokenScan*
+        - _indents : smartDedent
+        ---
+        + parse(script) : stela&
+        + parseFromFile(path) : stela&
+        ---
+        <b>Callback 함수들:</b>
+        + onIndent(cur, tok) : nint
+        + onDedent(cur, tok) : nint
+        + onBlock() : void
+        + onStatement() : void
+        + onExpression() : void
+    }
+
+    class "stelaLowscanner" as scanner {
+        - _dispatcher : tokenDispatcher*
+        - _parser : stelaParser*
+        ---
+        + yylex() : nint
+        + getDispatcher() : tokenDispatcher&
+    }
+
+    class "stelaLowparser" as parser {
+        - _parser : stelaParser*
+        ---
+        + yyparse() : nint
+    }
+
+    class "tokenDispatcher" as dispatcher {
+        - _queue : deque<Token>
+        ---
+        + pushFront(tok) : void
+        + pushBack(tok) : void
+        + pop() : Token
+        + isEmpty() : nbool
+    }
+
+    class "stelaTokenScan" as tokenScan <<abstract>> {
+        + onScan(parser, ...) : nint
+    }
+
+    class "normalScan" as normalScan {
+        + onScan(parser, ...) : nint
+    }
+
+    class "indentScan" as indentScan {
+        + onScan(parser, ...) : nint
+        ---
+        - 공백 갯수 계산
+        - INDENT/DEDENT 생성
+    }
+
+    class "stelaSmartDedent" as smartDedent {
+        - _indents : vector<ncnt>
+        ---
+        + push(indent) : void
+        + pop() : void
+        + back() : ncnt
+        + len() : ncnt
+    }
+
+    note top of stelaParser
+      <b>Event-driven 설계:</b>
+      lowparser에서 rule 매칭 시
+      `on함수()` 들로 이벤트 콜백
+    end note
+
+    note right of scanner
+      <b>Flex 기반:</b>
+      정규표현식으로 토큰 스캐닝
+    end note
+
+    note bottom of dispatcher
+      <b>Queue 기반 토큰 버퍼:</b>
+      - 렉서 우회하여 토큰 직접 반환
+      - 여러 토큰 순차 추가 가능
+    end note
+
+    note left of tokenScan
+      <b>Strategy 패턴:</b>
+      런타임에 스캔 전략 교체
+
+      normalScan: 공백 무시
+      indentScan: 공백 카운트
+    end note
+
+    note right of smartDedent
+      <b>Scope 관리:</b>
+      각 scope의 indentation
+      레벨을 스택으로 관리
+    end note
+}
+
+stelaParser *-- scanner
+stelaParser *-- smartDedent
+stelaParser --> parser : 생성
+stelaParser o-- tokenScan : 필요시 전략 교체
+scanner *-- dispatcher
+scanner --> parser : 토큰 전달
+
+normalScan --|> tokenScan
+indentScan --|> tokenScan
+
+parser ..> stelaParser : 이벤트 콜백
+@enduml
+@startuml inline_umlgraph_17.png
+participant "stelaParser" as parser
+participant "normalScan" as normalScan
+participant "indentScan" as indentScan
+participant "tokenDispatcher" as dispatcher
+participant "smartDedent" as smartDedent
+
+note over parser
+  <b>초기 상태:</b>
+  currentScan = normalScan
+  indents = [0]
+end note
+
+== NormalScan ==
+
+parser -> normalScan : onScan()
+activate normalScan
+
+note right of normalScan
+  <b>normalScan 전략:</b>
+  공백 무시,
+  일반 토큰만 처리
+end note
+
+normalScan -> normalScan : 토큰 스캔
+normalScan --> parser : STRVAL "config"
+deactivate normalScan
+
+parser -> parser : 토큰 처리
+
+== normalScan: 개행 감지시 ==
+
+parser -> normalScan : onScan()
+activate normalScan
+
+normalScan -> normalScan : 개행 문자 감지 ('\\n')
+
+note right of normalScan
+  <b>개행 감지:</b>
+  다음 줄의 indentation 정확히 측정 필요.
+
+  normalScan → indentScan 전환
+end note
+
+normalScan -> parser : setScan<indentScan>()
+parser -> parser : currentScan = indentScan
+
+normalScan --> parser : NEWLINE
+deactivate normalScan
+
+== indentScan ==
+
+parser -> indentScan : onScan()
+activate indentScan
+
+note right of indentScan
+  <b>indentScan 전략:</b>
+  개행 후 첫 번째 비공백
+  토큰까지의 column 측정
+
+  공백 갯수 = column 위치
+end note
+
+indentScan -> indentScan : 공백 건너뛰며 스캔
+note right of indentScan
+  "         def device"
+  ^^^^
+  4개의 공백 감지
+end note
+
+indentScan -> indentScan : 첫 비공백 토큰 발견
+note right of indentScan
+  tok = DEF
+  col = 4 (현재 column)
+end note
+
+note right of indentScan: indentation level 비교
+
+indentScan -> smartDedent : back()
+activate smartDedent
+
+note right of smartDedent
+  현재 indents = [0]
+  prev = 0
+end note
+
+smartDedent --> indentScan : prev = 0
+deactivate smartDedent
+
+indentScan -> indentScan : cur vs prev 비교
+note right of indentScan
+  cur (4) > prev (0)
+  → INDENT 필요
+end note
+
+note right of indentScan: INDENT 생성하기
+
+indentScan -> parser : onIndent(cur=4, tok=DEF)
+activate parser
+
+parser -> smartDedent : push(4)
+activate smartDedent
+
+note right of smartDedent
+  indents = [0, 4]
+  새 scope 시작
+end note
+
+smartDedent --> parser : void
+deactivate smartDedent
+
+parser -> dispatcher : pushFront(DEF)
+activate dispatcher
+
+note right of dispatcher
+  현재 토큰을 dispatcher에
+  버퍼링하여 나중에 반환
+end note
+
+dispatcher --> parser : void
+deactivate dispatcher
+
+parser --> indentScan : return INDENT
+deactivate parser
+
+note right of indentScan
+  <b>모드 전환:</b>
+  indentation 측정 완료
+  normalScan으로 복귀
+end note
+
+indentScan -> parser : setScan<normalScan>()
+parser -> parser : currentScan = normalScan
+
+indentScan --> parser : INDENT
+deactivate indentScan
+
+parser -> parser : INDENT 토큰 처리
+
+== normalScan: 복귀됨 ==
+
+parser -> normalScan : onScan()
+activate normalScan
+
+normalScan -> dispatcher : isEmpty()?
+activate dispatcher
+dispatcher --> normalScan : false
+deactivate dispatcher
+
+normalScan -> dispatcher : pop()
+activate dispatcher
+dispatcher --> normalScan : DEF
+deactivate dispatcher
+
+normalScan --> parser : DEF
+deactivate normalScan
+
+parser -> parser : DEF 토큰 처리
+@enduml
+@startuml inline_umlgraph_18.png
+package "Byeol 소스 코드" {
+    note as source
+      def main() int
+          a := 5
+          b := 10
+          ret a + b
+    end note
+}
+
+package "파싱 단계" {
+    [Parser] as parser
+}
+
+package "AST 트리 (실행 가능)" {
+    object "func (main)" as main {
+        name = "main"
+        retType = nInt
+    }
+
+    object "blockExpr" as block {
+        _stmts = [stmt1, stmt2, stmt3]
+        _localScope = scope
+    }
+
+    object "assignExpr (a := 5)" as assign1 {
+        left = "a"
+        right = nInt(5)
+    }
+
+    object "assignExpr (b := 10)" as assign2 {
+        left = "b"
+        right = nInt(10)
+    }
+
+    object "retExpr" as ret {
+        retVal = FBOExpr
+    }
+
+    object "FBOExpr (a + b)" as add {
+        op = ADD
+        lhs = getExpr("a")
+        rhs = getExpr("b")
+    }
+}
+
+package "실행 단계" {
+    [interpreter] as interpreter
+}
+
+package "실행 결과" {
+    note as result
+      15 (nInt)
+    end note
+}
+
+source -> parser : 파싱
+parser -> main : AST 생성
+
+main *-- block : 포함
+block *-- assign1 : stmt[0]
+block *-- assign2 : stmt[1]
+block *-- ret : stmt[2]
+ret *-- add : retVal
+
+main -> interpreter : eval()
+
+note right of interpreter
+  <b>Tree-walking:</b>
+  AST를 순회하며 직접 실행
+
+  1. main.eval() 호출
+  2. block.eval() 호출
+  3. 각 stmt를 순차 실행
+     - assign1.eval()
+     - assign2.eval()
+     - ret.eval()
+  4. add.eval() 호출
+     - lhs.eval() = 5
+     - rhs.eval() = 10
+     - 5 + 10 = 15
+  5. 결과 반환
+end note
+
+interpreter -> result : 15 반환
+
+note bottom of main
+  <b>Interpreter 패턴의 핵심:</b>
+
+  <b>일반 언어:</b>
+  소스 → AST → [변환] → 바이트코드/네이티브코드 → 실행
+
+  <b>Byeol 언어:</b>
+  소스 → AST → 직접 실행 (변환 없음!)
+
+  <b>장점:</b>
+  - 중간 코드 생성 불필요
+  - AST 자체가 실행 가능한 프로그램
+  - eval(), infer() 등 직접 실행 API 제공
+  - 동적 코드 실행 용이
+
+  <b>단점:</b>
+  - 반복 실행 시 속도가 느릴 수 있음
+  - 메모리 사용량이 상대적으로 높음
+end note
+@enduml
+@startuml inline_umlgraph_19.png
+abstract class "node" as node {
+    + eval(args) : str
+    + infer() : str
+    + run(args) : str
+    ---
+    + sub(name) : node&
+    + subs() : scope&
+    + subAll(name, args) : narr
+    + operator[](name) : node&
+    + in(name) : nbool
+    ---
+    + as<T>() : str
+    + is<T>() : nbool
+    + cast<T>() : T*
+}
+
+class "func" as func {
+    - _name : string
+    - _params : narr
+    - _retType : node*
+    - _block : blockExpr*
+    ---
+    + subs() : scope&
+    + eval(args) : str
+}
+
+class "blockExpr" as blockExpr {
+    - _stmts : narr
+    - _localScope : scope*
+    ---
+    + eval(args) : str
+}
+
+class "FBOExpr" as FBOExpr {
+    - _lhs : node*
+    - _rhs : node*
+    - _op : operator
+    ---
+    + eval(args) : str
+}
+
+class "obj" as obj {
+    - _subs : scope
+    ---
+    + subs() : scope&
+    + eval(args) : str
+}
+
+class "scope" as scope {
+    {map 기반, multimap for overloading}
+    ---
+    + add(name, node*) : void
+    + get(name) : node*
+    + len() : ncnt
+}
+
+note top of node
+  <b>Composite 패턴:</b>
+  node는 또 다른 node를 포함
+
+  개별 노드와 노드 그룹을
+  동일하게 취급
+end note
+
+note right of scope
+  <b>Map과 Array 혼합:</b>
+  - scope: map 기반 (key-value)
+  - blockExpr._stmts: array 기반
+
+  <b>Multimap:</b>
+  함수 오버로딩 지원
+  같은 이름, 다른 시그니처
+end note
+
+node <|-- func : 상속
+node <|-- blockExpr : 상속
+node <|-- FBOExpr : 상속
+node <|-- obj : 상속
+
+func *-- blockExpr : 포함 (_block)
+func *-- scope : 간접 참조 (via subs())
+blockExpr *-- "n" node : 포함 (_stmts)
+FBOExpr *-- "2" node : 포함 (lhs, rhs)
+obj *-- scope : 포함 (_subs)
+scope o-- "n" node : 저장
+
+note bottom of func
+  <b>트리 구조 예:</b>
+
+  func "main"
+    └─ blockExpr
+        ├─ assignExpr "a := 5"
+        │   └─ nInt(5)
+        ├─ assignExpr "b := 10"
+        │   └─ nInt(10)
+        └─ retExpr
+            └─ FBOExpr "a + b"
+                ├─ getExpr("a")
+                └─ getExpr("b")
+
+  <b>Composite 특징:</b>
+  1. 단일 노드와 노드 그룹 동일 처리
+  2. 재귀적 구조 (node가 node 포함)
+  3. 트리 순회: sub(), subs() 등
+  4. DOM tree와 유사한 구조
+end note
+@enduml
+@startuml inline_umlgraph_20.png
+participant "클라이언트" as client
+participant "visitor (구체)" as visitor
+participant "node (추상)" as node
+participant "FBOExpr (구체 node)" as fbo
+
+note over visitor, node
+  <b>Visitor 패턴 + Double Dispatch:</b>
+
+  Visitor 패턴은 알고리즘과 객체 구조를 분리
+  Double Dispatch는 런타임 타입을 올바르게 처리
+end note
+
+== 일반적인 Single Dispatch (문제 상황) ==
+
+note over visitor, node
+  <b>문제:</b>
+  visitor.visit(node*) 호출 시
+  node의 정확한 타입을 몰라
+  FBOExpr인지 funcDef인지 구분 불가
+end note
+
+== Double Dispatch 메커니즘 ==
+
+actor "클라이언트" as client
+participant "visitor" as visitor
+participant "node (실제로는 FBOExpr)" as node
+
+client -> node : accept(visitor)
+activate node
+
+note right of client
+  <b>첫 번째 Dispatch:</b>
+  visitor가 어떤 visitor인지는
+  컴파일 타임에 알 수 없음
+
+  런타임에 실제 visitor 타입 결정
+end note
+
+node -> visitor : visit(this)
+activate visitor
+
+note right of node
+  <b>Double Dispatch의 핵심:</b>
+
+  1차 디스패치:
+  node.accept(visitor)
+  → visitor.visit(this)
+
+  2차 디스패치:
+  런타임 타입 기반 선택
+end note
+
+visitor -> node : accept(visitor&)
+activate visitor
+activate node
+
+note right of visitor
+  <b>Visitor 패턴:</b>
+  순회 방식과 처리를 분리
+
+  각 node 타입별로
+  다른 처리 가능
+end note
+
+node -> node : this의 실제 타입?
+note right
+  <b>문제:</b>
+  컴파일 타임에는
+  구체 타입 알 수 없음
+
+  node* n = ...;
+  n이 func인지 obj인지
+  blockExpr인지 알 수 없음
+end note
+
+node -> visitor : accept(visitor&)
+note right
+  <b>First Dispatch:</b>
+  런타임에 실제 타입 결정
+  (가상 함수 호출)
+end note
+
+visitor -> node : visit(구체타입*)
+note right
+  <b>Second Dispatch:</b>
+  컴파일 타임에 정확한 타입으로
+  오버로딩 해결
+end note
+
+note bottom
+  <b>Double Dispatch:</b>
+  1차: node.accept(visitor)
+       → 런타임 다형성 (virtual)
+  2차: visitor.visit(this)
+       → 컴파일 타임 오버로딩
+
+  두 번의 dispatch로
+  구체 타입 확정
+end note
+@enduml
+@startuml inline_umlgraph_21.png
+abstract class node {
+    + subs() : scope&
+    + eval(args) : str
+    + infer(args) : str
+    + getType() : type&
+    + accept(visitInfo, visitor)
+}
+
+abstract class baseObj {
+    + getOrigin() : baseObj&
+    + clone() : baseObj*
+    --
+    <b>Polymorphism</b>
+    native/managed 객체
+    공통 인터페이스
+}
+
+class obj {
+    - _shares : nchain
+    - _owns : nchain
+    - _type : mgdType
+    + getShares() : nchain&
+    + getOwns() : nchain&
+    + clone() : obj*
+    --
+    <b>Flyweight 패턴</b>
+    shares: 공유 데이터(함수)
+    owns: 고유 데이터(property)
+}
+
+class origin {
+    + setCallComplete(...)
+    + clone() : origin*
+    --
+    <b>Prototype 패턴</b>
+    원본 객체를 복제하여
+    인스턴스 생성
+}
+
+class nInt {
+    - _val : nint
+    + get() : nint
+    + set(nint)
+}
+
+class nStr {
+    - _val : std::string
+    + len() : nint
+    + get(nidx) : nchar
+}
+
+class nFlt {
+    - _val : nflt
+    + get() : nflt
+    + set(nflt)
+}
+
+note top of node
+  모든 AST 노드의 기반
+  Composite 패턴의 Component
+end note
+
+note right of baseObj
+  native와 managed 객체의
+  공통 기반 클래스
+
+  <b>Polymorphism 적용:</b>
+  baseObj* 포인터로
+  모든 객체 타입 통일
+end note
+
+note right of obj
+  managed 환경 객체
+
+  <b>Flyweight 패턴:</b>
+  - shares: 모든 인스턴스 공유
+    (함수, 상수)
+  - owns: 인스턴스별 고유
+    (변수, property)
+end note
+
+note left of origin
+  타입의 원본 객체
+
+  <b>Prototype 패턴:</b>
+  clone()으로 새 인스턴스
+  생성 (복사 생성)
+end note
+
+node <|-- baseObj
+baseObj <|-- obj
+obj <|-- origin
+
+baseObj <|-- nInt
+baseObj <|-- nStr
+baseObj <|-- nFlt
+
+note bottom of nInt
+  native 환경 객체
+  (C++에서 정의)
+end note
+@enduml
+@startuml inline_umlgraph_22.png
+abstract class "expr" as expr {
+    + eval(thread&) : str
+    + run(thread&) : str
+}
+
+abstract class "retStateExpr" as retStateExpr {
+    <b>Early Exit 패턴</b>
+    ---
+    + eval(thread&) : str
+    ---
+    thread에 setRet() 설정하여
+    블록 즉시 종료
+}
+
+class "FBOExpr" as FBOExpr {
+    - _lhs : str
+    - _rhs : str
+    - _op : operator
+    ---
+    + eval(thread&) : str
+}
+
+class "FUOExpr" as FUOExpr {
+    - _operand : str
+    - _op : operator
+    ---
+    + eval(thread&) : str
+}
+
+class "assignExpr" as assignExpr {
+    - _left : str
+    - _right : str
+    ---
+    + eval(thread&) : str
+}
+
+class "blockExpr" as blockExpr {
+    - _stmts : narr
+    - _localScope : scope*
+    ---
+    + eval(thread&) : str
+    + onLeaveFrame(frame&) : void
+}
+
+class "defArrayExpr" as defArrayExpr {
+    - _elements : narr
+    ---
+    + eval(thread&) : str
+    ---
+    Type Promotion으로
+    배열 타입 추론
+}
+
+class "defNestedFuncExpr" as defNestedFuncExpr {
+    - _funcDef : func*
+    ---
+    + eval(thread&) : str
+    ---
+    closure로도 활용 가능
+}
+
+class "defSeqExpr" as defSeqExpr {
+    - _start : str
+    - _end : str
+    - _step : str
+    ---
+    + eval(thread&) : str
+}
+
+class "endExpr" as endExpr {
+    - _block : blockExpr*
+    ---
+    + eval(thread&) : str
+}
+
+class "retExpr" as retExpr {
+    - _retVal : str
+    ---
+    + eval(thread&) : str
+}
+
+class "breakExpr" as breakExpr {
+    + eval(thread&) : str
+}
+
+class "continueExpr" as continueExpr {
+    + eval(thread&) : str
+}
+
+note top of expr
+  <b>모든 것이 표현식:</b>
+  byeol은 대부분이 표현식
+  블록문도 표현식이며
+  마지막 줄의 결과 반환
+end note
+
+note right of FBOExpr
+  <b>Binary Operator:</b>
+  +, -, *, / 등
+  lhs와 rhs는 scalar 타입
+end note
+
+note right of FUOExpr
+  <b>Unary Operator:</b>
+  -, !, ~ 등
+  피연산자 1개
+end note
+
+note bottom of assignExpr
+  <b>중요:</b>
+  scope의 참조를 변경
+  obj::operator=() 호출 아님!
+
+  scope["a"] = newObj
+  (깊은 복사 아님)
+end note
+
+note right of blockExpr
+  <b>RAII 패턴:</b>
+  local scope가 블록의
+  lifetime과 함께 생성/소멸
+
+  <b>최적화:</b>
+  eval()에서는 scope 생성 안함
+  특정 context에서 불필요
+end note
+
+note right of defArrayExpr
+  <b>Type Promotion:</b>
+  [1, 2.5, 3]
+  → int와 flt 섞임
+  → flt 배열로 승격
+
+  tnarr/arr 사용
+end note
+
+note bottom of retStateExpr
+  <b>블록 종료 메커니즘:</b>
+
+  1. thread.setRet(val)
+  2. blockExpr이 감지
+  3. 모든 동작 중단
+  4. 값을 호출자에게 반환
+
+  중첩 블록에서도 즉시 탈출
+end note
+
+expr <|-- FBOExpr : 상속
+expr <|-- FUOExpr : 상속
+expr <|-- assignExpr : 상속
+expr <|-- blockExpr : 상속
+expr <|-- defArrayExpr : 상속
+expr <|-- defNestedFuncExpr : 상속
+expr <|-- defSeqExpr : 상속
+expr <|-- endExpr : 상속
+expr <|-- retStateExpr : 상속
+
+retStateExpr <|-- retExpr : 상속
+retStateExpr <|-- breakExpr : 상속
+retStateExpr <|-- continueExpr : 상속
+@enduml
+@startuml inline_umlgraph_23.png
+package "컨테이너 인터페이스" {
+    abstract class "tucontainable<T, R, RSquare>" as tucontainable {
+        + operator[](idx) : R
+        + add(T) : void
+        + del(idx) : void
+        + len() : ncnt
+        + begin() : iterator
+        + end() : iterator
+        + iterate() : iterator
+    }
+
+    abstract class "tbicontainable<K, T, R, RSquare>" as tbicontainable {
+        + operator[](key) : R
+        + add(key, T) : void
+        + del(key) : void
+        + in(key) : nbool
+        + len() : ncnt
+        + begin() : iterator
+        + end() : iterator
+        + iterate() : iterator
+    }
+}
+
+package "Native 타입 (n prefix)" {
+    class "tnarr<T>" as tnarr {
+        - _data : T*[]
+        - _len : ncnt
+        ---
+        + operator[](idx) : T*
+        + add(T*) : void
+        + del(idx) : void
+    }
+
+    class "tnmap<K, T>" as tnmap {
+        - _map : map<K, T*>
+        ---
+        + operator[](key) : T*
+        + add(key, T*) : void
+        + in(key) : nbool
+    }
+
+    class "tnseq<T>" as tnseq {
+        - _start : T
+        - _end : T
+        - _step : T
+        ---
+        + operator[](idx) : T
+        + len() : ncnt
+    }
+
+    class "tnchain<T, Container>" as tnchain {
+        - _container : Container
+        - _next : tnchain*
+        - _prev : tnchain*
+        ---
+        + link(tnchain&) : void
+        + getNext() : tnchain*
+        + getPrev() : tnchain*
+        + operator[](key) : T*
+    }
+}
+
+package "Managed 타입" {
+    class "arr" as arr {
+        tnarr<node>를 상속
+        managed 환경용
+    }
+
+    class "map" as map {
+        tnmap<key, node>를 상속
+        managed 환경용
+    }
+
+    class "seq" as seq {
+        tnseq<node>를 상속
+        managed 환경용
+    }
+}
+
+note top of tucontainable
+  <b>Uni-container:</b>
+  index 기반 컨테이너
+  array, seq 등
+
+  <b>R과 RSquare:</b>
+  R = T* (nullable 참조)
+  RSquare = T& (non-nullable)
+
+  nseq는 값 반환 (참조 아님)
+end note
+
+note top of tbicontainable
+  <b>Bi-container:</b>
+  key-value 기반 컨테이너
+  map, chain 등
+end note
+
+note right of tnarr
+  <b>t prefix:</b>
+  클래스 템플릿
+
+  <b>n prefix:</b>
+  native 타입
+
+  typedef narr = tnarr<node>
+end note
+
+note right of tnseq
+  <b>특이사항:</b>
+  반환형이 T (참조 아님)
+
+  [1..1000000000]
+  실제로 원소 저장 안함
+  on-demand 생성
+end note
+
+note bottom of tnchain
+  <b>Linked List 구조:</b>
+  next/prev로 연결
+
+  <b>Facade 패턴:</b>
+  외부에서는 일반
+  bicontainable처럼 사용
+
+  link()로 chain 연결
+end note
+
+note left of arr
+  <b>Native → Managed:</b>
+  C++ native 클래스를
+  managed 타입이 상속
+
+  → 동일한 API 제공
+  → bridger로 쉽게 노출
+end note
+
+tucontainable <|.. tnarr : 구현
+tucontainable <|.. tnseq : 구현
+tbicontainable <|.. tnmap : 구현
+tbicontainable <|.. tnchain : 구현
+
+tnarr <|-- arr : 상속
+tnmap <|-- map : 상속
+tnseq <|-- seq : 상속
+@enduml
+@startuml inline_umlgraph_24.png
+object "chn1" as chn1 {
+    _container = tnmap
+    {"0": node(0), "1": node(1)}
+    _next = chn2
+    _prev = null
+}
+
+object "chn2" as chn2 {
+    _container = tnmap
+    {"6": node(6), "5": node(5)}
+    _next = chn3
+    _prev = chn1
+}
+
+object "chn3" as chn3 {
+    _container = tnmap
+    {"2": node(2), "3": node(3)}
+    _next = null
+    _prev = chn2
+}
+
+note top of chn1
+  <b>tnchain의 Linked List 구조:</b>
+
+  각 tnchain은:
+  1. defaultContainer 소유 (tnmap 등)
+  2. next, prev 포인터로 연결
+  3. 외부에서는 flatten된 하나의 map처럼 보임
+end note
+
+note bottom of chn2
+  <b>link() 동작:</b>
+
+  chn1.link(chn2);  // chn1._next = chn2
+                    // chn2._prev = chn1
+
+  chn2.link(chn3);  // chn2._next = chn3
+                    // chn3._prev = chn2
+
+  <b>순회 시:</b>
+  chn1에서 순회하면
+  {0, 1, 6, 5, 2, 3} 순서로 접근
+  (chn1 → chn2 → chn3 순회)
+end note
+
+note right of chn3
+  <b>사용 예:</b>
+
+  // chn1에서 "2" 검색
+  chn1["2"]
+  → chn1._container 검색 (없음)
+  → chn2._container 검색 (없음)
+  → chn3._container 검색 (발견!)
+  → node(2) 반환
+
+  <b>Facade 패턴:</b>
+  복잡한 linked list 구조를
+  단순한 bicontainer로 추상화
+end note
+
+chn1 -right-> chn2 : next
+chn2 -right-> chn3 : next
+chn2 -left-> chn1 : prev
+chn3 -left-> chn2 : prev
+@enduml
+@startuml inline_umlgraph_25.png
+participant "사용자 코드" as user
+participant "getGenericExpr" as expr
+participant "genericOrigin" as genOrigin
+participant "map<type, origin>" as cache
+participant "generalizer" as gen
+participant "원본 origin" as org
+
+user -> expr : Optional<nInt>() 호출
+activate expr
+
+expr -> genOrigin : get(nInt)
+activate genOrigin
+
+genOrigin -> cache : nInt로 검색
+activate cache
+
+alt 캐시에 있음
+    cache --> genOrigin : 기존 origin 반환
+    note right
+      <b>Cache Hit!</b>
+      이미 생성된 origin 재사용
+    end note
+
+else 캐시에 없음
+    cache --> genOrigin : nullptr 반환
+
+    genOrigin -> org : deepClone()
+    activate org
+    org --> genOrigin : origin 복사본
+    deactivate org
+
+    genOrigin -> gen : generalize(복사본, T→nInt)
+    activate gen
+
+    note right of gen
+      <b>AST Transformation:</b>
+      1. AST 전체 순회
+      2. getExpr("T") 노드 찾기
+      3. getExpr("nInt")로 교체
+    end note
+
+    loop AST의 각 노드
+        gen -> gen : visit(node)
+        alt getExpr("T") 발견
+            gen -> gen : 노드를 getExpr("nInt")로 교체
+        end
+    end
+
+    gen --> genOrigin : 변환된 origin
+    deactivate gen
+
+    genOrigin -> cache : add(nInt, 변환된 origin)
+    note right
+      <b>Cache Store</b>
+      다음 요청을 위해 저장
+    end note
+end
+
+deactivate cache
+
+genOrigin --> expr : Optional<nInt> origin
+deactivate genOrigin
+
+expr --> user : origin 반환
+deactivate expr
+
+note bottom of user
+  <b>결과:</b>
+  Optional<nInt> 타입의 origin
+
+  <b>다음 호출 시:</b>
+  같은 Optional<nInt>는
+  캐시에서 바로 반환
+end note
+@enduml
+@startuml inline_umlgraph_26.png
+start
+
+:원본 origin을 deepClone();
+
+:generalizer 생성;
+
+partition "AST 순회 및 변환" {
+    :AST 루트 노드부터 시작;
+
+    repeat
+        :현재 노드 방문;
+
+        if (getExpr 노드?) then (예)
+            if (타입 파라메터 참조?) then (예)
+                :노드의 args 확인;
+
+                if (args == "T"?) then (예)
+                    :새 getExpr("nInt") 노드 생성;
+                    :기존 노드를 새 노드로 교체;
+
+                    note right
+                      <b>변환 예시:</b>
+                      getExpr("T")
+                         ↓
+                      getExpr("nInt")
+                    end note
+                endif
+            endif
+        endif
+
+        :하위 노드들 재귀 순회;
+
+    repeat while (방문할 노드 남음?)
+}
+
+:변환된 origin 반환;
+
+stop
+
+note right
+  <b>변환 예시:</b>
+
+  <b>변환 전:</b>
+  Optional<T>
+    value: T
+
+  <b>변환 후:</b>
+  Optional<nInt>
+    value: nInt
+end note
+@enduml
+@startuml inline_umlgraph_27.png
+package "Native 환경 (C++)" {
+    class "window" as window {
+        - _y : int
+        ---
+        + getX() : int
+        + getY() : int
+        + setY(int) : void
+        + new1(int) : window&
+    }
+
+    class "openGL" as openGL {
+        + init(window*) : int
+    }
+}
+
+package "브리징 계층" {
+    class "tbridger<T>" as tbridger {
+        {static} - _staticSubs : nchain
+        {static} - _staticOrigin : origin*
+        ---
+        + ctor() : tbridger&
+        + func(name, funcPtr) : tbridger&
+        + make(T*) : node*
+        ---
+        {static} + _get() : tbridger&
+    }
+
+    class "tbridge<T>" as tbridge {
+        - _native : T*
+        ---
+        + eval(name, args) : str
+        + subs() : scope&
+    }
+
+    class "tbridgeFunc" as tbridgeFunc {
+        - _funcPtr : FuncPtr
+        ---
+        + eval(args) : str
+        + run(args) : str
+    }
+
+    class "tbridgeCtor" as tbridgeCtor {
+        + eval(args) : str
+        + run(args) : str
+    }
+
+    class "tmarshaling<From, To>" as tmarshaling {
+        + wrap(From) : To
+        + unwrap(To) : From
+    }
+}
+
+package "Managed 환경 (Byeol)" {
+    class "baseObj" as baseObj {
+        + eval(name, args) : str
+        + subs() : scope&
+    }
+
+    class "origin" as origin {
+        + subs() : scope&
+    }
+
+    class "nInt" as nInt
+    class "nStr" as nStr
+}
+
+note top of tbridger
+  <b>Facade + Monostate 패턴:</b>
+  복잡한 브리징을 간단한
+  API로 제공
+
+  모든 인스턴스가
+  static variable 공유
+
+  tbridger<window>::ctor()
+    .func("setY", &window::setY)
+end note
+
+note right of tbridge
+  <b>Adapter/Bridge 패턴:</b>
+  native 객체를 managed 표현
+
+  tbridger의 subs를
+  origin으로 사용
+end note
+
+note bottom of tbridgeFunc
+  <b>함수 Redirect:</b>
+  C++ 멤버 함수 포인터를
+  byeol 함수로 변환
+
+  marshaling으로
+  타입 변환 처리
+end note
+
+note left of tmarshaling
+  <b>Marshaling:</b>
+  Native ↔ Managed 변환
+
+  nInt → int (unwrap)
+  int → nInt (wrap)
+
+  자동 타입 변환으로
+  두 환경 간 연결
+end note
+
+window .right.> tbridger : 등록
+openGL .right.> tbridger : 등록
+
+tbridger ..> tbridge : 생성
+tbridger *-- "n" tbridgeFunc : 저장
+tbridger *-- "n" tbridgeCtor : 저장
+tbridger ..> origin : 생성
+
+tbridge --|> baseObj : 상속
+tbridge --> window : _native 소유
+tbridgeFunc ..> tmarshaling : 사용
+tbridgeCtor ..> tmarshaling : 사용
+
+tbridge ..> origin : origin으로 사용
+
+nInt .up.> tmarshaling : 변환
+nStr .up.> tmarshaling : 변환
+@enduml
+@startuml inline_umlgraph_28.png
+actor "Byeol 코드" as byeol
+participant "tbridge<window>" as tbridge
+participant "tbridgeFunc" as tbridgeFunc
+participant "tmarshaling" as tmarshaling
+participant "window (C++)" as window
+
+== 등록 단계 (프로그램 시작) ==
+
+note over tbridge, window
+  <b>C++ 코드에서 등록:</b>
+
+  tbridger<window>::ctor()
+    .func("setY", &window::setY)
+
+  이 시점에 tbridgeFunc 생성되고
+  tbridger의 static subs에 저장됨
+end note
+
+== 호출 단계 (런타임) ==
+
+byeol -> tbridge : win.setY(20)
+activate byeol
+activate tbridge
+
+note right of byeol
+  <b>Byeol 코드:</b>
+  win := window()
+  win.setY(20)
+
+  → eval("setY", args)
+end note
+
+tbridge -> tbridge : subs에서 "setY" 검색
+note right of tbridge
+  subs는 tbridger의
+  static origin을 참조
+
+  "setY" → tbridgeFunc 발견
+end note
+
+tbridge -> tbridge : _onEvalSub()
+note right of tbridge
+  <b>args에 this 주입:</b>
+  args.setMe(this)
+
+  함수가 자신을 호출한
+  객체를 알 수 있도록
+end note
+
+tbridge -> tbridgeFunc : eval(args)
+activate tbridgeFunc
+
+note right of tbridgeFunc
+  <b>args 내용:</b>
+  - setMe: tbridge 객체
+  - 파라미터: nInt(20)
+end note
+
+== Marshaling: Managed → Native ==
+
+tbridgeFunc -> tmarshaling : unwrap(nInt(20))
+activate tmarshaling
+
+note right of tmarshaling
+  <b>타입 변환:</b>
+  nInt → int
+
+  managed 타입을
+  native 타입으로 변환
+end note
+
+tmarshaling --> tbridgeFunc : int(20)
+deactivate tmarshaling
+
+tbridgeFunc -> tbridge : _native 포인터 가져오기
+tbridge --> tbridgeFunc : window*
+
+== Native 함수 호출 ==
+
+tbridgeFunc -> window : window->setY(20)
+activate window
+
+note right of window
+  <b>실제 C++ 함수 실행:</b>
+  멤버 함수 포인터를 통해
+  native 코드 실행
+
+  _y = 20
+end note
+
+window --> tbridgeFunc : void
+deactivate window
+
+== Marshaling: Native → Managed ==
+
+tbridgeFunc -> tmarshaling : wrap(void)
+activate tmarshaling
+
+note right of tmarshaling
+  <b>반환값 변환:</b>
+  void인 경우
+  nulOf() 반환
+end note
+
+tmarshaling --> tbridgeFunc : str(nulOf())
+deactivate tmarshaling
+
+tbridgeFunc --> tbridge : str(nulOf())
+deactivate tbridgeFunc
+
+tbridge --> byeol : str(nulOf())
+deactivate tbridge
+deactivate byeol
+
+note over byeol, window
+  <b>Marshaling 프로세스 핵심:</b>
+
+  1. <b>Unwrap (Managed → Native):</b>
+     - nInt → int
+     - nStr → string
+     - tbridge<T> → T*
+
+  2. <b>Native 함수 실행:</b>
+     - 멤버 함수 포인터로 호출
+     - 실제 C++ 코드 실행
+
+  3. <b>Wrap (Native → Managed):</b>
+     - int → nInt
+     - string → nStr
+     - T* → tbridge<T>
+
+  <b>자동 타입 변환으로:</b>
+  - Byeol 코드는 native 타입 몰라도 됨
+  - C++ 코드는 managed 타입 몰라도 됨
+  - 완전한 투명성(transparency)
+end note
+
+== 반환값이 있는 경우 예시 ==
+
+byeol -> tbridge : res := win.getY()
+activate byeol
+activate tbridge
+
+tbridge -> tbridgeFunc : eval(args)
+activate tbridgeFunc
+
+tbridgeFunc -> window : window->getY()
+activate window
+
+window --> tbridgeFunc : int(20)
+deactivate window
+
+tbridgeFunc -> tmarshaling : wrap(20)
+activate tmarshaling
+
+note right of tmarshaling
+  int → nInt 변환
+end note
+
+tmarshaling --> tbridgeFunc : str(nInt(20))
+deactivate tmarshaling
+
+tbridgeFunc --> tbridge : str(nInt(20))
+deactivate tbridgeFunc
+
+tbridge --> byeol : str(nInt(20))
+deactivate tbridge
+
+note right of byeol
+  res는 이제 nInt(20)
+  byeol 코드에서 사용 가능
+end note
+
+deactivate byeol
+@enduml
+@startuml inline_umlgraph_29.png
+class thread {
+    - _frames : frames
+    - _errReport : errReport*
+    + {static} get() : thread&
+    + getFrames() : frames&
+    + getReport() : errReport&
+    --
+    <b>Singleton 패턴</b>
+    thread-local storage
+}
+
+class frames {
+    - _container : vector<frame*>
+    + add(frame&) : void
+    + del(frame&) : void
+    + len() : nint
+    + operator[](nidx) : frame&
+    --
+    frame 스택 관리
+    함수 호출 추적
+}
+
+class frame {
+    - _scopes : scope
+    + subs() : scope&
+    + inFrame() : void
+    + outFrame() : void
+    --
+    <b>RAII 패턴</b>
+    생성/소멸 시
+    frames에 등록/해제
+}
+
+class scope {
+    - _container : tnchain
+    + add(key, node&) : void
+    + get(key) : node*
+    + link(scope&) : void
+    --
+    <b>Chain of Responsibility</b>
+    tnchain으로 연결
+}
+
+class tnchain {
+    - _next : tnchain*
+    - _prev : tnchain*
+    - _defaultContainer : Container
+    + link(tnchain&) : void
+    + get(key) : T*
+    --
+    <b>Linked List</b>
+    scope들을 연결
+}
+
+thread "1" *-- "1" frames : 소유
+frames "1" *-- "0..*" frame : 관리
+frame "1" *-- "1..*" scope : 통합
+scope "1" *-- "1" tnchain : 기반
+
+note right of thread
+  각 thread는
+  독립된 frames 스택 소유
+
+  thread::get()으로
+  현재 thread 접근
+end note
+
+note right of frames
+  frame들의 스택
+
+  함수 호출 시 add()
+  함수 종료 시 del()
+end note
+
+note right of frame
+  현재 실행 컨텍스트의
+  모든 접근 가능한 scope들
+
+  RAII로 자동 관리
+end note
+
+note bottom of scope
+  symbol들을 저장
+
+  tnchain으로 연결되어
+  Chain of Responsibility 구현
+end note
+@enduml
+@startuml inline_umlgraph_30.png
+start
+
+:symbol 이름으로 탐색 요청;
+
+:thread::get()으로\n현재 thread 획득;
+
+:thread.getFrames()로\nframes 획득;
+
+:frames의 최상위 frame 획득;
+
+:frame.subs()로\nscope chain 획득;
+
+partition "Chain of Responsibility" {
+    repeat
+        :현재 scope에서 symbol 검색;
+
+        if (symbol 발견?) then (예)
+            :symbol 반환;
+            stop
+        endif
+
+        :scope.getNext()로\n다음 scope 획득;
+
+    repeat while (다음 scope 존재?)
+}
+
+:symbol을 찾지 못함;
+
+:nullptr 반환 또는 에러;
+
+stop
+
+note right
+  <b>탐색 순서 예시:</b>
+  (calc.add(5) 실행 중)
+
+  1. local scope (temp, doubled)
+  2. func scope (add 함수)
+  3. args scope (val)
+  4. obj scope (result, add)
+  5. file scope (VERSION)
+  6. pack scope (PI, Calculator)
+
+  각 scope는 tnchain으로
+  연결되어 있음
+end note
+@enduml
+@startuml inline_umlgraph_31.png
+actor "사용자 코드" as user
+participant "slotLoader" as loader
+participant "autoslot" as autoslot
+participant "packLoading" as packLoading
+participant "manifest" as manifest
+participant "파일 시스템" as fs
+
+== Pack 등록 단계 ==
+
+user -> loader : addPack("mylib")
+activate loader
+
+loader -> fs : manifest.stela 찾기
+activate fs
+
+fs --> loader : manifest 파일
+deactivate fs
+
+loader -> manifest : 파싱
+activate manifest
+
+note right of manifest
+  <b>Manifest 내용:</b>
+  - name: "mylib"
+  - version: "1.0.0"
+  - dependencies: ["core"]
+  - entrypoint: "byeol" or "cpp"
+end note
+
+manifest --> loader : manifest 객체
+deactivate manifest
+
+loader -> packLoading : 생성 (native/managed)
+activate packLoading
+
+note right of packLoading
+  <b>packLoading 타입:</b>
+  - .byeol 파일 → managed
+  - .so/.dll 파일 → native
+  - 또는 둘 다
+end note
+
+packLoading --> loader : packLoading[]
+deactivate packLoading
+
+loader -> autoslot : 생성 (RELEASED 상태)
+activate autoslot
+
+note right of autoslot
+  <b>초기 상태:</b>
+  state = RELEASED
+  메모리 점유 없음
+  packLoadings 저장만
+end note
+
+autoslot --> loader : autoslot 객체
+deactivate autoslot
+
+loader -> loader : dependencies 등록
+note right of loader
+  manifest의 dependencies를
+  재귀적으로 로딩
+end note
+
+loader --> user : 등록 완료
+deactivate loader
+
+== Lazy 로딩 단계 (symbol 접근 시) ==
+
+user -> autoslot : mylib.someFunc() 접근
+activate autoslot
+
+note right of user
+  <b>Lazy Loading 트리거:</b>
+  실제 사용 시점까지
+  로딩 지연
+end note
+
+autoslot -> autoslot : state == RELEASED?
+note right of autoslot
+  첫 접근이므로
+  로딩 시작
+end note
+
+== PARSED 단계 ==
+
+autoslot -> packLoading : parse()
+activate packLoading
+
+packLoading -> fs : .byeol 파일 읽기
+activate fs
+
+fs --> packLoading : 소스 코드
+deactivate fs
+
+packLoading -> packLoading : 파서 실행
+note right of packLoading
+  AST 생성
+  (native pack은 생략)
+end note
+
+packLoading --> autoslot : AST
+deactivate packLoading
+
+autoslot -> autoslot : state = PARSED
+
+== VERIFIED 단계 ==
+
+autoslot -> packLoading : verify()
+activate packLoading
+
+packLoading -> packLoading : 검증 실행
+note right of packLoading
+  <b>검증 항목:</b>
+  - 타입 체킹
+  - 문법 검증
+  - 의존성 확인
+end note
+
+alt 검증 성공
+
+    packLoading --> autoslot : isValid = true
+    autoslot -> autoslot : state = VERIFIED
+
+else 검증 실패
+
+    packLoading --> autoslot : isValid = false
+    autoslot -> autoslot : state = VERIFIED\n(실패 표시)
+
+end
+
+deactivate packLoading
+
+== LINKED 단계 ==
+
+autoslot -> packLoading : link()
+activate packLoading
+
+alt isValid == true
+
+    packLoading -> packLoading : 링킹 완료
+    packLoading --> autoslot : 성공
+
+    autoslot -> autoslot : state = LINKED
+
+else isValid == false
+
+    packLoading --> autoslot : 실패
+
+    autoslot -> autoslot : state = LINKED\n의존 pack에 전파
+
+    note right of autoslot
+      <b>실패 전파:</b>
+      이 pack에 의존하는
+      모든 dependents에게
+      실패 사실 전파
+    end note
+
+end
+
+deactivate packLoading
+
+autoslot --> user : symbol 반환 또는 에러
+deactivate autoslot
+
+note over user, fs
+  <b>패키지 로딩 파이프라인 요약:</b>
+
+  1. <b>등록:</b> slotLoader가 manifest 읽고 autoslot 생성
+  2. <b>RELEASED:</b> 초기 상태, 메모리 점유 없음
+  3. <b>PARSED:</b> 첫 접근 시 파싱 (Lazy Loading)
+  4. <b>VERIFIED:</b> 코드 검증 및 타입 체킹
+  5. <b>LINKED:</b> 링킹 완료 또는 실패 전파
+
+  <b>핵심:</b>
+  - Lazy Loading으로 초기 부팅 속도 향상
+  - State Machine으로 명확한 상태 관리
+  - 의존성 기반 실패 전파 메커니즘
+end note
+@enduml
+@startuml inline_umlgraph_32.png
+[*] --> RELEASED : autoslot 생성
+
+state RELEASED {
+    RELEASED : 초기 상태
+    RELEASED : 메모리 점유 없음
+    RELEASED : 대부분의 slot이 이 상태
+}
+
+state PARSED {
+    PARSED : 코드 파싱 완료
+    PARSED : AST 생성됨
+    PARSED : native pack은 이 단계 생략
+}
+
+state VERIFIED {
+    VERIFIED : 코드 검증 완료
+    VERIFIED : 타입 체킹 완료
+    VERIFIED : isValid 플래그 설정
+}
+
+state LINKED {
+    LINKED : 최종 상태
+    LINKED : 실행 준비 완료
+    LINKED : 검증 실패 시 의존 pack에 전파
+}
+
+RELEASED --> PARSED : symbol 접근 시\npackLoading.parse()
+RELEASED --> LINKED : native/optimized pack\n파싱 불필요
+
+PARSED --> VERIFIED : packLoading.verify()
+
+VERIFIED --> LINKED : packLoading.link()
+
+note right of RELEASED
+  <b>Lazy Loading:</b>
+  사용될 때까지
+  로딩 지연
+end note
+
+note right of PARSED
+  <b>조건부 전환:</b>
+  - .byeol 파일: PARSED 거침
+  - .so/.dll 파일: LINKED로 바로
+end note
+
+note bottom of VERIFIED
+  <b>검증 실패 시:</b>
+  isValid = false 설정
+  이후 LINKED 단계에서
+  의존 pack에 실패 전파
+end note
+
+note right of LINKED
+  <b>의존성 전파:</b>
+  검증 실패한 경우
+  이 pack에 의존하는
+  모든 pack도 실패 처리
+end note
+@enduml
+@startuml inline_umlgraph_33.png
+participant "클라이언트" as client
+participant "visitor" as visitor
+participant "func (node)" as func
+participant "blockExpr (node)" as block
+participant "assignExpr (node)" as assign
+
+client -> func : accept(visitor)
+activate func
+
+note right of client
+  <b>AST 구조:</b>
+  func
+    └─ blockExpr
+        ├─ assignExpr
+        └─ assignExpr
+end note
+
+== func 방문 (Pre-order) ==
+
+func -> visitor : visit(visitInfo, *this)
+activate visitor
+
+note right of func
+  <b>Double Dispatch:</b>
+  1차: func.accept(visitor)
+  2차: visitor.visit(func&)
+end note
+
+visitor -> visitor : 1. onVisit(func&)
+activate visitor #lightblue
+
+note right of visitor
+  <b>Template Method 1단계:</b>
+  현재 노드 방문 처리
+  func에 대한 특정 동작 수행
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 2. onTraverse(func&)
+activate visitor #lightgreen
+
+note right of visitor
+  <b>Template Method 2단계:</b>
+  하위 노드 순회
+  func.subs() 접근
+end note
+
+visitor -> func : subs()
+func --> visitor : scope& (blockExpr 등)
+
+visitor -> block : accept(visitor)
+activate block
+
+== blockExpr 방문 (재귀) ==
+
+block -> visitor : visit(visitInfo, *this)
+
+visitor -> visitor : 1. onVisit(blockExpr&)
+activate visitor #lightblue
+
+note right of visitor
+  blockExpr 방문 처리
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 2. onTraverse(blockExpr&)
+activate visitor #lightgreen
+
+note right of visitor
+  blockExpr의 자식들 순회
+  _stmts 배열 순회
+end note
+
+visitor -> block : subs() / _stmts
+block --> visitor : narr (assignExpr 들)
+
+visitor -> assign : accept(visitor)
+activate assign
+
+== assignExpr 방문 ==
+
+assign -> visitor : visit(visitInfo, *this)
+
+visitor -> visitor : 1. onVisit(assignExpr&)
+activate visitor #lightblue
+
+note right of visitor
+  assignExpr 방문 처리
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 2. onTraverse(assignExpr&)
+activate visitor #lightgreen
+
+note right of visitor
+  assignExpr의 자식들 순회
+  (lhs, rhs)
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 3. onLeave(assignExpr&)
+activate visitor #lightyellow
+
+note right of visitor
+  <b>Template Method 3단계:</b>
+  현재 노드를 떠남
+  assignExpr 정리 작업
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor --> assign : void
+assign --> visitor : void
+deactivate assign
+
+== blockExpr 순회 계속 ==
+
+note right of visitor
+  다른 assignExpr들도
+  같은 방식으로 방문
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 3. onLeave(blockExpr&)
+activate visitor #lightyellow
+
+note right of visitor
+  blockExpr를 떠남
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor --> block : void
+block --> visitor : void
+deactivate block
+
+== func 순회 완료 ==
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor -> visitor : 3. onLeave(func&)
+activate visitor #lightyellow
+
+note right of visitor
+  func를 떠남
+  순회 완료
+end note
+
+visitor --> visitor : void
+deactivate visitor
+
+visitor --> func : void
+deactivate visitor
+
+func --> client : 순회 완료
+deactivate func
+
+note over client, assign
+  <b>Visitor 패턴의 3단계 (Template Method):</b>
+
+  <b>1. onVisit(node&):</b> 현재 노드 방문
+     - 노드별 특정 동작 수행
+     - 하위 클래스가 override
+
+  <b>2. onTraverse(node&):</b> 자식 노드 순회
+     - subs() 또는 멤버 접근
+     - 재귀적으로 accept() 호출
+
+  <b>3. onLeave(node&):</b> 현재 노드를 떠남
+     - 정리 작업 수행
+     - 하위 클래스가 override
+
+  <b>Pre-order Traversal:</b>
+  부모 → 자식 순서로 방문
+  (후위 순회 불가능)
+
+  <b>Double Dispatch:</b>
+  node.accept(visitor) → visitor.visit(구체타입&)
+  런타임 타입 결정
+end note
+@enduml
+@startuml inline_umlgraph_34.png
+participant "클라이언트" as client
+participant "visitor\n(verifier)" as visitor
+participant "node*\n(런타임 타입:\nnInt)" as node
+participant "nInt" as nInt
+
+client -> visitor : visit(visitInfo, node*)
+activate visitor
+
+note right of visitor
+  <b>문제:</b>
+  node* 타입만 알고 있음
+  실제 타입(nInt)을 모름
+end note
+
+visitor -> node : accept(visitInfo, *this)
+activate node
+
+note right of node
+  <b>First Dispatch:</b>
+  가상 함수 동적 바인딩
+  런타임에 실제 타입(nInt)의
+  accept() 호출
+end note
+
+node -> nInt : nInt::accept(visitInfo, visitor)
+activate nInt
+
+nInt -> visitor : visitor.visit(visitInfo, *this)
+
+note left of nInt
+  <b>Second Dispatch:</b>
+  *this는 nInt& 타입
+  컴파일 타임 오버로드 resolution
+  visitor::visit(visitInfo, nInt&) 호출
+end note
+
+activate visitor
+
+visitor -> visitor : onVisit(visitInfo, nInt&)
+
+note right of visitor
+  <b>성공!</b>
+  구체 타입(nInt)에 특화된
+  방문 로직 실행
+end note
+
+deactivate visitor
+
+nInt --> node
+deactivate nInt
+node --> visitor
+deactivate node
+visitor --> client
+deactivate visitor
+
+note bottom of client
+  <b>Double Dispatch 효과:</b>
+  - node와 visitor 양쪽의 구체 타입에
+    따라 동작 결정
+  - 타입 안전성 보장
+  - 새 node 타입 추가 용이
+end note
+@enduml
+@startuml inline_umlgraph_35.png
+actor "사용자" as user
+participant "parser" as parser
+participant "expander" as expander
+participant "verifier" as verifier
+participant "interpreter" as interpreter
+participant "AST" as ast
+
+== 1. 파싱 단계 ==
+
+user -> parser : 소스 코드 제공
+activate parser
+
+note right of parser
+  <b>파싱:</b>
+  소스 코드 → AST 변환
+
+  stelaParser 기반
+  lowscanner + lowparser
+end note
+
+parser -> ast : AST 생성
+activate ast
+
+note right of ast
+  <b>초기 AST:</b>
+  - func, obj, expr 등
+  - 아직 미완성 상태
+  - Generic 타입 미확정
+end note
+
+parser --> user : AST
+deactivate parser
+
+== 2. 확장 단계 (Expansion) ==
+
+user -> expander : AST 확장 요청
+activate expander
+
+note right of expander
+  <b>Expander:</b>
+  - Generic 타입 인스턴스화
+  - Auto 타입 해결
+  - AST 완성
+end note
+
+expander -> ast : AST 수정/확장
+ast --> expander : 완성된 AST
+
+expander --> user : 완성된 AST
+deactivate expander
+
+== 3. 검증 단계 (Verification) ==
+
+user -> verifier : AST 검증 요청
+activate verifier
+
+note right of verifier
+  <b>Verifier (visitor 기반):</b>
+  - visitor 패턴으로 AST 순회
+  - tworker 기반 배치 작업
+end note
+
+verifier -> verifier : setTask(ast)
+verifier -> verifier : work()
+
+note right of verifier
+  <b>Template Method:</b>
+  1. _prepare()
+  2. work()
+  3. _onEndWork()
+end note
+
+loop AST 순회 (Visitor 패턴)
+
+    verifier -> ast : visit(node)
+    activate ast
+
+    verifier -> verifier : onVisit(node)
+
+    note right of verifier
+      <b>Type Inference:</b>
+      eval() 대신 infer() 사용
+
+      값 계산 X, 타입만 추론
+      eval()보다 빠름
+    end note
+
+    verifier -> ast : infer()
+    ast --> verifier : 타입 정보 (origin)
+
+    note right of verifier
+      <b>타입 체킹:</b>
+      - 타입 매칭 확인
+      - 묵시적 변환 가능성
+      - 함수 오버로딩 해결
+    end note
+
+    alt 타입 에러 발견
+
+        verifier -> verifier : errReport에 추가
+        note right of verifier
+          에러 수집만 하고
+          계속 순회
+        end note
+
+    end
+
+    verifier -> verifier : onLeave(node)
+
+    ast --> verifier : void
+    deactivate ast
+
+end
+
+verifier -> verifier : 검증 완료 판단
+
+alt 에러 있음
+
+    verifier --> user : 검증 실패\nerrReport 반환
+    note right of user
+      사용자에게 에러 표시
+      실행 중단
+    end note
+
+else 에러 없음
+
+    verifier --> user : 검증 성공
+
+end
+
+deactivate verifier
+
+== 4. 실행 단계 (Execution) ==
+
+user -> interpreter : 실행 요청
+activate interpreter
+
+note right of interpreter
+  <b>Interpreter:</b>
+  Tree-walking 방식
+  AST 직접 실행
+end note
+
+interpreter -> ast : eval()
+activate ast
+
+note right of ast
+  <b>eval() 호출:</b>
+  검증된 AST를
+  실제로 실행
+
+  값 계산 및 반환
+end note
+
+ast -> ast : 재귀적 eval()
+
+note right of ast
+  <b>Tree-walking:</b>
+  각 node의 eval()
+  재귀적으로 호출
+
+  함수 → 블록 → 표현식
+end note
+
+ast --> interpreter : 실행 결과 (str)
+deactivate ast
+
+interpreter --> user : 실행 결과
+deactivate interpreter
+
+note over user, ast
+  <b>파싱-검증-실행 파이프라인 요약:</b>
+
+  1. <b>파싱 (Parser):</b>
+     소스 코드 → 초기 AST
+     lowscanner + lowparser
+
+  2. <b>확장 (Expander):</b>
+     Generic 타입 인스턴스화
+     Auto 타입 해결
+
+  3. <b>검증 (Verifier):</b>
+     infer()로 타입 추론
+     errReport로 에러 수집
+     실행 없이 타입만 체크
+
+  4. <b>실행 (Interpreter):</b>
+     eval()로 실제 실행
+     Tree-walking 방식
+end note
+@enduml
+@startuml inline_umlgraph_36.png
+start
+
+:<b>Type Inference 시작</b>
+node.infer() 호출;
+
+if (node 타입은?) then (리터럴)
+  :리터럴 타입 반환
+  (nInt, nStr, nFlt 등);
+  stop
+elseif (Binary 연산) then (예)
+  :lhs.infer();
+  :rhs.infer();
+
+  note right
+    <b>Type Promotion:</b>
+    int + flt → flt
+    더 넓은 타입으로 승격
+  end note
+
+  :타입 승격 규칙 적용;
+  :결과 타입 반환;
+  stop
+elseif (함수 호출) then (예)
+  :func.infer();
+  :args 각각 infer();
+
+  note right
+    <b>Overload Resolution:</b>
+    1. EXACT_MATCH 찾기
+    2. IMPLICIT_MATCH 찾기
+    3. NO_MATCH → 에러
+  end note
+
+  if (오버로드된 함수?) then (예)
+    :prioritize(args) 호출;
+    :가장 높은 우선순위 선택;
+  endif
+
+  :함수 반환 타입 반환;
+  stop
+elseif (변수 참조) then (예)
+  :scope에서 symbol 검색;
+
+  if (symbol 존재?) then (예)
+    :symbol의 타입 반환;
+    stop
+  else (아니오)
+    :타입 에러;
+    stop
+  endif
+elseif (블록 표현식) then (예)
+  :각 stmt 순회;
+
+  note right
+    블록은 마지막 줄의
+    결과 타입 반환
+  end note
+
+  :마지막 stmt.infer();
+  :결과 타입 반환;
+  stop
+elseif (조건문/반복문) then (예)
+  :조건 expr.infer();
+
+  if (조건 타입이 bool?) then (예)
+    :then/else 블록 infer();
+    :결과 타입 결정;
+
+    note right
+      then과 else의
+      공통 상위 타입 반환
+    end note
+
+    stop
+  else (아니오)
+    :타입 에러;
+    stop
+  endif
+else (기타)
+  :해당 node별
+  infer() 구현 호출;
+  stop
+endif
+
+note right
+  <b>Type Inference의 특징:</b>
+
+  1. <b>값 계산 안함:</b>
+     타입만 추론, eval()보다 빠름
+
+  2. <b>재귀적 추론:</b>
+     자식 node의 infer() 호출
+     상향식으로 타입 결정
+
+  3. <b>Type Promotion:</b>
+     여러 타입 중 가장 넓은 타입 선택
+
+  4. <b>Overload Resolution:</b>
+     함수 오버로딩 자동 해결
+
+  5. <b>에러 탐지:</b>
+     실행 전 타입 불일치 발견
+end note
+@enduml
+@startuml inline_umlgraph_37.png
+participant "verifier/parser" as worker
+participant "node" as node
+participant "nerr" as nerr
+participant "frames" as frames
+participant "frame" as frame
+participant "errReport" as errReport
+
+== Callstack 구성 (정상 실행 중) ==
+
+worker -> node : func.eval(args)
+activate node
+
+note right of node
+  <b>함수 호출 시:</b>
+  baseObj가 frame 생성
+end note
+
+node -> frames : pushFrame()
+activate frames
+
+frames -> frame : 생성 (funcName, args)
+activate frame
+
+note right of frame
+  <b>frame 내용:</b>
+  - 함수명
+  - 인자
+  - 호출 위치 (src)
+end note
+
+frame --> frames : tstr<frame>
+frames -> frames : _stack에 push
+
+note right of frames
+  <b>Callstack:</b>
+  [frame1, frame2, ...]
+  함수 호출 스택
+end note
+
+frames --> node : void
+deactivate frames
+
+== 에러 발생 ==
+
+node -> node : stmt 실행 중...
+
+alt stmt가 nullptr
+
+    node -> node : WHEN_NUL(stmt) 감지
+
+    note right of node
+      <b>WHEN 매크로:</b>
+      if(stmt == nullptr)
+          에러 생성 및 반환
+    end note
+
+    node -> nerr : 생성 (IS_NUL, "stmt")
+    activate nerr
+
+    nerr -> frames : getFrames()
+    frames --> nerr : tstr<frames>
+
+    note right of nerr
+      <b>강한 참조:</b>
+      nerr가 frames를
+      강하게 참조
+
+      Reference Counting으로
+      frames 생명 연장
+    end note
+
+    nerr -> nerr : callstack 캡처
+    note right of nerr
+      frames를 통해
+      현재 callstack 저장
+    end note
+
+    nerr --> node : nerr*
+    deactivate nerr
+
+== 에러 전파 ==
+
+    node -> errReport : add(nerr)
+    activate errReport
+
+    note right of errReport
+      <b>에러 수집:</b>
+      에러를 모아두고
+      작업 계속 진행
+    end note
+
+    alt noisy == true
+
+        errReport -> nerr : log()
+        note right of nerr
+          즉시 로깅
+          디버깅 용이
+        end note
+
+    end
+
+    errReport --> node : void
+    deactivate errReport
+
+    note right of node
+      <b>Early Return:</b>
+      .ret(blk)로
+      함수 즉시 종료
+    end note
+
+    node --> worker : 에러 반환
+    deactivate node
+
+end
+
+== 함수 종료 (정상/에러 모두) ==
+
+worker -> frames : popFrame()
+activate frames
+
+frames -> frames : _stack에서 pop
+frames -> frame : del()
+
+note right of frame
+  <b>Reference Counting:</b>
+  frame의 strong count 감소
+
+  하지만 nerr가 강한 참조 중이므로
+  아직 메모리에서 해제 안됨
+end note
+
+frame --> frames : void
+frames --> worker : void
+deactivate frames
+
+== 에러 처리 및 출력 ==
+
+worker -> errReport : 에러 존재?
+activate errReport
+
+errReport --> worker : true (에러 있음)
+deactivate errReport
+
+worker -> errReport : 모든 에러 순회
+activate errReport
+
+loop 각 에러
+
+    errReport -> nerr : dump()
+    activate nerr
+
+    note right of nerr
+      <b>Callstack 출력:</b>
+      nerr가 참조하는 frames를
+      통해 callstack 정보 출력
+
+      at func1() in file.byeol:10
+      at func2() in file.byeol:20
+      at main() in file.byeol:30
+    end note
+
+    nerr -> frames : 각 frame 정보
+    activate frames
+
+    frames -> frame : getName(), getSrc()
+    activate frame
+
+    frame --> frames : 함수명, 위치
+    deactivate frame
+
+    frames --> nerr : callstack 정보
+    deactivate frames
+
+    nerr -> nerr : 로그 출력
+
+    nerr --> errReport : void
+    deactivate nerr
+
+end
+
+errReport --> worker : void
+deactivate errReport
+
+note right of worker
+  <b>에러 처리 완료:</b>
+  모든 에러 출력
+  작업 중단
+end note
+
+deactivate frame
+
+note over worker, errReport
+  <b>에러 전파 메커니즘 요약:</b>
+
+  1. <b>에러 발생:</b>
+     WHEN 매크로로 에러 감지
+     nerr 생성 + frames 강한 참조
+
+  2. <b>에러 수집:</b>
+     errReport에 add()
+     작업 계속 진행 (Early Return)
+
+  3. <b>Callstack 보존:</b>
+     nerr가 frames 강한 참조
+     함수 종료 후에도 callstack 유지
+
+  4. <b>에러 출력:</b>
+     dump()로 callstack 포함
+     모든 에러 정보 출력
+
+  <b>핵심:</b>
+  - Reference Counting으로 생명 관리
+  - errReport로 에러 수집
+  - frames 강한 참조로 callstack 보존
+end note
+@enduml
+@startuml inline_umlgraph_38.png
+package "Callstack 구성" {
+    class "frames" as frames {
+        - _stack : tnarr<frame>
+        ---
+        + pushFrame() : void
+        + popFrame() : void
+        + getFrames() : narr
+    }
+
+    class "frame" as frame {
+        - _funcName : string
+        - _args : args
+        - _src : src
+        ---
+        + getName() : string
+        + getArgs() : args
+        + getSrc() : src
+    }
+
+    class "baseErr" as baseErr {
+        - _frames : tstr<frames>
+        - _msg : string
+        ---
+        + dump() : void
+        + log() : void
+    }
+
+    class "nerr" as nerr {
+        - _code : errCode
+        ---
+        + dump() : void
+    }
+
+    class "errReport" as errReport {
+        - _errs : narr
+        - _noisy : nbool
+        ---
+        + add(baseErr*) : void
+        + len() : ncnt
+        + setNoisy(nbool) : void
+    }
+
+    class "errCode" as errCode {
+        + IS_NUL : 2203
+        + TYPE_MISMATCH : 2401
+        + ...
+    }
+}
+
+note top of frames
+  <b>Callstack 스택:</b>
+  함수 호출마다 frame push
+  함수 종료 시 frame pop
+
+  [frame1, frame2, frame3]
+  스택 구조
+end note
+
+note right of frame
+  <b>Frame 정보:</b>
+  - 함수명
+  - 인자
+  - 호출 위치 (src)
+
+  callstack 한 단계
+end note
+
+note bottom of baseErr
+  <b>Reference Counting:</b>
+  tstr<frames>로 강한 참조
+
+  err가 살아있는 동안
+  frames도 메모리에 유지
+
+  함수 종료 후에도
+  callstack 정보 보존
+end note
+
+note right of errReport
+  <b>에러 수집기:</b>
+  작업 중 발생한
+  모든 에러 수집
+
+  noisy == true:
+  에러 추가 즉시 로깅
+end note
+
+frames *-- "n" frame : 스택으로 관리
+baseErr *-- frames : 강한 참조 (tstr)
+nerr --|> baseErr : 상속
+errReport o-- "n" baseErr : 수집
+nerr --> errCode : 사용
+@enduml
+@startuml inline_umlgraph_39.png
+package "Core 모듈" {
+    class "tworker<programRes, flagArgs>" as tworker {
+    }
+    class interpreter {
+    }
+    class starter {
+    }
+    class errReport {
+    }
+}
+
+package "Frontend 모듈" {
+    class cli {
+        + getFlags() : const flags&
+        # _onWork() : programRes
+        - _evalArgs(...) : flag::res
+    }
+
+    class flagArgs {
+    }
+
+    abstract class flag {
+        + take(...) : res
+    }
+
+    cli --|> tworker
+    cli ..> interpreter : 생성
+    cli ..> starter : 생성
+    cli ..> errReport : 생성
+    cli ..> flagArgs
+    cli "1" *-- "many" flag : 관리
+}
+@enduml
+@startuml inline_umlgraph_40.png
+actor 사용자
+participant "cli" as cli
+participant "flagArgs" as flags
+participant "interpreter" as ip
+participant "errReport" as report
+participant "starter" as st
+
+사용자 -> cli : eval(flagArgs)
+activate cli
+
+cli -> ip : new interpreter()
+cli -> report : new errReport()
+cli -> st : new starter()
+
+cli -> ip : setFlag(tworker 플래그)
+cli -> st : setFlag(tworker 플래그)
+
+cli -> flags : 패턴매칭
+activate flags
+note right of flags
+  여기 부분은 추후에 자세히 다룹니다.
+end note
+flags -> cli: 완료
+deactivate flags
+
+cli -> ip : work()
+activate ip
+ip -> ip : 소스 파싱
+ip -> ip : 타입 확장
+ip -> ip : AST 검증
+ip --> cli : 반환
+deactivate ip
+
+alt 검증 실패
+    cli -> report : 에러 덤프
+    cli --> 사용자 : 에러와 함께 종료
+else 검증 성공
+    cli -> st : setTask(검증된 AST)
+    cli -> st : work()
+    activate st
+    st -> st : main() 실행
+    st --> cli : 결과 반환
+    deactivate st
+
+    cli --> 사용자 : 결과 반환
+end
+
+deactivate cli
+@enduml
+@startuml inline_umlgraph_41.png
+abstract class flag {
+    + take(flagArgs, cli, interpreter, starter) : res
+    # {abstract} _getRegExpr() : strings&
+    # {abstract} _onTake(flagArgs, cli, interpreter, starter) : res
+    # getArgCount() : ncnt
+}
+
+note right of flag
+  Template Method 패턴:
+  take()가 알고리즘 골격 정의
+  _getRegExpr(), _onTake()는
+  하위 클래스가 구현
+end note
+
+class verFlag {
+    # _getRegExpr() : strings&
+    # _onTake() : res
+    --
+    정규식: "^\\\\--version$"
+    반환: EXIT_PROGRAM
+}
+
+class helpFlag {
+    # _getRegExpr() : strings&
+    # _onTake() : res
+    --
+    정규식: "^\\\\-h$", "^\\\\--help$"
+    반환: EXIT_PROGRAM
+}
+
+class bufferSrcFlag {
+    # _getRegExpr() : strings&
+    # _onTake() : res
+    # getArgCount() : ncnt
+    --
+    정규식: "^\\\\--script$"
+    인자 개수: 1
+    반환: MATCH
+}
+
+class logStructureFlag {
+    # _getRegExpr() : strings&
+    # _onTake() : res
+    --
+    정규식: "^\\\\-S$", "^\\\\--show-structure$"
+    반환: MATCH
+}
+
+class fileSrcFlag {
+    # _getRegExpr() : strings&
+    # _onTake() : res
+    # getArgCount() : ncnt
+    --
+    정규식: "^[^\\\\-].*\\\\.byeol$"
+    반환: MATCH
+}
+
+flag <|-- verFlag
+flag <|-- helpFlag
+flag <|-- bufferSrcFlag
+flag <|-- logStructureFlag
+flag <|-- fileSrcFlag
+
+note bottom of verFlag
+  버전 정보 출력 후
+  프로그램 즉시 종료
+end note
+
+note bottom of bufferSrcFlag
+  추가 인자 1개 소비
+  코드 문자열을 bufSupply로 추가
+end note
+@enduml
+@startuml inline_umlgraph_42.png
+participant "cli" as c
+participant "arguments" as a
+participant "flag" as f
+
+== 준비 과정 ==
+
+c -> a: argv로부터 생성
+activate a
+a --> c: new arguments()
+deactivate a
+
+c -> f: 모든 flag 객체가 포함된 배열 획득.
+activate f
+f --> c: new flags{helpFlag, verFlag.....}
+deactivate f
+
+
+== 인자 consume ==
+
+c -> c: _evalArgs()
+activate c
+
+loop 각 flags의 원소, f마다
+  c -> f: take(arguments)
+  activate f
+  f -> f: pattern문자열 가져오기
+  f -> f: arguments에 pattern이 매칭되는가?
+  alt 매칭 실패
+    f --> c: take실패함.
+  else 매칭 성공
+    f -> f: _onTake() 로 동작 수행
+    f -> a: 매칭된 패턴 삭제
+    activate a
+    a --> f: 삭제함.
+    deactivate a
+    f --> c: take(arguments) 완료.
+    deactivate f
+  end
+end
+deactivate c
+@enduml
