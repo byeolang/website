@@ -25,6 +25,6 @@
 var menudata={children:[
 {text:"안녕하세요",url:"index.html"},
 {text:"관련된 페이지",url:"pages.html"},
-{text:"모듈",url:"modules.html"},
+{text:"모듈",url:"topics.html"},
 {text:"클래스 색인",url:"classes.html"},
 {text:"파일 목록",url:"files.html"}]}

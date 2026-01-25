@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: 아키텍쳐와 설계</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('ac-architecture-overview.html',''); initResizable(); });
+$(function(){initNavTree('ac-architecture-overview.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,18 +101,25 @@ $(document).ready(function(){initNavTree('ac-architecture-overview.html',''); in
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">아키텍쳐와 설계 </div></div>
+  <div class="headertitle"><div class="title">아키텍쳐와 설계</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_ref_ko_ac_architecture_overview"></a> 이 문서는 Byeol 프로그래밍 언어의 구현을 이해하기 위한 가이드입니다. Byeol은 추상 구문 트리(AST)를 직접 실행하는 강타입 인터프리터 언어로, 계층형 아키텍처를 기반으로 설계되었습니다.</p>
-<p >이 가이드는 각 모듈의 설계, 알고리즘, 클래스들이 어떻게 상호작용하는지를 중점적으로 다룹니다. byeol 언어 문법을 알고 있는, 코드베이스를 처음 접하는, 경험이 풍부한 C++개발자가 체계적으로 이해할 수 있도록 구성되었습니다. byeol 언어의 문법에 대해 이해하고 있다는 전제로 시작하기 때문에 필요하다면 먼저 <a href="https://byeol.io/guide/">언어 가이드</a> 를 참고하세요.</p>
-<p >필요하다면 다음 하위 문서들로 바로 이동할 수 있어요:</p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ac-architecture-overview"></a> 이 문서는 Byeol 프로그래밍 언어의 구현을 이해하기 위한 가이드입니다. Byeol은 추상 구문 트리(AST)를 직접 실행하는 강타입 인터프리터 언어입니다. Tree-walking interpreter 방식으로 구현되었으며, Layered Architecture 패턴을 기반으로 설계되었습니다.</p>
+<p>이 가이드는 각 모듈의 설계, 알고리즘, 클래스들이 어떻게 상호작용하는지를 중점적으로 다룹니다. STL 컨테이너와 스마트 포인터에 익숙한 일반적인 C++ 개발자를 대상으로 작성되었습니다. byeol 언어의 문법은 이미 알고 있다는 전제로 설명하므로, 필요하다면 먼저 <a href="https://byeol.io/guide/">언어 가이드</a>를 참고하세요.</p>
+<p>필요하다면 다음 하위 문서들로 바로 이동할 수 있어요:</p>
 <ul>
 <li><a class="el" href="ad-architecture-indep.html">indep 모듈 - 플랫폼 추상화 계층</a></li>
 <li><a class="el" href="ae-architecture-clog.html">clog 모듈 - 로깅 시스템</a></li>
@@ -124,29 +132,35 @@ $(document).ready(function(){initNavTree('ac-architecture-overview.html',''); in
 <hr  />
 <h1><a class="anchor" id="autotoc_md81"></a>
 아키텍처 개요</h1>
-<p >Byeol 프로젝트는 엄격한 계층형 아키텍처를 따릅니다. 각 계층은 하위 계층에만 의존할 수 있으며, <a class="el" href="group__indep.html">Indep</a> 모듈 위로는 플랫폼 독립성이 유지됩니다.</p>
+<div class="plantumlgraph">
+<img src="inline_umlgraph_1.png" />
+</div>
+<p>Byeol 프로젝트는 엄격한 Layered Architecture 패턴을 따릅니다. 각 계층은 하위 계층에만 의존할 수 있으며, <a class="el" href="group__indep.html">Indep</a> 모듈 위로는 플랫폼 독립성이 유지됩니다.</p>
 <h2><a class="anchor" id="autotoc_md82"></a>
 계층 구조</h2>
-<div class="fragment"><div class="line">@style: language-txt verified</div>
-<div class="line">┌───────────────────┐</div>
-<div class="line">│         frontend (CLI)               │  ← 사용자 인터페이스</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         core (언어 구현)             │  ← AST, Parser, Verifier</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         stela (설정 파싱)            │  ← Manifest 파싱</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         memlite (메모리 관리)        │  ← 커스텀 메모리 관리</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         meta (타입 시스템)           │  ← 런타임 타입 정보</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         clog (로깅)                  │  ← 로깅 프레임워크</div>
-<div class="line">├───────────────────┤</div>
-<div class="line">│         indep (플랫폼 추상화)        │  ← 플랫폼 종속 코드</div>
-<div class="line">└───────────────────┘</div>
-</div><!-- fragment --><p >각 모듈은 하위 계층의 모듈에만 접근할 수 있습니다. 예를 들어, <a class="el" href="group__core.html">Core</a> 는 <a class="el" href="group__stela.html">Stela</a>, <a class="el" href="group__memlite.html">Memlite</a>, <a class="el" href="group__meta.html">Meta</a>, <a class="el" href="group__clog.html">Clog</a>, <a class="el" href="group__indep.html">Indep</a> 에 의존하지만, <a class="el" href="group__frontend.html">Frontend</a> 나 다른 상위 모듈에는 의존하지 않습니다.</p>
-<p >이러한 아키텍처는 플랫폼 독립성, 테스트 용이성, 명확한 의존성 관리를 제공합니다. 플랫폼 종속 코드는 <a class="el" href="group__indep.html">Indep</a> 모듈에만 격리되어 있어, 다른 모듈들은 플랫폼에 관계없이 동일한 방식으로 동작합니다.</p>
+<p>각 모듈은 하위 계층의 모듈에만 접근할 수 있습니다. 예를 들어, <a class="el" href="group__core.html">Core</a> 는 <a class="el" href="group__stela.html">Stela</a>, <a class="el" href="group__memlite.html">Memlite</a>, <a class="el" href="group__meta.html">Meta</a>, <a class="el" href="group__clog.html">Clog</a>, <a class="el" href="group__indep.html">Indep</a> 에 의존하지만, <a class="el" href="group__frontend.html">Frontend</a> 나 다른 상위 모듈에는 의존하지 않습니다.</p>
+<p>이러한 아키텍처는 플랫폼 독립성, 테스트 용이성, 명확한 의존성 관리를 제공합니다. 플랫폼 종속 코드는 <a class="el" href="group__indep.html">Indep</a> 모듈에만 격리되어 있으며, 상위 모듈들은 추상화된 인터페이스를 통해서만 접근합니다. 이는 Dependency Inversion Principle을 따르는 설계로, 다른 모듈들은 플랫폼에 관계없이 동일한 방식으로 동작합니다.</p>
+<p>각 모듈에 대해 간략히 소개합니다.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Module   </th><th class="markdownTableHeadNone">기능    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">indep   </td><td class="markdownTableBodyNone">플랫폼 종속된 코드는 모두 이곳에 담깁니다. indep은 가장 밑에 있기 때문에 이후의 모든 코드는 이론상 항상 플랫폼 독립적인 코드가 됩니다.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">clog   </td><td class="markdownTableBodyNone">c++ 코드를 위한 강력한 로그 모듈입니다. stream을 기반으로 해서 화면/파일 등 로깅 되는 곳을 선별하는 등 다양한 기능을 제공합니다.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">meta   </td><td class="markdownTableBodyNone">강력한 타입 관리 모듈입니다. 메타프로그래밍을 사용해서 c++ 클래스의 타입정보를 제공합니다. byeol managed 환경의 타입시스템의 기반이기도 합니다.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">memlite   </td><td class="markdownTableBodyNone">경량화된 메모리 관리 모듈입니다. stl의 unique_ptr, shared_ptr 에서 개선된 클래스를 제공합니다.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">stela   </td><td class="markdownTableBodyNone">byeol 언어의 <code>설정</code>에 중점을 둔 특수목적 언어입니다. manifest에 사용됩니다.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">core   </td><td class="markdownTableBodyNone">말그대로 주요 AST 처리, 파싱, 검증, 실행 등 대부분의 주요 동작을 담당합니다.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">frontend   </td><td class="markdownTableBodyNone">flag 처리를 비롯한 cli 인터페이스를 구현합니다. 결과적으로 core 모듈의 interpreter에게 명령을 내리는 구조입니다.   </td></tr>
+</table>
 <hr  />
-<p ><b>다음 문서</b>: <a class="el" href="ad-architecture-indep.html">indep 모듈 - 플랫폼 추상화 계층</a> </p>
+<p><b>다음 문서</b>: <a class="el" href="ad-architecture-indep.html">indep 모듈 - 플랫폼 추상화 계층</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

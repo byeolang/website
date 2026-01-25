@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['디자인_20철학_0',['디자인 철학',['../design-philosophy.html',1,'']]]
+  ['delegation으로_20활용_0',['delegation으로 활용',['../language-spec.html#autotoc_md133',1,'']]]
 ];

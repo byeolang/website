@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/worker/visitor/visitor.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,11 +70,16 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('visitor_2visitor_8hpp_source.html',''); initResizable(); });
+$(function(){initNavTree('visitor_2visitor_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +106,16 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp_source.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -124,9 +137,10 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp_source.html','')
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;visitee.inl&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#undef X</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classby_1_1visitor.html">   61</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1visitor.html">visitor</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tworker.html">tworker</a>&lt;void, node&gt; {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">typedef</span> <a class="code hl_class" href="classby_1_1tworker.html">tworker&lt;void, node&gt;</a> <a class="code hl_class" href="classby_1_1tworker.html">__super6</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        BY(CLASS(<a class="code hl_class" href="classby_1_1visitor.html">visitor</a>, <a class="code hl_class" href="classby_1_1tworker.html">__super6</a>))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">typedef</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">tworker&lt;void, node&gt;</a> <a class="code hl_class" href="classby_1_1tworker.html">__super6</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        BY(<a class="code hl_struct" href="structby_1_1no_wrap.html">CLASS</a>(<a class="code hl_class" href="classby_1_1visitor.html">visitor</a>, <a class="code hl_class" href="classby_1_1tworker.html">__super6</a>))</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_class" href="classby_1_1visitor.html">visitor</a>();</div>
@@ -143,34 +157,34 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp_source.html','')
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#include &quot;visitee.inl&quot;</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#undef X</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> visit(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">virtual</span> nbool onVisit(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, nbool alreadyVisited);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLeave(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, nbool alreadyVisited);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> visit(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">virtual</span> nbool onVisit(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, nbool <a class="code hl_struct" href="structby_1_1no_wrap.html">alreadyVisited</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLeave(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me, nbool <a class="code hl_struct" href="structby_1_1no_wrap.html">alreadyVisited</a>);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="comment">//  traverse:</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">//      generalized-way:</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">//  @ return false if the node is already visited.</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; me);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">//      specific-way:</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1as_expr.html">asExpr</a>&amp; a);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1assign_expr.html">assignExpr</a>&amp; a);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1block_expr.html">blockExpr</a>&amp; b);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1def_var_expr.html">defVarExpr</a>&amp; d);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1_f_b_o_expr.html">FBOExpr</a>&amp; f);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1get_expr.html">getExpr</a>&amp; e);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1ret_expr.html">retExpr</a>&amp; b);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1eval_expr.html">evalExpr</a>&amp; e);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<a class="code hl_class" href="classby_1_1eval_expr.html">evalExpr</a>&amp; e, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; subject);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1func.html">func</a>&amp; f);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1frame.html">frame</a>&amp; f);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1for_expr.html">forExpr</a>&amp; f);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1ret_state_expr.html">retStateExpr</a>&amp; r);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1if_expr.html">ifExpr</a>&amp; f);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1while_expr.html">whileExpr</a>&amp; w);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1def_array_expr.html">defArrayExpr</a>&amp; d);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1def_nested_func_expr.html">defNestedFuncExpr</a>&amp; e);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1generic_origin.html">genericOrigin</a>&amp; g);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; i, <a class="code hl_class" href="classby_1_1obj.html">obj</a>&amp; o);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1as_expr.html">asExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1assign_expr.html">assignExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1block_expr.html">blockExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">b</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1def_var_expr.html">defVarExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">d</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1_f_b_o_expr.html">FBOExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1get_expr.html">getExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1ret_expr.html">retExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">b</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1eval_expr.html">evalExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<a class="code hl_class" href="classby_1_1eval_expr.html">evalExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>, <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">subject</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1func.html">func</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1frame.html">frame</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1for_expr.html">forExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1ret_state_expr.html">retStateExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">r</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1if_expr.html">ifExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1while_expr.html">whileExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">w</a>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1def_array_expr.html">defArrayExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">d</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1def_nested_func_expr.html">defNestedFuncExpr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1generic_origin.html">genericOrigin</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">g</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTraverse(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1visit_info.html">visitInfo</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">i</a>, <a class="code hl_class" href="classby_1_1obj.html">obj</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">o</a>);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">void</span> _onWork() <span class="keyword">override</span>;</div>
@@ -189,33 +203,35 @@ $(document).ready(function(){initNavTree('visitor_2visitor_8hpp_source.html','')
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        std::map&lt;node*, nbool&gt; _visited;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        nbool _isReturnable;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    };</div>
+</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>} <span class="comment">// namespace by</span></div>
-<div class="ttc" id="aclassby_1_1_f_b_o_expr_html"><div class="ttname"><a href="classby_1_1_f_b_o_expr.html">by::FBOExpr</a></div><div class="ttdoc">Fundamental Binary Operator expression</div><div class="ttdef"><b>Definition:</b> FBOExpr.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1as_expr_html"><div class="ttname"><a href="classby_1_1as_expr.html">by::asExpr</a></div><div class="ttdoc">Type casting expression</div><div class="ttdef"><b>Definition:</b> asExpr.hpp:17</div></div>
-<div class="ttc" id="aclassby_1_1assign_expr_html"><div class="ttname"><a href="classby_1_1assign_expr.html">by::assignExpr</a></div><div class="ttdoc">Assignment expression</div><div class="ttdef"><b>Definition:</b> assignExpr.hpp:19</div></div>
-<div class="ttc" id="aclassby_1_1block_expr_html"><div class="ttname"><a href="classby_1_1block_expr.html">by::blockExpr</a></div><div class="ttdoc">Block expression</div><div class="ttdef"><b>Definition:</b> blockExpr.hpp:24</div></div>
-<div class="ttc" id="aclassby_1_1def_array_expr_html"><div class="ttname"><a href="classby_1_1def_array_expr.html">by::defArrayExpr</a></div><div class="ttdoc">Array literal expression</div><div class="ttdef"><b>Definition:</b> defArrayExpr.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1def_nested_func_expr_html"><div class="ttname"><a href="classby_1_1def_nested_func_expr.html">by::defNestedFuncExpr</a></div><div class="ttdoc">Nested function definition expression</div><div class="ttdef"><b>Definition:</b> defNestedFuncExpr.hpp:13</div></div>
-<div class="ttc" id="aclassby_1_1def_var_expr_html"><div class="ttname"><a href="classby_1_1def_var_expr.html">by::defVarExpr</a></div><div class="ttdoc">Variable definition expression base class</div><div class="ttdef"><b>Definition:</b> defVarExpr.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1eval_expr_html"><div class="ttname"><a href="classby_1_1eval_expr.html">by::evalExpr</a></div><div class="ttdoc">Function/method call expression</div><div class="ttdef"><b>Definition:</b> evalExpr.hpp:15</div></div>
-<div class="ttc" id="aclassby_1_1for_expr_html"><div class="ttname"><a href="classby_1_1for_expr.html">by::forExpr</a></div><div class="ttdoc">For loop expression</div><div class="ttdef"><b>Definition:</b> forExpr.hpp:15</div></div>
-<div class="ttc" id="aclassby_1_1frame_html"><div class="ttname"><a href="classby_1_1frame.html">by::frame</a></div><div class="ttdoc">Execution frame</div><div class="ttdef"><b>Definition:</b> frame.hpp:52</div></div>
-<div class="ttc" id="aclassby_1_1func_html"><div class="ttname"><a href="classby_1_1func.html">by::func</a></div><div class="ttdoc">Function definition in byeol language</div><div class="ttdef"><b>Definition:</b> func.hpp:38</div></div>
-<div class="ttc" id="aclassby_1_1generic_origin_html"><div class="ttname"><a href="classby_1_1generic_origin.html">by::genericOrigin</a></div><div class="ttdef"><b>Definition:</b> genericOrigin.hpp:25</div></div>
-<div class="ttc" id="aclassby_1_1get_expr_html"><div class="ttname"><a href="classby_1_1get_expr.html">by::getExpr</a></div><div class="ttdoc">Expression for property and method access</div><div class="ttdef"><b>Definition:</b> getExpr.hpp:18</div></div>
-<div class="ttc" id="aclassby_1_1if_expr_html"><div class="ttname"><a href="classby_1_1if_expr.html">by::ifExpr</a></div><div class="ttdoc">If conditional expression</div><div class="ttdef"><b>Definition:</b> ifExpr.hpp:14</div></div>
-<div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language</div><div class="ttdef"><b>Definition:</b> node.hpp:195</div></div>
-<div class="ttc" id="aclassby_1_1obj_html"><div class="ttname"><a href="classby_1_1obj.html">by::obj</a></div><div class="ttdoc">Managed environment object</div><div class="ttdef"><b>Definition:</b> obj.hpp:62</div></div>
-<div class="ttc" id="aclassby_1_1ret_expr_html"><div class="ttname"><a href="classby_1_1ret_expr.html">by::retExpr</a></div><div class="ttdoc">Return statement expression</div><div class="ttdef"><b>Definition:</b> retExpr.hpp:15</div></div>
-<div class="ttc" id="aclassby_1_1ret_state_expr_html"><div class="ttname"><a href="classby_1_1ret_state_expr.html">by::retStateExpr</a></div><div class="ttdoc">Base class for keywords that exit blockExpr</div><div class="ttdef"><b>Definition:</b> retStateExpr.hpp:31</div></div>
-<div class="ttc" id="aclassby_1_1tworker_html"><div class="ttname"><a href="classby_1_1tworker.html">by::tworker</a></div><div class="ttdoc">Base worker template for processing tasks</div><div class="ttdef"><b>Definition:</b> tworker.hpp:58</div></div>
-<div class="ttc" id="aclassby_1_1visit_info_html"><div class="ttname"><a href="classby_1_1visit_info.html">by::visitInfo</a></div><div class="ttdoc">Visitor context information</div><div class="ttdef"><b>Definition:</b> visitInfo.hpp:11</div></div>
-<div class="ttc" id="aclassby_1_1visitor_html"><div class="ttname"><a href="classby_1_1visitor.html">by::visitor</a></div><div class="ttdoc">Base visitor class for AST traversal</div><div class="ttdef"><b>Definition:</b> visitor.hpp:61</div></div>
+<div class="ttc" id="aclassby_1_1_f_b_o_expr_html"><div class="ttname"><a href="classby_1_1_f_b_o_expr.html">by::FBOExpr</a></div><div class="ttdoc">Fundamental Binary Operator expression</div><div class="ttdef"><b>Definition</b> FBOExpr.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1as_expr_html"><div class="ttname"><a href="classby_1_1as_expr.html">by::asExpr</a></div><div class="ttdoc">Type casting expression</div><div class="ttdef"><b>Definition</b> asExpr.hpp:17</div></div>
+<div class="ttc" id="aclassby_1_1assign_expr_html"><div class="ttname"><a href="classby_1_1assign_expr.html">by::assignExpr</a></div><div class="ttdoc">Assignment expression</div><div class="ttdef"><b>Definition</b> assignExpr.hpp:19</div></div>
+<div class="ttc" id="aclassby_1_1block_expr_html"><div class="ttname"><a href="classby_1_1block_expr.html">by::blockExpr</a></div><div class="ttdoc">Block expression</div><div class="ttdef"><b>Definition</b> blockExpr.hpp:24</div></div>
+<div class="ttc" id="aclassby_1_1def_array_expr_html"><div class="ttname"><a href="classby_1_1def_array_expr.html">by::defArrayExpr</a></div><div class="ttdoc">Array literal expression</div><div class="ttdef"><b>Definition</b> defArrayExpr.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1def_nested_func_expr_html"><div class="ttname"><a href="classby_1_1def_nested_func_expr.html">by::defNestedFuncExpr</a></div><div class="ttdoc">Nested function definition expression</div><div class="ttdef"><b>Definition</b> defNestedFuncExpr.hpp:13</div></div>
+<div class="ttc" id="aclassby_1_1def_var_expr_html"><div class="ttname"><a href="classby_1_1def_var_expr.html">by::defVarExpr</a></div><div class="ttdoc">Variable definition expression base class</div><div class="ttdef"><b>Definition</b> defVarExpr.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1eval_expr_html"><div class="ttname"><a href="classby_1_1eval_expr.html">by::evalExpr</a></div><div class="ttdoc">Function/method call expression</div><div class="ttdef"><b>Definition</b> evalExpr.hpp:15</div></div>
+<div class="ttc" id="aclassby_1_1for_expr_html"><div class="ttname"><a href="classby_1_1for_expr.html">by::forExpr</a></div><div class="ttdoc">For loop expression</div><div class="ttdef"><b>Definition</b> forExpr.hpp:15</div></div>
+<div class="ttc" id="aclassby_1_1frame_html"><div class="ttname"><a href="classby_1_1frame.html">by::frame</a></div><div class="ttdoc">Execution frame</div><div class="ttdef"><b>Definition</b> frame.hpp:52</div></div>
+<div class="ttc" id="aclassby_1_1func_html"><div class="ttname"><a href="classby_1_1func.html">by::func</a></div><div class="ttdoc">Function definition in byeol language</div><div class="ttdef"><b>Definition</b> func.hpp:38</div></div>
+<div class="ttc" id="aclassby_1_1generic_origin_html"><div class="ttname"><a href="classby_1_1generic_origin.html">by::genericOrigin</a></div><div class="ttdef"><b>Definition</b> genericOrigin.hpp:25</div></div>
+<div class="ttc" id="aclassby_1_1get_expr_html"><div class="ttname"><a href="classby_1_1get_expr.html">by::getExpr</a></div><div class="ttdoc">Expression for property and method access</div><div class="ttdef"><b>Definition</b> getExpr.hpp:18</div></div>
+<div class="ttc" id="aclassby_1_1if_expr_html"><div class="ttname"><a href="classby_1_1if_expr.html">by::ifExpr</a></div><div class="ttdoc">If conditional expression</div><div class="ttdef"><b>Definition</b> ifExpr.hpp:14</div></div>
+<div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language</div><div class="ttdef"><b>Definition</b> node.hpp:195</div></div>
+<div class="ttc" id="aclassby_1_1obj_html"><div class="ttname"><a href="classby_1_1obj.html">by::obj</a></div><div class="ttdoc">Managed environment object</div><div class="ttdef"><b>Definition</b> obj.hpp:62</div></div>
+<div class="ttc" id="aclassby_1_1ret_expr_html"><div class="ttname"><a href="classby_1_1ret_expr.html">by::retExpr</a></div><div class="ttdoc">Return statement expression</div><div class="ttdef"><b>Definition</b> retExpr.hpp:15</div></div>
+<div class="ttc" id="aclassby_1_1ret_state_expr_html"><div class="ttname"><a href="classby_1_1ret_state_expr.html">by::retStateExpr</a></div><div class="ttdoc">Base class for keywords that exit blockExpr</div><div class="ttdef"><b>Definition</b> retStateExpr.hpp:31</div></div>
+<div class="ttc" id="aclassby_1_1tworker_html"><div class="ttname"><a href="classby_1_1tworker.html">by::tworker</a></div><div class="ttdoc">Base worker template for processing tasks</div><div class="ttdef"><b>Definition</b> tworker.hpp:58</div></div>
+<div class="ttc" id="aclassby_1_1visit_info_html"><div class="ttname"><a href="classby_1_1visit_info.html">by::visitInfo</a></div><div class="ttdoc">Visitor context information</div><div class="ttdef"><b>Definition</b> visitInfo.hpp:11</div></div>
+<div class="ttc" id="aclassby_1_1visitor_html"><div class="ttname"><a href="classby_1_1visitor.html">by::visitor</a></div><div class="ttdoc">Base visitor class for AST traversal</div><div class="ttdef"><b>Definition</b> visitor.hpp:61</div></div>
 <div class="ttc" id="aclassby_1_1visitor_html_a30e01f0ab6bf62cb9bb5a75e3a70c728"><div class="ttname"><a href="classby_1_1visitor.html#a30e01f0ab6bf62cb9bb5a75e3a70c728">by::visitor::setReturnable</a></div><div class="ttdeci">void setReturnable(nbool isReturnable)</div></div>
 <div class="ttc" id="aclassby_1_1visitor_html_aca5e48ce20607999b9872becae86e92c"><div class="ttname"><a href="classby_1_1visitor.html#aca5e48ce20607999b9872becae86e92c">by::visitor::_prepare</a></div><div class="ttdeci">void _prepare() override</div><div class="ttdoc">Protected virtual method for preparation before starting the work.</div></div>
-<div class="ttc" id="aclassby_1_1while_expr_html"><div class="ttname"><a href="classby_1_1while_expr.html">by::whileExpr</a></div><div class="ttdoc">While loop expression</div><div class="ttdef"><b>Definition:</b> whileExpr.hpp:13</div></div>
+<div class="ttc" id="aclassby_1_1while_expr_html"><div class="ttname"><a href="classby_1_1while_expr.html">by::whileExpr</a></div><div class="ttdoc">While loop expression</div><div class="ttdef"><b>Definition</b> whileExpr.hpp:13</div></div>
 <div class="ttc" id="anode_8hpp_html"><div class="ttname"><a href="node_8hpp.html">node.hpp</a></div></div>
 <div class="ttc" id="asrc_8hpp_html"><div class="ttname"><a href="src_8hpp.html">src.hpp</a></div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 <div class="ttc" id="atworker_8hpp_html"><div class="ttname"><a href="tworker_8hpp.html">tworker.hpp</a></div></div>
 <div class="ttc" id="avisit_info_8hpp_html"><div class="ttname"><a href="visit_info_8hpp.html">visitInfo.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

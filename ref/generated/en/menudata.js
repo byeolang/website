@@ -24,6 +24,6 @@
 */
 var menudata={children:[
 {text:"Hello",url:"index.html"},
-{text:"Modules",url:"modules.html"},
+{text:"Modules",url:"topics.html"},
 {text:"Class Index",url:"classes.html"},
 {text:"File List",url:"files.html"}]}

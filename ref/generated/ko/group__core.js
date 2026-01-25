@@ -221,7 +221,8 @@ var group__core =
     [ "iteration", "classiteration.html", null ],
     [ "by::arr", "classby_1_1arr.html", [
       [ "add", "classby_1_1arr.html#a5bd53060851cfba15d07e02438fa6ddb", null ],
-      [ "del", "classby_1_1arr.html#a00cbe2dba2983ec0a31f0006f555b4ec", null ]
+      [ "del", "classby_1_1arr.html#a00cbe2dba2983ec0a31f0006f555b4ec", null ],
+      [ "rel", "classby_1_1arr.html#ab76c4b25f1d1ae165afedaf4710e1a2a", null ]
     ] ],
     [ "by::seq", "classby_1_1seq.html", null ],
     [ "by::tdumArr< T, defaultElemType >", "classby_1_1tdum_arr.html", [
@@ -255,6 +256,7 @@ var group__core =
     [ "by::nFlt", "classby_1_1n_flt.html", null ],
     [ "by::nInt", "classby_1_1n_int.html", null ],
     [ "by::nStr", "classby_1_1n_str.html", [
+      [ "rel", "classby_1_1n_str.html#a4b04b7d09a13b2036ceda8565a18ea00", null ],
       [ "substr", "classby_1_1n_str.html#a76eee990d666244b7873bf19e66e39c5", null ]
     ] ],
     [ "by::nVoid", "classby_1_1n_void.html", null ],

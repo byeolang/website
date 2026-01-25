@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: /home/runner/work/byeol/byeol/module/core/builtin/container/iter/uiter.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,11 +70,16 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('uiter_8hpp_source.html',''); initResizable(); });
+$(function(){initNavTree('uiter_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +106,16 @@ $(document).ready(function(){initNavTree('uiter_8hpp_source.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -131,7 +144,7 @@ $(document).ready(function(){initNavTree('uiter_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    me operator++(<span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    me&amp; operator+=(ncnt step);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">using</span> iterable::operator*;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">using </span>iterable::operator*;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    RSquare operator*() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">typename</span> std::remove_reference&lt;R&gt;::type operator-&gt;();</div>
@@ -172,12 +185,12 @@ $(document).ready(function(){initNavTree('uiter_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>protected:</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    tstr&lt;<a class="code hl_class" href="classiteration.html">iteration</a>&gt; _iteration;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
-<div class="ttc" id="aclassiter_html"><div class="ttname"><a href="classiter.html">iter</a></div><div class="ttdoc">Bidirectional iterator for key-value containers</div><div class="ttdef"><b>Definition:</b> biter.hpp:10</div></div>
+<div class="ttc" id="aclassiter_html"><div class="ttname"><a href="classiter.html">iter</a></div><div class="ttdoc">Bidirectional iterator for key-value containers</div><div class="ttdef"><b>Definition</b> biter.hpp:10</div></div>
 <div class="ttc" id="aclassiter_html_a79b17f1cb6a7aa6d8b595dac778f73ab"><div class="ttname"><a href="classiter.html#a79b17f1cb6a7aa6d8b595dac778f73ab">iter::next</a></div><div class="ttdeci">ncnt next(ncnt step) override</div></div>
 <div class="ttc" id="aclassiter_html_aaf274264761ec432af9c496d598630d8"><div class="ttname"><a href="classiter.html#aaf274264761ec432af9c496d598630d8">iter::rel</a></div><div class="ttdeci">void rel() override</div></div>
-<div class="ttc" id="aclassiterable_html"><div class="ttname"><a href="classiterable.html">iterable</a></div><div class="ttdef"><b>Definition:</b> biterable.hpp:4</div></div>
-<div class="ttc" id="aclassiteration_html"><div class="ttname"><a href="classiteration.html">iteration</a></div><div class="ttdef"><b>Definition:</b> biteration.hpp:5</div></div>
-<div class="ttc" id="agroup__indep_html_gab66a6cdf25aca4c8eeb667e884fc905a"><div class="ttname"><a href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a></div><div class="ttdeci">#define TO(fn)</div><div class="ttdef"><b>Definition:</b> to.hpp:175</div></div>
+<div class="ttc" id="aclassiterable_html"><div class="ttname"><a href="classiterable.html">iterable</a></div><div class="ttdef"><b>Definition</b> biterable.hpp:4</div></div>
+<div class="ttc" id="aclassiteration_html"><div class="ttname"><a href="classiteration.html">iteration</a></div><div class="ttdef"><b>Definition</b> biteration.hpp:5</div></div>
+<div class="ttc" id="agroup__indep_html_gab66a6cdf25aca4c8eeb667e884fc905a"><div class="ttname"><a href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a></div><div class="ttdeci">#define TO(fn)</div><div class="ttdef"><b>Definition</b> to.hpp:175</div></div>
 <div class="ttc" id="auiteration_8hpp_html"><div class="ttname"><a href="uiteration_8hpp.html">uiteration.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

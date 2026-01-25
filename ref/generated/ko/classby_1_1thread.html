@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::thread 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1thread.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1thread.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1thread.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -117,7 +125,7 @@ $(document).ready(function(){initNavTree('classby_1_1thread.html',''); initResiz
 <div class="contents">
 
 <p>Thread execution context for byeol runtime  
- <a href="classby_1_1thread.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="thread_8hpp_source.html">thread.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -137,445 +145,447 @@ by::thread에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a83196c76226b9b2a3e89b5e90f2e778a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a83196c76226b9b2a3e89b5e90f2e778a">thread</a> (const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;new1)</td></tr>
-<tr class="memdesc:a83196c76226b9b2a3e89b5e90f2e778a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a thread object with a custom error report instance.  <a href="classby_1_1thread.html#a83196c76226b9b2a3e89b5e90f2e778a">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a83196c76226b9b2a3e89b5e90f2e778a" id="r_a83196c76226b9b2a3e89b5e90f2e778a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83196c76226b9b2a3e89b5e90f2e778a">thread</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;new1)</td></tr>
+<tr class="memdesc:a83196c76226b9b2a3e89b5e90f2e778a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a thread object with a custom error report instance.  <br /></td></tr>
 <tr class="separator:a83196c76226b9b2a3e89b5e90f2e778a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9f4ed2817b4f93a685ca05fba3ee2c"><td class="memItemLeft" align="right" valign="top"><a id="a7d9f4ed2817b4f93a685ca05fba3ee2c" name="a7d9f4ed2817b4f93a685ca05fba3ee2c"></a>
-const <a class="el" href="classby_1_1frames.html">frames</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFrames</b> () const BY_CONST_FUNC(_getFrames()) const <a class="el" href="classby_1_1frame.html">frame</a> *getNowFrame() const BY_CONST_FUNC(_getNowFrame()) static <a class="el" href="classby_1_1thread.html">thread</a> &amp;get()</td></tr>
+<tr class="memitem:a7d9f4ed2817b4f93a685ca05fba3ee2c" id="r_a7d9f4ed2817b4f93a685ca05fba3ee2c"><td class="memItemLeft" align="right" valign="top"><a id="a7d9f4ed2817b4f93a685ca05fba3ee2c" name="a7d9f4ed2817b4f93a685ca05fba3ee2c"></a>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1frames.html">frames</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFrames</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(_getFrames()) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1frame.html">frame</a> *getNowFrame() <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(_getNowFrame()) <a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="classby_1_1thread.html">thread</a> &amp;get()</td></tr>
 <tr class="separator:a7d9f4ed2817b4f93a685ca05fba3ee2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c91aebec84cb85f862b429ce6bb4a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1err_report.html">errReport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a0c91aebec84cb85f862b429ce6bb4a4a">getEx</a> ()</td></tr>
+<tr class="memitem:a0c91aebec84cb85f862b429ce6bb4a4a" id="r_a0c91aebec84cb85f862b429ce6bb4a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1err_report.html">errReport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c91aebec84cb85f862b429ce6bb4a4a">getEx</a> ()</td></tr>
 <tr class="separator:a0c91aebec84cb85f862b429ce6bb4a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fb0879a389bbdb19eec84bcc4ad7fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a83fb0879a389bbdb19eec84bcc4ad7fa">getEx</a> () const BY_CONST_FUNC(getEx()) virtual void setEx(const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;new 1)</td></tr>
-<tr class="memdesc:a83fb0879a389bbdb19eec84bcc4ad7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the error report instance for this thread.  <a href="classby_1_1thread.html#a83fb0879a389bbdb19eec84bcc4ad7fa">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a83fb0879a389bbdb19eec84bcc4ad7fa" id="r_a83fb0879a389bbdb19eec84bcc4ad7fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83fb0879a389bbdb19eec84bcc4ad7fa">getEx</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(getEx()) <a class="el" href="structby_1_1no_wrap.html">virtual</a> void setEx(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;<a class="el" href="structby_1_1no_wrap.html">new</a> 1)</td></tr>
+<tr class="memdesc:a83fb0879a389bbdb19eec84bcc4ad7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the error report instance for this thread.  <br /></td></tr>
 <tr class="separator:a83fb0879a389bbdb19eec84bcc4ad7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4efbe57d53072131b627a5a606413c17"><td class="memItemLeft" align="right" valign="top"><a id="a4efbe57d53072131b627a5a606413c17" name="a4efbe57d53072131b627a5a606413c17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEx</b> (const <a class="el" href="classby_1_1err_report.html">errReport</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(setEx)</td></tr>
+<tr class="memitem:a4efbe57d53072131b627a5a606413c17" id="r_a4efbe57d53072131b627a5a606413c17"><td class="memItemLeft" align="right" valign="top"><a id="a4efbe57d53072131b627a5a606413c17" name="a4efbe57d53072131b627a5a606413c17"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEx</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(setEx)</td></tr>
 <tr class="separator:a4efbe57d53072131b627a5a606413c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f75c98073b0ab800565be1601bb9186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a5f75c98073b0ab800565be1601bb9186">subs</a> () override</td></tr>
+<tr class="memitem:a5f75c98073b0ab800565be1601bb9186" id="r_a5f75c98073b0ab800565be1601bb9186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f75c98073b0ab800565be1601bb9186">subs</a> () <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a5f75c98073b0ab800565be1601bb9186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a2000777ab242c7c297672a4dadd0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a54a2000777ab242c7c297672a4dadd0f">prioritize</a> (const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const override</td></tr>
+<tr class="memitem:a54a2000777ab242c7c297672a4dadd0f" id="r_a54a2000777ab242c7c297672a4dadd0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a2000777ab242c7c297672a4dadd0f">prioritize</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a54a2000777ab242c7c297672a4dadd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4974ca3d92fdaf1c15401799ee4d7bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a4974ca3d92fdaf1c15401799ee4d7bb8">eval</a> (const <a class="el" href="classby_1_1args.html">args</a> &amp;a) override</td></tr>
+<tr class="memitem:a4974ca3d92fdaf1c15401799ee4d7bb8" id="r_a4974ca3d92fdaf1c15401799ee4d7bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4974ca3d92fdaf1c15401799ee4d7bb8">eval</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a4974ca3d92fdaf1c15401799ee4d7bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05563f2bb3df2fa85310a0f37f47c343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343">rel</a> () override</td></tr>
+<tr class="memitem:a05563f2bb3df2fa85310a0f37f47c343" id="r_a05563f2bb3df2fa85310a0f37f47c343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05563f2bb3df2fa85310a0f37f47c343">rel</a> () <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a05563f2bb3df2fa85310a0f37f47c343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6299b46af037f269f8c75c6c5c431e59"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classby_1_1tnmap.html">nmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a6299b46af037f269f8c75c6c5c431e59">getSlots</a> () const</td></tr>
+<tr class="memitem:a6299b46af037f269f8c75c6c5c431e59" id="r_a6299b46af037f269f8c75c6c5c431e59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6299b46af037f269f8c75c6c5c431e59">getSlots</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a6299b46af037f269f8c75c6c5c431e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4437c950295a6348a986aa6e4f20d4d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#a4437c950295a6348a986aa6e4f20d4d8">dump</a> () const override</td></tr>
-<tr class="memdesc:a4437c950295a6348a986aa6e4f20d4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump object state for debugging  <a href="classby_1_1thread.html#a4437c950295a6348a986aa6e4f20d4d8">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a4437c950295a6348a986aa6e4f20d4d8" id="r_a4437c950295a6348a986aa6e4f20d4d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4437c950295a6348a986aa6e4f20d4d8">dump</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memdesc:a4437c950295a6348a986aa6e4f20d4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump object state for debugging  <br /></td></tr>
 <tr class="separator:a4437c950295a6348a986aa6e4f20d4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba761ced98a4058d304b02d1cc26fdc6"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1thread.html#aba761ced98a4058d304b02d1cc26fdc6">isInteractable</a> () const</td></tr>
-<tr class="memdesc:aba761ced98a4058d304b02d1cc26fdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the thread is currently in an interactable state.  <a href="classby_1_1thread.html#aba761ced98a4058d304b02d1cc26fdc6">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:aba761ced98a4058d304b02d1cc26fdc6" id="r_aba761ced98a4058d304b02d1cc26fdc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba761ced98a4058d304b02d1cc26fdc6">isInteractable</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memdesc:aba761ced98a4058d304b02d1cc26fdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the thread is currently in an interactable state.  <br /></td></tr>
 <tr class="separator:aba761ced98a4058d304b02d1cc26fdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1node"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a7691d658e3632d05ed6a1a9ba9535a45 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a7691d658e3632d05ed6a1a9ba9535a45" name="a7691d658e3632d05ed6a1a9ba9535a45"></a>
-me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const std::string &amp;name)</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a7691d658e3632d05ed6a1a9ba9535a45 inherit pub_methods_classby_1_1node" id="r_a7691d658e3632d05ed6a1a9ba9535a45"><td class="memItemLeft" align="right" valign="top">
+me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name)</td></tr>
 <tr class="separator:a7691d658e3632d05ed6a1a9ba9535a45 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62fa77f164eb7d65c244041125bfc51f inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a62fa77f164eb7d65c244041125bfc51f" name="a62fa77f164eb7d65c244041125bfc51f"></a>
-const me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const std::string &amp;name) const BY_CONST_FUNC(operator[](name))</td></tr>
+<tr class="memitem:a62fa77f164eb7d65c244041125bfc51f inherit pub_methods_classby_1_1node" id="r_a62fa77f164eb7d65c244041125bfc51f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](name))</td></tr>
 <tr class="separator:a62fa77f164eb7d65c244041125bfc51f inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5974af181fe20259371964a1bfd4613 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="af5974af181fe20259371964a1bfd4613" name="af5974af181fe20259371964a1bfd4613"></a>
-me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const std::string *it)</td></tr>
+<tr class="memitem:af5974af181fe20259371964a1bfd4613 inherit pub_methods_classby_1_1node" id="r_af5974af181fe20259371964a1bfd4613"><td class="memItemLeft" align="right" valign="top">
+me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it)</td></tr>
 <tr class="separator:af5974af181fe20259371964a1bfd4613 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d49d5a4bf477109ffa933974645c6c inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="af4d49d5a4bf477109ffa933974645c6c" name="af4d49d5a4bf477109ffa933974645c6c"></a>
-const me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const std::string *it) const BY_CONST_FUNC(operator[](it))</td></tr>
+<tr class="memitem:af4d49d5a4bf477109ffa933974645c6c inherit pub_methods_classby_1_1node" id="r_af4d49d5a4bf477109ffa933974645c6c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](it))</td></tr>
 <tr class="separator:af4d49d5a4bf477109ffa933974645c6c inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769351b14082ca9f35aed18b83987628 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a769351b14082ca9f35aed18b83987628" name="a769351b14082ca9f35aed18b83987628"></a>
-me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const nchar *name)</td></tr>
+<tr class="memitem:a769351b14082ca9f35aed18b83987628 inherit pub_methods_classby_1_1node" id="r_a769351b14082ca9f35aed18b83987628"><td class="memItemLeft" align="right" valign="top">
+me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *name)</td></tr>
 <tr class="separator:a769351b14082ca9f35aed18b83987628 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2626c7f1351c0247e51687f7197c9521 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a2626c7f1351c0247e51687f7197c9521" name="a2626c7f1351c0247e51687f7197c9521"></a>
-const me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const nchar *name) const BY_CONST_FUNC(operator[](name))</td></tr>
+<tr class="memitem:a2626c7f1351c0247e51687f7197c9521 inherit pub_methods_classby_1_1node" id="r_a2626c7f1351c0247e51687f7197c9521"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *name) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](name))</td></tr>
 <tr class="separator:a2626c7f1351c0247e51687f7197c9521 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58c67c0e30c00023ed718399c2dd8da inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ae58c67c0e30c00023ed718399c2dd8da" name="ae58c67c0e30c00023ed718399c2dd8da"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>in</b> (const <a class="el" href="classby_1_1node.html">node</a> &amp;elem) const</td></tr>
+<tr class="memitem:ae58c67c0e30c00023ed718399c2dd8da inherit pub_methods_classby_1_1node" id="r_ae58c67c0e30c00023ed718399c2dd8da"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>in</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> &amp;elem) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ae58c67c0e30c00023ed718399c2dd8da inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb17af59642e555c372c8f50790ad33c inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aeb17af59642e555c372c8f50790ad33c" name="aeb17af59642e555c372c8f50790ad33c"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>in</b> (const <a class="el" href="classby_1_1node.html">node</a> *elem) const</td></tr>
+<tr class="memitem:aeb17af59642e555c372c8f50790ad33c inherit pub_methods_classby_1_1node" id="r_aeb17af59642e555c372c8f50790ad33c"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>in</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> *elem) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aeb17af59642e555c372c8f50790ad33c inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1d3547d21b47a47734d0a13959cb60 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a5e1d3547d21b47a47734d0a13959cb60">subs</a> () const BY_CONST_FUNC(subs()) virtual <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1tnbicontainer.html">nbicontainer</a> &gt; mySubs() const</td></tr>
-<tr class="memdesc:a5e1d3547d21b47a47734d0a13959cb60 inherit pub_methods_classby_1_1node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a tstr to a container of immediate sub-nodes (excluding inherited or chained ones).  <a href="classby_1_1node.html#a5e1d3547d21b47a47734d0a13959cb60">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a5e1d3547d21b47a47734d0a13959cb60 inherit pub_methods_classby_1_1node" id="r_a5e1d3547d21b47a47734d0a13959cb60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a5e1d3547d21b47a47734d0a13959cb60">subs</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(subs()) <a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1tnbicontainer.html">nbicontainer</a> &gt; mySubs() <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memdesc:a5e1d3547d21b47a47734d0a13959cb60 inherit pub_methods_classby_1_1node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a tstr to a container of immediate sub-nodes (excluding inherited or chained ones).  <br /></td></tr>
 <tr class="separator:a5e1d3547d21b47a47734d0a13959cb60 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c27e99e2b0d28af967ea721acc3df40 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classby_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a3c27e99e2b0d28af967ea721acc3df40">promote</a> (const <a class="el" href="classby_1_1node.html">node</a> &amp;it) const</td></tr>
+<tr class="memitem:a3c27e99e2b0d28af967ea721acc3df40 inherit pub_methods_classby_1_1node" id="r_a3c27e99e2b0d28af967ea721acc3df40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a3c27e99e2b0d28af967ea721acc3df40">promote</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a3c27e99e2b0d28af967ea721acc3df40 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a339731399e564e673246e2e67d0ea498 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a339731399e564e673246e2e67d0ea498" name="a339731399e564e673246e2e67d0ea498"></a>
-const <a class="el" href="classby_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>promote</b> (const <a class="el" href="classby_1_1node.html">node</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(promote)</td></tr>
+<tr class="memitem:a339731399e564e673246e2e67d0ea498 inherit pub_methods_classby_1_1node" id="r_a339731399e564e673246e2e67d0ea498"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>promote</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1node.html">node</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(promote)</td></tr>
 <tr class="separator:a339731399e564e673246e2e67d0ea498 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f29d1e179339d426e006fe5578b7fc1 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a4f29d1e179339d426e006fe5578b7fc1" name="a4f29d1e179339d426e006fe5578b7fc1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4f29d1e179339d426e006fe5578b7fc1 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (std::function&lt; nbool(const std::string &amp;, const T &amp;)&gt; l)</td></tr>
+<tr class="memitem:a4f29d1e179339d426e006fe5578b7fc1 inherit pub_methods_classby_1_1node" id="r_a4f29d1e179339d426e006fe5578b7fc1"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:a4f29d1e179339d426e006fe5578b7fc1 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (std::function&lt; nbool(<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;, <a class="el" href="structby_1_1no_wrap.html">const</a> T &amp;)&gt; l)</td></tr>
 <tr class="separator:a4f29d1e179339d426e006fe5578b7fc1 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefad8f1f720f3eb90b178dd03997d304 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="aefad8f1f720f3eb90b178dd03997d304" name="aefad8f1f720f3eb90b178dd03997d304"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aefad8f1f720f3eb90b178dd03997d304 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (std::function&lt; nbool(const std::string &amp;, const T &amp;)&gt; l) const BY_CONST_FUNC(sub&lt; T &gt;(l)) template&lt; typename T</td></tr>
+<tr class="memitem:aefad8f1f720f3eb90b178dd03997d304 inherit pub_methods_classby_1_1node" id="r_aefad8f1f720f3eb90b178dd03997d304"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:aefad8f1f720f3eb90b178dd03997d304 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (std::function&lt; nbool(<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;, <a class="el" href="structby_1_1no_wrap.html">const</a> T &amp;)&gt; l) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(sub&lt; T &gt;(l)) <a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> T</td></tr>
 <tr class="separator:aefad8f1f720f3eb90b178dd03997d304 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f79e69e55b6e020bcaba845783ac9d3 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a4f79e69e55b6e020bcaba845783ac9d3" name="a4f79e69e55b6e020bcaba845783ac9d3"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a4f79e69e55b6e020bcaba845783ac9d3 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> () const BY_CONST_FUNC(sub&lt; T &gt;()) template&lt; typename T</td></tr>
+<tr class="memitem:a4f79e69e55b6e020bcaba845783ac9d3 inherit pub_methods_classby_1_1node" id="r_a4f79e69e55b6e020bcaba845783ac9d3"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a4f79e69e55b6e020bcaba845783ac9d3 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(sub&lt; T &gt;()) <a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> T</td></tr>
 <tr class="separator:a4f79e69e55b6e020bcaba845783ac9d3 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b28952670c7d6e017b0bc1708f588a4 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a5b28952670c7d6e017b0bc1708f588a4" name="a5b28952670c7d6e017b0bc1708f588a4"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a5b28952670c7d6e017b0bc1708f588a4 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (const std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(sub)</td></tr>
+<tr class="memitem:a5b28952670c7d6e017b0bc1708f588a4 inherit pub_methods_classby_1_1node" id="r_a5b28952670c7d6e017b0bc1708f588a4"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a5b28952670c7d6e017b0bc1708f588a4 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(sub)</td></tr>
 <tr class="separator:a5b28952670c7d6e017b0bc1708f588a4 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e0dff36d9eceecfee05d8b0b3f537ca inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a7e0dff36d9eceecfee05d8b0b3f537ca" name="a7e0dff36d9eceecfee05d8b0b3f537ca"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a7e0dff36d9eceecfee05d8b0b3f537ca inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (const std::string &amp;name) const BY_CONST_FUNC(sub&lt; T &gt;(name)) template&lt; typename T</td></tr>
+<tr class="memitem:a7e0dff36d9eceecfee05d8b0b3f537ca inherit pub_methods_classby_1_1node" id="r_a7e0dff36d9eceecfee05d8b0b3f537ca"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a7e0dff36d9eceecfee05d8b0b3f537ca inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(sub&lt; T &gt;(name)) <a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> T</td></tr>
 <tr class="separator:a7e0dff36d9eceecfee05d8b0b3f537ca inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853035ee22a274d2612f5e11374ee696 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a853035ee22a274d2612f5e11374ee696" name="a853035ee22a274d2612f5e11374ee696"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a853035ee22a274d2612f5e11374ee696 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
+<tr class="memitem:a853035ee22a274d2612f5e11374ee696 inherit pub_methods_classby_1_1node" id="r_a853035ee22a274d2612f5e11374ee696"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a853035ee22a274d2612f5e11374ee696 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
 <tr class="separator:a853035ee22a274d2612f5e11374ee696 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba7f1bc7abb69bd6ee79c6cb4cb8a886 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="aba7f1bc7abb69bd6ee79c6cb4cb8a886" name="aba7f1bc7abb69bd6ee79c6cb4cb8a886"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:aba7f1bc7abb69bd6ee79c6cb4cb8a886 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (const std::string &amp;name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const BY_CONST_FUNC(sub&lt; T &gt;(name</td></tr>
+<tr class="memitem:aba7f1bc7abb69bd6ee79c6cb4cb8a886 inherit pub_methods_classby_1_1node" id="r_aba7f1bc7abb69bd6ee79c6cb4cb8a886"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:aba7f1bc7abb69bd6ee79c6cb4cb8a886 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(sub&lt; T &gt;(name</td></tr>
 <tr class="separator:aba7f1bc7abb69bd6ee79c6cb4cb8a886 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d5d0681783231c775f51b769b52c949 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a2d5d0681783231c775f51b769b52c949" name="a2d5d0681783231c775f51b769b52c949"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a2d5d0681783231c775f51b769b52c949 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T a const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const BY_CONST_FUNC(sub&lt; T &gt;(name</td></tr>
+<tr class="memitem:a2d5d0681783231c775f51b769b52c949 inherit pub_methods_classby_1_1node" id="r_a2d5d0681783231c775f51b769b52c949"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a2d5d0681783231c775f51b769b52c949 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T <a class="el" href="structby_1_1no_wrap.html">a</a> <a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(sub&lt; T &gt;(name</td></tr>
 <tr class="separator:a2d5d0681783231c775f51b769b52c949 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12e4ca30e3ec1fce37829162c37d0d80 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a12e4ca30e3ec1fce37829162c37d0d80" name="a12e4ca30e3ec1fce37829162c37d0d80"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a12e4ca30e3ec1fce37829162c37d0d80 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">const T a const T a <a class="el" href="classby_1_1tnarr.html">tnarr</a>&lt; T, <a class="el" href="classby_1_1str_tactic.html">strTactic</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (std::function&lt; nbool(const std::string &amp;, const T &amp;)&gt; l) const</td></tr>
+<tr class="memitem:a12e4ca30e3ec1fce37829162c37d0d80 inherit pub_methods_classby_1_1node" id="r_a12e4ca30e3ec1fce37829162c37d0d80"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:a12e4ca30e3ec1fce37829162c37d0d80 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T <a class="el" href="structby_1_1no_wrap.html">a</a> <a class="el" href="structby_1_1no_wrap.html">const</a> T <a class="el" href="structby_1_1no_wrap.html">a</a> <a class="el" href="classby_1_1tnarr.html">tnarr</a>&lt; T, <a class="el" href="classby_1_1str_tactic.html">strTactic</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (std::function&lt; nbool(<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;, <a class="el" href="structby_1_1no_wrap.html">const</a> T &amp;)&gt; l) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a12e4ca30e3ec1fce37829162c37d0d80 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa91a2135d8ef4f0a8f2d5e49081f28d inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="aaa91a2135d8ef4f0a8f2d5e49081f28d" name="aaa91a2135d8ef4f0a8f2d5e49081f28d"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:aaa91a2135d8ef4f0a8f2d5e49081f28d inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tnarr.html">tnarr</a>&lt; T, <a class="el" href="classby_1_1str_tactic.html">strTactic</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> () const</td></tr>
+<tr class="memitem:aaa91a2135d8ef4f0a8f2d5e49081f28d inherit pub_methods_classby_1_1node" id="r_aaa91a2135d8ef4f0a8f2d5e49081f28d"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:aaa91a2135d8ef4f0a8f2d5e49081f28d inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tnarr.html">tnarr</a>&lt; T, <a class="el" href="classby_1_1str_tactic.html">strTactic</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aaa91a2135d8ef4f0a8f2d5e49081f28d inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4c016457bc926046eceac9c3625750 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a9d4c016457bc926046eceac9c3625750" name="a9d4c016457bc926046eceac9c3625750"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a9d4c016457bc926046eceac9c3625750 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a9d4c016457bc926046eceac9c3625750 inherit pub_methods_classby_1_1node" id="r_a9d4c016457bc926046eceac9c3625750"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a9d4c016457bc926046eceac9c3625750 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a9d4c016457bc926046eceac9c3625750 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331ff4f9b78b53cb893dfaaa6d9645de inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2">template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a331ff4f9b78b53cb893dfaaa6d9645de inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a331ff4f9b78b53cb893dfaaa6d9645de">subAll</a> (const std::string *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(subAll&lt; T &gt;) template&lt; typename T</td></tr>
+<tr class="memitem:a331ff4f9b78b53cb893dfaaa6d9645de inherit pub_methods_classby_1_1node" id="r_a331ff4f9b78b53cb893dfaaa6d9645de"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a331ff4f9b78b53cb893dfaaa6d9645de inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a331ff4f9b78b53cb893dfaaa6d9645de">subAll</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(subAll&lt; T &gt;) <a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> T</td></tr>
 <tr class="separator:a331ff4f9b78b53cb893dfaaa6d9645de inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a742ea3cd837d1ec1d9a199b56510b013 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a742ea3cd837d1ec1d9a199b56510b013" name="a742ea3cd837d1ec1d9a199b56510b013"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a742ea3cd837d1ec1d9a199b56510b013 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (const std::string &amp;name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const</td></tr>
+<tr class="memitem:a742ea3cd837d1ec1d9a199b56510b013 inherit pub_methods_classby_1_1node" id="r_a742ea3cd837d1ec1d9a199b56510b013"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a742ea3cd837d1ec1d9a199b56510b013 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a742ea3cd837d1ec1d9a199b56510b013 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8adca31688bbb61973f38e5ad8e74ba inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="ac8adca31688bbb61973f38e5ad8e74ba" name="ac8adca31688bbb61973f38e5ad8e74ba"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:ac8adca31688bbb61973f38e5ad8e74ba inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> *a) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
+<tr class="memitem:ac8adca31688bbb61973f38e5ad8e74ba inherit pub_methods_classby_1_1node" id="r_ac8adca31688bbb61973f38e5ad8e74ba"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:ac8adca31688bbb61973f38e5ad8e74ba inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> *<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
 <tr class="separator:ac8adca31688bbb61973f38e5ad8e74ba inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a1be8949a044b9f7c527e13b6a4b059d4" name="a1be8949a044b9f7c527e13b6a4b059d4"></a>
+<tr class="memitem:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node" id="r_a1be8949a044b9f7c527e13b6a4b059d4"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt; subAll&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tpriorities</b> ())</td></tr>
 <tr class="separator:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b0f91545982f818c99b759793afe424 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a8b0f91545982f818c99b759793afe424" name="a8b0f91545982f818c99b759793afe424"></a>
-template&lt;typename T  = me&gt; </td></tr>
-<tr class="memitem:a8b0f91545982f818c99b759793afe424 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
+<tr class="memitem:a8b0f91545982f818c99b759793afe424 inherit pub_methods_classby_1_1node" id="r_a8b0f91545982f818c99b759793afe424"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T  = me&gt; </td></tr>
+<tr class="memitem:a8b0f91545982f818c99b759793afe424 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subAll</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
 <tr class="separator:a8b0f91545982f818c99b759793afe424 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a1be8949a044b9f7c527e13b6a4b059d4" name="a1be8949a044b9f7c527e13b6a4b059d4"></a>
+<tr class="memitem:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node" id="r_a1be8949a044b9f7c527e13b6a4b059d4"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt; subAll&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tpriorities</b> ())</td></tr>
 <tr class="separator:a1be8949a044b9f7c527e13b6a4b059d4 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d5cf6256e889592daa9206e2169b99 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a01d5cf6256e889592daa9206e2169b99" name="a01d5cf6256e889592daa9206e2169b99"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>canEval</b> (const <a class="el" href="classby_1_1args.html">args</a> &amp;a) const</td></tr>
+<tr class="memitem:a01d5cf6256e889592daa9206e2169b99 inherit pub_methods_classby_1_1node" id="r_a01d5cf6256e889592daa9206e2169b99"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canEval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a01d5cf6256e889592daa9206e2169b99 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d1f8361a8a14bb5543cf0904d72321 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a11d1f8361a8a14bb5543cf0904d72321" name="a11d1f8361a8a14bb5543cf0904d72321"></a>
-<a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prioritize</b> (const <a class="el" href="classby_1_1args.html">args</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it</td></tr>
+<tr class="memitem:a11d1f8361a8a14bb5543cf0904d72321 inherit pub_methods_classby_1_1node" id="r_a11d1f8361a8a14bb5543cf0904d72321"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prioritize</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it</td></tr>
 <tr class="separator:a11d1f8361a8a14bb5543cf0904d72321 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f2235108efdd0fbd2a698c2b21f3d3b inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a1f2235108efdd0fbd2a698c2b21f3d3b" name="a1f2235108efdd0fbd2a698c2b21f3d3b"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const <a class="el" href="classby_1_1args.html">args</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(eval)</td></tr>
+<tr class="memitem:a1f2235108efdd0fbd2a698c2b21f3d3b inherit pub_methods_classby_1_1node" id="r_a1f2235108efdd0fbd2a698c2b21f3d3b"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(eval)</td></tr>
 <tr class="separator:a1f2235108efdd0fbd2a698c2b21f3d3b inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a487a1c0912c269ff34a5db5ebb29d9ae inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a487a1c0912c269ff34a5db5ebb29d9ae" name="a487a1c0912c269ff34a5db5ebb29d9ae"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string &amp;name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a)</td></tr>
+<tr class="memitem:a487a1c0912c269ff34a5db5ebb29d9ae inherit pub_methods_classby_1_1node" id="r_a487a1c0912c269ff34a5db5ebb29d9ae"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>)</td></tr>
 <tr class="separator:a487a1c0912c269ff34a5db5ebb29d9ae inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ad304f4099137c0c31e276e18b2a873 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a8ad304f4099137c0c31e276e18b2a873" name="a8ad304f4099137c0c31e276e18b2a873"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string &amp;name, const <a class="el" href="classby_1_1args.html">args</a> *a) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(a</td></tr>
+<tr class="memitem:a8ad304f4099137c0c31e276e18b2a873 inherit pub_methods_classby_1_1node" id="r_a8ad304f4099137c0c31e276e18b2a873"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> *<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">a</a></td></tr>
 <tr class="separator:a8ad304f4099137c0c31e276e18b2a873 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4431567d9117df3600ddb2933d4faea7 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a4431567d9117df3600ddb2933d4faea7" name="a4431567d9117df3600ddb2933d4faea7"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (name, a)</td></tr>
+<tr class="memitem:a4431567d9117df3600ddb2933d4faea7 inherit pub_methods_classby_1_1node" id="r_a4431567d9117df3600ddb2933d4faea7"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (name, <a class="el" href="structby_1_1no_wrap.html">a</a>)</td></tr>
 <tr class="separator:a4431567d9117df3600ddb2933d4faea7 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a172dc8015263be3dd4cf67f9aec425 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a9a172dc8015263be3dd4cf67f9aec425" name="a9a172dc8015263be3dd4cf67f9aec425"></a>
+<tr class="memitem:a9a172dc8015263be3dd4cf67f9aec425 inherit pub_methods_classby_1_1node" id="r_a9a172dc8015263be3dd4cf67f9aec425"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> ())</td></tr>
 <tr class="separator:a9a172dc8015263be3dd4cf67f9aec425 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeefe5596061072fc5122c00cd77eadf inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="adeefe5596061072fc5122c00cd77eadf" name="adeefe5596061072fc5122c00cd77eadf"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> &amp;a) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
+<tr class="memitem:adeefe5596061072fc5122c00cd77eadf inherit pub_methods_classby_1_1node" id="r_adeefe5596061072fc5122c00cd77eadf"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name</td></tr>
 <tr class="separator:adeefe5596061072fc5122c00cd77eadf inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ac9e4ea58fc96a616813f939fdf4741f1" name="ac9e4ea58fc96a616813f939fdf4741f1"></a>
+<tr class="memitem:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node" id="r_ac9e4ea58fc96a616813f939fdf4741f1"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tstr.html">str</a> eval&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> ())</td></tr>
 <tr class="separator:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88699b8747f916e239fd446ea98eaa76 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a88699b8747f916e239fd446ea98eaa76" name="a88699b8747f916e239fd446ea98eaa76"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string *name, const <a class="el" href="classby_1_1args.html">args</a> *a) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name &amp;&amp;a</td></tr>
+<tr class="memitem:a88699b8747f916e239fd446ea98eaa76 inherit pub_methods_classby_1_1node" id="r_a88699b8747f916e239fd446ea98eaa76"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *name, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> *<a class="el" href="structby_1_1no_wrap.html">a</a>) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(name &amp;&amp;<a class="el" href="structby_1_1no_wrap.html">a</a></td></tr>
 <tr class="separator:a88699b8747f916e239fd446ea98eaa76 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ac9e4ea58fc96a616813f939fdf4741f1" name="ac9e4ea58fc96a616813f939fdf4741f1"></a>
+<tr class="memitem:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node" id="r_ac9e4ea58fc96a616813f939fdf4741f1"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tstr.html">str</a> eval&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> ())</td></tr>
 <tr class="separator:ac9e4ea58fc96a616813f939fdf4741f1 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c8515220370617e199792602eb55386 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a3c8515220370617e199792602eb55386" name="a3c8515220370617e199792602eb55386"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a3c8515220370617e199792602eb55386 inherit pub_methods_classby_1_1node" id="r_a3c8515220370617e199792602eb55386"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name)</td></tr>
 <tr class="separator:a3c8515220370617e199792602eb55386 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1ae1a26847452b658c44fc41ab80405 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="af1ae1a26847452b658c44fc41ab80405" name="af1ae1a26847452b658c44fc41ab80405"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (const std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(eval)</td></tr>
+<tr class="memitem:af1ae1a26847452b658c44fc41ab80405 inherit pub_methods_classby_1_1node" id="r_af1ae1a26847452b658c44fc41ab80405"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(eval)</td></tr>
 <tr class="separator:af1ae1a26847452b658c44fc41ab80405 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769397bf34aa96e38cb1d95ee518aabf inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a769397bf34aa96e38cb1d95ee518aabf" name="a769397bf34aa96e38cb1d95ee518aabf"></a>
+<tr class="memitem:a769397bf34aa96e38cb1d95ee518aabf inherit pub_methods_classby_1_1node" id="r_a769397bf34aa96e38cb1d95ee518aabf"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eval</b> ()</td></tr>
 <tr class="separator:a769397bf34aa96e38cb1d95ee518aabf inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e4f5cd95d7b40e24ad04fe008cede8 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a33e4f5cd95d7b40e24ad04fe008cede8" name="a33e4f5cd95d7b40e24ad04fe008cede8"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a33e4f5cd95d7b40e24ad04fe008cede8 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">nbool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is</b> () const</td></tr>
+<tr class="memitem:a33e4f5cd95d7b40e24ad04fe008cede8 inherit pub_methods_classby_1_1node" id="r_a33e4f5cd95d7b40e24ad04fe008cede8"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:a33e4f5cd95d7b40e24ad04fe008cede8 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">nbool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a33e4f5cd95d7b40e24ad04fe008cede8 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbfaa4cc46dfb92c91136a14955a8170 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="abbfaa4cc46dfb92c91136a14955a8170" name="abbfaa4cc46dfb92c91136a14955a8170"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;to) const</td></tr>
+<tr class="memitem:abbfaa4cc46dfb92c91136a14955a8170 inherit pub_methods_classby_1_1node" id="r_abbfaa4cc46dfb92c91136a14955a8170"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:abbfaa4cc46dfb92c91136a14955a8170 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a117432ddb55d816104624b904cd142f9 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a117432ddb55d816104624b904cd142f9" name="a117432ddb55d816104624b904cd142f9"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(is)</td></tr>
+<tr class="memitem:a117432ddb55d816104624b904cd142f9 inherit pub_methods_classby_1_1node" id="r_a117432ddb55d816104624b904cd142f9"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(is)</td></tr>
 <tr class="separator:a117432ddb55d816104624b904cd142f9 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bf1a5e51d1bcf10219ba92350036ab0 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a8bf1a5e51d1bcf10219ba92350036ab0" name="a8bf1a5e51d1bcf10219ba92350036ab0"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;to) const</td></tr>
+<tr class="memitem:a8bf1a5e51d1bcf10219ba92350036ab0 inherit pub_methods_classby_1_1node" id="r_a8bf1a5e51d1bcf10219ba92350036ab0"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a8bf1a5e51d1bcf10219ba92350036ab0 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a525253ea6a19dfd2049078af559b360a inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a525253ea6a19dfd2049078af559b360a" name="a525253ea6a19dfd2049078af559b360a"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (const <a class="el" href="classby_1_1type.html">type</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(is)</td></tr>
+<tr class="memitem:a525253ea6a19dfd2049078af559b360a inherit pub_methods_classby_1_1node" id="r_a525253ea6a19dfd2049078af559b360a"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(is)</td></tr>
 <tr class="separator:a525253ea6a19dfd2049078af559b360a inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac522309e55b52da1c2c7e3f4690e59e1 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="ac522309e55b52da1c2c7e3f4690e59e1" name="ac522309e55b52da1c2c7e3f4690e59e1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac522309e55b52da1c2c7e3f4690e59e1 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">tstr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> () const</td></tr>
+<tr class="memitem:ac522309e55b52da1c2c7e3f4690e59e1 inherit pub_methods_classby_1_1node" id="r_ac522309e55b52da1c2c7e3f4690e59e1"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ac522309e55b52da1c2c7e3f4690e59e1 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">tstr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ac522309e55b52da1c2c7e3f4690e59e1 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a351db78be538ba3019f928bba0a90 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a01a351db78be538ba3019f928bba0a90" name="a01a351db78be538ba3019f928bba0a90"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;to) const</td></tr>
+<tr class="memitem:a01a351db78be538ba3019f928bba0a90 inherit pub_methods_classby_1_1node" id="r_a01a351db78be538ba3019f928bba0a90"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a01a351db78be538ba3019f928bba0a90 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa90db3a25da20271971b86730b1cd541 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aa90db3a25da20271971b86730b1cd541" name="aa90db3a25da20271971b86730b1cd541"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(as)</td></tr>
+<tr class="memitem:aa90db3a25da20271971b86730b1cd541 inherit pub_methods_classby_1_1node" id="r_aa90db3a25da20271971b86730b1cd541"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(as)</td></tr>
 <tr class="separator:aa90db3a25da20271971b86730b1cd541 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89fb7a006bc891ce6bbca209f2bd4e62 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a89fb7a006bc891ce6bbca209f2bd4e62" name="a89fb7a006bc891ce6bbca209f2bd4e62"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;to) const</td></tr>
+<tr class="memitem:a89fb7a006bc891ce6bbca209f2bd4e62 inherit pub_methods_classby_1_1node" id="r_a89fb7a006bc891ce6bbca209f2bd4e62"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a89fb7a006bc891ce6bbca209f2bd4e62 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f11d8b9f7a0c9482d42d2054024e7e inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ad0f11d8b9f7a0c9482d42d2054024e7e" name="ad0f11d8b9f7a0c9482d42d2054024e7e"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (const <a class="el" href="classby_1_1type.html">type</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(as)</td></tr>
+<tr class="memitem:ad0f11d8b9f7a0c9482d42d2054024e7e inherit pub_methods_classby_1_1node" id="r_ad0f11d8b9f7a0c9482d42d2054024e7e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>as</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(as)</td></tr>
 <tr class="separator:ad0f11d8b9f7a0c9482d42d2054024e7e inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2298ad32fd390b5c674399f1f0dfceac inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a2298ad32fd390b5c674399f1f0dfceac" name="a2298ad32fd390b5c674399f1f0dfceac"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2298ad32fd390b5c674399f1f0dfceac inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">nbool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isImpli</b> () const</td></tr>
+<tr class="memitem:a2298ad32fd390b5c674399f1f0dfceac inherit pub_methods_classby_1_1node" id="r_a2298ad32fd390b5c674399f1f0dfceac"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:a2298ad32fd390b5c674399f1f0dfceac inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top">nbool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isImpli</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a2298ad32fd390b5c674399f1f0dfceac inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14c14d0eec1b8df3e294c94e942b6876 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a14c14d0eec1b8df3e294c94e942b6876" name="a14c14d0eec1b8df3e294c94e942b6876"></a>
-virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;to) const</td></tr>
+<tr class="memitem:a14c14d0eec1b8df3e294c94e942b6876 inherit pub_methods_classby_1_1node" id="r_a14c14d0eec1b8df3e294c94e942b6876"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a14c14d0eec1b8df3e294c94e942b6876 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2c7094dbcae0ef3985154359af4881 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aed2c7094dbcae0ef3985154359af4881" name="aed2c7094dbcae0ef3985154359af4881"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;to) const</td></tr>
+<tr class="memitem:aed2c7094dbcae0ef3985154359af4881 inherit pub_methods_classby_1_1node" id="r_aed2c7094dbcae0ef3985154359af4881"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aed2c7094dbcae0ef3985154359af4881 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfeaafcc1f3186ffab78451db473a32b inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="abfeaafcc1f3186ffab78451db473a32b" name="abfeaafcc1f3186ffab78451db473a32b"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isImpli)</td></tr>
+<tr class="memitem:abfeaafcc1f3186ffab78451db473a32b inherit pub_methods_classby_1_1node" id="r_abfeaafcc1f3186ffab78451db473a32b"><td class="memItemLeft" align="right" valign="top">
+nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isImpli)</td></tr>
 <tr class="separator:abfeaafcc1f3186ffab78451db473a32b inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00896299ad1a6eba825a4c3a2b6a6584 inherit pub_methods_classby_1_1node"><td class="memTemplParams" colspan="2"><a id="a00896299ad1a6eba825a4c3a2b6a6584" name="a00896299ad1a6eba825a4c3a2b6a6584"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a00896299ad1a6eba825a4c3a2b6a6584 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">tstr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asImpli</b> () const</td></tr>
+<tr class="memitem:a00896299ad1a6eba825a4c3a2b6a6584 inherit pub_methods_classby_1_1node" id="r_a00896299ad1a6eba825a4c3a2b6a6584"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:a00896299ad1a6eba825a4c3a2b6a6584 inherit pub_methods_classby_1_1node"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tstr.html">tstr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asImpli</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a00896299ad1a6eba825a4c3a2b6a6584 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2fa9157bae2227dfc39085c9178aafb inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="af2fa9157bae2227dfc39085c9178aafb" name="af2fa9157bae2227dfc39085c9178aafb"></a>
-virtual <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;to) const</td></tr>
+<tr class="memitem:af2fa9157bae2227dfc39085c9178aafb inherit pub_methods_classby_1_1node" id="r_af2fa9157bae2227dfc39085c9178aafb"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:af2fa9157bae2227dfc39085c9178aafb inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bae7ff98f00920dcd77cc6737d503dd inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a1bae7ff98f00920dcd77cc6737d503dd" name="a1bae7ff98f00920dcd77cc6737d503dd"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;to) const</td></tr>
+<tr class="memitem:a1bae7ff98f00920dcd77cc6737d503dd inherit pub_methods_classby_1_1node" id="r_a1bae7ff98f00920dcd77cc6737d503dd"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a1bae7ff98f00920dcd77cc6737d503dd inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a328c3576755fd851661c4252923d1e15 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a328c3576755fd851661c4252923d1e15" name="a328c3576755fd851661c4252923d1e15"></a>
-<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (const <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(asImpli)</td></tr>
+<tr class="memitem:a328c3576755fd851661c4252923d1e15 inherit pub_methods_classby_1_1node" id="r_a328c3576755fd851661c4252923d1e15"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><b>asImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(asImpli)</td></tr>
 <tr class="separator:a328c3576755fd851661c4252923d1e15 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70a66f8b2f5fa2be984145b43ff514f inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ac70a66f8b2f5fa2be984145b43ff514f" name="ac70a66f8b2f5fa2be984145b43ff514f"></a>
-virtual const <a class="el" href="classby_1_1src.html">src</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSrc</b> () const</td></tr>
+<tr class="memitem:ac70a66f8b2f5fa2be984145b43ff514f inherit pub_methods_classby_1_1node" id="r_ac70a66f8b2f5fa2be984145b43ff514f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1src.html">src</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSrc</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ac70a66f8b2f5fa2be984145b43ff514f inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422800bf7875c45e31b13feab65547d0 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a422800bf7875c45e31b13feab65547d0">isComplete</a> () const</td></tr>
+<tr class="memitem:a422800bf7875c45e31b13feab65547d0 inherit pub_methods_classby_1_1node" id="r_a422800bf7875c45e31b13feab65547d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a422800bf7875c45e31b13feab65547d0">isComplete</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a422800bf7875c45e31b13feab65547d0 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168a80ea572c628b9206aad1a7a6d7d9 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a168a80ea572c628b9206aad1a7a6d7d9">infer</a> () const</td></tr>
+<tr class="memitem:a168a80ea572c628b9206aad1a7a6d7d9 inherit pub_methods_classby_1_1node" id="r_a168a80ea572c628b9206aad1a7a6d7d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a168a80ea572c628b9206aad1a7a6d7d9">infer</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a168a80ea572c628b9206aad1a7a6d7d9 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec9e537cdff3f17d6d5c64d4525919c3 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aec9e537cdff3f17d6d5c64d4525919c3" name="aec9e537cdff3f17d6d5c64d4525919c3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (const <a class="el" href="classby_1_1visit_info.html">visitInfo</a> &amp;i, <a class="el" href="classby_1_1visitor.html">visitor</a> &amp;v)</td></tr>
+<tr class="memitem:aec9e537cdff3f17d6d5c64d4525919c3 inherit pub_methods_classby_1_1node" id="r_aec9e537cdff3f17d6d5c64d4525919c3"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1visit_info.html">visitInfo</a> &amp;<a class="el" href="structby_1_1no_wrap.html">i</a>, <a class="el" href="classby_1_1visitor.html">visitor</a> &amp;<a class="el" href="structby_1_1no_wrap.html">v</a>)</td></tr>
 <tr class="separator:aec9e537cdff3f17d6d5c64d4525919c3 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ecc490beef9748730cc37f93a1161b inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a91ecc490beef9748730cc37f93a1161b">inFrame</a> (const <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> *<a class="el" href="classby_1_1args.html">args</a>) const override</td></tr>
+<tr class="memitem:a91ecc490beef9748730cc37f93a1161b inherit pub_methods_classby_1_1node" id="r_a91ecc490beef9748730cc37f93a1161b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a91ecc490beef9748730cc37f93a1161b">inFrame</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> *<a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a91ecc490beef9748730cc37f93a1161b inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c32818426ab990c0beeaf171eb9558 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a02c32818426ab990c0beeaf171eb9558">outFrame</a> () const override</td></tr>
+<tr class="memitem:a02c32818426ab990c0beeaf171eb9558 inherit pub_methods_classby_1_1node" id="r_a02c32818426ab990c0beeaf171eb9558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a02c32818426ab990c0beeaf171eb9558">outFrame</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a02c32818426ab990c0beeaf171eb9558 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ddded461468d78660b63032e83c5d1e inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a3ddded461468d78660b63032e83c5d1e" name="a3ddded461468d78660b63032e83c5d1e"></a>
-virtual const <a class="el" href="classby_1_1modifier.html">modifier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getModifier</b> () const</td></tr>
+<tr class="memitem:a3ddded461468d78660b63032e83c5d1e inherit pub_methods_classby_1_1node" id="r_a3ddded461468d78660b63032e83c5d1e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1modifier.html">modifier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getModifier</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a3ddded461468d78660b63032e83c5d1e inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27e42c1571a2ddd2b47869f8e80d9f3f inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a27e42c1571a2ddd2b47869f8e80d9f3f">inFrame</a> (const <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> *<a class="el" href="classby_1_1args.html">args</a>) const=0</td></tr>
+<tr class="memitem:a27e42c1571a2ddd2b47869f8e80d9f3f inherit pub_methods_classby_1_1node" id="r_a27e42c1571a2ddd2b47869f8e80d9f3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a27e42c1571a2ddd2b47869f8e80d9f3f">inFrame</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> *<a class="el" href="classby_1_1args.html">args</a>) <a class="el" href="structby_1_1no_wrap.html">const</a>=0</td></tr>
 <tr class="separator:a27e42c1571a2ddd2b47869f8e80d9f3f inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="af4fa9875c39255b969d83580a41a9cf6" name="af4fa9875c39255b969d83580a41a9cf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () const</td></tr>
+<tr class="memitem:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1node" id="r_af4fa9875c39255b969d83580a41a9cf6"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6fe51f0720c46b9ee00ea15b137a510 inherit pub_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#af6fe51f0720c46b9ee00ea15b137a510">outFrame</a> () const=0</td></tr>
+<tr class="memitem:af6fe51f0720c46b9ee00ea15b137a510 inherit pub_methods_classby_1_1node" id="r_af6fe51f0720c46b9ee00ea15b137a510"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#af6fe51f0720c46b9ee00ea15b137a510">outFrame</a> () <a class="el" href="structby_1_1no_wrap.html">const</a>=0</td></tr>
 <tr class="separator:af6fe51f0720c46b9ee00ea15b137a510 inherit pub_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a16469e451673fecd6f99c75c1d584c78 inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a16469e451673fecd6f99c75c1d584c78" name="a16469e451673fecd6f99c75c1d584c78"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> (<a class="el" href="structby_1_1id.html">id</a> newId)</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a16469e451673fecd6f99c75c1d584c78 inherit pub_methods_classby_1_1instance" id="r_a16469e451673fecd6f99c75c1d584c78"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> (<a class="el" href="structby_1_1id.html">id</a> <a class="el" href="structby_1_1no_wrap.html">newId</a>)</td></tr>
 <tr class="separator:a16469e451673fecd6f99c75c1d584c78 inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6fa6c106af9dd09a40928322e9df0bd inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="aa6fa6c106af9dd09a40928322e9df0bd" name="aa6fa6c106af9dd09a40928322e9df0bd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> (const me &amp;rhs)</td></tr>
+<tr class="memitem:aa6fa6c106af9dd09a40928322e9df0bd inherit pub_methods_classby_1_1instance" id="r_aa6fa6c106af9dd09a40928322e9df0bd"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;rhs)</td></tr>
 <tr class="separator:aa6fa6c106af9dd09a40928322e9df0bd inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dc5a18858e6fd37ac26d8db0d5aaf3c inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a1dc5a18858e6fd37ac26d8db0d5aaf3c" name="a1dc5a18858e6fd37ac26d8db0d5aaf3c"></a>
-me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const me &amp;rhs)=default</td></tr>
+<tr class="memitem:a1dc5a18858e6fd37ac26d8db0d5aaf3c inherit pub_methods_classby_1_1instance" id="r_a1dc5a18858e6fd37ac26d8db0d5aaf3c"><td class="memItemLeft" align="right" valign="top">
+me &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;rhs)=<a class="el" href="structby_1_1no_wrap.html">default</a></td></tr>
 <tr class="separator:a1dc5a18858e6fd37ac26d8db0d5aaf3c inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a689e6107c16eb014ece555d045bf2e31 inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a689e6107c16eb014ece555d045bf2e31" name="a689e6107c16eb014ece555d045bf2e31"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>operator new</b> (size_t sz) noexcept</td></tr>
+<tr class="memitem:a689e6107c16eb014ece555d045bf2e31 inherit pub_methods_classby_1_1instance" id="r_a689e6107c16eb014ece555d045bf2e31"><td class="memItemLeft" align="right" valign="top">
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>operator new</b> (<a class="el" href="structby_1_1no_wrap.html">size_t</a> <a class="el" href="structby_1_1no_wrap.html">sz</a>) <a class="el" href="structby_1_1no_wrap.html">noexcept</a></td></tr>
 <tr class="separator:a689e6107c16eb014ece555d045bf2e31 inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01eedc79a1e3dde4bccdad9e5a70b38c inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a01eedc79a1e3dde4bccdad9e5a70b38c" name="a01eedc79a1e3dde4bccdad9e5a70b38c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delete</b> (void *pt, size_t sz) noexcept</td></tr>
+<tr class="memitem:a01eedc79a1e3dde4bccdad9e5a70b38c inherit pub_methods_classby_1_1instance" id="r_a01eedc79a1e3dde4bccdad9e5a70b38c"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delete</b> (void *<a class="el" href="structby_1_1no_wrap.html">pt</a>, <a class="el" href="structby_1_1no_wrap.html">size_t</a> <a class="el" href="structby_1_1no_wrap.html">sz</a>) <a class="el" href="structby_1_1no_wrap.html">noexcept</a></td></tr>
 <tr class="separator:a01eedc79a1e3dde4bccdad9e5a70b38c inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3b67fbe69d68c4a073610a557e2c27e inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="ab3b67fbe69d68c4a073610a557e2c27e" name="ab3b67fbe69d68c4a073610a557e2c27e"></a>
-virtual <a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:ab3b67fbe69d68c4a073610a557e2c27e inherit pub_methods_classby_1_1instance" id="r_ab3b67fbe69d68c4a073610a557e2c27e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ab3b67fbe69d68c4a073610a557e2c27e inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56f449486eea01ea434f348c3b142760 inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1instance.html#a56f449486eea01ea434f348c3b142760">isHeap</a> () const</td></tr>
-<tr class="memdesc:a56f449486eea01ea434f348c3b142760 inherit pub_methods_classby_1_1instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this instance is allocated on the heap.  <a href="classby_1_1instance.html#a56f449486eea01ea434f348c3b142760">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a56f449486eea01ea434f348c3b142760 inherit pub_methods_classby_1_1instance" id="r_a56f449486eea01ea434f348c3b142760"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1instance.html#a56f449486eea01ea434f348c3b142760">isHeap</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memdesc:a56f449486eea01ea434f348c3b142760 inherit pub_methods_classby_1_1instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this instance is allocated on the heap.  <br /></td></tr>
 <tr class="separator:a56f449486eea01ea434f348c3b142760 inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838b3f5841bf020b5f5e421db1efa7ce inherit pub_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classby_1_1life.html">life</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1instance.html#a838b3f5841bf020b5f5e421db1efa7ce">getBindTag</a> () const</td></tr>
-<tr class="memdesc:a838b3f5841bf020b5f5e421db1efa7ce inherit pub_methods_classby_1_1instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated life object for reference counting.  <a href="classby_1_1instance.html#a838b3f5841bf020b5f5e421db1efa7ce">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a838b3f5841bf020b5f5e421db1efa7ce inherit pub_methods_classby_1_1instance" id="r_a838b3f5841bf020b5f5e421db1efa7ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1life.html">life</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1instance.html#a838b3f5841bf020b5f5e421db1efa7ce">getBindTag</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memdesc:a838b3f5841bf020b5f5e421db1efa7ce inherit pub_methods_classby_1_1instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated life object for reference counting.  <br /></td></tr>
 <tr class="separator:a838b3f5841bf020b5f5e421db1efa7ce inherit pub_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1type_providable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1type_providable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1type_providable.html">by::typeProvidable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:ae79a4ecc80915511509195a4d6949643 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="ae79a4ecc80915511509195a4d6949643" name="ae79a4ecc80915511509195a4d6949643"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const me &amp;rhs) const</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1type_providable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1type_providable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1type_providable.html">by::typeProvidable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:ae79a4ecc80915511509195a4d6949643 inherit pub_methods_classby_1_1type_providable" id="r_ae79a4ecc80915511509195a4d6949643"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;rhs) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ae79a4ecc80915511509195a4d6949643 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a588f51a220cf4eca9e7df44ff04977e7" name="a588f51a220cf4eca9e7df44ff04977e7"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const me &amp;rhs) const</td></tr>
+<tr class="memitem:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable" id="r_a588f51a220cf4eca9e7df44ff04977e7"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;rhs) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="aa4e69312548672dbcad53a369ded5630" name="aa4e69312548672dbcad53a369ded5630"></a>
-virtual const <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const =0</td></tr>
+<tr class="memitem:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable" id="r_aa4e69312548672dbcad53a369ded5630"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a2f07327fb7b52a45b6fbaa48ae0eb89f" name="a2f07327fb7b52a45b6fbaa48ae0eb89f"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;it) const</td></tr>
+<tr class="memitem:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable" id="r_a2f07327fb7b52a45b6fbaa48ae0eb89f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a390706279ba9b1d3edc72b8e24096931 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a390706279ba9b1d3edc72b8e24096931" name="a390706279ba9b1d3edc72b8e24096931"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (const <a class="el" href="classby_1_1type.html">type</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
+<tr class="memitem:a390706279ba9b1d3edc72b8e24096931 inherit pub_methods_classby_1_1type_providable" id="r_a390706279ba9b1d3edc72b8e24096931"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
 <tr class="separator:a390706279ba9b1d3edc72b8e24096931 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159b7129535e10f7455631f9dd83ef44 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a159b7129535e10f7455631f9dd83ef44" name="a159b7129535e10f7455631f9dd83ef44"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (const me &amp;it) const</td></tr>
+<tr class="memitem:a159b7129535e10f7455631f9dd83ef44 inherit pub_methods_classby_1_1type_providable" id="r_a159b7129535e10f7455631f9dd83ef44"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a159b7129535e10f7455631f9dd83ef44 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2461c92af9ee4f424a197beb341135a2 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a2461c92af9ee4f424a197beb341135a2" name="a2461c92af9ee4f424a197beb341135a2"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (const me *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
+<tr class="memitem:a2461c92af9ee4f424a197beb341135a2 inherit pub_methods_classby_1_1type_providable" id="r_a2461c92af9ee4f424a197beb341135a2"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
 <tr class="separator:a2461c92af9ee4f424a197beb341135a2 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a58d5c9754baf2cac10f00d3c464fb4 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a9a58d5c9754baf2cac10f00d3c464fb4" name="a9a58d5c9754baf2cac10f00d3c464fb4"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;it) const</td></tr>
+<tr class="memitem:a9a58d5c9754baf2cac10f00d3c464fb4 inherit pub_methods_classby_1_1type_providable" id="r_a9a58d5c9754baf2cac10f00d3c464fb4"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a9a58d5c9754baf2cac10f00d3c464fb4 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88afd96107b542735244fcc761385f08 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a88afd96107b542735244fcc761385f08" name="a88afd96107b542735244fcc761385f08"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (const <a class="el" href="classby_1_1type.html">type</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
+<tr class="memitem:a88afd96107b542735244fcc761385f08 inherit pub_methods_classby_1_1type_providable" id="r_a88afd96107b542735244fcc761385f08"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
 <tr class="separator:a88afd96107b542735244fcc761385f08 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a93289f111e4000ee98a943149409c4 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a6a93289f111e4000ee98a943149409c4" name="a6a93289f111e4000ee98a943149409c4"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (const me &amp;it) const</td></tr>
+<tr class="memitem:a6a93289f111e4000ee98a943149409c4 inherit pub_methods_classby_1_1type_providable" id="r_a6a93289f111e4000ee98a943149409c4"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a6a93289f111e4000ee98a943149409c4 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24df0319e39a1ebd35cfdd3b9ea09f72 inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a24df0319e39a1ebd35cfdd3b9ea09f72" name="a24df0319e39a1ebd35cfdd3b9ea09f72"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (const me *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
+<tr class="memitem:a24df0319e39a1ebd35cfdd3b9ea09f72 inherit pub_methods_classby_1_1type_providable" id="r_a24df0319e39a1ebd35cfdd3b9ea09f72"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
 <tr class="separator:a24df0319e39a1ebd35cfdd3b9ea09f72 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memTemplParams" colspan="2"><a id="aacf82d8ddf74c862902802dfad217ddc" name="aacf82d8ddf74c862902802dfad217ddc"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top">nint&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSub</b> () const</td></tr>
+<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable" id="r_aacf82d8ddf74c862902802dfad217ddc"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSub</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memTemplParams" colspan="2"><a id="aa64bd64ab1354fb0dc0689389bc485c6" name="aa64bd64ab1354fb0dc0689389bc485c6"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top">nint&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSuper</b> () const</td></tr>
+<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable" id="r_aa64bd64ab1354fb0dc0689389bc485c6"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSuper</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memTemplParams" colspan="2"><a id="af6f60075f199d6eb48d39ed8e33b4329" name="af6f60075f199d6eb48d39ed8e33b4329"></a>
-template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable" id="r_af6f60075f199d6eb48d39ed8e33b4329"><td class="memTemplParams" colspan="2">
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
 <tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> ()</td></tr>
 <tr class="separator:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1type_providable.html#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () const BY_CONST_FUNC(cast&lt; T &gt;()) virtual void *cast(const <a class="el" href="classby_1_1type.html">type</a> &amp;to)</td></tr>
-<tr class="memdesc:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe cast to target type using type hierarchy information  <a href="classby_1_1type_providable.html#ad05c9ba2164853c3e8db3af3cb5198c3">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable" id="r_ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1type_providable.html#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(cast&lt; T &gt;()) <a class="el" href="structby_1_1no_wrap.html">virtual</a> void *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>)</td></tr>
+<tr class="memdesc:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe cast to target type using type hierarchy information  <br /></td></tr>
 <tr class="separator:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d50919c02f16448bc84396c625dd5b inherit pub_methods_classby_1_1type_providable"><td class="memItemLeft" align="right" valign="top"><a id="a09d50919c02f16448bc84396c625dd5b" name="a09d50919c02f16448bc84396c625dd5b"></a>
-const void *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="classby_1_1type.html">type</a> &amp;to) const BY_CONST_FUNC(cast(to)) void *cast(const <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(cast)</td></tr>
+<tr class="memitem:a09d50919c02f16448bc84396c625dd5b inherit pub_methods_classby_1_1type_providable" id="r_a09d50919c02f16448bc84396c625dd5b"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">const</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> BY_CONST_FUNC(cast(<a class="el" href="structby_1_1no_wrap.html">to</a>)) void *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(cast)</td></tr>
 <tr class="separator:a09d50919c02f16448bc84396c625dd5b inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1clonable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1clonable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1clonable.html">by::clonable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a7e040b29a78bf3d1ed3a5372f8edfceb inherit pub_methods_classby_1_1clonable"><td class="memItemLeft" align="right" valign="top"><a id="a7e040b29a78bf3d1ed3a5372f8edfceb" name="a7e040b29a78bf3d1ed3a5372f8edfceb"></a>
-virtual me *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1clonable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1clonable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1clonable.html">by::clonable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a7e040b29a78bf3d1ed3a5372f8edfceb inherit pub_methods_classby_1_1clonable" id="r_a7e040b29a78bf3d1ed3a5372f8edfceb"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> me *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a7e040b29a78bf3d1ed3a5372f8edfceb inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94d1567bbb34636e0d171ca99306b0e inherit pub_methods_classby_1_1clonable"><td class="memItemLeft" align="right" valign="top"><a id="af94d1567bbb34636e0d171ca99306b0e" name="af94d1567bbb34636e0d171ca99306b0e"></a>
-virtual me *&#160;</td><td class="memItemRight" valign="bottom"><b>cloneDeep</b> () const</td></tr>
+<tr class="memitem:af94d1567bbb34636e0d171ca99306b0e inherit pub_methods_classby_1_1clonable" id="r_af94d1567bbb34636e0d171ca99306b0e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> me *&#160;</td><td class="memItemRight" valign="bottom"><b>cloneDeep</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:af94d1567bbb34636e0d171ca99306b0e inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memItemLeft" align="right" valign="top"><a id="ad78216acb96f85e6e23db1b119a17bfa" name="ad78216acb96f85e6e23db1b119a17bfa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</b> (const me &amp;from)</td></tr>
+<tr class="memitem:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable" id="r_ad78216acb96f85e6e23db1b119a17bfa"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> me &amp;from)</td></tr>
 <tr class="separator:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classby_1_1frame_interactable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classby_1_1frame_interactable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1frame_interactable.html">by::frameInteractable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1frame_interactable"><td class="memItemLeft" align="right" valign="top"><a id="af4fa9875c39255b969d83580a41a9cf6" name="af4fa9875c39255b969d83580a41a9cf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () const</td></tr>
+<tr class="inherit_header pub_methods_classby_1_1frame_interactable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1frame_interactable')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1frame_interactable.html">by::frameInteractable</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1frame_interactable" id="r_af4fa9875c39255b969d83580a41a9cf6"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>inFrame</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:af4fa9875c39255b969d83580a41a9cf6 inherit pub_methods_classby_1_1frame_interactable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 정적 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a14c609cbe0b11682e5240458c324d49e"><td class="memItemLeft" align="right" valign="top"><a id="a14c609cbe0b11682e5240458c324d49e" name="a14c609cbe0b11682e5240458c324d49e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classby_1_1thread.html">thread</a> *new1)</td></tr>
+<tr class="memitem:a14c609cbe0b11682e5240458c324d49e" id="r_a14c609cbe0b11682e5240458c324d49e"><td class="memItemLeft" align="right" valign="top"><a id="a14c609cbe0b11682e5240458c324d49e" name="a14c609cbe0b11682e5240458c324d49e"></a>
+<a class="el" href="structby_1_1no_wrap.html">static</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classby_1_1thread.html">thread</a> *new1)</td></tr>
 <tr class="separator:a14c609cbe0b11682e5240458c324d49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a171846132fee4282452a60e676162dcb"><td class="memItemLeft" align="right" valign="top"><a id="a171846132fee4282452a60e676162dcb" name="a171846132fee4282452a60e676162dcb"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classby_1_1thread.html">thread</a> &amp;new1)</td></tr>
+<tr class="memitem:a171846132fee4282452a60e676162dcb" id="r_a171846132fee4282452a60e676162dcb"><td class="memItemLeft" align="right" valign="top"><a id="a171846132fee4282452a60e676162dcb" name="a171846132fee4282452a60e676162dcb"></a>
+<a class="el" href="structby_1_1no_wrap.html">static</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classby_1_1thread.html">thread</a> &amp;new1)</td></tr>
 <tr class="separator:a171846132fee4282452a60e676162dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf735685496e7d53cab598385c883340"><td class="memItemLeft" align="right" valign="top"><a id="aaf735685496e7d53cab598385c883340" name="aaf735685496e7d53cab598385c883340"></a>
-static const <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstancer</b> ()</td></tr>
+<tr class="memitem:aaf735685496e7d53cab598385c883340" id="r_aaf735685496e7d53cab598385c883340"><td class="memItemLeft" align="right" valign="top"><a id="aaf735685496e7d53cab598385c883340" name="aaf735685496e7d53cab598385c883340"></a>
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstancer</b> ()</td></tr>
 <tr class="separator:aaf735685496e7d53cab598385c883340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
-<tr class="memitem:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="adc7c4424f664c4e5ac0f55d981bf93da" name="adc7c4424f664c4e5ac0f55d981bf93da"></a>
-static <a class="el" href="classby_1_1instance_1_1vault.html">vault</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVault</b> ()</td></tr>
+<tr class="inherit_header pub_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
+<tr class="memitem:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance" id="r_adc7c4424f664c4e5ac0f55d981bf93da"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="classby_1_1instance_1_1vault.html">vault</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVault</b> ()</td></tr>
 <tr class="separator:adc7c4424f664c4e5ac0f55d981bf93da inherit pub_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a0927597a3203aee7a6ede3240772a05b"><td class="memItemLeft" align="right" valign="top"><a id="a0927597a3203aee7a6ede3240772a05b" name="a0927597a3203aee7a6ede3240772a05b"></a>
-virtual <a class="el" href="classby_1_1frames.html">frames</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_getFrames</b> ()</td></tr>
+<tr class="memitem:a0927597a3203aee7a6ede3240772a05b" id="r_a0927597a3203aee7a6ede3240772a05b"><td class="memItemLeft" align="right" valign="top"><a id="a0927597a3203aee7a6ede3240772a05b" name="a0927597a3203aee7a6ede3240772a05b"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1frames.html">frames</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_getFrames</b> ()</td></tr>
 <tr class="separator:a0927597a3203aee7a6ede3240772a05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a463ed748ef44e591c88c89727830b70a"><td class="memItemLeft" align="right" valign="top"><a id="a463ed748ef44e591c88c89727830b70a" name="a463ed748ef44e591c88c89727830b70a"></a>
+<tr class="memitem:a463ed748ef44e591c88c89727830b70a" id="r_a463ed748ef44e591c88c89727830b70a"><td class="memItemLeft" align="right" valign="top"><a id="a463ed748ef44e591c88c89727830b70a" name="a463ed748ef44e591c88c89727830b70a"></a>
 <a class="el" href="classby_1_1frame.html">frame</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_getNowFrame</b> ()</td></tr>
 <tr class="separator:a463ed748ef44e591c88c89727830b70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classby_1_1node"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
-<tr class="memitem:a3bf7de9c828022e0eb5dde3d462d645c inherit pro_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a3bf7de9c828022e0eb5dde3d462d645c">_onEvalSub</a> (<a class="el" href="classby_1_1node.html">node</a> &amp;sub, const <a class="el" href="classby_1_1args.html">args</a> &amp;a)</td></tr>
-<tr class="memdesc:a3bf7de9c828022e0eb5dde3d462d645c inherit pro_methods_classby_1_1node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected virtual method for evaluating a sub-node.  <a href="classby_1_1node.html#a3bf7de9c828022e0eb5dde3d462d645c">더 자세히 ...</a><br /></td></tr>
+<tr class="inherit_header pro_methods_classby_1_1node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
+<tr class="memitem:a3bf7de9c828022e0eb5dde3d462d645c inherit pro_methods_classby_1_1node" id="r_a3bf7de9c828022e0eb5dde3d462d645c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1node.html#a3bf7de9c828022e0eb5dde3d462d645c">_onEvalSub</a> (<a class="el" href="classby_1_1node.html">node</a> &amp;sub, <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;<a class="el" href="structby_1_1no_wrap.html">a</a>)</td></tr>
+<tr class="memdesc:a3bf7de9c828022e0eb5dde3d462d645c inherit pro_methods_classby_1_1node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected virtual method for evaluating a sub-node.  <br /></td></tr>
 <tr class="separator:a3bf7de9c828022e0eb5dde3d462d645c inherit pro_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7928ad6a36a48a9ced02e968e05fa8e inherit pro_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aa7928ad6a36a48a9ced02e968e05fa8e" name="aa7928ad6a36a48a9ced02e968e05fa8e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>_setSrc</b> (const <a class="el" href="classby_1_1src.html">src</a> &amp;s)</td></tr>
+<tr class="memitem:aa7928ad6a36a48a9ced02e968e05fa8e inherit pro_methods_classby_1_1node" id="r_aa7928ad6a36a48a9ced02e968e05fa8e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>_setSrc</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1src.html">src</a> &amp;s)</td></tr>
 <tr class="separator:aa7928ad6a36a48a9ced02e968e05fa8e inherit pro_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28ab39175496171689720e1f308d7f71 inherit pro_methods_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a28ab39175496171689720e1f308d7f71" name="a28ab39175496171689720e1f308d7f71"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>_setSrc</b> (const <a class="el" href="classby_1_1src.html">src</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(_setSrc)</td></tr>
+<tr class="memitem:a28ab39175496171689720e1f308d7f71 inherit pro_methods_classby_1_1node" id="r_a28ab39175496171689720e1f308d7f71"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_setSrc</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1src.html">src</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(_setSrc)</td></tr>
 <tr class="separator:a28ab39175496171689720e1f308d7f71 inherit pro_methods_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
-<tr class="memitem:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="a067b78083e79bea14beb1d015283019f" name="a067b78083e79bea14beb1d015283019f"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>_setId</b> (<a class="el" href="structby_1_1id.html">id</a> new1)</td></tr>
+<tr class="inherit_header pro_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
+<tr class="memitem:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance" id="r_a067b78083e79bea14beb1d015283019f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_setId</b> (<a class="el" href="structby_1_1id.html">id</a> new1)</td></tr>
 <tr class="separator:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a41bef8186e6a81a9dc0ec6b6e3b680c9"><td class="memItemLeft" align="right" valign="top"><a id="a41bef8186e6a81a9dc0ec6b6e3b680c9" name="a41bef8186e6a81a9dc0ec6b6e3b680c9"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>coreInternal</b></td></tr>
+<tr class="memitem:a41bef8186e6a81a9dc0ec6b6e3b680c9" id="r_a41bef8186e6a81a9dc0ec6b6e3b680c9"><td class="memItemLeft" align="right" valign="top"><a id="a41bef8186e6a81a9dc0ec6b6e3b680c9" name="a41bef8186e6a81a9dc0ec6b6e3b680c9"></a>
+<a class="el" href="structby_1_1no_wrap.html">class</a>&#160;</td><td class="memItemRight" valign="bottom"><b>coreInternal</b></td></tr>
 <tr class="separator:a41bef8186e6a81a9dc0ec6b6e3b680c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adce127a445ce54bc7a9f7dc0e4976419"><td class="memItemLeft" align="right" valign="top"><a id="adce127a445ce54bc7a9f7dc0e4976419" name="adce127a445ce54bc7a9f7dc0e4976419"></a>
-struct&#160;</td><td class="memItemRight" valign="bottom"><b>::exprTest</b></td></tr>
+<tr class="memitem:adce127a445ce54bc7a9f7dc0e4976419" id="r_adce127a445ce54bc7a9f7dc0e4976419"><td class="memItemLeft" align="right" valign="top"><a id="adce127a445ce54bc7a9f7dc0e4976419" name="adce127a445ce54bc7a9f7dc0e4976419"></a>
+<a class="el" href="structby_1_1no_wrap.html">struct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>::exprTest</b></td></tr>
 <tr class="separator:adce127a445ce54bc7a9f7dc0e4976419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
-<tr class="inherit_header pub_attribs_classby_1_1node"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 속성</td></tr>
-<tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a61a558262f0785eeb3af4024c3e81d2e" name="a61a558262f0785eeb3af4024c3e81d2e"></a>
+<tr class="inherit_header pub_attribs_classby_1_1node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classby_1_1node')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1node.html">by::node</a>(으)로부터 상속된 Public 속성</td></tr>
+<tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node" id="r_a61a558262f0785eeb3af4024c3e81d2e"><td class="memItemLeft" align="right" valign="top">
 T sub&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2dd2e0fe1afc525f7a9cc36ed3c5b23 inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="ad2dd2e0fe1afc525f7a9cc36ed3c5b23" name="ad2dd2e0fe1afc525f7a9cc36ed3c5b23"></a>
+<tr class="memitem:ad2dd2e0fe1afc525f7a9cc36ed3c5b23 inherit pub_attribs_classby_1_1node" id="r_ad2dd2e0fe1afc525f7a9cc36ed3c5b23"><td class="memItemLeft" align="right" valign="top">
 T sub&#160;</td><td class="memItemRight" valign="bottom"><b>nullptr</b></td></tr>
 <tr class="separator:ad2dd2e0fe1afc525f7a9cc36ed3c5b23 inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7679cfaf90b149e223e66b87c2180c inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a8f7679cfaf90b149e223e66b87c2180c" name="a8f7679cfaf90b149e223e66b87c2180c"></a>
+<tr class="memitem:a8f7679cfaf90b149e223e66b87c2180c inherit pub_attribs_classby_1_1node" id="r_a8f7679cfaf90b149e223e66b87c2180c"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tpriorities.html">tpriorities</a>&lt; T &gt; subAll&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a8f7679cfaf90b149e223e66b87c2180c inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3c881559cb2a0fcc04e4c22cab7c28a inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="aa3c881559cb2a0fcc04e4c22cab7c28a" name="aa3c881559cb2a0fcc04e4c22cab7c28a"></a>
+<tr class="memitem:aa3c881559cb2a0fcc04e4c22cab7c28a inherit pub_attribs_classby_1_1node" id="r_aa3c881559cb2a0fcc04e4c22cab7c28a"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a> prioritize&#160;</td><td class="memItemRight" valign="bottom"><b>it</b></td></tr>
 <tr class="separator:aa3c881559cb2a0fcc04e4c22cab7c28a inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc646b8791c3220ebddba28cb6579837 inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="acc646b8791c3220ebddba28cb6579837" name="acc646b8791c3220ebddba28cb6579837"></a>
+<tr class="memitem:acc646b8791c3220ebddba28cb6579837 inherit pub_attribs_classby_1_1node" id="r_acc646b8791c3220ebddba28cb6579837"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a> prioritize&#160;</td><td class="memItemRight" valign="bottom"><b>NO_MATCH</b></td></tr>
 <tr class="separator:acc646b8791c3220ebddba28cb6579837 inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memItemLeft" align="right" valign="top"><a id="a61a558262f0785eeb3af4024c3e81d2e" name="a61a558262f0785eeb3af4024c3e81d2e"></a>
+<tr class="memitem:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node" id="r_a61a558262f0785eeb3af4024c3e81d2e"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classby_1_1tstr.html">str</a> eval&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a61a558262f0785eeb3af4024c3e81d2e inherit pub_attribs_classby_1_1node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Protected 멤버 함수</td></tr>
-<tr class="memitem:ac233c40e2381a0f3d0aefe0082cceeb8 inherit pro_static_methods_classby_1_1instance"><td class="memItemLeft" align="right" valign="top"><a id="ac233c40e2381a0f3d0aefe0082cceeb8" name="ac233c40e2381a0f3d0aefe0082cceeb8"></a>
-static <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_getMgr</b> ()</td></tr>
+<tr class="inherit_header pro_static_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classby_1_1instance.html">by::instance</a>(으)로부터 상속된 정적 Protected 멤버 함수</td></tr>
+<tr class="memitem:ac233c40e2381a0f3d0aefe0082cceeb8 inherit pro_static_methods_classby_1_1instance" id="r_ac233c40e2381a0f3d0aefe0082cceeb8"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="classby_1_1instancer.html">instancer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_getMgr</b> ()</td></tr>
 <tr class="separator:ac233c40e2381a0f3d0aefe0082cceeb8 inherit pro_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Thread execution context for byeol runtime </p>
-<p >Represents a single program execution flow. Currently only supports single threading. thread has <a class="el" href="classby_1_1frames.html">frames</a> and <a class="el" href="classby_1_1err_report.html">errReport</a>, allowing it to construct <a class="el" href="classby_1_1frame.html">frame</a> when executing a program and collect <a class="el" href="classby_1_1err.html">err</a> that occurs during execution.</p>
+<div class="textblock"><p>Thread execution context for byeol runtime </p>
+<p>Represents a single program execution flow. Currently only supports single threading. thread has <a class="el" href="classby_1_1frames.html">frames</a> and <a class="el" href="classby_1_1err_report.html">errReport</a>, allowing it to construct <a class="el" href="classby_1_1frame.html">frame</a> when executing a program and collect <a class="el" href="classby_1_1err.html">err</a> that occurs during execution.</p>
 <h1><a class="anchor" id="builtin"></a>
 Builtin</h1>
-<p >The builtin pack consists of types/functions provided by default in the byeol language. They are always accessible without separate manifest declaration. It's similar to the standard pack, but this is a distinctly separate pack written in byeol code. However, the builtin pack is entirely in the form of exposing C++ native classes using <a class="el" href="classby_1_1tbridger.html">tbridger</a>. The types included here are only the most basic symbols like <code>int</code>, <code>str</code>, <code>arr</code>, <code>err</code>, <code>print()</code>.</p>
+<p>The builtin pack consists of types/functions provided by default in the byeol language. They are always accessible without separate manifest declaration. It's similar to the standard pack, but this is a distinctly separate pack written in byeol code. However, the builtin pack is entirely in the form of exposing C++ native classes using <a class="el" href="classby_1_1tbridger.html">tbridger</a>. The types included here are only the most basic symbols like <code>int</code>, <code>str</code>, <code>arr</code>, <code>err</code>, <code>print()</code>.</p>
 <h1><a class="anchor" id="singleton_property"></a>
 Singleton Property</h1>
-<p >thread provides <code>static thread&amp; get()</code>. Through this, scope or <a class="el" href="classby_1_1expr.html">expr</a> can access the currently active thread object. When not using the default thread and creating a thread instance directly to run a program, it's necessary to register the thread object and replace it with the original thread instance when the program ends. To make this easier, use <a class="el" href="classby_1_1thread_use.html">threadUse</a>.</p>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span>(main.canEval(a)) {</div>
-<div class="line">    threadUse thr(getReport());</div>
+<p>thread provides <code>static thread&amp; get()</code>. Through this, <a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> or <a class="el" href="classby_1_1expr.html">expr</a> can access the currently active thread object. When not using the default thread and creating a thread instance directly to run a program, it's necessary to register the thread object and replace it with the original thread instance when the program ends. To make this easier, use <a class="el" href="classby_1_1thread_use.html">threadUse</a>.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(main.canEval(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>)) {</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1thread_use.html">threadUse</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">thr</a>(getReport());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// doSomething() with new thread...</span></div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// When exiting, it&#39;s replaced with the original thread instance.</span></div>
 <div class="line"><span class="comment">// The program execution state before entering the block is restored.</span></div>
-</div><!-- fragment --><p >As shown in the above example, <a class="el" href="classby_1_1thread_use.html" title="Thread usage wrapper">threadUse</a> automatically creates a thread object internally upon creation. </p>
+<div class="ttc" id="aclassby_1_1thread_use_html"><div class="ttname"><a href="classby_1_1thread_use.html">by::threadUse</a></div><div class="ttdoc">Thread usage wrapper</div><div class="ttdef"><b>Definition</b> threadUse.hpp:11</div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+</div><!-- fragment --><p>As shown in the above example, <a class="el" href="classby_1_1thread_use.html" title="Thread usage wrapper">threadUse</a> automatically creates a thread object internally upon creation. </p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
 <a id="a83196c76226b9b2a3e89b5e90f2e778a" name="a83196c76226b9b2a3e89b5e90f2e778a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83196c76226b9b2a3e89b5e90f2e778a">&#9670;&nbsp;</a></span>thread()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83196c76226b9b2a3e89b5e90f2e778a">&#9670;&#160;</a></span>thread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,8 +593,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname">by::thread::thread </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;&#160;</td>
-          <td class="paramname"><em>new1</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>new1</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -602,7 +611,7 @@ Singleton Property</h1>
 </div>
 <h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a4437c950295a6348a986aa6e4f20d4d8" name="a4437c950295a6348a986aa6e4f20d4d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4437c950295a6348a986aa6e4f20d4d8">&#9670;&nbsp;</a></span>dump()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4437c950295a6348a986aa6e4f20d4d8">&#9670;&#160;</a></span>dump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,7 +622,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname">void by::thread::dump </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -631,7 +640,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a4974ca3d92fdaf1c15401799ee4d7bb8" name="a4974ca3d92fdaf1c15401799ee4d7bb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4974ca3d92fdaf1c15401799ee4d7bb8">&#9670;&nbsp;</a></span>eval()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4974ca3d92fdaf1c15401799ee4d7bb8">&#9670;&#160;</a></span>eval()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -642,8 +651,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname"><a class="el" href="classby_1_1tstr.html">str</a> by::thread::eval </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1args.html">args</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -659,7 +667,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a0c91aebec84cb85f862b429ce6bb4a4a" name="a0c91aebec84cb85f862b429ce6bb4a4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c91aebec84cb85f862b429ce6bb4a4a">&#9670;&nbsp;</a></span>getEx() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c91aebec84cb85f862b429ce6bb4a4a">&#9670;&#160;</a></span>getEx() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,7 +675,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname"><a class="el" href="classby_1_1err_report.html">errReport</a> &amp; by::thread::getEx </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -677,7 +685,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a83fb0879a389bbdb19eec84bcc4ad7fa" name="a83fb0879a389bbdb19eec84bcc4ad7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83fb0879a389bbdb19eec84bcc4ad7fa">&#9670;&nbsp;</a></span>getEx() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fb0879a389bbdb19eec84bcc4ad7fa">&#9670;&#160;</a></span>getEx() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,9 +694,9 @@ Singleton Property</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classby_1_1err_report.html">errReport</a> &amp; by::thread::getEx </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1err_report.html">errReport</a> &amp; by::thread::getEx </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const &amp;</td>
         </tr>
       </table>
@@ -710,15 +718,15 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a6299b46af037f269f8c75c6c5c431e59" name="a6299b46af037f269f8c75c6c5c431e59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6299b46af037f269f8c75c6c5c431e59">&#9670;&nbsp;</a></span>getSlots()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6299b46af037f269f8c75c6c5c431e59">&#9670;&#160;</a></span>getSlots()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classby_1_1tnmap.html">nmap</a> &amp; by::thread::getSlots </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp; by::thread::getSlots </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -728,7 +736,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="aba761ced98a4058d304b02d1cc26fdc6" name="aba761ced98a4058d304b02d1cc26fdc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba761ced98a4058d304b02d1cc26fdc6">&#9670;&nbsp;</a></span>isInteractable()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aba761ced98a4058d304b02d1cc26fdc6">&#9670;&#160;</a></span>isInteractable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -737,9 +745,9 @@ Singleton Property</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::thread::isInteractable </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::thread::isInteractable </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -757,7 +765,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a54a2000777ab242c7c297672a4dadd0f" name="a54a2000777ab242c7c297672a4dadd0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a2000777ab242c7c297672a4dadd0f">&#9670;&nbsp;</a></span>prioritize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a2000777ab242c7c297672a4dadd0f">&#9670;&#160;</a></span>prioritize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -768,8 +776,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname"><a class="el" href="tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608e">priorType</a> by::thread::prioritize </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1args.html">args</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1args.html">args</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -785,7 +792,7 @@ Singleton Property</h1>
 </div>
 </div>
 <a id="a05563f2bb3df2fa85310a0f37f47c343" name="a05563f2bb3df2fa85310a0f37f47c343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05563f2bb3df2fa85310a0f37f47c343">&#9670;&nbsp;</a></span>rel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a05563f2bb3df2fa85310a0f37f47c343">&#9670;&#160;</a></span>rel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -796,7 +803,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname">void by::thread::rel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -806,14 +813,14 @@ Singleton Property</h1>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Release all held resources and prepare for termination. </p><dl class="section remark"><dt>Remarks</dt><dd>Some classes won't be able to reinitialize after <a class="el" href="classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343">rel()</a> is called. </dd></dl>
+<p>Release all held resources and prepare for termination. </p><dl class="section remark"><dt>Remarks</dt><dd>Some classes won't be able to reinitialize after <a class="el" href="#a05563f2bb3df2fa85310a0f37f47c343">rel()</a> is called. </dd></dl>
 
 <p><a class="el" href="classby_1_1node.html#ac5a636219cb26fbd6c32e38f4b3a5c81">by::node</a>(으)로부터 재구현되었습니다.</p>
 
 </div>
 </div>
 <a id="a5f75c98073b0ab800565be1601bb9186" name="a5f75c98073b0ab800565be1601bb9186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f75c98073b0ab800565be1601bb9186">&#9670;&nbsp;</a></span>subs()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f75c98073b0ab800565be1601bb9186">&#9670;&#160;</a></span>subs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -824,7 +831,7 @@ Singleton Property</h1>
         <tr>
           <td class="memname"><a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> &amp; by::thread::subs </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

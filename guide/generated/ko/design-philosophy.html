@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: 디자인 철학</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -12,7 +12,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.11/highlightjs-byeol-min.js"></script>
 <script type="text/javascript" src="postprocess.js"></script>
 <script type="text/javascript" src="pageInjector.js"></script>
 <link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('design-philosophy.html',''); initResizable(); });
+$(function(){initNavTree('design-philosophy.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,43 +101,50 @@ $(document).ready(function(){initNavTree('design-philosophy.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">디자인 철학 </div></div>
+  <div class="headertitle"><div class="title">디자인 철학</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_guide_ko_design_philosophy"></a> </p><hr  />
-<h1><a class="anchor" id="autotoc_md144"></a>
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2guide_2ko_2design-philosophy"></a> </p><hr  />
+<h1><a class="anchor" id="autotoc_md12"></a>
 작은 장난감 같은 언어를 만든다</h1>
-<p >TODO: 이 섹션은 작성 중입니다.</p>
+<p>TODO: 이 섹션은 작성 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md146"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 기본 언어 기능</h1>
-<p >TODO: 이 섹션은 작성 중입니다.</p>
+<p>TODO: 이 섹션은 작성 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md148"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 한곳에서 되었다면, 다른 곳에도 되어야 한다</h1>
-<p >TODO: 이 섹션은 작성 중입니다.</p>
+<p>TODO: 이 섹션은 작성 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md150"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 간결함을 추구한다</h1>
-<p >TODO: 이 섹션은 작성 중입니다.</p>
+<p>TODO: 이 섹션은 작성 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md152"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 무조건적으로 하나의 기능을 위한 기능은 만들지 않는다</h1>
-<p >새로운 기능을 추가할 때는 먼저 충분히 생각을 해봅니다. 기존 기능들과 조립할 수 있는지를 검토하며, 개념을 압축할 수 있는지 고민합니다.</p>
+<p>새로운 기능을 추가할 때는 먼저 충분히 생각을 해봅니다. 기존 기능들과 조립할 수 있는지를 검토하며, 개념을 압축할 수 있는지 고민합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md154"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 모든 기능을 제공하는 언어를 만들지 않는다</h1>
-<p >TODO: 이 섹션은 작성 중입니다.</p>
+<p>TODO: 이 섹션은 작성 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md156"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 속도보다 유지보수를 우선한다</h1>
-<p >TODO: 기능 소개는 아니고, byeol의 비전을 공유하는 섹션입니다. 왜 이 언어를 만들었는가? AST를 그대로 취급하는 언어입니다. 빠른 수정이 가능한 언어입니다.</p>
+<p>TODO: 기능 소개는 아니고, byeol의 비전을 공유하는 섹션입니다. 왜 이 언어를 만들었는가? AST를 그대로 취급하는 언어입니다. 빠른 수정이 가능한 언어입니다.</p>
 <hr  />
  </div></div><!-- contents -->
 </div><!-- PageDoc -->

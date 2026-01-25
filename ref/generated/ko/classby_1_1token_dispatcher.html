@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::tokenDispatcher 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1token_dispatcher.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1token_dispatcher.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1token_dispatcher.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,63 +122,63 @@ $(document).ready(function(){initNavTree('classby_1_1token_dispatcher.html','');
 <div class="contents">
 
 <p>Token queue management for parser  
- <a href="classby_1_1token_dispatcher.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="token_dispatcher_8hpp_source.html">tokenDispatcher.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:aa7ce0c7ca80b69e199eccb751b27a189"><td class="memItemLeft" align="right" valign="top"><a id="aa7ce0c7ca80b69e199eccb751b27a189" name="aa7ce0c7ca80b69e199eccb751b27a189"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (nint newToken)</td></tr>
+<tr class="memitem:aa7ce0c7ca80b69e199eccb751b27a189" id="r_aa7ce0c7ca80b69e199eccb751b27a189"><td class="memItemLeft" align="right" valign="top"><a id="aa7ce0c7ca80b69e199eccb751b27a189" name="aa7ce0c7ca80b69e199eccb751b27a189"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (nint <a class="el" href="structby_1_1no_wrap.html">newToken</a>)</td></tr>
 <tr class="separator:aa7ce0c7ca80b69e199eccb751b27a189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32c8fe80b9dfe42ac152ffdd4f74979c"><td class="memItemLeft" align="right" valign="top"><a id="a32c8fe80b9dfe42ac152ffdd4f74979c" name="a32c8fe80b9dfe42ac152ffdd4f74979c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addFront</b> (nint newToken)</td></tr>
+<tr class="memitem:a32c8fe80b9dfe42ac152ffdd4f74979c" id="r_a32c8fe80b9dfe42ac152ffdd4f74979c"><td class="memItemLeft" align="right" valign="top"><a id="a32c8fe80b9dfe42ac152ffdd4f74979c" name="a32c8fe80b9dfe42ac152ffdd4f74979c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFront</b> (nint <a class="el" href="structby_1_1no_wrap.html">newToken</a>)</td></tr>
 <tr class="separator:a32c8fe80b9dfe42ac152ffdd4f74979c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08e499a3917cd55bb0ec98747effa90"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1token_dispatcher.html#ac08e499a3917cd55bb0ec98747effa90">pop</a> (nint &amp;output)</td></tr>
-<tr class="memdesc:ac08e499a3917cd55bb0ec98747effa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a token from the front of the queue.  <a href="classby_1_1token_dispatcher.html#ac08e499a3917cd55bb0ec98747effa90">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:ac08e499a3917cd55bb0ec98747effa90" id="r_ac08e499a3917cd55bb0ec98747effa90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08e499a3917cd55bb0ec98747effa90">pop</a> (nint &amp;<a class="el" href="structby_1_1no_wrap.html">output</a>)</td></tr>
+<tr class="memdesc:ac08e499a3917cd55bb0ec98747effa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a token from the front of the queue.  <br /></td></tr>
 <tr class="separator:ac08e499a3917cd55bb0ec98747effa90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf305af91d6e821c46c0340019b353c5"><td class="memItemLeft" align="right" valign="top"><a id="aaf305af91d6e821c46c0340019b353c5" name="aaf305af91d6e821c46c0340019b353c5"></a>
-ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () const</td></tr>
+<tr class="memitem:aaf305af91d6e821c46c0340019b353c5" id="r_aaf305af91d6e821c46c0340019b353c5"><td class="memItemLeft" align="right" valign="top"><a id="aaf305af91d6e821c46c0340019b353c5" name="aaf305af91d6e821c46c0340019b353c5"></a>
+<a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aaf305af91d6e821c46c0340019b353c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a7cab9f81e02e13405223dc75de820"><td class="memItemLeft" align="right" valign="top"><a id="ad9a7cab9f81e02e13405223dc75de820" name="ad9a7cab9f81e02e13405223dc75de820"></a>
+<tr class="memitem:ad9a7cab9f81e02e13405223dc75de820" id="r_ad9a7cab9f81e02e13405223dc75de820"><td class="memItemLeft" align="right" valign="top"><a id="ad9a7cab9f81e02e13405223dc75de820" name="ad9a7cab9f81e02e13405223dc75de820"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <tr class="separator:ad9a7cab9f81e02e13405223dc75de820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Token queue management for parser </p>
-<p >Manages a queue of tokens for lookahead and token reordering during parsing. Provides FIFO token dispatch with front insertion capability.</p>
+<div class="textblock"><p>Token queue management for parser </p>
+<p>Manages a queue of tokens for lookahead and token reordering during parsing. Provides FIFO token dispatch with front insertion capability.</p>
 <h1><a class="anchor" id="you"></a>
 must return token in your rule after using dispatcher</h1>
-<p >if you don't return a token in flex file, dispatcher won't work. it's by implementation of flex. for example, </p><div class="fragment"><div class="line">yourRule {</div>
-<div class="line">    PS.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
+<p>if you don't return a token in flex file, dispatcher won't work. it's by implementation of flex. for example, </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">yourRule</a> {</div>
+<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">PS</a>.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
 <div class="line">    <span class="comment">// you didn&#39;t return here because you want to feed &#39;+&#39; back.</span></div>
 <div class="line">    <span class="comment">// however, by implementation of flex, there is no chance</span></div>
 <div class="line">    <span class="comment">// to trigger tokenDispatcher.</span></div>
 <div class="line">}</div>
-<div class="line">yourSecondRule {</div>
-<div class="line">    PS.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
-<div class="line">    <span class="keywordflow">return</span> STRVAL; <span class="comment">// you returns some token. now next token will be &#39;+&#39;.</span></div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">yourSecondRule</a> {</div>
+<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">PS</a>.getDispatcher().add(<span class="charliteral">&#39;+&#39;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">STRVAL</a>; <span class="comment">// you returns some token. now next token will be &#39;+&#39;.</span></div>
 <div class="line">}</div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="it"></a>
 only takes token, not character</h1>
-<p >you may confuse that this class is just like <code>unput()</code>, but it's totally different. unput() affects stream itself. however, tokenDispatchers skips lexer and returns determined token forcely, not a single character. for example, </p><div class="fragment"><div class="line"><span class="keyword">auto</span>&amp; disp = PS.getDispatcher();</div>
-<div class="line">disp.add(<span class="charliteral">&#39;n&#39;</span>);</div>
-<div class="line">disp.add(<span class="charliteral">&#39;a&#39;</span>);</div>
-<div class="line">disp.add(<span class="charliteral">&#39;m&#39;</span>);</div>
-<div class="line">disp.add(<span class="charliteral">&#39;e&#39;</span>);</div>
-</div><!-- fragment --><p> you may think that above codes exactly same to &lsquo;unput('e&rsquo;); unput('m'); ....`. but that's not true. if you use unput(), lexer will judge the token as STRVAL which contains string value, "name". however, above codes, returns 'n' token individually to parser which makes it fail to continue. </p>
+<p>you may confuse that this class is just like <code>unput()</code>, but it's totally different. unput() affects stream itself. however, tokenDispatchers skips lexer and returns determined token forcely, not a single character. for example, </p><div class="fragment"><div class="line"><span class="keyword">auto</span>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">disp</a> = <a class="code hl_struct" href="structby_1_1no_wrap.html">PS</a>.getDispatcher();</div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">disp</a>.add(<span class="charliteral">&#39;n&#39;</span>);</div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">disp</a>.add(<span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">disp</a>.add(<span class="charliteral">&#39;m&#39;</span>);</div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">disp</a>.add(<span class="charliteral">&#39;e&#39;</span>);</div>
+</div><!-- fragment --><p> you may think that above codes exactly same to &lsquo;unput('e&rsquo;); unput('m'); ....&lsquo;. but that's not true. if you use unput(), lexer will judge the token as STRVAL which contains string value, "name". however, above codes, returns 'n&rsquo; token individually to parser which makes it fail to continue. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="ac08e499a3917cd55bb0ec98747effa90" name="ac08e499a3917cd55bb0ec98747effa90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac08e499a3917cd55bb0ec98747effa90">&#9670;&nbsp;</a></span>pop()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08e499a3917cd55bb0ec98747effa90">&#9670;&#160;</a></span>pop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::tokenDispatcher::pop </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::tokenDispatcher::pop </td>
           <td>(</td>
-          <td class="paramtype">nint &amp;&#160;</td>
-          <td class="paramname"><em>output</em></td><td>)</td>
+          <td class="paramtype">nint &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

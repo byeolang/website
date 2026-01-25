@@ -5,13 +5,7 @@ var dir_75c4b696d1c8acad04c15abc3880dd4f =
     [ "tbridge.hpp", "tbridge_8hpp.html", null ],
     [ "tbridgeClosure.hpp", "tbridge_closure_8hpp.html", null ],
     [ "tbridgeCtor.hpp", "tbridge_ctor_8hpp.html", null ],
-    [ "tbridgeFunc.hpp", "tbridge_func_8hpp.html", [
-      [ "by::tbridgeFunc< Ret, T, isBaseObj, Marshaling, Args >", "classby_1_1tbridge_func.html", null ],
-      [ "by::tbridgeFunc< void, T, false, Marshaling, Args... >", "classby_1_1tbridge_func_3_01void_00_01_t_00_01false_00_01_marshaling_00_01_args_8_8_8_01_4.html", null ],
-      [ "by::tbridgeFunc< void, T, true, Marshaling, Args... >", "classby_1_1tbridge_func_3_01void_00_01_t_00_01true_00_01_marshaling_00_01_args_8_8_8_01_4.html", null ],
-      [ "by::tbridgeFunc< Ret, T, true, Marshaling, Args... >", "classby_1_1tbridge_func_3_01_ret_00_01_t_00_01true_00_01_marshaling_00_01_args_8_8_8_01_4.html", null ]
-    ] ],
-    [ "tbridger.hpp", "tbridger_8hpp.html", [
-      [ "by::tbridger< T, true >", "classby_1_1tbridger_3_01_t_00_01true_01_4.html", null ]
-    ] ]
+    [ "tbridgeFunc.hpp", "tbridge_func_8hpp.html", "tbridge_func_8hpp" ],
+    [ "tbridgeFunc.inl", "tbridge_func_8inl_source.html", null ],
+    [ "tbridger.hpp", "tbridger_8hpp.html", "tbridger_8hpp" ]
 ];

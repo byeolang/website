@@ -26,7 +26,7 @@ var NAVTREE =
 [
   [ "byeol", "index.html", [
     [ "Hello!", "index.html", null ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Modules", "topics.html", "topics" ],
     [ "Class Index", "classes.html", null ],
     [ "File List", "files.html", "files" ]
   ] ]
@@ -35,11 +35,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"classby_1_1flag.html#a7424d288c3dc958a9862f40086054650",
-"classby_1_1stela_token_dispatcher.html#a266771f883f1910866277b233f10dd21",
-"dir_a260c3e0cc974c313833ddba13ca3728.html",
-"n_str_8hpp_source.html",
-"token_scanable_8hpp_source.html"
+"classby_1_1filters.html#aeda278e5a34f87e9588855aa1b718d24",
+"classby_1_1stela_smart_dedent.html#af2fcb5f9d2c15b3640c191ff09cb98f7",
+"dir_9259c40e70d719990b9636ca9b16cabf.html",
+"n_int_8hpp.html",
+"tnmap_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

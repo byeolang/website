@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::memoryHaver 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1memory_haver.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1memory_haver.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1memory_haver.html',''); ini
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -115,7 +123,7 @@ $(document).ready(function(){initNavTree('classby_1_1memory_haver.html',''); ini
 <div class="contents">
 
 <p>Abstract interface for objects that own memory  
- <a href="classby_1_1memory_haver.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="memory_haver_8hpp_source.html">memoryHaver.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -134,46 +142,46 @@ by::memoryHaver에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b">has</a> (const <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) const =0</td></tr>
-<tr class="memdesc:a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this memory manager "owns" or contains the given instance.  <a href="classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a1ec7fcb4322c082bbca8ce12f761fd2b" id="r_a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ec7fcb4322c082bbca8ce12f761fd2b">has</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
+<tr class="memdesc:a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this memory manager "owns" or contains the given instance.  <br /></td></tr>
 <tr class="separator:a1ec7fcb4322c082bbca8ce12f761fd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069727df2ae0b05181db801680235701"><td class="memItemLeft" align="right" valign="top"><a id="a069727df2ae0b05181db801680235701" name="a069727df2ae0b05181db801680235701"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (const <a class="el" href="classby_1_1instance.html">instance</a> *it) const <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
+<tr class="memitem:a069727df2ae0b05181db801680235701" id="r_a069727df2ae0b05181db801680235701"><td class="memItemLeft" align="right" valign="top"><a id="a069727df2ae0b05181db801680235701" name="a069727df2ae0b05181db801680235701"></a>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has)</td></tr>
 <tr class="separator:a069727df2ae0b05181db801680235701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c4717f3f6caafa5039e2c305eec5cf"><td class="memItemLeft" align="right" valign="top"><a id="a16c4717f3f6caafa5039e2c305eec5cf" name="a16c4717f3f6caafa5039e2c305eec5cf"></a>
-virtual ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () const =0</td></tr>
+<tr class="memitem:a16c4717f3f6caafa5039e2c305eec5cf" id="r_a16c4717f3f6caafa5039e2c305eec5cf"><td class="memItemLeft" align="right" valign="top"><a id="a16c4717f3f6caafa5039e2c305eec5cf" name="a16c4717f3f6caafa5039e2c305eec5cf"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a16c4717f3f6caafa5039e2c305eec5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a296a2b3fa6fb5130649dfff73443968e"><td class="memItemLeft" align="right" valign="top"><a id="a296a2b3fa6fb5130649dfff73443968e" name="a296a2b3fa6fb5130649dfff73443968e"></a>
-virtual ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const =0</td></tr>
+<tr class="memitem:a296a2b3fa6fb5130649dfff73443968e" id="r_a296a2b3fa6fb5130649dfff73443968e"><td class="memItemLeft" align="right" valign="top"><a id="a296a2b3fa6fb5130649dfff73443968e" name="a296a2b3fa6fb5130649dfff73443968e"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
 <tr class="separator:a296a2b3fa6fb5130649dfff73443968e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0939ac7a052f7ce429471433637efaa5"><td class="memItemLeft" align="right" valign="top">virtual nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#a0939ac7a052f7ce429471433637efaa5">rel</a> ()=0</td></tr>
+<tr class="memitem:a0939ac7a052f7ce429471433637efaa5" id="r_a0939ac7a052f7ce429471433637efaa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0939ac7a052f7ce429471433637efaa5">rel</a> ()=0</td></tr>
 <tr class="separator:a0939ac7a052f7ce429471433637efaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90"><td class="memItemLeft" align="right" valign="top"><a id="a0fa515bcc8063aa8b757249d4f3a4a90" name="a0fa515bcc8063aa8b757249d4f3a4a90"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () const</td></tr>
+<tr class="memitem:a0fa515bcc8063aa8b757249d4f3a4a90" id="r_a0fa515bcc8063aa8b757249d4f3a4a90"><td class="memItemLeft" align="right" valign="top"><a id="a0fa515bcc8063aa8b757249d4f3a4a90" name="a0fa515bcc8063aa8b757249d4f3a4a90"></a>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a0fa515bcc8063aa8b757249d4f3a4a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad"><td class="memItemLeft" align="right" valign="top"><a id="ad3c722229dbf04bbb7f3226589849bad" name="ad3c722229dbf04bbb7f3226589849bad"></a>
-nbool&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () const</td></tr>
+<tr class="memitem:ad3c722229dbf04bbb7f3226589849bad" id="r_ad3c722229dbf04bbb7f3226589849bad"><td class="memItemLeft" align="right" valign="top"><a id="ad3c722229dbf04bbb7f3226589849bad" name="ad3c722229dbf04bbb7f3226589849bad"></a>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isCapable</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:ad3c722229dbf04bbb7f3226589849bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:aece93fd77185150a504c4c31a3a03b16"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1memory_haver.html#aece93fd77185150a504c4c31a3a03b16">_get</a> (nidx n)=0</td></tr>
-<tr class="memdesc:aece93fd77185150a504c4c31a3a03b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to get a pointer to memory at a specific index.  <a href="classby_1_1memory_haver.html#aece93fd77185150a504c4c31a3a03b16">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:aece93fd77185150a504c4c31a3a03b16" id="r_aece93fd77185150a504c4c31a3a03b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aece93fd77185150a504c4c31a3a03b16">_get</a> (nidx <a class="el" href="structby_1_1no_wrap.html">n</a>)=0</td></tr>
+<tr class="memdesc:aece93fd77185150a504c4c31a3a03b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to get a pointer to memory at a specific index.  <br /></td></tr>
 <tr class="separator:aece93fd77185150a504c4c31a3a03b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Abstract interface for objects that own memory </p>
-<p >Base interface for classes that directly or indirectly own memory in the memory pool and can READ that memory. Defines interfaces for querying memory size and state.</p>
+<div class="textblock"><p>Abstract interface for objects that own memory </p>
+<p>Base interface for classes that directly or indirectly own memory in the memory pool and can READ that memory. Defines interfaces for querying memory size and state.</p>
 <h1><a class="anchor" id="indirect_ownership"></a>
 Indirect ownership?</h1>
-<p >"Indirect ownership" means the object doesn't directly allocate and use memory, but internal member variables handle it. If memory allocation must be done through internal members, the class should only inherit <a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a>. If allocation is also possible, inherit <a class="el" href="classby_1_1allocator.html">allocator</a>.</p>
+<p>"Indirect ownership" means the object doesn't directly allocate and use memory, but internal member variables handle it. If memory allocation must be done through internal members, the class should only inherit <a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a>. If allocation is also possible, inherit <a class="el" href="classby_1_1allocator.html">allocator</a>.</p>
 <h1><a class="anchor" id="len_and_size"></a>
 len and size</h1>
-<p >Allocatable memory size is expressed as size, while allocated memory is expressed as len. Control is based solely on void* and byte units.</p>
+<p>Allocatable memory size is expressed as size, while allocated memory is expressed as len. Control is based solely on void* and byte units.</p>
 <dl class="section remark"><dt>Remarks</dt><dd><a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a> derivatives manage different memory sizes Note that <a class="el" href="classby_1_1memory_haver.html" title="Abstract interface for objects that own memory">memoryHaver</a> derived classes each manage different sizes of memory. </dd></dl>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="aece93fd77185150a504c4c31a3a03b16" name="aece93fd77185150a504c4c31a3a03b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aece93fd77185150a504c4c31a3a03b16">&#9670;&nbsp;</a></span>_get()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aece93fd77185150a504c4c31a3a03b16">&#9670;&#160;</a></span>_get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,10 +190,9 @@ len and size</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void * by::memoryHaver::_get </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> void * by::memoryHaver::_get </td>
           <td>(</td>
-          <td class="paramtype">nidx&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">nidx</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -210,7 +217,7 @@ len and size</h1>
 </div>
 </div>
 <a id="a1ec7fcb4322c082bbca8ce12f761fd2b" name="a1ec7fcb4322c082bbca8ce12f761fd2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ec7fcb4322c082bbca8ce12f761fd2b">&#9670;&nbsp;</a></span>has()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec7fcb4322c082bbca8ce12f761fd2b">&#9670;&#160;</a></span>has()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,10 +226,9 @@ len and size</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::memoryHaver::has </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::memoryHaver::has </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classby_1_1instance.html">instance</a> &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -247,7 +253,7 @@ len and size</h1>
 </div>
 </div>
 <a id="a0939ac7a052f7ce429471433637efaa5" name="a0939ac7a052f7ce429471433637efaa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0939ac7a052f7ce429471433637efaa5">&#9670;&nbsp;</a></span>rel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0939ac7a052f7ce429471433637efaa5">&#9670;&#160;</a></span>rel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,9 +262,9 @@ len and size</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual nbool by::memoryHaver::rel </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::memoryHaver::rel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

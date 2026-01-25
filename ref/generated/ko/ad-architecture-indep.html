@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: indep 모듈 - 플랫폼 추상화 계층</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('ad-architecture-indep.html',''); initResizable(); });
+$(function(){initNavTree('ad-architecture-indep.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,23 +101,35 @@ $(document).ready(function(){initNavTree('ad-architecture-indep.html',''); initR
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">indep 모듈 - 플랫폼 추상화 계층 </div></div>
+  <div class="headertitle"><div class="title">indep 모듈 - 플랫폼 추상화 계층</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__home_runner_work_byeol_byeol_doc_ref_ko_ad_architecture_indep"></a> <a class="el" href="group__indep.html">Indep</a> 모듈은 Byeol 프로젝트의 최하위 계층으로, 플랫폼 종속적인 기능을 추상화합니다. 이 모듈의 핵심 목표는 Windows, POSIX 계열 운영체제 등 다양한 플랫폼에서 동일한 API를 제공하는 것입니다.</p>
-<p >Byeol의 아키텍처 규칙에 따라, 플랫폼 종속적인 코드(<code>#ifdef</code> 조건부 컴파일 등)는 반드시 <a class="el" href="group__indep.html">Indep</a> 모듈에만 존재해야 합니다. <a class="el" href="group__indep.html">Indep</a> 보다 상위의 모듈에서는 OS에 대한 조건부 컴파일이나 플랫폼별 분기를 사용하지 않습니다.</p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ad-architecture-indep"></a> <a class="el" href="group__indep.html">Indep</a> 모듈은 Byeol 프로젝트의 최하위 계층으로, 플랫폼 종속적인 기능을 추상화합니다. 이 모듈의 핵심 목표는 Windows, POSIX 계열 운영체제 등 다양한 플랫폼에서 동일한 API를 제공하는 것입니다. Adapter 패턴을 사용하여 플랫폼별 차이를 감추고 일관된 인터페이스를 제공합니다.</p>
+<p>또한 std::optional, result와 같은 에러를 같이 표현할 수 있는 클래스 템플릿을 제공합니다.</p>
+<p><b>indep 모듈의 주요 클래스:</b></p>
+<div class="plantumlgraph">
+<img src="inline_umlgraph_2.png" />
+</div>
+<p>Byeol의 아키텍처 규칙에 따라, 플랫폼 종속적인 코드(<code>#ifdef</code> 조건부 컴파일 등)는 반드시 <a class="el" href="group__indep.html">Indep</a> 모듈에만 존재해야 합니다. <a class="el" href="group__indep.html">Indep</a> 보다 상위의 모듈에서는 OS에 대한 조건부 컴파일이나 플랫폼별 분기를 사용하지 않습니다.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md85"></a>
 Early-return 패턴과 에러 처리</h1>
-<p >Byeol은 프로젝트 전체적으로 early-return 패턴을 적용하고 있습니다. 이는 코드의 흐름을 알기 쉽게 해주며 block 문 depth를 줄여주는 이점이 있어요.</p>
-<p >단점이라면 <code>if(checks) return res;</code>와 같은 식으로 사용하기 때문에 <code>if</code>만 보고 이 코드가 branching을 위한 if인지 아니면 return하려고 하는 if인지 구분이 되지 않는다는 점과 <code>if(checks)</code> 뒤에 블록문이 오게 되는 경우 가독성이 떨어진다는 점이에요.</p>
-<p >다음과 같은 코드를 보면 좀 체감이 될 거예요.</p>
+<p>Byeol은 프로젝트 전체적으로 early-return 패턴을 적용하고 있습니다. 이는 코드의 흐름을 알기 쉽게 해주며 block 문 depth를 줄여주는 이점이 있어요.</p>
+<p>단점이라면 <code>if(checks) return res;</code>와 같은 식으로 사용하기 때문에 <code>if</code>만 보고 이 코드가 branching을 위한 if인지 아니면 return하려고 하는 if인지 구분이 되지 않는다는 점과 <code>if(checks)</code> 뒤에 블록문이 오게 되는 경우 가독성이 떨어진다는 점이에요.</p>
+<p>다음과 같은 코드를 보면 좀 체감이 될 거예요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">str me::eval(const args&amp; a) {</div>
 <div class="line">    std::string key = _makeKey(a);</div>
@@ -137,8 +150,8 @@ Early-return 패턴과 에러 처리</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md87"></a>
 WHEN 매크로</h1>
-<p >WHEN 매크로는 이 부분을 해결하는 것으로 WHEN 은 early-return 패턴 시에만 사용됩니다. 또한 90% 이상의 early-return은 에러 발견시 로그를 찍고 에러 값을 내보내는 것 뿐이라는 것에 착안해서 그 2가지 과정을 한 줄에 표현할 수 있도록 chaining을 지원합니다.</p>
-<p >결과 다음과 같이 코드가 간략해지고 if의 목적이 명확해져요.</p>
+<p>WHEN 매크로는 이 부분을 해결하는 것으로 WHEN 은 early-return 패턴 시에만 사용됩니다. 또한 90% 이상의 early-return은 에러 발견시 로그를 찍고 에러 값을 내보내는 것 뿐이라는 것에 착안해서 그 2가지 과정을 한 줄에 표현할 수 있도록 chaining을 지원합니다.</p>
+<p>결과 다음과 같이 코드가 간략해지고 if의 목적이 명확해져요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">str me::eval(const args&amp; a) {</div>
 <div class="line">    std::string key = _makeKey(a);</div>
@@ -148,21 +161,21 @@ WHEN 매크로</h1>
 <div class="line">    if(!_cache.count(key)) _makeGeneric(key, params::make(_paramNames, a));</div>
 <div class="line">    return _cache[key];</div>
 <div class="line">}</div>
-</div><!-- fragment --><p ><b>WHEN 매크로의 동작 원리</b></p>
-<p >WHEN 매크로는 조건이 참일 때 체이닝 가능한 헬퍼 객체를 반환합니다. 이 객체는 다음 메서드들을 제공합니다:</p><ul>
+</div><!-- fragment --><p><b>WHEN 매크로 주요 API</b></p>
+<p>WHEN 매크로는 조건이 참일 때 체이닝 가능한 헬퍼 객체를 반환합니다. 이 객체는 다음 메서드들을 제공합니다:</p><ul>
 <li><code>.err(fmt, ...)</code>: 에러 로그를 출력하고 자기 자신을 반환 (체이닝 가능)</li>
 <li><code>.ret(value)</code>: 주어진 값을 반환하며 함수를 종료</li>
 </ul>
-<p >따라서 <code>WHEN(condition).err("msg").ret(value)</code>는 condition이 참일 때만 에러를 로깅하고 value를 반환합니다. 조건이 거짓이면 아무 동작도 하지 않고 다음 코드로 진행됩니다.</p>
-<p >WHEN 매크로는 프로젝트 내에서 아주 빈번하게 사용되므로 잘 파악해 두면 좋아요.</p>
+<p>따라서 <code>WHEN(condition).err("msg").ret(value)</code>는 condition이 참일 때만 에러를 로깅하고 value를 반환합니다. 조건이 거짓이면 아무 동작도 하지 않고 다음 코드로 진행됩니다.</p>
+<p>WHEN 매크로는 프로젝트 내에서 아주 빈번하게 사용되므로 잘 파악해 두면 좋아요.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md89"></a>
 tmay 클래스</h1>
-<p ><a class="el" href="classby_1_1tmay.html">tmay</a> 클래스는 값으로 반환하는 함수에 대해 속도가 느린 exception을 사용하지 않고도 에러임을 알려주는 클래스입니다. <code>std::optional&lt;T&gt;</code>과 거의 동일합니다. API look을 프로젝트 컨벤션에 맞춘 것에 가깝습니다.</p>
-<p >정상동작일 경우 <a class="el" href="classby_1_1tmay.html">tmay</a> 의 생성자로 값을 T&amp;로 넘기면 됩니다. 에러상황일 경우 기본 생성자 <code>tmay&lt;T&gt;()</code>를 사용하면 됩니다. 내부적으로 <a class="el" href="classby_1_1tmedium.html">tmedium</a> 클래스를 사용하여 값의 유무를 추적합니다. <a class="el" href="classby_1_1tmedium.html">tmedium</a> 은 값을 저장하는 중간 계층으로, T&amp;와 nullptr 모두를 받을 수 있는 유연한 인터페이스를 제공합니다.</p>
-<p ><code>has()</code> 나 <code>get()</code>, <code>rel()</code>, <code>set()</code> 함수를 제공하는데, 이는 프로젝트 전반적으로 많이 사용되는 네이밍 컨벤션입니다.</p>
-<p ><b>사용 예시</b></p>
-<p ><a class="el" href="classby_1_1tmay.html">tmay</a> 는 에러를 반환할 수 있는 함수의 반환 타입으로 사용됩니다:</p>
+<p><a class="el" href="classby_1_1tmay.html">tmay</a> 클래스는 값으로 반환하는 함수에 대해 속도가 느린 exception을 사용하지 않고도 에러임을 알려주는 클래스입니다. <code>std::optional&lt;T&gt;</code>과 거의 동일합니다. API look을 프로젝트 컨벤션에 맞춘 것에 가깝습니다.</p>
+<p>정상동작일 경우 <a class="el" href="classby_1_1tmay.html">tmay</a> 의 생성자로 값을 T&amp;로 넘기면 됩니다. 에러상황일 경우 기본 생성자 <code>tmay&lt;T&gt;()</code>를 사용하면 됩니다. 내부적으로 <a class="el" href="classby_1_1tmedium.html">tmedium</a> 클래스를 사용하여 값의 유무를 추적합니다. <a class="el" href="classby_1_1tmedium.html">tmedium</a> 은 값을 저장하는 중간 계층으로, T&amp;와 nullptr 모두를 받을 수 있는 유연한 인터페이스를 제공합니다.</p>
+<p><code>has()</code> 나 <code>get()</code>, <code>rel()</code>, <code>set()</code> 함수를 제공하는데, 이는 프로젝트 전반적으로 많이 사용되는 네이밍 컨벤션입니다.</p>
+<p><b>사용 예시</b></p>
+<p><a class="el" href="classby_1_1tmay.html">tmay</a> 는 에러를 반환할 수 있는 함수의 반환 타입으로 사용됩니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">tmay&lt;int&gt; divide(int a, int b) {</div>
 <div class="line">    if (b == 0)</div>
@@ -180,9 +193,12 @@ tmay 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md91"></a>
 tres 클래스</h1>
-<p ><a class="el" href="classby_1_1tres.html">tres</a> 클래스는 <a class="el" href="classby_1_1tmay.html">tmay</a> 와 동일하나, 에러일 경우, 원하는 에러 타입을 갖도록 정의할 수 있습니다. 예를들어 tmay는 에러인지 아닌지만 알 수 있지만, tres&lt;A, std::string&gt;으로 정의하면 에러일 경우, 어떤 에러인지 메시지도 알 수 있도록 만들 수 있습니다.</p>
-<p ><b>사용 예시</b></p>
-<p ><a class="el" href="classby_1_1tres.html">tres</a> 는 <a class="el" href="classby_1_1tmay.html">tmay</a> 와 달리 에러 정보도 함께 반환할 수 있습니다:</p>
+<p><b>tmay, tres, tmedium의 관계:</b></p>
+<div class="plantumlgraph">
+<img src="inline_umlgraph_3.png" />
+</div>
+<p><a class="el" href="classby_1_1tres.html">tres</a> 클래스는 <a class="el" href="classby_1_1tmay.html">tmay</a> 와 동일하나, 에러일 경우, 원하는 에러 타입을 갖도록 정의할 수 있습니다. 예를들어 tmay는 에러인지 아닌지만 알 수 있지만, tres&lt;A, std::string&gt;으로 정의하면 에러일 경우, 어떤 에러인지 메시지도 알 수 있도록 만들 수 있습니다. 이는 Result 타입 또는 Either 타입으로 알려진 idium입니다.</p>
+<p><b>사용 예시</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">tres&lt;int, std::string&gt; parseNumber(const std::string&amp; str) {</div>
 <div class="line">    if (str.empty())</div>
@@ -203,82 +219,44 @@ tres 클래스</h1>
 <div class="line">} else {</div>
 <div class="line">    std::string error = result.getErr(); // 에러 메시지 확인</div>
 <div class="line">}</div>
-</div><!-- fragment --><p ><b>tmay와 tres 실전 사용 예제</b></p>
-<div class="fragment"><div class="line">@style: language-cpp verified</div>
-<div class="line">// tres: 에러 원인을 알아야 하는 경우</div>
-<div class="line">enum class ErrorCode { NONE, ZERO_DIV, OVERFLOW };</div>
-<div class="line"> </div>
-<div class="line">tres&lt;int, ErrorCode&gt; betterDivide(int a, int b) {</div>
-<div class="line">    if(b == 0)</div>
-<div class="line">        return tres&lt;int, ErrorCode&gt;(ErrorCode::ZERO_DIV);</div>
-<div class="line"> </div>
-<div class="line">    if(a == INT_MAX &amp;&amp; b == -1)</div>
-<div class="line">        return tres&lt;int, ErrorCode&gt;(ErrorCode::OVERFLOW);</div>
-<div class="line"> </div>
-<div class="line">    return tres&lt;int, ErrorCode&gt;(a / b);  // 성공</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">// 사용</div>
-<div class="line">auto result2 = betterDivide(10, 0);</div>
-<div class="line">if(result2.has()) {</div>
-<div class="line">    int value = result2.get();</div>
-<div class="line">} else {</div>
-<div class="line">    ErrorCode err = result2.getErr();</div>
-<div class="line">    switch(err) {</div>
-<div class="line">        case ErrorCode::ZERO_DIV:</div>
-<div class="line">            BY_E(&quot;division by zero&quot;);</div>
-<div class="line">            break;</div>
-<div class="line">        case ErrorCode::OVERFLOW:</div>
-<div class="line">            BY_E(&quot;integer overflow&quot;);</div>
-<div class="line">            break;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">// WHEN 매크로와 함께 사용</div>
-<div class="line">tmay&lt;File*&gt; openFile(const std::string&amp; path) {</div>
-<div class="line">    File* f = File::open(path);</div>
-<div class="line">    if(!f)</div>
-<div class="line">        return tmay&lt;File*&gt;();  // 실패</div>
-<div class="line">    return tmay&lt;File*&gt;(*f);    // 성공</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">void processFile(const std::string&amp; path) {</div>
-<div class="line">    auto result = openFile(path);</div>
-<div class="line">    WHEN(!result.has()).err(&quot;failed to open: %s&quot;, path.c_str()).ret();</div>
-<div class="line"> </div>
-<div class="line">    File* file = result.get();</div>
-<div class="line">    // file 사용...</div>
-<div class="line">}</div>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md93"></a>
-플랫폼 추상화 - platformAPI 클래스</h1>
-<p ><a class="el" href="namespaceby_1_1platform_a_p_i.html">platformAPI</a> 클래스는 단발성으로 호출되는, 플랫폼 종속적인 API들을 독립적으로 제공하는 일종의 완충작용을 합니다.</p>
-<p >예를들면 텍스트 출력시 색깔을 입히려면 posix 계열 플랫폼에서는 ANSI escape sequence를 사용하지만 윈도우에서는 WINAPI를 사용해야 합니다. 이때 <a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor()</a> 를 사용하면,</p>
+platformAPI 클래스</h1>
+<p><a class="el" href="namespaceby_1_1platform_a_p_i.html">platformAPI</a> 클래스는 단발성으로 호출되는, 플랫폼 종속적인 API들을 독립적으로 제공하는 일종의 완충작용을 합니다. Facade 패턴을 사용하여 복잡한 플랫폼별 API들을 단순한 인터페이스로 제공합니다.</p>
+<p>예를들면 텍스트 출력시 색깔을 입히려면 posix 계열 플랫폼에서는 ANSI escape sequence를 사용하지만 윈도우에서는 WINAPI를 사용해야 합니다. 이렇게요.</p>
+<div class="fragment"><div class="line">@style: language-cpp verified</div>
+<div class="line">#ifdef _LINUX</div>
+<div class="line">    cout &lt;&lt; &quot;\x1B[0;34m&quot;; // blue</div>
+<div class="line">#else _WINDOWS</div>
+<div class="line">    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BLACK &lt;&lt; 4 | BLUE);</div>
+<div class="line">#endif</div>
+<div class="line"> </div>
+<div class="line">cout &lt;&lt; &quot;some message\n&quot;;</div>
+</div><!-- fragment --><p>이때 이 diff를 <a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor()</a> 라는 함수로 잘 감싸면 사용하면,</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">cout &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; &quot;(&quot; &lt;&lt; foreColor(YELLOW) &lt;&lt; _encodeNewLine(rightName)</div>
 <div class="line">     &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; &quot;)&quot;;</div>
-</div><!-- fragment --><p >와 같이 사용하면 플랫폼 독립적인 코드를 작성하게 되죠.</p>
+</div><!-- fragment --><p>와 같이 사용하면 플랫폼 독립적인 코드를 작성할 수 있죠. platformAPI는 이러한 함수들을 제공합니다.</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md95"></a>
 buildFeature 클래스</h2>
-<p ><a class="el" href="classby_1_1build_feature.html">buildFeature</a> 클래스는 CMake에 의해서 자동으로 생성되는 buildInformation.hpp 에 정의된 정보를 반환하는 클래스입니다. 절대 수동으로 값을 변경해서는 안됩니다.</p>
-<p >빌드 일시, 버전, 빌드한 OS, 바이너리 타입에 대한 정보를 갖습니다. buildInformation.hpp에 값의 원본이 #define으로 정의되어 있으므로, 필요하다면 이를 사용해도 되죠. #ifdef시에도 종종 사용되니 참고하세요.</p>
-<p >예:</p>
+<p><a class="el" href="classby_1_1build_feature.html">buildFeature</a> 클래스는 CMake에 의해서 자동으로 생성되는 buildInformation.hpp 에 정의된 정보를 반환하는 클래스입니다. 절대 수동으로 값을 변경해서는 안됩니다.</p>
+<p>빌드 일시, 버전, 빌드한 OS, 바이너리 타입에 대한 정보를 갖습니다. buildInformation.hpp에 값의 원본이 #define으로 정의되어 있으므로, 필요하다면 이를 사용해도 되죠. #ifdef시에도 종종 사용되니 참고하세요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
-<div class="line">if(buildFeature::config::isDbg())</div>
+<div class="line">if(buildFeature::config::isDbg()) // debug binary일때만 뭔가 하고 싶습니다:</div>
 <div class="line">    platformAPI::unlimitCoreDump();</div>
 <div class="line"> </div>
-<div class="line">// 혹은,</div>
+<div class="line">// 혹은, ifdef를 쓸 수도 있어요.</div>
 <div class="line"> </div>
 <div class="line">#ifdef BY_BUILD_PLATFORM_IS_WINDOWS</div>
 <div class="line">...</div>
 <div class="line">#endif</div>
-</div><!-- fragment --><p >앞서 언급했듯 Byeol의 아키텍처는 플랫폼 종속적인 코드는 반드시 <a class="el" href="group__indep.html">Indep</a> 모듈에 속해야 합니다. 따라서 <a class="el" href="group__indep.html">Indep</a> 보다 상위의 모듈에서 함부로 OS에 대한 #ifdef의 조건부 컴파일이나 getName() 을 사용해서 코드를 branch 하는 건 권장하지 않습니다.</p>
+</div><!-- fragment --><p>앞서 언급했듯 Byeol의 아키텍처는 플랫폼 종속적인 코드는 반드시 <a class="el" href="group__indep.html">Indep</a> 모듈에 속해야 합니다. 따라서 <a class="el" href="group__indep.html">Indep</a> 보다 상위의 모듈에서 함부로 OS에 대한 #ifdef의 조건부 컴파일이나 getName() 을 사용해서 코드를 branch 하는 건 권장하지 않습니다.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md97"></a>
 파일 시스템 - fsystem 클래스</h1>
-<p ><a class="el" href="classby_1_1fsystem.html">fsystem</a> 클래스는 지정한 폴더에서 파일을 재귀적으로 탐색하는 간단한 클래스입니다. 윈도우와 posix 계열 운영체제에서 모두 사용가능한 플랫폼 독립적인 API를 제공합니다. 핵심 API는 iterator 클래스를 통해 이뤄집니다.</p>
-<p >사용 예제는 아래와 같습니다.</p>
+<p><a class="el" href="classby_1_1fsystem.html">fsystem</a> 클래스는 지정한 폴더에서 파일을 재귀적으로 탐색하는 간단한 클래스입니다. 윈도우와 posix 계열 운영체제에서 모두 사용가능한 플랫폼 독립적인 API를 제공합니다. 핵심 API는 iterator 클래스를 통해 이뤄집니다.</p>
+<p>사용 예제는 아래와 같습니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">auto e = fsystem::find(&quot;../your/path&quot;);</div>
 <div class="line">while(e.next()) { // 모든 파일을 탐색하면 false를 반환한다.</div>
@@ -286,16 +264,16 @@ buildFeature 클래스</h2>
 <div class="line">    if(*e == &quot;../your/path/child/helloWorld.cpp&quot;) // 항상 상대경로를 사용한다.</div>
 <div class="line">        doSomething(e-&gt;getDir()); // 찾은 파일의 folder 경로를 반환한다.</div>
 <div class="line">}</div>
-</div><!-- fragment --><p ><b>항상 파일만을 iterate 합니다</b>. 빈 폴더가 있다면 해당 폴더는 iterate시 skip 됩니다.</p>
+</div><!-- fragment --><p><b>항상 파일만을 iterate 합니다</b>. 빈 폴더가 있다면 해당 폴더는 iterate시 skip 됩니다.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md99"></a>
 cpIter 클래스</h1>
-<p ><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 클래스는 문자열에 대해서 codepoint 기반의 iteration을 담당합니다. 주로 <a class="el" href="classby_1_1n_str.html">nStr</a> 에서 UTF8 unicode와 같은 multibyte 문자열을 순회할 때 사용합니다.</p>
-<p >일반적인 iterator 답게, 전위 증가 및 후위증가연산자, 역참조 연산자, bool 형변환 연산자 등을 지원합니다. <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 를 생성할때 순회할 문자열과 함께 기본 iteration의 방향을 지정할 수 있습니다.</p>
-<p ><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 생성시 입력한 방향은 iter 자체의 기본 방향과 초기 위치를 정의한 것입니다. reverse = true로 argument로 주면 <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 는 문자열 끝에서 역방향으로 출발합니다. 그러나 이때 stepBackward()나 stepForward()를 명시적으로 호출하면, 이 기본 방향과 관계없이 해당 방향으로 전진합니다.</p>
-<p >STL과 마찬가지로 begin은 첫번째 원소를 가리키지만, end는 마지막 원소의 다음 위치를 가리킵니다. (past-the-end) 따라서 역방향 순회시에는 먼저 next()를 해야만 합니다.</p>
-<p ><b>기본 사용 예제 (정방향 순회)</b></p>
-<p >먼저 간단한 정방향 순회 예제입니다:</p>
+<p><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 클래스는 문자열에 대해서 codepoint 기반의 iteration을 담당합니다. 주로 <a class="el" href="classby_1_1n_str.html">nStr</a> 에서 UTF8 unicode와 같은 multibyte 문자열을 순회할 때 사용합니다. Bidirectional Iterator 패턴을 구현하여 정방향과 역방향 순회를 모두 지원합니다.</p>
+<p>일반적인 iterator 답게, 전위 증가 및 후위증가연산자, 역참조 연산자, bool 형변환 연산자 등을 지원합니다. <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 를 생성할때 순회할 문자열과 함께 기본 iteration의 방향을 지정할 수 있습니다.</p>
+<p><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 생성시 입력한 방향은 iter 자체의 기본 방향과 초기 위치를 정의한 것입니다. reverse = true로 argument로 주면 <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 는 문자열 끝에서 역방향으로 출발합니다. 그러나 이때 stepBackward()나 stepForward()를 명시적으로 호출하면, 이 기본 방향과 관계없이 해당 방향으로 전진합니다.</p>
+<p>STL과 마찬가지로 begin은 첫번째 원소를 가리키지만, end는 마지막 원소의 다음 위치를 가리킵니다. (past-the-end) 따라서 역방향 순회시에는 먼저 next()를 해야만 합니다.</p>
+<p><b>기본 사용 예제 (정방향 순회)</b></p>
+<p>먼저 간단한 정방향 순회 예제입니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">std::string src = &quot;abc🏁&quot;; // UTF8에서 🏁는 4바이트로 표현되지만 1개의 codepoint다.</div>
 <div class="line">cpIter e(src); // 기본은 정방향, 첫 번째 문자를 가리킨다.</div>
@@ -305,8 +283,7 @@ cpIter 클래스</h1>
 <div class="line">    ++e; // 다음 codepoint로 이동</div>
 <div class="line">}</div>
 <div class="line">// 출력: a b c 🏁</div>
-</div><!-- fragment --><p ><b>역방향 순회 예제</b></p>
-<p >좀 더 복잡한 역방향 순회 예제예요:</p>
+</div><!-- fragment --><p><b>역방향 순회 예제</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">std::string src = &quot;abcd🏁efg&quot;; // UTF8에서 🏁는 3개의 character로 표현된다.</div>
 <div class="line">cpIter e4(src, true); // 기본 iteration 을 역방향으로 정의한다. 이때 마지막 원소의 다음 위치를 가리킨다.</div>
@@ -324,19 +301,19 @@ cpIter 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md101"></a>
 동적 라이브러리 로딩 - dlib 클래스</h1>
-<p ><a class="el" href="classby_1_1dlib.html">dlib</a> 클래스는 dynamic loading for library의 약자입니다. 플랫폼 독립적인 동적 로딩을 담당합니다. 라이브러리의 메모리 적재, 원하는 함수을 찾아 함수포인터로 변환할 수 있습니다.</p>
-<p >다음과 같이 사용합니다:</p><ol type="1">
+<p><a class="el" href="classby_1_1dlib.html">dlib</a> 클래스는 dynamic loading for library의 약자입니다. 플랫폼 독립적인 동적 로딩을 담당합니다. 라이브러리의 메모리 적재, 원하는 함수을 찾아 함수포인터로 변환할 수 있습니다.</p>
+<p>다음과 같이 사용합니다:</p><ol type="1">
 <li><a class="el" href="classby_1_1dlib.html">dlib</a> 객체를 생성한다.</li>
 <li>로딩할 라이브러리의 위치를 지정한다.</li>
 <li>함수명을 통해 원하는 함수를 찾아 함수포인터로 받는다.</li>
 </ol>
-<p ><a class="el" href="classby_1_1tmay.html">tmay</a> 를 사용하므로 <a class="el" href="classby_1_1tmay.html">tmay</a> 를 사전에 익혀두는 걸 권장합니다.</p>
-<p ><a class="el" href="classby_1_1dlib.html">dlib</a> 은 RAII idiom으로 구현되어 있습니다. 해당 인스턴스가 소멸될때 외부로 반환된 함수포인터는 사용할 수 없게 되죠.</p>
-<p ><b>사용예제</b></p>
-<p >다음 예제는 동적 라이브러리를 로드하고 함수를 호출하는 전체 과정을 보여줍니다. 코드에서 <code>rel()</code>은 리소스를 명시적으로 해제하는 함수로, 에러 발생 시 dlib 객체를 정리한 후 반환하기 위해 comma 연산자 <code>(rel(), false)</code>를 사용합니다:</p>
+<p><a class="el" href="classby_1_1tmay.html">tmay</a> 를 사용하므로 <a class="el" href="classby_1_1tmay.html">tmay</a> 를 사전에 익혀두는 걸 권장합니다.</p>
+<p><a class="el" href="classby_1_1dlib.html">dlib</a> 은 RAII idiom으로 구현되어 있습니다. 해당 인스턴스가 소멸될때 외부로 반환된 함수포인터는 사용할 수 없게 되죠.</p>
+<p><b>사용예제</b></p>
+<p>다음 예제는 동적 라이브러리를 로드하고 함수를 호출하는 전체 과정을 보여줍니다. 코드에서 <code>rel()</code>은 리소스를 명시적으로 해제하는 함수로, 에러 발생 시 dlib 객체를 정리한 후 반환하기 위해 comma 연산자 <code>(rel(), false)</code>를 사용합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">dlib lib = dlib(path); // 1번과 2번을 동시에 한다.</div>
-<div class="line">auto res = lib.load(); // `res` evaluated as true when it has an error.</div>
+<div class="line">auto res = lib.load(); // path로 지정한 so/dll 의 로딩을 시도하며, 에러 발생시 true를 반환한다.</div>
 <div class="line">WHEN(res) .err(&quot;couldn&#39;t open %s slot: %d&quot;, path, res.get()).ret((rel(), false));</div>
 <div class="line">// rel()로 리소스를 먼저 해제하고, comma 연산자로 false를 반환</div>
 <div class="line"> </div>
@@ -352,9 +329,9 @@ cpIter 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md103"></a>
 end 클래스</h1>
-<p ><a class="el" href="classby_1_1end.html">end</a> 클래스는 코드 실행을 지연시킵니다. 다른 언어에서 <code>defer</code>와 같은 키워드와 같은 역할입니다.</p>
-<p ><b>사용 예시</b></p>
-<p >RAII 패턴을 활용하여 스코프 종료 시 특정 코드를 실행합니다:</p>
+<p><a class="el" href="classby_1_1end.html">end</a> 클래스는 코드 실행을 지연시킵니다. 다른 언어에서 <code>defer</code>와 같은 키워드와 같은 역할입니다. RAII 기반의 Scope Guard 패턴을 구현하여, 스코프 종료 시 자동으로 정리 작업을 수행합니다.</p>
+<p><b>사용 예시</b></p>
+<p>RAII 패턴을 활용하여 스코프 종료 시 특정 코드를 실행합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">void processFile(const std::string&amp; path) {</div>
 <div class="line">    FILE* fp = fopen(path.c_str(), &quot;r&quot;);</div>
@@ -366,7 +343,25 @@ end 클래스</h1>
 <div class="line">    // 함수가 어떤 경로로 종료되든 cleanup이 실행됨</div>
 <div class="line">}</div>
 </div><!-- fragment --><hr  />
-<p ><b>다음 문서</b>: <a class="el" href="ae-architecture-clog.html">clog 모듈 - 로깅 시스템</a> </p>
+<h1><a class="anchor" id="autotoc_md105"></a>
+Side Func</h1>
+<p>보통의 개발자라면 편의함수를 만들어 DRY를 지키려고 노력할 겁니다. 예를들면 다음과 같은 상황이죠.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node&amp; it) <span class="keyword">const</span>; <span class="comment">// 핵심 함수</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 인자는 다르지만 결국, promote(const node&amp;)와 동작은 같습니다.</span></div>
+<div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node* it)<span class="keyword"> const </span>{</div>
+<div class="line">    <span class="comment">// 이 경우, 보통 이렇게 해왔을 겁니다.</span></div>
+<div class="line">    <span class="keywordflow">if</span>(it == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> promote(*it);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// 하지만 매번 인자를 체크하고 다른 함수를 호출하는 함수 body를 추가하는 건</span></div>
+<div class="line"><span class="comment">// 매우 지겹습니다.</span></div>
+</div><!-- fragment --><p>byeol에서는 이 편의함수를 <code>Side Func</code> 이라고 부르고 있습니다. 의미는 동일해요. 타입이 다른 인자를, 살짝 가공해서 메인이 되는 함수로 위임될 수 있도록 도와주는 함수입니다. 이 side func을 구현할때 <code>BY_SIDE_FUNC</code> 매크로를 사용해서 한줄로 표현합니다.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node&amp; it) <span class="keyword">const</span>; <span class="comment">// 핵심 함수</span></div>
+<div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node* it) <span class="keyword">const</span> <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(promote); <span class="comment">// 위 예제의 promote(const node*)와 동일한 함수입니다.</span></div>
+<div class="ttc" id="agroup__indep_html_gaf9728243b720c9bd25896286411e6e11"><div class="ttname"><a href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a></div><div class="ttdeci">#define BY_SIDE_FUNC(...)</div><div class="ttdoc">Side function macros for safe pointer operations</div><div class="ttdef"><b>Definition</b> sideFunc.hpp:24</div></div>
+</div><!-- fragment --><hr  />
+<p><b>다음 문서</b>: <a class="el" href="ae-architecture-clog.html">clog 모듈 - 로깅 시스템</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

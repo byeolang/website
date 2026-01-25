@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>byeol: by::stelaTokenDispatcher 클래스 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +20,7 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -57,10 +58,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",'검색','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','검색');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -87,7 +88,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classby_1_1stela_token_dispatcher.html',''); initResizable(); });
+$(function(){initNavTree('classby_1_1stela_token_dispatcher.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,9 +101,16 @@ $(document).ready(function(){initNavTree('classby_1_1stela_token_dispatcher.html
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -114,43 +122,42 @@ $(document).ready(function(){initNavTree('classby_1_1stela_token_dispatcher.html
 <div class="contents">
 
 <p>Token dispatcher for managing token queue during parsing  
- <a href="classby_1_1stela_token_dispatcher.html#details">더 자세히 ...</a></p>
+ <a href="#details">더 자세히 ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="stela_token_dispatcher_8hpp_source.html">stelaTokenDispatcher.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a69565cb66526bd152839fa559d04544f"><td class="memItemLeft" align="right" valign="top"><a id="a69565cb66526bd152839fa559d04544f" name="a69565cb66526bd152839fa559d04544f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (nint newToken)</td></tr>
+<tr class="memitem:a69565cb66526bd152839fa559d04544f" id="r_a69565cb66526bd152839fa559d04544f"><td class="memItemLeft" align="right" valign="top"><a id="a69565cb66526bd152839fa559d04544f" name="a69565cb66526bd152839fa559d04544f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (nint <a class="el" href="structby_1_1no_wrap.html">newToken</a>)</td></tr>
 <tr class="separator:a69565cb66526bd152839fa559d04544f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c919414fef6168bc628fd56a183a939"><td class="memItemLeft" align="right" valign="top"><a id="a4c919414fef6168bc628fd56a183a939" name="a4c919414fef6168bc628fd56a183a939"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addFront</b> (nint newToken)</td></tr>
+<tr class="memitem:a4c919414fef6168bc628fd56a183a939" id="r_a4c919414fef6168bc628fd56a183a939"><td class="memItemLeft" align="right" valign="top"><a id="a4c919414fef6168bc628fd56a183a939" name="a4c919414fef6168bc628fd56a183a939"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFront</b> (nint <a class="el" href="structby_1_1no_wrap.html">newToken</a>)</td></tr>
 <tr class="separator:a4c919414fef6168bc628fd56a183a939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a266771f883f1910866277b233f10dd21"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stela_token_dispatcher.html#a266771f883f1910866277b233f10dd21">pop</a> (nint &amp;output)</td></tr>
-<tr class="memdesc:a266771f883f1910866277b233f10dd21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a token from the front of the queue.  <a href="classby_1_1stela_token_dispatcher.html#a266771f883f1910866277b233f10dd21">더 자세히 ...</a><br /></td></tr>
+<tr class="memitem:a266771f883f1910866277b233f10dd21" id="r_a266771f883f1910866277b233f10dd21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a266771f883f1910866277b233f10dd21">pop</a> (nint &amp;<a class="el" href="structby_1_1no_wrap.html">output</a>)</td></tr>
+<tr class="memdesc:a266771f883f1910866277b233f10dd21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a token from the front of the queue.  <br /></td></tr>
 <tr class="separator:a266771f883f1910866277b233f10dd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9ec0d0039d13bbe3f638b9b1c1a2e1"><td class="memItemLeft" align="right" valign="top"><a id="aaa9ec0d0039d13bbe3f638b9b1c1a2e1" name="aaa9ec0d0039d13bbe3f638b9b1c1a2e1"></a>
-ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () const</td></tr>
+<tr class="memitem:aaa9ec0d0039d13bbe3f638b9b1c1a2e1" id="r_aaa9ec0d0039d13bbe3f638b9b1c1a2e1"><td class="memItemLeft" align="right" valign="top"><a id="aaa9ec0d0039d13bbe3f638b9b1c1a2e1" name="aaa9ec0d0039d13bbe3f638b9b1c1a2e1"></a>
+<a class="el" href="structby_1_1no_wrap.html">ncnt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:aaa9ec0d0039d13bbe3f638b9b1c1a2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c95cb6b0832794c6ef173461c9d8fa7"><td class="memItemLeft" align="right" valign="top"><a id="a7c95cb6b0832794c6ef173461c9d8fa7" name="a7c95cb6b0832794c6ef173461c9d8fa7"></a>
+<tr class="memitem:a7c95cb6b0832794c6ef173461c9d8fa7" id="r_a7c95cb6b0832794c6ef173461c9d8fa7"><td class="memItemLeft" align="right" valign="top"><a id="a7c95cb6b0832794c6ef173461c9d8fa7" name="a7c95cb6b0832794c6ef173461c9d8fa7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <tr class="separator:a7c95cb6b0832794c6ef173461c9d8fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >Token dispatcher for managing token queue during parsing </p>
-<p >Manages a queue of tokens for lookahead and token buffering during the parsing process. Supports adding tokens to front and back. </p>
+<div class="textblock"><p>Token dispatcher for managing token queue during parsing </p>
+<p>Manages a queue of tokens for lookahead and token buffering during the parsing process. Supports adding tokens to front and back. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a266771f883f1910866277b233f10dd21" name="a266771f883f1910866277b233f10dd21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a266771f883f1910866277b233f10dd21">&#9670;&nbsp;</a></span>pop()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a266771f883f1910866277b233f10dd21">&#9670;&#160;</a></span>pop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">nbool by::stelaTokenDispatcher::pop </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::stelaTokenDispatcher::pop </td>
           <td>(</td>
-          <td class="paramtype">nint &amp;&#160;</td>
-          <td class="paramname"><em>output</em></td><td>)</td>
+          <td class="paramtype">nint &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

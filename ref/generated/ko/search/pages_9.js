@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['안녕하세요_0',['안녕하세요',['../index.html',1,'']]]
+  ['계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../ad-architecture-indep.html',1,'ac-architecture-overview']]]
 ];

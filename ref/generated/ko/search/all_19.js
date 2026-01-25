@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['테스트_20케이스_20작성_20가이드_0',['테스트 케이스 작성 가이드',['../ak-testing-guide.html',1,'']]]
+  ['✅_20올바른_20예제_0',['✅ 올바른 예제',['../ab-convention-rules.html#autotoc_md36',1,'✅ 올바른 예제'],['../ab-convention-rules.html#autotoc_md39',1,'✅ 올바른 예제'],['../ab-convention-rules.html#autotoc_md43',1,'✅ 올바른 예제']]]
 ];

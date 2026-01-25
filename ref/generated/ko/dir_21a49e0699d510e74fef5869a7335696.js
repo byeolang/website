@@ -11,5 +11,6 @@ var dir_21a49e0699d510e74fef5869a7335696 =
     [ "tokenDispatcher.hpp", "token_dispatcher_8hpp.html", null ],
     [ "tokenScanable.hpp", "token_scanable_8hpp.html", null ],
     [ "tworker.hpp", "tworker_8hpp.html", null ],
+    [ "tworker.inl", "tworker_8inl_source.html", null ],
     [ "visitor.hpp", "visitor_8hpp.html", null ]
 ];
