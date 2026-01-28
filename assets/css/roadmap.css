@@ -120,10 +120,20 @@ html.dark-mode div#description-content::-webkit-scrollbar-thumb:hover {
   background-color: var(--byeol-point);
 }
 
-div.effect {
-  opacity: 0.5;
-  mix-blend-mode: color-dodge;
-  z-index: 5;
+div.zoom {
+  z-index: 10;
+  animation-name: zoomEffect;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center bottom;
+  background-image: url('./../images/tile/arrow.png')
+}
+
+@keyframes zoomEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
 }
 
 div#main-bg {
