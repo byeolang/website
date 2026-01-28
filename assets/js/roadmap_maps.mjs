@@ -87,7 +87,7 @@ const structure = new tileset.layer(
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // done
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // done
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0,  1,  2, -1, -1, -1, -1, -1], // done
-    [-1, -1, -1,  0,  1,  1,  2, -1, -1, -1, -1, -1,  7, 13,  3, -1, -1, -1, -1, -1], // done
+    [-1, -1, -1,  0,  1,  1,  2, -1, -1, -1, -1, -1,  7, -1,  3, -1, -1, -1, -1, -1], // done
     [-1,  0,  1, 29, 40, -1,  3, -1, -1, -1, -1, -1,  7, 14,  3, -1, -1, -1, -1, -1], // done
   // 5:
   //  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
@@ -223,25 +223,30 @@ const deco = new tileset.layer(
 //  they should be clickable.
 const character = new tileset.characterLayer(
   [
+    // the arrow:
     new tileset.character(
-      i18n.t('milestone1-title'),
-      'nodeSprite',
-      i18n.t('milestone1-desc'),
+      null,
+      'zoomEffect',
+      null,
       13,
-      13,
-      '4dvw',
-      '4dvw', // NOTICE: don't use dvh.
-      null
+      2,
+      '2dvw',
+      '2dvw', // NOTICE: don't use dvh.
+      ['zoom'],
+      '../assets/images/tile/arrow.png'
     ),
+
+    // milestone-intro:
     new tileset.character(
-      'effect',
-      'nodeSprite',
-      'description',
-      14,
+      i18n.t('milestone-intro-title'),
+      null,
+      i18n.t('milestone-intro-desc'),
+      13,
       3,
-      '8dvw',
-      '3dvw',
-      ['effect']
+      '4dvw',
+      '4dvw',
+      ['milestone-intro'],
+      '../assets/images/tile/13.png'
     ),
     new tileset.character(
       'milestone2',
@@ -251,6 +256,7 @@ const character = new tileset.characterLayer(
       22,
       '4dvw',
       '4dvw',
+      null,
       null
     ),
   ]

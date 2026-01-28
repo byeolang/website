@@ -39,6 +39,15 @@ export default {
   "feature-desc3": "feature3 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
 
   // roadmap:
+  'milestone-intro-title': '야생의 로드맵이 나타났다!',
+  'milestone-intro-desc': `
+    Byeol 언어 개발 과정을 작은 모험으로 담았습니다.<br/>
+    길을 따라 놓은 표지판이나 마을 등을 잘 한번 살펴보세요.<br/>
+    지나온 발자취와 앞으로 향할 목적지를 찾을 수 있습니다.<br/>
+    <br/>
+            -- kniz
+  `,
+
   'milestone1-title': 'Node Engine Dust',
   'milestone1-desc': `
     <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/FChatxFF_XA' frameborder='0' allowfullscreen></iframe></div>

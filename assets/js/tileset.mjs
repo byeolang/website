@@ -46,7 +46,7 @@ export class layer {
 }
 
 export class character {
-  constructor(name, animId, description, x, y, width, height, classes) {
+  constructor(name, animId, description, x, y, width, height, classes, image) {
     this.name = name;
     this.animId = animId;
     this.description = description;
@@ -55,6 +55,7 @@ export class character {
     this.width = width;
     this.height = height;
     this.classes = classes;
+    this.image = image
   }
 
   layout(layerElem) {
@@ -70,6 +71,8 @@ export class character {
 
     elem.style.animationName = this.animId;
     const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
+    if(this.image != null)
+      elem.style.backgroundImage = `url(${this.image})`;
     elem.style.left = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
     elem.style.top = `calc(${this.y * 4}dvw - (${this.height} - 4dvw))`;
     elem.style.width = this.width;
