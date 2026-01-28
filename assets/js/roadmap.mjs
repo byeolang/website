@@ -4,10 +4,13 @@ import * as NightBg from './nightSkyBg.mjs'
 import * as LightBg from './lightSkyBg.mjs'
 import { DoxygenAwesomeDarkModeToggle, setBg } from './doxygen-awesome-darkmode-toggle.mjs'
 import { animateNaviIcon } from './masthead-icon-animation.mjs'
+import { enableDragScroll } from './drag-scroll.mjs'
 
 var nightBg = new NightBg.NightSkyBackGrounder("div#main", 60);
 var lightBg = new LightBg.LightSkyBackGrounder("div#main", false, 20);
 setBg(nightBg, lightBg);
+
+enableDragScroll();
 
 const map = new worldMap("Roadmap", layers, 1);
 
