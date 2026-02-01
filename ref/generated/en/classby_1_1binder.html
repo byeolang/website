@@ -403,7 +403,7 @@ Why not use shared_ptr?</h1>
 <dl class="section remark"><dt>Remarks</dt><dd>Abstract nature binder is abstract, so cannot create objects. Only meaningful for generic logic using already created tstr or tweak binders.</dd></dl>
 <h1><a class="anchor" id="custom_memory_pool"></a>
 Custom memory pool</h1>
-<p>Ultimate goal of memlite is lightweight C++ memory management for byeol managed environment. Requires GC and additional memory management, implying custom memory pool and instance lifecycle management. All instance allocation starts with <a class="el" href="classby_1_1instancer.html">instancer</a>.</p>
+<p>Ultimate goal of memlite is lightweight C++ memory management for byeol runtime environment. Requires GC and additional memory management, implying custom memory pool and instance lifecycle management. All instance allocation starts with <a class="el" href="classby_1_1instancer.html">instancer</a>.</p>
 <h1><a class="anchor" id="performance_improvements"></a>
 Performance improvements</h1>
 <p>shared_ptr's algorithm stores reference counting info on heap. Using faster custom memory pool instead of heap and optimizing binding speed provides performance gains. Binding is one of the hotspots consuming most performance in byeol.</p>

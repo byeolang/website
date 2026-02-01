@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['예시의_20중요성_0',['예시의 중요성',['../am-document-convention.html#autotoc_md400',1,'']]],
-  ['예제_1',['예제',['../ab-convention-rules.html#autotoc_md36',1,'✅ 올바른 예제'],['../ab-convention-rules.html#autotoc_md39',1,'✅ 올바른 예제'],['../ab-convention-rules.html#autotoc_md43',1,'✅ 올바른 예제'],['../ab-convention-rules.html#autotoc_md44',1,'❌ 불필요하게 긴 예제'],['../ab-convention-rules.html#autotoc_md37',1,'❌ 잘못된 예제'],['../ab-convention-rules.html#autotoc_md40',1,'❌ 잘못된 예제'],['../ak-testing-guide.html#autotoc_md301',1,'실전 예제'],['../ak-testing-guide.html#autotoc_md312',1,'실전 예제']]],
-  ['예제_201_3a_20간단한_20클래스_2',['예제 1: 간단한 클래스',['../ab-convention-rules.html#autotoc_md70',1,'']]],
-  ['예제_202_3a_20복잡한_20클래스_20여러_20단락_3',['예제 2: 복잡한 클래스 - 여러 단락',['../ab-convention-rules.html#autotoc_md71',1,'']]]
+  ['연결되는_20컨테이너_0',['tnchain 클래스 - Chain으로 연결되는 컨테이너',['../ai-architecture-core.html#autotoc_md279',1,'']]],
+  ['연결_1',['frame 클래스 - Scope들의 동적 연결',['../ai-architecture-core.html#autotoc_md314',1,'']]],
+  ['연산자_20표현식_2',['FBOExpr, FUOExpr 클래스 - 연산자 표현식',['../ai-architecture-core.html#autotoc_md257',1,'']]]
 ];

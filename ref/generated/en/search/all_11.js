@@ -297,7 +297,7 @@ var searchData=
   ['type_294',['type',['../classby_1_1type.html',1,'by']]],
   ['type_295',['type',['../classby_1_1ver_stela.html#version',1,'']]],
   ['type_20convergence_296',['Type Convergence',['../classby_1_1expander.html#type_convergence',1,'']]],
-  ['type_20conversion_297',['Type Conversion',['../classby_1_1node.html#managed_vs_native',1,'Managed vs Native Type Conversion'],['../classby_1_1node.html#type_conversion',1,'Type Conversion']]],
+  ['type_20conversion_297',['Type Conversion',['../classby_1_1node.html#scripted_vs_native',1,'Scripted vs Native Type Conversion'],['../classby_1_1node.html#type_conversion',1,'Type Conversion']]],
   ['type_20identification_298',['Basic type identification',['../classby_1_1type.html#basic_type_identification',1,'']]],
   ['type_20inference_299',['Type Inference',['../classby_1_1expander.html#expressions_needing_type_inference',1,'Definition of Expressions Needing Type Inference'],['../classby_1_1node.html#infer_section',1,'Type Inference']]],
   ['type_20inference_20algorithm_300',['Prior Type Inference Algorithm',['../classby_1_1expander.html#prior_type_inference_algorithm',1,'']]],

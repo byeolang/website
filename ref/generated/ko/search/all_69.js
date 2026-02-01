@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['앞_20공백_3a_20공백_20없음_0',['괄호 앞 공백: 공백 없음',['../ab-convention-rules.html#autotoc_md55',1,'']]]
+  ['알고리즘_0',['알고리즘',['../aa-dev-env.html#autotoc_md17',1,'문서 생성 알고리즘'],['../ae-architecture-clog.html#autotoc_md115',1,'핵심 알고리즘']]]
 ];

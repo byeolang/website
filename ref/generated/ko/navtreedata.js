@@ -117,117 +117,117 @@ var NAVTREE =
     ] ],
     [ "아키텍쳐와 설계", "ac-architecture-overview.html", "ac-architecture-overview" ],
     [ "테스트 케이스 작성 가이드", "ak-testing-guide.html", [
-      [ "Unit Test (단위 테스트)", "ak-testing-guide.html#autotoc_md296", [
-        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md297", null ],
-        [ "기본 구조", "ak-testing-guide.html#autotoc_md298", null ],
-        [ "byeolTest 클래스의 주요 기능", "ak-testing-guide.html#autotoc_md299", null ],
-        [ "Google Test 검증 매크로", "ak-testing-guide.html#autotoc_md300", null ],
-        [ "실전 예제", "ak-testing-guide.html#autotoc_md301", null ]
+      [ "Unit Test (단위 테스트)", "ak-testing-guide.html#autotoc_md397", [
+        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md398", null ],
+        [ "기본 구조", "ak-testing-guide.html#autotoc_md399", null ],
+        [ "byeolTest 클래스의 주요 기능", "ak-testing-guide.html#autotoc_md400", null ],
+        [ "Google Test 검증 매크로", "ak-testing-guide.html#autotoc_md401", null ],
+        [ "실전 예제", "ak-testing-guide.html#autotoc_md402", null ]
       ] ],
-      [ "Integration Test (통합 테스트)", "ak-testing-guide.html#autotoc_md303", [
-        [ "Antipattern Test?", "ak-testing-guide.html#autotoc_md304", null ],
-        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md305", null ],
-        [ "기본 구조", "ak-testing-guide.html#autotoc_md306", null ],
-        [ "byeolIntegTest의 빌더 패턴", "ak-testing-guide.html#autotoc_md307", null ],
-        [ "파싱 결과 검증", "ak-testing-guide.html#autotoc_md308", null ],
-        [ "Negative 테스트", "ak-testing-guide.html#autotoc_md309", null ],
-        [ "shouldParsed vs shouldVerified", "ak-testing-guide.html#autotoc_md310", null ],
-        [ "런타임 에러 테스트", "ak-testing-guide.html#autotoc_md311", null ],
-        [ "실전 예제", "ak-testing-guide.html#autotoc_md312", null ]
+      [ "Integration Test (통합 테스트)", "ak-testing-guide.html#autotoc_md404", [
+        [ "Antipattern Test?", "ak-testing-guide.html#autotoc_md405", null ],
+        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md406", null ],
+        [ "기본 구조", "ak-testing-guide.html#autotoc_md407", null ],
+        [ "byeolIntegTest의 빌더 패턴", "ak-testing-guide.html#autotoc_md408", null ],
+        [ "파싱 결과 검증", "ak-testing-guide.html#autotoc_md409", null ],
+        [ "Negative 테스트", "ak-testing-guide.html#autotoc_md410", null ],
+        [ "shouldParsed vs shouldVerified", "ak-testing-guide.html#autotoc_md411", null ],
+        [ "런타임 에러 테스트", "ak-testing-guide.html#autotoc_md412", null ],
+        [ "실전 예제", "ak-testing-guide.html#autotoc_md413", null ]
       ] ],
-      [ "E2E Test (종단간 테스트)", "ak-testing-guide.html#autotoc_md314", [
-        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md315", null ],
-        [ "기본 구조", "ak-testing-guide.html#autotoc_md316", null ],
-        [ "테스트 데이터 파일", "ak-testing-guide.html#autotoc_md317", null ],
-        [ "parse와 run", "ak-testing-guide.html#autotoc_md318", null ],
-        [ "Negative 테스트", "ak-testing-guide.html#autotoc_md319", null ]
+      [ "E2E Test (종단간 테스트)", "ak-testing-guide.html#autotoc_md415", [
+        [ "파일 위치와 네이밍", "ak-testing-guide.html#autotoc_md416", null ],
+        [ "기본 구조", "ak-testing-guide.html#autotoc_md417", null ],
+        [ "테스트 데이터 파일", "ak-testing-guide.html#autotoc_md418", null ],
+        [ "parse와 run", "ak-testing-guide.html#autotoc_md419", null ],
+        [ "Negative 테스트", "ak-testing-guide.html#autotoc_md420", null ]
       ] ],
-      [ "테스트 작성 시 주의사항", "ak-testing-guide.html#autotoc_md321", [
-        [ "올바른 베이스 클래스 상속", "ak-testing-guide.html#autotoc_md322", null ],
-        [ "negative() 호출", "ak-testing-guide.html#autotoc_md323", null ],
-        [ "OR_ASSERT 사용", "ak-testing-guide.html#autotoc_md324", null ],
-        [ "shouldParsed vs shouldVerified vs run()", "ak-testing-guide.html#autotoc_md325", null ],
-        [ "Raw String Literal 구분자", "ak-testing-guide.html#autotoc_md326", null ],
-        [ "SetUp/TearDown 오버라이드", "ak-testing-guide.html#autotoc_md327", null ],
-        [ "테스트 독립성", "ak-testing-guide.html#autotoc_md328", null ],
-        [ "한 가지만 테스트", "ak-testing-guide.html#autotoc_md329", null ],
-        [ "명확한 테스트 이름", "ak-testing-guide.html#autotoc_md330", null ],
-        [ "Negative 테스트 포함", "ak-testing-guide.html#autotoc_md331", null ],
-        [ "리소스 정리", "ak-testing-guide.html#autotoc_md332", null ]
+      [ "테스트 작성 시 주의사항", "ak-testing-guide.html#autotoc_md422", [
+        [ "올바른 베이스 클래스 상속", "ak-testing-guide.html#autotoc_md423", null ],
+        [ "negative() 호출", "ak-testing-guide.html#autotoc_md424", null ],
+        [ "OR_ASSERT 사용", "ak-testing-guide.html#autotoc_md425", null ],
+        [ "shouldParsed vs shouldVerified vs run()", "ak-testing-guide.html#autotoc_md426", null ],
+        [ "Raw String Literal 구분자", "ak-testing-guide.html#autotoc_md427", null ],
+        [ "SetUp/TearDown 오버라이드", "ak-testing-guide.html#autotoc_md428", null ],
+        [ "테스트 독립성", "ak-testing-guide.html#autotoc_md429", null ],
+        [ "한 가지만 테스트", "ak-testing-guide.html#autotoc_md430", null ],
+        [ "명확한 테스트 이름", "ak-testing-guide.html#autotoc_md431", null ],
+        [ "Negative 테스트 포함", "ak-testing-guide.html#autotoc_md432", null ],
+        [ "리소스 정리", "ak-testing-guide.html#autotoc_md433", null ]
       ] ],
-      [ "디버깅", "ak-testing-guide.html#autotoc_md334", [
-        [ "특정 테스트 케이스만 실행하기", "ak-testing-guide.html#autotoc_md335", null ],
-        [ "verbose 모드", "ak-testing-guide.html#autotoc_md336", null ],
-        [ "디버거 사용", "ak-testing-guide.html#autotoc_md337", null ],
-        [ "에러 리포트 확인", "ak-testing-guide.html#autotoc_md338", null ],
-        [ "테스트 실행", "ak-testing-guide.html#autotoc_md340", null ]
+      [ "디버깅", "ak-testing-guide.html#autotoc_md435", [
+        [ "특정 테스트 케이스만 실행하기", "ak-testing-guide.html#autotoc_md436", null ],
+        [ "verbose 모드", "ak-testing-guide.html#autotoc_md437", null ],
+        [ "디버거 사용", "ak-testing-guide.html#autotoc_md438", null ],
+        [ "에러 리포트 확인", "ak-testing-guide.html#autotoc_md439", null ],
+        [ "테스트 실행", "ak-testing-guide.html#autotoc_md441", null ]
       ] ]
     ] ],
     [ "프로젝트 구조 및 빌드 산출물", "al-build-structure.html", [
-      [ "프로젝트 디렉토리 구조", "al-build-structure.html#autotoc_md343", [
-        [ "디렉토리 설명", "al-build-structure.html#autotoc_md344", [
-          [ "module/ - 소스 코드", "al-build-structure.html#autotoc_md345", null ],
-          [ "bin/ - 빌드 산출물", "al-build-structure.html#autotoc_md346", null ],
-          [ "build/ - 빌드 시스템", "al-build-structure.html#autotoc_md347", null ],
-          [ "doc/ - 문서", "al-build-structure.html#autotoc_md348", null ],
-          [ "external/ - 외부 라이브러리", "al-build-structure.html#autotoc_md349", null ]
+      [ "프로젝트 디렉토리 구조", "al-build-structure.html#autotoc_md444", [
+        [ "디렉토리 설명", "al-build-structure.html#autotoc_md445", [
+          [ "module/ - 소스 코드", "al-build-structure.html#autotoc_md446", null ],
+          [ "bin/ - 빌드 산출물", "al-build-structure.html#autotoc_md447", null ],
+          [ "build/ - 빌드 시스템", "al-build-structure.html#autotoc_md448", null ],
+          [ "doc/ - 문서", "al-build-structure.html#autotoc_md449", null ],
+          [ "external/ - 외부 라이브러리", "al-build-structure.html#autotoc_md450", null ]
         ] ]
       ] ],
-      [ "빌드 산출물", "al-build-structure.html#autotoc_md351", [
-        [ "실행 파일", "al-build-structure.html#autotoc_md352", [
-          [ "byeol", "al-build-structure.html#autotoc_md353", null ],
-          [ "test", "al-build-structure.html#autotoc_md354", null ]
+      [ "빌드 산출물", "al-build-structure.html#autotoc_md452", [
+        [ "실행 파일", "al-build-structure.html#autotoc_md453", [
+          [ "byeol", "al-build-structure.html#autotoc_md454", null ],
+          [ "test", "al-build-structure.html#autotoc_md455", null ]
         ] ],
-        [ "동적 라이브러리", "al-build-structure.html#autotoc_md355", [
-          [ "libindep", "al-build-structure.html#autotoc_md356", null ],
-          [ "libclog", "al-build-structure.html#autotoc_md357", null ],
-          [ "libmeta", "al-build-structure.html#autotoc_md358", null ],
-          [ "libmemlite", "al-build-structure.html#autotoc_md359", null ],
-          [ "libstela", "al-build-structure.html#autotoc_md360", null ],
-          [ "libcore", "al-build-structure.html#autotoc_md361", null ]
+        [ "동적 라이브러리", "al-build-structure.html#autotoc_md456", [
+          [ "libindep", "al-build-structure.html#autotoc_md457", null ],
+          [ "libclog", "al-build-structure.html#autotoc_md458", null ],
+          [ "libmeta", "al-build-structure.html#autotoc_md459", null ],
+          [ "libmemlite", "al-build-structure.html#autotoc_md460", null ],
+          [ "libstela", "al-build-structure.html#autotoc_md461", null ],
+          [ "libcore", "al-build-structure.html#autotoc_md462", null ]
         ] ],
-        [ "기타 산출물", "al-build-structure.html#autotoc_md362", [
-          [ "pack/ - 팩 파일", "al-build-structure.html#autotoc_md363", null ],
-          [ "testdata/ - 테스트 데이터", "al-build-structure.html#autotoc_md364", null ]
+        [ "기타 산출물", "al-build-structure.html#autotoc_md463", [
+          [ "pack/ - 팩 파일", "al-build-structure.html#autotoc_md464", null ],
+          [ "testdata/ - 테스트 데이터", "al-build-structure.html#autotoc_md465", null ]
         ] ]
       ] ],
-      [ "빌드 타겟", "al-build-structure.html#autotoc_md366", [
-        [ "Debug 빌드 (dbg)", "al-build-structure.html#autotoc_md367", null ],
-        [ "Release 빌드 (rel)", "al-build-structure.html#autotoc_md368", null ],
-        [ "Release with Debug Info 빌드 (reldbg)", "al-build-structure.html#autotoc_md369", null ],
-        [ "WebAssembly 빌드 (wasm)", "al-build-structure.html#autotoc_md370", null ],
-        [ "Coverage 빌드 (cov)", "al-build-structure.html#autotoc_md371", null ],
-        [ "빌드 타겟 비교표", "al-build-structure.html#autotoc_md372", null ]
+      [ "빌드 타겟", "al-build-structure.html#autotoc_md467", [
+        [ "Debug 빌드 (dbg)", "al-build-structure.html#autotoc_md468", null ],
+        [ "Release 빌드 (rel)", "al-build-structure.html#autotoc_md469", null ],
+        [ "Release with Debug Info 빌드 (reldbg)", "al-build-structure.html#autotoc_md470", null ],
+        [ "WebAssembly 빌드 (wasm)", "al-build-structure.html#autotoc_md471", null ],
+        [ "Coverage 빌드 (cov)", "al-build-structure.html#autotoc_md472", null ],
+        [ "빌드 타겟 비교표", "al-build-structure.html#autotoc_md473", null ]
       ] ],
-      [ "Git Repository 구조", "al-build-structure.html#autotoc_md374", [
-        [ "추적되는 파일", "al-build-structure.html#autotoc_md375", null ],
-        [ "추적되지 않는 파일", "al-build-structure.html#autotoc_md376", null ]
+      [ "Git Repository 구조", "al-build-structure.html#autotoc_md475", [
+        [ "추적되는 파일", "al-build-structure.html#autotoc_md476", null ],
+        [ "추적되지 않는 파일", "al-build-structure.html#autotoc_md477", null ]
       ] ],
-      [ "참고 사항", "al-build-structure.html#autotoc_md378", [
-        [ "플랫폼별 차이", "al-build-structure.html#autotoc_md379", [
-          [ "Linux", "al-build-structure.html#autotoc_md380", null ],
-          [ "macOS", "al-build-structure.html#autotoc_md381", null ],
-          [ "Windows", "al-build-structure.html#autotoc_md382", null ]
+      [ "참고 사항", "al-build-structure.html#autotoc_md479", [
+        [ "플랫폼별 차이", "al-build-structure.html#autotoc_md480", [
+          [ "Linux", "al-build-structure.html#autotoc_md481", null ],
+          [ "macOS", "al-build-structure.html#autotoc_md482", null ],
+          [ "Windows", "al-build-structure.html#autotoc_md483", null ]
         ] ],
-        [ "주의사항", "al-build-structure.html#autotoc_md383", null ]
+        [ "주의사항", "al-build-structure.html#autotoc_md484", null ]
       ] ]
     ] ],
     [ "문서 작성 규칙", "am-document-convention.html", [
-      [ "문서의 톤과 어조", "am-document-convention.html#autotoc_md386", null ],
-      [ "Doxygen 호환성", "am-document-convention.html#autotoc_md388", null ],
-      [ "문서 구조", "am-document-convention.html#autotoc_md390", null ],
-      [ "문서 체계 및 분류", "am-document-convention.html#autotoc_md392", null ],
-      [ "문서 Navigation", "am-document-convention.html#autotoc_md394", null ],
-      [ "새 문서 추가 절차", "am-document-convention.html#autotoc_md396", null ],
-      [ "문서 분할 (Subpage)", "am-document-convention.html#autotoc_md398", null ],
-      [ "예시의 중요성", "am-document-convention.html#autotoc_md400", null ],
-      [ "Style Annotation 시스템", "am-document-convention.html#autotoc_md402", [
-        [ "언어 지정", "am-document-convention.html#autotoc_md403", null ],
-        [ "실행 가능 코드 표시", "am-document-convention.html#autotoc_md404", null ],
-        [ "검증 완료 코드 표시: verified", "am-document-convention.html#autotoc_md405", null ],
-        [ "보여지는 코드와 실행 코드 분리: shown", "am-document-convention.html#autotoc_md406", null ]
+      [ "문서의 톤과 어조", "am-document-convention.html#autotoc_md487", null ],
+      [ "Doxygen 호환성", "am-document-convention.html#autotoc_md489", null ],
+      [ "문서 구조", "am-document-convention.html#autotoc_md491", null ],
+      [ "문서 체계 및 분류", "am-document-convention.html#autotoc_md493", null ],
+      [ "문서 Navigation", "am-document-convention.html#autotoc_md495", null ],
+      [ "새 문서 추가 절차", "am-document-convention.html#autotoc_md497", null ],
+      [ "문서 분할 (Subpage)", "am-document-convention.html#autotoc_md499", null ],
+      [ "예시의 중요성", "am-document-convention.html#autotoc_md501", null ],
+      [ "Style Annotation 시스템", "am-document-convention.html#autotoc_md503", [
+        [ "언어 지정", "am-document-convention.html#autotoc_md504", null ],
+        [ "실행 가능 코드 표시", "am-document-convention.html#autotoc_md505", null ],
+        [ "검증 완료 코드 표시: verified", "am-document-convention.html#autotoc_md506", null ],
+        [ "보여지는 코드와 실행 코드 분리: shown", "am-document-convention.html#autotoc_md507", null ]
       ] ],
-      [ "문서 작성 스타일", "am-document-convention.html#autotoc_md408", null ]
+      [ "문서 작성 스타일", "am-document-convention.html#autotoc_md509", null ]
     ] ],
     [ "모듈", "topics.html", "topics" ],
     [ "클래스 색인", "classes.html", null ],
@@ -238,12 +238,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"ak-testing-guide.html#autotoc_md309",
-"classby_1_1def_assign_expr.html",
-"classby_1_1pool.html#ac1b50e805ddbc54aeb24b8274fc8c1eb",
-"ctor_8hpp.html",
-"input_func_8hpp.html",
-"structby_1_1tif_sub.html"
+"ak-testing-guide.html#autotoc_md405",
+"classby_1_1ctor.html",
+"classby_1_1pool.html",
+"cp_iter_8hpp_source.html",
+"indep_2macro_8hpp_source.html",
+"structby_1_1tadaptive_super.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

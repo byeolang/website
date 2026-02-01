@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['배열_0',['arr 클래스 - Managed 배열',['../ai-architecture-core.html#autotoc_md235',1,'']]],
-  ['배열_20리터럴_1',['defArrayExpr 클래스 - 배열 리터럴',['../ai-architecture-core.html#autotoc_md226',1,'']]],
-  ['배치_2',['중괄호 스타일: 같은 줄에 배치',['../ab-convention-rules.html#autotoc_md53',1,'']]],
-  ['배치_20작업의_20기반_3',['tworker 클래스 - 배치 작업의 기반',['../ai-architecture-core.html#autotoc_md274',1,'']]]
+  ['반영된_20철학_0',['C++ 코드에 반영된 철학',['../ab-convention-rules.html#autotoc_md31',1,'']]]
 ];

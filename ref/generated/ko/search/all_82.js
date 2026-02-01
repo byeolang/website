@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['저장소_0',['scope 클래스 - Symbol 저장소',['../ai-architecture-core.html#autotoc_md250',1,'']]]
+  ['장점_0',['std::shared_ptr 대비 장점',['../ag-architecture-memlite.html#autotoc_md155',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['이름_0',['명확한 테스트 이름',['../ak-testing-guide.html#autotoc_md330',1,'']]]
+  ['의한_20패턴매칭_0',['정규식에 의한 패턴매칭',['../aj-architecture-frontend.html#autotoc_md389',1,'']]]
 ];

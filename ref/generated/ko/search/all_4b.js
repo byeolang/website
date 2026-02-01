@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['변수_3a_20camelcase_0',['클래스와 변수: camelCase',['../ab-convention-rules.html#autotoc_md35',1,'']]]
+  ['베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../ak-testing-guide.html#autotoc_md423',1,'']]]
 ];

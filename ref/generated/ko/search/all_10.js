@@ -1,7 +1,7 @@
 var searchData=
 [
   ['obj_0',['obj',['../classby_1_1obj.html',1,'by::obj'],['../classby_1_1obj.html#a3c6bfdab0bde82383bc34dbab1281124',1,'by::obj::obj()'],['../classby_1_1obj.html#af6df2b87b379af1ba6ba386d416350d9',1,'by::obj::obj(const scope &amp;subs)'],['../classby_1_1obj.html#aeadbf6d33242dd79e86ca3687356c8fc',1,'by::obj::obj(const me &amp;rhs)'],['../classby_1_1obj.html#a28fc870f01f52d8c8137040d4780b9e8',1,'by::obj::obj(const scope &amp;shares, scope &amp;owns)']]],
-  ['obj_20클래스_20managed_20객체_1',['obj 클래스 - Managed 객체',['../ai-architecture-core.html#autotoc_md213',1,'']]],
+  ['obj_20클래스_20script_20객체_1',['obj 클래스 - script 객체',['../ai-architecture-core.html#autotoc_md236',1,'']]],
   ['obj_20as_20a_20type_2',['obj as a Type',['../classby_1_1obj.html#obj_as_type',1,'']]],
   ['obj_20baseobj_20s_20origin_20object_20exists_20only_20once_3',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
   ['obj_20scope_4',['Obj Scope',['../group__core.html#obj_scope',1,'']]],
@@ -44,11 +44,11 @@ var searchData=
   ['operator_2d_3e_41',['operator-&gt;',['../classby_1_1binder.html#a31ae31b7732a4dbcf9ed895308f56c8e',1,'by::binder']]],
   ['operator_3d_3d_42',['operator==',['../classby_1_1func_type.html#a2a02405c114437ad3e88301ed89fd3c9',1,'by::funcType::operator==()'],['../classby_1_1ntype.html#a285ac10dfea37b07951801498c0549a8',1,'by::ntype::operator==()'],['../classby_1_1type.html#a8e116c6818fe73d3e95dd0837ead65dd',1,'by::type::operator==()']]],
   ['or_2ehpp_43',['or.hpp',['../or_8hpp.html',1,'']]],
-  ['or_5fassert_20사용_44',['OR_ASSERT 사용',['../ak-testing-guide.html#autotoc_md324',1,'']]],
+  ['or_5fassert_20사용_44',['OR_ASSERT 사용',['../ak-testing-guide.html#autotoc_md425',1,'']]],
   ['orgcache_45',['orgCache',['../group__core.html#gae7bef416778c285966d6b55c2184d722',1,'by']]],
   ['origin_46',['origin',['../classby_1_1origin.html',1,'by']]],
-  ['origin_20클래스_20타입의_20원본_47',['origin 클래스 - 타입의 원본',['../ai-architecture-core.html#autotoc_md214',1,'']]],
-  ['origin_20템플릿_48',['tbaseObjOrigin 클래스 - baseObj Origin 템플릿',['../ai-architecture-core.html#autotoc_md215',1,'']]],
+  ['origin_20클래스_20타입의_20원본_47',['origin 클래스 - 타입의 원본',['../ai-architecture-core.html#autotoc_md239',1,'']]],
+  ['origin_20템플릿_48',['tbaseObjOrigin 클래스 - baseObj Origin 템플릿',['../ai-architecture-core.html#autotoc_md242',1,'']]],
   ['origin_20object_20exists_20only_20once_49',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
   ['origin_20objects_50',['Origin Objects',['../classby_1_1base_obj.html#origin_object',1,'']]],
   ['origin_20returns_20nullptr_51',['Why cast&lt;origin&gt;() Returns nullptr',['../classby_1_1origin.html#why_cast_origin_returns_null',1,'']]],

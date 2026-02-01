@@ -3,7 +3,7 @@ var searchData=
   ['naming_20conventions_0',['naming conventions',['../classby_1_1allocator.html#naming_conventions',1,'']]],
   ['narriteration_1',['narrIteration',['../classnarr_iteration.html',1,'']]],
   ['narriteration_2ehpp_2',['narrIteration.hpp',['../narr_iteration_8hpp.html',1,'']]],
-  ['native_20type_20conversion_3',['Managed vs Native Type Conversion',['../classby_1_1node.html#managed_vs_native',1,'']]],
+  ['native_20type_20conversion_3',['Scripted vs Native Type Conversion',['../classby_1_1node.html#scripted_vs_native',1,'']]],
   ['native_2ehpp_4',['native.hpp',['../native_8hpp.html',1,'']]],
   ['nbool_5',['nBool',['../classby_1_1n_bool.html',1,'by']]],
   ['nbool_2ehpp_6',['nBool.hpp',['../n_bool_8hpp.html',1,'']]],

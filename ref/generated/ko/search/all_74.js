@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['왜_20일반적인_20c_20컨벤션과_20다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ab-convention-rules.html#autotoc_md29',1,'']]]
+  ['완료_20코드_20표시_3a_20verified_0',['검증 완료 코드 표시: verified',['../am-document-convention.html#autotoc_md506',1,'']]]
 ];

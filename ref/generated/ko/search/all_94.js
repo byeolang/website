@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['처리_0',['처리',['../ai-architecture-core.html#autotoc_md279',1,'에러 처리'],['../ad-architecture-indep.html#autotoc_md85',1,'Early-return 패턴과 에러 처리'],['../aj-architecture-frontend.html#autotoc_md286',1,'flag 클래스 - 명령줄 플래그 처리'],['../ai-architecture-core.html#autotoc_md218',1,'immutableTactic 클래스 - Immutable 타입 처리'],['../ah-architecture-stela.html#autotoc_md196',1,'Indentation 처리'],['../ai-architecture-core.html#autotoc_md277',1,'sigZone 클래스 - Signal 처리']]]
+  ['참고_20사항_0',['참고 사항',['../al-build-structure.html#autotoc_md479',1,'']]],
+  ['참조의_20진입점_1',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ai-architecture-core.html#autotoc_md292',1,'']]],
+  ['참조_2',['ref로 다른 코드 참조',['../ab-convention-rules.html#autotoc_md74',1,'']]],
+  ['참조_20정렬_3a_20왼쪽_20정렬_3',['포인터/참조 정렬: 왼쪽 정렬',['../ab-convention-rules.html#autotoc_md54',1,'']]]
 ];

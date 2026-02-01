@@ -1,5 +1,10 @@
 var NAVTREEINDEX5 =
 {
+"indep_2macro_8hpp_source.html":[9,0,3,10],
+"index.html":[0],
+"index.html":[],
+"initiator_8hpp.html":[9,0,3,4,8],
+"initiator_8hpp_source.html":[9,0,3,4,8],
 "input_func_8hpp.html":[9,0,1,2,2,0,0],
 "input_func_8hpp_source.html":[9,0,1,2,2,0,0],
 "instance_8hpp.html":[9,0,4,2,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX5 =
 "structby_1_1point.html":[7,4,1],
 "structby_1_1scope_register.html":[7,5,102],
 "structby_1_1sig.html":[7,5,106],
-"structby_1_1ta_empty_can.html":[7,2,5],
-"structby_1_1tadaptive_super.html":[7,2,7],
-"structby_1_1tgeneric_marshaling_3_01node_01_6_00_01true_01_4.html":[7,5,68],
-"structby_1_1tif_has_default_ctor.html":[7,2,2],
-"structby_1_1tif_has_meta_type_def.html":[7,2,10],
-"structby_1_1tif_has_super_typedef.html":[7,2,6]
+"structby_1_1ta_empty_can.html":[7,2,5]
 };

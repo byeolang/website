@@ -27,6 +27,6 @@ var searchData=
   ['visitor_2ehpp_24',['visitor.hpp',['../visitor_8hpp.html',1,'(Global Namespace)'],['../visitor_2visitor_8hpp.html',1,'(Global Namespace)']]],
   ['vs_20explicit_20conversion_25',['Implicit vs Explicit Conversion',['../classby_1_1node.html#implicit_explicit',1,'']]],
   ['vs_20implementation_20gap_26',['Error Concept vs Implementation Gap',['../classby_1_1base_err.html#error_concept_vs_implementation',1,'']]],
-  ['vs_20native_20type_20conversion_27',['Managed vs Native Type Conversion',['../classby_1_1node.html#managed_vs_native',1,'']]],
+  ['vs_20native_20type_20conversion_27',['Scripted vs Native Type Conversion',['../classby_1_1node.html#scripted_vs_native',1,'']]],
   ['vs_20starter_28',['verifier vs starter',['../classby_1_1verifier.html#verifier_vs_starter',1,'']]]
 ];

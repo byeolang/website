@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../ak-testing-guide.html#autotoc_md322',1,'']]]
+  ['범용_20바인더_20제공_0',['범용 바인더 제공',['../ag-architecture-memlite.html#autotoc_md157',1,'']]],
+  ['범위형_20컨테이너_1',['nseq 클래스 - 범위형 컨테이너',['../ai-architecture-core.html#autotoc_md285',1,'']]]
 ];

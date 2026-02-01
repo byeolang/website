@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['특정_20테스트_20케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../ak-testing-guide.html#autotoc_md335',1,'']]]
+  ['통합_20테스트_0',['Integration Test (통합 테스트)',['../ak-testing-guide.html#autotoc_md404',1,'']]]
 ];
