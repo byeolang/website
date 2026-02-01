@@ -1,3 +1,5 @@
+import { i18n } from './lang-toggle.mjs'
+
 export class layer {
   constructor(map) {
     this.map = map;
@@ -46,10 +48,10 @@ export class layer {
 }
 
 export class character {
-  constructor(name, animId, description, x, y, width, height, classes, image) {
-    this.name = name;
+  constructor(title, animId, desc, x, y, width, height, classes, image) {
+    this.name = i18n.t(title);
     this.animId = animId;
-    this.description = description;
+    this.description = i18n.t(desc);
     this.x = x;
     this.y = y;
     this.width = width;

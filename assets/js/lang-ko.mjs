@@ -48,7 +48,7 @@ export default {
             -- kniz
   `,
 
-  'milestone1-title': 'Node Engine Dust',
+  'milestone1-title': 'v0.0.1 Seed Update',
   'milestone1-desc': `
     <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/FChatxFF_XA' frameborder='0' allowfullscreen></iframe></div>
     한국말, 잘 나옵니까<br/>
@@ -64,4 +64,30 @@ export default {
     11long long description<br/>
     12very long description<br/>
   `,
+
+  'milestone0-title': 'Node Engine Dust',
+  'milestone0-desc': 'ssss',
+
+  'milestone-sign1-title': '낡은 표지판',
+  'milestone-sign1-desc': 'sign1',
+
+  'milestone2-title': 'v0.0.3 Seed Update Final',
+  'milestone2-desc': `
+    12very long description<br/>
+  `,
+
+  'milestone3-title': "v0.1.7 Essence Update 0.7 Final",
+  'milestone3-desc': "desc3",
+
+  'milestone5-title': '빛바랜 표지판',
+  'milestone5-desc': 'desc5',
+
+  'milestone4-title': 'website',
+  'milestone4-desc': 'desc4',
+
+  'milestone6-title': 'v0.2.x Mana Update',
+  'milestone6-desc': 'desc6',
+
+  'milestone7-title': 'v0.3.x Spirit&Fairy Update',
+  'milestone7-desc': 'desc7'
 };
