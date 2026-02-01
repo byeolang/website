@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['문서의_20종류_0',['문서의 종류',['../aa-dev-env.html#autotoc_md18',1,'']]],
-  ['문서의_20톤과_20어조_1',['문서의 톤과 어조',['../am-document-convention.html#autotoc_md386',1,'']]],
-  ['문서의_20doxygen_20커스터마이징_2',['문서의 doxygen 커스터마이징',['../aa-dev-env.html#autotoc_md19',1,'']]],
-  ['문서화_20표준_3',['문서화 표준',['../ab-convention-rules.html#autotoc_md63',1,'']]],
-  ['문서_4',['doc/ - 문서',['../al-build-structure.html#autotoc_md348',1,'']]],
-  ['문서_20구조_5',['문서 구조',['../am-document-convention.html#autotoc_md390',1,'']]],
-  ['문서_20분할_20subpage_6',['문서 분할 (Subpage)',['../am-document-convention.html#autotoc_md398',1,'']]],
-  ['문서_20생성_7',['가이드 / 레퍼런스 문서 생성',['../aa-dev-env.html#autotoc_md16',1,'']]],
-  ['문서_20생성_20알고리즘_8',['문서 생성 알고리즘',['../aa-dev-env.html#autotoc_md17',1,'']]],
-  ['문서_20작성_20규칙_9',['문서 작성 규칙',['../am-document-convention.html',1,'']]],
-  ['문서_20작성_20스타일_10',['문서 작성 스타일',['../am-document-convention.html#autotoc_md408',1,'']]],
-  ['문서_20체계_20및_20분류_11',['문서 체계 및 분류',['../am-document-convention.html#autotoc_md392',1,'']]],
-  ['문서_20추가_20절차_12',['새 문서 추가 절차',['../am-document-convention.html#autotoc_md396',1,'']]],
-  ['문서_20navigation_13',['문서 Navigation',['../am-document-convention.html#autotoc_md394',1,'']]]
+  ['모델_0',['객체 모델',['../ai-architecture-core.html#autotoc_md229',1,'']]],
+  ['모듈을_20마무리_20하며_1',['core 모듈을 마무리 하며',['../ai-architecture-core.html#autotoc_md382',1,'']]],
+  ['모듈_20경량_20설정_20언어_2',['stela 모듈 - 경량 설정 언어',['../ah-architecture-stela.html',1,'ac-architecture-overview']]],
+  ['모듈_20런타임_20타입_20시스템_3',['meta 모듈 - 런타임 타입 시스템',['../af-architecture-meta.html',1,'ac-architecture-overview']]],
+  ['모듈_20로깅_20시스템_4',['clog 모듈 - 로깅 시스템',['../ae-architecture-clog.html',1,'ac-architecture-overview']]],
+  ['모듈_20언어_20구현의_20핵심_5',['core 모듈 - 언어 구현의 핵심',['../ai-architecture-core.html',1,'ac-architecture-overview']]],
+  ['모듈_20커스텀_20메모리_20관리_6',['memlite 모듈 - 커스텀 메모리 관리',['../ag-architecture-memlite.html',1,'ac-architecture-overview']]],
+  ['모듈_20플랫폼_20추상화_20계층_7',['indep 모듈 - 플랫폼 추상화 계층',['../ad-architecture-indep.html',1,'ac-architecture-overview']]],
+  ['모듈_20cli_20인터페이스_8',['frontend 모듈 - CLI 인터페이스',['../aj-architecture-frontend.html',1,'ac-architecture-overview']]],
+  ['모드_9',['verbose 모드',['../ak-testing-guide.html#autotoc_md437',1,'']]],
+  ['모드_20전략_10',['stelaTokenScan 클래스 - 스캔 모드 전략',['../ah-architecture-stela.html#autotoc_md199',1,'']]]
 ];

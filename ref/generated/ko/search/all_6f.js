@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['연결되는_20컨테이너_0',['tnchain 클래스 - Chain으로 연결되는 컨테이너',['../ai-architecture-core.html#autotoc_md234',1,'']]],
-  ['연결_1',['frame 클래스 - Scope들의 동적 연결',['../ai-architecture-core.html#autotoc_md251',1,'']]],
-  ['연산자_20표현식_2',['FBOExpr, FUOExpr 클래스 - 연산자 표현식',['../ai-architecture-core.html#autotoc_md223',1,'']]]
+  ['여러_20단락_0',['예제 2: 복잡한 클래스 - 여러 단락',['../ab-convention-rules.html#autotoc_md71',1,'']]],
+  ['여정을_20함께하느라_20고생하셨습니다_1',['긴 여정을 함께하느라 고생하셨습니다.',['../aj-architecture-frontend.html#autotoc_md394',1,'']]]
 ];

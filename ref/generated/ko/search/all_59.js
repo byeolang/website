@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['새_20문서_20추가_20절차_0',['새 문서 추가 절차',['../am-document-convention.html#autotoc_md396',1,'']]]
+  ['상속_0',['올바른 베이스 클래스 상속',['../ak-testing-guide.html#autotoc_md423',1,'']]]
 ];

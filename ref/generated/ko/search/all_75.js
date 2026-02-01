@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['외부_20라이브러리_0',['external/ - 외부 라이브러리',['../al-build-structure.html#autotoc_md349',1,'']]]
+  ['왜_20일반적인_20c_20컨벤션과_20다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ab-convention-rules.html#autotoc_md29',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['포인터_20참조_20정렬_3a_20왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ab-convention-rules.html#autotoc_md54',1,'']]],
-  ['포함_1',['포함',['../ab-convention-rules.html#autotoc_md78',1,'헤더 파일 포함'],['../ak-testing-guide.html#autotoc_md331',1,'Negative 테스트 포함']]]
+  ['팩_20파일_0',['pack/ - 팩 파일',['../al-build-structure.html#autotoc_md464',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['체계_20및_20분류_0',['문서 체계 및 분류',['../am-document-convention.html#autotoc_md392',1,'']]],
-  ['체킹_1',['동적 타입 체킹',['../ag-architecture-memlite.html#autotoc_md158',1,'']]]
+  ['철학을_20요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ab-convention-rules.html#autotoc_md30',1,'']]],
+  ['철학_1',['철학',['../ab-convention-rules.html#autotoc_md42',1,'네이밍 철학'],['../ab-convention-rules.html#autotoc_md31',1,'C++ 코드에 반영된 철학']]]
 ];

@@ -119,7 +119,7 @@ $(function(){initNavTree('al-build-structure.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2al-build-structure"></a> 이 문서는 Byeol 프로젝트의 디렉토리 구조와 빌드 과정에서 생성되는 산출물들에 대해 설명합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md343"></a>
+<h1><a class="anchor" id="autotoc_md444"></a>
 프로젝트 디렉토리 구조</h1>
 <p>Byeol 프로젝트는 다음과 같은 디렉토리 구조를 가지고 있습니다:</p>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
@@ -158,105 +158,105 @@ $(function(){initNavTree('al-build-structure.html',''); initResizable(); });
 <div class="line">│</div>
 <div class="line">└── external/         # 외부 라이브러리 (자동 생성, 수정 금지)</div>
 <div class="line">    └── googletest/   # Google Test 프레임워크</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md344"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md445"></a>
 디렉토리 설명</h2>
-<h3><a class="anchor" id="autotoc_md345"></a>
+<h3><a class="anchor" id="autotoc_md446"></a>
 module/ - 소스 코드</h3>
 <p>Byeol 프로젝트의 모든 C++ 소스 코드가 위치합니다. 각 하위 디렉토리는 독립적인 모듈이며 계층형 의존성을 가집니다. 계층 구조는 indep → clog → meta → memlite → stela → core → frontend 순서이며, 상위 계층은 하위 계층에만 의존할 수 있습니다.</p>
-<h3><a class="anchor" id="autotoc_md346"></a>
+<h3><a class="anchor" id="autotoc_md447"></a>
 bin/ - 빌드 산출물</h3>
 <p><b>자동 생성 디렉토리</b>로, 빌드 과정에서 자동으로 생성됩니다. 모든 실행 파일과 동적 라이브러리가 이곳에 배치됩니다. 빌드 후 <code>byeol</code> 실행 파일을 직접 실행할 수 있으며, <code>builder.py clean</code> 명령으로 정리됩니다.</p>
-<h3><a class="anchor" id="autotoc_md347"></a>
+<h3><a class="anchor" id="autotoc_md448"></a>
 build/ - 빌드 시스템</h3>
 <p>CMake 설정 파일과 빌드 스크립트가 위치합니다. <code>builder.py</code>를 통해 모든 빌드 작업을 수행하며, CMake 중간 산출물(오브젝트 파일, 정적 라이브러리 등)이 <code>build/module/</code> 하위에 생성됩니다.</p>
-<h3><a class="anchor" id="autotoc_md348"></a>
+<h3><a class="anchor" id="autotoc_md449"></a>
 doc/ - 문서</h3>
 <p>가이드 문서는 Byeol 언어의 사용법을 설명하는 문서이고, 레퍼런스 문서는 C++ 코드베이스 개발을 위한 문서입니다. 각 문서는 영어(en)와 한국어(ko) 버전으로 제공됩니다. <code>builder.py doc</code> 명령으로 HTML 문서를 생성합니다.</p>
-<h3><a class="anchor" id="autotoc_md349"></a>
+<h3><a class="anchor" id="autotoc_md450"></a>
 external/ - 외부 라이브러리</h3>
 <p><b>자동 생성 디렉토리</b>로, CMake가 자동으로 외부 라이브러리를 다운로드하고 빌드합니다. <b>수동 수정 금지</b>이므로 이 디렉토리의 내용을 직접 수정하지 마세요. 현재 Google Test만 사용 중입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md351"></a>
+<h1><a class="anchor" id="autotoc_md452"></a>
 빌드 산출물</h1>
 <p>빌드 과정에서 생성되는 산출물들은 모두 <code>bin/</code> 디렉토리에 배치됩니다.</p>
-<h2><a class="anchor" id="autotoc_md352"></a>
+<h2><a class="anchor" id="autotoc_md453"></a>
 실행 파일</h2>
-<h3><a class="anchor" id="autotoc_md353"></a>
+<h3><a class="anchor" id="autotoc_md454"></a>
 byeol</h3>
 <p><b>경로</b>는 <code>bin/byeol</code>(Linux/macOS) 또는 <code>bin/byeol.exe</code>(Windows)입니다. Byeol 언어의 메인 인터프리터 실행 파일로, Byeol 스크립트 파일을 실행하거나 REPL 모드로 동작해요. 실행 예시는 다음과 같습니다: </p><div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./bin/byeol script.by          # 스크립트 실행</div>
 <div class="line">./bin/byeol                    # REPL 모드</div>
 <div class="line">./bin/byeol --help             # 도움말 출력</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md354"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md455"></a>
 test</h3>
 <p><b>경로</b>는 <code>bin/test</code>입니다. Google Test 기반의 테스트 실행 파일로, 모든 모듈의 유닛 테스트 및 통합 테스트를 실행합니다. Linux와 macOS만 지원하며 Windows는 미지원이에요. 실행 예시는 다음과 같습니다: </p><div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./bin/test                               # 모든 테스트 실행</div>
 <div class="line">./bin/test verbose                       # 상세 로그 출력</div>
 <div class="line">./bin/test --gtest_filter=&quot;clogTest.*&quot;   # 특정 테스트만 실행</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md355"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md456"></a>
 동적 라이브러리</h2>
 <p>각 모듈은 독립적인 동적 라이브러리로 빌드됩니다. 라이브러리 확장자는 플랫폼에 따라 다릅니다. <b>Linux</b>에서는 <code>.so</code>(Shared Object), <b>macOS</b>에서는 <code>.dylib</code>(Dynamic Library), <b>Windows</b>에서는 <code>.dll</code>(Dynamic Link Library)을 사용해요.</p>
-<h3><a class="anchor" id="autotoc_md356"></a>
+<h3><a class="anchor" id="autotoc_md457"></a>
 libindep</h3>
 <p><b>경로</b>는 <code>bin/libindep.{so,dylib,dll}</code>입니다. 플랫폼 추상화 계층 라이브러리로, OS별 파일 시스템, 시간, 스레드 등의 플랫폼 종속 기능을 추상화합니다.</p>
-<h3><a class="anchor" id="autotoc_md357"></a>
+<h3><a class="anchor" id="autotoc_md458"></a>
 libclog</h3>
 <p><b>경로</b>는 <code>bin/libclog.{so,dylib,dll}</code>입니다. 로깅 서브시스템 라이브러리로, 설정 가능한 로그 레벨, 포맷, 스레드 안전 로깅을 제공합니다.</p>
-<h3><a class="anchor" id="autotoc_md358"></a>
+<h3><a class="anchor" id="autotoc_md459"></a>
 libmeta</h3>
 <p><b>경로</b>는 <code>bin/libmeta.{so,dylib,dll}</code>입니다. 타입 메타데이터 관리 라이브러리로, 런타임 타입 정보(RTTI) 및 리플렉션 기능을 제공합니다.</p>
-<h3><a class="anchor" id="autotoc_md359"></a>
+<h3><a class="anchor" id="autotoc_md460"></a>
 libmemlite</h3>
 <p><b>경로</b>는 <code>bin/libmemlite.{so,dylib,dll}</code>입니다. 경량 메모리 관리 라이브러리로, 메모리 풀 기반 할당으로 성능을 최적화합니다.</p>
-<h3><a class="anchor" id="autotoc_md360"></a>
+<h3><a class="anchor" id="autotoc_md461"></a>
 libstela</h3>
 <p><b>경로</b>는 <code>bin/libstela.{so,dylib,dll}</code>입니다. 설정 파싱 계층 라이브러리로, <code>manifest.stela</code> 파일 파싱 및 설정 관리를 담당합니다.</p>
-<h3><a class="anchor" id="autotoc_md361"></a>
+<h3><a class="anchor" id="autotoc_md462"></a>
 libcore</h3>
 <p><b>경로</b>는 <code>bin/libcore.{so,dylib,dll}</code>입니다. 핵심 언어 구현 라이브러리로, AST, Parser, Verifier, 패키지 로딩 등 언어의 핵심 기능을 담당합니다. 가장 크고 복잡한 라이브러리입니다.</p>
-<h2><a class="anchor" id="autotoc_md362"></a>
+<h2><a class="anchor" id="autotoc_md463"></a>
 기타 산출물</h2>
-<h3><a class="anchor" id="autotoc_md363"></a>
+<h3><a class="anchor" id="autotoc_md464"></a>
 pack/ - 팩 파일</h3>
 <p><b>경로</b>는 <code>bin/pack/</code>입니다. Byeol 언어의 번들 팩들이 빌드되어 배치되는 디렉토리로, <code>sys</code> 번들 팩(기본 타입, 함수 등)이 포함됩니다. 확장자는 <code>.pack</code>입니다.</p>
-<h3><a class="anchor" id="autotoc_md364"></a>
+<h3><a class="anchor" id="autotoc_md465"></a>
 testdata/ - 테스트 데이터</h3>
 <p><b>경로</b>는 <code>bin/testdata/</code>입니다. 테스트 실행에 필요한 데이터 파일들로, <code>module/test/testdata/</code>의 내용이 빌드 시 복사됩니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md366"></a>
+<h1><a class="anchor" id="autotoc_md467"></a>
 빌드 타겟</h1>
 <p><code>builder.py</code>는 여러 빌드 타겟을 지원합니다. 각 타겟은 최적화 수준과 디버깅 정보 포함 여부가 다릅니다.</p>
-<h2><a class="anchor" id="autotoc_md367"></a>
+<h2><a class="anchor" id="autotoc_md468"></a>
 Debug 빌드 (dbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py dbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 없음(<code>-O0</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>), <b>특수 플래그</b>로는 <code>-DBY_DEBUG</code>, <code>-D_GLIBCXX_DEBUG</code>를 사용합니다. 개발 중 디버깅과 상세한 에러 메시지 확인을 위해 사용되죠.</p>
 <p>실행 속도가 느리고 바이너리 크기가 크지만, 디버거(gdb, lldb)로 편리하게 디버깅할 수 있습니다. 추가 런타임 검증이 활성화됩니다(STL 디버그 모드).</p>
-<h2><a class="anchor" id="autotoc_md368"></a>
+<h2><a class="anchor" id="autotoc_md469"></a>
 Release 빌드 (rel)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py rel</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 배포용 빌드로 사용됩니다.</p>
 <p>실행 속도가 빠르고 바이너리 크기가 작지만, 디버깅이 어렵습니다.</p>
-<h2><a class="anchor" id="autotoc_md369"></a>
+<h2><a class="anchor" id="autotoc_md470"></a>
 Release with Debug Info 빌드 (reldbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py reldbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>)합니다. Release 빌드에서만 발생하는 버그를 디버깅할 때 사용됩니다.</p>
 <p>Release 수준의 최적화가 적용되어 디버거 사용이 가능하지만, 최적화로 인해 일부 변수는 추적할 수 없습니다. 바이너리 크기는 Debug보다는 작지만 Release보다는 큽니다.</p>
-<h2><a class="anchor" id="autotoc_md370"></a>
+<h2><a class="anchor" id="autotoc_md471"></a>
 WebAssembly 빌드 (wasm)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py wasm</div>
 </div><!-- fragment --><p><b>최적화</b>는 웹 환경 최적화(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 웹 브라우저에서 Byeol을 실행하기 위해 사용됩니다.</p>
 <p>산출물로는 <code>.wasm</code> 파일(WebAssembly 바이너리)과 <code>.js</code> 파일(WebAssembly를 로드하고 실행하는 JavaScript 래퍼)이 생성됩니다. Emscripten 컴파일러를 사용하며, 동적 라이브러리 대신 정적 라이브러리(<code>.a</code>)를 생성합니다. <code>test</code> 모듈과 <code>bundle</code> 모듈은 빌드에서 제외됩니다.</p>
-<h2><a class="anchor" id="autotoc_md371"></a>
+<h2><a class="anchor" id="autotoc_md472"></a>
 Coverage 빌드 (cov)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py cov</div>
 </div><!-- fragment --><p><b>최적화</b>는 Debug 수준, <b>디버깅 심볼</b>은 포함입니다. 코드 커버리지 측정을 위해 사용됩니다.</p>
 <p><b>특수 플래그</b>로는 Clang의 경우 <code>-fprofile-instr-generate -fcoverage-mapping</code>을, GCC의 경우 <code>-fprofile-arcs -ftest-coverage</code>를 사용합니다. Linux와 macOS만 지원합니다. 테스트 실행 후 커버리지 리포트를 생성하며, <code>.profraw</code> 또는 <code>.gcda</code> 파일이 생성됩니다.</p>
-<h2><a class="anchor" id="autotoc_md372"></a>
+<h2><a class="anchor" id="autotoc_md473"></a>
 빌드 타겟 비교표</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -273,29 +273,29 @@ Coverage 빌드 (cov)</h2>
 <td class="markdownTableBodyNone">cov   </td><td class="markdownTableBodyNone">없음 (-O0)   </td><td class="markdownTableBodyNone">✓   </td><td class="markdownTableBodyNone">큼   </td><td class="markdownTableBodyNone">느림   </td><td class="markdownTableBodyNone">커버리지 측정   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md374"></a>
+<h1><a class="anchor" id="autotoc_md475"></a>
 Git Repository 구조</h1>
-<h2><a class="anchor" id="autotoc_md375"></a>
+<h2><a class="anchor" id="autotoc_md476"></a>
 추적되는 파일</h2>
 <p>Git으로 버전 관리되는 주요 디렉토리와 파일은 다음과 같습니다. <code>module/</code>은 모든 소스 코드를, <code>build/</code>는 빌드 스크립트 및 설정 파일(<code>builder.py</code>, <code>CMakeLists.txt</code>, <code>doxygen/</code> 문서 생성 설정)을 포함합니다. <code>doc/</code>은 문서 소스(Markdown)를, <code>.clang-format</code>은 코드 포맷팅 규칙을, <code>.clang-tidy</code>는 정적 분석 규칙을, <code>.gitignore</code>는 Git 무시 패턴을 정의합니다.</p>
-<h2><a class="anchor" id="autotoc_md376"></a>
+<h2><a class="anchor" id="autotoc_md477"></a>
 추적되지 않는 파일</h2>
 <p><code>.gitignore</code>에 의해 무시되는 디렉토리(자동 생성)는 다음과 같습니다. <code>bin/</code>은 빌드 산출물을, <code>build/module/</code>은 CMake 중간 산출물을, <code>build/.cmake/</code>는 CMake 캐시를, <code>external/</code>은 외부 라이브러리를 포함합니다. 또한 <code>*.o</code>, <code>*.a</code>, <code>*.so</code>, <code>*.dylib</code>, <code>*.dll</code>과 같은 컴파일 산출물과 <code>*.profraw</code>, <code>*.gcda</code>, <code>*.gcno</code>와 같은 커버리지 데이터도 무시됩니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md378"></a>
+<h1><a class="anchor" id="autotoc_md479"></a>
 참고 사항</h1>
-<h2><a class="anchor" id="autotoc_md379"></a>
+<h2><a class="anchor" id="autotoc_md480"></a>
 플랫폼별 차이</h2>
-<h3><a class="anchor" id="autotoc_md380"></a>
+<h3><a class="anchor" id="autotoc_md481"></a>
 Linux</h3>
 <p>Linux에서는 동적 라이브러리 확장자로 <code>.so</code>를 사용합니다. 모든 빌드 타겟을 지원하며, 패키지 관리자로 의존성을 설치할 수 있습니다.</p>
-<h3><a class="anchor" id="autotoc_md381"></a>
+<h3><a class="anchor" id="autotoc_md482"></a>
 macOS</h3>
 <p>macOS에서는 동적 라이브러리 확장자로 <code>.dylib</code>를 사용합니다. 모든 빌드 타겟을 지원하며, Apple Silicon(arm64)과 Intel(x64) 모두 지원합니다. Homebrew로 의존성을 설치하는 것을 권장합니다.</p>
-<h3><a class="anchor" id="autotoc_md382"></a>
+<h3><a class="anchor" id="autotoc_md483"></a>
 Windows</h3>
 <p>Windows에서는 동적 라이브러리 확장자로 <code>.dll</code>을 사용합니다. <code>test</code> 빌드는 미지원이므로 테스트는 Linux/macOS에서 수행해야 합니다. MSVC(Visual Studio 2022 17+) 사용을 권장하며, Bison/Flex는 <a href="https://github.com/lexxmark/winflexbison">winflexbison</a>을 사용합니다.</p>
-<h2><a class="anchor" id="autotoc_md383"></a>
+<h2><a class="anchor" id="autotoc_md484"></a>
 주의사항</h2>
 <p><b><code>bin/</code> 디렉토리는 수동으로 수정하지 마세요.</b> 빌드 과정에서 자동으로 생성되며, <code>builder.py clean</code> 실행 시 모두 삭제됩니다.</p>
 <p><b><code>external/</code> 디렉토리도 수동으로 수정하지 마세요.</b> CMake가 자동으로 관리합니다. <b>단, Google Test 오류 발생 시는 예외입니다.</b> 빌드 중 Google Test 관련 오류가 발생하거나 파일이 없다는 메시지가 나타나면, <code>external/googletest/</code> 디렉토리를 수동으로 삭제한 후 다시 빌드하세요. <code>builder.py clean</code> 명령은 <code>external/</code> 디렉토리를 삭제하지 않으므로 수동 삭제가 필요합니다.</p>

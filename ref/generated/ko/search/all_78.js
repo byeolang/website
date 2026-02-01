@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['원본_0',['origin 클래스 - 타입의 원본',['../ai-architecture-core.html#autotoc_md214',1,'']]]
+  ['요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ab-convention-rules.html#autotoc_md30',1,'']]]
 ];

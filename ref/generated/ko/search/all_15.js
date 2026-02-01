@@ -6,7 +6,7 @@ var searchData=
   ['uiteration_2ehpp_3',['uiteration.hpp',['../uiteration_8hpp.html',1,'']]],
   ['unconstfunc_2ehpp_4',['unconstFunc.hpp',['../unconst_func_8hpp.html',1,'']]],
   ['understanding_20difficulty_5',['Understanding Difficulty',['../classby_1_1verifier.html#understanding_difficulty',1,'']]],
-  ['unit_20test_20단위_20테스트_6',['Unit Test (단위 테스트)',['../ak-testing-guide.html#autotoc_md296',1,'']]],
+  ['unit_20test_20단위_20테스트_6',['Unit Test (단위 테스트)',['../ak-testing-guide.html#autotoc_md397',1,'']]],
   ['unlike_20obj_20baseobj_20s_20origin_20object_20exists_20only_20once_7',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
   ['unlimitcoredump_8',['unlimitCoreDump',['../namespaceby_1_1platform_a_p_i.html#a8d0627a3307cd33ee3c9460b071ef53a',1,'by::platformAPI']]],
   ['up_9',['Main Function Look Up',['../classby_1_1starter.html#main_function_lookup',1,'']]],

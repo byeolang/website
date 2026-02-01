@@ -137,20 +137,20 @@ by::ntype에 대한 상속 다이어그램 : </div>
   <map id="by::ntype_map" name="by::ntype_map">
 <area href="classby_1_1type.html" title="Core class for runtime type information in byeol language" alt="by::type" shape="rect" coords="63,0,179,24"/>
 <area href="classby_1_1expr_1_1expr_type.html" title="Type information for expression nodes" alt="by::expr::exprType" shape="rect" coords="0,112,116,136"/>
-<area href="classby_1_1mgd_type.html" title="Managed type for byeol objects" alt="by::mgdType" shape="rect" coords="126,112,242,136"/>
-<area href="classby_1_1func_type.html" title="Managed type for function objects in byeol language." alt="by::funcType" shape="rect" coords="126,168,242,192"/>
+<area href="classby_1_1mgd_type.html" title="Script type for byeol objects" alt="by::mgdType" shape="rect" coords="126,112,242,136"/>
+<area href="classby_1_1func_type.html" title="script type for function objects in byeol language." alt="by::funcType" shape="rect" coords="126,168,242,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a285ac10dfea37b07951801498c0549a8" id="r_a285ac10dfea37b07951801498c0549a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a285ac10dfea37b07951801498c0549a8">operator==</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;rhs) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
-<tr class="memdesc:a285ac10dfea37b07951801498c0549a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether two ntype are same in both of native and managed environments  <br /></td></tr>
+<tr class="memdesc:a285ac10dfea37b07951801498c0549a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether two ntype are same in both of native and byeol runtime environments  <br /></td></tr>
 <tr class="separator:a285ac10dfea37b07951801498c0549a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeb3f0577df5e3a82f691851c9503462" id="r_aeeb3f0577df5e3a82f691851c9503462"><td class="memTemplParams" colspan="2"><a id="aeeb3f0577df5e3a82f691851c9503462" name="aeeb3f0577df5e3a82f691851c9503462"></a>
 template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T &gt; </td></tr>
 <tr class="memitem:aeeb3f0577df5e3a82f691851c9503462"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isImpli</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
-<tr class="memdesc:aeeb3f0577df5e3a82f691851c9503462"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether variable 'it' can be a subtype of T in managed code <br /></td></tr>
+<tr class="memdesc:aeeb3f0577df5e3a82f691851c9503462"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether variable 'it' can be a subtype of T in runtime <br /></td></tr>
 <tr class="separator:aeeb3f0577df5e3a82f691851c9503462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba9210546c208df2841522bbc927554" id="r_abba9210546c208df2841522bbc927554"><td class="memItemLeft" align="right" valign="top"><a id="abba9210546c208df2841522bbc927554" name="abba9210546c208df2841522bbc927554"></a>
 <a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isImpli</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
@@ -429,9 +429,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_setLeafs</b> (types 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>represents native c++ type system for byeol language </p>
-<p>Core type class that provides type information, type conversion, and type deduction. Supports implicit/explicit casting, type compatibility checking, and parameter management. ntype stands for native type, representing meta-type information for C++ classes. <a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> stands for managed type, representing meta-type information for types defined in the Byeol language (such as functions or objects).</p>
-<p>One important note: Although <a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> inherits from ntype in terms of implementation, this inheritance relationship does not apply at the type level when represented as type. In other words, when inheritance hierarchies such as getSupers() or getSubs() are represented, their contents can include both ntype and <a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> instances. mgdType::getSupers() is not restricted to containing only <a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> entries.</p>
-<p>The name of an <a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> corresponds to the type name as defined in the Byeol language, while an ntype corresponds to the C++ class name. </p>
+<p>Core type class that provides type information, type conversion, and type deduction. Supports implicit/explicit casting, type compatibility checking, and parameter management. ntype stands for native type, representing meta-type information for C++ classes. <a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> stands for managed type, representing meta-type information for types defined in the Byeol language (such as functions or objects).</p>
+<p>One important note: Although <a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> inherits from ntype in terms of implementation, this inheritance relationship does not apply at the type level when represented as type. In other words, when inheritance hierarchies such as getSupers() or getSubs() are represented, their contents can include both ntype and <a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> instances. mgdType::getSupers() is not restricted to containing only <a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> entries.</p>
+<p>The name of an <a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> corresponds to the type name as defined in the Byeol language, while an ntype corresponds to the C++ class name. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="ad508cc4b9a7c1e972fd8938cc40bddaf" name="ad508cc4b9a7c1e972fd8938cc40bddaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad508cc4b9a7c1e972fd8938cc40bddaf">&#9670;&#160;</a></span>getParams()</h2>
@@ -521,8 +521,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_setLeafs</b> (types 
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>반환값</dt><dd>true if rhs has same params and return type in managed code</dd></dl>
-<p><a class="el" href="#a285ac10dfea37b07951801498c0549a8" title="check whether two ntype are same in both of native and managed environments">operator==()</a> compares type equality in the native (C++) environment — it returns true if both objects are of the same class. In contrast, <a class="el" href="#a4ae9eefd07685f1bc5e8b6822aa03b09">isSameSign()</a> compares type equality in the managed environment. </p>
+<dl class="section return"><dt>반환값</dt><dd>true if rhs has same params and return-type in runtime</dd></dl>
+<p><a class="el" href="#a285ac10dfea37b07951801498c0549a8" title="check whether two ntype are same in both of native and byeol runtime environments">operator==()</a> compares type equality in the native runtime(C++) environment — it returns true if both objects are of the same class. In contrast, <a class="el" href="#a4ae9eefd07685f1bc5e8b6822aa03b09">isSameSign()</a> compares type equality in the byeol runtime environment. </p>
 
 </div>
 </div>
@@ -549,8 +549,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_setLeafs</b> (types 
 </table>
 </div><div class="memdoc">
 
-<p>check whether two ntype are same in both of native and managed environments </p>
-<p><a class="el" href="classby_1_1mgd_type.html" title="Managed type for byeol objects">mgdType</a> inherits ntype, so this <a class="el" href="#a285ac10dfea37b07951801498c0549a8" title="check whether two ntype are same in both of native and managed environments">operator==()</a> is also able to checks equality in managed code. </p>
+<p>check whether two ntype are same in both of native and byeol runtime environments </p>
+<p><a class="el" href="classby_1_1mgd_type.html" title="Script type for byeol objects">mgdType</a> inherits ntype, so this <a class="el" href="#a285ac10dfea37b07951801498c0549a8" title="check whether two ntype are same in both of native and byeol runtime environments">operator==()</a> is also able to checks equality in managed code. </p>
 
 </div>
 </div>

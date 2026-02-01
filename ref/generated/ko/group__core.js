@@ -20,7 +20,7 @@ var group__core =
     ] ],
     [ "by::baseObj", "classby_1_1base_obj.html", [
       [ "baseObj", "classby_1_1base_obj.html#ad609f260424cc64ca4141c93513aeae2", null ],
-      [ "baseObj", "classby_1_1base_obj.html#a2641a274d2e1f79e8c14fc434f31cd48", null ],
+      [ "baseObj", "classby_1_1base_obj.html#a7c769c4275c83bbdf1a4fb1db46e70be", null ],
       [ "_inFrame", "classby_1_1base_obj.html#a6175e6b5b998d999ff41259e0a66516e", null ],
       [ "_onBeforeCtor", "classby_1_1base_obj.html#a04c1e9184180f0274c067aee68487c76", null ],
       [ "_onEvalSub", "classby_1_1base_obj.html#a7612588286f4ab3d4410b2e2597fd80a", null ],

@@ -11,7 +11,7 @@ var searchData=
   ['baseerr_2ehpp_8',['baseErr.hpp',['../base_err_8hpp.html',1,'']]],
   ['basefunc_9',['baseFunc',['../classby_1_1base_func.html',1,'by']]],
   ['basefunc_2ehpp_10',['baseFunc.hpp',['../base_func_8hpp.html',1,'']]],
-  ['baseobj_11',['baseObj',['../classby_1_1base_obj.html',1,'by::baseObj'],['../classby_1_1base_obj.html#ad609f260424cc64ca4141c93513aeae2',1,'by::baseObj::baseObj()=default'],['../classby_1_1base_obj.html#a2641a274d2e1f79e8c14fc434f31cd48',1,'by::baseObj::baseObj(const baseObj *org, nbool isManaged)']]],
+  ['baseobj_11',['baseObj',['../classby_1_1base_obj.html',1,'by::baseObj'],['../classby_1_1base_obj.html#ad609f260424cc64ca4141c93513aeae2',1,'by::baseObj::baseObj()=default'],['../classby_1_1base_obj.html#a7c769c4275c83bbdf1a4fb1db46e70be',1,'by::baseObj::baseObj(const baseObj *org, nbool isScripted)']]],
   ['baseobj_12',['Override getOrigin() for baseObj',['../classby_1_1base_obj.html#override_getOrigin',1,'']]],
   ['baseobj_20s_20origin_20object_20exists_20only_20once_13',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
   ['baseobj_2ehpp_14',['baseObj.hpp',['../base_obj_8hpp.html',1,'']]],

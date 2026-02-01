@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['최상위_20타입_0',['adam - 최상위 타입',['../af-architecture-meta.html#autotoc_md144',1,'']]],
-  ['최소_20할당_20단위_1',['chunk - 최소 할당 단위',['../ag-architecture-memlite.html#autotoc_md166',1,'']]]
+  ['체계_20및_20분류_0',['문서 체계 및 분류',['../am-document-convention.html#autotoc_md493',1,'']]],
+  ['체킹_1',['동적 타입 체킹',['../ag-architecture-memlite.html#autotoc_md158',1,'']]]
 ];

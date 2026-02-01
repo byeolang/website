@@ -45,7 +45,7 @@ var searchData=
   ['convergenceclosure_42',['ConvergenceClosure',['../structby_1_1_convergence_closure.html',1,'by']]],
   ['convergenceclosure_3c_20node_20_3e_43',['ConvergenceClosure&lt; node &gt;',['../structby_1_1_convergence_closure.html',1,'by']]],
   ['convergenceclosure_3c_20void_20_3e_44',['ConvergenceClosure&lt; void &gt;',['../structby_1_1_convergence_closure_3_01void_01_4.html',1,'by']]],
-  ['conversion_45',['Conversion',['../classby_1_1node.html#implicit_explicit',1,'Implicit vs Explicit Conversion'],['../classby_1_1node.html#managed_vs_native',1,'Managed vs Native Type Conversion'],['../classby_1_1node.html#type_conversion',1,'Type Conversion']]],
+  ['conversion_45',['Conversion',['../classby_1_1node.html#implicit_explicit',1,'Implicit vs Explicit Conversion'],['../classby_1_1node.html#scripted_vs_native',1,'Scripted vs Native Type Conversion'],['../classby_1_1node.html#type_conversion',1,'Type Conversion']]],
   ['convert_20strong_46',['&lt;strong&gt;convert&lt;/strong&gt;',['../structby_1_1no_wrap.html#convert',1,'']]],
   ['coordination_20with_20pool_47',['Coordination with pool',['../classby_1_1chunks.html#pool_coordination',1,'']]],
   ['core_48',['Core',['../group__core.html',1,'']]],

@@ -106,94 +106,99 @@ var ac_architecture_overview =
       [ "정리하기", "ah-architecture-stela.html#autotoc_md202", null ]
     ] ],
     [ "core 모듈 - 언어 구현의 핵심", "ai-architecture-core.html", [
-      [ "AST 기본 구조", "ai-architecture-core.html#autotoc_md205", [
-        [ "node 클래스 - AST의 기반", "ai-architecture-core.html#autotoc_md206", null ],
-        [ "src, srcFile 클래스 - 소스 위치 정보", "ai-architecture-core.html#autotoc_md207", null ],
-        [ "args 클래스 - 함수 인자", "ai-architecture-core.html#autotoc_md208", null ],
-        [ "param 클래스 - 파라메터 정의", "ai-architecture-core.html#autotoc_md209", null ]
+      [ "주요 흐름", "ai-architecture-core.html#autotoc_md204", null ],
+      [ "개요를 마무리하며", "ai-architecture-core.html#autotoc_md206", null ],
+      [ "Native와 Scripted", "ai-architecture-core.html#autotoc_md208", null ],
+      [ "AST 기본 구조", "ai-architecture-core.html#autotoc_md210", [
+        [ "node 클래스 - AST의 기반", "ai-architecture-core.html#autotoc_md211", null ],
+        [ "src, srcFile 클래스 - 소스 위치 정보", "ai-architecture-core.html#autotoc_md223", null ],
+        [ "args 클래스 - 함수 인자", "ai-architecture-core.html#autotoc_md225", null ],
+        [ "param 클래스 - 파라메터 정의", "ai-architecture-core.html#autotoc_md227", null ]
       ] ],
-      [ "객체 모델", "ai-architecture-core.html#autotoc_md211", [
-        [ "baseObj 클래스 - 객체의 기반", "ai-architecture-core.html#autotoc_md212", null ],
-        [ "obj 클래스 - Managed 객체", "ai-architecture-core.html#autotoc_md213", null ],
-        [ "origin 클래스 - 타입의 원본", "ai-architecture-core.html#autotoc_md214", null ],
-        [ "tbaseObjOrigin 클래스 - baseObj Origin 템플릿", "ai-architecture-core.html#autotoc_md215", null ],
-        [ "modifier 클래스 - 접근 제한자", "ai-architecture-core.html#autotoc_md216", null ],
-        [ "defaultCopyCtor 클래스 - 기본 복사 생성자", "ai-architecture-core.html#autotoc_md217", null ],
-        [ "immutableTactic 클래스 - Immutable 타입 처리", "ai-architecture-core.html#autotoc_md218", null ],
-        [ "manifest 클래스 - Pack 메타데이터", "ai-architecture-core.html#autotoc_md219", null ],
-        [ "tmock 클래스 - Proxy 객체", "ai-architecture-core.html#autotoc_md220", null ]
+      [ "객체 모델", "ai-architecture-core.html#autotoc_md229", [
+        [ "baseObj 클래스 - 객체의 기반", "ai-architecture-core.html#autotoc_md231", null ],
+        [ "obj 클래스 - script 객체", "ai-architecture-core.html#autotoc_md236", null ],
+        [ "origin 클래스 - 타입의 원본", "ai-architecture-core.html#autotoc_md239", null ],
+        [ "tbaseObjOrigin 클래스 - baseObj Origin 템플릿", "ai-architecture-core.html#autotoc_md242", null ],
+        [ "modifier 클래스 - 접근 제한자", "ai-architecture-core.html#autotoc_md245", null ],
+        [ "defaultCopyCtor 클래스 - 기본 복사 생성자", "ai-architecture-core.html#autotoc_md247", null ],
+        [ "immutableTactic 클래스 - Immutable 타입 처리", "ai-architecture-core.html#autotoc_md249", null ],
+        [ "manifest 클래스 - Pack 메타데이터", "ai-architecture-core.html#autotoc_md251", null ],
+        [ "tmock 클래스 - Proxy 객체", "ai-architecture-core.html#autotoc_md253", null ]
       ] ],
-      [ "표현식 (Expression) 시스템", "ai-architecture-core.html#autotoc_md222", [
-        [ "FBOExpr, FUOExpr 클래스 - 연산자 표현식", "ai-architecture-core.html#autotoc_md223", null ],
-        [ "assignExpr 클래스 - 할당 표현식", "ai-architecture-core.html#autotoc_md224", null ],
-        [ "blockExpr 클래스 - 블록 표현식", "ai-architecture-core.html#autotoc_md225", null ],
-        [ "defArrayExpr 클래스 - 배열 리터럴", "ai-architecture-core.html#autotoc_md226", null ],
-        [ "defNestedFuncExpr 클래스 - 중첩 함수 정의", "ai-architecture-core.html#autotoc_md227", null ],
-        [ "defSeqExpr 클래스 - 시퀀스 표현식", "ai-architecture-core.html#autotoc_md228", null ],
-        [ "endExpr 클래스 - End 키워드", "ai-architecture-core.html#autotoc_md229", null ],
-        [ "retStateExpr 클래스 - 블록 종료 키워드", "ai-architecture-core.html#autotoc_md230", null ]
+      [ "표현식 (Expression) 시스템", "ai-architecture-core.html#autotoc_md255", [
+        [ "FBOExpr, FUOExpr 클래스 - 연산자 표현식", "ai-architecture-core.html#autotoc_md257", null ],
+        [ "assignExpr 클래스 - 할당 표현식", "ai-architecture-core.html#autotoc_md259", null ],
+        [ "blockExpr 클래스 - 블록 표현식", "ai-architecture-core.html#autotoc_md261", null ],
+        [ "defArrayExpr 클래스 - 배열 리터럴", "ai-architecture-core.html#autotoc_md263", null ],
+        [ "defNestedFuncExpr 클래스 - 중첩 함수 정의", "ai-architecture-core.html#autotoc_md265", null ],
+        [ "defSeqExpr 클래스 - 시퀀스 표현식", "ai-architecture-core.html#autotoc_md267", null ],
+        [ "endExpr 클래스 - End 키워드", "ai-architecture-core.html#autotoc_md269", null ],
+        [ "retStateExpr 클래스 - 블록 종료 키워드", "ai-architecture-core.html#autotoc_md271", null ]
       ] ],
-      [ "컨테이너 시스템", "ai-architecture-core.html#autotoc_md232", [
-        [ "tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스", "ai-architecture-core.html#autotoc_md233", null ],
-        [ "tnchain 클래스 - Chain으로 연결되는 컨테이너", "ai-architecture-core.html#autotoc_md234", null ],
-        [ "arr 클래스 - Managed 배열", "ai-architecture-core.html#autotoc_md235", null ],
-        [ "nseq 클래스 - 범위형 컨테이너", "ai-architecture-core.html#autotoc_md236", null ],
-        [ "smultimap 클래스 - 삽입 순서를 기억하는 Multimap", "ai-architecture-core.html#autotoc_md237", null ]
+      [ "컨테이너 시스템", "ai-architecture-core.html#autotoc_md273", [
+        [ "tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스", "ai-architecture-core.html#autotoc_md274", null ],
+        [ "tnchain 클래스 - Chain으로 연결되는 컨테이너", "ai-architecture-core.html#autotoc_md279", null ],
+        [ "arr 클래스 - scripted 배열", "ai-architecture-core.html#autotoc_md283", null ],
+        [ "nseq 클래스 - 범위형 컨테이너", "ai-architecture-core.html#autotoc_md285", null ],
+        [ "smultimap 클래스 - 삽입 순서를 기억하는 Multimap", "ai-architecture-core.html#autotoc_md287", null ]
       ] ],
-      [ "Generic 시스템", "ai-architecture-core.html#autotoc_md239", [
-        [ "getGenericExpr 클래스 - Generic 타입 참조의 진입점", "ai-architecture-core.html#autotoc_md240", null ],
-        [ "genericOrigin 클래스 - Generic 타입의 생성과 관리", "ai-architecture-core.html#autotoc_md241", null ],
-        [ "generalizer 클래스 - Generic 타입의 구체화", "ai-architecture-core.html#autotoc_md242", null ]
+      [ "Generic 시스템", "ai-architecture-core.html#autotoc_md290", [
+        [ "getGenericExpr 클래스 - Generic 타입 참조의 진입점", "ai-architecture-core.html#autotoc_md292", null ],
+        [ "genericOrigin 클래스 - Generic 타입의 생성과 관리", "ai-architecture-core.html#autotoc_md294", null ],
+        [ "generalizer 클래스 - Generic 타입의 구체화", "ai-architecture-core.html#autotoc_md296", null ]
       ] ],
-      [ "Native-Managed 브리징 시스템", "ai-architecture-core.html#autotoc_md244", [
-        [ "tbridger 클래스 - Bridge 컴포넌트의 진입점", "ai-architecture-core.html#autotoc_md245", null ],
-        [ "tbridge 클래스 - Native 클래스의 Managed 표현", "ai-architecture-core.html#autotoc_md246", null ],
-        [ "tmock 클래스 - Proxy와 Dummy 객체", "ai-architecture-core.html#autotoc_md247", null ]
+      [ "Native-Script 브리징", "ai-architecture-core.html#autotoc_md298", [
+        [ "tbridger 클래스 - Bridge 컴포넌트의 진입점", "ai-architecture-core.html#autotoc_md300", null ],
+        [ "tbridge 클래스 - Native 클래스의 Script 표현", "ai-architecture-core.html#autotoc_md302", null ],
+        [ "tmock 클래스 - Proxy와 Dummy 객체", "ai-architecture-core.html#autotoc_md304", null ]
       ] ],
-      [ "스코프와 실행 컨텍스트", "ai-architecture-core.html#autotoc_md249", [
-        [ "scope 클래스 - Symbol 저장소", "ai-architecture-core.html#autotoc_md250", null ],
-        [ "frame 클래스 - Scope들의 동적 연결", "ai-architecture-core.html#autotoc_md251", null ],
-        [ "frames 클래스 - Frame 적층 관리", "ai-architecture-core.html#autotoc_md252", null ],
-        [ "thread 클래스 - 실행 흐름의 관리자", "ai-architecture-core.html#autotoc_md253", null ]
+      [ "스코프와 실행 컨텍스트", "ai-architecture-core.html#autotoc_md306", [
+        [ "scope 클래스 - Symbol 저장소", "ai-architecture-core.html#autotoc_md308", null ],
+        [ "frame 클래스 - Scope들의 동적 연결", "ai-architecture-core.html#autotoc_md314", null ],
+        [ "frames 클래스 - Frame 적층 관리", "ai-architecture-core.html#autotoc_md317", null ],
+        [ "thread 클래스 - 실행 흐름의 관리자", "ai-architecture-core.html#autotoc_md319", null ]
       ] ],
-      [ "패키지 시스템", "ai-architecture-core.html#autotoc_md255", [
-        [ "manifest 클래스 - Pack 메타데이터", "ai-architecture-core.html#autotoc_md256", null ],
-        [ "slot 클래스 - Pack의 결과물", "ai-architecture-core.html#autotoc_md257", null ],
-        [ "autoslot 클래스 - Lazy Pack 로딩", "ai-architecture-core.html#autotoc_md258", null ],
-        [ "slotLoader 클래스 - Pack 로더", "ai-architecture-core.html#autotoc_md259", null ],
-        [ "packLoading 클래스 - Pack 로딩 추상 클래스", "ai-architecture-core.html#autotoc_md260", null ],
-        [ "cppPackLoading 클래스 - C++ Pack 로더", "ai-architecture-core.html#autotoc_md261", null ]
+      [ "패키지 시스템", "ai-architecture-core.html#autotoc_md322", [
+        [ "manifest 클래스 - Pack 메타데이터", "ai-architecture-core.html#autotoc_md324", null ],
+        [ "slot 클래스 - Pack의 결과물", "ai-architecture-core.html#autotoc_md326", null ],
+        [ "autoslot 클래스 - Lazy Pack 로딩", "ai-architecture-core.html#autotoc_md328", null ],
+        [ "slotLoader 클래스 - Pack 로더", "ai-architecture-core.html#autotoc_md333", null ],
+        [ "packLoading 클래스 - Pack 로딩 추상 클래스", "ai-architecture-core.html#autotoc_md336", null ],
+        [ "cppPackLoading 클래스 - C++ Pack 로더", "ai-architecture-core.html#autotoc_md338", null ]
       ] ],
-      [ "Visitor 패턴 및 AST 순회", "ai-architecture-core.html#autotoc_md263", [
-        [ "visitor 클래스 - AST 순회의 핵심", "ai-architecture-core.html#autotoc_md264", null ],
-        [ "graphVisitor 클래스 - AST 로깅", "ai-architecture-core.html#autotoc_md265", null ]
+      [ "Visitor 패턴 및 AST 순회", "ai-architecture-core.html#autotoc_md340", [
+        [ "visitor 클래스 - AST 순회의 핵심", "ai-architecture-core.html#autotoc_md342", null ],
+        [ "graphVisitor 클래스 - AST 로깅", "ai-architecture-core.html#autotoc_md346", null ]
       ] ],
-      [ "파싱 시스템", "ai-architecture-core.html#autotoc_md267", [
-        [ "parser 클래스 - 파싱의 진입점", "ai-architecture-core.html#autotoc_md268", null ],
-        [ "smartDedent, tokenScan 클래스 - Indentation 관리", "ai-architecture-core.html#autotoc_md269", null ],
-        [ "srcSupply 클래스 - 소스 코드 공급 추상화", "ai-architecture-core.html#autotoc_md270", null ],
-        [ "expander 클래스 - 사전 타입 추론", "ai-architecture-core.html#autotoc_md271", null ]
+      [ "파싱", "ai-architecture-core.html#autotoc_md348", [
+        [ "parser 클래스 - 파싱의 진입점", "ai-architecture-core.html#autotoc_md350", null ],
+        [ "smartDedent, tokenScan 클래스 - Indentation 관리", "ai-architecture-core.html#autotoc_md353", null ],
+        [ "srcSupply 클래스 - 소스 코드 공급 추상화", "ai-architecture-core.html#autotoc_md355", null ],
+        [ "expander 클래스 - 사전 타입 추론", "ai-architecture-core.html#autotoc_md357", null ]
       ] ],
-      [ "코드 검증 및 실행", "ai-architecture-core.html#autotoc_md273", [
-        [ "tworker 클래스 - 배치 작업의 기반", "ai-architecture-core.html#autotoc_md274", null ],
-        [ "verifier 클래스 - 코드 검증", "ai-architecture-core.html#autotoc_md275", null ],
-        [ "starter 클래스 - AST 실행", "ai-architecture-core.html#autotoc_md276", null ],
-        [ "sigZone 클래스 - Signal 처리", "ai-architecture-core.html#autotoc_md277", null ]
+      [ "코드 검증", "ai-architecture-core.html#autotoc_md360", [
+        [ "tworker 클래스 - 배치 작업의 기반", "ai-architecture-core.html#autotoc_md361", null ],
+        [ "verifier 클래스 - 코드 검증", "ai-architecture-core.html#autotoc_md366", null ]
       ] ],
-      [ "에러 처리", "ai-architecture-core.html#autotoc_md279", [
-        [ "baseErr 클래스 - 에러의 기반", "ai-architecture-core.html#autotoc_md280", null ],
-        [ "errReport 클래스 - 에러 수집", "ai-architecture-core.html#autotoc_md281", null ]
-      ] ]
+      [ "starter 클래스 - AST 실행", "ai-architecture-core.html#autotoc_md371", null ],
+      [ "sigZone 클래스 - Signal 처리", "ai-architecture-core.html#autotoc_md374", null ],
+      [ "에러 처리", "ai-architecture-core.html#autotoc_md376", [
+        [ "baseErr 클래스 - 에러의 기반", "ai-architecture-core.html#autotoc_md377", null ],
+        [ "errReport 클래스 - 에러 수집", "ai-architecture-core.html#autotoc_md378", null ],
+        [ "에러 처리흐름 정리", "ai-architecture-core.html#autotoc_md380", null ]
+      ] ],
+      [ "core 모듈을 마무리 하며", "ai-architecture-core.html#autotoc_md382", null ]
     ] ],
     [ "frontend 모듈 - CLI 인터페이스", "aj-architecture-frontend.html", [
-      [ "cli 클래스 - Frontend의 핵심", "aj-architecture-frontend.html#autotoc_md284", null ],
-      [ "flag 클래스 - 명령줄 플래그 처리", "aj-architecture-frontend.html#autotoc_md286", [
-        [ "기본 동작", "aj-architecture-frontend.html#autotoc_md287", null ],
-        [ "정규식에 의한 패턴매칭", "aj-architecture-frontend.html#autotoc_md288", null ],
-        [ "복수 패턴 매칭", "aj-architecture-frontend.html#autotoc_md289", null ],
-        [ "복수의 flag 인자를 consume하기", "aj-architecture-frontend.html#autotoc_md290", null ],
-        [ "중단 가능한 flag", "aj-architecture-frontend.html#autotoc_md291", null ]
+      [ "cli 클래스 - Frontend의 핵심", "aj-architecture-frontend.html#autotoc_md385", null ],
+      [ "flag 클래스 - 명령줄 플래그 처리", "aj-architecture-frontend.html#autotoc_md387", [
+        [ "기본 동작", "aj-architecture-frontend.html#autotoc_md388", null ],
+        [ "정규식에 의한 패턴매칭", "aj-architecture-frontend.html#autotoc_md389", null ],
+        [ "복수 패턴 매칭", "aj-architecture-frontend.html#autotoc_md390", null ],
+        [ "복수의 flag 인자를 consume하기", "aj-architecture-frontend.html#autotoc_md391", null ],
+        [ "중단 가능한 flag", "aj-architecture-frontend.html#autotoc_md392", null ]
       ] ],
-      [ "긴 여정을 함께하느라 고생하셨습니다.", "aj-architecture-frontend.html#autotoc_md293", null ]
+      [ "긴 여정을 함께하느라 고생하셨습니다.", "aj-architecture-frontend.html#autotoc_md394", null ]
     ] ]
 ];

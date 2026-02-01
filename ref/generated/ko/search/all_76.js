@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ab-convention-rules.html#autotoc_md54',1,'']]]
+  ['외부_20라이브러리_0',['external/ - 외부 라이브러리',['../al-build-structure.html#autotoc_md450',1,'']]]
 ];
