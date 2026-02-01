@@ -124,9 +124,7 @@ export class character {
     elem.style.left = isFacingRight ?
       `calc(${characterLeft} + ${this.width} + ${getHandleSize()}px + 2px)` :
       `calc(${characterLeft} - 40vw - ${getHandleSize()}px)`;
-    const newTop = this.y > 10 ?
-      `calc(${characterTop} - 20dvh)` :
-      `50px`;
+    const newTop = `max(50px, calc(${characterTop} + 2dvw - 20dvh))`;
     elem.style.top = newTop;
 
     // handle:
