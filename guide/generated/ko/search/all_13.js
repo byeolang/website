@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['곳에도_20되어야_20한다_0',['한곳에서 되었다면, 다른 곳에도 되어야 한다',['../design-philosophy.html#autotoc_md16',1,'']]]
+  ['과감한_20선택_0',['간결함을 위한 과감한 선택',['../design-philosophy.html#autotoc_md14',1,'']]]
 ];

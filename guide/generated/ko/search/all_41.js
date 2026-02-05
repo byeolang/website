@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['중첩_20객체_0',['중첩 객체',['../language-spec.html#autotoc_md89',1,'']]],
-  ['중첩_20함수_1',['중첩 함수',['../language-spec.html#autotoc_md91',1,'']]]
+  ['조합_0',['문법의 압축과 조합',['../design-philosophy.html#autotoc_md18',1,'']]]
 ];

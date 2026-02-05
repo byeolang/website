@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['활용_0',['활용',['../language-spec.html#autotoc_md123',1,'타입 확장으로 활용'],['../language-spec.html#autotoc_md133',1,'delegation으로 활용'],['../language-spec.html#autotoc_md131',1,'static으로 활용']]]
+  ['합니다_0',['변수명을 타입명과 동일하게 하려면 백틱(`)으로 편하게 합니다.',['../language-spec.html#autotoc_md101',1,'']]]
 ];

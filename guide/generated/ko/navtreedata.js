@@ -34,21 +34,20 @@ var NAVTREE =
       [ "버전 표기", "basic-usage.html#autotoc_md9", null ]
     ] ],
     [ "디자인 철학", "design-philosophy.html", [
-      [ "작은 장난감 같은 언어를 만든다", "design-philosophy.html#autotoc_md12", null ],
-      [ "기본 언어 기능", "design-philosophy.html#autotoc_md14", null ],
-      [ "한곳에서 되었다면, 다른 곳에도 되어야 한다", "design-philosophy.html#autotoc_md16", null ],
-      [ "간결함을 추구한다", "design-philosophy.html#autotoc_md18", null ],
-      [ "무조건적으로 하나의 기능을 위한 기능은 만들지 않는다", "design-philosophy.html#autotoc_md20", null ],
-      [ "모든 기능을 제공하는 언어를 만들지 않는다", "design-philosophy.html#autotoc_md22", null ],
-      [ "속도보다 유지보수를 우선한다", "design-philosophy.html#autotoc_md24", null ]
+      [ "장난감처럼 즐거운 언어", "design-philosophy.html#autotoc_md12", null ],
+      [ "간결함을 위한 과감한 선택", "design-philosophy.html#autotoc_md14", null ],
+      [ "일관성: 암기가 아닌 이해", "design-philosophy.html#autotoc_md16", null ],
+      [ "문법의 압축과 조합", "design-philosophy.html#autotoc_md18", null ],
+      [ "코드와 시각화의 결합", "design-philosophy.html#autotoc_md20", null ],
+      [ "마무리: 우리가 꿈꾸는 언어", "design-philosophy.html#autotoc_md22", null ]
     ] ],
     [ "언어 배우기", "how-to-code.html", "how-to-code" ],
     [ "설치 방법", "how-to-install.html", [
-      [ "다운로드", "how-to-install.html#autotoc_md28", null ],
-      [ "Windows", "how-to-install.html#autotoc_md30", null ],
-      [ "ubuntu", "how-to-install.html#autotoc_md32", null ],
-      [ "Mac OS", "how-to-install.html#autotoc_md34", null ],
-      [ "WASM", "how-to-install.html#autotoc_md36", null ]
+      [ "다운로드", "how-to-install.html#autotoc_md26", null ],
+      [ "Windows", "how-to-install.html#autotoc_md28", null ],
+      [ "ubuntu", "how-to-install.html#autotoc_md30", null ],
+      [ "Mac OS", "how-to-install.html#autotoc_md32", null ],
+      [ "WASM", "how-to-install.html#autotoc_md34", null ]
     ] ]
   ] ]
 ];

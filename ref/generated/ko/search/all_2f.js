@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['길이와_20들여쓰기_0',['줄 길이와 들여쓰기',['../ad-convention-rules.html#autotoc_md109',1,'']]],
-  ['길이_20제한_1',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md110',1,'']]]
+  ['길이와_20들여쓰기_0',['줄 길이와 들여쓰기',['../ad-convention-rules.html#autotoc_md115',1,'']]],
+  ['길이_20제한_1',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md116',1,'']]]
 ];

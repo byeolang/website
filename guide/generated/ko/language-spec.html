@@ -125,14 +125,14 @@ $(function(){initNavTree('language-spec.html',''); initResizable(); });
 <li>검증된 예제는 온라인으로 <b>실행 가능</b> 합니다. 미검증된 예제는 <b>빨간색 테두리</b> 로 표시되어 있습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 언어 디자인 철학</h1>
 <ul>
 <li>빠르게 기능만 익히고 싶은 분은 넘어가셔도 됩니다.</li>
 <li>관심이 있으신 분은 한번 꼭 <a class="el" href="design-philosophy.html">읽어보세요</a>. 이 언어가 왜 이렇게 설계되었는지 이해하는데 큰 도움이 되실겁니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 주석</h1>
 <ul>
 <li>✅ 주석은 <code>#</code> 으로 표현합니다.</li>
@@ -154,7 +154,7 @@ $(function(){initNavTree('language-spec.html',''); initResizable(); });
 <div class="line">`</div>
 <div class="line">}</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md43"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 기본 타입 제공</h1>
 <ul>
 <li>✅ 다음의 기본타입(primitive types)이 있습니다.</li>
@@ -192,7 +192,7 @@ $(function(){initNavTree('language-spec.html',''); initResizable(); });
 <div class="line">    # void 도 있습니다만, 물론 void 타입의 변수를 만들 수는 없죠.`</div>
 <div class="line">}</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md45"></a>
+<h1><a class="anchor" id="autotoc_md43"></a>
 프로퍼티 정의</h1>
 <ul>
 <li>✅ 무언가 값을 저장할 수 있는 변수를 byeol언어에서는 프로퍼티라고 합니다.</li>
@@ -210,7 +210,7 @@ $(function(){initNavTree('language-spec.html',''); initResizable(); });
 <li>✅ 식별자는 영문자나 <code>_</code> 혹은 숫자로 정의합니다만, 첫글자는 오직 영문자만 가능합니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md47"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 StringTemplate</h1>
 <ul>
 <li>✅ StringTemplate도 지원합니다.</li>
@@ -223,7 +223,7 @@ StringTemplate</h1>
 </ul>
 <div class="fragment"><div class="line">print(&quot;${a + b}&quot;)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md49"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 Map</h1>
 <ul>
 <li>☐ byeol언어는 배열, map, sequence를 기본 제공합니다.</li>
@@ -241,7 +241,7 @@ Map</h1>
 <div class="line">map[&quot;banana&quot;] = 700</div>
 <div class="line">print(map[&quot;apple&quot;]) # &quot;300&quot;입니다. 사과 참 싸네요.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md51"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 배열</h1>
 <ul>
 <li>✅ 배열타입은 어떻게 표현할까요? 배열은 Key가 항상 int인 Map처럼 표현합니다. 실제로 둘은 매우 유사한 부분이 많습니다.</li>
@@ -260,7 +260,7 @@ Map</h1>
 <div class="fragment"><div class="line">myArray.add(5)</div>
 <div class="line">++myArray[0] == 6 # true</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md53"></a>
+<h1><a class="anchor" id="autotoc_md51"></a>
 시퀸스</h1>
 <ul>
 <li>✅ <code>..</code> 으로 표현합니다. 정수의 범위를 표현합니다.</li>
@@ -271,7 +271,7 @@ Map</h1>
 <div class="line">for n in 2..5</div>
 <div class="line">    print(n) # 234 출력</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md55"></a>
+<h1><a class="anchor" id="autotoc_md53"></a>
 if</h1>
 <ul>
 <li>✅ if, else를 제공합니다.</li>
@@ -284,7 +284,7 @@ if</h1>
 <div class="line">else</div>
 <div class="line">    foo(4)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md57"></a>
+<h1><a class="anchor" id="autotoc_md55"></a>
 Block문</h1>
 <ul>
 <li>✅ offside-rule로 블록문을 표현합니다. 들여쓰기를 해야한단 얘기예요.</li>
@@ -324,7 +324,7 @@ Block문</h1>
 <div class="fragment"><div class="line">if val == 0: ;</div>
 <div class="line">else: val = 1</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md59"></a>
+<h1><a class="anchor" id="autotoc_md57"></a>
 while</h1>
 <ul>
 <li>✅ 조건식이 참(true) 일 동안 블록문을 반복 실행합니다.</li>
@@ -335,7 +335,7 @@ while</h1>
 <div class="line">while cnt++ &lt; 5</div>
 <div class="line">    print(&quot;forever?&quot;)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md61"></a>
+<h1><a class="anchor" id="autotoc_md59"></a>
 for</h1>
 <ul>
 <li>✅ <code>for</code>는 container를 순회합니다.</li>
@@ -353,7 +353,7 @@ for</h1>
 <div class="line">        next # 다음 원소를 가지고 루프의 처음부터 다시 실행합니다.</div>
 <div class="line"># 결과: &quot;12&quot;</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md63"></a>
+<h1><a class="anchor" id="autotoc_md61"></a>
 Explicit 캐스팅</h1>
 <ul>
 <li>✅ <code>as</code> 를 사용해서 다른 타입으로 변경할 수 있습니다.</li>
@@ -366,7 +366,7 @@ Explicit 캐스팅</h1>
 <li>✅ 물론 각 객체가 <code>as</code>를 했을때 주어진 타입으로 변경하는 코드를 가지고 있어야 합니다. <code>primitive types</code>는 대부분 서로 변환이 가능합니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md65"></a>
+<h1><a class="anchor" id="autotoc_md63"></a>
 Implicit 캐스팅</h1>
 <ul>
 <li>✅ 함수호출시 자동으로 동작하는 캐스팅입니다.</li>
@@ -400,7 +400,7 @@ Implicit 캐스팅</h1>
 <div class="line"># byte --&gt; flt으로 Implicit 캐스팅이 불가능합니다.</div>
 <div class="line"># byte --&gt; int --&gt; flt 이렇게 암시적 캐스팅이 2번 일어나면 에러가 아니었겠죠. 그러나 암시적 캐스팅은 1번만 일어납니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md67"></a>
+<h1><a class="anchor" id="autotoc_md65"></a>
 연산자들</h1>
 <ul>
 <li>✅ 단형연산자 당연히 지원하고요.</li>
@@ -482,7 +482,7 @@ Implicit 캐스팅</h1>
 <td class="markdownTableBodyNone">11   </td><td class="markdownTableBodyNone">||, &amp;&amp;   </td><td class="markdownTableBodyNone">a || b, a &amp;&amp; b   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md69"></a>
+<h1><a class="anchor" id="autotoc_md67"></a>
 함수</h1>
 <ul>
 <li>✅ parameter 목록과 반환형, Block문이 정의된 것을 함수라고 합니다.</li>
@@ -507,7 +507,7 @@ Implicit 캐스팅</h1>
 </ul>
 <div class="fragment"><div class="line">runLambda(val1, (a, b): a + b, 33)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md71"></a>
+<h1><a class="anchor" id="autotoc_md69"></a>
 ret</h1>
 <ul>
 <li><code>ret</code> 는 값을 반환하고 함수를 종료합니다.</li>
@@ -519,7 +519,7 @@ ret</h1>
 <div class="line">        sum += a</div>
 <div class="line">    ret sum</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="autotoc_md71"></a>
 객체 정의</h1>
 <ul>
 <li>✅ byeol언어는 OOP언어입니다.</li>
@@ -529,7 +529,7 @@ ret</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md72"></a>
 새로운 객체 만들기</h2>
 <ul>
 <li>✅ 다음 처럼 하면 됩니다.</li>
@@ -540,7 +540,7 @@ ret</h1>
 <div class="line">    age := 0 # 정의블록문에는 프로퍼티나 함수 등 정의하는 구문만 올 수 있습니다.</div>
 <div class="line">    hello() void # 객체에 함수도 정의할 수 있죠.</div>
 <div class="line">        print(&quot;I&#39;m foo and $age years old!\n&quot;)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
 객체 복제하기</h2>
 <ul>
 <li>✅ 객체를 만드는 또다른 방법은 이미 만들어진 객체를 복제하는 건데요.</li>
@@ -561,7 +561,7 @@ ret</h1>
 <div class="line">    for p in {p1, p2, Person()} # `Person()` 처럼 이름없는 객체를 만들 수도 있습니다.</div>
 <div class="line">        p.say()</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md77"></a>
+<h1><a class="anchor" id="autotoc_md75"></a>
 생성자</h1>
 <ul>
 <li>✅ 생성자는 <code>ctor</code> 이라고 하는 고유 함수명을 사용합니다.</li>
@@ -594,7 +594,7 @@ ret</h1>
 <li>✅ 생성자를 명시하지 않으면 기본 생성자가 정의됩니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md79"></a>
+<h1><a class="anchor" id="autotoc_md77"></a>
 Special Functions</h1>
 <ul>
 <li>✅ Special Functions는 앞에 <code>@</code> 가 붙는 특별한 함수들입니다.</li>
@@ -602,7 +602,7 @@ Special Functions</h1>
 <li>✅ <code>@ctor</code>, <code>@get</code>, <code>@set</code> 등이 존재합니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md81"></a>
+<h1><a class="anchor" id="autotoc_md79"></a>
 Pack</h1>
 <ul>
 <li>✅ <code>pack &lt;객체이름&gt;</code>으로 하면 그 <code>pack</code> 객체가 생성됩니다. 그 구문 밑에서 정의한 모든 객체며 함수는 이 <code>pack</code>에 속하게 됩니다.</li>
@@ -638,7 +638,7 @@ Pack</h1>
 <div class="line">    print(person(a).age) # 1</div>
 <div class="line">    print(example.person(a).age) # 1과 같은 코드입니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md83"></a>
+<h1><a class="anchor" id="autotoc_md81"></a>
 scope</h1>
 <ul>
 <li>✅ 어느 객체가 scope로써 등록되면, 해당 객체가 소유한 하위 식별자 (함수, 프로퍼티, 또다른 객체 등)에 바로 접근할 수 있게 됩니다.</li>
@@ -732,7 +732,7 @@ scope</h1>
 <div class="line"># 결과:</div>
 <div class="line">#  local obj file</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md85"></a>
+<h1><a class="anchor" id="autotoc_md83"></a>
 오버로딩</h1>
 <ul>
 <li>✅ 오버로딩을 지원합니다.</li>
@@ -742,7 +742,7 @@ scope</h1>
 <div class="line">add(a int, b int) int</div>
 <div class="line">    a + b</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md87"></a>
+<h1><a class="anchor" id="autotoc_md85"></a>
 평가전략</h1>
 <ul>
 <li>✅ by object 평가전략을 사용합니다.<ul>
@@ -765,7 +765,7 @@ scope</h1>
 <div class="line">    foo(age, p)</div>
 <div class="line">    print(&quot;age=$age p.age=${p.age}&quot;) # age=1 p.age=22</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md89"></a>
+<h1><a class="anchor" id="autotoc_md87"></a>
 중첩 객체</h1>
 <ul>
 <li>✅ 다른 언어에는 중첩 객체라는 기능이 있습니다.</li>
@@ -794,7 +794,7 @@ scope</h1>
 <div class="line"># Byeol 언어에서는 정의블록문에 사용하는 모든 구문을 일반 블록문에서 사용할 수 있습니다.</div>
 <div class="line">    mc().intro()</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md91"></a>
+<h1><a class="anchor" id="autotoc_md89"></a>
 중첩 함수</h1>
 <ul>
 <li>✅ 객체를 정의할 수 있는 곳에는, 함수도 정의할 수 있어야 합니다.</li>
@@ -837,7 +837,7 @@ scope</h1>
 <div class="line">            arr := {4, 5} # (2)</div>
 <div class="line">            print(getLenFrom()) # getLenFrom() 안에서 사용되는 `arr`은 (1)의 `arr` 입니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md93"></a>
+<h1><a class="anchor" id="autotoc_md91"></a>
 클로저</h1>
 <ul>
 <li>✅ 함수를 다른 context로 넘기면(인자로 넣거나, 함수에서 반환) 클로저가 됩니다.</li>
@@ -856,7 +856,7 @@ scope</h1>
 <div class="line">        closure := app().foo(1)</div>
 <div class="line">        closure() # &quot;4&quot;</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md93"></a>
 is</h1>
 <ul>
 <li>✅ <code>A is B</code> 는 A가 B 타입일때 true가 반환됩니다.</li>
@@ -865,7 +865,7 @@ is</h1>
 <div class="line">if value is flt</div>
 <div class="line">    print(value as flt)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md97"></a>
+<h1><a class="anchor" id="autotoc_md95"></a>
 in</h1>
 <ul>
 <li>✅ <code>A in B</code> 는 B container의 A가 원소로 들어가 있으면 true 입니다.</li>
@@ -874,7 +874,7 @@ in</h1>
 <div class="fragment"><div class="line">arr := {1, 2, 3}</div>
 <div class="line">2 in arr # true</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md99"></a>
+<h1><a class="anchor" id="autotoc_md97"></a>
 Pattern Matching</h1>
 <ul>
 <li>☐ 패턴매칭을 실행할 구문은 한줄짜리 일반 구문이어야 합니다. 단, 예외적으로 할당정의문도 올 수 있습니다.</li>
@@ -913,7 +913,7 @@ Pattern Matching</h1>
 <li>☐ 유일하게 예외적으로 inline 구문에 할당정의문도 포함됩니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md101"></a>
+<h1><a class="anchor" id="autotoc_md99"></a>
 단축된 할당 문법</h1>
 <ul>
 <li>☐ obj 내 함수를 정의할 때 assignment를 처음부터 실행해놓고 본문을 수행하도록 하는 편의 기능이 있습니다.</li>
@@ -954,7 +954,7 @@ Pattern Matching</h1>
 <div class="line">    a.setHandler((=btn): print(&quot;${btn.name} click&quot;))</div>
 <div class="line">    a.dispatch()</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md103"></a>
+<h1><a class="anchor" id="autotoc_md101"></a>
 변수명을 타입명과 동일하게 하려면 백틱(`)으로 편하게 합니다.</h1>
 <ul>
 <li>✅ 변수 정의시에 <code>button Button</code>을 <code>Button`</code> 라고 정의할 수 있습니다.</li>
@@ -974,7 +974,7 @@ Pattern Matching</h1>
 <li>☐ 당연히, <code>Abe`</code>와 <code>=Abe`</code> 를 같이 쓸 수 없습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md105"></a>
+<h1><a class="anchor" id="autotoc_md103"></a>
 클래스라는 건 없습니다</h1>
 <ul>
 <li>✅ 사용자가 <code>def</code>를 통해 정의한 것은 클래스가 아니라 객체입니다. 이를 <code>origin object</code>라고 합니다.</li>
@@ -1063,7 +1063,7 @@ Pattern Matching</h1>
 <li>✅ 그러니 클래스라는 개념은 잊어버리세요.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md107"></a>
+<h1><a class="anchor" id="autotoc_md105"></a>
 스타일로 Attribute 정의</h1>
 <ul>
 <li>✅ attribute / constraint를 byeol 언어에서는 스타일로 대체해서 표현합니다.</li>
@@ -1097,7 +1097,7 @@ Pattern Matching</h1>
 <div class="line"> </div>
 <div class="line">print(person.name) # &quot;default&quot;</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md109"></a>
+<h1><a class="anchor" id="autotoc_md107"></a>
 타입 추론</h1>
 <ul>
 <li>✅ 변수를 정의할 때, 함수에 인자를 넘길 때 타입을 생략하면 값을 통해 유추합니다.</li>
@@ -1118,7 +1118,7 @@ Pattern Matching</h1>
 <div class="line">    btn Button</div>
 <div class="line">    click(btn, (btn): 22) # 파라메터 타입 `Button`와, 반환형 `int`로 추론됩니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md111"></a>
+<h1><a class="anchor" id="autotoc_md109"></a>
 프로퍼티</h1>
 <ul>
 <li>☐ 프로퍼티를 만들 때 <code>getter</code>와 <code>setter</code>를 지정할 수 있습니다.</li>
@@ -1185,7 +1185,7 @@ Pattern Matching</h1>
 <div class="line">age2 = 18 # set 잘됩니다.</div>
 <div class="line">print(age2) # get도 잘되죠.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md113"></a>
+<h1><a class="anchor" id="autotoc_md111"></a>
 우리는 typedef가 필요 없습니다.</h1>
 <ul>
 <li>✅ 변수 A가 있을때, 별칭 B를 만들고 싶으면 우리는 <code>B := A</code> 라고 사용합니다.</li>
@@ -1203,7 +1203,7 @@ Pattern Matching</h1>
 <li>☐ 불완전 객체도 타입으로 사용이 가능합니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md115"></a>
+<h1><a class="anchor" id="autotoc_md113"></a>
 it</h1>
 <ul>
 <li>✅ 모든 블록문 키워드는 대상이 되는 expr과 블록문으로 구성됩니다.</li>
@@ -1223,7 +1223,7 @@ it</h1>
 <div class="line">with foo()</div>
 <div class="line">    print(it.age) # it은 `foo()` 입니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md117"></a>
+<h1><a class="anchor" id="autotoc_md115"></a>
 기본 타입도 객체</h1>
 <ul>
 <li>✅ 기본 제공되는 타입들도 객체입니다.</li>
@@ -1231,7 +1231,7 @@ it</h1>
 <li>✅ <code>A B</code>는 <code>A := B()</code> 와 같습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md119"></a>
+<h1><a class="anchor" id="autotoc_md117"></a>
 표현식 기반 언어</h1>
 <ul>
 <li>✅ byeol언어는 표현식기반 언어입니다. 무슨 말이냐면, 대부분의 구문이 값을 반환합니다.</li>
@@ -1268,7 +1268,7 @@ it</h1>
 <div class="line">food = getFood()</div>
 <div class="line">foo(a, food)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md121"></a>
+<h1><a class="anchor" id="autotoc_md119"></a>
 with</h1>
 <ul>
 <li>✅ <code>with</code>는 byeol언어에서 매우 중요한 위치를 차지하는 기능입니다.</li>
@@ -1357,7 +1357,7 @@ with</h1>
 <li>✅ 여러분은 이 <code>with</code> 하나만 파악함으로써, <code>상속</code>, <code>Delegation</code>, <code>import</code>, <code>static</code> 을 모두 사용할 수 있습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md123"></a>
+<h1><a class="anchor" id="autotoc_md121"></a>
 타입 확장으로 활용</h1>
 <ul>
 <li>☐ 다시한번 말씀드리면, inline <code>with</code>는 정의문입니다.</li>
@@ -1392,7 +1392,7 @@ with</h1>
 <div class="line">                        # 이런걸 사용해야 하는 시나리오는 없어보이고, 이걸 허용하면 혼란만 가중됩니다.</div>
 <div class="line">                        # 그래서 `def` 안에서 `with` 는 반드시 첫줄에 입력할 것을 강제합니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md125"></a>
+<h1><a class="anchor" id="autotoc_md123"></a>
 오버라이딩</h1>
 <ul>
 <li>☐ 오버라이딩을 지원합니다.</li>
@@ -1407,7 +1407,7 @@ with</h1>
 <div class="line">    +name := &quot;&quot;</div>
 <div class="line">    _+sayName() str: &quot;Miss $name&quot;</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md127"></a>
+<h1><a class="anchor" id="autotoc_md125"></a>
 <code>A::B</code> 함수 호출</h1>
 <ul>
 <li>☐ 확장은 상속과 유사합니다.</li>
@@ -1498,7 +1498,7 @@ with</h1>
 <div class="line">        a::foo() # &quot;A::foo()&quot;</div>
 <div class="line">    a::foo() # 에러! a는 현재 me인 example과 더이상 확장관계가 아닙니다. a.foo()를 하세요.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md129"></a>
+<h1><a class="anchor" id="autotoc_md127"></a>
 다중 확장</h1>
 <ul>
 <li>☐ 당연히 <code>with</code>를 여러개 할 수 있습니다.</li>
@@ -1525,7 +1525,7 @@ with</h1>
 <li>☐ <code>with</code>는 가능하면 1개만 하되, 여러개를 할때는 부모 타입이 겹치지 않는 경우에 사용하길 바랍니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md131"></a>
+<h1><a class="anchor" id="autotoc_md129"></a>
 static으로 활용</h1>
 <ul>
 <li>☐ 불완전객체는 자신의 하위 요소들을 사용하지 못합니다.</li>
@@ -1591,7 +1591,7 @@ static으로 활용</h1>
 <div class="line">    with a A # A는 불완전객체이지만, A로부터 복제된 a는 완전객체입니다.</div>
 <div class="line">print(B.age)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md133"></a>
+<h1><a class="anchor" id="autotoc_md131"></a>
 delegation으로 활용</h1>
 <ul>
 <li>☐ 아시다시피 프로퍼티는 값을 바꿀 수 있습니다.</li>
@@ -1649,7 +1649,7 @@ delegation으로 활용</h1>
 <li>✅ 물론 일부 함수만 delegate 하고 싶다면 직접 코드를 작성해야 합니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md135"></a>
+<h1><a class="anchor" id="autotoc_md133"></a>
 import</h1>
 <ul>
 <li>✅ byeol언어는 <code>import</code> 키워드가 없습니다.</li>
@@ -1703,7 +1703,7 @@ import</h1>
 <div class="line">    p Parser</div>
 <div class="line">    parseText(p, &quot;rawStringwow!&quot;)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md137"></a>
+<h1><a class="anchor" id="autotoc_md135"></a>
 err</h1>
 <ul>
 <li>✅ byeol언어에 에러는 개념적으로 2가지로 분류됩니다.<ul>
@@ -1715,7 +1715,7 @@ err</h1>
 <li>✅ Err객체는 msg, callstack등 기본적인 API를 가지고 있습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md139"></a>
+<h1><a class="anchor" id="autotoc_md137"></a>
 errorable type</h1>
 <ul>
 <li>☐ 사전에 에러가 발생할 수 있다고 고지하면, 좀 더 완만한 처리가 가능합니다.</li>
@@ -1749,13 +1749,13 @@ errorable type</h1>
 <div class="line">    if foo() is err</div>
 <div class="line">        print(&quot;error!&quot;) # getElem에서 발생한 에러가 이시점까지 지연되었습니다.</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md141"></a>
+<h1><a class="anchor" id="autotoc_md139"></a>
 safe-navigation</h1>
 <ul>
 <li>☐ <code>?.</code> 를 사용하면, 에러일때만 함수를 호출할 수 있습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md143"></a>
+<h1><a class="anchor" id="autotoc_md141"></a>
 exception이란?</h1>
 <ul>
 <li>✅ 같은 에러라도 고지하지 않은 상태에서 갑자기 에러가 반환하면, 이를 익셉션이라고 합니다.</li>
@@ -1804,7 +1804,7 @@ exception이란?</h1>
 <div class="line">                         # 그래서 age를 적절한 int의 값으로 채우지않으면 컴파일 에러가 발생합니다.</div>
 <div class="line">                ret</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md145"></a>
+<h1><a class="anchor" id="autotoc_md143"></a>
 abstract</h1>
 <ul>
 <li>☐ 프로퍼티나 함수를 abstract로 선언할 수 있습니다.</li>
@@ -1887,7 +1887,7 @@ abstract</h1>
 <li>✅ 그래서 byeol언어는 다른 언어들에 있는 몇가지 문법/개념을 일부러 제공하지 않습니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md147"></a>
+<h1><a class="anchor" id="autotoc_md145"></a>
 함수타입 대신 메소드을 사용</h1>
 <ul>
 <li>✅ byeol언어는 함수타입을 제공하지 않습니다.</li>
@@ -1918,7 +1918,7 @@ abstract</h1>
 <div class="line">dispatch(listener OnEvent) int</div>
 <div class="line">  ret listener(3)</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md149"></a>
+<h1><a class="anchor" id="autotoc_md147"></a>
 제네릭</h1>
 <ul>
 <li>✅ origin 객체를 정의할때 이름 뒤에 &lt;타입인자목록&gt; 을 추가함으로써 제네릭 객체를 정의할 수 있습니다.</li>
@@ -1942,19 +1942,19 @@ abstract</h1>
 <li>✅ Type erasure 같은 불완전한 구현이 아닙니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md151"></a>
+<h1><a class="anchor" id="autotoc_md149"></a>
 enumeration</h1>
 <ul>
 <li>☐ TODO</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md153"></a>
+<h1><a class="anchor" id="autotoc_md151"></a>
 Annotation</h1>
 <ul>
 <li>☐ Annotation은 <code>:</code> 으로 표현할 예정입니다.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md155"></a>
+<h1><a class="anchor" id="autotoc_md153"></a>
 끝맺으면서</h1>
 <ul>
 <li>간결한 언어입니다.</li>

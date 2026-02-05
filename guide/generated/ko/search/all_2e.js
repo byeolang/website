@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['속도보다_20유지보수를_20우선한다_0',['속도보다 유지보수를 우선한다',['../design-philosophy.html#autotoc_md24',1,'']]]
+  ['스크립트_20직접_20실행_0',['스크립트 직접 실행',['../basic-usage.html#autotoc_md3',1,'']]],
+  ['스타일로_20attribute_20정의_1',['스타일로 Attribute 정의',['../language-spec.html#autotoc_md105',1,'']]],
+  ['스펙_2',['간략화된 언어 스펙',['../language-spec.html',1,'how-to-code']]]
 ];

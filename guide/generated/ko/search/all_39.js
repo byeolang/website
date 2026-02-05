@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['위한_20기능은_20만들지_20않는다_0',['무조건적으로 하나의 기능을 위한 기능은 만들지 않는다',['../design-philosophy.html#autotoc_md20',1,'']]]
+  ['우리가_20꿈꾸는_20언어_0',['마무리: 우리가 꿈꾸는 언어',['../design-philosophy.html#autotoc_md22',1,'']]],
+  ['우리는_20typedef가_20필요_20없습니다_1',['우리는 typedef가 필요 없습니다.',['../language-spec.html#autotoc_md111',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['작은_20장난감_20같은_20언어를_20만든다_0',['작은 장난감 같은 언어를 만든다',['../design-philosophy.html#autotoc_md12',1,'']]]
+  ['이해_0',['일관성: 암기가 아닌 이해',['../design-philosophy.html#autotoc_md16',1,'']]]
 ];

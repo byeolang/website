@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['시퀸스_0',['시퀸스',['../language-spec.html#autotoc_md53',1,'']]]
+  ['실행_0',['스크립트 직접 실행',['../basic-usage.html#autotoc_md3',1,'']]]
 ];

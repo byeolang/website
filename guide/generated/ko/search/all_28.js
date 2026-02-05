@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['복제하기_0',['객체 복제하기',['../language-spec.html#autotoc_md75',1,'']]]
+  ['사용법_0',['기본 사용법',['../basic-usage.html',1,'']]],
+  ['사용_1',['함수타입 대신 메소드을 사용',['../language-spec.html#autotoc_md145',1,'']]]
 ];

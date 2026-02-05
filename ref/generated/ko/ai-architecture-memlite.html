@@ -131,16 +131,16 @@ $(function(){initNavTree('ai-architecture-memlite.html',''); initResizable(); })
 <img src="inline_umlgraph_9.png" />
 </div>
 <hr  />
-<h1><a class="anchor" id="autotoc_md210"></a>
+<h1><a class="anchor" id="autotoc_md223"></a>
 바인딩 인터페이스</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_10.png" />
 </div>
-<h2><a class="anchor" id="autotoc_md211"></a>
+<h2><a class="anchor" id="autotoc_md224"></a>
 binder 클래스</h2>
 <p><a class="el" href="classby_1_1binder.html">binder</a> 클래스는 범용 바인딩 클래스로 <a class="el" href="classby_1_1instance.html">instance</a> 클래스를 상속한 클래스로부터 생성된 모든 객체를 바인딩할 수 있습니다. 표준 라이브러리에 잘 정의된 std::weak_ptr과 같은 기능을 <a class="el" href="classby_1_1tweak.html">tweak</a> 가, std::shared_ptr은 <a class="el" href="classby_1_1tstr.html">tstr</a> 이 각 담당합니다.</p>
 <p>shared_ptr를 이미 잘 알고 있다면 아래와 같이 사용할 수 있다는 걸 쉽게 이해할 수 있을 거예요.</p>
-<h2><a class="anchor" id="autotoc_md212"></a>
+<h2><a class="anchor" id="autotoc_md225"></a>
 기본 사용법</h2>
 <p>객체를 바인딩하는 <code>bind()</code>와 <code>isBind()</code>, <code>get()</code>을 주로 사용하게 될 것입니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -214,10 +214,10 @@ binder 클래스</h2>
 <div class="line">strong3.rel();</div>
 <div class="line">strong1-&gt;getBindTag().getStrongCnt();  // 1</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md214"></a>
+<h1><a class="anchor" id="autotoc_md227"></a>
 std::shared_ptr 대비 장점</h1>
 <p>이쯤되면, 아마도 왜 shared_ptr를 사용하지 않고 굳이 tstr을 만들었는가에 대해 의문을 가질 것입니다. shared_ptr이 제공하지 못하는 몇가지 장점이 있기 때문입니다.</p>
-<h2><a class="anchor" id="autotoc_md215"></a>
+<h2><a class="anchor" id="autotoc_md228"></a>
 reference counting 블록은 인스턴스 자체에 붙어있다</h2>
 <p>shared_ptr은 생성시 내부적으로 reference counting을 위한 <code>Control block</code>이라는 걸 heap에 만들어서 관리한다는 건 이미 잘 알고 있을 것입니다. 그래서 shared_ptr 사용시 다음과 같은 사용은 매우 위험합니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -228,7 +228,7 @@ reference counting 블록은 인스턴스 자체에 붙어있다</h2>
 <div class="line">                           // double delete가 발생한다.</div>
 </div><!-- fragment --><p>그리고 이 문제는 바로 프로그램이 종료하지 않기 때문에 디버깅이 아주 어렵습니다.</p>
 <p>byeol에서는 reference counting을 위한 클래스를 <a class="el" href="classby_1_1life.html">life</a> 라고 하며, 이는 <a class="el" href="classby_1_1watcher.html">watcher</a> 에 의해 인스턴스마다 별도로 제공됩니다. <a class="el" href="classby_1_1watcher.html">watcher</a> 는 내부에 <a class="el" href="classby_1_1life.html">life</a> 객체들을 배열로 미리 대량 할당해둔 풀(pool)을 관리합니다. 새로운 인스턴스가 바인딩될 때 사용 가능한 <a class="el" href="classby_1_1life.html">life</a> 를 할당하고, 인스턴스가 소멸되면 해당 <a class="el" href="classby_1_1life.html">life</a> 를 사용 가능(available) 상태로 표시하여 나중에 재사용합니다. 동일한 인스턴스에 대해서는 항상 같은 <a class="el" href="classby_1_1life.html">life</a> 가 할당되므로 이중 해제 문제가 발생하지 않습니다.</p>
-<h2><a class="anchor" id="autotoc_md216"></a>
+<h2><a class="anchor" id="autotoc_md229"></a>
 범용 바인더 제공</h2>
 <p><a class="el" href="classby_1_1tstr.html">tstr</a> 과 <a class="el" href="classby_1_1tweak.html">tweak</a> 는 같은 <a class="el" href="classby_1_1binder.html">binder</a> 기반클래스를 갖기 때문에 <a class="el" href="classby_1_1binder.html">binder</a> 타입으로 범용적인 로직을 구현할 수 있습니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -241,23 +241,23 @@ reference counting 블록은 인스턴스 자체에 붙어있다</h2>
 <div class="line">    instance* inst = me.get(); // 물론 T를 모르니 instance로 받아야 한다.</div>
 <div class="line">}</div>
 </div><!-- fragment --><p><a class="el" href="classby_1_1binder.html">binder</a> 는 abstract class 이므로 binder 객체 생성이 불가능합니다. <a class="el" href="classby_1_1tstr.html">tstr</a> 이나 <a class="el" href="classby_1_1tweak.html">tweak</a> 로 이미 생성된 바인더들을 범용적인 로직을 작성할때만 의의를 갖습니다.</p>
-<h2><a class="anchor" id="autotoc_md217"></a>
+<h2><a class="anchor" id="autotoc_md230"></a>
 동적 타입 체킹</h2>
 <p><a class="el" href="classby_1_1binder.html">binder</a> 는 ADT이며 클래스 템플릿 조차 아닙니다. 따라서 binder::bind() 함수는 parameter가 <a class="el" href="classby_1_1instance.html">instance</a> 타입으로 되어있습니다. 이 말은 tstr라고 할지라도 <code>tstr&lt;A&gt;::bind(new B());</code> 코드에서 컴파일 에러가 발생하지 않는다는 걸 의미합니다.</p>
 <p>bind() 안쪽에서 <a class="el" href="group__meta.html">Meta</a> 모듈을 사용하여 동적으로 타입을 검사해서 올바른 경우만 인스턴스가 바인딩 됩니다. 타입이 일치하지 않을 경우, bind()는 <code>false</code>를 반환하고 바인딩을 수행하지 않습니다. 따라서 타입 안정성이 엄격하게 필요한 경우라면 bind()의 반환값을 반드시 확인해야 합니다.</p>
-<h2><a class="anchor" id="autotoc_md218"></a>
+<h2><a class="anchor" id="autotoc_md231"></a>
 자체 메모리 풀 사용</h2>
 <p>인스턴스 할당시 모든 작업은 <a class="el" href="classby_1_1instancer.html">instancer</a> 를 시작으로 이뤄집니다. 자체 메모리 풀을 사용함으로써 heap보다 빠른 할당/해제가 가능합니다. 자체 메모리 풀에 대해서는 밑에서 지겹도록 다뤄볼겁니다.</p>
-<h2><a class="anchor" id="autotoc_md219"></a>
+<h2><a class="anchor" id="autotoc_md232"></a>
 속도 개선</h2>
 <p>shared_ptr의 알고리즘은 같은 shared_ptr 끼리 공유되는 reference counting 정보를 heap에 보관하고 공유하는 것입니다. heap보다 빠른 자체 메모리 풀을 사용하고, 바인딩 속도를 조금이나마 최적화한다면 속도를 개선할 여지가 있습니다.</p>
 <p>참고로, binding은 byeol에서 가장 많은 퍼포먼스 비용을 차지하는 핫스팟중에 하나입니다.</p>
-<h2><a class="anchor" id="autotoc_md220"></a>
+<h2><a class="anchor" id="autotoc_md233"></a>
 추가 정보 제공</h2>
 <p>shared_ptr은 heap에 reference counting 정보를 보관하는 객체를 생성하고 이를 공유합니다. 반면 <a class="el" href="group__memlite.html">Memlite</a> 모듈은 <a class="el" href="classby_1_1watcher.html">watcher</a> 클래스를 통해서 이미 메모리는 할당된, 빈 <a class="el" href="classby_1_1life.html">life</a> 하나를 내어주고, 그곳을 해당 <a class="el" href="classby_1_1instance.html">instance</a> 의 reference counting 공간으로 활용합니다.</p>
 <p>만약 이후, GC와 같은 기능이 추가되면 인스턴스마다 추가적으로 생명주기와 관련된 정보를 필요로 할 여지가 있습니다. shared_ptr와 달리 각 인스턴스의 생명주기 정보 또한 자체적으로 관리하고 있기 때문에 그런 요구사항에도 적절하게 대응할 수 있습니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md222"></a>
+<h1><a class="anchor" id="autotoc_md235"></a>
 메모리 풀 패키지 개요</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_11.png" />
@@ -269,10 +269,10 @@ reference counting 블록은 인스턴스 자체에 붙어있다</h2>
 </ul>
 <p>입니다. 일단 메모리 관리 컴포넌트 부터 살펴보죠.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md224"></a>
+<h1><a class="anchor" id="autotoc_md237"></a>
 메모리 관리 컴포넌트</h1>
 <p>메모리 관리 컴포넌트의 pool, chunks, chunk 각 클래스 역할이 뭔지를 파악하는게 코드 이해에 아주 중요합니다. chunks는 여러개의 chunk를 관리하고, pool은 여러개의 chunks를 관리합니다.</p>
-<h2><a class="anchor" id="autotoc_md225"></a>
+<h2><a class="anchor" id="autotoc_md238"></a>
 chunk - 최소 할당 단위</h2>
 <p><a class="el" href="classby_1_1chunk.html">chunk</a> 클래스는 <a class="el" href="group__memlite.html">Memlite</a> 에서 유일하게 직접적으로 메모리를 실제로 할당 가능한 최소 단위 클래스입니다. 모든 메모리 관리는 <a class="el" href="classby_1_1chunk.html">chunk</a> 들을 엮어서 수행합니다.</p>
 <p><a class="el" href="classby_1_1chunk.html">chunk</a> 는 메모리가 flexible하게 늘어나도록 하는 _resize() 함수가 있지만, <a class="el" href="group__memlite.html">Memlite</a> 의 컨셉상 이를 public으로 공개하지 않습니다. 결과적으로 <a class="el" href="classby_1_1chunk.html">chunk</a> 의 메모리는 객체 생성시 고정되며, 추가 메모리가 필요하다면 <a class="el" href="classby_1_1chunk.html">chunk</a> 객체를 더 생성해서 운영해야 합니다.</p>
@@ -374,7 +374,7 @@ chunk - 최소 할당 단위</h2>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_12.png" />
 </div>
-<h2><a class="anchor" id="autotoc_md226"></a>
+<h2><a class="anchor" id="autotoc_md239"></a>
 chunks - 다중 chunk 관리</h2>
 <p><a class="el" href="classby_1_1chunks.html">chunks</a> 객체는 여러개의 <a class="el" href="classby_1_1chunk.html">chunk</a> 의 인스턴스 관리를 담당합니다. <a class="el" href="classby_1_1chunk.html">chunk</a> 는 생성시 고정된 크기만 메모리를 활용하기 때문에 <a class="el" href="classby_1_1chunks.html">chunks</a> 가 여러개의 <a class="el" href="classby_1_1chunk.html">chunk</a> 를 추가/삭제 함으로써 유동적으로 메모리를 관리합니다.</p>
 <p><b>chunks 역시 고정된 메모리만 제공한다</b></p>
@@ -399,7 +399,7 @@ chunks - 다중 chunk 관리</h2>
 <p>만약 _chunks[_s]에 가용 메모리가 없을 경우 _s를 ++ 합니다. 이후 마치 원형배열처럼, _chunks의 끝은 처음과 이어져 있다고 보면 됩니다. 그래서 다시 _s가 순회직전의 _s로 값이 같아질 때까지도 가용 메모리가 없다면, <a class="el" href="classby_1_1chunks.html">chunks</a> 전체에 가용 메모리가 없는 상태이므로 resize()에 들어갑니다.</p>
 <p><b>vector를 쓰면 안된다</b></p>
 <p>당연한 건데, vector는 heap으로 관리되므로 자체 메모리 풀을 만든다면서 vector를 사용해서는 안됩니다. 차후 수정 예정입니다.</p>
-<h2><a class="anchor" id="autotoc_md227"></a>
+<h2><a class="anchor" id="autotoc_md240"></a>
 pool - 크기별 메모리 관리</h2>
 <p><a class="el" href="classby_1_1pool.html">pool</a> 클래스는 외부로부터 메모리 할당 요청시 가장 최초로 처리하는 클래스입니다. 내부적으로 <a class="el" href="classby_1_1chunks.html">chunks</a> 에 대한 배열을 가지고 있으며, <a class="el" href="classby_1_1chunks.html">chunks</a> 는 <a class="el" href="classby_1_1chunk.html">chunk</a> 를 가지고 있으므로, 사실상 로우레벨의 메모리 관련 클래스를 모두 관리하는 셈입니다.</p>
 <p><b>pool은 할당 가능한 size 별로 lazy하게 chunks를 가진다</b></p>
@@ -437,10 +437,10 @@ pool - 크기별 메모리 관리</h2>
 <div class="line">// - 같은 크기는 항상 같은 chunks에서 관리 (메모리 지역성 향상)</div>
 <div class="line">// - chunks 내부에서 빠른 할당/해제 수행</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md229"></a>
+<h1><a class="anchor" id="autotoc_md242"></a>
 라이프 사이클 관리 컴포넌트</h1>
 <p>watcher와 life 클래스가 서로 연계하면서 객체의 라이프사이클을 추적, 관리합니다. 여기에는 <code>id</code> 라는 개체 식별값을 어떻게 정의하고 부여하는지가 매우 중요합니다.</p>
-<h2><a class="anchor" id="autotoc_md230"></a>
+<h2><a class="anchor" id="autotoc_md243"></a>
 id 클래스</h2>
 <p><a class="el" href="structby_1_1id.html">id</a> 클래스는 64bit integer로 되어있는 <a class="el" href="classby_1_1instance.html">instance</a> 식별자입니다. tagN은 <a class="el" href="classby_1_1life.html">life</a> 를 식별하며, chkN은 몇번째 <a class="el" href="classby_1_1chunk.html">chunk</a> 인지를 나타내며 serial은 객체 검증에 사용됩니다.</p>
 <p><b>serial은 프로세스 실행 도중 instance 객체의 생성횟수</b></p>
@@ -472,11 +472,11 @@ id 클래스</h2>
 <p><a class="el" href="classby_1_1watcher.html">watcher</a> 는 자신의 배열에서 tagN 번째 <a class="el" href="classby_1_1life.html">life</a> 객체를 가져올때 이 값을 사용합니다.</p>
 <p><b>chkN은 chunk 객체를 가져올 때 사용한다</b></p>
 <p><a class="el" href="classby_1_1pool.html">pool</a> 은 먼저 id와 매핑된 <a class="el" href="classby_1_1instance.html">instance</a> 의 size를 계산해 <a class="el" href="classby_1_1chunks.html">chunks</a> 를 가져옵니다. 그리고 <a class="el" href="classby_1_1chunks.html">chunks</a> 는 자신의 chkN 번째 원소인 메모리블록을 반환합니다. 외부에서는 전달 받은 메모리 주소와 serial 값을 비교해서 같은 인스턴스인지를 검증합니다.</p>
-<h2><a class="anchor" id="autotoc_md231"></a>
+<h2><a class="anchor" id="autotoc_md244"></a>
 life 클래스</h2>
 <p><a class="el" href="classby_1_1pool.html">pool</a> 클래스가 로우레벨 관점에서 블록 단위로 메모리를 관리하는 클래스라면, <a class="el" href="classby_1_1watcher.html">watcher</a> 컴포넌트는 각 블록의 정보를 유기적으로 관리하는 클래스입니다.</p>
 <p><a class="el" href="classby_1_1life.html">life</a> 는 <a class="el" href="classby_1_1pool.html">pool</a> 에 할당되어있는 주소값(_pt)와 reference counting을 위한 값들을 갖습니다. _strong은 reference counting을 위한 값이며, _pt는 <a class="el" href="classby_1_1pool.html">pool</a> 에 할당받은 인스턴스를 직접 가리킵니다. _id는 객체를 식별하기 위한 값으로 자세한 내용은 <a class="el" href="structby_1_1id.html">id</a> 를 참고하세요.</p>
-<h2><a class="anchor" id="autotoc_md232"></a>
+<h2><a class="anchor" id="autotoc_md245"></a>
 watcher 클래스</h2>
 <p><a class="el" href="classby_1_1watcher.html">watcher</a> 클래스는 메모리 관리의 한 축을 담당하는 클래스로, 생성된 객체의 라이프사이클을 관리합니다. <a class="el" href="classby_1_1instance.html">instance</a> 가 생성될때마다 <a class="el" href="classby_1_1watcher.html">watcher</a> 는 <a class="el" href="classby_1_1life.html">life</a> 객체를 추가로 할당해 reference counting으로 객체의 소멸시점을 판별합니다.</p>
 <p><b>reference counting</b></p>
@@ -509,7 +509,7 @@ watcher 클래스</h2>
 <div class="line">lifeTag.canBind(ttype&lt;instance&gt;());  // true</div>
 <div class="line">lifeTag.getBindable();  // instance의 type 반환</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md234"></a>
+<h1><a class="anchor" id="autotoc_md247"></a>
 instance 클래스</h1>
 <p><a class="el" href="classby_1_1instance.html">instance</a> 클래스는 <a class="el" href="group__memlite.html">Memlite</a> 모듈의 자체 memory pool에 의해서 관리되는 객체의 기반 클래스입니다. <a class="el" href="classby_1_1instance.html">instance</a> 클래스를 상속해야만 <a class="el" href="classby_1_1binder.html">binder</a> 를 통해 weak pointer나 strong pointer로 참조 할 수 있습니다. <a class="el" href="classby_1_1instance.html">instance</a> 의 식별은 <code>id</code>를 통해서 이뤄집니다.</p>
 <p><b>id 부여 알고리즘</b></p>
@@ -523,7 +523,7 @@ instance 클래스</h1>
 <p><b>속도에 있어서 instance 클래스의 중요성</b></p>
 <p>byeol에서 가장 빈번히 하는 작업은 객체를 생성하면서 id를 부여하거나 binding을 하는 작업입니다. 이 부분은 개선 예정이며, 더 나은 알고리즘에 대한 아이디어를 환영합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md236"></a>
+<h1><a class="anchor" id="autotoc_md249"></a>
 instancer - 메모리 관리 조정자</h1>
 <p><a class="el" href="classby_1_1instancer.html">instancer</a> 클래스는 low level로 메모리를 관리하는 <a class="el" href="classby_1_1pool.html">pool</a> 클래스와, <a class="el" href="classby_1_1instance.html">instance</a> 들의 라이프사이클을 관리하는 <a class="el" href="classby_1_1watcher.html">watcher</a> 를 가지고 있습니다. Facade 패턴을 사용하여 복잡한 메모리 관리 서브 패키지에 대한 단순화된 인터페이스를 제공합니다.</p>
 <p>이 둘을 잘 제어해서 인스턴스의 생명 관리(할당/소멸)를 하는 것이 목적입니다. 사실상 <a class="el" href="group__memlite.html">Memlite</a> 에서 핵심 작업을 수행하기 위해 각 제어클래스들에게 작업을 분배하거나 명령을 내리는 진입점을 담당합니다.</p>
@@ -555,10 +555,10 @@ instancer - 메모리 관리 조정자</h1>
 <div class="line">// 2. count가 0이 되면 instancer가 pool에게 메모리 반환 요청</div>
 <div class="line">// 3. 소멸자 호출 후 메모리 블록 반환</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md238"></a>
+<h1><a class="anchor" id="autotoc_md251"></a>
 메모리 관리 인터페이스</h1>
 <p>이 인터페이스들은 Interface Segregation Principle을 따라 설계되었습니다. 클라이언트가 사용하지 않는 메서드에 의존하지 않도록, 메모리 조회 기능(<a class="el" href="classby_1_1memory_haver.html">memoryHaver</a>)과 메모리 할당 기능(<a class="el" href="classby_1_1allocator.html">allocator</a>)을 별도의 인터페이스로 분리했습니다.</p>
-<h2><a class="anchor" id="autotoc_md239"></a>
+<h2><a class="anchor" id="autotoc_md252"></a>
 memoryHaver 클래스</h2>
 <p><a class="el" href="classby_1_1memory_haver.html">memoryHaver</a> 클래스는 memory pool에서 일정 메모리를 직접 혹은 간접적으로 소유하고 있으며, 그 메모리를 READ 가능한 클래스들의 기본 인터페이스를 정의합니다. 그래서 메모리의 크기나, 상태 등을 알 수 있는 인터페이스로 정의되어 있습니다.</p>
 <p><b>간접적으로 소유하다?</b></p>
@@ -566,14 +566,14 @@ memoryHaver 클래스</h2>
 <p><b>len과 size</b></p>
 <p>할당 가능한 메모리의 크기는 size로 표현하며, 그 중에서 할당한 메모리는 len으로 표현됩니다. void* 및 byte 단위로만 제어하는 것을 전제로 합니다.</p>
 <p><a class="el" href="classby_1_1memory_haver.html">memoryHaver</a> 의 파생클래스들은 자신들이 담당하는 메모리의 사이즈가 제각기 다르다는 것에 주의하세요.</p>
-<h2><a class="anchor" id="autotoc_md240"></a>
+<h2><a class="anchor" id="autotoc_md253"></a>
 allocator 클래스</h2>
 <p><a class="el" href="classby_1_1allocator.html">allocator</a> 클래스는 <a class="el" href="classby_1_1memory_haver.html">memoryHaver</a> 를 상속하고 있다는 점에서 알다시피 관리하는 메모리의 상태나 크기를 측정할 수 있으면서, 추가적으로 메모리를 할당/소멸 할 수 있는 클래스입니다.</p>
 <p>모든 메모리는 void* 및 바이트 관점에서만 바라본다는 <a class="el" href="group__memlite.html">Memlite</a> 컨셉에 맞게, new(), del()의 파라메터는 void*만 제공합니다.</p>
 <p><b>memlite 전용의 공통 인터페이스의 네이밍 컨벤션</b></p>
 <p>할당은 new1() (new one 이라는 뜻입니다.), 해제는 del()를 사용합니다. 이 네이밍은 <a class="el" href="group__memlite.html">Memlite</a> 뿐만 아니라 byeol 프로젝트 내부에서 자주 사용됩니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md242"></a>
+<h1><a class="anchor" id="autotoc_md255"></a>
 정리하기</h1>
 <p>끝으로, 여기까지 설명했던 각 클래스/컴포넌트 간의 흐름을 정리하겠습니다.</p>
 <hr  />

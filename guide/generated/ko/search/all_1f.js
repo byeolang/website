@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['메소드을_20사용_0',['함수타입 대신 메소드을 사용',['../language-spec.html#autotoc_md147',1,'']]]
+  ['만들기_0',['새로운 객체 만들기',['../language-spec.html#autotoc_md72',1,'']]]
 ];

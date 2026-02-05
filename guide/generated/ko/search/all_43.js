@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['철학_0',['철학',['../design-philosophy.html',1,'디자인 철학'],['../language-spec.html#autotoc_md39',1,'언어 디자인 철학']]]
+  ['중첩_20객체_0',['중첩 객체',['../language-spec.html#autotoc_md87',1,'']]],
+  ['중첩_20함수_1',['중첩 함수',['../language-spec.html#autotoc_md89',1,'']]]
 ];

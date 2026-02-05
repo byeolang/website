@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['스크립트_20직접_20실행_0',['스크립트 직접 실행',['../basic-usage.html#autotoc_md3',1,'']]],
-  ['스타일로_20attribute_20정의_1',['스타일로 Attribute 정의',['../language-spec.html#autotoc_md107',1,'']]],
-  ['스펙_2',['간략화된 언어 스펙',['../language-spec.html',1,'how-to-code']]]
+  ['시각화의_20결합_0',['코드와 시각화의 결합',['../design-philosophy.html#autotoc_md20',1,'']]],
+  ['시퀸스_1',['시퀸스',['../language-spec.html#autotoc_md51',1,'']]]
 ];

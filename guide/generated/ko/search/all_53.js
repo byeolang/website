@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['호출_0',['&lt;tt&gt;A::B&lt;/tt&gt; 함수 호출',['../language-spec.html#autotoc_md127',1,'']]]
+  ['할당_20문법_0',['단축된 할당 문법',['../language-spec.html#autotoc_md99',1,'']]]
 ];

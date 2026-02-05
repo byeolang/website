@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['유지보수를_20우선한다_0',['속도보다 유지보수를 우선한다',['../design-philosophy.html#autotoc_md24',1,'']]]
+  ['위한_20과감한_20선택_0',['간결함을 위한 과감한 선택',['../design-philosophy.html#autotoc_md14',1,'']]]
 ];

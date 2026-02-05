@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['플래그_20처리_0',['flag 클래스 - 명령줄 플래그 처리',['../al-architecture-frontend.html#autotoc_md446',1,'']]],
-  ['플랫폼별_20차이_1',['플랫폼별 차이',['../ac-build-structure.html#autotoc_md80',1,'']]],
-  ['플랫폼_20추상화_20계층_2',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
+  ['프로젝트_20구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
+  ['프로젝트_20디렉토리_20구조_1',['프로젝트 디렉토리 구조',['../ac-build-structure.html#autotoc_md44',1,'']]]
 ];

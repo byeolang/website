@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['튜토리얼_0',['튜토리얼',['../aa-onboarding.html#autotoc_md6',1,'']]]
+  ['통합_20테스트_0',['Integration Test (통합 테스트)',['../am-testing-guide.html#autotoc_md476',1,'']]]
 ];

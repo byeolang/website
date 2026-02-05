@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['무조건적으로_20하나의_20기능을_20위한_20기능은_20만들지_20않는다_0',['무조건적으로 하나의 기능을 위한 기능은 만들지 않는다',['../design-philosophy.html#autotoc_md20',1,'']]]
+  ['문법의_20압축과_20조합_0',['문법의 압축과 조합',['../design-philosophy.html#autotoc_md18',1,'']]],
+  ['문법_1',['단축된 할당 문법',['../language-spec.html#autotoc_md99',1,'']]]
 ];

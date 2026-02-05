@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['헤더_20파일_20포함_0',['헤더 파일 포함',['../ad-convention-rules.html#autotoc_md137',1,'']]]
+  ['허용_0',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md122',1,'']]]
 ];

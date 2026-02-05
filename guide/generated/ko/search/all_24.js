@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['배열_0',['배열',['../language-spec.html#autotoc_md51',1,'']]],
-  ['배우기_1',['언어 배우기',['../how-to-code.html',1,'']]]
+  ['백틱_20으로_20편하게_20합니다_0',['변수명을 타입명과 동일하게 하려면 백틱(`)으로 편하게 합니다.',['../language-spec.html#autotoc_md101',1,'']]]
 ];
