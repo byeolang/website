@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['짧은_20함수_20블록_3a_20한_20줄_20허용_0',['짧은 함수/블록: 한 줄 허용',['../ab-convention-rules.html#autotoc_md57',1,'']]]
+  ['조정자_0',['instancer - 메모리 관리 조정자',['../ai-architecture-memlite.html#autotoc_md236',1,'']]]
 ];

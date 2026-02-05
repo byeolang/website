@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['최상위_20타입_0',['adam - 최상위 타입',['../af-architecture-meta.html#autotoc_md144',1,'']]],
-  ['최소_20할당_20단위_1',['chunk - 최소 할당 단위',['../ag-architecture-memlite.html#autotoc_md166',1,'']]]
+  ['직관적인_20단어_20선호_0',['간단하고 직관적인 단어 선호',['../ad-convention-rules.html#autotoc_md105',1,'']]]
 ];

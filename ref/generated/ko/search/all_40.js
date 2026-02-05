@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['메모리_20관리_0',['메모리 관리',['../ag-architecture-memlite.html',1,'memlite 모듈 - 커스텀 메모리 관리'],['../ag-architecture-memlite.html#autotoc_md168',1,'pool - 크기별 메모리 관리']]],
-  ['메모리_20관리_20인터페이스_1',['메모리 관리 인터페이스',['../ag-architecture-memlite.html#autotoc_md179',1,'']]],
-  ['메모리_20관리_20조정자_2',['instancer - 메모리 관리 조정자',['../ag-architecture-memlite.html#autotoc_md177',1,'']]],
-  ['메모리_20관리_20컴포넌트_3',['메모리 관리 컴포넌트',['../ag-architecture-memlite.html#autotoc_md165',1,'']]],
-  ['메모리_20풀_20사용_4',['자체 메모리 풀 사용',['../ag-architecture-memlite.html#autotoc_md159',1,'']]],
-  ['메모리_20풀_20패키지_20개요_5',['메모리 풀 패키지 개요',['../ag-architecture-memlite.html#autotoc_md163',1,'']]],
-  ['메타데이터_6',['메타데이터',['../ai-architecture-core.html#autotoc_md251',1,'manifest 클래스 - Pack 메타데이터'],['../ai-architecture-core.html#autotoc_md324',1,'manifest 클래스 - Pack 메타데이터']]],
-  ['메타_20정보가_20어떻게_20생성되나_7',['메타 정보가 어떻게 생성되나',['../af-architecture-meta.html#autotoc_md141',1,'']]],
-  ['메타_20정보의_20생성과_20관리_8',['메타 정보의 생성과 관리',['../af-architecture-meta.html#autotoc_md140',1,'']]],
-  ['메타_20정보_20자동_20생성_9',['메타 정보 자동 생성',['../af-architecture-meta.html#autotoc_md142',1,'']]],
-  ['메타_20타입_20정보_20관리_10',['메타 타입 정보 관리',['../af-architecture-meta.html#autotoc_md136',1,'']]],
-  ['메타_20타입_20확장하기_11',['메타 타입 확장하기',['../af-architecture-meta.html#autotoc_md146',1,'']]]
+  ['로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_0',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['로그_20기능을_20넣고_20싶어요_1',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['로깅의_20기본_20사용법_2',['로깅의 기본 사용법',['../ag-architecture-clog.html#autotoc_md169',1,'']]],
+  ['로깅_3',['로깅',['../ak-architecture-core.html#autotoc_md405',1,'graphVisitor 클래스 - AST 로깅'],['../ag-architecture-clog.html#autotoc_md173',1,'richLog - 다형성 로깅']]],
+  ['로깅_20매크로_4',['Scope 로깅 매크로',['../ag-architecture-clog.html#autotoc_md171',1,'']]],
+  ['로깅_20시스템_5',['clog 모듈 - 로깅 시스템',['../ag-architecture-clog.html',1,'ae-architecture-overview']]],
+  ['로깅_20시스템_20아키텍처_6',['로깅 시스템 아키텍처',['../ag-architecture-clog.html#autotoc_md167',1,'']]],
+  ['로더_7',['로더',['../ak-architecture-core.html#autotoc_md397',1,'cppPackLoading 클래스 - C++ Pack 로더'],['../ak-architecture-core.html#autotoc_md392',1,'slotLoader 클래스 - Pack 로더']]],
+  ['로딩_8',['autoslot 클래스 - Lazy Pack 로딩',['../ak-architecture-core.html#autotoc_md387',1,'']]],
+  ['로딩_20추상_20클래스_9',['packLoading 클래스 - Pack 로딩 추상 클래스',['../ak-architecture-core.html#autotoc_md395',1,'']]],
+  ['로딩_20dlib_20클래스_10',['동적 라이브러리 로딩 - dlib 클래스',['../af-architecture-indep.html#autotoc_md160',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['길이와_20들여쓰기_0',['줄 길이와 들여쓰기',['../ab-convention-rules.html#autotoc_md50',1,'']]],
-  ['길이_20제한_1',['줄 길이 제한',['../ab-convention-rules.html#autotoc_md51',1,'']]]
+  ['긴_20여정을_20함께하느라_20고생하셨습니다_0',['긴 여정을 함께하느라 고생하셨습니다.',['../al-architecture-frontend.html#autotoc_md453',1,'']]],
+  ['긴_20예제_1',['❌ 불필요하게 긴 예제',['../ad-convention-rules.html#autotoc_md103',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['저장소_0',['scope 클래스 - Symbol 저장소',['../ai-architecture-core.html#autotoc_md308',1,'']]]
+  ['이름_0',['명확한 테스트 이름',['../am-testing-guide.html#autotoc_md490',1,'']]]
 ];

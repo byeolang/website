@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['코딩_20규칙_0',['Byeol 코딩 규칙',['../ab-convention-rules.html',1,'']]]
+  ['케이스_20작성_20가이드_0',['테스트 케이스 작성 가이드',['../am-testing-guide.html',1,'']]]
 ];

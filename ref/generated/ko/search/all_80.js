@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['작성_20가이드_0',['테스트 케이스 작성 가이드',['../ak-testing-guide.html',1,'']]],
-  ['작성_20규칙_1',['문서 작성 규칙',['../am-document-convention.html',1,'']]],
-  ['작성_20스타일_2',['문서 작성 스타일',['../am-document-convention.html#autotoc_md509',1,'']]],
-  ['작성_20시_20주의사항_3',['테스트 작성 시 주의사항',['../ak-testing-guide.html#autotoc_md422',1,'']]],
-  ['작업의_20기반_4',['tworker 클래스 - 배치 작업의 기반',['../ai-architecture-core.html#autotoc_md361',1,'']]]
+  ['위치와_20네이밍_0',['위치와 네이밍',['../am-testing-guide.html#autotoc_md457',1,'파일 위치와 네이밍'],['../am-testing-guide.html#autotoc_md465',1,'파일 위치와 네이밍'],['../am-testing-guide.html#autotoc_md475',1,'파일 위치와 네이밍']]],
+  ['위치_20정보_1',['src, srcFile 클래스 - 소스 위치 정보',['../ak-architecture-core.html#autotoc_md282',1,'']]],
+  ['위한_20언더스코어_20접두사_2',['non public accessor를 위한 언더스코어 접두사',['../ad-convention-rules.html#autotoc_md100',1,'']]],
+  ['위해_20로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_3',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]]
 ];

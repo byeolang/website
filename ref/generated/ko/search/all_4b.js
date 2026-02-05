@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../ak-testing-guide.html#autotoc_md423',1,'']]]
+  ['반영된_20철학_0',['C++ 코드에 반영된 철학',['../ad-convention-rules.html#autotoc_md90',1,'']]]
 ];

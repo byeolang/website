@@ -1,16 +1,5 @@
 var searchData=
 [
-  ['코드에는_20주석_20금지_0',['자명한 코드에는 주석 금지',['../ab-convention-rules.html#autotoc_md76',1,'']]],
-  ['코드에_20반영된_20철학_1',['C++ 코드에 반영된 철학',['../ab-convention-rules.html#autotoc_md31',1,'']]],
-  ['코드와_20실행_20코드_20분리_3a_20shown_2',['보여지는 코드와 실행 코드 분리: shown',['../am-document-convention.html#autotoc_md507',1,'']]],
-  ['코드_3',['module/ - 소스 코드',['../al-build-structure.html#autotoc_md446',1,'']]],
-  ['코드_20검증_4',['코드 검증',['../ai-architecture-core.html#autotoc_md360',1,'코드 검증'],['../ai-architecture-core.html#autotoc_md366',1,'verifier 클래스 - 코드 검증']]],
-  ['코드_20공급_20추상화_5',['srcSupply 클래스 - 소스 코드 공급 추상화',['../ai-architecture-core.html#autotoc_md355',1,'']]],
-  ['코드_20분리_3a_20shown_6',['보여지는 코드와 실행 코드 분리: shown',['../am-document-convention.html#autotoc_md507',1,'']]],
-  ['코드_20스타일_7',['코드 스타일',['../ab-convention-rules.html#autotoc_md49',1,'']]],
-  ['코드_20참조_8',['ref로 다른 코드 참조',['../ab-convention-rules.html#autotoc_md74',1,'']]],
-  ['코드_20표시_9',['실행 가능 코드 표시',['../am-document-convention.html#autotoc_md505',1,'']]],
-  ['코드_20표시_3a_20verified_10',['검증 완료 코드 표시: verified',['../am-document-convention.html#autotoc_md506',1,'']]],
-  ['코딩_20규칙_11',['Byeol 코딩 규칙',['../ab-convention-rules.html',1,'']]],
-  ['코딩_20스타일은_20clang_20format으로_20자동_20적용_12',['코딩 스타일은 clang-format으로 자동 적용',['../ab-convention-rules.html#autotoc_md32',1,'']]]
+  ['철학을_20요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md89',1,'']]],
+  ['철학_1',['철학',['../ad-convention-rules.html#autotoc_md101',1,'네이밍 철학'],['../ad-convention-rules.html#autotoc_md90',1,'C++ 코드에 반영된 철학']]]
 ];

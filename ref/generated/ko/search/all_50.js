@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['불필요하게_20긴_20예제_0',['❌ 불필요하게 긴 예제',['../ab-convention-rules.html#autotoc_md44',1,'']]]
+  ['변수_3a_20camelcase_0',['클래스와 변수: camelCase',['../ad-convention-rules.html#autotoc_md94',1,'']]]
 ];

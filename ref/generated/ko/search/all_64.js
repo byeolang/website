@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['식별_0',['기본 타입 식별',['../af-architecture-meta.html#autotoc_md133',1,'']]]
+  ['속도_20개선_0',['속도 개선',['../ai-architecture-memlite.html#autotoc_md219',1,'']]]
 ];

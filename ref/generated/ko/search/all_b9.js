@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['호출_0',['negative() 호출',['../ak-testing-guide.html#autotoc_md424',1,'']]],
-  ['호환성_1',['Doxygen 호환성',['../am-document-convention.html#autotoc_md489',1,'']]]
+  ['플래그_20처리_0',['flag 클래스 - 명령줄 플래그 처리',['../al-architecture-frontend.html#autotoc_md446',1,'']]],
+  ['플랫폼별_20차이_1',['플랫폼별 차이',['../ac-build-structure.html#autotoc_md80',1,'']]],
+  ['플랫폼_20추상화_20계층_2',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
 ];

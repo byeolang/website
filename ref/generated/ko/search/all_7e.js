@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['일반적인_20네이밍_20가이드_0',['일반적인 네이밍 가이드',['../ab-convention-rules.html#autotoc_md45',1,'']]],
-  ['일반적인_20c_20컨벤션과_20다른가_1',['왜 일반적인 C++ 컨벤션과 다른가?',['../ab-convention-rules.html#autotoc_md29',1,'']]]
+  ['요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md89',1,'']]]
 ];

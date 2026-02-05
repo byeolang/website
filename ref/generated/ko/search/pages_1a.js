@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['인터페이스_0',['frontend 모듈 - CLI 인터페이스',['../aj-architecture-frontend.html',1,'ac-architecture-overview']]]
+  ['여행_20코스_20가이드_0',['여행 코스 가이드',['../aa-onboarding.html',1,'']]]
 ];

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['처리흐름_20정리_0',['에러 처리흐름 정리',['../ai-architecture-core.html#autotoc_md380',1,'']]],
-  ['처리_1',['처리',['../ai-architecture-core.html#autotoc_md376',1,'에러 처리'],['../ad-architecture-indep.html#autotoc_md85',1,'Early-return 패턴과 에러 처리'],['../aj-architecture-frontend.html#autotoc_md387',1,'flag 클래스 - 명령줄 플래그 처리'],['../ai-architecture-core.html#autotoc_md249',1,'immutableTactic 클래스 - Immutable 타입 처리'],['../ah-architecture-stela.html#autotoc_md196',1,'Indentation 처리'],['../ai-architecture-core.html#autotoc_md374',1,'sigZone 클래스 - Signal 처리']]]
+  ['줄에_20배치_0',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md112',1,'']]],
+  ['줄_20길이와_20들여쓰기_1',['줄 길이와 들여쓰기',['../ad-convention-rules.html#autotoc_md109',1,'']]],
+  ['줄_20길이_20제한_2',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md110',1,'']]],
+  ['줄_20허용_3',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md116',1,'']]]
 ];

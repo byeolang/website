@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['참고_20사항_0',['참고 사항',['../al-build-structure.html#autotoc_md479',1,'']]],
-  ['참조의_20진입점_1',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ai-architecture-core.html#autotoc_md292',1,'']]],
-  ['참조_2',['ref로 다른 코드 참조',['../ab-convention-rules.html#autotoc_md74',1,'']]],
-  ['참조_20정렬_3a_20왼쪽_20정렬_3',['포인터/참조 정렬: 왼쪽 정렬',['../ab-convention-rules.html#autotoc_md54',1,'']]]
+  ['주석_0',['주석',['../ad-convention-rules.html#autotoc_md128',1,'클래스 주석'],['../ad-convention-rules.html#autotoc_md126',1,'파일 주석'],['../ad-convention-rules.html#autotoc_md131',1,'함수 주석']]],
+  ['주석_20금지_1',['자명한 코드에는 주석 금지',['../ad-convention-rules.html#autotoc_md135',1,'']]],
+  ['주석_20기본_20규칙_2',['Doxygen 주석 기본 규칙',['../ad-convention-rules.html#autotoc_md123',1,'']]],
+  ['주소값_3',['간략화된 주소값',['../ag-architecture-clog.html#autotoc_md178',1,'']]],
+  ['주요_20기능_4',['byeolTest 클래스의 주요 기능',['../am-testing-guide.html#autotoc_md459',1,'']]],
+  ['주요_20흐름_5',['주요 흐름',['../ak-architecture-core.html#autotoc_md263',1,'']]],
+  ['주의사항_6',['주의사항',['../ac-build-structure.html#autotoc_md84',1,'주의사항'],['../am-testing-guide.html#autotoc_md481',1,'테스트 작성 시 주의사항']]]
 ];

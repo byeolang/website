@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['상속_0',['올바른 베이스 클래스 상속',['../ak-testing-guide.html#autotoc_md423',1,'']]]
+  ['비교표_0',['빌드 타겟 비교표',['../ac-build-structure.html#autotoc_md73',1,'']]]
 ];

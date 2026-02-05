@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['조정자_0',['instancer - 메모리 관리 조정자',['../ag-architecture-memlite.html#autotoc_md177',1,'']]]
+  ['장점_0',['std::shared_ptr 대비 장점',['../ai-architecture-memlite.html#autotoc_md214',1,'']]]
 ];

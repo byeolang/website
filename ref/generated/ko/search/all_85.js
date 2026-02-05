@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['전략_0',['stelaTokenScan 클래스 - 스캔 모드 전략',['../ah-architecture-stela.html#autotoc_md199',1,'']]],
-  ['전에_1',['시작하기 전에',['../ab-convention-rules.html#autotoc_md28',1,'']]]
+  ['일반적인_20네이밍_20가이드_0',['일반적인 네이밍 가이드',['../ad-convention-rules.html#autotoc_md104',1,'']]],
+  ['일반적인_20c_20컨벤션과_20다른가_1',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md88',1,'']]]
 ];

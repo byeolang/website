@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['의한_20패턴매칭_0',['정규식에 의한 패턴매칭',['../aj-architecture-frontend.html#autotoc_md389',1,'']]]
+  ['왜_20일반적인_20c_20컨벤션과_20다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md88',1,'']]]
 ];
