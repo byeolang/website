@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['백틱_20으로_20편하게_20합니다_0',['변수명을 타입명과 동일하게 하려면 백틱(`)으로 편하게 합니다.',['../language-spec.html#autotoc_md103',1,'']]]
+  ['버전_20표기_0',['버전 표기',['../basic-usage.html#autotoc_md9',1,'']]]
 ];

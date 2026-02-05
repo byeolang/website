@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['클래스라는_20건_20없습니다_0',['클래스라는 건 없습니다',['../language-spec.html#autotoc_md105',1,'']]],
-  ['클로저_1',['클로저',['../language-spec.html#autotoc_md93',1,'']]]
+  ['추론_0',['타입 추론',['../language-spec.html#autotoc_md107',1,'']]]
 ];

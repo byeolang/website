@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['할당_20문법_0',['단축된 할당 문법',['../language-spec.html#autotoc_md101',1,'']]]
+  ['프로퍼티_0',['프로퍼티',['../language-spec.html#autotoc_md109',1,'']]],
+  ['프로퍼티_20정의_1',['프로퍼티 정의',['../language-spec.html#autotoc_md43',1,'']]]
 ];

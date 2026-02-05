@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['사용법_0',['기본 사용법',['../basic-usage.html',1,'']]],
-  ['사용_1',['함수타입 대신 메소드을 사용',['../language-spec.html#autotoc_md147',1,'']]]
+  ['상세_20로그_20출력_0',['상세 로그 출력',['../basic-usage.html#autotoc_md5',1,'']]]
 ];

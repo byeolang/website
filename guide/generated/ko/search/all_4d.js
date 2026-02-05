@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['필요_20없습니다_0',['우리는 typedef가 필요 없습니다.',['../language-spec.html#autotoc_md113',1,'']]]
+  ['편하게_20합니다_0',['변수명을 타입명과 동일하게 하려면 백틱(`)으로 편하게 합니다.',['../language-spec.html#autotoc_md101',1,'']]]
 ];

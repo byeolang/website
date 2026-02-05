@@ -1,5 +1,18 @@
 var NAVTREEINDEX6 =
 {
+"stream_2stream_8hpp_source.html":[10,0,0,2,2],
+"stream_8hpp.html":[10,0,0,9],
+"stream_8hpp_source.html":[10,0,0,9],
+"structby_1_1_initiator.html":[8,0,19],
+"structby_1_1area.html":[8,4,2],
+"structby_1_1build_feature_1_1config.html":[8,0,7],
+"structby_1_1build_feature_1_1date.html":[8,0,3],
+"structby_1_1build_feature_1_1platform.html":[8,0,6],
+"structby_1_1build_feature_1_1time.html":[8,0,4],
+"structby_1_1build_feature_1_1version.html":[8,0,5],
+"structby_1_1cli.html":[8,7,0],
+"structby_1_1entrypoint.html":[8,5,46],
+"structby_1_1id.html":[8,3,8],
 "structby_1_1id.html#a2a827f9a34a3e6569d795fccfcf6f5e9":[8,3,8,0],
 "structby_1_1id.html#a8e27563518ce88b2489d602e130f6465":[8,3,8,1],
 "structby_1_1manifest.html":[8,5,47],

@@ -3,12 +3,12 @@ var searchData=
   ['warning_2ehpp_0',['warning.hpp',['../warning_8hpp.html',1,'']]],
   ['wasm_1',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md71',1,'']]],
   ['watcher_2',['watcher',['../classby_1_1watcher.html',1,'by']]],
-  ['watcher_20클래스_3',['watcher 클래스',['../ai-architecture-memlite.html#autotoc_md232',1,'']]],
+  ['watcher_20클래스_3',['watcher 클래스',['../ai-architecture-memlite.html#autotoc_md245',1,'']]],
   ['watcher_2ehpp_4',['watcher.hpp',['../watcher_8hpp.html',1,'(전역 이름공간)'],['../watcher_2watcher_8hpp.html',1,'(전역 이름공간)']]],
   ['weaktactic_5',['weakTactic',['../classby_1_1weak_tactic.html',1,'by']]],
   ['weaktactic_2ehpp_6',['weakTactic.hpp',['../weak_tactic_8hpp.html',1,'']]],
   ['webassembly_20빌드_20wasm_7',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md71',1,'']]],
-  ['when_20매크로_8',['WHEN 매크로',['../af-architecture-indep.html#autotoc_md146',1,'']]],
+  ['when_20매크로_8',['WHEN 매크로',['../af-architecture-indep.html#autotoc_md159',1,'']]],
   ['when_20macros_9',['Verification Using WHEN Macros',['../classby_1_1verifier.html#when_macro_verification',1,'']]],
   ['when_20you_20use_20by_5f_20_5fscope_20macro_20in_20if_20block_20statement_10',['careful when you use BY_?_SCOPE macro in &apos;if&apos; block statement',['../clog_2common_2macro_8hpp.html#be',1,'']]],
   ['when_2ehpp_11',['when.hpp',['../clog_2when_8hpp.html',1,'(전역 이름공간)'],['../core_2common_2when_8hpp.html',1,'(전역 이름공간)'],['../indep_2macro_2when_8hpp.html',1,'(전역 이름공간)']]],
@@ -29,6 +29,6 @@ var searchData=
   ['workeradapter_26',['workerAdapter',['../structby_1_1worker_adapter.html',1,'by']]],
   ['workeradapter_3c_20void_2c_20t_20_3e_27',['workerAdapter&lt; void, T &gt;',['../structby_1_1worker_adapter_3_01void_00_01_t_01_4.html',1,'by']]],
   ['wrap_28',['wrap',['../structby_1_1smultimap_1_1wrap.html',1,'by::smultimap&lt; K, V &gt;::wrap'],['../classby_1_1tnchain.html#a153962bc5df4f3de4f39f991b5e20ef5',1,'by::tnchain::wrap()']]],
-  ['wrap_29',['Wrap',['../ag-architecture-clog.html#autotoc_md176',1,'wrap'],['../structby_1_1no_wrap.html#wrap',1,'wrap']]],
+  ['wrap_29',['Wrap',['../ag-architecture-clog.html#autotoc_md189',1,'wrap'],['../structby_1_1no_wrap.html#wrap',1,'wrap']]],
   ['wsl_30',['WSL',['../ab-dev-env.html#autotoc_md27',1,'Windows WSL'],['../ab-dev-env.html#autotoc_md21',1,'WSL']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['확인_0',['에러 리포트 확인',['../am-testing-guide.html#autotoc_md498',1,'']]],
-  ['확장하기_1',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md205',1,'']]],
-  ['확장_2',['richLog 확장',['../ag-architecture-clog.html#autotoc_md177',1,'']]]
+  ['호출_0',['negative() 호출',['../am-testing-guide.html#autotoc_md496',1,'']]],
+  ['호환성_1',['Doxygen 호환성',['../an-document-convention.html#autotoc_md518',1,'']]]
 ];

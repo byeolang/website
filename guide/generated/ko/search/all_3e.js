@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['정의_0',['정의',['../language-spec.html#autotoc_md73',1,'객체 정의'],['../language-spec.html#autotoc_md107',1,'스타일로 Attribute 정의'],['../language-spec.html#autotoc_md45',1,'프로퍼티 정의']]]
+  ['장난감처럼_20즐거운_20언어_0',['장난감처럼 즐거운 언어',['../design-philosophy.html#autotoc_md12',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['캐스팅_0',['캐스팅',['../language-spec.html#autotoc_md63',1,'Explicit 캐스팅'],['../language-spec.html#autotoc_md65',1,'Implicit 캐스팅']]]
+  ['철학_0',['철학',['../design-philosophy.html',1,'디자인 철학'],['../language-spec.html#autotoc_md37',1,'언어 디자인 철학']]]
 ];

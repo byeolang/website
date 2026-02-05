@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['톤과_20어조_0',['문서의 톤과 어조',['../an-document-convention.html#autotoc_md503',1,'']]]
+  ['템플릿_0',['tbaseObjOrigin 클래스 - baseObj Origin 템플릿',['../ak-architecture-core.html#autotoc_md314',1,'']]],
+  ['템플릿_20구체화_20네이밍_1',['템플릿 구체화 네이밍',['../ad-convention-rules.html#autotoc_md104',1,'']]]
 ];

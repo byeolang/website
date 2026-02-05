@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['프로젝트_20구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['프로젝트_20디렉토리_20구조_1',['프로젝트 디렉토리 구조',['../ac-build-structure.html#autotoc_md44',1,'']]]
+  ['풀_20사용_0',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md231',1,'']]],
+  ['풀_20패키지_20개요_1',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md235',1,'']]]
 ];

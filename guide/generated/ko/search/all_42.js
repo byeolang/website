@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['직접_20실행_0',['스크립트 직접 실행',['../basic-usage.html#autotoc_md3',1,'']]]
+  ['주석_0',['주석',['../language-spec.html#autotoc_md39',1,'']]]
 ];

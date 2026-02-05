@@ -123,7 +123,7 @@ $(function(){initNavTree('ag-architecture-clog.html',''); initResizable(); });
 <img src="inline_umlgraph_4.png" />
 </div>
 <hr  />
-<h1><a class="anchor" id="autotoc_md167"></a>
+<h1><a class="anchor" id="autotoc_md180"></a>
 로깅 시스템 아키텍처</h1>
 <p>clog 모듈의 핵심은 <a class="el" href="classby_1_1stream.html">stream</a> 입니다. <a class="el" href="classby_1_1stream.html">stream</a> 은 쉽게 말해 로깅이 출력되는 스트림, 즉 목적지를 표현합니다. 현재는 <a class="el" href="classby_1_1console_stream.html">consoleStream</a> 과 <a class="el" href="classby_1_1file_log_stream.html">fileLogStream</a> 2가지가 존재합니다. 모든 <a class="el" href="classby_1_1stream.html">stream</a> 은 기본적으로 <a class="el" href="classby_1_1logger.html">logger</a> 클래스가 처음부터 소유하고 있습니다.</p>
 <p>각 stream은 byeol의 핵심 클래스들과 마찬가지로 다음과 같은 State Machine 패턴을 사용한 상태 전이 도식을 갖습니다:</p>
@@ -153,7 +153,7 @@ $(function(){initNavTree('ag-architecture-clog.html',''); initResizable(); });
 <div class="line">log.setEnable(false);</div>
 <div class="line">BY_I(&quot;This won&#39;t be logged anywhere&quot;);</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md169"></a>
+<h1><a class="anchor" id="autotoc_md182"></a>
 로깅의 기본 사용법</h1>
 <p><a class="el" href="classby_1_1logger.html">logger</a> 클래스는 <a class="el" href="classby_1_1stream.html">stream</a> 이라고 불리는 복수의 로깅 경로를 통해 체계적으로 로깅이 가능한 경량화된 C++ 로깅 프레임워크의 일종의 facade입니다.</p>
 <p>일반적으로는 동봉되는 매크로를 통해, 다음과 같이 사용합니다.</p>
@@ -179,7 +179,7 @@ $(function(){initNavTree('ag-architecture-clog.html',''); initResizable(); });
 <div class="line">Oct 22 2025  21:26:13 E leafPars &lt;_finalize#263&gt; leaf: ERR: src is empty</div>
 </div><!-- fragment --><p>해당 macro의 구현은, 출력할 문자열 앞에 날짜나 시간 등을 붙여서 logBypass()에 전달하도록 expand 하는 것이긴 하나, 그외에도 한가지 중요한 기능이 더 있습니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md184"></a>
 Scope 로깅 매크로</h2>
 <p>함수나 블록의 <b>진입과 탈출을 시각화</b>하고 싶을 때는 <code>BY_I_SCOPE</code>, <code>BY_E_SCOPE</code>, <code>BY_W_SCOPE</code> 매크로를 사용합니다. 이 매크로들은 <b>RAII 패턴</b>으로 구현되어 있어서, 스코프에 진입할 때와 벗어날 때 자동으로 로그를 남깁니다.</p>
 <p>다음은 기본적인 사용 예시입니다:</p>
@@ -242,7 +242,7 @@ Scope 로깅 매크로</h2>
 <div class="line">    BY_I(&quot;hello&quot;);</div>
 <div class="line">}</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md173"></a>
+<h1><a class="anchor" id="autotoc_md186"></a>
 richLog - 다형성 로깅</h1>
 <p>richLog 는 서식문자에 입력된 argument를 다형성을 활용해서 적절한 타입으로 변환해서 로깅하는 강력한 기능입니다. 함수 오버로딩을 응용하여, 각 타입에 맞는 변환 함수를 자동으로 선택합니다. 쉽게, 예를들어 보죠.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -264,7 +264,7 @@ richLog - 다형성 로깅</h1>
 <div class="fragment"><div class="line">BY_I(&quot;Hello I&#39;m %s. I live in %s&quot;, p, a);</div>
 <div class="line">// 출력: 위와 동일.</div>
 </div><!-- fragment --><p>즉, 각 가변 인자의 타입을 보고 적절한 로깅 메시지를 생성하여 대신 전달하는 기능입니다. 물론 공짜는 없어요. 어딘가에는 Person타입에 대해 어떠한 메시지를 생성하겠다는 걸 추가해줘야 합니다. 하지만 그렇다곤 해도, 어떻게 이런 게 가능할까요.</p>
-<h2><a class="anchor" id="autotoc_md174"></a>
+<h2><a class="anchor" id="autotoc_md187"></a>
 핵심 알고리즘</h2>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_5.png" />
@@ -277,7 +277,7 @@ richLog - 다형성 로깅</h1>
 <div class="line">    ::by::logger::get().log(lv, filename, func, line, fmt, __convert__((const Ts&amp;) args).unwrap()...);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>위와 같이 각각의 가변인자에 대해 <b>convert</b>()를 호출해 적절한 타입(예: 문자열)로 변환 되면 wrap&lt;T&gt; 객체가 반환되는데요, wrap::unwrap()을 통해 log() 함수의 가변인자로 넣는 거죠.</p>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md188"></a>
 convert()</h2>
 <p>각 모듈에 속한 클래스를 어떻게 로깅하기 쉬운 타입으로 변경할지를 정의합니다. 호출자는 <b>convert</b>()에 자신이 받은 구체타입을 넣을 뿐이며, 오버로딩에 의해서 가장 적절한 타입에 대한 __convert__가 호출됩니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -293,7 +293,7 @@ convert()</h2>
 <div class="line">strWrap __convert__(address&amp;&amp; a) { return a.city + &quot;, &quot; + a.state; }</div>
 </div><!-- fragment --><p>생각보다 간단한가요? 위와 같은 설계의 장점은, 범용적인 <b>convert</b>()와 특정 타입에 특화된 <b>convert</b>()를 동시에 정의할 수 있다는 말입니다. 대표적으로는 <b>convert</b>(void*)가 있어요. 어떠한 T*에도 매칭 되지 않으면 이 __convert__가 대신 호출됩니다.</p>
 <p>이처럼 __convert__가 필요한 이유는 쉽게 이해가 가능합니다. 근데 왜 wrap을 굳이 사용해야만 할까요?</p>
-<h2><a class="anchor" id="autotoc_md176"></a>
+<h2><a class="anchor" id="autotoc_md189"></a>
 wrap</h2>
 <p>wrap이 필요한 이유는 richLog() 안쪽에서 <b>convert</b>()를 호출하고 이때 전달받은 값들을 가변인자를 통과할 수 있도록 풀어주는 역할을 합니다.</p>
 <p>c++ 스펙상, 가변인자 함수는 scalar type이나 T*만 넘길 수 있기 때문에 값으로는 넘길 수 없습니다. 문제는 위의 <b>convert</b>(person&amp;&amp;)에서 봤듯이 상당수의 __convert__는 안에서 새로운 값을 만들어 값으로 넘겨야 한다는 거예요. 이때 wrap이 등장합니다. __convert__의 반환형을 보면 아시겠지만 wrap*로 넘기지 않죠. 값으로 넘깁니다. 그러니 richLog 함수템플릿 안에선, 임시 객체인 wrap이 생성되며, __convert__안에서 임시로 생성한 문자열 또한 안전하게 <code>const char* strWrap::unwrap()</code>을 호출하면서 char*를 가변인자 안으로 넘길 수 있습니다.</p>
@@ -306,7 +306,7 @@ wrap</h2>
 <div class="line"> </div>
 <div class="line">// noWrap: 원본 타입 유지 (%d 등 명시적 서식문자 사용 가능)</div>
 <div class="line">noWrap&lt;int&gt; __convert__(int val) { return noWrap&lt;int&gt;(val); }</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md177"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md190"></a>
 richLog 확장</h2>
 <p><a class="el" href="group__clog.html">Clog</a> 모듈은 architecture 상 아랫부분에 위치하기 때문에 <a class="el" href="group__clog.html">Clog</a> 에 종속하는 클래스가 뭐가 있는지 알아서는 안됩니다. 그렇기 때문에 richLog 는 각 모듈마다 정의되어 있으며, 해당 모듈에 포함된 클래스를 어떻게 문자열로 변환할지를 추가로 정의해두고 있어요. 예를 들어 <a class="el" href="group__meta.html">Meta</a> 모듈에서는 다음과 같이 정의합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -325,16 +325,16 @@ richLog 확장</h2>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">type&amp; t = ttype&lt;myClass&gt;();</div>
 <div class="line">BY_I(&quot;type is %s&quot;, t);  // __convert__(const type&amp;)가 호출되어 적절히 문자열로 변환됨</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md178"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md191"></a>
 간략화된 주소값</h2>
 <p>richLog 로 void*를 넘기게 되면 <a class="el" href="group__indep.html">Indep</a> 모듈에 있는 <a class="el" href="namespaceby_1_1platform_a_p_i.html">platformAPI</a> 를 사용해서 <code>toAddrId()</code>를 호출합니다. addrId란 void*의 주소값의 마지막 4 hex값을 문자열로 표현한 값을 말합니다. 프로젝트 내에서 어느 주소에 있는 객체인지를 구분하기 위해 매우 자주 사용되니 꼭 알아두세요. 로깅할때는 항상 <code>@</code> 뒤에 addrId를 적는 코딩 컨벤션을 가지고 있습니다. 예를 들면 다음과 같이 로그를 남깁니다.</p>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">Nov 18 2025  20:02:13 I verifier  &lt;onLeave#87&gt; &#39;&#39; assignExpr@9a50: step#1 --&gt; set evalType</div>
 </div><!-- fragment --><p>위 로그에서 assignExpr@9a50은 assignExpr 객체가 heap 주소의 끝자리가 9a50인 곳에 있는 인스턴스라는 얘기입니다. 이는 동일한 타입에 대해 서로 다른 인스턴스가 같은 시점에 로깅되는 경우 좀 더 수월하게 디버깅 하도록 도와주는 용도예요.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md180"></a>
+<h1><a class="anchor" id="autotoc_md193"></a>
 스트림 제어</h1>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md194"></a>
 enablesZone 클래스</h2>
 <p><a class="el" href="classby_1_1logger.html">logger</a> 클래스는 여러개의 <a class="el" href="classby_1_1stream.html">stream</a> 을 가지고 있고 특정 <a class="el" href="classby_1_1stream.html">stream</a> 을 disable 혹은 enable 함으로써 출력되는 경로를 제어할 수 있어요.</p>
 <p>여기서 문제는 특정 코드 블록 혹은 함수에서만 <a class="el" href="classby_1_1stream.html">stream</a> 을 제어 한 후, 블록을 벗어날 때는 원래 상태로 되돌리고자 하는 경우가 매우 자주 일어납니다.</p>
@@ -357,18 +357,18 @@ enablesZone 클래스</h2>
 <div class="line"> </div>
 <div class="line">BY_E(&quot;this message will definitely be log on entire stream&quot;);</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md183"></a>
+<h1><a class="anchor" id="autotoc_md196"></a>
 필터링 시스템</h1>
 <p>로깅은 디버깅에서는 아주 유용한 도구이지만, unittest나 release 빌드에서는 필요없는 정보를 잔뜩 남겨서 혼란스럽게 하기도 합니다. 개발중에는 이처럼, 로깅되는 메시지를 보여줬다가 감췄다가 할 필요가 있는데, 필터링은 각 로그의 상세정보를 조건으로 로그를 걸러주는 역할을 합니다.</p>
 <p>필터링 시스템은 Strategy 패턴을 사용하여 구현되었습니다. 각 필터는 교체 가능한 알고리즘으로 동작하며, 런타임에 원하는 필터를 선택하여 적용할 수 있습니다.</p>
-<h2><a class="anchor" id="autotoc_md184"></a>
+<h2><a class="anchor" id="autotoc_md197"></a>
 filterable 클래스</h2>
 <p>각 필터는 filterable 인터페이스를 구현해야하는데요, <a class="el" href="classby_1_1filterable.html">filterable</a>은 <code>filt()</code> 함수를 제공하며, filt() 함수 안쪽에서 parameter로 주어진 Log 정보에 대해 판단후, true를 반환할 경우 해당 Log는 <a class="el" href="classby_1_1stream.html">stream</a> 에 올라가지 않고 무시됩니다.</p>
 <p><a class="el" href="classby_1_1logger.html">logger</a> 클래스의 <code>setFilters(const filters&amp;)</code>를 통해서 <a class="el" href="classby_1_1filterable.html">filterable</a> 을 추가할 수 있습니다.</p>
-<h2><a class="anchor" id="autotoc_md185"></a>
+<h2><a class="anchor" id="autotoc_md198"></a>
 filters 클래스</h2>
 <p><a class="el" href="classby_1_1filters.html">filters</a> 클래스는 <a class="el" href="classby_1_1logger.html">logger</a> 클래스에서 등록된 <a class="el" href="classby_1_1filterable.html">filterable</a> 클래스들을 관리합니다. <a class="el" href="classby_1_1filterable.html">filterable</a> 과 동일한 API를 가지며, 해당 API를 호출하면 소유한 모든 <a class="el" href="classby_1_1filterable.html">filterable</a> 에 해당 API를 호출합니다. 이는 Composite 패턴으로 구현되어, 여러 필터를 하나의 필터처럼 다룰 수 있습니다.</p>
-<h2><a class="anchor" id="autotoc_md186"></a>
+<h2><a class="anchor" id="autotoc_md199"></a>
 errPassFilter 클래스</h2>
 <p>말 그대로 err만 통과시키는 <a class="el" href="classby_1_1filterable.html">filterable</a> 클래스입니다. 이 filter를 <a class="el" href="classby_1_1logger.html">logger</a> 에 등록하면 warning이나 info는 출력되지 않습니다. 직접 사용하지 않으며, 객체 생성하여 <a class="el" href="classby_1_1logger.html">logger</a> 에 add 하는 용도로 사용합니다.</p>
 <p>동작은 매우 단순한데요, <code>errLv</code>이 ERR일때만 통과시키는 필터입니다. 다음과 같이 사용할 수 있습니다.</p>
@@ -381,7 +381,7 @@ errPassFilter 클래스</h2>
 <div class="line"> </div>
 <div class="line">logger::get().setFilters(prevFilters);</div>
 </div><!-- fragment --> <hr  />
-<h1><a class="anchor" id="autotoc_md188"></a>
+<h1><a class="anchor" id="autotoc_md201"></a>
 정리</h1>
 <p>자, 시퀸스 다이어그램으로 지금까지의 내용을 정리해보죠.</p>
 <div class="plantumlgraph">

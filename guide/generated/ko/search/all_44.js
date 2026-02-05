@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['추구한다_0',['간결함을 추구한다',['../design-philosophy.html#autotoc_md18',1,'']]],
-  ['추론_1',['타입 추론',['../language-spec.html#autotoc_md109',1,'']]]
+  ['즐거운_20언어_0',['장난감처럼 즐거운 언어',['../design-philosophy.html#autotoc_md12',1,'']]]
 ];

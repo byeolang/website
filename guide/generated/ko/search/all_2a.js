@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['상세_20로그_20출력_0',['상세 로그 출력',['../basic-usage.html#autotoc_md5',1,'']]]
+  ['새로운_20객체_20만들기_0',['새로운 객체 만들기',['../language-spec.html#autotoc_md72',1,'']]]
 ];

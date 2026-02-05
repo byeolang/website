@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['표기_0',['버전 표기',['../basic-usage.html#autotoc_md9',1,'']]],
-  ['표현식_20기반_20언어_1',['표현식 기반 언어',['../language-spec.html#autotoc_md119',1,'']]]
+  ['클래스라는_20건_20없습니다_0',['클래스라는 건 없습니다',['../language-spec.html#autotoc_md103',1,'']]],
+  ['클로저_1',['클로저',['../language-spec.html#autotoc_md91',1,'']]]
 ];
