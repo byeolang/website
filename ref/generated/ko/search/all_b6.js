@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['핵심_0',['핵심',['../aj-architecture-frontend.html#autotoc_md385',1,'cli 클래스 - Frontend의 핵심'],['../ai-architecture-core.html',1,'core 모듈 - 언어 구현의 핵심'],['../ai-architecture-core.html#autotoc_md342',1,'visitor 클래스 - AST 순회의 핵심']]],
-  ['핵심_20알고리즘_1',['핵심 알고리즘',['../ae-architecture-clog.html#autotoc_md115',1,'']]],
-  ['핵심_20철학을_20요약하면_2',['Byeol 언어의 핵심 철학을 요약하면',['../ab-convention-rules.html#autotoc_md30',1,'']]]
+  ['표시_0',['실행 가능 코드 표시',['../an-document-convention.html#autotoc_md521',1,'']]],
+  ['표시_3a_20verified_1',['검증 완료 코드 표시: verified',['../an-document-convention.html#autotoc_md522',1,'']]],
+  ['표준_2',['문서화 표준',['../ad-convention-rules.html#autotoc_md122',1,'']]],
+  ['표현식_3',['표현식',['../ak-architecture-core.html#autotoc_md318',1,'assignExpr 클래스 - 할당 표현식'],['../ak-architecture-core.html#autotoc_md320',1,'blockExpr 클래스 - 블록 표현식'],['../ak-architecture-core.html#autotoc_md326',1,'defSeqExpr 클래스 - 시퀀스 표현식'],['../ak-architecture-core.html#autotoc_md316',1,'FBOExpr, FUOExpr 클래스 - 연산자 표현식']]],
+  ['표현식_20expression_20시스템_4',['표현식 (Expression) 시스템',['../ak-architecture-core.html#autotoc_md314',1,'']]],
+  ['표현_5',['표현',['../ak-architecture-core.html#autotoc_md361',1,'tbridge 클래스 - Native 클래스의 Script 표현'],['../aj-architecture-stela.html#autotoc_md249',1,'valStela 클래스 - Scalar 값 표현']]]
 ];

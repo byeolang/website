@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['핵심_0',['core 모듈 - 언어 구현의 핵심',['../ai-architecture-core.html',1,'ac-architecture-overview']]]
+  ['플랫폼_20추상화_20계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
 ];

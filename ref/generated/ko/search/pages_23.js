@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['플랫폼_20추상화_20계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../ad-architecture-indep.html',1,'ac-architecture-overview']]]
+  ['프로젝트_20구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['리소스_20정리_0',['리소스 정리',['../ak-testing-guide.html#autotoc_md433',1,'']]],
-  ['리터럴_1',['defArrayExpr 클래스 - 배열 리터럴',['../ai-architecture-core.html#autotoc_md263',1,'']]],
-  ['리포트_20확인_2',['에러 리포트 확인',['../ak-testing-guide.html#autotoc_md439',1,'']]]
+  ['라이브러리_0',['라이브러리',['../ac-build-structure.html#autotoc_md56',1,'동적 라이브러리'],['../ac-build-structure.html#autotoc_md50',1,'external/ - 외부 라이브러리']]],
+  ['라이브러리_20로딩_20dlib_20클래스_1',['동적 라이브러리 로딩 - dlib 클래스',['../af-architecture-indep.html#autotoc_md160',1,'']]],
+  ['라이프_20사이클_20관리_20컴포넌트_2',['라이프 사이클 관리 컴포넌트',['../ai-architecture-memlite.html#autotoc_md229',1,'']]]
 ];

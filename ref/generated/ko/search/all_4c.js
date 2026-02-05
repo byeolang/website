@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['변수_3a_20camelcase_0',['클래스와 변수: camelCase',['../ab-convention-rules.html#autotoc_md35',1,'']]]
+  ['배열_0',['arr 클래스 - scripted 배열',['../ak-architecture-core.html#autotoc_md342',1,'']]],
+  ['배열_20리터럴_1',['defArrayExpr 클래스 - 배열 리터럴',['../ak-architecture-core.html#autotoc_md322',1,'']]],
+  ['배치_2',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md112',1,'']]],
+  ['배치_20작업의_20기반_3',['tworker 클래스 - 배치 작업의 기반',['../ak-architecture-core.html#autotoc_md420',1,'']]]
 ];

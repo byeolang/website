@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['대비_20장점_0',['std::shared_ptr 대비 장점',['../ag-architecture-memlite.html#autotoc_md155',1,'']]]
+  ['노트는_20doxygen_20밖에_0',['개발 노트는 Doxygen 밖에',['../ad-convention-rules.html#autotoc_md134',1,'']]]
 ];

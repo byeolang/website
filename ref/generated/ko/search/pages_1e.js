@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['케이스_20작성_20가이드_0',['테스트 케이스 작성 가이드',['../ak-testing-guide.html',1,'']]]
+  ['커스텀_20메모리_20관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
 ];

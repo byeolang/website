@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['잘못된_20예제_0',['잘못된 예제',['../ab-convention-rules.html#autotoc_md37',1,'❌ 잘못된 예제'],['../ab-convention-rules.html#autotoc_md40',1,'❌ 잘못된 예제']]]
+  ['을_20추가하고_20싶어요_0',['새로운 문법(Syntax)을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md8',1,'']]]
 ];

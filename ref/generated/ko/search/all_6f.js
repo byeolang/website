@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['여러_20단락_0',['예제 2: 복잡한 클래스 - 여러 단락',['../ab-convention-rules.html#autotoc_md71',1,'']]],
-  ['여정을_20함께하느라_20고생하셨습니다_1',['긴 여정을 함께하느라 고생하셨습니다.',['../aj-architecture-frontend.html#autotoc_md394',1,'']]]
+  ['알고리즘_0',['알고리즘',['../ab-dev-env.html#autotoc_md33',1,'문서 생성 알고리즘'],['../ag-architecture-clog.html#autotoc_md174',1,'핵심 알고리즘']]]
 ];

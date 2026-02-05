@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['디렉토리_20구조_0',['프로젝트 디렉토리 구조',['../al-build-structure.html#autotoc_md444',1,'']]],
-  ['디렉토리_20설명_1',['디렉토리 설명',['../al-build-structure.html#autotoc_md445',1,'']]],
-  ['디버거_20사용_2',['디버거 사용',['../ak-testing-guide.html#autotoc_md438',1,'']]],
-  ['디버깅_3',['디버깅',['../aa-dev-env.html#autotoc_md9',1,'디버깅'],['../ak-testing-guide.html#autotoc_md435',1,'디버깅']]]
+  ['데이터_0',['testdata/ - 테스트 데이터',['../ac-build-structure.html#autotoc_md65',1,'']]],
+  ['데이터_20파일_1',['테스트 데이터 파일',['../am-testing-guide.html#autotoc_md477',1,'']]]
 ];
