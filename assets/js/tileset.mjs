@@ -115,22 +115,31 @@ export class character {
       return this.adjustDescriptionWindowPosWithSmallBrowser(elem, handleElem);
 
     // window:
-    const leftPadding = `calc((100dvw - ${20 * 4}dvw) / 2)`;
-    const characterLeft = `calc(${this.x * 4}dvw - (${this.width} - 4dvw) / 2 + ${leftPadding})`;
-    const characterTop = `${this.y * 4}dvw`;
-
     const isFacingRight = this.x <= 10;
     elem.style.visibility = "visible";
     elem.style.left = isFacingRight ?
       `calc(${characterLeft} + ${this.width} + ${getHandleSize()}px + 2px)` :
       `calc(${characterLeft} - 40vw - ${getHandleSize()}px)`;
-    const newTop = `calc(${characterTop} + 2dvw - 20dvh)`;
-    elem.style.top = newTop;
+
+    // Calculate top in pixels for clamping
+    const vwRatio = window.innerWidth / 100;
+    const vhRatio = window.innerHeight / 100;
+
+    const characterTileTopPx = this.y * 4 * vwRatio; // Top of the tile in pixels relative to parent #description
+    const popupCenterOffsetPx = (2 * vwRatio) - (20 * vhRatio); // (half tile height - half popup height)
+    let desiredPopupTopPx = characterTileTopPx + popupCenterOffsetPx;
+
+    const clampedPopupTopPx = Math.max(50, desiredPopupTopPx); // Clamp to minimum 50px
+    elem.style.top = `${clampedPopupTopPx}px`;
 
     // handle:
     handleElem.style.visibility = 'visible';
     handleElem.style.left = isFacingRight ? `calc(${elem.style.left} - ${getHandleSize()}px + 2px)` : `calc(${elem.style.left} + 40dvw)`;
-    handleElem.style.top = `calc(${characterTop} + (2dvw - ${getHandleSize() / 2}px))`;
+
+    // Calculate handle top to point to character center in pixels, relative to #description
+    const handleCharacterAnchorPx = characterTileTopPx + (2 * vwRatio); // Center of character tile
+    const handleTopPx = handleCharacterAnchorPx - (getHandleSize() / 2);
+    handleElem.style.top = `${handleTopPx}px`;
     handleElem.style.borderTop = `${getHandleSize() / 2}px solid transparent`;
     handleElem.style.borderBottom = `${getHandleSize() / 2}px solid transparent`;
 
