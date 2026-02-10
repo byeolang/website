@@ -31,12 +31,12 @@ export default {
   "windows": "윈도우",
   "ubuntu": "우분투",
   "mac": "맥",
-  "feature-title1": "feature1-title",
-  "feature-desc1": "feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
-  "feature-title2": "feature2-title",
-  "feature-desc2": "feature2 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
-  "feature-title3": "feature3-title",
-  "feature-desc3": "feature3 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature feature1 is feature",
+  "feature-title1": "장난감처럼 즐거운 언어",
+  "feature-desc1": "Byeol은 개발자가 코딩하는 과정 자체를 즐겁게 느끼도록 만드는 것을 목표로 합니다. 마치 장난감을 가지고 놀 듯, 자꾸만 손이 가고 계속해서 무언가를 만들고 싶어지는 언어입니다.",
+  "feature-title2": "일관성: 암기가 아닌 이해",
+  "feature-desc2": "Byeol은 예외를 싫어합니다. 같은 기능이라면 어떤 상황에서도 같은 문법으로 동작해야 합니다. 이를 통해 사용자는 문법을 단순 암기하는 것이 아니라, 언어 설계자의 의도를 파악하고 원리를 이해할 수 있습니다.",
+  "feature-title3": "코드와 시각화의 결합",
+  "feature-desc3": "Byeol은 소스 코드를 실행 가능한 트리 구조(AST)로 유지하며 실행합니다. 이를 통해 IDE는 실행 중인 프로그램의 구조를 실시간으로 시각화하여 보여줄 수 있습니다. [AST 시각화 이미지]",
 
   // roadmap:
   'milestone-intro-title': '야생의 로드맵이 나타났다!',
