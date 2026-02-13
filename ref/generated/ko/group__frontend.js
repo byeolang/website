@@ -3,6 +3,7 @@ var group__frontend =
     [ "by::cli", "structby_1_1cli.html", null ],
     [ "by::flag", "classby_1_1flag.html", [
       [ "_delArgs", "classby_1_1flag.html#aa7cc06260459ed20c610c3b6ce5ad7d2", null ],
+      [ "canTake", "classby_1_1flag.html#a05752e930267d95aad7789d3ccfa8961", null ],
       [ "getArgCount", "classby_1_1flag.html#a88f0f09b363f10bc97ccf1da9e6d8399", null ],
       [ "take", "classby_1_1flag.html#a7424d288c3dc958a9862f40086054650", null ]
     ] ],

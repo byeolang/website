@@ -134,17 +134,16 @@ by::node에 대한 상속 다이어그램 : </div>
  <div class="center">
   <img src="classby_1_1node.png" usemap="#by::node_map" alt=""/>
   <map id="by::node_map" name="by::node_map">
-<area href="classby_1_1instance.html" title="Base class for all managed instances in memlite system" alt="by::instance" shape="rect" coords="1449,56,1761,80"/>
-<area href="classby_1_1frame_interactable.html" title="Interface for frame interaction" alt="by::frameInteractable" shape="rect" coords="1771,56,2083,80"/>
-<area href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information" alt="by::typeProvidable" shape="rect" coords="1288,0,1600,24"/>
-<area href="classby_1_1clonable.html" title="Interface for objects that can be cloned" alt="by::clonable" shape="rect" coords="1610,0,1922,24"/>
+<area href="classby_1_1instance.html" title="Base class for all managed instances in memlite system" alt="by::instance" shape="rect" coords="1288,56,1600,80"/>
+<area href="classby_1_1frame_interactable.html" title="Interface for frame interaction" alt="by::frameInteractable" shape="rect" coords="1610,56,1922,80"/>
+<area href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information" alt="by::typeProvidable" shape="rect" coords="1127,0,1439,24"/>
+<area href="classby_1_1clonable.html" title="Interface for objects that can be cloned" alt="by::clonable" shape="rect" coords="1449,0,1761,24"/>
 <area href="classby_1_1base_func.html" title="Base class for all function types" alt="by::baseFunc" shape="rect" coords="0,168,312,192"/>
 <area href="classby_1_1base_obj.html" title="Base class for representing byeol objects" alt="by::baseObj" shape="rect" coords="644,168,956,192"/>
 <area href="classby_1_1expr.html" title="Base class for all expressions" alt="by::expr" shape="rect" coords="1288,168,1600,192"/>
 <area href="classby_1_1frame.html" title="Execution frame" alt="by::frame" shape="rect" coords="1610,168,1922,192"/>
-<area href="classby_1_1slot.html" title="Pack slot" alt="by::slot" shape="rect" coords="1932,168,2244,192"/>
-<area href="classby_1_1src_file.html" title="Source code file information" alt="by::srcFile" shape="rect" coords="2254,168,2566,192"/>
-<area href="classby_1_1thread.html" title="Thread execution context for byeol runtime" alt="by::thread" shape="rect" coords="2576,168,2888,192"/>
+<area href="classby_1_1src_file.html" title="Source code file information" alt="by::srcFile" shape="rect" coords="1932,168,2244,192"/>
+<area href="classby_1_1thread.html" title="Thread execution context for byeol runtime" alt="by::thread" shape="rect" coords="2254,168,2566,192"/>
 <area href="classby_1_1tbase_bridge_func.html" alt="by::tbaseBridgeFunc&lt; T, T, tmarshaling, Args... &gt;" shape="rect" coords="322,224,634,248"/>
 <area href="classby_1_1tbase_bridge_func.html" alt="by::tbaseBridgeFunc&lt; Ret, T, Marshaling, Args... &gt;" shape="rect" coords="322,280,634,304"/>
 <area href="classby_1_1tbase_bridge_func.html" alt="by::tbaseBridgeFunc&lt; void, T, Marshaling, Args... &gt;" shape="rect" coords="322,336,634,360"/>
@@ -177,8 +176,7 @@ by::node에 대한 상속 다이어그램 : </div>
 <area href="classby_1_1is_expr.html" title="ntype checking expression" alt="by::isExpr" shape="rect" coords="1610,896,1922,920"/>
 <area href="classby_1_1loop_expr.html" title="Base class for loop expressions" alt="by::loopExpr" shape="rect" coords="1610,952,1922,976"/>
 <area href="classby_1_1ret_state_expr.html" title="Base class for keywords that exit blockExpr" alt="by::retStateExpr" shape="rect" coords="1610,1008,1922,1032"/>
-<area href="classby_1_1autoslot.html" title="Automatic pack loading slot" alt="by::autoslot" shape="rect" coords="1932,224,2244,248"/>
-<area href="classby_1_1dum_src_file.html" title="Dummy source file implementation" alt="by::dumSrcFile" shape="rect" coords="2254,224,2566,248"/>
+<area href="classby_1_1dum_src_file.html" title="Dummy source file implementation" alt="by::dumSrcFile" shape="rect" coords="1932,224,2244,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -713,7 +711,7 @@ Message Priority</h1>
 </dl>
 <dl class="section return"><dt>반환값</dt><dd>The result of the evaluation as a <code>str</code> object. </dd></dl>
 
-<p><a class="el" href="classby_1_1base_obj.html#a7612588286f4ab3d4410b2e2597fd80a">by::baseObj</a>, <a class="el" href="classby_1_1generic_origin.html#a76b7c3e191ba5c5c21fa4caa6217a810">by::genericOrigin</a>, <a class="el" href="classby_1_1slot.html#a069bc3facea2305fedd14f3341f04196">by::slot</a>에서 재구현되었습니다.</p>
+<p><a class="el" href="classby_1_1base_obj.html#a7612588286f4ab3d4410b2e2597fd80a">by::baseObj</a>, <a class="el" href="classby_1_1generic_origin.html#a76b7c3e191ba5c5c21fa4caa6217a810">by::genericOrigin</a>에서 재구현되었습니다.</p>
 
 </div>
 </div>
@@ -743,7 +741,7 @@ Message Priority</h1>
 <p>for example, the <a class="el" href="classby_1_1expr.html">expr</a> class has derived from this node class. and if an user call the funcs to get type of it, class 'ntype' of 'expr' will be returned. but if that user call the '<a class="el" href="#a168a80ea572c628b9206aad1a7a6d7d9">infer()</a>' then the 'expr' object evaluate its terms and returns it as a node from the output. it could be an integer if it was addExpr and all terms are constructed with integers.</p>
 <p>and also this func requires frames. means that you have to interact frame first before call this func. </p><dl class="section remark"><dt>Remarks</dt><dd>some derived class of node may require to call this function first by <a class="el" href="classby_1_1verifier.html">verifier</a>. if you call this function without calling <a class="el" href="classby_1_1verifier.html">verifier</a> previously will damage then process. </dd></dl>
 
-<p><a class="el" href="classby_1_1base_ctor.html#a10f125f079fd244514fd227f65c5711d">by::baseCtor</a>, <a class="el" href="classby_1_1ctor.html#a0321075c1f26daddd3a20cc59297a1fa">by::ctor</a>, <a class="el" href="classby_1_1as_expr.html#a4538bfb27b89760a0ca083a227635bd8">by::asExpr</a>, <a class="el" href="classby_1_1assign_expr.html#a0be6cf2710a51c84eac22503825ea101">by::assignExpr</a>, <a class="el" href="classby_1_1block_expr.html#a953330b9d03e803e3b040b04840aac4e">by::blockExpr</a>, <a class="el" href="classby_1_1def_array_expr.html#a4cad676367cfba4156bbf884f34ec117">by::defArrayExpr</a>, <a class="el" href="classby_1_1def_assign_expr.html#addd9f95f3b9983fc81df0ae46b2517e2">by::defAssignExpr</a>, <a class="el" href="classby_1_1def_seq_expr.html#a6ea08763c22b92f46ec10ad6a8bf1e92">by::defSeqExpr</a>, <a class="el" href="classby_1_1def_var_expr.html#a4012b1a5a805326aebb30fc870d4b16d">by::defVarExpr</a>, <a class="el" href="classby_1_1end_expr.html#a6012dac87e80856bf6a2b7bad39a7845">by::endExpr</a>, <a class="el" href="classby_1_1eval_expr.html#acf9c95959869c3fa5b2812553b078e0a">by::evalExpr</a>, <a class="el" href="classby_1_1_f_b_o_expr.html#a1f10915c307135fbba47bbe006da1f21">by::FBOExpr</a>, <a class="el" href="classby_1_1get_expr.html#adf45e8c701ff2c81e9dba0579d3de18a">by::getExpr</a>, <a class="el" href="classby_1_1if_expr.html#a4f540f2e8a5d5d14932175ab816cf7ce">by::ifExpr</a>, <a class="el" href="classby_1_1is_expr.html#a4f8a94d672719bf55781617ae9176866">by::isExpr</a>, <a class="el" href="classby_1_1loop_expr.html#ad57cf07c970ff1a390d4cb24b281392b">by::loopExpr</a>, <a class="el" href="classby_1_1ret_expr.html#a43fcfcca37c83095842523bf0a8b1472">by::retExpr</a>, <a class="el" href="classby_1_1generic_origin.html#a8d9438eed9c149f2ce6f4b53bb5c4c39">by::genericOrigin</a>, <a class="el" href="classby_1_1slot.html#ac23b59daca7619c3d14ada8eb51c6846">by::slot</a>에서 재구현되었습니다.</p>
+<p><a class="el" href="classby_1_1base_ctor.html#a10f125f079fd244514fd227f65c5711d">by::baseCtor</a>, <a class="el" href="classby_1_1ctor.html#a0321075c1f26daddd3a20cc59297a1fa">by::ctor</a>, <a class="el" href="classby_1_1as_expr.html#a4538bfb27b89760a0ca083a227635bd8">by::asExpr</a>, <a class="el" href="classby_1_1assign_expr.html#a0be6cf2710a51c84eac22503825ea101">by::assignExpr</a>, <a class="el" href="classby_1_1block_expr.html#a953330b9d03e803e3b040b04840aac4e">by::blockExpr</a>, <a class="el" href="classby_1_1def_array_expr.html#a4cad676367cfba4156bbf884f34ec117">by::defArrayExpr</a>, <a class="el" href="classby_1_1def_assign_expr.html#addd9f95f3b9983fc81df0ae46b2517e2">by::defAssignExpr</a>, <a class="el" href="classby_1_1def_seq_expr.html#a6ea08763c22b92f46ec10ad6a8bf1e92">by::defSeqExpr</a>, <a class="el" href="classby_1_1def_var_expr.html#a4012b1a5a805326aebb30fc870d4b16d">by::defVarExpr</a>, <a class="el" href="classby_1_1end_expr.html#a6012dac87e80856bf6a2b7bad39a7845">by::endExpr</a>, <a class="el" href="classby_1_1eval_expr.html#acf9c95959869c3fa5b2812553b078e0a">by::evalExpr</a>, <a class="el" href="classby_1_1_f_b_o_expr.html#a1f10915c307135fbba47bbe006da1f21">by::FBOExpr</a>, <a class="el" href="classby_1_1get_expr.html#adf45e8c701ff2c81e9dba0579d3de18a">by::getExpr</a>, <a class="el" href="classby_1_1if_expr.html#a4f540f2e8a5d5d14932175ab816cf7ce">by::ifExpr</a>, <a class="el" href="classby_1_1is_expr.html#a4f8a94d672719bf55781617ae9176866">by::isExpr</a>, <a class="el" href="classby_1_1loop_expr.html#ad57cf07c970ff1a390d4cb24b281392b">by::loopExpr</a>, <a class="el" href="classby_1_1ret_expr.html#a43fcfcca37c83095842523bf0a8b1472">by::retExpr</a>, <a class="el" href="classby_1_1generic_origin.html#a8d9438eed9c149f2ce6f4b53bb5c4c39">by::genericOrigin</a>에서 재구현되었습니다.</p>
 
 </div>
 </div>
@@ -958,7 +956,7 @@ Message Priority</h1>
 </div><div class="memdoc">
 <p>Release all held resources and prepare for termination. </p><dl class="section remark"><dt>Remarks</dt><dd>Some classes won't be able to reinitialize after <a class="el" href="#ac5a636219cb26fbd6c32e38f4b3a5c81">rel()</a> is called. </dd></dl>
 
-<p><a class="el" href="classby_1_1autoslot.html#a1144881a1256d6fd289636d07f92caba">by::autoslot</a>, <a class="el" href="classby_1_1block_expr.html#a5b63daeb5b5caff442a5be3936acf177">by::blockExpr</a>, <a class="el" href="classby_1_1arr.html#ab76c4b25f1d1ae165afedaf4710e1a2a">by::arr</a>, <a class="el" href="classby_1_1n_str.html#a4b04b7d09a13b2036ceda8565a18ea00">by::nStr</a>, <a class="el" href="classby_1_1frame.html#a2779d034aee4cd68fceeb892faf86bbd">by::frame</a>, <a class="el" href="classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343">by::thread</a>에서 재구현되었습니다.</p>
+<p><a class="el" href="classby_1_1autopack.html#afde5e4acb8646ef6be2a8fed31fda35c">by::autopack</a>, <a class="el" href="classby_1_1block_expr.html#a5b63daeb5b5caff442a5be3936acf177">by::blockExpr</a>, <a class="el" href="classby_1_1pack.html#a4c41bb7a24c149db222d2ac2bcc04299">by::pack</a>, <a class="el" href="classby_1_1arr.html#ab76c4b25f1d1ae165afedaf4710e1a2a">by::arr</a>, <a class="el" href="classby_1_1n_str.html#a4b04b7d09a13b2036ceda8565a18ea00">by::nStr</a>, <a class="el" href="classby_1_1frame.html#a2779d034aee4cd68fceeb892faf86bbd">by::frame</a>, <a class="el" href="classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343">by::thread</a>에서 재구현되었습니다.</p>
 
 </div>
 </div>

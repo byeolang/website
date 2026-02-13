@@ -178,139 +178,143 @@ $(function(){initNavTree('err_code_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>PAIRX(NO_PACK_TRAY, &quot;pack tray hasn&#39;t been created before&quot;)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>PAIRX(NO_PACK, &quot;no pack has been specified&quot;)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>PAIRX(PACK_NOT_MATCH, &quot;pack %s expected, but it was %s&quot;)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// expr:</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>PAIRX(NOT_EXPR, &quot;\&#39;%s\&#39; isn&#39;t a expression&quot;)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>PAIRX(EXPR_EVAL_NUL, &quot;expression evaluated as null type&quot;)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//  defVar:</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>PAIRX(CANT_DEF_VAR, &quot;definining variable &#39;%s %s&#39; wouldn&#39;t allowed here&quot;)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>PAIRX(ALREADY_DEFINED_VAR, &quot;variable &#39;%s %s&#39; was already defined in this scope&quot;)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>PAIRX(HAS_NO_NAME, &quot;variable should have a name&quot;)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>PAIRX(NO_ORIGIN, &quot;there is no origin %s <span class="keywordtype">object</span>&quot;)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>PAIRX(TYPE_NOT_EXIST, &quot;when defines variable &#39;%s&#39;, couldn&#39;t find the type of it.&quot;)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>PAIRX(DONT_HAVE_CTOR, &quot;%s&#39;s type doesn&#39;t have a constructor without parameter.&quot;)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>PAIRX(TYPE_NOT_DEDUCED, &quot;type can&#39;t be infered into meaningful one.&quot;)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>PAIRX(NO_VOID_CONTAINER, &quot;you can&#39;t make a <span class="keywordtype">void</span> container&quot;)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>PAIRX(TYPE_IS_NOT_PRE_EVALUATED, &quot;there is something wrong in pre-evaluation to define %s variable.&quot;)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>PAIRX(PROTECTED_NOT_ALLOWED_FOR_LOCAL, &quot;you can&#39;t declare &#39;protected&#39; modifier for a local variable, %s&quot;)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>PAIRX(OVERRIDE_NOT_ALLOWED_FOR_LOCAL, &quot;you can&#39;t decalre &#39;explicit-override&#39; for a local varaible, %s&quot;)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>PAIRX(MODIFIER_NOT_FOUND, &quot;parser didn&#39;t make a modifier for this symbol, %s&quot;)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>PAIRX(CANT_ACCESS_TO_PROTECTED_VARIABLE, &quot;you can&#39;t access this %s variable. it&#39;s protected.&quot;)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>PAIRX(EXPLICIT_TYPE_SHOULDNT_BE_NULL, &quot;explicit type shouldn&#39;t be null when you define it.&quot;)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>PAIRX(NO_VOID_VARIABLE, &quot;you can&#39;t define a varaible as <span class="keywordtype">void</span> type&quot;)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>PAIRX(SHORT_DEF_VAR_ONLY_ALLOWED_TO_CUSTOM_TYPE, &quot;<span class="keywordtype">short</span> definition isn&#39;t allowed to array or primitive types&quot;)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>PAIRX(COULDNT_MAKE_INSTANCE_UNEXPECTEDLY, &quot;couldn&#39;t make an instance unexpectedly&quot;)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>PAIRX(YOU_CANT_DEFINE_PROPERTY_WITH_ABSTRACT_FUNC, &quot;you can&#39;t define property with abstract func&quot;)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//  defSeq:</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>PAIRX(SEQ_SHOULD_INT_COMPATIBLE, &quot;start and end of a sequence should be sort of an <span class="keywordtype">int</span>.&quot;)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//  assign:</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>PAIRX(TYPE_NOT_COMPATIBLE, &quot;rhs type &#39;%s&#39; is not compatible to lhs &#39;%s&#39; of this assigment&quot;)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>PAIRX(ASSIGN_TO_RVALUE, &quot;you can&#39;t assign %s to this unamed %s. please define it first&quot;)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>PAIRX(ASSIGN_TO_CONST, &quot;to assign value to &#39;%s&#39; const <span class="keywordtype">object</span> is not allowed&quot;)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>PAIRX(ASSIGN_TO_FUNC, &quot;you can&#39;t assign closure to a defined func&quot;)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>PAIRX(COULDNT_GET_ITER_FOR_LHS, &quot;couldn&#39;t get iterator for `%s`&quot;)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//  type:</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>PAIRX(CAST_NOT_AVAILABLE, &quot;couldn&#39;t cast %s type as %s&quot;)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>PAIRX(LHS_IS_NUL, &quot;lhs of the expression is null&quot;)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>PAIRX(RHS_IS_NUL, &quot;rhs of the expression is null&quot;)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>PAIRX(EXPR_SHOULDNT_BE_HERE, &quot;expression shouldn&#39;t be here&quot;)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>PAIRX(IMPLICIT_CAST_NOT_AVAILABLE, &quot;couldn&#39;t implicit cast %s type as %s&quot;)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>PAIRX(VOID_NOT_CAST, &quot;casting to the <span class="keywordtype">void</span> type isn&#39;t allowed&quot;)</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>PAIRX(CAST_TO_UNKNOWN, &quot;cast to unknown type&quot;)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>PAIRX(CTOR_CANT_CAST_TO_CLOSURE, &quot;constructor can&#39;t be casted to a closure&quot;)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>PAIRX(ARR_DOESNT_HAVE_TYPE_PARAM, &quot;array doesn&#39;t have type parameter.&quot;)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>PAIRX(ARR_RETURNING_SOMETHING, &quot;block returning something can&#39;t be evaluated as an array.&quot;)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>PAIRX(CONVERGE_INFO_IS_NULL, &quot;couldn&#39;t converge types. some type info was null&quot;)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>PAIRX(CONVERGE_INFO_NOT_ACCESSIBLE, &quot;couldn&#39;t converge type of %s&quot;)</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">//  arithmetic operation:</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>PAIRX(LHS_IS_NOT_ARITH, &quot;lhs &#39;%s&#39; is not arithmetic type&quot;)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>PAIRX(RHS_IS_NOT_ARITH, &quot;rhs &#39;%s&#39; is not arithmetic type&quot;)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">//  defObj:</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>PAIRX(ORIGIN_OBJ_CANT_BE_CONST, &quot;origin <span class="keywordtype">object</span> can&#39;t be defined with &#39;const&#39;&quot;)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>PAIRX(COMPLETE_OBJ_BUT_NO_CTOR, &quot;complete <span class="keywordtype">object</span> should have a ctor without any parameters&quot;)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>PAIRX(CANT_CALL_COMPLETE_FOR_INCOMPLETE, &quot;incomplete <span class="keywordtype">object</span> couldn&#39;t have any call complete.&quot;)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>PAIRX(UNEXPECTED_ATTR, &quot;unexpected attribute found&quot;)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">//  generics:</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>PAIRX(SHOULD_TYPE_PARAM_NAME, &quot;&#39;%s&#39; type parameter wasn&#39;t be defined as new name.&quot;)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>PAIRX(MAKE_GENERIC_FAIL, &quot;construction &#39;%s&#39; for generic obj has failed.&quot;)</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>PAIRX(GENERIC_TYPE_PARAM_DUPLICATED, &quot;type parameter &#39;%s&#39; was duplicated.&quot;)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//  func-call:</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>PAIRX(FUNC_NOT_EXIST, &quot;this func doesn&#39;t exist.&quot;)</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>PAIRX(DONT_KNOW_ME, &quot;I don&#39;t know what the &#39;me&#39; <span class="keywordtype">object</span> is to call this func.&quot;)</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">//  retState:</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>PAIRX(BREAK_OUTSIDE_OF_LOOP, &quot;use &#39;break&#39; outside of a loop&quot;)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>PAIRX(NEXT_OUTSIDE_OF_LOOP, &quot;use &#39;next&#39; outside of a loop&quot;)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>PAIRX(LOOP_NO_RET_ARR, &quot;loop expression didn&#39;t return an array&quot;)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//  if:</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>PAIRX(CONDITION_IS_EMPTY, &quot;condition expression is empty&quot;)</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>PAIRX(CONDITION_CANT_CAST_TO_BOOL, &quot;condition expression can&#39;t cast to <span class="keywordtype">bool</span> type.&quot;)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">//  getExpr:</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>PAIRX(WHAT_IS_THIS_IDENTIFIER, &quot;I don&#39;t know what &#39;%s&#39; is.&quot;)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>PAIRX(IDENTIFIER_ONLY, &quot;You can&#39;t use type or generic for &#39;%s&#39;&quot;)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">//  defAssign:</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>PAIRX(RHS_NOT_EVALUATED,</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    &quot;I can&#39;t define a new variable here because there is a problem with the expression on the &quot;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    &quot;right.&quot;)</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>PAIRX(VOID_CANT_DEFINED, &quot;you can&#39;t define a variable to <span class="keywordtype">void</span> type&quot;)</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>PAIRX(CANT_ASSIGN_RET, &quot;rhs has &#39;ret&#39; which is not appropriate to assign.&quot;)</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">// end:</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>PAIRX(END_ONLY_BE_IN_A_FUNC, &quot;you&#39;ve to use &#39;end&#39; inside of a func.&quot;)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">// func:(&quot;verify: arithmeticExpr: lhs &amp; rhs should bind something.&quot;);</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">//</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">// WHEN_NUL(it.getLeft(), it.getRight())</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>PAIRX(PARAM_HAS_VAL, &quot;parameter must take a form of &#39;&lt;name&gt; &lt;type&gt;&#39;&quot;)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>PAIRX(FUNC_HAS_NO_NAME, &quot;a function should have a name&quot;)</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>PAIRX(WRONG_RET_TYPE, &quot;%s is not a valid return type&quot;)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>PAIRX(NO_RET_TYPE, &quot;return type is not specified&quot;)</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>PAIRX(NO_FUNC_INFO, &quot;function info doesn&#39;t exist&quot;)</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>PAIRX(MAIN_SHOULD_HAVE_STMTS, &quot;&#39;main&#39; function need to contain more than 1 statement inside&quot;)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>PAIRX(RET_TYPE_NOT_MATCH, &quot;return type is %s. and it&#39;s not valid to return type of func, %s&quot;)</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>PAIRX(PARAM_NOT_VOID, &quot;parameter &#39;%s&#39; shouldn&#39;t be a <span class="keywordtype">void</span> type&quot;)</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>PAIRX(FUNC_SHOULD_RETURN_SOMETHING, &quot;function should return something&quot;)</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>PAIRX(RET_ERR_ON_CTOR, &quot;returning err on function not allowed&quot;)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">// closure:</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>PAIRX(NOT_CAPTURED, &quot;closure don&#39;t capture any scopes.&quot;)</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>PAIRX(NOT_HAS_FUNC, &quot;closure don&#39;t refer a func&quot;)</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>PAIRX(CANT_RETURN_A_CLOSURE, &quot;it seems that you tried to return a closure of a func, but I couldn&#39;t&quot;)</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">// block:</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>PAIRX(RET_AT_MIDDLE_OF_BLOCK, &quot;use &#39;ret&#39; at last of block stmt.&quot;)</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>PAIRX(BLK_CANT_MAKE_FRAME, &quot;block statement failed to construct frame structure&quot;)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>PAIRX(THERE_IS_NO_BLOCK_STMT, &quot;block statement expected, but couldn&#39;t find.&quot;)</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">// container:</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>PAIRX(ELEM_TYPE_IS_NUL, &quot;there is no elem type&quot;)</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>PAIRX(ELEM_TYPE_DEDUCED_NUL, &quot;elem type has been infered to null&quot;)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>PAIRX(ELEM_TYPE_DEDUCED_WRONG, &quot;elem type has been infered to %s type&quot;)</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>PAIRX(ELEM_TYPE_NOT_VOID, &quot;elem type shouldn&#39;t be the <span class="keywordtype">void</span> type&quot;)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>PAIRX(CONTAINER_IS_NUL, &quot;there is no container&quot;)</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>PAIRX(ITERATOR_IS_NUL, &quot;null iterator has been used&quot;)</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>PAIRX(VALUE_IS_NUL, &quot;tried to add/delete null value&quot;)</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>PAIRX(ITERATOR_NOT_BELONG_TO_CONTAINER, &quot;this iterator is not belonged to this container.&quot;)</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>PAIRX(OUT_OF_RANGE, &quot;given index &#39;%d&#39; is out of range. container&#39;s length is %d&quot;)</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>PAIRX(ITERATORS_ARENT_SAME_DIRECTION, &quot;these iterators aren&#39;t same direction.&quot;)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">// operator:</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>PAIRX(STRING_IS_NOT_PROPER_TO_OP, &quot;<span class="keywordtype">string</span> type isn&#39;t suitable to this operators.&quot;)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>PAIRX(PARANTHESIS_WAS_TUPLE, &quot;paranthesis was tuple only contains 1 expression&quot;)</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">// signal:</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>PAIRX(SIG_SEGV, &quot;segmentation fault&quot;)</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>PAIRX(SIG_INT, &quot;external interrupt&quot;)</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>PAIRX(SIG_ILL, &quot;invalid program image&quot;)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>PAIRX(SIG_ABORT, &quot;abonormal termination condition&quot;)</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>PAIRX(SIG_FPE, &quot;erroneous arithmetic operation&quot;)</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>PAIRX(SIG_TERM, &quot;termination request&quot;)</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// option:</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>PAIRX(OPTION_CANT_CLUSTERED,</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    &quot;you can&#39;t use option `%s` clustered but it needs to take arguments.\nput it at the very end.&quot;)</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>PAIRX(UNKNOWN_OPTION, &quot;%s&quot;)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>PAIRX(OPTION_NEEDS_TRAILING_ARG, &quot;option `%s` needs trailing arguments&quot;)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>PAIRX(PACK_NOT_LOADED, &quot;couldn&#39;t load the pack at `%s` path&quot;)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// expr:</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>PAIRX(NOT_EXPR, &quot;\&#39;%s\&#39; isn&#39;t a expression&quot;)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>PAIRX(EXPR_EVAL_NUL, &quot;expression evaluated as null type&quot;)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//  defVar:</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>PAIRX(CANT_DEF_VAR, &quot;definining variable &#39;%s %s&#39; wouldn&#39;t allowed here&quot;)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>PAIRX(ALREADY_DEFINED_VAR, &quot;variable &#39;%s %s&#39; was already defined in this scope&quot;)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>PAIRX(HAS_NO_NAME, &quot;variable should have a name&quot;)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>PAIRX(NO_ORIGIN, &quot;there is no origin %s <span class="keywordtype">object</span>&quot;)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>PAIRX(TYPE_NOT_EXIST, &quot;when defines variable &#39;%s&#39;, couldn&#39;t find the type of it.&quot;)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>PAIRX(DONT_HAVE_CTOR, &quot;%s&#39;s type doesn&#39;t have a constructor without parameter.&quot;)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>PAIRX(TYPE_NOT_DEDUCED, &quot;type can&#39;t be infered into meaningful one.&quot;)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>PAIRX(NO_VOID_CONTAINER, &quot;you can&#39;t make a <span class="keywordtype">void</span> container&quot;)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>PAIRX(TYPE_IS_NOT_PRE_EVALUATED, &quot;there is something wrong in pre-evaluation to define %s variable.&quot;)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>PAIRX(PROTECTED_NOT_ALLOWED_FOR_LOCAL, &quot;you can&#39;t declare &#39;protected&#39; modifier for a local variable, %s&quot;)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>PAIRX(OVERRIDE_NOT_ALLOWED_FOR_LOCAL, &quot;you can&#39;t decalre &#39;explicit-override&#39; for a local varaible, %s&quot;)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>PAIRX(MODIFIER_NOT_FOUND, &quot;parser didn&#39;t make a modifier for this symbol, %s&quot;)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>PAIRX(CANT_ACCESS_TO_PROTECTED_VARIABLE, &quot;you can&#39;t access this %s variable. it&#39;s protected.&quot;)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>PAIRX(EXPLICIT_TYPE_SHOULDNT_BE_NULL, &quot;explicit type shouldn&#39;t be null when you define it.&quot;)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>PAIRX(NO_VOID_VARIABLE, &quot;you can&#39;t define a varaible as <span class="keywordtype">void</span> type&quot;)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>PAIRX(SHORT_DEF_VAR_ONLY_ALLOWED_TO_CUSTOM_TYPE, &quot;<span class="keywordtype">short</span> definition isn&#39;t allowed to array or primitive types&quot;)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>PAIRX(COULDNT_MAKE_INSTANCE_UNEXPECTEDLY, &quot;couldn&#39;t make an instance unexpectedly&quot;)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>PAIRX(YOU_CANT_DEFINE_PROPERTY_WITH_ABSTRACT_FUNC, &quot;you can&#39;t define property with abstract func&quot;)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//  defSeq:</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>PAIRX(SEQ_SHOULD_INT_COMPATIBLE, &quot;start and end of a sequence should be sort of an <span class="keywordtype">int</span>.&quot;)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//  assign:</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>PAIRX(TYPE_NOT_COMPATIBLE, &quot;rhs type &#39;%s&#39; is not compatible to lhs &#39;%s&#39; of this assigment&quot;)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>PAIRX(ASSIGN_TO_RVALUE, &quot;you can&#39;t assign %s to this unamed %s. please define it first&quot;)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>PAIRX(ASSIGN_TO_CONST, &quot;to assign value to &#39;%s&#39; const <span class="keywordtype">object</span> is not allowed&quot;)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>PAIRX(ASSIGN_TO_FUNC, &quot;you can&#39;t assign closure to a defined func&quot;)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>PAIRX(COULDNT_GET_ITER_FOR_LHS, &quot;couldn&#39;t get iterator for `%s`&quot;)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//  type:</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>PAIRX(CAST_NOT_AVAILABLE, &quot;couldn&#39;t cast %s type as %s&quot;)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>PAIRX(LHS_IS_NUL, &quot;lhs of the expression is null&quot;)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>PAIRX(RHS_IS_NUL, &quot;rhs of the expression is null&quot;)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>PAIRX(EXPR_SHOULDNT_BE_HERE, &quot;expression shouldn&#39;t be here&quot;)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>PAIRX(IMPLICIT_CAST_NOT_AVAILABLE, &quot;couldn&#39;t implicit cast %s type as %s&quot;)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>PAIRX(VOID_NOT_CAST, &quot;casting to the <span class="keywordtype">void</span> type isn&#39;t allowed&quot;)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>PAIRX(CAST_TO_UNKNOWN, &quot;cast to unknown type&quot;)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>PAIRX(CTOR_CANT_CAST_TO_CLOSURE, &quot;constructor can&#39;t be casted to a closure&quot;)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>PAIRX(ARR_DOESNT_HAVE_TYPE_PARAM, &quot;array doesn&#39;t have type parameter.&quot;)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>PAIRX(ARR_RETURNING_SOMETHING, &quot;block returning something can&#39;t be evaluated as an array.&quot;)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>PAIRX(CONVERGE_INFO_IS_NULL, &quot;couldn&#39;t converge types. some type info was null&quot;)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>PAIRX(CONVERGE_INFO_NOT_ACCESSIBLE, &quot;couldn&#39;t converge type of %s&quot;)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">//  arithmetic operation:</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>PAIRX(LHS_IS_NOT_ARITH, &quot;lhs &#39;%s&#39; is not arithmetic type&quot;)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>PAIRX(RHS_IS_NOT_ARITH, &quot;rhs &#39;%s&#39; is not arithmetic type&quot;)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">//  defObj:</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>PAIRX(ORIGIN_OBJ_CANT_BE_CONST, &quot;origin <span class="keywordtype">object</span> can&#39;t be defined with &#39;const&#39;&quot;)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>PAIRX(COMPLETE_OBJ_BUT_NO_CTOR, &quot;complete <span class="keywordtype">object</span> should have a ctor without any parameters&quot;)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>PAIRX(CANT_CALL_COMPLETE_FOR_INCOMPLETE, &quot;incomplete <span class="keywordtype">object</span> couldn&#39;t have any call complete.&quot;)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>PAIRX(UNEXPECTED_ATTR, &quot;unexpected attribute found&quot;)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//  generics:</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>PAIRX(SHOULD_TYPE_PARAM_NAME, &quot;&#39;%s&#39; type parameter wasn&#39;t be defined as new name.&quot;)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>PAIRX(MAKE_GENERIC_FAIL, &quot;construction &#39;%s&#39; for generic obj has failed.&quot;)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>PAIRX(GENERIC_TYPE_PARAM_DUPLICATED, &quot;type parameter &#39;%s&#39; was duplicated.&quot;)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//  func-call:</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>PAIRX(FUNC_NOT_EXIST, &quot;this func doesn&#39;t exist.&quot;)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>PAIRX(DONT_KNOW_ME, &quot;I don&#39;t know what the &#39;me&#39; <span class="keywordtype">object</span> is to call this func.&quot;)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">//  retState:</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>PAIRX(BREAK_OUTSIDE_OF_LOOP, &quot;use &#39;break&#39; outside of a loop&quot;)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>PAIRX(NEXT_OUTSIDE_OF_LOOP, &quot;use &#39;next&#39; outside of a loop&quot;)</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>PAIRX(LOOP_NO_RET_ARR, &quot;loop expression didn&#39;t return an array&quot;)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">//  if:</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>PAIRX(CONDITION_IS_EMPTY, &quot;condition expression is empty&quot;)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>PAIRX(CONDITION_CANT_CAST_TO_BOOL, &quot;condition expression can&#39;t cast to <span class="keywordtype">bool</span> type.&quot;)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">//  getExpr:</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>PAIRX(WHAT_IS_THIS_IDENTIFIER, &quot;I don&#39;t know what &#39;%s&#39; is.&quot;)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>PAIRX(IDENTIFIER_ONLY, &quot;You can&#39;t use type or generic for &#39;%s&#39;&quot;)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">//  defAssign:</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>PAIRX(RHS_NOT_EVALUATED,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    &quot;I can&#39;t define a new variable here because there is a problem with the expression on the &quot;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    &quot;right.&quot;)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>PAIRX(VOID_CANT_DEFINED, &quot;you can&#39;t define a variable to <span class="keywordtype">void</span> type&quot;)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>PAIRX(CANT_ASSIGN_RET, &quot;rhs has &#39;ret&#39; which is not appropriate to assign.&quot;)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">// end:</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>PAIRX(END_ONLY_BE_IN_A_FUNC, &quot;you&#39;ve to use &#39;end&#39; inside of a func.&quot;)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">// func:(&quot;verify: arithmeticExpr: lhs &amp; rhs should bind something.&quot;);</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">//</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">// WHEN_NUL(it.getLeft(), it.getRight())</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">//</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>PAIRX(PARAM_HAS_VAL, &quot;parameter must take a form of &#39;&lt;name&gt; &lt;type&gt;&#39;&quot;)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>PAIRX(FUNC_HAS_NO_NAME, &quot;a function should have a name&quot;)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>PAIRX(WRONG_RET_TYPE, &quot;%s is not a valid return type&quot;)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>PAIRX(NO_RET_TYPE, &quot;return type is not specified&quot;)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>PAIRX(NO_FUNC_INFO, &quot;function info doesn&#39;t exist&quot;)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>PAIRX(MAIN_SHOULD_HAVE_STMTS, &quot;&#39;main&#39; function need to contain more than 1 statement inside&quot;)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>PAIRX(RET_TYPE_NOT_MATCH, &quot;return type is %s. and it&#39;s not valid to return type of func, %s&quot;)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>PAIRX(PARAM_NOT_VOID, &quot;parameter &#39;%s&#39; shouldn&#39;t be a <span class="keywordtype">void</span> type&quot;)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>PAIRX(FUNC_SHOULD_RETURN_SOMETHING, &quot;function should return something&quot;)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>PAIRX(RET_ERR_ON_CTOR, &quot;returning err on function not allowed&quot;)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">// closure:</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>PAIRX(NOT_CAPTURED, &quot;closure don&#39;t capture any scopes.&quot;)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>PAIRX(NOT_HAS_FUNC, &quot;closure don&#39;t refer a func&quot;)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>PAIRX(CANT_RETURN_A_CLOSURE, &quot;it seems that you tried to return a closure of a func, but I couldn&#39;t&quot;)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">// block:</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>PAIRX(RET_AT_MIDDLE_OF_BLOCK, &quot;use &#39;ret&#39; at last of block stmt.&quot;)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>PAIRX(BLK_CANT_MAKE_FRAME, &quot;block statement failed to construct frame structure&quot;)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>PAIRX(THERE_IS_NO_BLOCK_STMT, &quot;block statement expected, but couldn&#39;t find.&quot;)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// container:</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>PAIRX(ELEM_TYPE_IS_NUL, &quot;there is no elem type&quot;)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>PAIRX(ELEM_TYPE_DEDUCED_NUL, &quot;elem type has been infered to null&quot;)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>PAIRX(ELEM_TYPE_DEDUCED_WRONG, &quot;elem type has been infered to %s type&quot;)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>PAIRX(ELEM_TYPE_NOT_VOID, &quot;elem type shouldn&#39;t be the <span class="keywordtype">void</span> type&quot;)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>PAIRX(CONTAINER_IS_NUL, &quot;there is no container&quot;)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>PAIRX(ITERATOR_IS_NUL, &quot;null iterator has been used&quot;)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>PAIRX(VALUE_IS_NUL, &quot;tried to add/delete null value&quot;)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>PAIRX(ITERATOR_NOT_BELONG_TO_CONTAINER, &quot;this iterator is not belonged to this container.&quot;)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>PAIRX(OUT_OF_RANGE, &quot;given index &#39;%d&#39; is out of range. container&#39;s length is %d&quot;)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>PAIRX(ITERATORS_ARENT_SAME_DIRECTION, &quot;these iterators aren&#39;t same direction.&quot;)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">// operator:</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>PAIRX(STRING_IS_NOT_PROPER_TO_OP, &quot;<span class="keywordtype">string</span> type isn&#39;t suitable to this operators.&quot;)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>PAIRX(PARANTHESIS_WAS_TUPLE, &quot;paranthesis was tuple only contains 1 expression&quot;)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">// signal:</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>PAIRX(SIG_SEGV, &quot;segmentation fault&quot;)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>PAIRX(SIG_INT, &quot;external interrupt&quot;)</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>PAIRX(SIG_ILL, &quot;invalid program image&quot;)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>PAIRX(SIG_ABORT, &quot;abonormal termination condition&quot;)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>PAIRX(SIG_FPE, &quot;erroneous arithmetic operation&quot;)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>PAIRX(SIG_TERM, &quot;termination request&quot;)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">// option:</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>PAIRX(OPTION_CANT_CLUSTERED,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    &quot;you can&#39;t use option `%s` clustered but it needs to take arguments.\nput it at the very end.&quot;)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>PAIRX(UNKNOWN_OPTION, &quot;%s&quot;)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>PAIRX(OPTION_NEEDS_TRAILING_ARG, &quot;option `%s` needs trailing arguments&quot;)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">// flag:</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>PAIRX(NO_SRC_FOUND_ON_THE_PATH, &quot;there is no src file in the given path, `%s`&quot;)</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

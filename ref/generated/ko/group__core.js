@@ -9,10 +9,9 @@ var group__core =
       [ "setMe", "classby_1_1args.html#a4513fbc5672f25ed25667b5b1e54add6", null ],
       [ "toStr", "classby_1_1args.html#ac4dd7c1b539d0cb00243442cb3f7ce4d", null ]
     ] ],
-    [ "by::autoslot", "classby_1_1autoslot.html", [
-      [ "_invalidate", "classby_1_1autoslot.html#ab2bbc64cb982237737668d53165a4997", null ],
-      [ "getPack", "classby_1_1autoslot.html#ab836f025ea6a7d158e48cf8c6e89b2d9", null ],
-      [ "rel", "classby_1_1autoslot.html#a1144881a1256d6fd289636d07f92caba", null ]
+    [ "by::autopack", "classby_1_1autopack.html", [
+      [ "_invalidate", "classby_1_1autopack.html#aa75ace57c90892adef8f07ad631622eb", null ],
+      [ "rel", "classby_1_1autopack.html#afde5e4acb8646ef6be2a8fed31fda35c", null ]
     ] ],
     [ "by::baseFunc", "classby_1_1base_func.html", [
       [ "getParams", "classby_1_1base_func.html#a0831818b9fea50494e5fff9426f96b2e", null ],
@@ -167,6 +166,11 @@ var group__core =
       [ "getSubPack", "classby_1_1origin.html#a3c7782be141d2481dedff6159a644b4f", null ],
       [ "isComplete", "classby_1_1origin.html#a0677eaaff5fceb681e56b5acb03ff7bd", null ]
     ] ],
+    [ "by::pack", "classby_1_1pack.html", [
+      [ "_invalidate", "classby_1_1pack.html#a6dd08fe75505547bd570d6865288382f", null ],
+      [ "addDependent", "classby_1_1pack.html#a41cac3a81cfe491eab5b1af28a0652be", null ],
+      [ "rel", "classby_1_1pack.html#a4c41bb7a24c149db222d2ac2bcc04299", null ]
+    ] ],
     [ "by::param", "classby_1_1param.html", [
       [ "setOrigin", "classby_1_1param.html#a8d2ec5c9052adc25218750933691e5be", null ]
     ] ],
@@ -175,13 +179,6 @@ var group__core =
       [ "toStr", "classby_1_1params.html#ac9875389c1f2a39defd754db99cee2ae", null ]
     ] ],
     [ "by::dumParams", "classby_1_1dum_params.html", null ],
-    [ "by::slot", "classby_1_1slot.html", [
-      [ "_invalidate", "classby_1_1slot.html#a80b94335f96b9e84759e501f4c8b5555", null ],
-      [ "_onEvalSub", "classby_1_1slot.html#a069bc3facea2305fedd14f3341f04196", null ],
-      [ "addDependent", "classby_1_1slot.html#aa1e05b6d243dce197d91a80e11f88346", null ],
-      [ "getPack", "classby_1_1slot.html#a1f2f1acd2eec627d532caed73be7e11c", null ],
-      [ "infer", "classby_1_1slot.html#ac23b59daca7619c3d14ada8eb51c6846", null ]
-    ] ],
     [ "by::dumSrc", "classby_1_1dum_src.html", null ],
     [ "by::dumSrcFile", "classby_1_1dum_src_file.html", null ],
     [ "by::src", "classby_1_1src.html", null ],
@@ -297,26 +294,29 @@ var group__core =
       [ "dump", "classby_1_1thread.html#a4437c950295a6348a986aa6e4f20d4d8", null ],
       [ "getEx", "classby_1_1thread.html#a0c91aebec84cb85f862b429ce6bb4a4a", null ],
       [ "getEx", "classby_1_1thread.html#a83fb0879a389bbdb19eec84bcc4ad7fa", null ],
-      [ "getSlots", "classby_1_1thread.html#a6299b46af037f269f8c75c6c5c431e59", null ],
+      [ "getPacks", "classby_1_1thread.html#ac7edfdffc7393049809919c64bb58ef9", null ],
       [ "isInteractable", "classby_1_1thread.html#aba761ced98a4058d304b02d1cc26fdc6", null ],
       [ "rel", "classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343", null ]
     ] ],
     [ "by::threadUse", "classby_1_1thread_use.html", null ],
     [ "by::coreInternal", "classby_1_1core_internal.html", null ],
+    [ "by::byeolPackLoading", "classby_1_1byeol_pack_loading.html", [
+      [ "parse", "classby_1_1byeol_pack_loading.html#a8abebbb40a8b062c8c0bd03abe0791ff", null ]
+    ] ],
     [ "by::cppPackLoading", "classby_1_1cpp_pack_loading.html", [
-      [ "parse", "classby_1_1cpp_pack_loading.html#af6eade51ac36c938f8fc6039c3954356", null ]
+      [ "parse", "classby_1_1cpp_pack_loading.html#a3c7ebf299ff1c96d457dab47e6556180", null ]
+    ] ],
+    [ "by::packLoader", "classby_1_1pack_loader.html", [
+      [ "load", "classby_1_1pack_loader.html#a5ffbe600086724ebc8b29033ac72228a", null ],
+      [ "setBasePacks", "classby_1_1pack_loader.html#a9636c8af5f76ad090db8fa66a540821a", null ]
     ] ],
     [ "by::packLoading", "classby_1_1pack_loading.html", null ],
     [ "by::packMakable", "classby_1_1pack_makable.html", [
-      [ "parse", "classby_1_1pack_makable.html#a2e57404bf09a1bf61c12459358ae7b6a", null ],
-      [ "verify", "classby_1_1pack_makable.html#a6b59ccf6bbe04498eb624bcdd51dca57", null ]
+      [ "parse", "classby_1_1pack_makable.html#af5db4ff78a663b13d18b727236fa63ea", null ],
+      [ "verify", "classby_1_1pack_makable.html#a3e55fdf3ae0a20b8dda6fc7f1231fd23", null ]
     ] ],
     [ "by::trustPackLoading", "classby_1_1trust_pack_loading.html", [
-      [ "verify", "classby_1_1trust_pack_loading.html#a51a37211e76bc98e254c59010b1b56e8", null ]
-    ] ],
-    [ "by::slotLoader", "classby_1_1slot_loader.html", [
-      [ "load", "classby_1_1slot_loader.html#ade538d5ad3d6bbf99f0c8ca7de48c917", null ],
-      [ "setBaseSlots", "classby_1_1slot_loader.html#ad6c4b8e9f9b4289fc87face1d6d12aeb", null ]
+      [ "verify", "classby_1_1trust_pack_loading.html#a2a6b3ca4878f7393c44d60cdd83c33fc", null ]
     ] ],
     [ "by::asable", "classby_1_1asable.html", null ],
     [ "by::aser", "classby_1_1aser.html", null ],

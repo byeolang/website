@@ -1640,8 +1640,8 @@ package bridge {
 baseObj <|-- tbridge
 
 package loader {
-  class slot
-  class slotLoader
+  class pack
+  class packLoader
 }
 
 package "frame" as frame1 {
@@ -1652,7 +1652,7 @@ package "frame" as frame1 {
 node <|-- frame
 thread *-- frame
 starter ..> thread: make and run main()
-thread --> slotLoader: start loading
+thread --> packLoader: start loading
 
 package worker {
   class interpreter {
@@ -2530,8 +2530,8 @@ stop
 @enduml
 @startuml inline_umlgraph_30.png
 actor "User Code" as user
-participant "slotLoader" as loader
-participant "autoslot" as autoslot
+participant "packLoader" as loader
+participant "autopack" as autopack
 participant "packLoading" as packLoading
 participant "manifest" as manifest
 participant "File System" as fs
@@ -2574,18 +2574,18 @@ end note
 packLoading --> loader : packLoading[]
 deactivate packLoading
 
-loader -> autoslot : Create (RELEASED state)
-activate autoslot
+loader -> autopack : Create (RELEASED state)
+activate autopack
 
-note right of autoslot
+note right of autopack
   <b>Initial State:</b>
   state = RELEASED
   No memory occupation
   Store packLoadings only
 end note
 
-autoslot --> loader : autoslot object
-deactivate autoslot
+autopack --> loader : autopack object
+deactivate autopack
 
 loader -> loader : Register dependencies
 note right of loader
@@ -2598,8 +2598,8 @@ deactivate loader
 
 == Lazy Loading Phase (On symbol access) ==
 
-user -> autoslot : Access mylib.someFunc()
-activate autoslot
+user -> autopack : Access mylib.someFunc()
+activate autopack
 
 note right of user
   <b>Lazy Loading Trigger:</b>
@@ -2607,15 +2607,15 @@ note right of user
   until actual usage
 end note
 
-autoslot -> autoslot : state == RELEASED?
-note right of autoslot
+autopack -> autopack : state == RELEASED?
+note right of autopack
   Since it's first access
   start loading
 end note
 
 == PARSED Phase ==
 
-autoslot -> packLoading : parse()
+autopack -> packLoading : parse()
 activate packLoading
 
 packLoading -> fs : Read .byeol file
@@ -2630,14 +2630,14 @@ note right of packLoading
   (Skip for native pack)
 end note
 
-packLoading --> autoslot : AST
+packLoading --> autopack : AST
 deactivate packLoading
 
-autoslot -> autoslot : state = PARSED
+autopack -> autopack : state = PARSED
 
 == VERIFIED Phase ==
 
-autoslot -> packLoading : verify()
+autopack -> packLoading : verify()
 activate packLoading
 
 packLoading -> packLoading : Run verification
@@ -2650,13 +2650,13 @@ end note
 
 alt Verification Success
 
-    packLoading --> autoslot : isValid = true
-    autoslot -> autoslot : state = VERIFIED
+    packLoading --> autopack : isValid = true
+    autopack -> autopack : state = VERIFIED
 
 else Verification Failed
 
-    packLoading --> autoslot : isValid = false
-    autoslot -> autoslot : state = VERIFIED\n(Mark as failed)
+    packLoading --> autopack : isValid = false
+    autopack -> autopack : state = VERIFIED\n(Mark as failed)
 
 end
 
@@ -2664,23 +2664,23 @@ deactivate packLoading
 
 == LINKED Phase ==
 
-autoslot -> packLoading : link()
+autopack -> packLoading : link()
 activate packLoading
 
 alt isValid == true
 
     packLoading -> packLoading : Linking complete
-    packLoading --> autoslot : Success
+    packLoading --> autopack : Success
 
-    autoslot -> autoslot : state = LINKED
+    autopack -> autopack : state = LINKED
 
 else isValid == false
 
-    packLoading --> autoslot : Failure
+    packLoading --> autopack : Failure
 
-    autoslot -> autoslot : state = LINKED\nPropagate to dependent packs
+    autopack -> autopack : state = LINKED\nPropagate to dependent packs
 
-    note right of autoslot
+    note right of autopack
       <b>Failure Propagation:</b>
       Propagate failure fact
       to all dependents
@@ -2691,16 +2691,16 @@ end
 
 deactivate packLoading
 
-autoslot --> user : Return symbol or error
-deactivate autoslot
+autopack --> user : Return symbol or error
+deactivate autopack
 @enduml
 @startuml inline_umlgraph_31.png
-[*] --> RELEASED : Create autoslot
+[*] --> RELEASED : Create autopack
 
 state RELEASED {
     RELEASED : Initial state
     RELEASED : No memory occupation
-    RELEASED : Most slots are in this state
+    RELEASED : Most packs are in this state
 }
 
 state PARSED {

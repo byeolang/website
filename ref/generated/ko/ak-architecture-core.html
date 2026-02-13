@@ -436,7 +436,7 @@ baseObj 클래스 - 객체의 기반</h2>
 <div class="line">    }</div>
 <div class="line">    ...</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>이제 위 클래스를 pack으로써 노출하게 되면 byeol 코드에서도 len() 이나 getSeqFunc을 사용할 수 있습니다! 어떻게 pack으로 내보내는지는 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 이나 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 등을 참조하세요.</p>
+</div><!-- fragment --><p>이제 위 클래스를 pack으로써 노출하게 되면 byeol 코드에서도 len() 이나 getSeqFunc을 사용할 수 있습니다! 어떻게 pack으로 내보내는지는 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 이나 <a class="el" href="classby_1_1autopack.html">autopack</a> 등을 참조하세요.</p>
 <p>byeol 코드에서는 다음과 같이 사용할 수 있게 됩니다:</p>
 <div class="fragment"><div class="line">@style: language-byeol verified</div>
 <div class="line"># nStr의 이름은 byeol 환경에서는 `str`로 변경해서 내보냈다.</div>
@@ -1309,66 +1309,66 @@ manifest 클래스 - Pack 메타데이터</h2>
 <p><a class="el" href="structby_1_1manifest.html">manifest</a> 는 pack의 entrypoint, 종속성 정보 등을 포함합니다. entrypoint는 pack이 어떠한 종류의 라이브러리를 포함하고 있는지를 나타냅니다 (예: <code>cpp</code>, <code>byeol</code>).</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md398"></a>
-slot 클래스 - Pack의 결과물</h2>
+pack 클래스 - Pack의 결과물</h2>
 <p>byeol 언어는 <code>pack</code>이라는 일종의 압축파일 단위로 라이브러리를 배포하는데, pack 파일에는 최상위 <code>obj</code> 객체와 <a class="el" href="structby_1_1manifest.html">manifest</a>, 종속하는 pack 목록이 포함됩니다.</p>
 <p>(byeol 언어에서 내 코드에서 다른 pack을 사용하려면 <a class="el" href="structby_1_1manifest.html">manifest</a> 에 종속관계에 있다는 걸 선언해야 합니다)</p>
-<p><b><a class="el" href="classby_1_1slot.html">slot</a> 은 pack 파일로부터 만들어지는 결과물</b>이지, pack을 불러오는 걸 담당하지 않습니다. pack 로딩에 대해서는 <code>packLoading</code>이나 <code>slotLoader</code>를 참조하세요.</p>
+<p><b><a class="el" href="classby_1_1pack.html">pack</a> 은 pack 파일로부터 만들어지는 결과물</b>이지, pack을 불러오는 걸 담당하지 않습니다. pack 로딩에 대해서는 <code>packLoading</code>이나 <code>packLoader</code>를 참조하세요.</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md400"></a>
-autoslot 클래스 - Lazy Pack 로딩</h2>
-<p>byeol 언어는 pack을 <b>lazy하게 동적으로</b> 불러옵니다. <a class="el" href="classby_1_1autoslot.html">autoslot</a> 은 이 기능을 구현한 것으로, <code>slotLoader</code>가 pack 파일을 찾으면 <code>packLoading</code> 객체를 적절히 생성해서 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 에 넣어둡니다.</p>
-<p>이후 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 에 접근해서 안에 포함된 symbol을 가져오려는 시도를 하면 lazy하게 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 이 동작해 symbol을 파일로부터 불러옵니다.</p>
+autopack 클래스 - Lazy Pack 로딩</h2>
+<p>byeol 언어는 pack을 <b>lazy하게 동적으로</b> 불러옵니다. <a class="el" href="classby_1_1autopack.html">autopack</a> 은 이 기능을 구현한 것으로, <code>packLoader</code>가 pack 파일을 찾으면 <code>packLoading</code> 객체를 적절히 생성해서 <a class="el" href="classby_1_1autopack.html">autopack</a> 에 넣어둡니다.</p>
+<p>이후 <a class="el" href="classby_1_1autopack.html">autopack</a> 에 접근해서 안에 포함된 symbol을 가져오려는 시도를 하면 lazy하게 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 이 동작해 symbol을 파일로부터 불러옵니다.</p>
 <p>이는 <b>Lazy Loading 패턴</b>의 핵심 구현입니다. 필요할 때까지 리소스(pack) 로딩을 미루어 초기 로딩 시간과 메모리 사용량을 최소화합니다.</p>
 <p><b>복수의 packLoading</b></p>
 <p><a class="el" href="classby_1_1pack_loading.html">packLoading</a> 은 native 환경에서 가져올 수도 있고(dll 혹은 so 파일), runtime 환경에서 가져올 수도 있습니다(.byeol 파일). 또는 2개가 모두 하나의 pack에 있는 경우도 있을 수 있습니다.</p>
-<p>따라서 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 은 항상 1개의 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 만 가지지 않고, 배열로 처리합니다.</p>
-<p><b>autoslot 상태 (State)</b></p>
+<p>따라서 <a class="el" href="classby_1_1autopack.html">autopack</a> 은 항상 1개의 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 만 가지지 않고, 배열로 처리합니다.</p>
+<p><b>autopack 상태 (State)</b></p>
 <p>총 4개의 상태를 가지며 다음과 같은 흐름으로 로딩 파이프라인을 갖습니다:</p>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_31.png" />
 </div>
-<p>이는 <b>State Machine 패턴</b>을 응용한 부분입니다. autoslot은 정의된 상태들(RELEASED → PARSED → VERIFIED → LINKED) 사이를 전이하며, 각 상태에서 허용되는 동작이 다릅니다.</p>
+<p>이는 <b>State Machine 패턴</b>을 응용한 부분입니다. autopack은 정의된 상태들(RELEASED → PARSED → VERIFIED → LINKED) 사이를 전이하며, 각 상태에서 허용되는 동작이 다릅니다.</p>
 <ul>
-<li><b>Slot 생성</b>: <a class="el" href="classby_1_1slot_loader.html">slotLoader</a> 가 <a class="el" href="classby_1_1slot.html">slot</a> 객체를 생성해 시스템에 추가, dependencies도 기록</li>
-<li><b>RELEASED</b>: 초기 상태로, 어떠한 메모리도 점유하지 않음. 사용하지 않는 대부분의 <a class="el" href="classby_1_1slot.html">slot</a> 은 여기에 속함</li>
-<li><b>PARSED</b>: <a class="el" href="classby_1_1autoslot.html">autoslot</a> 에 접근이 이뤄진 경우, 본격적으로 사용하기 위해 코드를 파싱. 파싱 단계가 필요없는 경우 (optimized pack 또는 native pack)에는 LINKED 상태로 바로 건너뜀</li>
+<li><b>pack 생성</b>: <a class="el" href="classby_1_1pack_loader.html">packLoader</a> 가 <a class="el" href="classby_1_1pack.html">pack</a> 객체를 생성해 시스템에 추가, dependencies도 기록</li>
+<li><b>RELEASED</b>: 초기 상태로, 어떠한 메모리도 점유하지 않음. 사용하지 않는 대부분의 <a class="el" href="classby_1_1pack.html">pack</a> 은 여기에 속함</li>
+<li><b>PARSED</b>: <a class="el" href="classby_1_1autopack.html">autopack</a> 에 접근이 이뤄진 경우, 본격적으로 사용하기 위해 코드를 파싱. 파싱 단계가 필요없는 경우 (optimized pack 또는 native pack)에는 LINKED 상태로 바로 건너뜀</li>
 <li><b>VERIFIED</b>: 파싱 이후, 코드의 정합성을 검증. 검증에 실패했다면 isValid값을 false로 설정</li>
 <li><b>LINKED</b>: 자신이 검증에 실패한 상태라면, 자신을 참조하는 모든 dependents에게 자신이 검증에 실패했다는 사실을 전파</li>
 </ul>
 <p>왜 이런 상태 관리가 필요할까요?</p>
 <hr  />
 <p><b>동적 검증과 의존성 문제</b></p>
-<p>모든 pack이 검증이 완료된, 완전무결한 상태라고 전제하고 그냥 로딩만 해서는 안될 수 있습니다. 때로는 pack이 올바른지 한번 더 검증할 필요가 있기에, <a class="el" href="classby_1_1autoslot.html">autoslot</a> 중 일부는 symbol을 불러올때 사전에 파싱이나 검증을 해야 합니다.</p>
+<p>모든 pack이 검증이 완료된, 완전무결한 상태라고 전제하고 그냥 로딩만 해서는 안될 수 있습니다. 때로는 pack이 올바른지 한번 더 검증할 필요가 있기에, <a class="el" href="classby_1_1autopack.html">autopack</a> 중 일부는 symbol을 불러올때 사전에 파싱이나 검증을 해야 합니다.</p>
 <p>문제는 어떠한 pack은 다른 pack에 종속되는 경우가 매우 많이 발생한다는 점으로, 종속한 pack이 검증에 실패하게 되면, 그 사실을 전파해서 종속된 pack들도 모두 사용이 불가능해야 합니다. 이를 위의 4가지 상태를 제어하는 알고리즘으로 해결합니다.</p>
 <hr  />
 <p><b>재귀적 로딩</b></p>
-<p>pack이 다른 pack에 종속되는 경우는 부지기수로 많습니다. <a class="el" href="classby_1_1autoslot.html">autoslot</a> 이 lazy하게 동작하기 때문에 어떠한 <a class="el" href="classby_1_1slot.html">slot</a> 을 loading하다가 다른 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 에 접근함으로써 해당 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 도 재귀적으로 로딩 시퀸스에 들어가는 일도 많습니다.</p>
+<p>pack이 다른 pack에 종속되는 경우는 부지기수로 많습니다. <a class="el" href="classby_1_1autopack.html">autopack</a> 이 lazy하게 동작하기 때문에 어떠한 <a class="el" href="classby_1_1pack.html">pack</a> 을 loading하다가 다른 <a class="el" href="classby_1_1autopack.html">autopack</a> 에 접근함으로써 해당 <a class="el" href="classby_1_1autopack.html">autopack</a> 도 재귀적으로 로딩 시퀸스에 들어가는 일도 많습니다.</p>
 <p>이때 중복으로 초기화 되거나 아직 완전히 파이프라인을 통과하지 않는지 체크합니다.</p>
 <hr  />
-<p><b>RAII</b> <a class="el" href="classby_1_1autoslot.html">autoslot</a> 은 <a class="el" href="classby_1_1slot.html">slot</a> 에 정의된 _pack 객체를 가리킵니다. 이 객체는 외부 파일인 <code>pack</code> 을 로딩함으로써 읽어온 심볼들인데, <a class="el" href="classby_1_1autoslot.html">autoslot</a> 은 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 을 통한 pack의 symbol 생성을 책임지므로, pack의 소멸 또한 책임집니다. 그래서 RAII를 사용해, <a class="el" href="classby_1_1autoslot.html">autoslot</a> 객체가 소멸될때 모든 심볼을 먼저 없애고 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 객체 또한 없앰으로써 so 파일을 close 하는 등의 작업을 수행합니다. 자세한 내용은 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 을 참조하세요.</p>
-<p>이는 <b>RAII 패턴</b>의 전형적인 활용으로, autoslot 객체의 lifetime에 pack 리소스의 lifetime을 바인딩하여 리소스 누수를 방지합니다.</p>
+<p><b>RAII</b> <a class="el" href="classby_1_1autopack.html">autopack</a> 은 <a class="el" href="classby_1_1pack.html">pack</a> 에 정의된 _pack 객체를 가리킵니다. 이 객체는 외부 파일인 <code>pack</code> 을 로딩함으로써 읽어온 심볼들인데, <a class="el" href="classby_1_1autopack.html">autopack</a> 은 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 을 통한 pack의 symbol 생성을 책임지므로, pack의 소멸 또한 책임집니다. 그래서 RAII를 사용해, <a class="el" href="classby_1_1autopack.html">autopack</a> 객체가 소멸될때 모든 심볼을 먼저 없애고 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 객체 또한 없앰으로써 so 파일을 close 하는 등의 작업을 수행합니다. 자세한 내용은 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 을 참조하세요.</p>
+<p>이는 <b>RAII 패턴</b>의 전형적인 활용으로, autopack 객체의 lifetime에 pack 리소스의 lifetime을 바인딩하여 리소스 누수를 방지합니다.</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md405"></a>
-slotLoader 클래스 - Pack 로더</h2>
-<p><a class="el" href="classby_1_1slot_loader.html">slotLoader</a> 는 외부 pack을 로딩하는 역할을 담당합니다. <code>addPath()</code>로 탐색 경로를 추가하고, <code>load()</code>를 호출하면 pack을 불러올 수 있습니다.</p>
+packLoader 클래스 - Pack 로더</h2>
+<p><a class="el" href="classby_1_1pack_loader.html">packLoader</a> 는 외부 pack을 로딩하는 역할을 담당합니다. <code>addPath()</code>로 탐색 경로를 추가하고, <code>load()</code>를 호출하면 pack을 불러올 수 있습니다.</p>
 <p><b>기본 사용법</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">nmap ret;</div>
 <div class="line">errReport report;</div>
 <div class="line"> </div>
-<div class="line">slotLoader()</div>
+<div class="line">packLoader()</div>
 <div class="line">    .setReport(report)  // report를 넣지 않으면 dummyReport가 대신 사용됨</div>
-<div class="line">    .setBaseSlots(*ret)</div>
+<div class="line">    .setBasePacks(*ret)</div>
 <div class="line">    .addPath(&quot;pack/&quot;)</div>
 <div class="line">    .load();</div>
 <div class="line"> </div>
-<div class="line">ret.len();  // 로딩된 slot 개수 반환</div>
-</div><!-- fragment --><p>메서드 체이닝(<code>setReport().setBaseSlots().addPath().load()</code>)으로 객체 구성 과정을 명확하고 읽기 쉽게 표현합니다.</p>
+<div class="line">ret.len();  // 로딩된 pack 개수 반환</div>
+</div><!-- fragment --><p>메서드 체이닝(<code>setReport().setBasePacks().addPath().load()</code>)으로 객체 구성 과정을 명확하고 읽기 쉽게 표현합니다.</p>
 <hr  />
 <p><b>manifest와 entrypoint</b></p>
 <p>pack 로딩 중에는 필연적으로 <a class="el" href="structby_1_1manifest.html">manifest</a> 를 파싱합니다. manifest를 통해 가장 중요한 정보는 <b>entrypoint</b>입니다. entrypoint는 pack이 어떠한 종류의 라이브러리를 포함하고 있는지를 나타냅니다.</p>
 <p>예를들어 pack에 C++ 동적 라이브러리가 포함되어 있다면 entrypoint는 <code>cpp</code>가 되며, byeol 라이브러리라면 <code>byeol</code>이 됩니다.</p>
-<p><a class="el" href="classby_1_1slot_loader.html">slotLoader</a> 는 manifest를 읽은 후 <a class="el" href="classby_1_1autoslot.html">autoslot</a> 을 생성하고 entrypoint에 따라 적절한 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 인스턴스를 autoslot에 추가합니다.</p>
+<p><a class="el" href="classby_1_1pack_loader.html">packLoader</a> 는 manifest를 읽은 후 <a class="el" href="classby_1_1autopack.html">autopack</a> 을 생성하고 entrypoint에 따라 적절한 <a class="el" href="classby_1_1pack_loading.html">packLoading</a> 인스턴스를 autopack에 추가합니다.</p>
 <p><b>주의사항:</b></p><ul>
 <li>하나의 pack 라이브러리는 여러개의 entrypoint를 가질 수 있습니다</li>
 <li>경로는 항상 재귀적으로 탐색됩니다 (하위 디렉토리의 pack들도 모두 로딩)</li>
@@ -1377,12 +1377,12 @@ slotLoader 클래스 - Pack 로더</h2>
 <hr  />
 <h2><a class="anchor" id="autotoc_md408"></a>
 packLoading 클래스 - Pack 로딩 추상 클래스</h2>
-<p><code>slotLoader</code>에 의해 패키지를 로딩할 때 사용되는 추상 클래스입니다. <a class="el" href="classby_1_1pack_makable.html">packMakable</a> 인터페이스가 핵심 API를 제공합니다.</p>
-<p>packLoading은 <code>rel(), parse(), verify()</code> 함수를 제공하며, 이는 <code>autoslot</code>의 상태와 깊은 관련이 있습니다.</p>
+<p><code>packLoader</code>에 의해 패키지를 로딩할 때 사용되는 추상 클래스입니다. <a class="el" href="classby_1_1pack_makable.html">packMakable</a> 인터페이스가 핵심 API를 제공합니다.</p>
+<p>packLoading은 <code>rel(), parse(), verify()</code> 함수를 제공하며, 이는 <code>autopack</code>의 상태와 깊은 관련이 있습니다.</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md410"></a>
 cppPackLoading 클래스 - C++ Pack 로더</h2>
-<p><code>slotLoader</code>에 의해 cpp 패키지를 로딩할 때 사용되는 <code>packLoading</code> 중 하나입니다. 이름 그대로 C++ pack을 동적 라이브러리 파일에서 로딩하는 역할을 합니다.</p>
+<p><code>packLoader</code>에 의해 cpp 패키지를 로딩할 때 사용되는 <code>packLoading</code> 중 하나입니다. 이름 그대로 C++ pack을 동적 라이브러리 파일에서 로딩하는 역할을 합니다.</p>
 <p><b>Entrypoint</b></p>
 <p><a class="el" href="group__indep.html">Indep</a> 모듈의 <a class="el" href="classby_1_1dlib.html">dlib</a> 을 사용해서 동적 라이브러리를 로딩합니다. entrypoint는 이미 정의되어 있는 ENTRYPOINT_NAME 의 값을 사용합니다.</p>
 <hr  />
@@ -1417,8 +1417,8 @@ visitor 클래스 - AST 순회의 핵심</h2>
 </div>
 <p>이를 위해 visitation에 참여하는 모든 <a class="el" href="classby_1_1node.html">node</a> 의 파생클래스는 <code>accept()</code>라는 virtual 함수를 override 해야 하는데, 이 과정을 쉽게 하기 위해서 <b>VISIT 매크로</b>를 사용합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
-<div class="line">class _nout slot: public node {</div>
-<div class="line">    BY(CLASS(slot, node), VISIT())  // &lt;--- VISIT 매크로</div>
+<div class="line">class _nout pack: public node {</div>
+<div class="line">    BY(CLASS(pack, node), VISIT())  // &lt;--- VISIT 매크로</div>
 <div class="line"> </div>
 <div class="line">public:</div>
 </div><!-- fragment --><p>만약 <a class="el" href="classby_1_1node.html">node</a> 파생클래스 임에도 <code>accept()</code>를 override 하지 않았다면, <code>onTraverse(node&amp;)</code>가 대신 사용되며, <code>subs()</code>를 호출해서 자식 node 를 순회하도록 기본동작을 수행합니다.</p>
@@ -1483,7 +1483,7 @@ graphVisitor 클래스 - AST 로깅</h2>
 <hr  />
 <h2><a class="anchor" id="autotoc_md422"></a>
 parser 클래스 - 파싱의 진입점</h2>
-<p><code>parser</code>는 byeol 파싱 컴포넌트의 진입점 역할을 하며 <code>worker</code>를 상속합니다. <code>work()</code>을 통해서 파싱된 결과가 <code>slot</code>으로 반환됩니다.</p>
+<p><code>parser</code>는 byeol 파싱 컴포넌트의 진입점 역할을 하며 <code>worker</code>를 상속합니다. <code>work()</code>을 통해서 파싱된 결과가 <code>pack</code>으로 반환됩니다.</p>
 <p><b>Scanner - Bison - Parser 구조</b></p>
 <p>Flex와 Bison을 사용하고 있으며 flex는 <code>lowscanner</code>로, bison은 <code>lowparser</code>로 각각 명명합니다. 이 low level인 scanner, <a class="el" href="classby_1_1parser.html">parser</a> 는 <a class="el" href="classby_1_1parser.html">parser</a> 컴포넌트 안에만 존재하는 것으로 외부에서는 일절 노출되지 않습니다.</p>
 <p><code>parser::work()</code>가 실행되면 다음과 같은 흐름으로 동작합니다:</p>
@@ -1668,7 +1668,7 @@ starter 클래스 - AST 실행</h1>
 <div class="line">// 1. interpreter로 파싱 및 검증</div>
 <div class="line">errReport report;</div>
 <div class="line">interpreter ip;</div>
-<div class="line">ip.setTask(*new slot(manifest(&quot;myPack&quot;)))</div>
+<div class="line">ip.setTask(*new pack(manifest(&quot;myPack&quot;)))</div>
 <div class="line">  .setReport(report)</div>
 <div class="line">  .getParser().addSupply(*new bufSupply(std::string(code)));</div>
 <div class="line">ip.work();  // 파싱 및 검증 수행</div>
