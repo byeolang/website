@@ -161,9 +161,9 @@ var ae_architecture_overview =
       ] ],
       [ "패키지 시스템", "ak-architecture-core.html#autotoc_md394", [
         [ "manifest 클래스 - Pack 메타데이터", "ak-architecture-core.html#autotoc_md396", null ],
-        [ "slot 클래스 - Pack의 결과물", "ak-architecture-core.html#autotoc_md398", null ],
-        [ "autoslot 클래스 - Lazy Pack 로딩", "ak-architecture-core.html#autotoc_md400", null ],
-        [ "slotLoader 클래스 - Pack 로더", "ak-architecture-core.html#autotoc_md405", null ],
+        [ "pack 클래스 - Pack의 결과물", "ak-architecture-core.html#autotoc_md398", null ],
+        [ "autopack 클래스 - Lazy Pack 로딩", "ak-architecture-core.html#autotoc_md400", null ],
+        [ "packLoader 클래스 - Pack 로더", "ak-architecture-core.html#autotoc_md405", null ],
         [ "packLoading 클래스 - Pack 로딩 추상 클래스", "ak-architecture-core.html#autotoc_md408", null ],
         [ "cppPackLoading 클래스 - C++ Pack 로더", "ak-architecture-core.html#autotoc_md410", null ]
       ] ],

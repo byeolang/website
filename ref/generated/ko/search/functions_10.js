@@ -2,7 +2,7 @@ var searchData=
 [
   ['set_0',['set',['../classby_1_1tres.html#affb6a96debdbc688199c364c7128f558',1,'by::tres']]],
   ['setas_1',['setAs',['../classby_1_1as_expr.html#a46a4d64cd8682cd05c525eba7bc0e5b4',1,'by::asExpr']]],
-  ['setbaseslots_2',['setBaseSlots',['../classby_1_1slot_loader.html#ad6c4b8e9f9b4289fc87face1d6d12aeb',1,'by::slotLoader']]],
+  ['setbasepacks_2',['setBasePacks',['../classby_1_1pack_loader.html#a9636c8af5f76ad090db8fa66a540821a',1,'by::packLoader']]],
   ['setenable_3',['setEnable',['../classby_1_1enables_zone.html#add08945d619d727e02841317dcae635f',1,'by::enablesZone::setEnable(nbool newVal)'],['../classby_1_1enables_zone.html#a94814a86e092ebf55a740d0647ca7486',1,'by::enablesZone::setEnable(const std::string &amp;streamName, nbool newVal)']]],
   ['seterr_4',['setErr',['../classby_1_1tres.html#a8563464e98afb922c8c0febf6e0cf61a',1,'by::tres']]],
   ['seteval_5',['setEval',['../classby_1_1block_expr.html#a4d4c073d78096b2ad8a336198d93ffc2',1,'by::blockExpr']]],

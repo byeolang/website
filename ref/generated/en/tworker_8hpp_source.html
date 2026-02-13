@@ -177,58 +177,59 @@ $(function(){initNavTree('tworker_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_class" href="classby_1_1tworker.html">tworker</a>();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; getReport();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; getReport() <span class="keyword">const</span> BY_CONST_FUNC(getReport())</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        me&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">setReport</a>(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        me&amp; setFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">newFlag</a>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        me&amp; addFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_class" href="classby_1_1flag.html">flag</a>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        me&amp; delFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> clear);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> isFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_class" href="classby_1_1flag.html">flag</a>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> getFlag() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        me&amp; setTask(<span class="keyword">const</span> T&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">root</a>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        me&amp; setTask(<span class="keyword">const</span> T* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it, setTask(*it), *<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        T* getTask();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">const</span> T* getTask() <span class="keyword">const</span> BY_CONST_FUNC(getTask())</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> rel();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">R</a> work();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1area.html">area</a>&amp; getArea() <span class="keyword">const</span> BY_CONST_FUNC(_getArea())</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">isOk</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classby_1_1tworker.html#a396e67fa4786304f237c58b77591831c">  111</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1tworker.html#a396e67fa4786304f237c58b77591831c">_prepare</a>();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">void</span> _report(<a class="code hl_class" href="classby_1_1base_err.html">baseErr</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classby_1_1tworker.html#abc96611d71df2f8f10923a985362944a">  120</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1tworker.html#abc96611d71df2f8f10923a985362944a">_onEndWork</a>();</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">R</a> _onWork() = 0;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_struct" href="structby_1_1area.html">area</a>&amp; _getArea();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordtype">void</span> _onEndErrReport(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordtype">void</span> _rel();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;errReport&gt;</a> _rpt;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_struct" href="structby_1_1area.html">area</a> _area;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;T&gt;</a> _task;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> _logFlag;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    };</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_class" href="classby_1_1tworker.html">tworker</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; getReport();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">const</span> <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; getReport() <span class="keyword">const</span> BY_CONST_FUNC(getReport())</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        me&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">setReport</a>(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        me&amp; setFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">newFlag</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        me&amp; addFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_class" href="classby_1_1flag.html">flag</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        me&amp; delFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> clear);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> isFlag(<a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> <a class="code hl_class" href="classby_1_1flag.html">flag</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> getFlag() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        me&amp; setTask(<span class="keyword">const</span> T&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">root</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        me&amp; setTask(<span class="keyword">const</span> T* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it, setTask(*it), *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        T* getTask();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">const</span> T* getTask() <span class="keyword">const</span> BY_CONST_FUNC(getTask())</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> rel();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">R</a> work();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1area.html">area</a>&amp; getArea() <span class="keyword">const</span> BY_CONST_FUNC(_getArea())</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">isOk</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classby_1_1tworker.html#a396e67fa4786304f237c58b77591831c">  112</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1tworker.html#a396e67fa4786304f237c58b77591831c">_prepare</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">void</span> _report(<a class="code hl_class" href="classby_1_1base_err.html">baseErr</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">e</a>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classby_1_1tworker.html#abc96611d71df2f8f10923a985362944a">  121</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1tworker.html#abc96611d71df2f8f10923a985362944a">_onEndWork</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">R</a> _onWork() = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_struct" href="structby_1_1area.html">area</a>&amp; _getArea();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordtype">void</span> _onEndErrReport(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">void</span> _rel();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;errReport&gt;</a> _rpt;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_struct" href="structby_1_1area.html">area</a> _area;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;T&gt;</a> _task;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nint</a> _logFlag;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    };</div>
 </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>} <span class="comment">// namespace by</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="aclassby_1_1base_err_html"><div class="ttname"><a href="classby_1_1base_err.html">by::baseErr</a></div><div class="ttdoc">Base class for error hierarchy.</div><div class="ttdef"><b>Definition</b> baseErr.hpp:48</div></div>
 <div class="ttc" id="aclassby_1_1clonable_html"><div class="ttname"><a href="classby_1_1clonable.html">by::clonable</a></div><div class="ttdoc">Interface for objects that can be cloned.</div><div class="ttdef"><b>Definition</b> clonable.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1err_report_html"><div class="ttname"><a href="classby_1_1err_report.html">by::errReport</a></div><div class="ttdoc">Error report collector.</div><div class="ttdef"><b>Definition</b> errReport.hpp:24</div></div>
-<div class="ttc" id="aclassby_1_1flag_html"><div class="ttname"><a href="classby_1_1flag.html">by::flag</a></div><div class="ttdoc">Base class for command-line flag handling.</div><div class="ttdef"><b>Definition</b> flag.hpp:60</div></div>
+<div class="ttc" id="aclassby_1_1flag_html"><div class="ttname"><a href="classby_1_1flag.html">by::flag</a></div><div class="ttdoc">Base class for command-line flag handling.</div><div class="ttdef"><b>Definition</b> flag.hpp:58</div></div>
 <div class="ttc" id="aclassby_1_1tworker_html"><div class="ttname"><a href="classby_1_1tworker.html">by::tworker</a></div><div class="ttdoc">Base worker template for processing tasks.</div><div class="ttdef"><b>Definition</b> tworker.hpp:58</div></div>
 <div class="ttc" id="aclassby_1_1tworker_html_a396e67fa4786304f237c58b77591831c"><div class="ttname"><a href="classby_1_1tworker.html#a396e67fa4786304f237c58b77591831c">by::tworker::_prepare</a></div><div class="ttdeci">virtual void _prepare()</div><div class="ttdoc">Protected virtual method for preparation before starting the work.</div></div>
 <div class="ttc" id="aclassby_1_1tworker_html_abc96611d71df2f8f10923a985362944a"><div class="ttname"><a href="classby_1_1tworker.html#abc96611d71df2f8f10923a985362944a">by::tworker::_onEndWork</a></div><div class="ttdeci">virtual void _onEndWork()</div><div class="ttdoc">Protected virtual method called after the work is completed.</div></div>

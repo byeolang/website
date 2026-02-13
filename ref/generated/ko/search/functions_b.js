@@ -5,5 +5,6 @@ var searchData=
   ['makecommonfunc_2',['makeCommonFunc',['../classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2',1,'by::exprMaker']]],
   ['makeexpandfunc_3',['makeExpandFunc',['../classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4',1,'by::exprMaker']]],
   ['makeneworigin_4',['makeNewOrigin',['../classby_1_1def_var_expr.html#ad5d7b8842089b134993f05d0fe20497e',1,'by::defVarExpr']]],
-  ['mov_5',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]]
+  ['makesuppliesfrom_5',['makeSuppliesFrom',['../classby_1_1src_supply.html#aa47db0eb46f6569fa960b7c53d572f10',1,'by::srcSupply']]],
+  ['mov_6',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]]
 ];

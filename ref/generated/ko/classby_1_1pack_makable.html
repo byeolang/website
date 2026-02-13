@@ -131,28 +131,32 @@ by::packMakable에 대한 상속 다이어그램 : </div>
  <div class="center">
   <img src="classby_1_1pack_makable.png" usemap="#by::packMakable_map" alt=""/>
   <map id="by::packMakable_map" name="by::packMakable_map">
-<area href="classby_1_1autoslot.html" title="Automatic pack loading slot" alt="by::autoslot" shape="rect" coords="0,56,129,80"/>
-<area href="classby_1_1pack_loading.html" title="Base class for pack loading strategies" alt="by::packLoading" shape="rect" coords="139,56,268,80"/>
-<area href="classby_1_1trust_pack_loading.html" title="Trusted pack loading implementation" alt="by::trustPackLoading" shape="rect" coords="139,112,268,136"/>
-<area href="classby_1_1cpp_pack_loading.html" title="C++ native pack loading implementation" alt="by::cppPackLoading" shape="rect" coords="139,168,268,192"/>
+<area href="classby_1_1autopack.html" title="Automatic pack loading pack" alt="by::autopack" shape="rect" coords="0,56,136,80"/>
+<area href="classby_1_1pack_loading.html" title="Base class for pack loading strategies" alt="by::packLoading" shape="rect" coords="146,56,282,80"/>
+<area href="classby_1_1trust_pack_loading.html" title="Trusted pack loading implementation" alt="by::trustPackLoading" shape="rect" coords="146,112,282,136"/>
+<area href="classby_1_1byeol_pack_loading.html" title="Byeol script pack loading implementation" alt="by::byeolPackLoading" shape="rect" coords="73,168,209,192"/>
+<area href="classby_1_1cpp_pack_loading.html" title="C++ native pack loading implementation" alt="by::cppPackLoading" shape="rect" coords="219,168,355,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a2e57404bf09a1bf61c12459358ae7b6a" id="r_a2e57404bf09a1bf61c12459358ae7b6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1tnarr.html">srcs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e57404bf09a1bf61c12459358ae7b6a">parse</a> (<a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt, <a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">tray</a>)=0</td></tr>
-<tr class="memdesc:a2e57404bf09a1bf61c12459358ae7b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for parsing pack content into source representations.  <br /></td></tr>
-<tr class="separator:a2e57404bf09a1bf61c12459358ae7b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b59ccf6bbe04498eb624bcdd51dca57" id="r_a6b59ccf6bbe04498eb624bcdd51dca57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b59ccf6bbe04498eb624bcdd51dca57">verify</a> (<a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt, <a class="el" href="classby_1_1obj.html">obj</a> &amp;<a class="el" href="structby_1_1no_wrap.html">pak</a>)=0</td></tr>
-<tr class="memdesc:a6b59ccf6bbe04498eb624bcdd51dca57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for verifying the parsed pack content.  <br /></td></tr>
-<tr class="separator:a6b59ccf6bbe04498eb624bcdd51dca57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5db4ff78a663b13d18b727236fa63ea" id="r_af5db4ff78a663b13d18b727236fa63ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5db4ff78a663b13d18b727236fa63ea">parse</a> (<a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt, <a class="el" href="classby_1_1pack.html">pack</a> &amp;<a class="el" href="structby_1_1no_wrap.html">pak</a>)=0</td></tr>
+<tr class="memdesc:af5db4ff78a663b13d18b727236fa63ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for parsing pack content into source representations.  <br /></td></tr>
+<tr class="separator:af5db4ff78a663b13d18b727236fa63ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a4d952e826f438bff3c6e3fc388c4c" id="r_a35a4d952e826f438bff3c6e3fc388c4c"><td class="memItemLeft" align="right" valign="top"><a id="a35a4d952e826f438bff3c6e3fc388c4c" name="a35a4d952e826f438bff3c6e3fc388c4c"></a>
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>expand</b> (<a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt, <a class="el" href="classby_1_1pack.html">pack</a> &amp;<a class="el" href="structby_1_1no_wrap.html">pak</a>)=0</td></tr>
+<tr class="separator:a35a4d952e826f438bff3c6e3fc388c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e55fdf3ae0a20b8dda6fc7f1231fd23" id="r_a3e55fdf3ae0a20b8dda6fc7f1231fd23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e55fdf3ae0a20b8dda6fc7f1231fd23">verify</a> (<a class="el" href="classby_1_1err_report.html">errReport</a> &amp;rpt, <a class="el" href="classby_1_1pack.html">pack</a> &amp;<a class="el" href="structby_1_1no_wrap.html">pak</a>)=0</td></tr>
+<tr class="memdesc:a3e55fdf3ae0a20b8dda6fc7f1231fd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for verifying the parsed pack content.  <br /></td></tr>
+<tr class="separator:a3e55fdf3ae0a20b8dda6fc7f1231fd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>Interface for pack creation and verification </p>
 <p>Provides pure virtual methods for parsing and verifying pack content. Implemented by different pack loading strategies to handle pack creation. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
-<a id="a2e57404bf09a1bf61c12459358ae7b6a" name="a2e57404bf09a1bf61c12459358ae7b6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e57404bf09a1bf61c12459358ae7b6a">&#9670;&#160;</a></span>parse()</h2>
+<a id="af5db4ff78a663b13d18b727236fa63ea" name="af5db4ff78a663b13d18b727236fa63ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5db4ff78a663b13d18b727236fa63ea">&#9670;&#160;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,14 +165,14 @@ Public 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="classby_1_1tstr.html">tstr</a>&lt; <a class="el" href="classby_1_1tnarr.html">srcs</a> &gt; by::packMakable::parse </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> by::packMakable::parse </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classby_1_1err_report.html">errReport</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rpt</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classby_1_1tbicontainable.html">bicontainable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>tray</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1pack.html">pack</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pak</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -186,14 +190,14 @@ Public 멤버 함수</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>반환값</dt><dd>A tstr to a collection of source representations (<code>srcs</code>) on success, or null on failure. </dd></dl>
+<dl class="section return"><dt>반환값</dt><dd>true if success. </dd></dl>
 
-<p><a class="el" href="classby_1_1cpp_pack_loading.html#af6eade51ac36c938f8fc6039c3954356">by::cppPackLoading</a>에서 구현되었습니다.</p>
+<p><a class="el" href="classby_1_1byeol_pack_loading.html#a8abebbb40a8b062c8c0bd03abe0791ff">by::byeolPackLoading</a>, <a class="el" href="classby_1_1cpp_pack_loading.html#a3c7ebf299ff1c96d457dab47e6556180">by::cppPackLoading</a>에서 구현되었습니다.</p>
 
 </div>
 </div>
-<a id="a6b59ccf6bbe04498eb624bcdd51dca57" name="a6b59ccf6bbe04498eb624bcdd51dca57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b59ccf6bbe04498eb624bcdd51dca57">&#9670;&#160;</a></span>verify()</h2>
+<a id="a3e55fdf3ae0a20b8dda6fc7f1231fd23" name="a3e55fdf3ae0a20b8dda6fc7f1231fd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e55fdf3ae0a20b8dda6fc7f1231fd23">&#9670;&#160;</a></span>verify()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +213,7 @@ Public 멤버 함수</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classby_1_1obj.html">obj</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pak</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1pack.html">pack</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pak</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -229,7 +233,7 @@ Public 멤버 함수</h2></td></tr>
 </dl>
 <dl class="section return"><dt>반환값</dt><dd>true if the pack content is successfully verified, false otherwise. </dd></dl>
 
-<p><a class="el" href="classby_1_1trust_pack_loading.html#a51a37211e76bc98e254c59010b1b56e8">by::trustPackLoading</a>에서 구현되었습니다.</p>
+<p><a class="el" href="classby_1_1trust_pack_loading.html#a2a6b3ca4878f7393c44d60cdd83c33fc">by::trustPackLoading</a>에서 구현되었습니다.</p>
 
 </div>
 </div>

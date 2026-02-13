@@ -20,14 +20,13 @@ var searchData=
   ['getmehaving_17',['getMeHaving',['../classby_1_1frame.html#aa140a328a21c758697027943ef61a1fb',1,'by::frame']]],
   ['getname_18',['getName',['../classby_1_1err_lv.html#a4a5b1b8899b7e0f598ff41209bb8297b',1,'by::errLv']]],
   ['getopenstrtoken_19',['getOpenStrToken',['../classby_1_1parser.html#a06f0c7d7638a086e4ff3afa82b6759d7',1,'by::parser']]],
-  ['getpack_20',['getPack',['../classby_1_1autoslot.html#ab836f025ea6a7d158e48cf8c6e89b2d9',1,'by::autoslot::getPack()'],['../classby_1_1slot.html#a1f2f1acd2eec627d532caed73be7e11c',1,'by::slot::getPack()']]],
+  ['getpacks_20',['getPacks',['../classby_1_1thread.html#ac7edfdffc7393049809919c64bb58ef9',1,'by::thread']]],
   ['getparams_21',['getParams',['../classby_1_1base_func.html#a0831818b9fea50494e5fff9426f96b2e',1,'by::baseFunc::getParams()'],['../classby_1_1closure.html#ae976af6a6f39224beb0feffa60cb06a1',1,'by::closure::getParams()'],['../classby_1_1ntype.html#ad508cc4b9a7c1e972fd8938cc40bddaf',1,'by::ntype::getParams()']]],
   ['getprev_22',['getPrev',['../classby_1_1tnchain.html#a25e5f5c66561127c33fa377bfdcecea2',1,'by::tnchain']]],
   ['getret_23',['getRet',['../classby_1_1base_func.html#a28ad7f06928e745df799b7746983f4ee',1,'by::baseFunc::getRet()'],['../classby_1_1closure.html#af63bec6dafb6dc2a51747a894a1c2239',1,'by::closure::getRet()']]],
-  ['getslots_24',['getSlots',['../classby_1_1thread.html#a6299b46af037f269f8c75c6c5c431e59',1,'by::thread']]],
-  ['getstatic_25',['getStatic',['../classby_1_1type.html#a03f76be2976586efd88e5f13b22474a5',1,'by::type']]],
-  ['getstrongcnt_26',['getStrongCnt',['../classby_1_1life.html#a66ba365b6d156e251dfa34d98386964d',1,'by::life']]],
-  ['getsubpack_27',['getSubPack',['../classby_1_1base_obj.html#abe28469d0e87ccc15b6de4c55ad42462',1,'by::baseObj::getSubPack()'],['../classby_1_1origin.html#a3c7782be141d2481dedff6159a644b4f',1,'by::origin::getSubPack()'],['../classby_1_1parser.html#a6db028bb170fc622e012ff80c08b4558',1,'by::parser::getSubPack()']]],
-  ['gettail_28',['getTail',['../classby_1_1tnchain.html#a672f0d13ecc86f566e71d5de22383462',1,'by::tnchain']]],
-  ['getto_29',['getTo',['../classby_1_1def_var_expr.html#a02ed030a5baec4f83437bf95abed9561',1,'by::defVarExpr::getTo()'],['../classby_1_1def_var_expr.html#a79583b43b6ea945cbe967e7e54719e7a',1,'by::defVarExpr::getTo() const BY_CONST_FUNC(getTo()) nbool isToFrame() const']]]
+  ['getstatic_24',['getStatic',['../classby_1_1type.html#a03f76be2976586efd88e5f13b22474a5',1,'by::type']]],
+  ['getstrongcnt_25',['getStrongCnt',['../classby_1_1life.html#a66ba365b6d156e251dfa34d98386964d',1,'by::life']]],
+  ['getsubpack_26',['getSubPack',['../classby_1_1base_obj.html#abe28469d0e87ccc15b6de4c55ad42462',1,'by::baseObj::getSubPack()'],['../classby_1_1origin.html#a3c7782be141d2481dedff6159a644b4f',1,'by::origin::getSubPack()'],['../classby_1_1parser.html#a6db028bb170fc622e012ff80c08b4558',1,'by::parser::getSubPack()']]],
+  ['gettail_27',['getTail',['../classby_1_1tnchain.html#a672f0d13ecc86f566e71d5de22383462',1,'by::tnchain']]],
+  ['getto_28',['getTo',['../classby_1_1def_var_expr.html#a02ed030a5baec4f83437bf95abed9561',1,'by::defVarExpr::getTo()'],['../classby_1_1def_var_expr.html#a79583b43b6ea945cbe967e7e54719e7a',1,'by::defVarExpr::getTo() const BY_CONST_FUNC(getTo()) nbool isToFrame() const']]]
 ];
