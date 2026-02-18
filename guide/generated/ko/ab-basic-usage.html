@@ -1,0 +1,186 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>byeol: 기본 사용법</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.11/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="byeol.css" rel="stylesheet" type="text/css"/>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<!-- extensions: -->
+<!--    fragement copy to clipboard: -->
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!--    paragraph linking: -->
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<!--    interactive toc: -->
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+<!-- end of extension -->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('ab-basic-usage.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">기본 사용법</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2guide_2ko_2ab-basic-usage"></a> byeol은 기본적으로 CLI 환경으로 제공됩니다. 터미널에서 실행해야 하죠. <code>byeol -h</code> 명령을 통해 사용 가능한 모든 옵션을 확인할 수 있습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md12"></a>
+filePath</h1>
+<p>기본적으로 <code>.byeol</code> 파일에 대한 경로를 입력해서 해당 코드를 실행할 수 있습니다.</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol your/path/test.byeol</div>
+</div><!-- fragment --><p>혹은 폴더 경로를 지정하면 알아서 하위 폴더를 싹 뒤져서 <code>.byeol</code> 파일을 모두 실행합니다. </p><div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol your/path</div>
+</div><!-- fragment --><p>wildcard도 지원하니 적극적으로 사용해주세요.<br  />
+ 만약 모든 하위폴더가 아니라 세세하게 폴더를 제어해서 소스코드를 실행하고 싶다면, 본격적으로 manifest를 선언해서 당신 만의 <code>pack</code> 을 만들어야 합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md14"></a>
+스크립트 직접 실행</h1>
+<p>&lsquo;-s &rsquo;&lt;byeol 코드&gt;'<code>를 사용하면</code>.byeol` 파일 필요 없이 cli 환경에서 직접 코드를 입력해서 실행할 수 있습니다.</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol -s &#39;main() void&lt;br/&gt;</div>
+<div class="line">    print(&quot;hello&quot;)&lt;br/&gt;</div>
+<div class="line">&#39;</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md16"></a>
+상세 로그 출력</h1>
+<p><code>-v</code> 옵션을 주면 파싱/검증 과정에서 발생하는 상세 로그를 확인할 수 있습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md18"></a>
+AST 구조 출력</h1>
+<p><code>-S</code> 혹은 <code>--show-structure</code> 옵션을 사용하면 파싱 후의 AST 구조를 CUI로 표현합니다. </p><div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol -S -s &#39;main() void</div>
+<div class="line">    print(&quot;hello&quot;)</div>
+<div class="line">&#39;</div>
+<div class="line">   ┗━[0] #root slot@6b00</div>
+<div class="line">      ┣━[0] @2770 main(?) ?</div>
+<div class="line">      ┃  ┗━[0] codes blockExpr@e290</div>
+<div class="line">      ┃     ┗━[0]  runExpr@6d90</div>
+<div class="line">      ┃        ┣━[0] subject getExpr@0010 = ?.print(?)</div>
+<div class="line">      ┃        ┃  ┗━[0] subArg str = &quot;hello&quot;</div>
+<div class="line">      ┣━[1] @6c68 @ctor(?) ?</div>
+<div class="line">      ┗━[2] @6dd0 @ctor(?) ?</div>
+<div class="line">   ┗━[0] #root slot@6b00</div>
+<div class="line">      ┣━[0] @2770 main() void</div>
+<div class="line">      ┃  ┗━[0] codes blockExpr@e290</div>
+<div class="line">      ┃     ┗━[0]  runExpr@6d90 = frame.print(str)</div>
+<div class="line">      ┃        ┣━[0] subject getExpr@0010 = frame.print(str)</div>
+<div class="line">      ┃        ┃  ┣━[0] me frame@c290</div>
+<div class="line">      ┃        ┃  ┗━[1] subArg str = &quot;hello&quot;</div>
+<div class="line">      ┣━[1] @6c68 @ctor() {default}</div>
+<div class="line">      ┗━[2] @6dd0 @ctor(rhs {default}) {default}</div>
+<div class="line">hello</div>
+</div><!-- fragment --><p> 위 로그의 각 값에 대한 상세 정보는 <a href="https://byeol.io/ref" target="_blank">레퍼런스 가이드</a>에서 <code>아키텍쳐와 설계</code>를 참고하세요.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md20"></a>
+버전 표기</h1>
+<p><code>--version</code> 옵션을 사용하면 현재 byeol 바이너리의 버전과 빌드 정보가 표시됩니다. </p><div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">$ byeol --version</div>
+<div class="line">🌟 &#39;byeol&#39; Mana Update 0.2.10</div>
+<div class="line">Built on Nov 04 2025 (build 1378, git 5ae19ea79, Release, 64-bit)</div>
+<div class="line">© 2010-2025 Taehun Lee(kniz) and contributors. All rights reserved.</div>
+</div><!-- fragment --><p> 위 예시처럼 버전(0.2.10), 빌드 날짜(Nov 04 2025), 빌드 카운트(1378), git commitId(5ae19ea79), 바이너리 타입(Debug or Release) 등이 표시됩니다.</p>
+<hr  />
+<p> <b>다음 문서</b>: <a class="el" href="ac-design-philosophy.html">디자인 철학</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+</body>
+</html>
