@@ -94,7 +94,7 @@ function getDefaultUrl() {
   else if (ua.includes("Ubuntu"))
     return "https://github.com/byeolang/byeol/releases/latest/download/byeol-ubuntu-x64.deb";
   else if (ua.includes("Mac OS X"))
-    return "https://github.com/byeolang/byeol/releases/latest/download/byeol-macos-arm64.zip";
+    return "https://github.com/byeolang/byeol/releases/latest/download/byeol-macos-arm64.pkg";
   else
     return null;
 }
