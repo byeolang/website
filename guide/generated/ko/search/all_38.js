@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['오버라이딩_0',['오버라이딩',['../ad-language-spec.html#autotoc_md124',1,'']]],
-  ['오버로딩_1',['오버로딩',['../ad-language-spec.html#autotoc_md84',1,'']]]
+  ['오버라이딩_0',['오버라이딩',['../ac-language-spec.html#autotoc_md111',1,'']]],
+  ['오버로딩_1',['오버로딩',['../ac-language-spec.html#autotoc_md71',1,'']]]
 ];

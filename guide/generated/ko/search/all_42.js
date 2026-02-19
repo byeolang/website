@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['주석_0',['주석',['../ad-language-spec.html#autotoc_md40',1,'']]]
+  ['주석_0',['주석',['../ac-language-spec.html#autotoc_md27',1,'']]]
 ];

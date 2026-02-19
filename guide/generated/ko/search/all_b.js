@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['safe_20navigation_0',['safe-navigation',['../ad-language-spec.html#autotoc_md140',1,'']]],
-  ['scope_1',['scope',['../ad-language-spec.html#autotoc_md82',1,'']]],
-  ['special_20functions_2',['Special Functions',['../ad-language-spec.html#autotoc_md78',1,'']]],
-  ['static으로_20활용_3',['static으로 활용',['../ad-language-spec.html#autotoc_md130',1,'']]],
-  ['stringtemplate_4',['StringTemplate',['../ad-language-spec.html#autotoc_md46',1,'']]]
+  ['safe_20navigation_0',['safe-navigation',['../ac-language-spec.html#autotoc_md127',1,'']]],
+  ['scope_1',['scope',['../ac-language-spec.html#autotoc_md69',1,'']]],
+  ['special_20functions_2',['Special Functions',['../ac-language-spec.html#autotoc_md65',1,'']]],
+  ['static으로_20활용_3',['static으로 활용',['../ac-language-spec.html#autotoc_md117',1,'']]],
+  ['stringtemplate_4',['StringTemplate',['../ac-language-spec.html#autotoc_md33',1,'']]]
 ];

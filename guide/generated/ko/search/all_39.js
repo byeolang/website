@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['우리가_20꿈꾸는_20언어_0',['마무리: 우리가 꿈꾸는 언어',['../ab-design-philosophy.html#autotoc_md34',1,'']]],
-  ['우리는_20typedef가_20필요_20없습니다_1',['우리는 typedef가 필요 없습니다.',['../ad-language-spec.html#autotoc_md112',1,'']]]
+  ['우리가_20꿈꾸는_20언어_0',['마무리: 우리가 꿈꾸는 언어',['../ad-design-philosophy.html#autotoc_md154',1,'']]],
+  ['우리는_20typedef가_20필요_20없습니다_1',['우리는 typedef가 필요 없습니다.',['../ac-language-spec.html#autotoc_md99',1,'']]]
 ];
