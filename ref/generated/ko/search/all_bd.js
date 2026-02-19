@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['한_20가지만_20테스트_0',['한 가지만 테스트',['../am-testing-guide.html#autotoc_md502',1,'']]],
-  ['한_20줄_20허용_1',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md122',1,'']]]
+  ['한_20가지만_20테스트_0',['한 가지만 테스트',['../am-testing-guide.html#autotoc_md531',1,'']]],
+  ['한_20줄_20허용_1',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md151',1,'']]]
 ];

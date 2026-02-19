@@ -1,7 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"helper_2dlib_8hpp.html":[10,0,3,3,2],
-"helper_2dlib_8hpp_source.html":[10,0,3,3,2],
 "helper_8hpp.html":[10,0,3,9],
 "helper_8hpp_source.html":[10,0,3,9],
 "id_8hpp.html":[10,0,4,2,1],
@@ -26,8 +24,8 @@ var NAVTREEINDEX5 =
 "indep_2macro_2when_8hpp_source.html":[10,0,3,4,18],
 "indep_2macro_8hpp.html":[10,0,3,10],
 "indep_2macro_8hpp_source.html":[10,0,3,10],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "initiator_8hpp.html":[10,0,3,4,8],
 "initiator_8hpp_source.html":[10,0,3,4,8],
 "input_func_8hpp.html":[10,0,1,2,2,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX5 =
 "stela_token_scanable_8hpp.html":[10,0,6,2,4],
 "stela_token_scanable_8hpp_source.html":[10,0,6,2,4],
 "str_tactic_8hpp.html":[10,0,4,0,2],
-"str_tactic_8hpp_source.html":[10,0,4,0,2]
+"str_tactic_8hpp_source.html":[10,0,4,0,2],
+"stream_2stream_8hpp.html":[10,0,0,2,2],
+"stream_2stream_8hpp_source.html":[10,0,0,2,2]
 };

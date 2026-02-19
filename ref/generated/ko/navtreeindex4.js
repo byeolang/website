@@ -1,7 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"convergence_2convergence_8hpp.html":[10,0,1,8,2,0,0,1],
-"convergence_2convergence_8hpp_source.html":[10,0,1,8,2,0,0,1],
 "convergence_8hpp.html":[10,0,1,8,2,0,1],
 "convergence_8hpp_source.html":[10,0,1,8,2,0,1],
 "core_2ast_8hpp.html":[10,0,1,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX4 =
 "group__stela.html":[8,4],
 "group__sys.html":[8,6],
 "help_flag_8hpp.html":[10,0,2,1,0,3],
-"help_flag_8hpp_source.html":[10,0,2,1,0,3]
+"help_flag_8hpp_source.html":[10,0,2,1,0,3],
+"helper_2dlib_8hpp.html":[10,0,3,3,2],
+"helper_2dlib_8hpp_source.html":[10,0,3,3,2]
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['같은_20줄에_20배치_0',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md118',1,'']]]
+  ['같은_20줄에_20배치_0',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md147',1,'']]]
 ];
