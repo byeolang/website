@@ -26,35 +26,37 @@ var NAVTREE =
 [
   [ "byeol", "index.html", [
     [ "안녕하세요", "index.html", null ],
-    [ "설치 방법", "aa-how-to-install.html", [
-      [ "다운로드", "aa-how-to-install.html#autotoc_md1", null ],
-      [ "Windows", "aa-how-to-install.html#autotoc_md3", null ],
-      [ "ubuntu", "aa-how-to-install.html#autotoc_md5", null ],
-      [ "Mac OS", "aa-how-to-install.html#autotoc_md7", null ],
-      [ "WASM", "aa-how-to-install.html#autotoc_md9", null ]
-    ] ],
     [ "기본 사용법", "ab-basic-usage.html", [
-      [ "filePath", "ab-basic-usage.html#autotoc_md12", null ],
-      [ "스크립트 직접 실행", "ab-basic-usage.html#autotoc_md14", null ],
-      [ "상세 로그 출력", "ab-basic-usage.html#autotoc_md16", null ],
-      [ "AST 구조 출력", "ab-basic-usage.html#autotoc_md18", null ],
-      [ "버전 표기", "ab-basic-usage.html#autotoc_md20", null ]
+      [ "설치 방법", "ab-basic-usage.html#autotoc_md0", [
+        [ "다운로드", "ab-basic-usage.html#autotoc_md2", null ],
+        [ "Windows", "ab-basic-usage.html#autotoc_md4", null ],
+        [ "ubuntu", "ab-basic-usage.html#autotoc_md6", null ],
+        [ "Mac OS", "ab-basic-usage.html#autotoc_md8", null ],
+        [ "WASM", "ab-basic-usage.html#autotoc_md10", null ]
+      ] ],
+      [ "프로그램 실행 방법", "ab-basic-usage.html#autotoc_md12", [
+        [ "filePath", "ab-basic-usage.html#autotoc_md13", null ],
+        [ "스크립트 직접 실행", "ab-basic-usage.html#autotoc_md15", null ],
+        [ "상세 로그 출력", "ab-basic-usage.html#autotoc_md17", null ],
+        [ "AST 구조 출력", "ab-basic-usage.html#autotoc_md19", null ],
+        [ "버전 표기", "ab-basic-usage.html#autotoc_md21", null ]
+      ] ]
     ] ],
-    [ "디자인 철학", "ac-design-philosophy.html", [
-      [ "장난감처럼 즐거운 언어", "ac-design-philosophy.html#autotoc_md23", null ],
-      [ "간결함을 위한 과감한 선택", "ac-design-philosophy.html#autotoc_md25", null ],
-      [ "일관성: 암기가 아닌 이해", "ac-design-philosophy.html#autotoc_md27", null ],
-      [ "문법의 압축과 조합", "ac-design-philosophy.html#autotoc_md29", null ],
-      [ "코드와 시각화의 결합", "ac-design-philosophy.html#autotoc_md31", null ],
-      [ "마무리: 우리가 꿈꾸는 언어", "ac-design-philosophy.html#autotoc_md33", null ]
+    [ "디자인 철학", "ab-design-philosophy.html", [
+      [ "장난감처럼 즐거운 언어", "ab-design-philosophy.html#autotoc_md24", null ],
+      [ "간결함을 위한 과감한 선택", "ab-design-philosophy.html#autotoc_md26", null ],
+      [ "일관성: 암기가 아닌 이해", "ab-design-philosophy.html#autotoc_md28", null ],
+      [ "문법의 압축과 조합", "ab-design-philosophy.html#autotoc_md30", null ],
+      [ "코드와 시각화의 결합", "ab-design-philosophy.html#autotoc_md32", null ],
+      [ "마무리: 우리가 꿈꾸는 언어", "ab-design-philosophy.html#autotoc_md34", null ]
     ] ],
-    [ "언어 배우기", "ad-how-to-code.html", "ad-how-to-code" ]
+    [ "언어 배우기", "ac-how-to-code.html", "ac-how-to-code" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"aa-how-to-install.html"
+"ab-basic-usage.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

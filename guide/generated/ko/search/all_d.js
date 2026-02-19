@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ubuntu_0',['ubuntu',['../aa-how-to-install.html#autotoc_md5',1,'']]]
+  ['ubuntu_0',['ubuntu',['../ab-basic-usage.html#autotoc_md6',1,'']]]
 ];
