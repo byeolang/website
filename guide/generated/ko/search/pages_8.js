@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['철학_0',['디자인 철학',['../ab-design-philosophy.html',1,'']]]
+  ['철학_0',['디자인 철학',['../ad-design-philosophy.html',1,'']]]
 ];
