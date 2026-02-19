@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['os_0',['Mac OS',['../aa-how-to-install.html#autotoc_md7',1,'']]]
+  ['os_0',['Mac OS',['../ab-basic-usage.html#autotoc_md8',1,'']]]
 ];

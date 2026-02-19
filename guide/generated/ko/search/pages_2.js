@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['디자인_20철학_0',['디자인 철학',['../ac-design-philosophy.html',1,'']]]
+  ['디자인_20철학_0',['디자인 철학',['../ab-design-philosophy.html',1,'']]]
 ];

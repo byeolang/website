@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['배우기_0',['언어 배우기',['../ad-how-to-code.html',1,'']]]
+  ['사용법_0',['기본 사용법',['../ab-basic-usage.html',1,'']]]
 ];

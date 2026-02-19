@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['생성자_0',['생성자',['../ae-language-spec.html#autotoc_md75',1,'']]]
+  ['생성자_0',['생성자',['../ad-language-spec.html#autotoc_md76',1,'']]]
 ];
