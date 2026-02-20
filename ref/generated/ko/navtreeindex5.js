@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"helper_8hpp.html":[10,0,3,9],
 "helper_8hpp_source.html":[10,0,3,9],
 "id_8hpp.html":[10,0,4,2,1],
 "id_8hpp_source.html":[10,0,4,2,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "str_tactic_8hpp.html":[10,0,4,0,2],
 "str_tactic_8hpp_source.html":[10,0,4,0,2],
 "stream_2stream_8hpp.html":[10,0,0,2,2],
-"stream_2stream_8hpp_source.html":[10,0,0,2,2]
+"stream_2stream_8hpp_source.html":[10,0,0,2,2],
+"stream_8hpp.html":[10,0,0,9]
 };

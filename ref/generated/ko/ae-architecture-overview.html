@@ -130,13 +130,13 @@ $(function(){initNavTree('ae-architecture-overview.html',''); initResizable(); }
 <li><a class="el" href="al-architecture-frontend.html">frontend 모듈 - CLI 인터페이스</a></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md182"></a>
+<h1><a class="anchor" id="autotoc_md180"></a>
 아키텍처 개요</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_1.png" />
 </div>
 <p>Byeol 프로젝트는 엄격한 Layered Architecture 패턴을 따릅니다. 각 계층은 하위 계층에만 의존할 수 있으며, <a class="el" href="group__indep.html">Indep</a> 모듈 위로는 플랫폼 독립성이 유지됩니다.</p>
-<h2><a class="anchor" id="autotoc_md183"></a>
+<h2><a class="anchor" id="autotoc_md181"></a>
 계층 구조</h2>
 <p>각 모듈은 하위 계층의 모듈에만 접근할 수 있습니다. 예를 들어, <a class="el" href="group__core.html">Core</a> 는 <a class="el" href="group__stela.html">Stela</a>, <a class="el" href="group__memlite.html">Memlite</a>, <a class="el" href="group__meta.html">Meta</a>, <a class="el" href="group__clog.html">Clog</a>, <a class="el" href="group__indep.html">Indep</a> 에 의존하지만, <a class="el" href="group__frontend.html">Frontend</a> 나 다른 상위 모듈에는 의존하지 않습니다.</p>
 <p>이러한 아키텍처는 플랫폼 독립성, 테스트 용이성, 명확한 의존성 관리를 제공합니다. 플랫폼 종속 코드는 <a class="el" href="group__indep.html">Indep</a> 모듈에만 격리되어 있으며, 상위 모듈들은 추상화된 인터페이스를 통해서만 접근합니다. 이는 Dependency Inversion Principle을 따르는 설계로, 다른 모듈들은 플랫폼에 관계없이 동일한 방식으로 동작합니다.</p>

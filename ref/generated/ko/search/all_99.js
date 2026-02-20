@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['직관적인_20단어_20선호_0',['간단하고 직관적인 단어 선호',['../ad-convention-rules.html#autotoc_md140',1,'']]]
+  ['지정_0',['언어 지정',['../an-document-convention.html#autotoc_md560',1,'']]]
 ];

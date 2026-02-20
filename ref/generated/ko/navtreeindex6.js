@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"stream_8hpp.html":[10,0,0,9],
 "stream_8hpp_source.html":[10,0,0,9],
 "structby_1_1_initiator.html":[8,0,19],
 "structby_1_1area.html":[8,4,2],

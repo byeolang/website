@@ -124,12 +124,12 @@ $(function(){initNavTree('aj-architecture-stela.html',''); initResizable(); });
 <img src="inline_umlgraph_14.png" />
 </div>
 <hr  />
-<h1><a class="anchor" id="autotoc_md288"></a>
+<h1><a class="anchor" id="autotoc_md286"></a>
 stela 언어의 기본 기능</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_15.png" />
 </div>
-<h2><a class="anchor" id="autotoc_md289"></a>
+<h2><a class="anchor" id="autotoc_md287"></a>
 stela 클래스</h2>
 <p><a class="el" href="classby_1_1stela.html">stela</a> 클래스는 <a class="el" href="group__stela.html">Stela</a> 모듈의 가장 기본 단위가 되는 클래스로, stela 코드를 파싱후 최종 결과를 나타냅니다. 다음의 기능을 제공합니다:</p>
 <ol type="1">
@@ -162,7 +162,7 @@ stela 클래스</h2>
 <div class="line">ASSERT_EQ(ver.asMajor(), 1);</div>
 <div class="line">ASSERT_EQ(ver.asMinor(), 0);</div>
 <div class="line">ASSERT_EQ(ver.asFix(), 8);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md290"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md288"></a>
 nulStela 클래스 - Null Object 패턴</h2>
 <p><a class="el" href="classby_1_1nul_stela.html">nulStela</a> 는 <a class="el" href="classby_1_1stela.html">stela</a> 로 자식 객체를 가져올 때 보통 이름으로 가져오는데, 해당 이름을 가진 자식 객체가 없을 경우 대신 반환됩니다.</p>
 <p><a class="el" href="classby_1_1nul_stela.html">nulStela</a> 는 <b>null object 패턴</b>을 구현한 것으로, 해당 객체에 대해 값 변환을 요청할 경우 항상 해당 타입의 기본값이 반환됩니다. <a class="el" href="classby_1_1stela.html">stela</a> 객체가 <a class="el" href="classby_1_1nul_stela.html">nulStela</a> 인지 확인하려면 <code>isExist()</code> 혹은 <code>operator bool()</code>이 false인지 확인하면 됩니다.</p>
@@ -185,11 +185,11 @@ nulStela 클래스 - Null Object 패턴</h2>
 <div class="line">// 값 변환 시도 - 기본값 반환</div>
 <div class="line">std::string str = notExist.asStr();  // &quot;&quot; (빈 문자열)</div>
 <div class="line">int val = notExist.asInt();          // 0</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md291"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md289"></a>
 valStela 클래스 - Scalar 값 표현</h2>
 <p><a class="el" href="classby_1_1val_stela.html">valStela</a> 는 <a class="el" href="classby_1_1nul_stela.html">nulStela</a> 와 달리 int, float, string 등 <b>scalar 타입</b>을 가지고 있는 <a class="el" href="classby_1_1stela.html">stela</a> 입니다. 내부적으로는 기본 문자열로 값을 가지고 있는 상태이며, <code>asInt()</code>와 같은 타입변환 요청에 따라서 적절한 타입으로 변경할 수 있습니다.</p>
 <p>만약 타입변환에 실패한다면, 예외가 발생하니 주의하세요.</p>
-<h2><a class="anchor" id="autotoc_md292"></a>
+<h2><a class="anchor" id="autotoc_md290"></a>
 verStela 클래스 - 버전 타입</h2>
 <p><a class="el" href="classby_1_1ver_stela.html">verStela</a> 는 <a class="el" href="classby_1_1val_stela.html">valStela</a> 와 비슷하게 <b>version</b>이라는 타입의 값을 가지고 있는 <a class="el" href="classby_1_1stela.html">stela</a> 입니다.</p>
 <p><b>version 타입</b></p>
@@ -219,12 +219,12 @@ verStela 클래스 - 버전 타입</h2>
 <div class="line">verStela&amp; maxVer = pkg[&quot;maxVersion&quot;].cast&lt;verStela&gt;();</div>
 <div class="line">// 1.0.0 &lt;= 2.1.5 &lt;= 3.0.0 범위 확인 가능</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md294"></a>
+<h1><a class="anchor" id="autotoc_md292"></a>
 stela 파서 구조</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_16.png" />
 </div>
-<h2><a class="anchor" id="autotoc_md295"></a>
+<h2><a class="anchor" id="autotoc_md293"></a>
 stelaParser 클래스 - 파싱 진입점</h2>
 <p><a class="el" href="classby_1_1stela_parser.html">stelaParser</a> 클래스는 stela 파싱 컴포넌트의 진입점 역할을 합니다. <code>parse()</code> 나 <code>parseFromFile()</code>을 통해서 스크립트를 지정하면 파싱된 결과가 <a class="el" href="classby_1_1stela.html">stela</a> 구조로 반환됩니다.</p>
 <p><b>byeol 파서와 유사한 구조</b></p>
@@ -234,9 +234,9 @@ stelaParser 클래스 - 파싱 진입점</h2>
 <p><a class="el" href="classby_1_1stela_parser.html#a99b018f229e9ba106315b0fcda3ae9d5">parse()</a> 가 실행되면 lowscanner를 실행시키고, lowscanner는 토큰을 뜯어서 lowparser에게 넘기고, lowparser는 받은 토큰에 대해 rule이 match 되면 그 이벤트를 다시 <a class="el" href="classby_1_1stela_parser.html">stelaParser</a> 에게 넘깁니다.</p>
 <p><a class="el" href="classby_1_1stela_parser.html">stelaParser</a> 의 <b><code>on</code>으로 시작하는 함수들</b>은 그러한 이벤트를 handling 하는 Callback 함수로, 실제로 어떻게 stela를 생성해서 AST를 구축하는지를 정의합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md297"></a>
+<h1><a class="anchor" id="autotoc_md295"></a>
 Indentation 처리</h1>
-<h2><a class="anchor" id="autotoc_md298"></a>
+<h2><a class="anchor" id="autotoc_md296"></a>
 indentation rule</h2>
 <p>stela 언어는 byeol 언어와 마찬가지로 <b>offside rule</b>을 적용하므로, indentation에 매우 민감합니다. 일반적인 언어와 달리, 개행직후로 몇개의 공백이 있는가를 count 할 수 있어야 하며, indentation이 확정되어 해당 코드라인이 어느 scope에 속한 것인지가 확정되면 이후로는 공백을 무시해야 합니다.</p>
 <p>다음 byeol 언어의 예제를 보고, 이 문제에 대해 더 생각해봅시다:</p>
@@ -263,7 +263,7 @@ indentation rule</h2>
 <p>&zwj;smartDedent[smartDedent.len() - 1] = 6 </p>
 </blockquote>
 <p>으로 개행 직후 6개의 공백이 나와야 한다는 걸 의미합니다.</p>
-<h2><a class="anchor" id="autotoc_md299"></a>
+<h2><a class="anchor" id="autotoc_md297"></a>
 tokenDispatcher</h2>
 <p>flex는 yyin 이라는 별도로 지정된 stream을 통해서 글자를 가져와 token으로 정의합니다. 파싱 도중에 문자를 추가 꽤 빈번하게 발생하며, 이때 보통은 unput()을 사용합니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -308,7 +308,7 @@ tokenDispatcher</h2>
 <div class="line">    PS.getDispatcher().add(&#39;+&#39;);</div>
 <div class="line">    return STRVAL; // 토큰을 리턴하면 다음 토큰으로 &#39;+&#39;가 반환됨</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md300"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md298"></a>
 stelaTokenScan 클래스 - 스캔 모드 전략</h2>
 <p><a class="el" href="classby_1_1stela_parser.html">stelaParser</a> 는 indentation을 정밀하게 측정하기 위해서 <b>scan mode를 동적으로 변경</b>해야 합니다. tokenScan은 그러한 스캔 모드 전략 1개를 담당하며, Strategy 패턴을 사용하여 런타임에 스캔 알고리즘을 교체할 수 있습니다.</p>
 <p><b>tokenScan의 동적 전환</b></p>
@@ -353,7 +353,7 @@ stelaTokenScan 클래스 - 스캔 모드 전략</h2>
 <div class="line"> </div>
 <div class="line">    return tok;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md301"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md299"></a>
 stelaSmartDedent 클래스 - Scope 관리</h2>
 <p>offside-rule에 의해 byeol은 개행이 있는지 여부가 매우 중요하다고 말씀드렸죠. byeol은 표현식 기반 문법을 가지고 있기 때문에 <code>for</code>나 <code>if</code> 문이 함수 인자로 오는 것도 가능해야 합니다. 이때 사용자는 간단하게 사용하기 위해 보통은 <code>:</code>을 사용하는 inline block 문법을 사용하게 되는데, 위의 3가지가 한번에 적용되기 시작하면 예외사항이 나오기 마련이죠.</p>
 <div class="fragment"><div class="line">@style: language-byeol verified</div>
@@ -375,7 +375,7 @@ stelaSmartDedent 클래스 - Scope 관리</h2>
 </div><!-- fragment --><p>함수 뒤에는 블록문이 옵니다. 블록문은 <code>&lt;표현식&gt; &lt;개행&gt;</code> 이 매치되면 구문으로 인식되고 이러한 구문들만 블록문에 들어올 수 있습니다. 1번의 경우처럼 inline block을 쓸 때도 뒤에 &lt;개행&gt;이 온다는 점은 유지되어야 합니다. 하지만 3번을 보세요. inline block 뒤에 콤마가 나오는데, 이 경우 inline block의 &lt;개행&gt;은 없습니다. 그렇다고 단순히 <code>inline block은 개행이 있을 수도 있고 없을 수도 있다</code> 라고 규칙을 정해버리면 모호한 경우가 너무 많이 생깁니다.</p>
 <p>그래서 <a class="el" href="classby_1_1stela_smart_dedent.html">stelaSmartDedent</a> 가 나옵니다. 위와 같이 inline block을 블록을 사용하되, 콤마로 끝나는 경우는 개행을 추가해주는 아주 단순하지만 parser의 rule의 난이도를 낮추는 역할을 합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md303"></a>
+<h1><a class="anchor" id="autotoc_md301"></a>
 정리하기</h1>
 <p>그럼, 이번에도 마찬가지로 각 클래스/컴포넌트 간의 흐름을 정리하겠습니다.</p>
 <div class="plantumlgraph">

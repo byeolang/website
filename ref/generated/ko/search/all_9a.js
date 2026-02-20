@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['진입점_0',['진입점',['../ak-architecture-core.html#autotoc_md393',1,'getGenericExpr 클래스 - Generic 타입 참조의 진입점'],['../ak-architecture-core.html#autotoc_md451',1,'parser 클래스 - 파싱의 진입점'],['../aj-architecture-stela.html#autotoc_md295',1,'stelaParser 클래스 - 파싱 진입점'],['../ak-architecture-core.html#autotoc_md401',1,'tbridger 클래스 - Bridge 컴포넌트의 진입점']]]
+  ['직관적인_20단어_20선호_0',['간단하고 직관적인 단어 선호',['../ad-convention-rules.html#autotoc_md138',1,'']]]
 ];
