@@ -129,10 +129,10 @@ $(function(){initNavTree('ah-architecture-meta.html',''); initResizable(); });
 <img src="inline_umlgraph_7.png" />
 </div>
 <hr  />
-<h1><a class="anchor" id="autotoc_md233"></a>
+<h1><a class="anchor" id="autotoc_md231"></a>
 type 클래스</h1>
 <p><a class="el" href="classby_1_1type.html">type</a> 클래스는 <a class="el" href="group__meta.html">Meta</a> 모듈의 핵심이 되는 클래스예요. <a class="el" href="classby_1_1type.html">type</a> 에 대한 다음의 기본적인 API를 제공합니다.</p>
-<h2><a class="anchor" id="autotoc_md234"></a>
+<h2><a class="anchor" id="autotoc_md232"></a>
 기본 타입 식별</h2>
 <p>다음 함수들로 타입의 기본 정보를 얻을 수 있습니다:</p>
 <ul>
@@ -140,7 +140,7 @@ type 클래스</h1>
 <li><code>isAbstract()</code>: 추상 클래스 여부를 반환합니다.</li>
 <li><code>getName()</code>: 클래스명을 반환합니다. 이름은 demangle 되어 반환됩니다.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md235"></a>
+<h2><a class="anchor" id="autotoc_md233"></a>
 클래스 계층 관련 정보</h2>
 <p><b>getSupers()</b></p>
 <p>super class들을 리스트에 담아 반환합니다. 이 클래스의 직접적인 부모 클래스는 리스트 마지막 원소에, 보다 더 super class일 수록 리스트 앞에 담겨있습니다.</p>
@@ -190,15 +190,15 @@ type 클래스</h1>
 <div class="line">    typedef Animal super;</div>
 <div class="line">};</div>
 <div class="line">bool areSiblings = ttype&lt;Dog&gt;().isSub(ttype&lt;Cat&gt;());  // false</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md236"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md234"></a>
 인스턴스 생성</h2>
 <p><b>make()</b></p>
 <p>이 type의 기본생성자로 인스턴스를 생성합니다. 만약, 기본생성자가 없다면 nullptr가 반환되니 주의하세요.</p>
-<h2><a class="anchor" id="autotoc_md237"></a>
+<h2><a class="anchor" id="autotoc_md235"></a>
 메타 타입 정보 관리</h2>
 <p><code>init()</code>으로 초기화를, <code>rel()</code>로 해제를 합니다. 이는 <code>BY_INIT_META</code> 매크로를 통해서 자동으로 처리가 되는 부분이라 외부에서 직접 호출할 경우는 드뭅니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md239"></a>
+<h1><a class="anchor" id="autotoc_md237"></a>
 ttype&lt;T&gt; 클래스</h1>
 <p><a class="el" href="classby_1_1ttype.html">ttype</a> 클래스는 사용자가 메타 정보를 다루고자할때 진입점이 되는 클래스예요. <a class="el" href="classby_1_1ttype.html">ttype</a> 를 사용할때는 매번 객체를 생성해서 사용해야 합니다. 전체적으로 monostate 패턴으로 설계 되어있어서 매번 객체를 만들어 사용하더라도 값은 공유하기 때문에 추가비용은 들지 않습니다.</p>
 <p><a class="el" href="group__meta.html">Meta</a> 모듈의 전체적인 설계에 대해 파악하고자 한다면 핵심이 되는 <a class="el" href="classby_1_1type.html">type</a> 을 먼저 살펴보세요.</p>
@@ -229,9 +229,9 @@ ttype&lt;T&gt; 클래스</h1>
 <div class="line">myClass* instance = typeInfo.makeAs&lt;myClass&gt;();</div>
 <div class="line">delete instance;</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md241"></a>
+<h1><a class="anchor" id="autotoc_md239"></a>
 메타 정보의 생성과 관리</h1>
-<h2><a class="anchor" id="autotoc_md242"></a>
+<h2><a class="anchor" id="autotoc_md240"></a>
 메타 정보가 어떻게 생성되나</h2>
 <p><code>isTemplate()</code> 이나 <code>isAbstract()</code>, <code>getName()</code> 같은 타입정보는 <a class="el" href="classby_1_1ttype_base.html">ttypeBase</a> 에서 Template Metaprogramming을 통해 컴파일 타임에 채워줍니다. 반면, 클래스 상속과 같은 계층 정보는 불가능해요. 따라서 계층 정보를 채워주는 과정은 프로세스 시작후 최초 1번은 실행이 되어야 되어야 합니다. <a class="el" href="classby_1_1type.html">type</a>에 <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a">init()</a>이 존재하는 이유는 런타임에 클래스 계층 정보를 구성하기 위해서입니다.</p>
 <p>그리고 그 계층을 만드는 핵심 조건은 <b>각 사용자는 자신의 클래스를 정의할때 typedef로 super를 정의해야 한다</b>라는 제약사항으로 해결합니다. 모든 클래스에 <code>super</code>가 존재한다면, <a class="el" href="classby_1_1type.html#a656d9a54739f8457195da12567e4410a">init()</a>함수 안에서 <code>super::init()</code>도 호출할 수 있기 때문에 간단한 재귀함수만으로도 클래스 계층을 구성할 수 있게 됩니다.</p>
@@ -254,7 +254,7 @@ ttype&lt;T&gt; 클래스</h1>
 <div class="line">    ...</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>실제 핵심 코드는 위와 크게 다르지 않습니다. 실제로 몇 줄의 간단한 코드만으로도 클래스 계층을 구성합니다. 이 과정은 재귀를 사용하긴 하지만, 프로그램 실행 후 1번만 발생하기 때문에 비용도 비교적 적습니다.</p>
-<h2><a class="anchor" id="autotoc_md243"></a>
+<h2><a class="anchor" id="autotoc_md241"></a>
 메타 정보 자동 생성</h2>
 <p>앞서 얘기한 대로 각 type 클래스들의 정보는 <code>init()</code> 함수를 호출하면 생성되고 채워집니다. 문제는 각 클래스들에 대한 타입 객체를 일일이 사용자가 생성하고 각각을 명시적으로 <code>init()</code>을 호출하는 것은 굉장히 비효율적이라는 점입니다.</p>
 <p>이걸 해결하고자 BY_INIT_META 매크로를 사용합니다. BY_INIT_META 는 BY_INITIATOR 매크로를 응용하는데, 이 매크로는 static 객체에 람다함수를 끼워넣음으로써 원하는 동작을 main() 함수가 시작되기 전에 실행하는 매크로입니다.</p>
@@ -288,7 +288,7 @@ ttype&lt;T&gt; 클래스</h1>
 <div class="line">};</div>
 </div><!-- fragment --><p>물론 이 역시 매번 4개나 되는 DSL 매크로를 클래스 정의시마다 추가하는건 매우 귀찮기 때문에 때문에, 대부분의 경우는 자주 사용하는 매크로들을 조합한 <code>BY(CLASS())</code> 나 <code>BY(ADT())</code>를 통해서 한번에 정의합니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md245"></a>
+<h1><a class="anchor" id="autotoc_md243"></a>
 adam - 최상위 타입</h1>
 <p><a class="el" href="classby_1_1type.html">type</a> 의 클래스 계층구조 상 아무런 부모도 없는 메타타입은 범용적으로 다루기가 어렵습니다. 예를들어 모든 메타타입에 대해서 동작하는 함수를 작성하고자 한다면, 다음과 같은 코드를 작성할 수 있어야 합니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -337,7 +337,7 @@ adam - 최상위 타입</h1>
 <div class="line">const type&amp; shapeType = ttype&lt;Rectangle&gt;();</div>
 <div class="line">bool isTopLevel = (shapeType.getSuper() == ttype&lt;adam&gt;());  // false</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md247"></a>
+<h1><a class="anchor" id="autotoc_md245"></a>
 메타 타입 확장하기</h1>
 <p><a class="el" href="classby_1_1type.html">type</a> 은 기본적으로도 비교적 많은 타입 정보를 제공하지만, byeol 처럼 언어를 다루는 경우에는 parameter나 return type과 같이 추가적인 정보를 담고 싶은 경우가 있습니다.</p>
 <p>이때 쉽게 생각하면 <a class="el" href="classby_1_1type.html">type</a> 을 상속받은 클래스를 만들면 되는거 아닌가라는 아이디어를 떠올리기 쉽지만 기억을 잘 떠올려보세요. 사용성을 위해서 우리는 <code>ttype&lt;T&gt;</code>에서 언급한 것처럼, 항상 사용자의 최종 진입점은 <code>ttype&lt;T&gt;</code>에 접근하면서 시작되어야 합니다. 문제는 <a class="el" href="classby_1_1ttype.html">ttype</a> 의 코드를 <a class="el" href="group__meta.html">Meta</a> 모듈에 있고, 추가타입 정보를 넣길 원하는 쪽은 meta에 종속되는 더 상위 모듈이라는 점이죠. 이때는 종속하는 쪽에서 수정할 수는 없기 때문에 상속으로는 불가능하고 메타 타입을 주입하는 형태로 문제를 해결합니다. 이는 Template Metaprogramming과 SFINAE(Substitution Failure Is Not An Error) 기법을 사용한 Type Injection 이라고 부르는 패턴을 사용합니다.</p>
@@ -360,7 +360,7 @@ adam - 최상위 타입</h1>
 <p>이걸 통해서 만약 class T에 대해 ttype&lt;T&gt;를 호출하는 순간, class T의 개발자가 <code>typedef metaType MyType;</code> 처럼 새로운 MyType 클래스를 선언하여 추가하면 해당 ttype&lt;T&gt;()로 객체를 만들었을때 MyType을 기반으로 해서 만들어지게 됩니다. 이 메커니즘은 Policy-based Design의 한 형태로, 타입별로 다른 메타 타입 구현을 주입할 수 있게 합니다.</p>
 <p>실제로 이 기능은 <a class="el" href="group__core.html">Core</a> 모듈에서 <a class="el" href="classby_1_1ntype.html">ntype</a> 을 주입하기 위해 사용합니다. 자세한 내용은 <a class="el" href="classby_1_1ntype.html">ntype</a> 을 참조하세요.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md249"></a>
+<h1><a class="anchor" id="autotoc_md247"></a>
 정리하기</h1>
 <p>마지막으로 meta 정보가 초기화 되는 과정을 다시 복기해 보죠.</p>
 <div class="plantumlgraph">

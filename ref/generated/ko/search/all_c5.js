@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['흐름의_20관리자_0',['thread 클래스 - 실행 흐름의 관리자',['../ak-architecture-core.html#autotoc_md420',1,'']]],
-  ['흐름_1',['주요 흐름',['../ak-architecture-core.html#autotoc_md305',1,'']]]
+  ['확인_0',['확인',['../ab-dev-env.html#autotoc_md24',1,'바이너리 확인'],['../am-testing-guide.html#autotoc_md538',1,'에러 리포트 확인']]],
+  ['확장하기_1',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md245',1,'']]],
+  ['확장_2',['richLog 확장',['../ag-architecture-clog.html#autotoc_md217',1,'']]]
 ];
