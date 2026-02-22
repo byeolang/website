@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['컴포넌트의_20진입점_0',['tbridger 클래스 - Bridge 컴포넌트의 진입점',['../ak-architecture-core.html#autotoc_md399',1,'']]],
-  ['컴포넌트_1',['컴포넌트',['../ai-architecture-memlite.html#autotoc_md269',1,'라이프 사이클 관리 컴포넌트'],['../ai-architecture-memlite.html#autotoc_md264',1,'메모리 관리 컴포넌트']]]
+  ['케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../am-testing-guide.html#autotoc_md527',1,'']]],
+  ['케이스_20작성_20가이드_1',['테스트 케이스 작성 가이드',['../am-testing-guide.html',1,'']]]
 ];

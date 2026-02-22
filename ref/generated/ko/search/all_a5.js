@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['컨벤션과_20다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md115',1,'']]],
-  ['컨테이너_1',['컨테이너',['../ak-architecture-core.html#autotoc_md384',1,'nseq 클래스 - 범위형 컨테이너'],['../ak-architecture-core.html#autotoc_md378',1,'tnchain 클래스 - Chain으로 연결되는 컨테이너']]],
-  ['컨테이너_20시스템_2',['컨테이너 시스템',['../ak-architecture-core.html#autotoc_md372',1,'']]],
-  ['컨테이너_20인터페이스_3',['tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스',['../ak-architecture-core.html#autotoc_md373',1,'']]],
-  ['컨텍스트_4',['스코프와 실행 컨텍스트',['../ak-architecture-core.html#autotoc_md405',1,'']]]
+  ['컴포넌트의_20진입점_0',['tbridger 클래스 - Bridge 컴포넌트의 진입점',['../ak-architecture-core.html#autotoc_md391',1,'']]],
+  ['컴포넌트_1',['컴포넌트',['../ai-architecture-memlite.html#autotoc_md261',1,'라이프 사이클 관리 컴포넌트'],['../ai-architecture-memlite.html#autotoc_md256',1,'메모리 관리 컴포넌트']]]
 ];
