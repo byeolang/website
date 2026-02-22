@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['관련_20정보_0',['클래스 계층 관련 정보',['../ah-architecture-meta.html#autotoc_md233',1,'']]],
-  ['관리자_1',['thread 클래스 - 실행 흐름의 관리자',['../ak-architecture-core.html#autotoc_md418',1,'']]],
-  ['관리_2',['관리',['../ah-architecture-meta.html#autotoc_md239',1,'메타 정보의 생성과 관리'],['../ah-architecture-meta.html#autotoc_md235',1,'메타 타입 정보 관리'],['../ai-architecture-memlite.html#autotoc_md266',1,'chunks - 다중 chunk 관리'],['../ak-architecture-core.html#autotoc_md416',1,'frames 클래스 - Frame 적층 관리'],['../ak-architecture-core.html#autotoc_md393',1,'genericOrigin 클래스 - Generic 타입의 생성과 관리'],['../ai-architecture-memlite.html',1,'memlite 모듈 - 커스텀 메모리 관리'],['../ai-architecture-memlite.html#autotoc_md267',1,'pool - 크기별 메모리 관리'],['../ak-architecture-core.html#autotoc_md452',1,'smartDedent, tokenScan 클래스 - Indentation 관리'],['../aj-architecture-stela.html#autotoc_md299',1,'stelaSmartDedent 클래스 - Scope 관리']]],
-  ['관리_20인터페이스_3',['메모리 관리 인터페이스',['../ai-architecture-memlite.html#autotoc_md278',1,'']]],
-  ['관리_20조정자_4',['instancer - 메모리 관리 조정자',['../ai-architecture-memlite.html#autotoc_md276',1,'']]],
-  ['관리_20컴포넌트_5',['관리 컴포넌트',['../ai-architecture-memlite.html#autotoc_md269',1,'라이프 사이클 관리 컴포넌트'],['../ai-architecture-memlite.html#autotoc_md264',1,'메모리 관리 컴포넌트']]],
-  ['관습_6',['기타 코딩 관습',['../ad-convention-rules.html#autotoc_md157',1,'']]]
+  ['관련_20정보_0',['클래스 계층 관련 정보',['../ah-architecture-meta.html#autotoc_md225',1,'']]],
+  ['관리자_1',['thread 클래스 - 실행 흐름의 관리자',['../ak-architecture-core.html#autotoc_md410',1,'']]],
+  ['관리_2',['관리',['../ah-architecture-meta.html#autotoc_md231',1,'메타 정보의 생성과 관리'],['../ah-architecture-meta.html#autotoc_md227',1,'메타 타입 정보 관리'],['../ai-architecture-memlite.html#autotoc_md258',1,'chunks - 다중 chunk 관리'],['../ak-architecture-core.html#autotoc_md408',1,'frames 클래스 - Frame 적층 관리'],['../ak-architecture-core.html#autotoc_md385',1,'genericOrigin 클래스 - Generic 타입의 생성과 관리'],['../ai-architecture-memlite.html',1,'memlite 모듈 - 커스텀 메모리 관리'],['../ai-architecture-memlite.html#autotoc_md259',1,'pool - 크기별 메모리 관리'],['../ak-architecture-core.html#autotoc_md444',1,'smartDedent, tokenScan 클래스 - Indentation 관리'],['../aj-architecture-stela.html#autotoc_md291',1,'stelaSmartDedent 클래스 - Scope 관리']]],
+  ['관리_20인터페이스_3',['메모리 관리 인터페이스',['../ai-architecture-memlite.html#autotoc_md270',1,'']]],
+  ['관리_20조정자_4',['instancer - 메모리 관리 조정자',['../ai-architecture-memlite.html#autotoc_md268',1,'']]],
+  ['관리_20컴포넌트_5',['관리 컴포넌트',['../ai-architecture-memlite.html#autotoc_md261',1,'라이프 사이클 관리 컴포넌트'],['../ai-architecture-memlite.html#autotoc_md256',1,'메모리 관리 컴포넌트']]],
+  ['관습_6',['기타 코딩 관습',['../ad-convention-rules.html#autotoc_md149',1,'']]]
 ];

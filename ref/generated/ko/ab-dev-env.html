@@ -147,7 +147,7 @@ $(function(){initNavTree('ab-dev-env.html',''); initResizable(); });
 <p>설치 전에 반드시 버전을 체크해서 받아야 합니다. 잘 아시다시피 OS가 구버전인 경우 <code>apt</code> 나 <code>brew</code>로 설치시 구버전이 설치되는 경우가 많습니다. 이 경우 각 프로그램의 공식 배포처나 웹사이트를 참고해서 명시된 버전 이상으로 수동 설치하시길 바랍니다.<br  />
  다음은 프로그램 설치시 각 OS별 참고사항입니다.</p>
 <p><b>Ubuntu</b><br  />
- Bison과 Flex는 구 버전 Ubuntu에서는 apt 패키지에 포함되지 않을 가능성이 있습니다. 이때는 수동으로 Bison과 Flex를 <a href="http://ftp.gnu.org/gnu/bison/">소스코드</a>를 다운받아 직접 빌드해야 합니다. 우분투는 기본적으로 gcc를 사용하는데, 현재 프로젝트는 clang++를 더 권장합니다 (물론 gcc 빌드도 지원은 하고 있어요).</p>
+ Bison과 Flex는 구 버전 Ubuntu에서는 apt 패키지에 포함되지 않을 가능성이 있습니다. 이때는 수동으로 Bison과 Flex를 <a href="http://ftp.gnu.org/gnu/bison/" target="_blank">소스코드</a>를 다운받아 직접 빌드해야 합니다. 우분투는 기본적으로 gcc를 사용하는데, 현재 프로젝트는 clang++를 더 권장합니다 (물론 gcc 빌드도 지원은 하고 있어요).</p>
 <p><b>Mac OS</b><br  />
  Mac OS는 기본적으로 clang을 사용하기 때문에 비교적 설치가 쉬워요. Apple Silicon(arm64)이나 인텔(x64) 모두 빌드를 지원하긴 합니다만 공식적으로는 arm64만 배포를 지원하므로 CI 과정에서도 arm64에서 빌드가 되어야 합니다.</p>
 <p><b>Windows</b><br  />
@@ -156,7 +156,7 @@ $(function(){initNavTree('ab-dev-env.html',''); initResizable(); });
 <ul>
 <li>WSL을 사용해서 Ubuntu 환경으로 개발하실 경우, Ubuntu 개발환경과 동일합니다.</li>
 <li>WSL을 사용하지 않는다면, VisualStudio로 개발하시면 됩니다. 이때 중요한 건 Bison과 Flex 인데, 윈도우 용으로 배포중인 Bison은 2.4 버전으로 매우 옛날 버전이기 때문에 그렇습니다. (우리는 3.8 이상이 필요합니다.)<br  />
- 권장하는 방법은 <a href="https://github.com/lexxmark/winflexbison">win_flex</a>를 사용하는 겁니다. 다만 포터블 형태로만 제공하기 때문에 설치 후 시스템 환경변수 설정이 필요하며, 이름을 <code>flex</code>, <code>bison</code>으로 각각 변경해야 합니다.<br  />
+ 권장하는 방법은 <a href="https://github.com/lexxmark/winflexbison" target="_blank">win_flex</a>를 사용하는 겁니다. 다만 포터블 형태로만 제공하기 때문에 설치 후 시스템 환경변수 설정이 필요하며, 이름을 <code>flex</code>, <code>bison</code>으로 각각 변경해야 합니다.<br  />
  터미널 환경에서 <code>flex --version</code> 혹은 <code>bison --version</code>으로 입력시 지정된 버전보다 최신버전이기만 하면 됩니다.</li>
 </ul>
 <hr  />
@@ -178,29 +178,47 @@ Windows (Visual Studio)</h2>
 </p>
 <p>빌드시에 기본적으로는 <code>MSBuild.exe</code>를 사용하므로 Visual Studio가 필요합니다. CMake 설정을 바꾸실 수 있으시다면 clang++, VS Code로 개발도 물론 가능합니다.</p>
 <ul>
-<li>다음과 같이 Visual Studio Setup 프로그램을 다운받아 줍시다.</li>
-<li>다운받은 setup을 실행한 후, 다음과 같이 c++ 개발을 선택합니다.</li>
+<li>다음과 같이 Visual Studio Setup 프로그램을 다운받아 줍시다.<br  />
+ <img src="../../../assets/images/dev-env-win1.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>다운받은 setup을 실행한 후, 다음과 같이 c++ 개발을 선택합니다<br  />
+ <img src="../../../assets/images/dev-env-win2.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>다음과 같이 상세 선택을 해주고 설치를 시작합니다. 목록은 다음과 같습니다. (일부는 필요없는 항목이 있을 수도 있으니, 제보바랍니다.)<ul>
 <li>x64/x86용 MSVC 빌드 도구</li>
 <li>Windows용 C++ CMake 도구</li>
 <li>Windows 11 SDK</li>
 <li>vcpkg 패키지 관리자</li>
 <li>LLVM(clang-cl) 도구 집합에 대한 MSBuild 지원</li>
-<li>MSBuild</li>
+<li>MSBuild<br  />
+ <img src="../../../assets/images/dev-env-win3.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
 </ul>
 </li>
 <li>설치가 완료되면 재부팅을 해줍니다.</li>
-<li>그 다음에는 <a href="https://cmake.org/download/" target="_blank">CMake 윈도우 버전</a>을 설치해야 합니다.</li>
-<li>PATH에 추가하도록 해놓는 걸 잊지 마세요. 모든 빌드는 터미널에서 할 껍니다.</li>
+<li>그 다음에는 <a href="https://cmake.org/download/" target="_blank">CMake 윈도우 버전</a>을 설치해야 합니다.<br  />
+ <img src="../../../assets/images/dev-env-win4.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>PATH에 추가하도록 해놓는 걸 잊지 마세요. 모든 빌드는 터미널에서 할 껍니다.<br  />
+ <img src="../../../assets/images/dev-env-win5.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>CMake 설치가 완료되었다면, 다음은 bison과 flex를 설치해야 합니다.<br  />
  <a href="https://github.com/lexxmark/winflexbison/releases" target="_blank">WinFlex</a>에서 최신버전으로 바이너리(아마도 zip)를 받아줍니다.</li>
 <li>압축을 풀면 <code>win_bison.exe</code>와 <code>win_flex.exe</code>가 보일겁니다.<br  />
- 이 둘을 각각 <code>bison.exe</code> 와 <code>flex.exe</code>로 이름을 직접 바꿔줍니다.</li>
+ 이 둘을 각각 <code>bison.exe</code> 와 <code>flex.exe</code>로 이름을 직접 바꿔줍니다.<br  />
+ <img src="../../../assets/images/dev-env-win6.png" alt="" style="width: 40%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>win_flex는 포터블로만 제공하기 때문에 터미널에서 바로 사용햐려면 환경변수 PATH를 설정해야 합니다.</li>
+<li>시스템의 고급 시스템 설정을 열어줍니다.<br  />
+ <img src="../../../assets/images/dev-env-win7.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>환경변수를 클릭합니다.<br  />
+ <img src="../../../assets/images/dev-env-win8.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>그다음 편집을 누른 후<br  />
+ <img src="../../../assets/images/dev-env-win9.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>새로 만들기를 클릭해서, win flex가 설치된 경로를 추가합니다.<br  />
+ <img src="../../../assets/images/dev-env-win10.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>Visual Studio 개발도구가 포함된 터미널을 열여주고, 지금까지 설치한 프로그램이 잘 실행되는지 확인해봅니다.<br  />
+ <img src="../../../assets/images/dev-env-win11.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+<li>여기까지 왔다면, 실행만 남았습니다. <code>build</code> 폴더로 이동 후, <code>python3 builder.py dbg</code> 를 입력하면 빌드가 완료됩니다.</li>
 </ul>
 <hr  />
 <h1><a class="anchor" id="autotoc_md24"></a>
 바이너리 확인</h1>
-<p>이후 bin 폴더가 생성되며 바이너리를 볼 수 있습니다. 바이너리 종류에 대해서는 ac-build-structure의 <b>빌드 산출물</b> 섹션을 참고하세요.</p>
+<p>이후 bin 폴더가 생성되며 바이너리를 볼 수 있습니다. 바이너리 종류에 대해서는 <a class="el" href="ac-build-structure.html">프로젝트 구조 및 빌드 산출물</a> 의 <b>빌드 산출물</b> 섹션을 참고하세요.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md26"></a>
 디버깅</h1>

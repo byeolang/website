@@ -102,154 +102,147 @@ var NAVTREE =
         [ "추적되는 파일", "ac-build-structure.html#autotoc_md99", null ],
         [ "추적되지 않는 파일", "ac-build-structure.html#autotoc_md101", null ]
       ] ],
-      [ "참고 사항", "ac-build-structure.html#autotoc_md103", [
-        [ "플랫폼별 차이", "ac-build-structure.html#autotoc_md104", [
-          [ "Linux", "ac-build-structure.html#autotoc_md105", null ],
-          [ "macOS", "ac-build-structure.html#autotoc_md107", null ],
-          [ "Windows", "ac-build-structure.html#autotoc_md109", null ]
-        ] ],
-        [ "주의사항", "ac-build-structure.html#autotoc_md111", null ]
-      ] ]
+      [ "참고 사항", "ac-build-structure.html#autotoc_md103", null ]
     ] ],
     [ "Byeol 코딩 규칙", "ad-convention-rules.html", [
-      [ "시작하기 전에", "ad-convention-rules.html#autotoc_md114", [
-        [ "왜 일반적인 C++ 컨벤션과 다른가?", "ad-convention-rules.html#autotoc_md115", null ],
-        [ "Byeol 언어의 핵심 철학을 요약하면", "ad-convention-rules.html#autotoc_md116", null ],
-        [ "C++ 코드에 반영된 철학", "ad-convention-rules.html#autotoc_md117", null ],
-        [ "코딩 스타일은 clang-format으로 자동 적용", "ad-convention-rules.html#autotoc_md118", null ]
+      [ "시작하기 전에", "ad-convention-rules.html#autotoc_md106", [
+        [ "왜 일반적인 C++ 컨벤션과 다른가?", "ad-convention-rules.html#autotoc_md107", null ],
+        [ "Byeol 언어의 핵심 철학을 요약하면", "ad-convention-rules.html#autotoc_md108", null ],
+        [ "C++ 코드에 반영된 철학", "ad-convention-rules.html#autotoc_md109", null ],
+        [ "코딩 스타일은 clang-format으로 자동 적용", "ad-convention-rules.html#autotoc_md110", null ]
       ] ],
-      [ "네이밍 규칙", "ad-convention-rules.html#autotoc_md120", [
-        [ "클래스와 변수: camelCase", "ad-convention-rules.html#autotoc_md121", [
-          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md122", null ],
-          [ "❌ 잘못된 예제", "ad-convention-rules.html#autotoc_md123", null ]
+      [ "네이밍 규칙", "ad-convention-rules.html#autotoc_md112", [
+        [ "클래스와 변수: camelCase", "ad-convention-rules.html#autotoc_md113", [
+          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md114", null ],
+          [ "❌ 잘못된 예제", "ad-convention-rules.html#autotoc_md115", null ]
         ] ],
-        [ "매크로: UPPER_SNAKE_CASE", "ad-convention-rules.html#autotoc_md124", [
-          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md125", null ],
-          [ "❌ 잘못된 예제", "ad-convention-rules.html#autotoc_md126", null ]
+        [ "매크로: UPPER_SNAKE_CASE", "ad-convention-rules.html#autotoc_md116", [
+          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md117", null ],
+          [ "❌ 잘못된 예제", "ad-convention-rules.html#autotoc_md118", null ]
         ] ],
-        [ "non public accessor를 위한 언더스코어 접두사", "ad-convention-rules.html#autotoc_md127", null ],
-        [ "클래스 접두사", "ad-convention-rules.html#autotoc_md128", null ],
-        [ "Enum 네이밍", "ad-convention-rules.html#autotoc_md129", null ],
-        [ "인터페이스 네이밍", "ad-convention-rules.html#autotoc_md130", null ],
-        [ "템플릿 구체화 네이밍", "ad-convention-rules.html#autotoc_md131", null ],
-        [ "기본 타입 사용", "ad-convention-rules.html#autotoc_md132", null ],
-        [ "파일 명명 규칙", "ad-convention-rules.html#autotoc_md133", null ],
-        [ "네이밍 철학", "ad-convention-rules.html#autotoc_md134", [
-          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md135", null ],
-          [ "❌ 불필요하게 긴 예제", "ad-convention-rules.html#autotoc_md136", null ],
-          [ "일반적인 네이밍 가이드", "ad-convention-rules.html#autotoc_md137", null ]
+        [ "non public accessor를 위한 언더스코어 접두사", "ad-convention-rules.html#autotoc_md119", null ],
+        [ "클래스 접두사", "ad-convention-rules.html#autotoc_md120", null ],
+        [ "Enum 네이밍", "ad-convention-rules.html#autotoc_md121", null ],
+        [ "인터페이스 네이밍", "ad-convention-rules.html#autotoc_md122", null ],
+        [ "템플릿 구체화 네이밍", "ad-convention-rules.html#autotoc_md123", null ],
+        [ "기본 타입 사용", "ad-convention-rules.html#autotoc_md124", null ],
+        [ "파일 명명 규칙", "ad-convention-rules.html#autotoc_md125", null ],
+        [ "네이밍 철학", "ad-convention-rules.html#autotoc_md126", [
+          [ "✅ 올바른 예제", "ad-convention-rules.html#autotoc_md127", null ],
+          [ "❌ 불필요하게 긴 예제", "ad-convention-rules.html#autotoc_md128", null ],
+          [ "일반적인 네이밍 가이드", "ad-convention-rules.html#autotoc_md129", null ]
         ] ],
-        [ "간단하고 직관적인 단어 선호", "ad-convention-rules.html#autotoc_md138", null ],
-        [ "자주 사용하는 동사", "ad-convention-rules.html#autotoc_md139", null ]
+        [ "간단하고 직관적인 단어 선호", "ad-convention-rules.html#autotoc_md130", null ],
+        [ "자주 사용하는 동사", "ad-convention-rules.html#autotoc_md131", null ]
       ] ],
-      [ "코드 스타일", "ad-convention-rules.html#autotoc_md141", [
-        [ "줄 길이와 들여쓰기", "ad-convention-rules.html#autotoc_md142", [
-          [ "줄 길이 제한", "ad-convention-rules.html#autotoc_md143", null ],
-          [ "들여쓰기: 4 스페이스", "ad-convention-rules.html#autotoc_md144", null ],
-          [ "중괄호 스타일: 같은 줄에 배치", "ad-convention-rules.html#autotoc_md145", null ],
-          [ "포인터/참조 정렬: 왼쪽 정렬", "ad-convention-rules.html#autotoc_md146", null ],
-          [ "괄호 앞 공백: 공백 없음", "ad-convention-rules.html#autotoc_md147", null ],
-          [ "네임스페이스 들여쓰기: 들여쓰기 적용", "ad-convention-rules.html#autotoc_md148", null ],
-          [ "짧은 함수/블록: 한 줄 허용", "ad-convention-rules.html#autotoc_md149", null ],
-          [ "1줄 블록문: 중괄호 생략", "ad-convention-rules.html#autotoc_md150", null ],
-          [ "접근 제어자 순서", "ad-convention-rules.html#autotoc_md151", null ],
-          [ "Early-Return Pattern 선호", "ad-convention-rules.html#autotoc_md152", null ],
-          [ "TO 매크로 사용", "ad-convention-rules.html#autotoc_md153", null ]
+      [ "코드 스타일", "ad-convention-rules.html#autotoc_md133", [
+        [ "줄 길이와 들여쓰기", "ad-convention-rules.html#autotoc_md134", [
+          [ "줄 길이 제한", "ad-convention-rules.html#autotoc_md135", null ],
+          [ "들여쓰기: 4 스페이스", "ad-convention-rules.html#autotoc_md136", null ],
+          [ "중괄호 스타일: 같은 줄에 배치", "ad-convention-rules.html#autotoc_md137", null ],
+          [ "포인터/참조 정렬: 왼쪽 정렬", "ad-convention-rules.html#autotoc_md138", null ],
+          [ "괄호 앞 공백: 공백 없음", "ad-convention-rules.html#autotoc_md139", null ],
+          [ "네임스페이스 들여쓰기: 들여쓰기 적용", "ad-convention-rules.html#autotoc_md140", null ],
+          [ "짧은 함수/블록: 한 줄 허용", "ad-convention-rules.html#autotoc_md141", null ],
+          [ "1줄 블록문: 중괄호 생략", "ad-convention-rules.html#autotoc_md142", null ],
+          [ "접근 제어자 순서", "ad-convention-rules.html#autotoc_md143", null ],
+          [ "Early-Return Pattern 선호", "ad-convention-rules.html#autotoc_md144", null ],
+          [ "TO 매크로 사용", "ad-convention-rules.html#autotoc_md145", null ]
         ] ],
-        [ "구현 파일 (.cpp) 규칙", "ad-convention-rules.html#autotoc_md154", [
-          [ "me와 super 사용", "ad-convention-rules.html#autotoc_md155", null ],
-          [ "익명 네임스페이스", "ad-convention-rules.html#autotoc_md156", null ]
+        [ "구현 파일 (.cpp) 규칙", "ad-convention-rules.html#autotoc_md146", [
+          [ "me와 super 사용", "ad-convention-rules.html#autotoc_md147", null ],
+          [ "익명 네임스페이스", "ad-convention-rules.html#autotoc_md148", null ]
         ] ],
-        [ "기타 코딩 관습", "ad-convention-rules.html#autotoc_md157", [
-          [ "auto 사용", "ad-convention-rules.html#autotoc_md158", null ],
-          [ "nullptr 사용", "ad-convention-rules.html#autotoc_md159", null ],
-          [ "로컬 상수 네이밍", "ad-convention-rules.html#autotoc_md160", null ]
+        [ "기타 코딩 관습", "ad-convention-rules.html#autotoc_md149", [
+          [ "auto 사용", "ad-convention-rules.html#autotoc_md150", null ],
+          [ "nullptr 사용", "ad-convention-rules.html#autotoc_md151", null ],
+          [ "로컬 상수 네이밍", "ad-convention-rules.html#autotoc_md152", null ]
         ] ]
       ] ],
-      [ "문서화 표준", "ad-convention-rules.html#autotoc_md162", [
-        [ "Doxygen 주석 기본 규칙", "ad-convention-rules.html#autotoc_md163", [
-          [ "/** 스타일만 사용", "ad-convention-rules.html#autotoc_md164", null ],
-          [ "@ 접두사 사용", "ad-convention-rules.html#autotoc_md165", null ]
+      [ "문서화 표준", "ad-convention-rules.html#autotoc_md154", [
+        [ "Doxygen 주석 기본 규칙", "ad-convention-rules.html#autotoc_md155", [
+          [ "/** 스타일만 사용", "ad-convention-rules.html#autotoc_md156", null ],
+          [ "@ 접두사 사용", "ad-convention-rules.html#autotoc_md157", null ]
         ] ],
-        [ "파일 주석", "ad-convention-rules.html#autotoc_md166", [
-          [ "@file 태그", "ad-convention-rules.html#autotoc_md167", null ]
+        [ "파일 주석", "ad-convention-rules.html#autotoc_md158", [
+          [ "@file 태그", "ad-convention-rules.html#autotoc_md159", null ]
         ] ],
-        [ "클래스 주석", "ad-convention-rules.html#autotoc_md168", [
-          [ "예제 1: 간단한 클래스", "ad-convention-rules.html#autotoc_md169", null ],
-          [ "예제 2: 복잡한 클래스 - 여러 단락", "ad-convention-rules.html#autotoc_md170", null ]
+        [ "클래스 주석", "ad-convention-rules.html#autotoc_md160", [
+          [ "예제 1: 간단한 클래스", "ad-convention-rules.html#autotoc_md161", null ],
+          [ "예제 2: 복잡한 클래스 - 여러 단락", "ad-convention-rules.html#autotoc_md162", null ]
         ] ],
-        [ "함수 주석", "ad-convention-rules.html#autotoc_md171", null ],
-        [ "code 블록 사용", "ad-convention-rules.html#autotoc_md172", null ],
-        [ "ref로 다른 코드 참조", "ad-convention-rules.html#autotoc_md173", null ],
-        [ "개발 노트는 Doxygen 밖에", "ad-convention-rules.html#autotoc_md174", null ],
-        [ "자명한 코드에는 주석 금지", "ad-convention-rules.html#autotoc_md175", null ]
+        [ "함수 주석", "ad-convention-rules.html#autotoc_md163", null ],
+        [ "code 블록 사용", "ad-convention-rules.html#autotoc_md164", null ],
+        [ "ref로 다른 코드 참조", "ad-convention-rules.html#autotoc_md165", null ],
+        [ "개발 노트는 Doxygen 밖에", "ad-convention-rules.html#autotoc_md166", null ],
+        [ "자명한 코드에는 주석 금지", "ad-convention-rules.html#autotoc_md167", null ]
       ] ],
-      [ "헤더 파일 포함", "ad-convention-rules.html#autotoc_md177", null ]
+      [ "헤더 파일 포함", "ad-convention-rules.html#autotoc_md169", null ]
     ] ],
     [ "아키텍쳐와 설계", "ae-architecture-overview.html", "ae-architecture-overview" ],
     [ "테스트 케이스 작성 가이드", "am-testing-guide.html", [
-      [ "Unit Test (단위 테스트)", "am-testing-guide.html#autotoc_md496", [
+      [ "Unit Test (단위 테스트)", "am-testing-guide.html#autotoc_md488", [
+        [ "파일 위치와 네이밍", "am-testing-guide.html#autotoc_md489", null ],
+        [ "기본 구조", "am-testing-guide.html#autotoc_md490", null ],
+        [ "byeolTest 클래스의 주요 기능", "am-testing-guide.html#autotoc_md491", null ],
+        [ "Google Test 검증 매크로", "am-testing-guide.html#autotoc_md492", null ],
+        [ "실전 예제", "am-testing-guide.html#autotoc_md493", null ]
+      ] ],
+      [ "Integration Test (통합 테스트)", "am-testing-guide.html#autotoc_md495", [
+        [ "Antipattern Test?", "am-testing-guide.html#autotoc_md496", null ],
         [ "파일 위치와 네이밍", "am-testing-guide.html#autotoc_md497", null ],
         [ "기본 구조", "am-testing-guide.html#autotoc_md498", null ],
-        [ "byeolTest 클래스의 주요 기능", "am-testing-guide.html#autotoc_md499", null ],
-        [ "Google Test 검증 매크로", "am-testing-guide.html#autotoc_md500", null ],
-        [ "실전 예제", "am-testing-guide.html#autotoc_md501", null ]
+        [ "byeolIntegTest의 빌더 패턴", "am-testing-guide.html#autotoc_md499", null ],
+        [ "파싱 결과 검증", "am-testing-guide.html#autotoc_md500", null ],
+        [ "Negative 테스트", "am-testing-guide.html#autotoc_md501", null ],
+        [ "shouldParsed vs shouldVerified", "am-testing-guide.html#autotoc_md502", null ],
+        [ "런타임 에러 테스트", "am-testing-guide.html#autotoc_md503", null ],
+        [ "실전 예제", "am-testing-guide.html#autotoc_md504", null ]
       ] ],
-      [ "Integration Test (통합 테스트)", "am-testing-guide.html#autotoc_md503", [
-        [ "Antipattern Test?", "am-testing-guide.html#autotoc_md504", null ],
-        [ "파일 위치와 네이밍", "am-testing-guide.html#autotoc_md505", null ],
-        [ "기본 구조", "am-testing-guide.html#autotoc_md506", null ],
-        [ "byeolIntegTest의 빌더 패턴", "am-testing-guide.html#autotoc_md507", null ],
-        [ "파싱 결과 검증", "am-testing-guide.html#autotoc_md508", null ],
-        [ "Negative 테스트", "am-testing-guide.html#autotoc_md509", null ],
-        [ "shouldParsed vs shouldVerified", "am-testing-guide.html#autotoc_md510", null ],
-        [ "런타임 에러 테스트", "am-testing-guide.html#autotoc_md511", null ],
-        [ "실전 예제", "am-testing-guide.html#autotoc_md512", null ]
+      [ "E2E Test (종단간 테스트)", "am-testing-guide.html#autotoc_md506", [
+        [ "파일 위치와 네이밍", "am-testing-guide.html#autotoc_md507", null ],
+        [ "기본 구조", "am-testing-guide.html#autotoc_md508", null ],
+        [ "테스트 데이터 파일", "am-testing-guide.html#autotoc_md509", null ],
+        [ "parse와 run", "am-testing-guide.html#autotoc_md510", null ],
+        [ "Negative 테스트", "am-testing-guide.html#autotoc_md511", null ]
       ] ],
-      [ "E2E Test (종단간 테스트)", "am-testing-guide.html#autotoc_md514", [
-        [ "파일 위치와 네이밍", "am-testing-guide.html#autotoc_md515", null ],
-        [ "기본 구조", "am-testing-guide.html#autotoc_md516", null ],
-        [ "테스트 데이터 파일", "am-testing-guide.html#autotoc_md517", null ],
-        [ "parse와 run", "am-testing-guide.html#autotoc_md518", null ],
-        [ "Negative 테스트", "am-testing-guide.html#autotoc_md519", null ]
+      [ "테스트 작성 시 주의사항", "am-testing-guide.html#autotoc_md513", [
+        [ "올바른 베이스 클래스 상속", "am-testing-guide.html#autotoc_md514", null ],
+        [ "negative() 호출", "am-testing-guide.html#autotoc_md515", null ],
+        [ "OR_ASSERT 사용", "am-testing-guide.html#autotoc_md516", null ],
+        [ "shouldParsed vs shouldVerified vs run()", "am-testing-guide.html#autotoc_md517", null ],
+        [ "Raw String Literal 구분자", "am-testing-guide.html#autotoc_md518", null ],
+        [ "SetUp/TearDown 오버라이드", "am-testing-guide.html#autotoc_md519", null ],
+        [ "테스트 독립성", "am-testing-guide.html#autotoc_md520", null ],
+        [ "한 가지만 테스트", "am-testing-guide.html#autotoc_md521", null ],
+        [ "명확한 테스트 이름", "am-testing-guide.html#autotoc_md522", null ],
+        [ "Negative 테스트 포함", "am-testing-guide.html#autotoc_md523", null ],
+        [ "리소스 정리", "am-testing-guide.html#autotoc_md524", null ]
       ] ],
-      [ "테스트 작성 시 주의사항", "am-testing-guide.html#autotoc_md521", [
-        [ "올바른 베이스 클래스 상속", "am-testing-guide.html#autotoc_md522", null ],
-        [ "negative() 호출", "am-testing-guide.html#autotoc_md523", null ],
-        [ "OR_ASSERT 사용", "am-testing-guide.html#autotoc_md524", null ],
-        [ "shouldParsed vs shouldVerified vs run()", "am-testing-guide.html#autotoc_md525", null ],
-        [ "Raw String Literal 구분자", "am-testing-guide.html#autotoc_md526", null ],
-        [ "SetUp/TearDown 오버라이드", "am-testing-guide.html#autotoc_md527", null ],
-        [ "테스트 독립성", "am-testing-guide.html#autotoc_md528", null ],
-        [ "한 가지만 테스트", "am-testing-guide.html#autotoc_md529", null ],
-        [ "명확한 테스트 이름", "am-testing-guide.html#autotoc_md530", null ],
-        [ "Negative 테스트 포함", "am-testing-guide.html#autotoc_md531", null ],
-        [ "리소스 정리", "am-testing-guide.html#autotoc_md532", null ]
-      ] ],
-      [ "디버깅", "am-testing-guide.html#autotoc_md534", [
-        [ "특정 테스트 케이스만 실행하기", "am-testing-guide.html#autotoc_md535", null ],
-        [ "verbose 모드", "am-testing-guide.html#autotoc_md536", null ],
-        [ "디버거 사용", "am-testing-guide.html#autotoc_md537", null ],
-        [ "에러 리포트 확인", "am-testing-guide.html#autotoc_md538", null ],
-        [ "테스트 실행", "am-testing-guide.html#autotoc_md540", null ]
+      [ "디버깅", "am-testing-guide.html#autotoc_md526", [
+        [ "특정 테스트 케이스만 실행하기", "am-testing-guide.html#autotoc_md527", null ],
+        [ "verbose 모드", "am-testing-guide.html#autotoc_md528", null ],
+        [ "디버거 사용", "am-testing-guide.html#autotoc_md529", null ],
+        [ "에러 리포트 확인", "am-testing-guide.html#autotoc_md530", null ],
+        [ "테스트 실행", "am-testing-guide.html#autotoc_md532", null ]
       ] ]
     ] ],
     [ "문서 작성 규칙", "an-document-convention.html", [
-      [ "문서의 톤과 어조", "an-document-convention.html#autotoc_md543", null ],
-      [ "Doxygen 호환성", "an-document-convention.html#autotoc_md545", null ],
-      [ "문서 구조", "an-document-convention.html#autotoc_md547", null ],
-      [ "문서 체계 및 분류", "an-document-convention.html#autotoc_md549", null ],
-      [ "문서 Navigation", "an-document-convention.html#autotoc_md551", null ],
-      [ "새 문서 추가 절차", "an-document-convention.html#autotoc_md553", null ],
-      [ "문서 분할 (Subpage)", "an-document-convention.html#autotoc_md555", null ],
-      [ "예시의 중요성", "an-document-convention.html#autotoc_md557", null ],
-      [ "Style Annotation 시스템", "an-document-convention.html#autotoc_md559", [
-        [ "언어 지정", "an-document-convention.html#autotoc_md560", null ],
-        [ "실행 가능 코드 표시", "an-document-convention.html#autotoc_md561", null ],
-        [ "검증 완료 코드 표시: verified", "an-document-convention.html#autotoc_md562", null ],
-        [ "보여지는 코드와 실행 코드 분리: shown", "an-document-convention.html#autotoc_md563", null ]
+      [ "문서의 톤과 어조", "an-document-convention.html#autotoc_md535", null ],
+      [ "Doxygen 호환성", "an-document-convention.html#autotoc_md537", null ],
+      [ "문서 구조", "an-document-convention.html#autotoc_md539", null ],
+      [ "문서 체계 및 분류", "an-document-convention.html#autotoc_md541", null ],
+      [ "문서 Navigation", "an-document-convention.html#autotoc_md543", null ],
+      [ "새 문서 추가 절차", "an-document-convention.html#autotoc_md545", null ],
+      [ "문서 분할 (Subpage)", "an-document-convention.html#autotoc_md547", null ],
+      [ "예시의 중요성", "an-document-convention.html#autotoc_md549", null ],
+      [ "Style Annotation 시스템", "an-document-convention.html#autotoc_md551", [
+        [ "언어 지정", "an-document-convention.html#autotoc_md552", null ],
+        [ "실행 가능 코드 표시", "an-document-convention.html#autotoc_md553", null ],
+        [ "검증 완료 코드 표시: verified", "an-document-convention.html#autotoc_md554", null ],
+        [ "보여지는 코드와 실행 코드 분리: shown", "an-document-convention.html#autotoc_md555", null ]
       ] ],
-      [ "문서 작성 스타일", "an-document-convention.html#autotoc_md565", null ]
+      [ "문서 작성 스타일", "an-document-convention.html#autotoc_md557", null ]
     ] ],
     [ "모듈", "topics.html", "topics" ],
     [ "클래스 색인", "classes.html", null ],
@@ -260,12 +253,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"ak-architecture-core.html#autotoc_md384",
-"classby_1_1byeol_pack_loading.html#a8abebbb40a8b062c8c0bd03abe0791ff",
-"classby_1_1params.html#a2569cdafdf647d9127adfa7135306e22",
-"convergence_8hpp_source.html",
-"helper_8hpp_source.html",
-"stream_8hpp_source.html"
+"ak-architecture-core.html#autotoc_md387",
+"classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c",
+"classby_1_1parser.html#a111606c5231246d600574b78e3e32e6c",
+"core_2common_2def_8hpp.html",
+"immutable_tactic_8hpp.html",
+"structby_1_1build_feature_1_1platform.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';
