@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['구현의_20핵심_1',['core 모듈 - 언어 구현의 핵심',['../ak-architecture-core.html',1,'ae-architecture-overview']]]
+  ['계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
 ];

@@ -603,20 +603,20 @@ Special Functions</h1>
 </ul>
 <hr  />
 <h1><a class="anchor" id="autotoc_md67"></a>
-Pack</h1>
+pod</h1>
 <ul>
-<li>✅ <code>pack &lt;객체이름&gt;</code>으로 하면 그 <code>pack</code> 객체가 생성됩니다. 그 구문 밑에서 정의한 모든 객체며 함수는 이 <code>pack</code>에 속하게 됩니다.</li>
-<li>✅ 따라서 같은 <code>pack</code>을 명시한 소스코드 끼리는 서로 공유가 됩니다.</li>
-<li>✅ <code>pack</code>의 본질은 결국 <code>def</code>처럼, 사용자가 정의한 객체에 불과합니다.</li>
+<li>✅ <code>pod &lt;객체이름&gt;</code>으로 하면 그 <code>pod</code> 객체가 생성됩니다. 그 구문 밑에서 정의한 모든 객체며 함수는 이 <code>pod</code>에 속하게 됩니다.</li>
+<li>✅ 따라서 같은 <code>pod</code>을 명시한 소스코드 끼리는 서로 공유가 됩니다.</li>
+<li>✅ <code>pod</code>의 본질은 결국 <code>def</code>처럼, 사용자가 정의한 객체에 불과합니다.</li>
 </ul>
 <div class="fragment"><div class="line"># file &quot;a.nm&quot; --</div>
-<div class="line">pack example # 이 파일은 example이라는 객체를 `pack` 으로 삼았습니다.</div>
+<div class="line">pod example # 이 파일은 example이라는 객체를 `pod` 으로 삼았습니다.</div>
 <div class="line"># 여기서부터는 사실 example이라는 객체의 내부입니다. 즉 `def example` 과 같습니다.</div>
 <div class="line"># -------------------------------</div>
 <div class="line"># 여기서부터는 `example`의 정의블록문 입니다.</div>
 <div class="line"> </div>
 <div class="line">foo() int # example은 foo() 함수를 갖습니다.</div>
-<div class="line">  print(&quot;this is pack &#39;example&#39;\n&quot;)</div>
+<div class="line">  print(&quot;this is pod &#39;example&#39;\n&quot;)</div>
 <div class="line">  ret 33</div>
 <div class="line"> </div>
 <div class="line">def person # person 이라는 타입도 갖습니다.</div>
@@ -624,13 +624,13 @@ Pack</h1>
 <div class="line">  name := &quot;Chales&quot;</div>
 <div class="line">  ctor(newAge int): age = newAge</div>
 </div><!-- fragment --><ul>
-<li>✅ 이 <code>pack</code>은 시스템이 가져올 수 있는(import) module의 최소 단위입니다. 어떻게 <code>pack</code>을 import 할 수 있는지는 밑에서 얘기할께요.</li>
-<li>✅ <code>main()</code> 함수는 특정 pack에 대한 진입점 입니다.</li>
+<li>✅ 이 <code>pod</code>은 시스템이 가져올 수 있는(import) module의 최소 단위입니다. 어떻게 <code>pod</code>을 import 할 수 있는지는 밑에서 얘기할께요.</li>
+<li>✅ <code>main()</code> 함수는 특정 pod에 대한 진입점 입니다.</li>
 <li>✅ <code>main()</code> 함수는 반환형이 <code>void</code> 혹은 <code>int</code> 여야 합니다.</li>
 <li>✅ <code>main()</code> 함수는 parameter가 비어있거나 <code>str[]</code> 여야 합니다.</li>
 </ul>
 <div class="fragment"><div class="line"># file &quot;b.nm&quot; --</div>
-<div class="line">pack example</div>
+<div class="line">pod example</div>
 <div class="line"># example의 scope 입니다. 그러니 파일이 달라도 example의 모든 식별자에 바로 접근 가능합니다.</div>
 <div class="line"> </div>
 <div class="line">main() void</div>
@@ -649,25 +649,25 @@ scope</h1>
 <li>✅ 1) local scope: 매 블록문마다 scope이 생성되고, 블록문이 끝나면 scope은 메모리에서 사라집니다. 함수가 가진 블록문도 여기에 속합니다.</li>
 <li>✅ 2) func scope: 블록문을 제외하고 함수가 가진 하위 식별자들을 scope에 등록합니다. 함수 호출이 끝나면 scope은 등록이 해제됩니다.</li>
 <li>✅ 3) obj scope: 함수를 가지고 있는 객체의 scope 입니다. 객체가 사라질때 이 scope도 사라집니다.</li>
-<li>✅ 4) pack scope: pack이 제공하는 obj scope 입니다. pack에 속한 obj scope은 해당 pack scope와 항상 연결되어 있습니다. pack은 사라지지 않습니다.</li>
+<li>✅ 4) pod scope: pod이 제공하는 obj scope 입니다. pod에 속한 obj scope은 해당 pod scope와 항상 연결되어 있습니다. pod은 사라지지 않습니다.</li>
 <li>✅ 5) file scope: 각 소스코드 파일 내에서만 접근 가능한 scope 입니다. 해당 파일의 코드가 실행될때만 scope이 등록됩니다.</li>
 </ul>
 </li>
 <li>✅ scope의 우선순위는 위의 언급한 숫자가 작을 수록 높습니다. (local scope이 제일 높음)</li>
-<li>✅ 보통 file scope에 외부 pack을 import 하기 위한 코드를 작성합니다.</li>
+<li>✅ 보통 file scope에 외부 pod을 import 하기 위한 코드를 작성합니다.</li>
 </ul>
-<div class="fragment"><div class="line">pack mypack</div>
-<div class="line"># 여기서부터는 pack scope:</div>
-<div class="line">age := 27 # mypack.a</div>
+<div class="fragment"><div class="line">pod mypod</div>
+<div class="line"># 여기서부터는 pod scope:</div>
+<div class="line">age := 27 # mypod.a</div>
 <div class="line"> </div>
 <div class="line">def Person</div>
 <div class="line">    # Person에 대한 obj scope:</div>
 <div class="line">    name str</div>
 <div class="line">    ctor(newName str): name = newName</div>
 <div class="line">    hello() void</div>
-<div class="line">        # age는 pack scope에서 왔습니다.</div>
+<div class="line">        # age는 pod scope에서 왔습니다.</div>
 <div class="line">        print(&quot;I&#39;m $name and $age yo.\n&quot;)</div>
-<div class="line">        # print(&quot;I&#39;m ${me.name} and ${mypack.age} yo.\n&quot;) 처럼 해도 되긴 합니다.</div>
+<div class="line">        # print(&quot;I&#39;m ${me.name} and ${mypod.age} yo.\n&quot;) 처럼 해도 되긴 합니다.</div>
 <div class="line"> </div>
 <div class="line">foo() str</div>
 <div class="line">    # local scope:</div>
@@ -683,13 +683,13 @@ scope</h1>
 <div class="line"># Person이 소속된 코드가 끝났으므로, Person은 사라집니다.</div>
 <div class="line"># Person이 가졌던 name에 대한 참조도 사라지므로, name 또한 사라집니다.</div>
 </div><!-- fragment --><ul>
-<li>✅ <code>pack</code> 키워드 보다 윗 공간은 file scope 입니다.</li>
+<li>✅ <code>pod</code> 키워드 보다 윗 공간은 file scope 입니다.</li>
 <li>✅ 하나의 scope 안에서 같은 식별자를 정의할 수 없습니다.</li>
 <li>✅ 위 얘기는 scope이 다르다면 이름이 같아도 된다는 뜻이죠.</li>
 </ul>
 <div class="fragment"><div class="line"># file &quot;a.nm&quot; --</div>
-<div class="line">pack example</div>
-<div class="line"># 여기서부터는 pack scope.</div>
+<div class="line">pod example</div>
+<div class="line"># 여기서부터는 pod scope.</div>
 <div class="line">age := 4</div>
 <div class="line"> </div>
 <div class="line">foo() void</div>
@@ -700,12 +700,12 @@ scope</h1>
 <div class="line"># 여기서부터는 file scope:</div>
 <div class="line">age := 5</div>
 <div class="line"># 이 age는 이 파일에서만 유효합니다.</div>
-<div class="line"># example에도 `age` 라는 프로퍼티가 존재하기 때문에, 사실상 pack scope의 age를 덮어쓰는 효과가 발생합니다.</div>
+<div class="line"># example에도 `age` 라는 프로퍼티가 존재하기 때문에, 사실상 pod scope의 age를 덮어쓰는 효과가 발생합니다.</div>
 <div class="line"># 인터프리터가 이 점에 대해 경고를 내보낼 겁니다.</div>
 <div class="line"> </div>
-<div class="line">pack example</div>
+<div class="line">pod example</div>
 <div class="line"># -----------------------------------------------</div>
-<div class="line"># 여기서부터는 pack scope:</div>
+<div class="line"># 여기서부터는 pod scope:</div>
 <div class="line">def Person</div>
 <div class="line">  age := 3 # 눈치채셨나요? 사실 이 값들은 위에서 말한 우선순위를 나타내고 있습니다.</div>
 <div class="line">  hello() void</div>
@@ -718,17 +718,17 @@ scope</h1>
 <div class="line">  print(age) # &quot;4&quot;</div>
 <div class="line">  Person().hello() # &quot;3&quot; 출력.</div>
 </div><!-- fragment --><ul>
-<li>☐ obj가 아니라 pack scope 혹은 file scope 에 속한 식별자에 접근할때는 <code>pack</code>을 사용합니다.</li>
+<li>☐ obj가 아니라 pod scope 혹은 file scope 에 속한 식별자에 접근할때는 <code>pod</code>을 사용합니다.</li>
 </ul>
 <div class="fragment"><div class="line">scope := &quot;file&quot;</div>
-<div class="line">pack example</div>
-<div class="line">scope := &quot;pack&quot;</div>
+<div class="line">pod example</div>
+<div class="line">scope := &quot;pod&quot;</div>
 <div class="line"> </div>
 <div class="line">def A</div>
 <div class="line">  age := &quot;obj&quot;</div>
 <div class="line">  foo() void</div>
 <div class="line">    age := &quot;local&quot;</div>
-<div class="line">    print(&quot;$age ${me.age} ${pack.age}&quot;)</div>
+<div class="line">    print(&quot;$age ${me.age} ${pod.age}&quot;)</div>
 <div class="line"># 결과:</div>
 <div class="line">#  local obj file</div>
 </div><!-- fragment --><hr  />
@@ -1059,7 +1059,7 @@ Pattern Matching</h1>
 <div class="line">    p.name</div>
 </div><!-- fragment --><ul>
 <li>✅ 이처럼 Byeol 언어는 클래스란 개념이 없습니다.</li>
-<li>✅ origin 객체란, pack 안에 소속되어 시스템에 Global 하게 알려진 객체 하나에 불과합니다.</li>
+<li>✅ origin 객체란, pod 안에 소속되어 시스템에 Global 하게 알려진 객체 하나에 불과합니다.</li>
 <li>✅ 그러니 클래스라는 개념은 잊어버리세요.</li>
 </ul>
 <hr  />
@@ -1294,7 +1294,7 @@ with</h1>
 <li>☐ 블록문을 제공하지 않고도 <code>with</code>를 사용할 수 있습니다.</li>
 <li>☐ 이 경우, 해당 시점부터 <code>with</code> 구문을 가지는 블록문에서 벗어날때까지 지속됩니다.</li>
 </ul>
-<div class="fragment"><div class="line">pack example</div>
+<div class="fragment"><div class="line">pod example</div>
 <div class="line">age := 23 # example.age 입니다.</div>
 <div class="line"> </div>
 <div class="line">def Person</div>
@@ -1430,7 +1430,7 @@ with</h1>
 </div><!-- fragment --><ul>
 <li>☐ 하지만 분명히 다릅니다.</li>
 </ul>
-<div class="fragment"><div class="line">pack example</div>
+<div class="fragment"><div class="line">pod example</div>
 <div class="line"> </div>
 <div class="line">def A</div>
 <div class="line">    boo() void</div>
@@ -1475,7 +1475,7 @@ with</h1>
 <li>☐ <code>A::B</code>는 <code>A.B</code>와 마찬가지로 A에 있는 B에 접근합니다. 단, 이 과정에서 obj scope이 변경되지 않습니다.</li>
 <li>☐ 단 <code>A</code>는 현재 <code>me</code>가 확장한 타입이어야 합니다.</li>
 </ul>
-<div class="fragment"><div class="line">pack example</div>
+<div class="fragment"><div class="line">pod example</div>
 <div class="line"> </div>
 <div class="line">def A</div>
 <div class="line">    boo() void</div>
@@ -1659,10 +1659,10 @@ import</h1>
 </ul>
 </li>
 <li>☐ byeol언어에서는 1은 manifest를 통해 해결합니다.</li>
-<li>☐ manifest 파일을 작성해서, 어떠한 외부 pack을 가져올 것인지 정의합니다.</li>
+<li>☐ manifest 파일을 작성해서, 어떠한 외부 pod을 가져올 것인지 정의합니다.</li>
 <li>✅ mainfest는 byeol 언어를 환경설정 목적으로 특화/경량화한 <code>leaf</code> 언어로 작성됩니다.</li>
 <li>✅ <code>leaf</code> 언어는 byeol 언어와 거의 똑같습니다.</li>
-<li>☐ import 하려는 pack들의 충돌 문제를 완화할 수 있습니다.</li>
+<li>☐ import 하려는 pod들의 충돌 문제를 완화할 수 있습니다.</li>
 </ul>
 <div class="fragment"><div class="line">def manifest</div>
 <div class="line">    import fjson@chales.lee:1.2.* as json1</div>
@@ -1670,7 +1670,7 @@ import</h1>
 </div><!-- fragment --><ul>
 <li>☐ import 기능 2은 <code>with</code>나 <code>:=</code>를 사용합니다.</li>
 </ul>
-<div class="fragment"><div class="line">with openai # 이제 openai pack의 모든 sub가 이 파일에 확장됩니다.</div>
+<div class="fragment"><div class="line">with openai # 이제 openai pod의 모든 sub가 이 파일에 확장됩니다.</div>
 <div class="line"> </div>
 <div class="line">main() void</div>
 <div class="line">    p openai.Parser</div>
@@ -1959,7 +1959,7 @@ Annotation</h1>
 <ul>
 <li>간결한 언어입니다.</li>
 <li>byeol:<ul>
-<li>pack, def, in, as, is, for, while, next, break, with, if, else, ret, enum, get, set, end, only</li>
+<li>pod, def, in, as, is, for, while, next, break, with, if, else, ret, enum, get, set, end, only</li>
 </ul>
 </li>
 <li>C:<ul>

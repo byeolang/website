@@ -16,9 +16,9 @@ var searchData=
   ['whileexpr_2ehpp_13',['whileExpr.hpp',['../while_expr_8hpp.html',1,'']]],
   ['why_20cast_20origin_20returns_20nullptr_14',['Why cast&lt;origin&gt;() Returns nullptr',['../classby_1_1origin.html#why_cast_origin_returns_null',1,'']]],
   ['why_20not_20use_20shared_5fptr_15',['Why not use shared_ptr?',['../classby_1_1binder.html#why_not_shared_ptr',1,'']]],
-  ['windows_16',['Windows',['../ab-dev-env.html#autotoc_md48',1,'']]],
-  ['windows_20visual_20studio_17',['Windows (Visual Studio)',['../ab-dev-env.html#autotoc_md22',1,'']]],
-  ['windows_20wsl_18',['Windows WSL',['../ab-dev-env.html#autotoc_md29',1,'']]],
+  ['windows_16',['Windows',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md48',1,'']]],
+  ['windows_20visual_20studio_17',['Windows (Visual Studio)',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md22',1,'']]],
+  ['windows_20wsl_18',['Windows WSL',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md29',1,'']]],
   ['with_20debug_20info_20빌드_20reldbg_19',['Release with Debug Info 빌드 (reldbg)',['../ac-build-structure.html#autotoc_md90',1,'']]],
   ['with_20function_20calls_20',['Frames are Created with Function Calls',['../classby_1_1frame.html#frame_creation_with_function_call',1,'']]],
   ['with_20pool_21',['Coordination with pool',['../classby_1_1chunks.html#pool_coordination',1,'']]],
@@ -31,5 +31,5 @@ var searchData=
   ['workeradapter_3c_20void_2c_20t_20_3e_28',['workerAdapter&lt; void, T &gt;',['../structby_1_1worker_adapter_3_01void_00_01_t_01_4.html',1,'by']]],
   ['wrap_29',['wrap',['../structby_1_1smultimap_1_1wrap.html',1,'by::smultimap&lt; K, V &gt;::wrap'],['../classby_1_1tnchain.html#a153962bc5df4f3de4f39f991b5e20ef5',1,'by::tnchain::wrap()']]],
   ['wrap_30',['Wrap',['../ag-architecture-clog.html#autotoc_md208',1,'wrap'],['../structby_1_1no_wrap.html#wrap',1,'wrap']]],
-  ['wsl_31',['Windows WSL',['../ab-dev-env.html#autotoc_md29',1,'']]]
+  ['wsl_31',['Windows WSL',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md29',1,'']]]
 ];

@@ -304,12 +304,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_onEndErrReport</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>Program execution starter </p>
-<p>A kind of worker that executes AST verified by <a class="el" href="classby_1_1verifier.html">verifier</a>. If an exception occurs in <a class="el" href="classby_1_1autopack.html#thread">is required to run an autopack</a> during execution, it dumps logs and returns the exception. See worker for more details if unfamiliar with the worker concept.</p>
+<p>A kind of worker that executes AST verified by <a class="el" href="classby_1_1verifier.html">verifier</a>. If an exception occurs in <a class="el" href="classby_1_1autopod.html#thread">is required to run an autopod</a> during execution, it dumps logs and returns the exception. See worker for more details if unfamiliar with the worker concept.</p>
 <h1><a class="anchor" id="main_function_lookup"></a>
 Main Function Look Up</h1>
 <p>The main function must meet the following conditions:</p>
 <ol type="1">
-<li>Found directly under root (pack)</li>
+<li>Found directly under root (pod)</li>
 <li>Name must be <code>main</code></li>
 <li>Return type must be void or int</li>
 <li>Main function must have 1 or more statements</li>
@@ -321,7 +321,7 @@ Usage Example</h1>
 <div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">ip</a>.work();</div>
 <div class="line"><span class="keywordflow">if</span>(!<a class="code hl_struct" href="structby_1_1no_wrap.html">ip</a>.isVerified()) <span class="keywordflow">return</span> -1;</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classby_1_1tstr.html">str</a> res = <a class="code hl_class" href="classby_1_1starter.html">starter</a>().setTask(<a class="code hl_struct" href="structby_1_1no_wrap.html">ip</a>.getSubPack()).work();</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tstr.html">str</a> res = <a class="code hl_class" href="classby_1_1starter.html">starter</a>().setTask(<a class="code hl_struct" href="structby_1_1no_wrap.html">ip</a>.getSubPod()).work();</div>
 <div class="line"><span class="keywordflow">if</span>(res)</div>
 <div class="line">    <span class="keywordflow">if</span>(res-&gt;isSub&lt;<a class="code hl_class" href="classby_1_1n_int.html">nInt</a>&gt;()) <span class="keywordflow">return</span> *res-&gt;cast&lt;<a class="code hl_class" href="classby_1_1n_int.html">nInt</a>&gt;();</div>
 <div class="line"><span class="keywordflow">return</span> -1;</div>

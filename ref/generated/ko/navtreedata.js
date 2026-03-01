@@ -38,34 +38,7 @@ var NAVTREE =
       ] ],
       [ "본격적으로 시작해보죠.", "aa-onboarding.html#autotoc_md14", null ]
     ] ],
-    [ "개발환경", "ab-dev-env.html", [
-      [ "빌드", "ab-dev-env.html#autotoc_md17", [
-        [ "사전 준비", "ab-dev-env.html#autotoc_md18", null ]
-      ] ],
-      [ "빌드하기", "ab-dev-env.html#autotoc_md20", [
-        [ "Ubuntu / Mac", "ab-dev-env.html#autotoc_md21", null ],
-        [ "Windows (Visual Studio)", "ab-dev-env.html#autotoc_md22", null ]
-      ] ],
-      [ "바이너리 확인", "ab-dev-env.html#autotoc_md24", null ],
-      [ "디버깅", "ab-dev-env.html#autotoc_md26", [
-        [ "Ubuntu", "ab-dev-env.html#autotoc_md27", null ],
-        [ "Windows WSL", "ab-dev-env.html#autotoc_md29", null ],
-        [ "Mac OS", "ab-dev-env.html#autotoc_md31", null ]
-      ] ],
-      [ "테스트", "ab-dev-env.html#autotoc_md33", null ],
-      [ "가이드 / 레퍼런스 문서 생성", "ab-dev-env.html#autotoc_md35", [
-        [ "문서 생성 알고리즘", "ab-dev-env.html#autotoc_md36", null ],
-        [ "문서의 종류", "ab-dev-env.html#autotoc_md38", null ],
-        [ "문서의 doxygen 커스터마이징", "ab-dev-env.html#autotoc_md40", null ]
-      ] ],
-      [ "Core dump", "ab-dev-env.html#autotoc_md42", [
-        [ "Prerequisites", "ab-dev-env.html#autotoc_md43", null ],
-        [ "Coredump 생성", "ab-dev-env.html#autotoc_md45", [
-          [ "Linux / Mac", "ab-dev-env.html#autotoc_md46", null ],
-          [ "Windows", "ab-dev-env.html#autotoc_md48", null ]
-        ] ]
-      ] ]
-    ] ],
+    [ "ab-dev-env", "md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html", null ],
     [ "프로젝트 구조 및 빌드 산출물", "ac-build-structure.html", [
       [ "프로젝트 디렉토리 구조", "ac-build-structure.html#autotoc_md51", null ],
       [ "디렉토리 설명", "ac-build-structure.html#autotoc_md53", [
@@ -87,7 +60,7 @@ var NAVTREE =
         [ "libcore", "ac-build-structure.html#autotoc_md79", null ]
       ] ],
       [ "기타 산출물", "ac-build-structure.html#autotoc_md80", [
-        [ "pack/ - 팩 파일", "ac-build-structure.html#autotoc_md81", null ],
+        [ "pod/ - 팩 파일", "ac-build-structure.html#autotoc_md81", null ],
         [ "testdata/ - 테스트 데이터", "ac-build-structure.html#autotoc_md83", null ]
       ] ],
       [ "빌드 타겟", "ac-build-structure.html#autotoc_md85", [
@@ -253,12 +226,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_f_b_o_expr_8hpp.html",
-"ak-architecture-core.html#autotoc_md387",
-"classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c",
-"classby_1_1parser.html#a111606c5231246d600574b78e3e32e6c",
-"core_2common_2def_8hpp.html",
-"immutable_tactic_8hpp.html",
-"structby_1_1build_feature_1_1platform.html"
+"ak-architecture-core.html#autotoc_md441",
+"classby_1_1def_array_expr.html#a8e1df4000b12eccfcb8795db1517fbe5",
+"classby_1_1pod_loading.html",
+"ctor_8hpp.html",
+"initiator_8hpp_source.html",
+"structby_1_1tif_sub.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

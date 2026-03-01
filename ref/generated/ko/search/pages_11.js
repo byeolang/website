@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['문서_20작성_20규칙_0',['문서 작성 규칙',['../an-document-convention.html',1,'']]]
+  ['메모리_20관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
 ];

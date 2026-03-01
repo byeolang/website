@@ -123,7 +123,7 @@ var ae_architecture_overview =
         [ "modifier 클래스 - 접근 제한자", "ak-architecture-core.html#autotoc_md336", null ],
         [ "defaultCopyCtor 클래스 - 기본 복사 생성자", "ak-architecture-core.html#autotoc_md338", null ],
         [ "immutableTactic 클래스 - Immutable 타입 처리", "ak-architecture-core.html#autotoc_md340", null ],
-        [ "manifest 클래스 - Pack 메타데이터", "ak-architecture-core.html#autotoc_md342", null ],
+        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md342", null ],
         [ "tmock 클래스 - Proxy 객체", "ak-architecture-core.html#autotoc_md344", null ]
       ] ],
       [ "표현식 (Expression) 시스템", "ak-architecture-core.html#autotoc_md346", [
@@ -160,12 +160,12 @@ var ae_architecture_overview =
         [ "thread 클래스 - 실행 흐름의 관리자", "ak-architecture-core.html#autotoc_md410", null ]
       ] ],
       [ "패키지 시스템", "ak-architecture-core.html#autotoc_md413", [
-        [ "manifest 클래스 - Pack 메타데이터", "ak-architecture-core.html#autotoc_md415", null ],
-        [ "pack 클래스 - Pack의 결과물", "ak-architecture-core.html#autotoc_md417", null ],
-        [ "autopack 클래스 - Lazy Pack 로딩", "ak-architecture-core.html#autotoc_md419", null ],
-        [ "packLoader 클래스 - Pack 로더", "ak-architecture-core.html#autotoc_md424", null ],
-        [ "packLoading 클래스 - Pack 로딩 추상 클래스", "ak-architecture-core.html#autotoc_md427", null ],
-        [ "cppPackLoading 클래스 - C++ Pack 로더", "ak-architecture-core.html#autotoc_md429", null ]
+        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md415", null ],
+        [ "pod 클래스 - pod의 결과물", "ak-architecture-core.html#autotoc_md417", null ],
+        [ "autopod 클래스 - Lazy pod 로딩", "ak-architecture-core.html#autotoc_md419", null ],
+        [ "podLoader 클래스 - pod 로더", "ak-architecture-core.html#autotoc_md424", null ],
+        [ "podLoading 클래스 - Pod 로딩 추상 클래스", "ak-architecture-core.html#autotoc_md427", null ],
+        [ "cppPodLoading 클래스 - C++ Pod 로더", "ak-architecture-core.html#autotoc_md429", null ]
       ] ],
       [ "Visitor 패턴 및 AST 순회", "ak-architecture-core.html#autotoc_md431", [
         [ "visitor 클래스 - AST 순회의 핵심", "ak-architecture-core.html#autotoc_md433", null ],

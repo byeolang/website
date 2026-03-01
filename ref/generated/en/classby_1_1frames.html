@@ -497,7 +497,7 @@ nbool <a class="el" href="classby_1_1tucontainable.html#a9063ac34e9e2d84809351af
 <p>Stack-based container managing execution frames for nested function calls. Since frames are closely related to the call stack, the frame created by the most recently called function comes first — in other words, it follows a LIFO (Last-In-First-Out) structure.</p>
 <h1><a class="anchor" id="relationship_with_thread"></a>
 Relationship with thread</h1>
-<p>Each <a class="el" href="classby_1_1autopack.html#thread">is required to run an autopack</a> instance owns a frames object. When a function is called during program execution, a new <a class="el" href="classby_1_1frame.html">frame</a> is pushed onto the frames stack. When the function returns, the frame is popped. This maintains the execution context for nested function calls and provides proper scoping for variables.</p>
+<p>Each <a class="el" href="classby_1_1autopod.html#thread">is required to run an autopod</a> instance owns a frames object. When a function is called during program execution, a new <a class="el" href="classby_1_1frame.html">frame</a> is pushed onto the frames stack. When the function returns, the frame is popped. This maintains the execution context for nested function calls and provides proper scoping for variables.</p>
 <h1><a class="anchor" id="frame_lifecycle"></a>
 Frame Lifecycle</h1>
 <p>Frames follow RAII principles - they are created when entering a function context and removed when exiting. However, as mentioned in <a class="el" href="classby_1_1base_err.html">baseErr</a> documentation, frames may continue to exist even after being removed from the stack if they are referenced by error objects (for callstack preservation). </p>

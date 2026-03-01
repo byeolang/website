@@ -218,16 +218,16 @@ Public 속성</h2></td></tr>
 <p>A lightweight C++ logging framework facade that enables systematic logging through multiple logging destinations called <a class="el" href="classby_1_1stream.html">stream</a>. Typically used through accompanying macros.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p>Basic usage with macros: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;packs[%s] origins loaded.&quot;</span>, getName());</div>
-</div><!-- fragment --><p>This produces output like: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">Oct</a> 22 2025  21:26:13 <a class="code hl_struct" href="structby_1_1no_wrap.html">I</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">cppPackLo &lt;_loadLibs#49&gt;</a> <a class="code hl_class" href="classby_1_1pack.html">pack</a>[<a class="code hl_struct" href="structby_1_1no_wrap.html">cpp</a>] <a class="code hl_struct" href="structby_1_1no_wrap.html">origins</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">loaded</a>.</div>
-<div class="ttc" id="aclassby_1_1pack_html"><div class="ttname"><a href="classby_1_1pack.html">by::pack</a></div><div class="ttdoc">Pack</div><div class="ttdef"><b>Definition</b> pack.hpp:21</div></div>
+<p>Basic usage with macros: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;pods[%s] origins loaded.&quot;</span>, getName());</div>
+</div><!-- fragment --><p>This produces output like: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">Oct</a> 22 2025  21:26:13 <a class="code hl_struct" href="structby_1_1no_wrap.html">I</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">cppPodLoa &lt;_loadLibs#49&gt;</a> <a class="code hl_class" href="classby_1_1pod.html">pod</a>[<a class="code hl_struct" href="structby_1_1no_wrap.html">cpp</a>] <a class="code hl_struct" href="structby_1_1no_wrap.html">origins</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">loaded</a>.</div>
+<div class="ttc" id="aclassby_1_1pod_html"><div class="ttname"><a href="classby_1_1pod.html">by::pod</a></div><div class="ttdoc">Pod</div><div class="ttdef"><b>Definition</b> pod.hpp:21</div></div>
 <div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --><p>The log shows:</p><ol type="1">
 <li>Date (Oct 22 2025) and time (21:26:13)</li>
 <li>Log level (I for Info) - ERR, WARN, INFO are available</li>
-<li>Class name (<a class="el" href="classby_1_1cpp_pack_loading.html" title="C++ native pack loading implementation">cppPackLoading</a>, abbreviated)</li>
+<li>Class name (<a class="el" href="classby_1_1cpp_pod_loading.html" title="C++ native pod loading implementation">cppPodLoading</a>, abbreviated)</li>
 <li>Function (_loadLibs) and line number (49)</li>
-<li>Log message (pack[cpp] origins loaded)</li>
+<li>Log message (pod[cpp] origins loaded)</li>
 </ol>
 <h1><a class="anchor" id="stream_concept"></a>
 stream</h1>

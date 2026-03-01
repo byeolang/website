@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stela_20모듈_20경량_20설정_20언어_0',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]]
+  ['frontend_20모듈_20cli_20인터페이스_0',['frontend 모듈 - CLI 인터페이스',['../al-architecture-frontend.html',1,'ae-architecture-overview']]]
 ];

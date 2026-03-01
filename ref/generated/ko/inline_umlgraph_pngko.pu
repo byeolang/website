@@ -1541,7 +1541,7 @@ node --> s: main()
 group prepare thread
   create participant thread
   s -> thread: make a thread
-  s -> node: load pack holding main()
+  s -> node: load pod holding main()
   activate node
   node -> thread: load its symbol
   activate thread
@@ -1640,8 +1640,8 @@ package bridge {
 baseObj <|-- tbridge
 
 package loader {
-  class pack
-  class packLoader
+  class pod
+  class podLoader
 }
 
 package "frame" as frame1 {
@@ -1652,7 +1652,7 @@ package "frame" as frame1 {
 node <|-- frame
 thread *-- frame
 starter ..> thread: make and run main()
-thread --> packLoader: start loading
+thread --> podLoader: start loading
 
 package worker {
   class interpreter {
@@ -2530,15 +2530,15 @@ stop
 @enduml
 @startuml inline_umlgraph_30.png
 actor "User Code" as user
-participant "packLoader" as loader
-participant "autopack" as autopack
-participant "packLoading" as packLoading
+participant "pod" as loader
+participant "autopod" as autopod
+participant "podLoading" as podLoading
 participant "manifest" as manifest
 participant "File System" as fs
 
-== Pack Registration Phase ==
+== Pod Registration Phase ==
 
-user -> loader : addPack("mylib")
+user -> loader : addPod("mylib")
 activate loader
 
 loader -> fs : Find manifest.stela
@@ -2561,31 +2561,31 @@ end note
 manifest --> loader : manifest object
 deactivate manifest
 
-loader -> packLoading : Create (native/script)
-activate packLoading
+loader -> podLoading : Create (native/script)
+activate podLoading
 
-note right of packLoading
-  <b>packLoading Type:</b>
+note right of podLoading
+  <b>podLoading Type:</b>
   - .byeol file → script
   - .so/.dll file → native
   - or both
 end note
 
-packLoading --> loader : packLoading[]
-deactivate packLoading
+podLoading --> loader : podLoading[]
+deactivate podLoading
 
-loader -> autopack : Create (RELEASED state)
-activate autopack
+loader -> autopod : Create (RELEASED state)
+activate autopod
 
-note right of autopack
+note right of autopod
   <b>Initial State:</b>
   state = RELEASED
   No memory occupation
-  Store packLoadings only
+  Store podLoadings only
 end note
 
-autopack --> loader : autopack object
-deactivate autopack
+autopod --> loader : autopod object
+deactivate autopod
 
 loader -> loader : Register dependencies
 note right of loader
@@ -2598,8 +2598,8 @@ deactivate loader
 
 == Lazy Loading Phase (On symbol access) ==
 
-user -> autopack : Access mylib.someFunc()
-activate autopack
+user -> autopod : Access mylib.someFunc()
+activate autopod
 
 note right of user
   <b>Lazy Loading Trigger:</b>
@@ -2607,41 +2607,41 @@ note right of user
   until actual usage
 end note
 
-autopack -> autopack : state == RELEASED?
-note right of autopack
+autopod -> autopod : state == RELEASED?
+note right of autopod
   Since it's first access
   start loading
 end note
 
 == PARSED Phase ==
 
-autopack -> packLoading : parse()
-activate packLoading
+autopod -> podLoading : parse()
+activate podLoading
 
-packLoading -> fs : Read .byeol file
+podLoading -> fs : Read .byeol file
 activate fs
 
-fs --> packLoading : Source code
+fs --> podLoading : Source code
 deactivate fs
 
-packLoading -> packLoading : Run parser
-note right of packLoading
+podLoading -> podLoading : Run parser
+note right of podLoading
   Create AST
-  (Skip for native pack)
+  (Skip for native pod)
 end note
 
-packLoading --> autopack : AST
-deactivate packLoading
+podLoading --> autopod : AST
+deactivate podLoading
 
-autopack -> autopack : state = PARSED
+autopod -> autopod : state = PARSED
 
 == VERIFIED Phase ==
 
-autopack -> packLoading : verify()
-activate packLoading
+autopod -> podLoading : verify()
+activate podLoading
 
-packLoading -> packLoading : Run verification
-note right of packLoading
+podLoading -> podLoading : Run verification
+note right of podLoading
   <b>Verification Items:</b>
   - Type checking
   - Syntax verification
@@ -2650,63 +2650,63 @@ end note
 
 alt Verification Success
 
-    packLoading --> autopack : isValid = true
-    autopack -> autopack : state = VERIFIED
+    podLoading --> autopod : isValid = true
+    autopod -> autopod : state = VERIFIED
 
 else Verification Failed
 
-    packLoading --> autopack : isValid = false
-    autopack -> autopack : state = VERIFIED\n(Mark as failed)
+    podLoading --> autopod : isValid = false
+    autopod -> autopod : state = VERIFIED\n(Mark as failed)
 
 end
 
-deactivate packLoading
+deactivate podLoading
 
 == LINKED Phase ==
 
-autopack -> packLoading : link()
-activate packLoading
+autopod -> podLoading : link()
+activate podLoading
 
 alt isValid == true
 
-    packLoading -> packLoading : Linking complete
-    packLoading --> autopack : Success
+    podLoading -> podLoading : Linking complete
+    podLoading --> autopod : Success
 
-    autopack -> autopack : state = LINKED
+    autopod -> autopod : state = LINKED
 
 else isValid == false
 
-    packLoading --> autopack : Failure
+    podLoading --> autopod : Failure
 
-    autopack -> autopack : state = LINKED\nPropagate to dependent packs
+    autopod -> autopod : state = LINKED\nPropagate to dependent pods
 
-    note right of autopack
+    note right of autopod
       <b>Failure Propagation:</b>
       Propagate failure fact
       to all dependents
-      that rely on this pack
+      that rely on this pod
     end note
 
 end
 
-deactivate packLoading
+deactivate podLoading
 
-autopack --> user : Return symbol or error
-deactivate autopack
+autopod --> user : Return symbol or error
+deactivate autopod
 @enduml
 @startuml inline_umlgraph_31.png
-[*] --> RELEASED : Create autopack
+[*] --> RELEASED : Create autopod
 
 state RELEASED {
     RELEASED : Initial state
     RELEASED : No memory occupation
-    RELEASED : Most packs are in this state
+    RELEASED : Most pods are in this state
 }
 
 state PARSED {
     PARSED : Code parsing complete
     PARSED : AST created
-    PARSED : Native pack skips this step
+    PARSED : Native pod skips this step
 }
 
 state VERIFIED {
@@ -2718,15 +2718,15 @@ state VERIFIED {
 state LINKED {
     LINKED : Final state
     LINKED : Ready for execution
-    LINKED : Propagate to dependent pack on verification failure
+    LINKED : Propagate to dependent pod on verification failure
 }
 
-RELEASED --> PARSED : On symbol access\npackLoading.parse()
-RELEASED --> LINKED : native/optimized pack\nParsing unnecessary
+RELEASED --> PARSED : On symbol access\npodLoading.parse()
+RELEASED --> LINKED : native/optimized pod\nParsing unnecessary
 
-PARSED --> VERIFIED : packLoading.verify()
+PARSED --> VERIFIED : podLoading.verify()
 
-VERIFIED --> LINKED : packLoading.link()
+VERIFIED --> LINKED : podLoading.link()
 
 note right of RELEASED
   <b>Lazy Loading:</b>
@@ -2744,13 +2744,13 @@ note bottom of VERIFIED
   <b>On Verification Failure:</b>
   Set isValid = false
   Propagate failure
-  to dependent packs in LINKED phase
+  to dependent pods in LINKED phase
 end note
 
 note right of LINKED
   <b>Dependency Propagation:</b>
   If verification failed
-  Mark all packs
+  Mark all pods
   depending on this as failed
 end note
 @enduml

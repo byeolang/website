@@ -167,8 +167,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setEx</b> (<a class="
 <tr class="separator:a4974ca3d92fdaf1c15401799ee4d7bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05563f2bb3df2fa85310a0f37f47c343" id="r_a05563f2bb3df2fa85310a0f37f47c343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05563f2bb3df2fa85310a0f37f47c343">rel</a> () <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="separator:a05563f2bb3df2fa85310a0f37f47c343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7edfdffc7393049809919c64bb58ef9" id="r_ac7edfdffc7393049809919c64bb58ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7edfdffc7393049809919c64bb58ef9">getPacks</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
-<tr class="separator:ac7edfdffc7393049809919c64bb58ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdb1907de6ad6e5cb5af85dca3f7d48" id="r_a1cdb1907de6ad6e5cb5af85dca3f7d48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cdb1907de6ad6e5cb5af85dca3f7d48">getPods</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="separator:a1cdb1907de6ad6e5cb5af85dca3f7d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4437c950295a6348a986aa6e4f20d4d8" id="r_a4437c950295a6348a986aa6e4f20d4d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4437c950295a6348a986aa6e4f20d4d8">dump</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="memdesc:a4437c950295a6348a986aa6e4f20d4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump object state for debugging  <br /></td></tr>
 <tr class="separator:a4437c950295a6348a986aa6e4f20d4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -569,7 +569,7 @@ T sub&#160;</td><td class="memItemRight" valign="bottom"><b>nullptr</b></td></tr
 <p>Represents a single program execution flow. Currently only supports single threading. thread has <a class="el" href="classby_1_1frames.html">frames</a> and <a class="el" href="classby_1_1err_report.html">errReport</a>, allowing it to construct <a class="el" href="classby_1_1frame.html">frame</a> when executing a program and collect <a class="el" href="classby_1_1err.html">err</a> that occurs during execution.</p>
 <h1><a class="anchor" id="builtin"></a>
 Builtin</h1>
-<p>The builtin pack consists of types/functions provided by default in the byeol language. They are always accessible without separate manifest declaration. It's similar to the standard pack, but this is a distinctly separate pack written in byeol code. However, the builtin pack is entirely in the form of exposing C++ native classes using <a class="el" href="classby_1_1tbridger.html">tbridger</a>. The types included here are only the most basic symbols like <code>int</code>, <code>str</code>, <code>arr</code>, <code>err</code>, <code>print()</code>.</p>
+<p>The builtin pod consists of types/functions provided by default in the byeol language. They are always accessible without separate manifest declaration. It's similar to the standard pod, but this is a distinctly separate pod written in byeol code. However, the builtin pod is entirely in the form of exposing C++ native classes using <a class="el" href="classby_1_1tbridger.html">tbridger</a>. The types included here are only the most basic symbols like <code>int</code>, <code>str</code>, <code>arr</code>, <code>err</code>, <code>print()</code>.</p>
 <h1><a class="anchor" id="singleton_property"></a>
 Singleton Property</h1>
 <p>thread provides <code>static thread&amp; get()</code>. Through this, <a class="el" href="group__core.html#gaec057623c97cf8804f9f793f36f492df">scope</a> or <a class="el" href="classby_1_1expr.html">expr</a> can access the currently active thread object. When not using the default thread and creating a thread instance directly to run a program, it's necessary to register the thread object and replace it with the original thread instance when the program ends. To make this easier, use <a class="el" href="classby_1_1thread_use.html">threadUse</a>.</p>
@@ -717,21 +717,21 @@ Singleton Property</h1>
 
 </div>
 </div>
-<a id="ac7edfdffc7393049809919c64bb58ef9" name="ac7edfdffc7393049809919c64bb58ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7edfdffc7393049809919c64bb58ef9">&#9670;&#160;</a></span>getPacks()</h2>
+<a id="a1cdb1907de6ad6e5cb5af85dca3f7d48" name="a1cdb1907de6ad6e5cb5af85dca3f7d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdb1907de6ad6e5cb5af85dca3f7d48">&#9670;&#160;</a></span>getPods()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp; by::thread::getPacks </td>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nmap</a> &amp; by::thread::getPods </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>반환값</dt><dd>pack instances loaded by internal system. you can cast these to 'pack' types. </dd></dl>
+<dl class="section return"><dt>반환값</dt><dd>pod instances loaded by internal system. you can cast these to 'pod' types. </dd></dl>
 
 </div>
 </div>

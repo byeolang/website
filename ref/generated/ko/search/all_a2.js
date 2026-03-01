@@ -7,7 +7,7 @@ var searchData=
   ['추론_4',['expander 클래스 - 사전 타입 추론',['../ak-architecture-core.html#autotoc_md448',1,'']]],
   ['추상화_5',['srcSupply 클래스 - 소스 코드 공급 추상화',['../ak-architecture-core.html#autotoc_md446',1,'']]],
   ['추상화_20계층_6',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]],
-  ['추상_20클래스_7',['packLoading 클래스 - Pack 로딩 추상 클래스',['../ak-architecture-core.html#autotoc_md427',1,'']]],
+  ['추상_20클래스_7',['podLoading 클래스 - Pod 로딩 추상 클래스',['../ak-architecture-core.html#autotoc_md427',1,'']]],
   ['추적되는_20파일_8',['추적되는 파일',['../ac-build-structure.html#autotoc_md99',1,'']]],
   ['추적되지_20않는_20파일_9',['추적되지 않는 파일',['../ac-build-structure.html#autotoc_md101',1,'']]]
 ];

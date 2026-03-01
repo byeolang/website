@@ -42,6 +42,6 @@ var searchData=
   ['modules_2edox_39',['modules.dox',['../modules_8dox.html',1,'']]],
   ['mov_40',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]],
   ['multiple_20flag_20arguments_41',['Consuming multiple flag arguments',['../classby_1_1flag.html#consuming_multiple_flag_arguments',1,'']]],
-  ['multiple_20packloadings_42',['Multiple packLoadings',['../classby_1_1autopack.html#multiple_packloadings',1,'']]],
+  ['multiple_20podloadings_42',['Multiple podLoadings',['../classby_1_1autopod.html#multiple_podloadings',1,'']]],
   ['must_20return_20token_20in_20your_20rule_20after_20using_20dispatcher_43',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]]
 ];
