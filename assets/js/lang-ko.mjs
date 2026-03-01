@@ -50,7 +50,7 @@ export default {
 
   'milestone1-title': 'v0.0.1 Seed Update',
   'milestone1-desc': `
-    2018년 11월 17일 릴리즈<br/>
+    <a href="https://github.com/byeolang/byeol/releases/tag/v0.2-m1" target="_blank">2018년 11월 17일 릴리즈</a><br/>
     <br/>
     새로운 첫 시작, 첫 발자국<br/>
     이때는 아직 World 라는 가칭을 사용하였음.<br/>
@@ -64,7 +64,6 @@ export default {
   'milestone0-desc': `
     2009년 여름 시작<br/>
     <br/>
-    2015년 개발 중지<br/>
     c++를 처음 익히고, 게임개발 하면서 엔진으로 만들기 시작.<br/>
     해당 엔진에는 GUI적으로 객체를 보면서 값이나 로직을 변경하는 기능이 있었고, 이걸 살려서 프로그램을 만들고 싶다는 아이디어로 시작<br/>
     당초 3년 정도 생각했으나, 개발 프로세스가 주먹구구식이어서 설계를 뒤엎는 경우가 많이 생김.<br/>
@@ -77,17 +76,18 @@ export default {
     그때서야 스터디와 논문등을 보면서 VPL의 한계점을 받아들이게 되었고 이 방식으로는 기존 프로그래밍 방식을 개선할 수 없다는 결론에 도달했음.<br/>
     결과, 공개하지 않고 폐기.<br/>
     <br/>
+    <a href="https://github.com/byeolang/byeol/releases/tag/v0.0.1a" target="_blank">2015년 개발 중지</a><br/>
     노력보다는 방향이 중요하다는 걸 너무 긴 시간을 걸쳐서 깨닫게 된 프로젝트.<br/>
   `,
 
   'milestone-sign1-title': '낡은 표지판',
   'milestone-sign1-desc': `
-    어딘가 숨겨진 프로젝트가 있다는데 찾으셨나요?
+    어딘가 Dust라 불리는 숨겨진 프로젝트가 있다는데 찾으셨나요?
   `,
 
   'milestone2-title': 'v0.0.3 Seed Update Final',
   'milestone2-desc': `
-    2019년 2월 13일<br/>
+    <a href="https://github.com/byeolang/byeol/releases/tag/v0.2-m3" target="_blank">2019년 2월 13일</a><br/>
     <br/>
     meta 모듈, memlite 모듈 등 지금까지도 쓰고 있는 하위 모듈의 대다수가 이미 만들어짐.<br/>
     <br/>
@@ -100,7 +100,7 @@ export default {
 
   'milestone3-title': "v0.1.7 Essence Update 0.7 Final",
   'milestone3-desc': `
-    2022년 4월 21일<br/>
+    <a href="https://github.com/byeolang/byeol/releases/tag/v0.1.7" target="_blank">2022년 4월 21일</a><br/>
     <br/>
     확정된 언어 스펙과 설계를 마치고 본격적으로 core 모듈 개발을 시작함.<br/>
     그 첫번째가 되는 Essence 의 마지막 업데이트.<br/>
@@ -118,6 +118,8 @@ export default {
 
   'milestone4-title': 'website',
   'milestone4-desc': `
+    <a href="https://github.com/byeolang/website" target="_blank">2025년 8월 23일 최초 릴리즈</a><br/>
+    <br/>
     언어 컨셉에 맞도록, 게임 / 레트로 / 픽셀 / 장난감 스러운 디자인으로 꾸밈.<br/>
     jekyll에 Minimal Mistkes를 기반으로 했으나, 디자인적 요소와 배경 애니메이션,
     doxygen 통합 등등 거의 새로 만들다시피 개조하였음.<br/>
@@ -128,6 +130,11 @@ export default {
     태블릿 / PC / 모바일폰 등 3개의 반응형 레이아웃을 적용됨<br/>
     웹사이트 자체는 약 3개월 정도 걸린 것 같으나, 컨텐츠를 채우고 문서를 작성하는데 거의 반년 이상 걸리고 있음.<br/>
     글쓰는게 너무 괴롭고 지루하다.
+  `,
+
+  'milestone-current-title': '현재 위치',
+  'milestone-current-desc': `
+    <a href="https://github.com/byeolang/byeol/releases/latest" target="_blank">현재 개발중인 버전</a>
   `,
 
   'milestone6-title': 'v0.2.x Mana Update',
