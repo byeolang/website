@@ -334,6 +334,18 @@ const character = new tileset.characterLayer(
     ),
 
     new tileset.character(
+      'milestone-current-title',
+      'heroSprite',
+      'milestone-current-desc',
+      16,
+      25,
+      '4dvw',
+      '5dvw',
+      null,
+      null,
+    ),
+
+    new tileset.character(
       'milestone6-title',
       null,
       'milestone6-desc',

@@ -260,6 +260,15 @@ html.dark-mode div#darker {
   }
 }
 
+@keyframes heroSprite {
+  0% {
+    background-image: url('./../images/tile/sprite1.png');
+  }
+  50% {
+    background-image: url('./../images/tile/sprite2.png');
+  }
+}
+
 @keyframes bgSprite {
   0% {
     background-image: url('./../images/tile/12.png');
