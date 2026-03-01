@@ -9,9 +9,9 @@ var group__core =
       [ "setMe", "classby_1_1args.html#a4513fbc5672f25ed25667b5b1e54add6", null ],
       [ "toStr", "classby_1_1args.html#ac4dd7c1b539d0cb00243442cb3f7ce4d", null ]
     ] ],
-    [ "by::autopack", "classby_1_1autopack.html", [
-      [ "_invalidate", "classby_1_1autopack.html#aa75ace57c90892adef8f07ad631622eb", null ],
-      [ "rel", "classby_1_1autopack.html#afde5e4acb8646ef6be2a8fed31fda35c", null ]
+    [ "by::autopod", "classby_1_1autopod.html", [
+      [ "_invalidate", "classby_1_1autopod.html#ad35baeef744bf61c009311a632c0ef37", null ],
+      [ "rel", "classby_1_1autopod.html#ac411fa91f92030a724f46e77f048b0ca", null ]
     ] ],
     [ "by::baseFunc", "classby_1_1base_func.html", [
       [ "getParams", "classby_1_1base_func.html#a0831818b9fea50494e5fff9426f96b2e", null ],
@@ -24,7 +24,7 @@ var group__core =
       [ "_onBeforeCtor", "classby_1_1base_obj.html#a04c1e9184180f0274c067aee68487c76", null ],
       [ "_onEvalSub", "classby_1_1base_obj.html#a7612588286f4ab3d4410b2e2597fd80a", null ],
       [ "_setType", "classby_1_1base_obj.html#a41dc8db8b0cf3bd1e8f9f01aca01908c", null ],
-      [ "getSubPack", "classby_1_1base_obj.html#abe28469d0e87ccc15b6de4c55ad42462", null ]
+      [ "getSubPod", "classby_1_1base_obj.html#ad5d9245cbd1ae734b34d4f94a42d3f57", null ]
     ] ],
     [ "by::closure", "classby_1_1closure.html", [
       [ "getParams", "classby_1_1closure.html#ae976af6a6f39224beb0feffa60cb06a1", null ],
@@ -163,13 +163,8 @@ var group__core =
     ] ],
     [ "by::origin", "classby_1_1origin.html", [
       [ "getCallComplete", "classby_1_1origin.html#a939255c51fd0e346a27517cefcc43b8d", null ],
-      [ "getSubPack", "classby_1_1origin.html#a3c7782be141d2481dedff6159a644b4f", null ],
+      [ "getSubPod", "classby_1_1origin.html#a871fbe4e0193a1b6fc8bb843f18e3f2b", null ],
       [ "isComplete", "classby_1_1origin.html#a0677eaaff5fceb681e56b5acb03ff7bd", null ]
-    ] ],
-    [ "by::pack", "classby_1_1pack.html", [
-      [ "_invalidate", "classby_1_1pack.html#a6dd08fe75505547bd570d6865288382f", null ],
-      [ "addDependent", "classby_1_1pack.html#a41cac3a81cfe491eab5b1af28a0652be", null ],
-      [ "rel", "classby_1_1pack.html#a4c41bb7a24c149db222d2ac2bcc04299", null ]
     ] ],
     [ "by::param", "classby_1_1param.html", [
       [ "setOrigin", "classby_1_1param.html#a8d2ec5c9052adc25218750933691e5be", null ]
@@ -179,6 +174,11 @@ var group__core =
       [ "toStr", "classby_1_1params.html#ac9875389c1f2a39defd754db99cee2ae", null ]
     ] ],
     [ "by::dumParams", "classby_1_1dum_params.html", null ],
+    [ "by::pod", "classby_1_1pod.html", [
+      [ "_invalidate", "classby_1_1pod.html#a083d055be0ac207873673395b4962dc7", null ],
+      [ "addDependent", "classby_1_1pod.html#aff251ac27553b951a05989dd2da93425", null ],
+      [ "rel", "classby_1_1pod.html#a2980a3a358d60a9e1203de3b16235131", null ]
+    ] ],
     [ "by::dumSrc", "classby_1_1dum_src.html", null ],
     [ "by::dumSrcFile", "classby_1_1dum_src_file.html", null ],
     [ "by::src", "classby_1_1src.html", null ],
@@ -294,29 +294,29 @@ var group__core =
       [ "dump", "classby_1_1thread.html#a4437c950295a6348a986aa6e4f20d4d8", null ],
       [ "getEx", "classby_1_1thread.html#a0c91aebec84cb85f862b429ce6bb4a4a", null ],
       [ "getEx", "classby_1_1thread.html#a83fb0879a389bbdb19eec84bcc4ad7fa", null ],
-      [ "getPacks", "classby_1_1thread.html#ac7edfdffc7393049809919c64bb58ef9", null ],
+      [ "getPods", "classby_1_1thread.html#a1cdb1907de6ad6e5cb5af85dca3f7d48", null ],
       [ "isInteractable", "classby_1_1thread.html#aba761ced98a4058d304b02d1cc26fdc6", null ],
       [ "rel", "classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343", null ]
     ] ],
     [ "by::threadUse", "classby_1_1thread_use.html", null ],
     [ "by::coreInternal", "classby_1_1core_internal.html", null ],
-    [ "by::byeolPackLoading", "classby_1_1byeol_pack_loading.html", [
-      [ "parse", "classby_1_1byeol_pack_loading.html#a8abebbb40a8b062c8c0bd03abe0791ff", null ]
+    [ "by::byeolPodLoading", "classby_1_1byeol_pod_loading.html", [
+      [ "parse", "classby_1_1byeol_pod_loading.html#a7a25740b38ffb602ee7ac2442dc1a08b", null ]
     ] ],
-    [ "by::cppPackLoading", "classby_1_1cpp_pack_loading.html", [
-      [ "parse", "classby_1_1cpp_pack_loading.html#a3c7ebf299ff1c96d457dab47e6556180", null ]
+    [ "by::cppPodLoading", "classby_1_1cpp_pod_loading.html", [
+      [ "parse", "classby_1_1cpp_pod_loading.html#ad7e6860520cae0cf64b384ae1ee25378", null ]
     ] ],
-    [ "by::packLoader", "classby_1_1pack_loader.html", [
-      [ "load", "classby_1_1pack_loader.html#a5ffbe600086724ebc8b29033ac72228a", null ],
-      [ "setBasePacks", "classby_1_1pack_loader.html#a9636c8af5f76ad090db8fa66a540821a", null ]
+    [ "by::podLoader", "classby_1_1pod_loader.html", [
+      [ "load", "classby_1_1pod_loader.html#ab0cb7eaa4fd4cfb8729e6ff1ed5e8d91", null ],
+      [ "setBasePods", "classby_1_1pod_loader.html#a89812818a46bbf5123ed218ca7557587", null ]
     ] ],
-    [ "by::packLoading", "classby_1_1pack_loading.html", null ],
-    [ "by::packMakable", "classby_1_1pack_makable.html", [
-      [ "parse", "classby_1_1pack_makable.html#af5db4ff78a663b13d18b727236fa63ea", null ],
-      [ "verify", "classby_1_1pack_makable.html#a3e55fdf3ae0a20b8dda6fc7f1231fd23", null ]
+    [ "by::podLoading", "classby_1_1pod_loading.html", null ],
+    [ "by::podMakable", "classby_1_1pod_makable.html", [
+      [ "parse", "classby_1_1pod_makable.html#a7e6ea7b14bebdaa7939bb454eb66a375", null ],
+      [ "verify", "classby_1_1pod_makable.html#a1be695810561e0d93a341a05cde03a95", null ]
     ] ],
-    [ "by::trustPackLoading", "classby_1_1trust_pack_loading.html", [
-      [ "verify", "classby_1_1trust_pack_loading.html#a2a6b3ca4878f7393c44d60cdd83c33fc", null ]
+    [ "by::trustPodLoading", "classby_1_1trust_pod_loading.html", [
+      [ "verify", "classby_1_1trust_pod_loading.html#af0d0ef130ee33c8fc237ca05dfa52b5c", null ]
     ] ],
     [ "by::asable", "classby_1_1asable.html", null ],
     [ "by::aser", "classby_1_1aser.html", null ],
@@ -357,7 +357,7 @@ var group__core =
       [ "_onWork", "classby_1_1parser.html#a5175321205e6e612594a80348c8346cb", null ],
       [ "_prepare", "classby_1_1parser.html#addcf80deb87e1b80db57480a03462094", null ],
       [ "getOpenStrToken", "classby_1_1parser.html#a06f0c7d7638a086e4ff3afa82b6759d7", null ],
-      [ "getSubPack", "classby_1_1parser.html#a6db028bb170fc622e012ff80c08b4558", null ],
+      [ "getSubPod", "classby_1_1parser.html#a8ab6bf3514cc81b98f1576ffccf95fbb", null ],
       [ "onDedent", "classby_1_1parser.html#a1b1c47a63550fa9c235afc171ef5bf78", null ],
       [ "onEndFunc", "classby_1_1parser.html#a4b04d156df1721fd4094e31faa6a86ee", null ],
       [ "onIgnoreIndent", "classby_1_1parser.html#aff47e1010e0290b689c80d32620303ba", null ],

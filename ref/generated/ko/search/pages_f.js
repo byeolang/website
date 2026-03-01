@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['메모리_20관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
+  ['런타임_20타입_20시스템_0',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
+  ['경량_20설정_20언어_0',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]]
 ];

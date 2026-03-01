@@ -53,7 +53,7 @@ var searchData=
   ['origin_20objects_50',['Origin Objects',['../classby_1_1base_obj.html#origin_object',1,'']]],
   ['origin_20returns_20nullptr_51',['Why cast&lt;origin&gt;() Returns nullptr',['../classby_1_1origin.html#why_cast_origin_returns_null',1,'']]],
   ['origin_2ehpp_52',['origin.hpp',['../origin_8hpp.html',1,'']]],
-  ['os_53',['Mac OS',['../ab-dev-env.html#autotoc_md31',1,'']]],
+  ['os_53',['Mac OS',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md31',1,'']]],
   ['override_20getorigin_20for_20baseobj_54',['Override getOrigin() for baseObj',['../classby_1_1base_obj.html#override_getOrigin',1,'']]],
   ['ownership_55',['Indirect ownership?',['../classby_1_1memory_haver.html#indirect_ownership',1,'']]],
   ['owns_56',['Shares and Owns',['../classby_1_1obj.html#shares_owns',1,'']]]

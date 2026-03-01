@@ -161,13 +161,13 @@ $(function(){initNavTree('ag-architecture-clog.html',''); initResizable(); });
 <div class="line">BY_I(&quot;slot[%s] origins loaded.&quot;, getName());</div>
 </div><!-- fragment --><p>위 코드는 다음과 같이 출력되는데요,</p>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
-<div class="line">Oct 22 2025 21:26:13   I    cppPackLo   &lt;_loadLibs#49&gt;    slot[cpp] origins loaded.</div>
+<div class="line">Oct 22 2025 21:26:13   I    cppPodLoa   &lt;_loadLibs#49&gt;    slot[cpp] origins loaded.</div>
 <div class="line">          (1)         (2)     (3)           (4)                    (5)</div>
 </div><!-- fragment --><p>위 메시지는 다음과 같은 정보를 보여줍니다:</p>
 <ol type="1">
 <li>로깅한 날짜(Oct 22 2025)와 시간(21:26:13)</li>
 <li>로그 레벨(I, Info). 로그 레벨은 ERR, WARN, INFO 총 3개가 존재합니다.</li>
-<li>로깅한 클래스명(cppPackLoading)</li>
+<li>로깅한 클래스명(cppPodLoading)</li>
 <li>로깅한 함수(_loadLibs)와 해당 파일내 라인번호(49)</li>
 <li>로그 메시지(slot[cpp] origins loaded)</li>
 </ol>
@@ -269,7 +269,7 @@ richLog - 다형성 로깅</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_5.png" />
 </div>
-<p>핵심은 <b>paramter pack을 활용한 변환함수 호출</b>과 <b>값 전달</b> 2가지 입니다. 먼저 <code>BY_I</code> 와 같은 매크로를 사용하면 다음의 richLog 함수를 호출하는데요.</p>
+<p>핵심은 <b>paramter pod을 활용한 변환함수 호출</b>과 <b>값 전달</b> 2가지 입니다. 먼저 <code>BY_I</code> 와 같은 매크로를 사용하면 다음의 richLog 함수를 호출하는데요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">template &lt;typename... Ts&gt;</div>
 <div class="line">void richLog(errLv::level lv, const std::string&amp; filename, const nchar* func, nint line, const nchar* fmt,</div>

@@ -6,7 +6,7 @@ var searchData=
   ['메모리_20관리_20컴포넌트_3',['메모리 관리 컴포넌트',['../ai-architecture-memlite.html#autotoc_md256',1,'']]],
   ['메모리_20풀_20사용_4',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md250',1,'']]],
   ['메모리_20풀_20패키지_20개요_5',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md254',1,'']]],
-  ['메타데이터_6',['메타데이터',['../ak-architecture-core.html#autotoc_md342',1,'manifest 클래스 - Pack 메타데이터'],['../ak-architecture-core.html#autotoc_md415',1,'manifest 클래스 - Pack 메타데이터']]],
+  ['메타데이터_6',['메타데이터',['../ak-architecture-core.html#autotoc_md342',1,'manifest 클래스 - pod 메타데이터'],['../ak-architecture-core.html#autotoc_md415',1,'manifest 클래스 - pod 메타데이터']]],
   ['메타_20정보가_20어떻게_20생성되나_7',['메타 정보가 어떻게 생성되나',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
   ['메타_20정보의_20생성과_20관리_8',['메타 정보의 생성과 관리',['../ah-architecture-meta.html#autotoc_md231',1,'']]],
   ['메타_20정보_20자동_20생성_9',['메타 정보 자동 생성',['../ah-architecture-meta.html#autotoc_md233',1,'']]],

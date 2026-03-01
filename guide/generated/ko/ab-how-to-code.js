@@ -24,7 +24,7 @@ var ab_how_to_code =
       ] ],
       [ "생성자", "ac-language-spec.html#autotoc_md63", null ],
       [ "Special Functions", "ac-language-spec.html#autotoc_md65", null ],
-      [ "Pack", "ac-language-spec.html#autotoc_md67", null ],
+      [ "pod", "ac-language-spec.html#autotoc_md67", null ],
       [ "scope", "ac-language-spec.html#autotoc_md69", null ],
       [ "오버로딩", "ac-language-spec.html#autotoc_md71", null ],
       [ "평가전략", "ac-language-spec.html#autotoc_md73", null ],

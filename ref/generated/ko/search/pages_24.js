@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['플랫폼_20추상화_20계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
+  ['테스트_20케이스_20작성_20가이드_0',['테스트 케이스 작성 가이드',['../am-testing-guide.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['타입_20시스템_0',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]]
+  ['케이스_20작성_20가이드_0',['테스트 케이스 작성 가이드',['../am-testing-guide.html',1,'']]]
 ];
