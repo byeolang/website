@@ -1,3 +1,4 @@
+.DS_Store
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
@@ -6,3 +7,5 @@ _site/
 *.patch
 Gemfile.lock
 *.env
+Gemfile
+.bundle/
