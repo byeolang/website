@@ -1,0 +1,17 @@
+div.scroll-stage {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  position: fixed;
+  z-index:99;
+}
+div#scroll-section {
+  margin-top: 1500vh;
+}
+div#rect2 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
