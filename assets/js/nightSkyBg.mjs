@@ -17,12 +17,14 @@ Star.prototype.initialize = function() {
 	this.opacity = this.grade / 100;
 	if(this.getJQObject() == undefined) return;
 
-	TweenMax.to(this.getJQObject(), 1, {
+	gsap.to(this.getJQObject(), {
+    duration: 1,
 		opacity: this.opacity,
 		ease: Linear.easeNone
 	});
 
-	TweenMax.to(this.getJQObject(), this.life, {
+	gsap.to(this.getJQObject(), {
+    duration: this.life,
 		rotation: total_rotation_amound,
 		ease: Linear.easeNone
 	});
@@ -48,7 +50,8 @@ FloatingStar.prototype = new Star();
 FloatingStar.prototype.initialize = function() {
 	Star.prototype.initialize.call(this);
 
-	TweenMax.to(this.getJQObject(), 0.5, {
+	gsap.to(this.getJQObject(), {
+    duration: 0.5,
 		delay: this.life-0.5,
 		opacity: "0",
 		width: "0px",
@@ -91,7 +94,8 @@ ShootingStar.prototype.initialize = function() {
 	Star.prototype.initialize.call(this);
 
 	this.x2 = Math.random() * ($(window).width() - this.getX()) * this.grade / 300;
-	TweenMax.to(this.getJQObject(), this.life, {
+	gsap.to(this.getJQObject(), {
+    duration: this.life,
 		delay: 0.2,
 		left: (this.x2 + this.getX()) + "px",
 		top: (this.x2 + this.getY()) + "px",

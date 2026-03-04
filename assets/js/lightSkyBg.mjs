@@ -33,7 +33,8 @@ Leaf.prototype.initialize = function() {
   let destY = (this.x + bgWidth) * gradient - bgHeight;
 
   var leaf = this
-  this.animation = TweenMax.to(leaf.getJQObject(), this.v, {
+  this.animation = gsap.to(leaf.getJQObject(), {
+    duration: this.v,
     x: bgWidth - this.w,
     y: destY - this.w * 5,
     rotation: this.rotation,

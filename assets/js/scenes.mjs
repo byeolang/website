@@ -1,7 +1,7 @@
 import { Scene } from "./scene.mjs"
 
 class Scene2 extends Scene {
-  _onAnimate(tl) {
+  _onAnimate(masterTl, tl) {
     return tl.to('div#rect2', {
       x: 750,
       duration: 2,
@@ -16,7 +16,16 @@ class TakeOff extends Scene {
   constructor() {
     super(1.5);
   }
-  _onAnimate(tl) {
+  _onAnimate(masterTl, tl) {
+    ScrollTrigger.create({
+      trigger: 'div#main-bg',
+      start: () => this.timeToScroll(masterTl, masterTl.labels.TakeOff),
+      end: () => this.timeToScroll(masterTl, masterTl.labels.Scene2),
+      pin: 'div#main-bg',
+      pinSpacing: false,
+      invalidateOnRefresh: true,
+    })
+
     return tl.to('div#rect2', {
       x: 550,
     }).duration(5)
@@ -48,7 +57,7 @@ export class Scener {
     this.masterTl = masterTl
 
     for(const s of this.scenes) {
-      let tl = s.init()
+      let tl = s.init(this.masterTl)
       this.masterTl.addLabel(s.getName()).add(tl)
     }
     this._jumpToBottom()

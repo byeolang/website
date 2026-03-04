@@ -1,10 +1,17 @@
 export class Scene {
+  constructor() {
+    this.timeToScroll = (masterTl, t) => {
+      let st = masterTl.scrollTrigger
+      return st.start + (masterTl / masterTl.duration()) * (st.end - st.start)
+    }
+  }
+
   getName() {
     return this.constructor.name
   }
 
-  init() {
-    return this._onAnimate(gsap.timeline())
+  init(masterTl) {
+    return this._onAnimate(masterTl, gsap.timeline())
   }
-  _onAnimate(tl) {}
+  _onAnimate(masterTl, tl) {}
 }

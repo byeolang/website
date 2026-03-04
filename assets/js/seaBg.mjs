@@ -37,12 +37,14 @@ Tide.prototype.initialize = function() {
 	if(this.getJQObject() == undefined) return;*/
 
   let halfLife = this.life * 0.5
-	TweenMax.to(this.getJQObject(), halfLife, {
+	gsap.to(this.getJQObject(), {
+    duration: halfLife,
 		opacity: this.opacity,
 		ease: Linear.easeNone
 	});
 
-	TweenMax.to(this.getJQObject(), halfLife, {
+	gsap.to(this.getJQObject(), {
+    duration: halfLife,
 		delay: halfLife,
 		opacity: "0"
 	});
@@ -50,7 +52,8 @@ Tide.prototype.initialize = function() {
   let step = (this.grade / 100) * 5 + 1;
   let increment = step * step;
   let targetY = this.y + (30 * (this.grade / 100));
-	TweenMax.to(this.getJQObject(), this.life, {
+	gsap.to(this.getJQObject(), {
+    duration: this.life,
     top: targetY + "px",
     left: (this.x - increment) + "px",
     width: ((this.width) + (increment * 2)) + "px",
