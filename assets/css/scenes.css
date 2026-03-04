@@ -6,6 +6,7 @@ div.scroll-stage {
   background-color: transparent;
   position: fixed;
   z-index:99;
+  pointer-events: none;
 }
 div#scroll-section {
   margin-top: 1500vh;

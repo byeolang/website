@@ -82,11 +82,11 @@ Unit.prototype.initialize = function() {
 
     if(this.life >= 0)
     {
-        this._life_animation = new TweenMax(this.getJQObject(), 1, {
+        this._life_animation = gsap.to(this.getJQObject(), {
+            duration: 1,
             delay: this.life,
             opacity: "0",
-            onCompleteScope: this,
-            onComplete: function() {
+            onComplete: () => {
                 var bg = this.getOwnedBackGrounder();
                 if( bg == undefined       ||
                     bg.units == undefined ||
@@ -153,8 +153,9 @@ BackGrounder.prototype.release = function() {
   this.units = undefined;
 }
 BackGrounder.prototype.resize = function(w, h) {
-	TweenMax.to(this.getJQObject(), 1, {
-        ease: Power3.easeOut,
+	gsap.to(this.getJQObject(), {
+    duration: 1,
+    ease: Power3.easeOut,
 		width: w + "px"
 	});
 }
