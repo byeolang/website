@@ -16,12 +16,12 @@ class TakeOff extends Scene {
   constructor() {
     super(1.5);
   }
-  _onAnimate(masterTl, tl) {
+  _onAnimate(tl) {
     ScrollTrigger.create({
-      trigger: 'div#main-bg',
-      start: () => this.timeToScroll(masterTl, masterTl.labels.TakeOff),
-      end: () => this.timeToScroll(masterTl, masterTl.labels.Scene2),
-      pin: 'div#main-bg',
+      trigger: 'section#scene1',
+      start: 'top top',
+      end: 'bottom bottom',
+      pin: 'section#scene1',
       pinSpacing: false,
       invalidateOnRefresh: true,
     })
@@ -40,27 +40,55 @@ export class Scener {
   }
 
   init() {
+    history.scrollRestoration = "manual";
+    ScrollTrigger.clearScrollMemory();
     gsap.registerPlugin(ScrollTrigger)
 
-    var masterTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: 'div#main-content',
-        start: 0,
-        end: 'bottom bottom',
-        scrub: true,
-        markers: true,
-        onUpdate(self) {
-          masterTl.progress(1 - self.progress)
-        }
-      }
-    })
-    this.masterTl = masterTl
+    var tl = gsap.timeline({ paused: true})
+    tl.pause(0);
 
-    for(const s of this.scenes) {
+    const scene = document.querySelector("section#scene1");
+    const startAt = () =>
+      scene.getBoundingClientRect().top +
+      window.scrollY +
+      (scene.offsetHeight - window.innerHeight) - 60;
+
+    ScrollTrigger.create({
+      trigger: 'section#scene1',
+      start: startAt,
+      end: '+=200%',
+      pin: 'section#scene1 .pin-bg',
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      markers: true,
+      pinSpacing: false,
+      onUpdate(self) {
+        tl.progress(1 - self.progress);
+      }
+    });
+    tl.to('div#rect2', {
+      x: 550,
+      y: 500
+    });
+
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+
+      requestAnimationFrame(() => {
+        /*window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "auto"
+        });*/
+        this._jumpToBottom()
+
+        ScrollTrigger.update();
+      });
+    });
+
+    /*for(const s of this.scenes) {
       let tl = s.init(this.masterTl)
       this.masterTl.addLabel(s.getName()).add(tl)
-    }
-    this._jumpToBottom()
+    }*/
   }
 
   _jumpToBottom() {

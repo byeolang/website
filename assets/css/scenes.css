@@ -11,6 +11,13 @@ div.scroll-stage {
 div#scroll-section {
   margin-top: 1500vh;
 }
+section#scene1 {
+  position: relative;
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 div#rect2 {
   background-color: green;
   width: 100px;
