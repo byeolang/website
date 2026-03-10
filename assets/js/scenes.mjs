@@ -55,13 +55,19 @@ export class Scener {
 
     ScrollTrigger.create({
       trigger: 'section#scene1',
-      start: startAt,
-      end: '+=200%',
+      scroller: 'div#scroll-section',
+      start: 'top top',
+      end: 'bottom botttom',
+      //start: startAt,
+      //end: '+=200%',
+      //start: 'bottom bottom-=60',
+      //end: () => "+=" + scene.offsetHeight - window.innerHeight + 60,
       pin: 'section#scene1 .pin-bg',
       anticipatePin: 1,
       invalidateOnRefresh: true,
       markers: true,
       pinSpacing: false,
+      scrub: true,
       onUpdate(self) {
         tl.progress(1 - self.progress);
       }

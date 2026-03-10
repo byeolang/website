@@ -8,8 +8,9 @@ div.scroll-stage {
   z-index:99;
   pointer-events: none;
 }
-div#scroll-section {
-  margin-top: 1500vh;
+section#scene2 {
+  background-color: yellow;
+  height: 300vh;
 }
 section#scene1 {
   position: relative;
