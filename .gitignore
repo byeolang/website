@@ -5,7 +5,5 @@
 /vendor/
 _site/
 *.patch
-Gemfile.lock
 *.env
-Gemfile
 .bundle/
