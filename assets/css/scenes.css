@@ -1,3 +1,4 @@
+/* common styles for all scenes: */
 div.scroll-stage {
   width: 100%;
   height: 100%;
@@ -8,17 +9,27 @@ div.scroll-stage {
   z-index:99;
   pointer-events: none;
 }
+.scene {
+  width: 100%;
+  position: relative;
+}
+.pin-bg {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* styles for each scene: */
 section#scene2 {
   background-color: yellow;
   height: 300vh;
 }
+
 section#scene1 {
-  position: relative;
   height: 300vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
+
 div#rect2 {
   background-color: green;
   width: 100px;

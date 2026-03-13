@@ -8,7 +8,7 @@ class Scene2 extends Scene {
     }).to('div#rect2', {
       y: 500,
       duration: 1,
-    }).duration(10)
+    }).duration(10);
   }
 }
 
@@ -28,7 +28,7 @@ class TakeOff extends Scene {
 
     return tl.to('div#rect2', {
       x: 550,
-    }).duration(5)
+    }).duration(5);
   }
 }
 
@@ -36,57 +36,45 @@ export class Scener {
   constructor() {
     this.scenes = [
       new TakeOff(), new Scene2()
-    ]
+    ];
   }
 
   init() {
     history.scrollRestoration = "manual";
     ScrollTrigger.clearScrollMemory();
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
     var tl = gsap.timeline({ paused: true})
-    tl.pause(0);
-
-    const scene = document.querySelector("section#scene1");
-    const startAt = () =>
-      scene.getBoundingClientRect().top +
-      window.scrollY +
-      (scene.offsetHeight - window.innerHeight) - 60;
-
-    ScrollTrigger.create({
-      trigger: 'section#scene1',
-      scroller: 'div#scroll-section',
-      start: 'top top',
-      end: 'bottom botttom',
-      //start: startAt,
-      //end: '+=200%',
-      //start: 'bottom bottom-=60',
-      //end: () => "+=" + scene.offsetHeight - window.innerHeight + 60,
-      pin: 'section#scene1 .pin-bg',
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-      markers: true,
-      pinSpacing: false,
-      scrub: true,
-      onUpdate(self) {
-        tl.progress(1 - self.progress);
-      }
-    });
+    tl.progress(0);
     tl.to('div#rect2', {
       x: 550,
       y: 500
     });
 
+    const scene = document.querySelector("section#scene1");
+    const pinWrap = scene.querySelector(".pin-bg");
+
+    ScrollTrigger.create({
+      trigger: scene,
+      start: 'top top',
+      end: 'bottom botttom',
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
+      markers: true,
+      pin: pinWrap,
+      pinSpacing: false,
+      scrub: 1,
+      onUpdate(self) {
+        tl.progress(1 - self.progress);
+      }
+    });
+
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
 
+      this._jumpToBottom();
       requestAnimationFrame(() => {
-        /*window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "auto"
-        });*/
-        this._jumpToBottom()
-
+        ScrollTrigger.refresh();
         ScrollTrigger.update();
       });
     });
