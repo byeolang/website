@@ -1,7 +1,7 @@
 import { Scene } from "./scene.mjs"
 
-class Scene2 extends Scene {
-  _onAnimate(masterTl, tl) {
+class UprisingRocket extends Scene {
+  _onAnimate(tl) {
     return tl.to('div#rect2', {
       x: 750,
       duration: 2,
@@ -13,29 +13,21 @@ class Scene2 extends Scene {
 }
 
 class TakeOff extends Scene {
-  constructor() {
-    super(1.5);
-  }
   _onAnimate(tl) {
-    ScrollTrigger.create({
-      trigger: 'section#scene1',
-      start: 'top top',
-      end: 'bottom bottom',
-      pin: 'section#scene1',
-      pinSpacing: false,
-      invalidateOnRefresh: true,
-    })
-
-    return tl.to('div#rect2', {
-      x: 550,
-    }).duration(5);
+    return tl.fromTo('div#rect2', {
+      x: 0,
+      y: 0,
+    }, {
+      x: 450,
+      y: 400,
+    });
   }
 }
 
 export class Scener {
   constructor() {
     this.scenes = [
-      new TakeOff(), new Scene2()
+      new TakeOff(), new UprisingRocket()
     ];
   }
 
@@ -44,30 +36,8 @@ export class Scener {
     ScrollTrigger.clearScrollMemory();
     gsap.registerPlugin(ScrollTrigger);
 
-    var tl = gsap.timeline({ paused: true})
-    tl.progress(0);
-    tl.to('div#rect2', {
-      x: 550,
-      y: 500
-    });
-
-    const scene = document.querySelector("section#scene1");
-    const pinWrap = scene.querySelector(".pin-bg");
-
-    ScrollTrigger.create({
-      trigger: scene,
-      start: 'top top',
-      end: 'bottom botttom',
-      invalidateOnRefresh: true,
-      anticipatePin: 1,
-      markers: true,
-      pin: pinWrap,
-      pinSpacing: false,
-      scrub: 1,
-      onUpdate(self) {
-        tl.progress(1 - self.progress);
-      }
-    });
+    for(const s of this.scenes)
+      s.init()
 
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
@@ -78,11 +48,6 @@ export class Scener {
         ScrollTrigger.update();
       });
     });
-
-    /*for(const s of this.scenes) {
-      let tl = s.init(this.masterTl)
-      this.masterTl.addLabel(s.getName()).add(tl)
-    }*/
   }
 
   _jumpToBottom() {
