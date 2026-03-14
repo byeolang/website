@@ -1,4 +1,10 @@
 export class Scene {
+  constructor(heightRatio) {
+    const scrollSection = document.querySelector('div#scroll-section');
+    const scene = document.querySelector(`section#${this.getName()}`);
+    scene.style.height = `${Math.round(heightRatio * 100)}vh`;
+  }
+
   getName() {
     return this.constructor.name;
   }

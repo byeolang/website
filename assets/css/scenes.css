@@ -23,12 +23,9 @@ div.scroll-stage {
 /* styles for each scene: */
 section#UprisingRocket {
   background-color: yellow;
-  height: 300vh;
 }
 
-section#TakeOff {
-  height: 300vh;
-}
+section#TakeOff {}
 
 div#rect2 {
   background-color: green;

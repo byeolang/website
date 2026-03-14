@@ -1,6 +1,10 @@
 import { Scene } from "./scene.mjs"
 
 class UprisingRocket extends Scene {
+  constructor() {
+    super(7);
+  }
+
   _onAnimate(tl) {
     return tl.to('div#rect2', {
       x: 750,
@@ -13,6 +17,10 @@ class UprisingRocket extends Scene {
 }
 
 class TakeOff extends Scene {
+  constructor() {
+    super(17.5);
+  }
+
   _onAnimate(tl) {
     return tl.fromTo('div#rect2', {
       x: 0,
