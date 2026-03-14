@@ -179,9 +179,9 @@ Windows (Visual Studio)</h2>
 <p>빌드시에 기본적으로는 <code>MSBuild.exe</code>를 사용하므로 Visual Studio가 필요합니다. CMake 설정을 바꾸실 수 있으시다면 clang++, VS Code로 개발도 물론 가능합니다.</p>
 <ul>
 <li>다음과 같이 Visual Studio Setup 프로그램을 다운받아 줍시다.<br  />
- <img src="../../../assets/images/dev-env-win1.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win1.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>다운받은 setup을 실행한 후, 다음과 같이 c++ 개발을 선택합니다<br  />
- <img src="../../../assets/images/dev-env-win2.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win2.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>다음과 같이 상세 선택을 해주고 설치를 시작합니다. 목록은 다음과 같습니다. (일부는 필요없는 항목이 있을 수도 있으니, 제보바랍니다.)<ul>
 <li>x64/x86용 MSVC 빌드 도구</li>
 <li>Windows용 C++ CMake 도구</li>
@@ -189,30 +189,30 @@ Windows (Visual Studio)</h2>
 <li>vcpkg 패키지 관리자</li>
 <li>LLVM(clang-cl) 도구 집합에 대한 MSBuild 지원</li>
 <li>MSBuild<br  />
- <img src="../../../assets/images/dev-env-win3.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win3.PNG" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
 </ul>
 </li>
 <li>설치가 완료되면 재부팅을 해줍니다.</li>
 <li>그 다음에는 <a href="https://cmake.org/download/" target="_blank">CMake 윈도우 버전</a>을 설치해야 합니다.<br  />
- <img src="../../../assets/images/dev-env-win4.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win4.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>PATH에 추가하도록 해놓는 걸 잊지 마세요. 모든 빌드는 터미널에서 할 껍니다.<br  />
- <img src="../../../assets/images/dev-env-win5.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win5.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>CMake 설치가 완료되었다면, 다음은 bison과 flex를 설치해야 합니다.<br  />
  <a href="https://github.com/lexxmark/winflexbison/releases" target="_blank">WinFlex</a>에서 최신버전으로 바이너리(아마도 zip)를 받아줍니다.</li>
 <li>압축을 풀면 <code>win_bison.exe</code>와 <code>win_flex.exe</code>가 보일겁니다.<br  />
  이 둘을 각각 <code>bison.exe</code> 와 <code>flex.exe</code>로 이름을 직접 바꿔줍니다.<br  />
- <img src="../../../assets/images/dev-env-win6.png" alt="" style="width: 40%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win6.PNG" alt="" style="width: 40%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>win_flex는 포터블로만 제공하기 때문에 터미널에서 바로 사용햐려면 환경변수 PATH를 설정해야 합니다.</li>
 <li>시스템의 고급 시스템 설정을 열어줍니다.<br  />
- <img src="../../../assets/images/dev-env-win7.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win7.PNG" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>환경변수를 클릭합니다.<br  />
- <img src="../../../assets/images/dev-env-win8.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win8.PNG" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>그다음 편집을 누른 후<br  />
- <img src="../../../assets/images/dev-env-win9.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win9.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>새로 만들기를 클릭해서, win flex가 설치된 경로를 추가합니다.<br  />
- <img src="../../../assets/images/dev-env-win10.png" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win10.PNG" alt="" style="width: 80%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>Visual Studio 개발도구가 포함된 터미널을 열여주고, 지금까지 설치한 프로그램이 잘 실행되는지 확인해봅니다.<br  />
- <img src="../../../assets/images/dev-env-win11.png" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
+ <img src="../../../assets/images/dev-env-win11.PNG" alt="" style="width: 50%; height: auto; border-radius: 8px;" class="inline"/></li>
 <li>여기까지 왔다면, 실행만 남았습니다. <code>build</code> 폴더로 이동 후, <code>python3 builder.py dbg</code> 를 입력하면 빌드가 완료됩니다.</li>
 </ul>
 <hr  />

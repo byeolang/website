@@ -21,7 +21,7 @@ var searchData=
   ['lines_20of_20code_20file_18',['Many Lines of Code File',['../classby_1_1verifier.html#many_lines_of_code',1,'']]],
   ['link_19',['link',['../classby_1_1tnchain.html#a2951a107e09c70a690b24d590e187fa9',1,'by::tnchain']]],
   ['linkage_20',['Scope Linkage',['../classby_1_1frame.html#scope_linkage',1,'']]],
-  ['linux_20mac_21',['Linux / Mac',['../md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ab-dev-env.html#autotoc_md46',1,'']]],
+  ['linux_20mac_21',['Linux / Mac',['../ab-dev-env.html#autotoc_md46',1,'']]],
   ['literal_20구분자_22',['Raw String Literal 구분자',['../am-testing-guide.html#autotoc_md518',1,'']]],
   ['load_23',['load',['../classby_1_1dlib.html#a0bfa17ae3f7d4146c890a8a1e84c088c',1,'by::dlib::load()'],['../classby_1_1pod_loader.html#ab0cb7eaa4fd4cfb8729e6ff1ed5e8d91',1,'by::podLoader::load()']]],
   ['loader_2ehpp_24',['loader.hpp',['../loader_8hpp.html',1,'']]],
