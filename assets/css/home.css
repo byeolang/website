@@ -6,8 +6,8 @@ div.initial-content {
 }
 
 div#footer {
-  position: relative;
-  top: -51px;
+  position: absolute;
+  bottom: 0px;
 }
 
 div#masthead {
