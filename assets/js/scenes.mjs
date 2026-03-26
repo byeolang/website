@@ -6,13 +6,7 @@ class UprisingRocket extends Scene {
   }
 
   _onAnimate(tl) {
-    return tl.to('div#rect2', {
-      x: 750,
-      duration: 2,
-    }).to('div#rect2', {
-      y: 500,
-      duration: 1,
-    }).duration(10);
+    return tl;
   }
 }
 
@@ -22,13 +16,65 @@ class TakeOff extends Scene {
   }
 
   _onAnimate(tl) {
-    return tl.fromTo('div#rect2', {
-      x: 0,
-      y: 0,
-    }, {
-      x: 450,
-      y: 400,
-    });
+    const stage = "#scene1-stage";
+    const smokeStage = "#scene1-smoke-stage";
+    const ascentY = () => -window.innerHeight * 0.78;
+
+    return tl
+      .to(`${stage} .scene1-stage__fire`, {
+        autoAlpha: 1,
+        scaleX: 1.08,
+        scaleY: 1.55,
+        yPercent: 12,
+        duration: 0.2,
+      }, 0.16)
+      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+        autoAlpha: 0.9,
+        scale: 1.32,
+        xPercent: -34,
+        yPercent: -26,
+        duration: 0.54,
+      }, 0.16)
+      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+        autoAlpha: 0.9,
+        scale: 1.32,
+        xPercent: 34,
+        yPercent: -30,
+        duration: 0.54,
+      }, 0.16)
+      .to(`${stage} .scene1-stage__rocket`, {
+        y: ascentY,
+        xPercent: 0,
+        rotation: 0,
+        scale: 1.08,
+        duration: 0.9,
+      }, 0.24)
+      .to(`${stage} .scene1-stage__fire`, {
+        y: ascentY,
+        xPercent: 0,
+        duration: 0.9,
+      }, 0.24)
+      .to(`${stage} .scene1-stage__fire`, {
+        autoAlpha: 0.08,
+        scaleX: 0.7,
+        scaleY: 0.46,
+        yPercent: 2,
+        duration: 0.42,
+      }, 0.72)
+      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+        autoAlpha: 0.08,
+        scale: 1.62,
+        xPercent: -48,
+        yPercent: -40,
+        duration: 0.38,
+      }, 0.7)
+      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+        autoAlpha: 0.08,
+        scale: 1.62,
+        xPercent: 48,
+        yPercent: -44,
+        duration: 0.38,
+      }, 0.7);
   }
 }
 

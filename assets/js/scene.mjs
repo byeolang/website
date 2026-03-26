@@ -10,7 +10,10 @@ export class Scene {
   }
 
   init() {
-    let tl = gsap.timeline({ paused: true });
+    let tl = gsap.timeline({
+      paused: true,
+      defaults: { ease: "none" }
+    });
     tl.progress(0);
 
     const scene = document.querySelector(`section#${this.getName()}`);
