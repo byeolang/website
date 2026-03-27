@@ -88,6 +88,107 @@ section#UprisingRocket {
   mix-blend-mode: normal;
 }
 
+#scene1-stage .scene1-stage__flare {
+  --flare-axis-x: 160px;
+  --flare-axis-y: -112px;
+  --flare-axis-angle: -28deg;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(0.36);
+  transform-origin: 50% 50%;
+  mix-blend-mode: screen;
+}
+
+#scene1-stage .scene1-stage__flare-core,
+#scene1-stage .scene1-stage__flare-ring,
+#scene1-stage .scene1-stage__flare-beam,
+#scene1-stage .scene1-stage__flare-ghost,
+#scene1-stage .scene1-stage__flare-streak {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#scene1-stage .scene1-stage__flare-core {
+  width: 94px;
+  height: 94px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 251, 241, 0.98) 0%, rgba(255, 238, 196, 0.74) 24%, rgba(255, 190, 104, 0.34) 50%, rgba(255, 124, 36, 0) 74%);
+  filter: blur(4px);
+}
+
+#scene1-stage .scene1-stage__flare-ring {
+  width: 212px;
+  height: 212px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 225, 154, 0) 40%, rgba(255, 231, 184, 0.34) 60%, rgba(255, 184, 101, 0.1) 74%, rgba(255, 172, 88, 0) 84%);
+  filter: blur(3px);
+}
+
+#scene1-stage .scene1-stage__flare-beam {
+  width: 560px;
+  height: 32px;
+  background:
+    linear-gradient(90deg, rgba(255, 208, 142, 0) 0%, rgba(255, 239, 210, 0.1) 16%, rgba(255, 244, 224, 0.62) 50%, rgba(255, 239, 210, 0.1) 84%, rgba(255, 208, 142, 0) 100%);
+  transform: translate(-50%, -50%) rotate(var(--flare-axis-angle));
+  filter: blur(6px);
+  opacity: 0.88;
+}
+
+#scene1-stage .scene1-stage__flare-streak--h {
+  width: 176px;
+  height: 16px;
+  background: linear-gradient(90deg, rgba(255, 216, 140, 0) 0%, rgba(255, 248, 229, 0.18) 18%, rgba(255, 248, 229, 0.7) 50%, rgba(255, 248, 229, 0.18) 82%, rgba(255, 216, 140, 0) 100%);
+  filter: blur(3px);
+}
+
+#scene1-stage .scene1-stage__flare-streak--v {
+  width: 16px;
+  height: 152px;
+  background: linear-gradient(180deg, rgba(255, 228, 167, 0) 0%, rgba(255, 244, 220, 0.14) 18%, rgba(255, 244, 220, 0.46) 50%, rgba(255, 244, 220, 0.14) 82%, rgba(255, 228, 167, 0) 100%);
+  filter: blur(3px);
+}
+
+#scene1-stage .scene1-stage__flare-ghost {
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 248, 235, 0.4) 0%, rgba(255, 232, 185, 0.16) 32%, rgba(255, 175, 98, 0.04) 58%, rgba(255, 140, 62, 0) 76%);
+  filter: blur(1px);
+  opacity: 0.8;
+}
+
+#scene1-stage .scene1-stage__flare-ghost--a {
+  width: 58px;
+  height: 58px;
+  transform: translate(calc(-50% + var(--flare-axis-x) * 0.34), calc(-50% + var(--flare-axis-y) * 0.34));
+  opacity: 0.92;
+}
+
+#scene1-stage .scene1-stage__flare-ghost--b {
+  width: 92px;
+  height: 92px;
+  transform: translate(calc(-50% + var(--flare-axis-x) * 0.82), calc(-50% + var(--flare-axis-y) * 0.82));
+  opacity: 0.68;
+}
+
+#scene1-stage .scene1-stage__flare-ghost--c {
+  width: 142px;
+  height: 142px;
+  transform: translate(calc(-50% + var(--flare-axis-x) * 1.28), calc(-50% + var(--flare-axis-y) * 1.28));
+  opacity: 0.42;
+}
+
 html .scene1-stage__sky-wash {
   background: var(--bg-gradient-light-top-shadow);
 }
@@ -110,6 +211,7 @@ html.dark-mode .scene1-stage__sky-wash {
 #scene1-stage img,
 #scene1-stage .scene1-stage__sky-wash,
 #scene1-stage .scene1-stage__fx,
+#scene1-stage .scene1-stage__flare,
 #scene1-smoke-stage img {
   position: absolute;
   max-width: none;
@@ -173,103 +275,4 @@ html.dark-mode .scene1-stage__sky-wash {
   width: min(17vw, 320px);
   transform: translate3d(-8%, 4%, 0) scale(0.82);
   transform-origin: 28% 100%;
-}
-
-@media (max-width: 1024px) {
-  #scene1-stage::before {
-    left: 4.8vw;
-    bottom: 11.8vh;
-    width: min(22vw, 220px);
-    height: min(18vh, 170px);
-  }
-
-  #scene1-stage .scene1-stage__sky-wash {
-    width: 100%;
-    height: 30%;
-  }
-
-  #scene1-stage .scene1-stage__fx {
-    left: 5.2vw;
-    width: min(25vw, 230px);
-  }
-
-  #scene1-stage .scene1-stage__launchpad {
-    left: 6.6vw;
-    bottom: 15.5vh;
-    width: min(15.2vw, 128px);
-  }
-
-  #scene1-stage .scene1-stage__rocket {
-    left: 12.5vw;
-    bottom: 22.8vh;
-    width: min(6vw, 56px);
-  }
-
-  #scene1-stage .scene1-stage__fire {
-    left: 14.95vw;
-    bottom: -6px;
-    width: min(2.35vw, 21px);
-  }
-
-  #scene1-smoke-stage .scene1-stage__smoke-left {
-    left: 1.5vw;
-    bottom: 11.5vh;
-    width: min(23vw, 220px);
-  }
-
-  #scene1-smoke-stage .scene1-stage__smoke-right {
-    left: 16.5vw;
-    bottom: 11.6vh;
-    width: min(23vw, 220px);
-  }
-}
-
-@media (max-width: 760px) {
-  #scene1-stage::before {
-    left: 3vw;
-    bottom: 10.4vh;
-    width: 28vw;
-    height: 16vh;
-  }
-
-  #scene1-stage .scene1-stage__sky-wash {
-    left: 7vw;
-    width: 18vw;
-    height: 58%;
-  }
-
-  #scene1-stage .scene1-stage__fx {
-    left: 4vw;
-    width: 28vw;
-  }
-
-  #scene1-stage .scene1-stage__launchpad {
-    left: 5.4vw;
-    bottom: 11.5vh;
-    width: 17.6vw;
-  }
-
-  #scene1-stage .scene1-stage__rocket {
-    left: 12.5vw;
-    bottom: 20.2vh;
-    width: 7.9vw;
-  }
-
-  #scene1-stage .scene1-stage__fire {
-    left: 15.2vw;
-    bottom: 0;
-    width: 3vw;
-  }
-
-  #scene1-smoke-stage .scene1-stage__smoke-left {
-    left: -1.5vw;
-    bottom: 8.4vh;
-    width: 28vw;
-  }
-
-  #scene1-smoke-stage .scene1-stage__smoke-right {
-    left: 19vw;
-    bottom: 8.8vh;
-    width: 27vw;
-  }
 }
