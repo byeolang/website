@@ -128,7 +128,8 @@ html.dark-mode .scene1-stage__sky-wash {
 #scene1-smoke-stage .scene1-stage__smoke-left,
 #scene1-smoke-stage .scene1-stage__smoke-right {
   z-index: 10;
-  opacity: 0.22;
+  opacity: 0;
+  visibility: hidden;
   transform: scale(0.82);
   mix-blend-mode: screen;
   filter: brightness(1) saturate(0.46) blur(1.1px);

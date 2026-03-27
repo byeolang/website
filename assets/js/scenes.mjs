@@ -20,6 +20,14 @@ class TakeOff extends Scene {
     const smokeStage = "#scene1-smoke-stage";
     const initialLiftY = () => -window.innerHeight * 0.07;
     const ascentY = () => -window.innerHeight * 1.16;
+    const smokeTargets = `${smokeStage} .scene1-stage__smoke-left, ${smokeStage} .scene1-stage__smoke-right`;
+
+    gsap.set(smokeTargets, {
+      autoAlpha: 0,
+      scale: 0.82,
+      xPercent: 0,
+      yPercent: 0,
+    });
 
     return tl
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
@@ -27,80 +35,94 @@ class TakeOff extends Scene {
         scale: 1.04,
         xPercent: -6,
         yPercent: -2,
-        duration: 0.2,
-      }, 0.06)
+        duration: 0.52,
+      }, 0.08)
       .to(`${smokeStage} .scene1-stage__smoke-right`, {
         autoAlpha: 0.48,
         scale: 1.04,
         xPercent: 6,
         yPercent: -2,
-        duration: 0.2,
-      }, 0.06)
+        duration: 0.52,
+      }, 0.08)
       .to(`${stage} .scene1-stage__fire`, {
         autoAlpha: 0.86,
         scaleX: 0.94,
         scaleY: 1.18,
         yPercent: 10,
-        duration: 0.16,
-      }, 0.16)
+        duration: 0.22,
+      }, 0.69)
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
-        autoAlpha: 0.76,
-        scale: 1.28,
-        xPercent: -18,
-        yPercent: -12,
-        duration: 0.38,
-      }, 0.18)
-      .to(`${smokeStage} .scene1-stage__smoke-right`, {
-        autoAlpha: 0.76,
-        scale: 1.28,
-        xPercent: 18,
+        autoAlpha: 0.8,
+        scale: 1.34,
+        xPercent: -22,
         yPercent: -14,
-        duration: 0.38,
-      }, 0.18)
+        duration: 1.18,
+      }, 0.27)
+      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+        autoAlpha: 0.8,
+        scale: 1.34,
+        xPercent: 22,
+        yPercent: -16,
+        duration: 1.18,
+      }, 0.27)
       .to(`${stage} .scene1-stage__rocket`, {
         y: initialLiftY,
         scale: 0.98,
-        duration: 0.12,
-      }, 0.28)
+        duration: 0.16,
+      }, 1.25)
       .to(`${stage} .scene1-stage__fire`, {
         y: initialLiftY,
-        duration: 0.12,
-      }, 0.28)
+        duration: 0.16,
+      }, 1.25)
       .to(`${stage} .scene1-stage__rocket`, {
         y: ascentY,
         xPercent: 0,
         rotation: 0,
         scale: 0.9,
-        duration: 1.04,
-      }, 0.4)
+        duration: 0.92,
+      }, 1.41)
       .to(`${stage} .scene1-stage__fire`, {
         y: ascentY,
         xPercent: 0,
         scaleX: 0.74,
         scaleY: 1.12,
-        duration: 1.04,
-      }, 0.4)
+        duration: 0.92,
+      }, 1.41)
       .to(`${stage} .scene1-stage__fire`, {
         autoAlpha: 0.03,
         scaleX: 0.52,
         scaleY: 0.28,
         yPercent: 0,
         duration: 0.34,
-      }, 0.9)
+      }, 1.63)
+      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+        autoAlpha: 0.46,
+        scale: 1.5,
+        xPercent: -32,
+        yPercent: -22,
+        duration: 0.74,
+      }, 1.29)
+      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+        autoAlpha: 0.46,
+        scale: 1.5,
+        xPercent: 32,
+        yPercent: -24,
+        duration: 0.74,
+      }, 1.29)
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
         autoAlpha: 0.05,
-        scale: 1.56,
-        xPercent: -34,
-        yPercent: -24,
-        duration: 0.48,
-      }, 0.64)
+        scale: 1.64,
+        xPercent: -40,
+        yPercent: -30,
+        duration: 0.5,
+      }, 1.89)
       .to(`${smokeStage} .scene1-stage__smoke-right`, {
         autoAlpha: 0.05,
-        scale: 1.56,
-        xPercent: 34,
-        yPercent: -26,
-        duration: 0.48,
-      }, 0.64);
+        scale: 1.64,
+        xPercent: 40,
+        yPercent: -32,
+        duration: 0.5,
+      }, 1.89);
   }
 }
 
