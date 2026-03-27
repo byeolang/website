@@ -79,6 +79,24 @@ section#UprisingRocket {
   pointer-events: none;
 }
 
+#scene1-stage .scene1-stage__light3d {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#scene1-stage .scene1-stage__light3d canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  mix-blend-mode: screen;
+  filter: blur(0.3px) saturate(1.08) brightness(1.08);
+}
+
 #scene1-stage .scene1-stage__fx canvas {
   position: absolute;
   inset: 0;
@@ -210,6 +228,7 @@ html.dark-mode .scene1-stage__sky-wash {
 
 #scene1-stage img,
 #scene1-stage .scene1-stage__sky-wash,
+#scene1-stage .scene1-stage__light3d,
 #scene1-stage .scene1-stage__fx,
 #scene1-stage .scene1-stage__flare,
 #scene1-smoke-stage img {

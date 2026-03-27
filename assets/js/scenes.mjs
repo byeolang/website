@@ -1,4 +1,5 @@
 import { Scene } from "./scene.mjs"
+import { Scene1IgnitionLight } from "./scene1-ignition-light.mjs"
 import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 
 class UprisingRocket extends Scene {
@@ -25,6 +26,12 @@ class TakeOff extends Scene {
     const stageEl = document.querySelector(stage);
     const fireEl = stageEl?.querySelector(".scene1-stage__fire");
     const flareEl = stageEl?.querySelector(".scene1-stage__flare");
+    const ignitionLight = new Scene1IgnitionLight({
+      hostSelector: `${stage} .scene1-stage__light3d`,
+      stageSelector: stage,
+      fireSelector: `${stage} .scene1-stage__fire`,
+      rocketSelector: `${stage} .scene1-stage__rocket`,
+    });
     const sparks = new Scene1SparkLayer({
       hostSelector: `${stage} .scene1-stage__fx`,
       fireSelector: `${stage} .scene1-stage__fire`,
@@ -178,9 +185,16 @@ class TakeOff extends Scene {
         duration: 0.5,
       }, 1.89);
 
-    if (sparks.enabled) {
+    if (sparks.enabled || ignitionLight.enabled) {
       const syncSceneOneFx = () => {
-        sparks.setProgress(sceneTl.progress());
+        if (sparks.enabled) {
+          sparks.setProgress(sceneTl.progress());
+        }
+
+        if (ignitionLight.enabled) {
+          ignitionLight.setPhase(sceneTl.time(), sceneTl.duration());
+        }
+
         syncFlare();
       };
       gsap.ticker.add(syncSceneOneFx);
