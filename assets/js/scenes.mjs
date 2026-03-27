@@ -1,4 +1,5 @@
 import { Scene } from "./scene.mjs"
+import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 
 class UprisingRocket extends Scene {
   constructor() {
@@ -21,6 +22,10 @@ class TakeOff extends Scene {
     const initialLiftY = () => -window.innerHeight * 0.07;
     const ascentY = () => -window.innerHeight * 1.16;
     const smokeTargets = `${smokeStage} .scene1-stage__smoke-left, ${smokeStage} .scene1-stage__smoke-right`;
+    const sparks = new Scene1SparkLayer({
+      hostSelector: `${stage} .scene1-stage__fx`,
+      fireSelector: `${stage} .scene1-stage__fire`,
+    });
 
     gsap.set(smokeTargets, {
       autoAlpha: 0,
@@ -29,7 +34,7 @@ class TakeOff extends Scene {
       yPercent: 0,
     });
 
-    return tl
+    const sceneTl = tl
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
         autoAlpha: 0.48,
         scale: 1.04,
@@ -123,6 +128,14 @@ class TakeOff extends Scene {
         yPercent: -32,
         duration: 0.5,
       }, 1.89);
+
+    if (sparks.enabled) {
+      const syncSparks = () => sparks.setProgress(sceneTl.progress());
+      gsap.ticker.add(syncSparks);
+      syncSparks();
+    }
+
+    return sceneTl;
   }
 }
 
