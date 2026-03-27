@@ -41,10 +41,10 @@ section#UprisingRocket {
 #scene1-stage::before {
   content: "";
   position: absolute;
-  left: 2.8vw;
-  bottom: 4.4vh;
-  width: min(31vw, 520px);
-  height: min(24vh, 260px);
+  left: 6.2vw;
+  bottom: 7.2vh;
+  width: min(16vw, 260px);
+  height: min(17vh, 180px);
   background: radial-gradient(
     ellipse at 32% 72%,
     rgba(226, 236, 245, 0.38) 0%,
@@ -59,9 +59,32 @@ section#UprisingRocket {
 
 #scene1-stage .scene1-stage__sky-wash {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 40%;
+  height: 30%;
   z-index: 3;
+  mix-blend-mode: normal;
+  filter: blur(6px);
+}
+
+#scene1-stage .scene1-stage__fx {
+  position: absolute;
+  left: 6.8vw;
+  top: 0;
+  width: min(18vw, 290px);
+  height: 100%;
+  z-index: 4;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#scene1-stage .scene1-stage__fx canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
   mix-blend-mode: normal;
 }
 
@@ -86,6 +109,7 @@ html.dark-mode .scene1-stage__sky-wash {
 
 #scene1-stage img,
 #scene1-stage .scene1-stage__sky-wash,
+#scene1-stage .scene1-stage__fx,
 #scene1-smoke-stage img {
   position: absolute;
   max-width: none;
@@ -152,6 +176,23 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 @media (max-width: 1024px) {
+  #scene1-stage::before {
+    left: 4.8vw;
+    bottom: 11.8vh;
+    width: min(22vw, 220px);
+    height: min(18vh, 170px);
+  }
+
+  #scene1-stage .scene1-stage__sky-wash {
+    width: 100%;
+    height: 30%;
+  }
+
+  #scene1-stage .scene1-stage__fx {
+    left: 5.2vw;
+    width: min(25vw, 230px);
+  }
+
   #scene1-stage .scene1-stage__launchpad {
     left: 6.6vw;
     bottom: 15.5vh;
@@ -184,6 +225,24 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 @media (max-width: 760px) {
+  #scene1-stage::before {
+    left: 3vw;
+    bottom: 10.4vh;
+    width: 28vw;
+    height: 16vh;
+  }
+
+  #scene1-stage .scene1-stage__sky-wash {
+    left: 7vw;
+    width: 18vw;
+    height: 58%;
+  }
+
+  #scene1-stage .scene1-stage__fx {
+    left: 4vw;
+    width: 28vw;
+  }
+
   #scene1-stage .scene1-stage__launchpad {
     left: 5.4vw;
     bottom: 11.5vh;
