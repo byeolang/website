@@ -22,6 +22,9 @@ class TakeOff extends Scene {
     const initialLiftY = () => -window.innerHeight * 0.07;
     const ascentY = () => -window.innerHeight * 1.16;
     const smokeTargets = `${smokeStage} .scene1-stage__smoke-left, ${smokeStage} .scene1-stage__smoke-right`;
+    const stageEl = document.querySelector(stage);
+    const fireEl = stageEl?.querySelector(".scene1-stage__fire");
+    const flareEl = stageEl?.querySelector(".scene1-stage__flare");
     const sparks = new Scene1SparkLayer({
       hostSelector: `${stage} .scene1-stage__fx`,
       fireSelector: `${stage} .scene1-stage__fire`,
@@ -33,6 +36,37 @@ class TakeOff extends Scene {
       xPercent: 0,
       yPercent: 0,
     });
+
+    if (flareEl) {
+      gsap.set(flareEl, {
+        autoAlpha: 0,
+        scale: 0.42,
+      });
+    }
+
+    const syncFlare = () => {
+      if (!stageEl || !fireEl || !flareEl) {
+        return;
+      }
+
+      const stageRect = stageEl.getBoundingClientRect();
+      const fireRect = fireEl.getBoundingClientRect();
+      const x = fireRect.left - stageRect.left + fireRect.width * 0.5;
+      const y = fireRect.top - stageRect.top + fireRect.height * 0.18;
+      const centerX = stageRect.width * 0.5;
+      const centerY = stageRect.height * 0.42;
+      const axisX = centerX - x;
+      const axisY = centerY - y;
+      const axisAngle = Math.atan2(axisY, axisX) * (180 / Math.PI);
+
+      gsap.set(flareEl, {
+        x,
+        y,
+      });
+      flareEl.style.setProperty("--flare-axis-x", `${axisX}px`);
+      flareEl.style.setProperty("--flare-axis-y", `${axisY}px`);
+      flareEl.style.setProperty("--flare-axis-angle", `${axisAngle}deg`);
+    };
 
     const sceneTl = tl
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
@@ -56,6 +90,21 @@ class TakeOff extends Scene {
         yPercent: 10,
         duration: 0.22,
       }, 0.69)
+      .to(flareEl, {
+        autoAlpha: 1,
+        scale: 1.34,
+        duration: 0.1,
+      }, 1.18)
+      .to(flareEl, {
+        autoAlpha: 0.52,
+        scale: 0.96,
+        duration: 0.14,
+      }, 1.26)
+      .to(flareEl, {
+        autoAlpha: 0,
+        scale: 1.96,
+        duration: 0.32,
+      }, 1.34)
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
         autoAlpha: 0.8,
         scale: 1.34,
@@ -130,9 +179,14 @@ class TakeOff extends Scene {
       }, 1.89);
 
     if (sparks.enabled) {
-      const syncSparks = () => sparks.setProgress(sceneTl.progress());
-      gsap.ticker.add(syncSparks);
-      syncSparks();
+      const syncSceneOneFx = () => {
+        sparks.setProgress(sceneTl.progress());
+        syncFlare();
+      };
+      gsap.ticker.add(syncSceneOneFx);
+      syncSceneOneFx();
+    } else {
+      syncFlare();
     }
 
     return sceneTl;
