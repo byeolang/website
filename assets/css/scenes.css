@@ -46,6 +46,64 @@ section#UprisingRocket {
   }
 }
 
+.scene1-shell {
+  /* Scene1 foreground geometry is centralized here so responsive tuning can
+     happen by overriding tokens instead of chasing individual elements. */
+  --scene1-stage-aura-left: 6.2vw;
+  --scene1-stage-aura-bottom: 7.2vh;
+  --scene1-stage-aura-width: min(16vw, 260px);
+  --scene1-stage-aura-height: min(17vh, 180px);
+
+  --scene1-ground-glow-left: 3.6vw;
+  --scene1-ground-glow-bottom: 2.6vh;
+  --scene1-ground-glow-width: min(34vw, 560px);
+  --scene1-ground-glow-height: min(27vh, 244px);
+
+  --scene1-fx-left: 6.8vw;
+  --scene1-fx-top: 0;
+  --scene1-fx-width: min(18vw, 290px);
+
+  --scene1-heat-haze-left: 10.5vw;
+  --scene1-heat-haze-bottom: 15.2vh;
+  --scene1-heat-haze-width: min(7.8vw, 116px);
+  --scene1-heat-haze-height: min(28vh, 300px);
+
+  --scene1-trail-left: 12.46vw;
+  --scene1-trail-bottom: 18.2vh;
+  --scene1-trail-width: min(4.9vw, 82px);
+  --scene1-trail-height: min(41vh, 430px);
+
+  --scene1-shockwave-left: 9.8vw;
+  --scene1-shockwave-bottom: 13.8vh;
+  --scene1-shockwave-width: min(21vw, 340px);
+  --scene1-shockwave-height: min(13vh, 138px);
+
+  --scene1-gust-left: 11.2vw;
+  --scene1-gust-bottom: 3.2vh;
+  --scene1-gust-width: min(66vw, 1080px);
+  --scene1-gust-height: min(19vh, 188px);
+
+  --scene1-launchpad-left: 8vw;
+  --scene1-launchpad-bottom: 10.6vh;
+  --scene1-launchpad-width: min(11.1vw, 182px);
+
+  --scene1-rocket-left: 12.85vw;
+  --scene1-rocket-bottom: 19.4vh;
+  --scene1-rocket-width: min(4.1vw, 70px);
+
+  --scene1-fire-left: 14vw;
+  --scene1-fire-bottom: 140px;
+  --scene1-fire-width: min(1.86vw, 30px);
+
+  --scene1-smoke-left-left: 5.2vw;
+  --scene1-smoke-left-bottom: 5.6vh;
+  --scene1-smoke-left-width: min(17vw, 320px);
+
+  --scene1-smoke-right-left: 15.8vw;
+  --scene1-smoke-right-bottom: 5.8vh;
+  --scene1-smoke-right-width: min(17vw, 320px);
+}
+
 #scene1-stage {
   position: absolute;
   inset: 0;
@@ -58,10 +116,10 @@ section#UprisingRocket {
 #scene1-stage::before {
   content: "";
   position: absolute;
-  left: 6.2vw;
-  bottom: 7.2vh;
-  width: min(16vw, 260px);
-  height: min(17vh, 180px);
+  left: var(--scene1-stage-aura-left);
+  bottom: var(--scene1-stage-aura-bottom);
+  width: var(--scene1-stage-aura-width);
+  height: var(--scene1-stage-aura-height);
   background: radial-gradient(
     ellipse at 32% 72%,
     rgba(226, 236, 245, 0.38) 0%,
@@ -505,10 +563,10 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__ground-glow {
   position: absolute;
-  left: 3.6vw;
-  bottom: 2.6vh;
-  width: min(34vw, 560px);
-  height: min(27vh, 244px);
+  left: var(--scene1-ground-glow-left);
+  bottom: var(--scene1-ground-glow-bottom);
+  width: var(--scene1-ground-glow-width);
+  height: var(--scene1-ground-glow-height);
   z-index: 0;
   opacity: 0;
   transform: translate3d(0, 4%, 0) scale(0.74, 0.56);
@@ -533,9 +591,9 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__fx {
   position: absolute;
-  left: 6.8vw;
-  top: 0;
-  width: min(18vw, 290px);
+  left: var(--scene1-fx-left);
+  top: var(--scene1-fx-top);
+  width: var(--scene1-fx-width);
   height: 100%;
   z-index: 4;
   overflow: visible;
@@ -544,10 +602,10 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__heat-haze {
   position: absolute;
-  left: 10.5vw;
-  bottom: 15.2vh;
-  width: min(7.8vw, 116px);
-  height: min(28vh, 300px);
+  left: var(--scene1-heat-haze-left);
+  bottom: var(--scene1-heat-haze-bottom);
+  width: var(--scene1-heat-haze-width);
+  height: var(--scene1-heat-haze-height);
   z-index: 3;
   opacity: 0;
   transform: translate3d(0, 0, 0) scale(0.7, 0.5);
@@ -579,10 +637,10 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__trail {
   position: absolute;
-  left: 12.46vw;
-  bottom: 18.2vh;
-  width: min(4.9vw, 82px);
-  height: min(41vh, 430px);
+  left: var(--scene1-trail-left);
+  bottom: var(--scene1-trail-bottom);
+  width: var(--scene1-trail-width);
+  height: var(--scene1-trail-height);
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, 6%, 0) scale(0.42, 0.22);
@@ -596,10 +654,10 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__shockwave {
   position: absolute;
-  left: 9.8vw;
-  bottom: 13.8vh;
-  width: min(21vw, 340px);
-  height: min(13vh, 138px);
+  left: var(--scene1-shockwave-left);
+  bottom: var(--scene1-shockwave-bottom);
+  width: var(--scene1-shockwave-width);
+  height: var(--scene1-shockwave-height);
   z-index: 4;
   opacity: 0;
   transform: translate3d(0, 4%, 0) scale(0.08, 0.18);
@@ -621,10 +679,10 @@ html.dark-mode #scene1-copy .scene1-copy__code-card {
 
 #scene1-stage .scene1-stage__gust-front {
   position: absolute;
-  left: 11.2vw;
-  bottom: 3.2vh;
-  width: min(66vw, 1080px);
-  height: min(19vh, 188px);
+  left: var(--scene1-gust-left);
+  bottom: var(--scene1-gust-bottom);
+  width: var(--scene1-gust-width);
+  height: var(--scene1-gust-height);
   z-index: 7;
   opacity: 0;
   transform: translate3d(-4%, 8%, 0) scale(0.12, 0.66);
@@ -824,18 +882,18 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 #scene1-stage .scene1-stage__launchpad {
-  left: 8vw;
-  bottom: 10.6vh;
-  width: min(11.1vw, 182px);
+  left: var(--scene1-launchpad-left);
+  bottom: var(--scene1-launchpad-bottom);
+  width: var(--scene1-launchpad-width);
   z-index: 1;
   opacity: 0.9;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.06)) blur(0.18px) saturate(0.76) brightness(1.01) contrast(0.88);
 }
 
 #scene1-stage .scene1-stage__rocket {
-  left: 12.85vw;
-  bottom: 19.4vh;
-  width: min(4.1vw, 70px);
+  left: var(--scene1-rocket-left);
+  bottom: var(--scene1-rocket-bottom);
+  width: var(--scene1-rocket-width);
   z-index: 2;
   opacity: 0.88;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.06)) blur(0.2px) saturate(0.74) brightness(1.01) contrast(0.88);
@@ -843,9 +901,9 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 #scene1-stage .scene1-stage__fire {
-  left: 14vw;
-  bottom: 140px;
-  width: min(1.86vw, 30px);
+  left: var(--scene1-fire-left);
+  bottom: var(--scene1-fire-bottom);
+  width: var(--scene1-fire-width);
   z-index: 2;
   opacity: 0.11;
   transform: translate3d(0, -8%, 0) scale(0.58, 0.18);
@@ -865,17 +923,17 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 #scene1-smoke-stage .scene1-stage__smoke-left {
-  left: 5.2vw;
-  bottom: 5.6vh;
-  width: min(17vw, 320px);
+  left: var(--scene1-smoke-left-left);
+  bottom: var(--scene1-smoke-left-bottom);
+  width: var(--scene1-smoke-left-width);
   transform: translate3d(8%, 4%, 0) scale(0.82);
   transform-origin: 72% 100%;
 }
 
 #scene1-smoke-stage .scene1-stage__smoke-right {
-  left: 15.8vw;
-  bottom: 5.8vh;
-  width: min(17vw, 320px);
+  left: var(--scene1-smoke-right-left);
+  bottom: var(--scene1-smoke-right-bottom);
+  width: var(--scene1-smoke-right-width);
   transform: translate3d(-8%, 4%, 0) scale(0.82);
   transform-origin: 28% 100%;
 }
