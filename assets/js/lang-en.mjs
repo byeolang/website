@@ -23,7 +23,8 @@ export default {
   // home:
   "The Byeol Programming Language": "The Byeol Programming Language",
   "start": "BEGIN QUEST",
-  "scene1-title": "Few Keywords,\nFast Understanding",
+  "scene1-kicker": "Less Syntax, More Structure",
+  "scene1-title": "Few Keywords, Fast Understanding",
   "scene1-desc": "Spend less time learning syntax,\nand more time turning ideas into code.\nbyeol aims to express the same work with fewer grammar elements.",
   "scene1-keywords-label": "Keywords",
   "scene1-keywords-note": "guide reference",
