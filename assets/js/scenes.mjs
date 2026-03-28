@@ -61,6 +61,7 @@ class TakeOff extends Scene {
     const heroHeaderEl = document.querySelector("#main-content-header");
     const heroNaviEl = document.querySelector("#main-content-navi");
     const copyEl = document.querySelector("#scene1-copy");
+    const copyEyebrowEl = copyEl?.querySelector(".scene1-copy__eyebrow");
     const copyTitleEl = copyEl?.querySelector(".scene1-copy__title");
     const copyDescEl = copyEl?.querySelector(".scene1-copy__description");
     const copyKeywordEl = copyEl?.querySelector(".scene1-copy__keyword-card");
@@ -158,18 +159,25 @@ class TakeOff extends Scene {
     if (copyEl) {
       gsap.set(copyEl, {
         autoAlpha: 0,
-        xPercent: 4,
-        yPercent: 3,
+        xPercent: 0,
+        yPercent: 2,
+      });
+    }
+
+    if (copyEyebrowEl) {
+      gsap.set(copyEyebrowEl, {
+        autoAlpha: 0,
+        yPercent: 30,
       });
     }
 
     if (titleTargets.length) {
       gsap.set(titleTargets, {
         autoAlpha: 0,
-        x: (index) => (index === 0 ? -34 : 26),
-        y: (index) => (index === 0 ? 34 : 48),
-        rotate: (index) => (index === 0 ? -5 : 2.4),
-        transformOrigin: "0% 100%",
+        x: 0,
+        yPercent: (index) => 26 + index * 8,
+        rotate: 0,
+        transformOrigin: "50% 100%",
       });
     }
 
@@ -258,20 +266,17 @@ class TakeOff extends Scene {
         yPercent: 0,
         duration: 0.42,
       }, 0.36)
-      .to(titleTargets[0], {
+      .to(copyEyebrowEl, {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 0.28,
+      }, 0.42)
+      .to(titleTargets, {
         autoAlpha: 1,
         x: 0,
-        y: 0,
-        rotate: 0,
-        duration: 0.34,
-      }, 0.44)
-      .to(titleTargets[1], {
-        autoAlpha: 1,
-        x: 0,
-        y: 0,
-        rotate: 0,
+        yPercent: 0,
         duration: 0.38,
-      }, 0.58)
+      }, 0.52)
       .to(descriptionTargets, {
         autoAlpha: 1,
         x: 0,
