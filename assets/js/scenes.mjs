@@ -18,6 +18,33 @@ class TakeOff extends Scene {
   }
 
   _onAnimate(tl) {
+    const splitMultilineText = (element, lineClass) => {
+      if (!element) {
+        return [];
+      }
+
+      const source = (element.dataset.splitSource ?? element.textContent ?? "")
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      if (!source.length) {
+        return [];
+      }
+
+      element.dataset.splitSource = source.join("\n");
+      element.replaceChildren();
+
+      return source.map((line, index) => {
+        const span = document.createElement("span");
+        span.className = lineClass;
+        span.textContent = line;
+        span.style.setProperty("--line-index", index);
+        element.appendChild(span);
+        return span;
+      });
+    };
+
     const stage = "#scene1-stage";
     const smokeStage = "#scene1-smoke-stage";
     const initialLiftY = () => -window.innerHeight * 0.07;
@@ -31,6 +58,17 @@ class TakeOff extends Scene {
     const trailEl = stageEl?.querySelector(".scene1-stage__trail");
     const shockwaveEl = stageEl?.querySelector(".scene1-stage__shockwave");
     const gustFrontEl = stageEl?.querySelector(".scene1-stage__gust-front");
+    const heroHeaderEl = document.querySelector("#main-content-header");
+    const heroNaviEl = document.querySelector("#main-content-navi");
+    const copyEl = document.querySelector("#scene1-copy");
+    const copyTitleEl = copyEl?.querySelector(".scene1-copy__title");
+    const copyDescEl = copyEl?.querySelector(".scene1-copy__description");
+    const copyKeywordEl = copyEl?.querySelector(".scene1-copy__keyword-card");
+    const copyCodeEl = copyEl?.querySelector(".scene1-copy__code-card");
+    const titleLines = splitMultilineText(copyTitleEl, "scene1-copy__title-line");
+    const descriptionLines = splitMultilineText(copyDescEl, "scene1-copy__description-line");
+    const titleTargets = titleLines.length ? titleLines : [copyTitleEl].filter(Boolean);
+    const descriptionTargets = descriptionLines.length ? descriptionLines : [copyDescEl].filter(Boolean);
     const ignitionLight = new Scene1IgnitionLight({
       hostSelector: `${stage} .scene1-stage__light3d`,
       stageSelector: stage,
@@ -102,6 +140,61 @@ class TakeOff extends Scene {
       });
     }
 
+    if (heroHeaderEl) {
+      gsap.set(heroHeaderEl, {
+        autoAlpha: 1,
+        y: 0,
+        scale: 1,
+      });
+    }
+
+    if (heroNaviEl) {
+      gsap.set(heroNaviEl, {
+        autoAlpha: 1,
+        y: 0,
+      });
+    }
+
+    if (copyEl) {
+      gsap.set(copyEl, {
+        autoAlpha: 0,
+        xPercent: 4,
+        yPercent: 3,
+      });
+    }
+
+    if (titleTargets.length) {
+      gsap.set(titleTargets, {
+        autoAlpha: 0,
+        x: (index) => (index === 0 ? -34 : 26),
+        y: (index) => (index === 0 ? 34 : 48),
+        rotate: (index) => (index === 0 ? -5 : 2.4),
+        transformOrigin: "0% 100%",
+      });
+    }
+
+    if (descriptionTargets.length) {
+      gsap.set(descriptionTargets, {
+        autoAlpha: 0,
+        x: (index) => 14 + index * 8,
+        y: (index) => 18 + index * 6,
+      });
+    }
+
+    if (copyKeywordEl) {
+      gsap.set(copyKeywordEl, {
+        autoAlpha: 0,
+        y: 16,
+      });
+    }
+
+    if (copyCodeEl) {
+      gsap.set(copyCodeEl, {
+        autoAlpha: 0,
+        y: 20,
+      });
+    }
+
     const syncFlare = () => {
       if (!stageEl || !fireEl || !flareEl) {
         return;
@@ -148,6 +241,54 @@ class TakeOff extends Scene {
         yPercent: -2,
         duration: 0.18,
       }, 0.28)
+      .to(heroHeaderEl, {
+        autoAlpha: 0,
+        y: -26,
+        scale: 0.96,
+        duration: 0.42,
+      }, 0.16)
+      .to(heroNaviEl, {
+        autoAlpha: 0,
+        y: -18,
+        duration: 0.32,
+      }, 0.22)
+      .to(copyEl, {
+        autoAlpha: 1,
+        xPercent: 0,
+        yPercent: 0,
+        duration: 0.42,
+      }, 0.36)
+      .to(titleTargets[0], {
+        autoAlpha: 1,
+        x: 0,
+        y: 0,
+        rotate: 0,
+        duration: 0.34,
+      }, 0.44)
+      .to(titleTargets[1], {
+        autoAlpha: 1,
+        x: 0,
+        y: 0,
+        rotate: 0,
+        duration: 0.38,
+      }, 0.58)
+      .to(descriptionTargets, {
+        autoAlpha: 1,
+        x: 0,
+        y: 0,
+        duration: 0.28,
+        stagger: 0.08,
+      }, 0.74)
+      .to(copyKeywordEl, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.32,
+      }, 0.98)
+      .to(copyCodeEl, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.38,
+      }, 1.1)
       .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
         x: -1.2,
         y: 0.7,
@@ -380,6 +521,11 @@ class TakeOff extends Scene {
         scaleY: 1.34,
         yPercent: -34,
         duration: 0.48,
+      }, 1.96)
+      .to(copyEl, {
+        autoAlpha: 0.24,
+        yPercent: -3,
+        duration: 0.36,
       }, 1.96);
 
     if (sparks.enabled || ignitionLight.enabled) {

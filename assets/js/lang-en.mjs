@@ -23,6 +23,14 @@ export default {
   // home:
   "The Byeol Programming Language": "The Byeol Programming Language",
   "start": "BEGIN QUEST",
+  "scene1-title": "Few Keywords,\nFast Understanding",
+  "scene1-desc": "Spend less time learning syntax,\nand more time turning ideas into code.\nbyeol aims to express the same work with fewer grammar elements.",
+  "scene1-keywords-label": "Keywords",
+  "scene1-keywords-note": "guide reference",
+  "scene1-code-csharp-label": "C#",
+  "scene1-code-byeol-label": "byeol",
+  "scene1-code-csharp": "class Player {\n  int hp = 9;\n  public bool IsDanger() => hp < 10;\n}\nConsole.WriteLine(new Player().IsDanger());",
+  "scene1-code-byeol": "def player\n  hp := 9\n  isDanger() bool: hp < 10\nprint(player.isDanger())",
 
   // download:
   "packaging message": ":> packaging for you...",
