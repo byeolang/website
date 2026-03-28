@@ -26,6 +26,11 @@ class TakeOff extends Scene {
     const stageEl = document.querySelector(stage);
     const fireEl = stageEl?.querySelector(".scene1-stage__fire");
     const flareEl = stageEl?.querySelector(".scene1-stage__flare");
+    const glowEl = stageEl?.querySelector(".scene1-stage__ground-glow");
+    const hazeEl = stageEl?.querySelector(".scene1-stage__heat-haze");
+    const trailEl = stageEl?.querySelector(".scene1-stage__trail");
+    const shockwaveEl = stageEl?.querySelector(".scene1-stage__shockwave");
+    const gustFrontEl = stageEl?.querySelector(".scene1-stage__gust-front");
     const ignitionLight = new Scene1IgnitionLight({
       hostSelector: `${stage} .scene1-stage__light3d`,
       stageSelector: stage,
@@ -48,6 +53,52 @@ class TakeOff extends Scene {
       gsap.set(flareEl, {
         autoAlpha: 0,
         scale: 0.42,
+      });
+    }
+
+    if (glowEl) {
+      gsap.set(glowEl, {
+        autoAlpha: 0,
+        scaleX: 0.74,
+        scaleY: 0.56,
+        yPercent: 6,
+      });
+    }
+
+    if (hazeEl) {
+      gsap.set(hazeEl, {
+        autoAlpha: 0,
+        scaleX: 0.7,
+        scaleY: 0.5,
+        yPercent: 4,
+      });
+    }
+
+    if (trailEl) {
+      gsap.set(trailEl, {
+        autoAlpha: 0,
+        scaleX: 0.42,
+        scaleY: 0.22,
+        yPercent: 8,
+      });
+    }
+
+    if (shockwaveEl) {
+      gsap.set(shockwaveEl, {
+        autoAlpha: 0,
+        scaleX: 0.08,
+        scaleY: 0.18,
+        yPercent: 4,
+      });
+    }
+
+    if (gustFrontEl) {
+      gsap.set(gustFrontEl, {
+        autoAlpha: 0,
+        scaleX: 0.12,
+        scaleY: 0.66,
+        xPercent: -4,
+        yPercent: 8,
       });
     }
 
@@ -76,6 +127,52 @@ class TakeOff extends Scene {
     };
 
     const sceneTl = tl
+      .to(glowEl, {
+        autoAlpha: 0.34,
+        scaleX: 0.88,
+        scaleY: 0.72,
+        yPercent: 2,
+        duration: 0.34,
+      }, 0.14)
+      .to(hazeEl, {
+        autoAlpha: 0.2,
+        scaleX: 0.86,
+        scaleY: 0.78,
+        yPercent: 0,
+        duration: 0.26,
+      }, 0.18)
+      .to(`${stage} .scene1-stage__fire`, {
+        autoAlpha: 0.22,
+        scaleX: 0.7,
+        scaleY: 0.34,
+        yPercent: -2,
+        duration: 0.18,
+      }, 0.28)
+      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+        x: -1.2,
+        y: 0.7,
+        duration: 0.07,
+      }, 0.34)
+      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+        x: 1.5,
+        y: -0.5,
+        duration: 0.07,
+      }, 0.41)
+      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+        x: -0.8,
+        y: 1,
+        duration: 0.07,
+      }, 0.48)
+      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+        x: 0.9,
+        y: -0.4,
+        duration: 0.07,
+      }, 0.55)
+      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+        x: 0,
+        y: 0,
+        duration: 0.12,
+      }, 0.62)
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
         autoAlpha: 0.48,
         scale: 1.04,
@@ -97,16 +194,60 @@ class TakeOff extends Scene {
         yPercent: 10,
         duration: 0.22,
       }, 0.69)
+      .to(glowEl, {
+        autoAlpha: 0.92,
+        scaleX: 1.08,
+        scaleY: 1.02,
+        yPercent: -4,
+        duration: 0.3,
+      }, 0.72)
+      .to(hazeEl, {
+        autoAlpha: 0.6,
+        scaleX: 1.02,
+        scaleY: 1.08,
+        yPercent: -8,
+        duration: 0.28,
+      }, 0.74)
+      .to(shockwaveEl, {
+        autoAlpha: 0.88,
+        scaleX: 1.22,
+        scaleY: 0.88,
+        yPercent: 0,
+        duration: 0.1,
+      }, 1.12)
+      .to(gustFrontEl, {
+        autoAlpha: 0.4,
+        scaleX: 0.56,
+        scaleY: 0.84,
+        xPercent: 6,
+        yPercent: 2,
+        duration: 0.14,
+      }, 1.16)
       .to(flareEl, {
         autoAlpha: 1,
         scale: 1.34,
         duration: 0.1,
       }, 1.18)
+      .to(shockwaveEl, {
+        autoAlpha: 0,
+        scaleX: 4.8,
+        scaleY: 1.86,
+        yPercent: -10,
+        duration: 0.52,
+      }, 1.2)
       .to(flareEl, {
         autoAlpha: 0.52,
         scale: 0.96,
         duration: 0.14,
       }, 1.26)
+      .to(gustFrontEl, {
+        autoAlpha: 0.18,
+        scaleX: 1.02,
+        scaleY: 1.04,
+        xPercent: 24,
+        yPercent: -2,
+        duration: 0.42,
+      }, 1.28)
       .to(flareEl, {
         autoAlpha: 0,
         scale: 1.96,
@@ -126,6 +267,13 @@ class TakeOff extends Scene {
         yPercent: -16,
         duration: 1.18,
       }, 0.27)
+      .to(trailEl, {
+        autoAlpha: 0.4,
+        scaleX: 0.76,
+        scaleY: 0.86,
+        yPercent: -8,
+        duration: 0.36,
+      }, 1.16)
       .to(`${stage} .scene1-stage__rocket`, {
         y: initialLiftY,
         scale: 0.98,
@@ -138,7 +286,6 @@ class TakeOff extends Scene {
       .to(`${stage} .scene1-stage__rocket`, {
         y: ascentY,
         xPercent: 0,
-        rotation: 0,
         scale: 0.9,
         duration: 0.92,
       }, 1.41)
@@ -149,6 +296,28 @@ class TakeOff extends Scene {
         scaleY: 1.12,
         duration: 0.92,
       }, 1.41)
+      .to(hazeEl, {
+        autoAlpha: 0.36,
+        scaleX: 0.88,
+        scaleY: 1.18,
+        yPercent: -18,
+        duration: 0.82,
+      }, 1.32)
+      .to(trailEl, {
+        autoAlpha: 0.64,
+        scaleX: 1.02,
+        scaleY: 1.22,
+        yPercent: -28,
+        duration: 0.92,
+      }, 1.38)
+      .to(gustFrontEl, {
+        autoAlpha: 0,
+        scaleX: 1.22,
+        scaleY: 1.1,
+        xPercent: 38,
+        yPercent: -5,
+        duration: 0.34,
+      }, 1.56)
       .to(`${stage} .scene1-stage__fire`, {
         autoAlpha: 0.03,
         scaleX: 0.52,
@@ -156,6 +325,13 @@ class TakeOff extends Scene {
         yPercent: 0,
         duration: 0.34,
       }, 1.63)
+      .to(glowEl, {
+        autoAlpha: 0.22,
+        scaleX: 1.12,
+        scaleY: 1.16,
+        yPercent: -8,
+        duration: 0.56,
+      }, 1.56)
       .to(`${smokeStage} .scene1-stage__smoke-left`, {
         autoAlpha: 0.46,
         scale: 1.5,
@@ -183,7 +359,28 @@ class TakeOff extends Scene {
         xPercent: 40,
         yPercent: -32,
         duration: 0.5,
-      }, 1.89);
+      }, 1.89)
+      .to(glowEl, {
+        autoAlpha: 0,
+        scaleX: 1.18,
+        scaleY: 1.22,
+        yPercent: -12,
+        duration: 0.36,
+      }, 1.96)
+      .to(hazeEl, {
+        autoAlpha: 0,
+        scaleX: 0.72,
+        scaleY: 1.1,
+        yPercent: -26,
+        duration: 0.4,
+      }, 1.92)
+      .to(trailEl, {
+        autoAlpha: 0.08,
+        scaleX: 1.08,
+        scaleY: 1.34,
+        yPercent: -34,
+        duration: 0.48,
+      }, 1.96);
 
     if (sparks.enabled || ignitionLight.enabled) {
       const syncSceneOneFx = () => {
