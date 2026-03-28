@@ -47,8 +47,8 @@ section#UprisingRocket {
 }
 
 .scene1-shell {
-  /* Scene1 foreground geometry is centralized here so responsive tuning can
-     happen by overriding tokens instead of chasing individual elements. */
+  /* Scene1 foreground geometry follows the same 3-tier responsive model as
+     the background world: short, medium, tall. */
   --scene1-stage-aura-left: 6.2vw;
   --scene1-stage-aura-bottom: 7.2vh;
   --scene1-stage-aura-width: min(16vw, 260px);
@@ -63,8 +63,8 @@ section#UprisingRocket {
   --scene1-fx-top: 0;
   --scene1-fx-width: min(18vw, 290px);
 
-  --scene1-heat-haze-left: 10.5vw;
-  --scene1-heat-haze-bottom: 15.2vh;
+  --scene1-heat-haze-left: 10.4vw;
+  --scene1-heat-haze-bottom: 15.3vh;
   --scene1-heat-haze-width: min(7.8vw, 116px);
   --scene1-heat-haze-height: min(28vh, 300px);
 
@@ -83,17 +83,22 @@ section#UprisingRocket {
   --scene1-gust-width: min(66vw, 1080px);
   --scene1-gust-height: min(19vh, 188px);
 
-  --scene1-launchpad-left: 8vw;
-  --scene1-launchpad-bottom: 10.6vh;
-  --scene1-launchpad-width: min(11.1vw, 182px);
+  --scene1-vehicle-left: 8vw;
+  --scene1-vehicle-bottom: 10.6vh;
+  --scene1-vehicle-width: min(11.1vw, 182px);
+  --scene1-vehicle-aspect: 0.765;
 
-  --scene1-rocket-left: 12.85vw;
-  --scene1-rocket-bottom: 19.4vh;
-  --scene1-rocket-width: min(4.1vw, 70px);
+  --scene1-launchpad-left: 0%;
+  --scene1-launchpad-bottom: 0%;
+  --scene1-launchpad-width: 100%;
 
-  --scene1-fire-left: 14vw;
-  --scene1-fire-bottom: 140px;
-  --scene1-fire-width: min(1.86vw, 30px);
+  --scene1-rocket-left: 44%;
+  --scene1-rocket-bottom: 39.8%;
+  --scene1-rocket-width: 36.95%;
+
+  --scene1-fire-left: 53.9%;
+  --scene1-fire-bottom: 18%;
+  --scene1-fire-width: 16.8%;
 
   --scene1-smoke-left-left: 5.2vw;
   --scene1-smoke-left-bottom: 5.6vh;
@@ -102,6 +107,122 @@ section#UprisingRocket {
   --scene1-smoke-right-left: 15.8vw;
   --scene1-smoke-right-bottom: 5.8vh;
   --scene1-smoke-right-width: min(17vw, 320px);
+}
+
+@media (max-height: 699px) {
+  .scene1-shell {
+    --scene1-stage-aura-left: 5.6vw;
+    --scene1-stage-aura-bottom: 7.4vh;
+    --scene1-stage-aura-width: min(17vw, 230px);
+    --scene1-stage-aura-height: min(16vh, 140px);
+
+    --scene1-ground-glow-left: 2.6vw;
+    --scene1-ground-glow-bottom: 3.2vh;
+    --scene1-ground-glow-width: min(34vw, 460px);
+    --scene1-ground-glow-height: min(23vh, 180px);
+
+    --scene1-fx-left: 6vw;
+    --scene1-fx-width: min(19vw, 230px);
+
+    --scene1-heat-haze-left: 9.9vw;
+    --scene1-heat-haze-bottom: 15.9vh;
+    --scene1-heat-haze-width: min(7.6vw, 96px);
+    --scene1-heat-haze-height: min(24vh, 190px);
+
+    --scene1-trail-left: 12.1vw;
+    --scene1-trail-bottom: 18.8vh;
+    --scene1-trail-width: min(4.6vw, 62px);
+    --scene1-trail-height: min(34vh, 250px);
+
+    --scene1-shockwave-left: 9.2vw;
+    --scene1-shockwave-bottom: 14.2vh;
+    --scene1-shockwave-width: min(19vw, 250px);
+    --scene1-shockwave-height: min(11vh, 86px);
+
+    --scene1-gust-left: 10.2vw;
+    --scene1-gust-bottom: 4.2vh;
+    --scene1-gust-width: min(64vw, 900px);
+    --scene1-gust-height: min(14vh, 118px);
+
+    --scene1-vehicle-left: 7.1vw;
+    --scene1-vehicle-bottom: 12vh;
+    --scene1-vehicle-width: min(10vw, 138px);
+    --scene1-vehicle-aspect: 1;
+
+    --scene1-rocket-left: 46.2%;
+    --scene1-rocket-bottom: 40.8%;
+    --scene1-rocket-width: 39%;
+
+    --scene1-fire-left: 57.2%;
+    --scene1-fire-bottom: 18%;
+    --scene1-fire-width: 18%;
+
+    --scene1-smoke-left-left: 4.4vw;
+    --scene1-smoke-left-bottom: 6.8vh;
+    --scene1-smoke-left-width: min(15.2vw, 208px);
+
+    --scene1-smoke-right-left: 14.4vw;
+    --scene1-smoke-right-bottom: 6.9vh;
+    --scene1-smoke-right-width: min(15.2vw, 208px);
+  }
+}
+
+@media (min-height: 1080px) {
+  .scene1-shell {
+    --scene1-stage-aura-left: 7.2vw;
+    --scene1-stage-aura-bottom: 6.8vh;
+    --scene1-stage-aura-width: min(18vw, 340px);
+    --scene1-stage-aura-height: min(20vh, 240px);
+
+    --scene1-ground-glow-left: 4.2vw;
+    --scene1-ground-glow-bottom: 2vh;
+    --scene1-ground-glow-width: min(39vw, 760px);
+    --scene1-ground-glow-height: min(31vh, 320px);
+
+    --scene1-fx-left: 7.6vw;
+    --scene1-fx-width: min(20vw, 370px);
+
+    --scene1-heat-haze-left: 11vw;
+    --scene1-heat-haze-bottom: 14.8vh;
+    --scene1-heat-haze-width: min(8.2vw, 152px);
+    --scene1-heat-haze-height: min(31vh, 380px);
+
+    --scene1-trail-left: 13.2vw;
+    --scene1-trail-bottom: 17.6vh;
+    --scene1-trail-width: min(5.5vw, 110px);
+    --scene1-trail-height: min(45vh, 600px);
+
+    --scene1-shockwave-left: 10.6vw;
+    --scene1-shockwave-bottom: 13.2vh;
+    --scene1-shockwave-width: min(24vw, 460px);
+    --scene1-shockwave-height: min(14vh, 182px);
+
+    --scene1-gust-left: 12vw;
+    --scene1-gust-bottom: 2.6vh;
+    --scene1-gust-width: min(70vw, 1360px);
+    --scene1-gust-height: min(21vh, 250px);
+
+    --scene1-vehicle-left: 8.8vw;
+    --scene1-vehicle-bottom: 10.1vh;
+    --scene1-vehicle-width: min(12.4vw, 236px);
+    --scene1-vehicle-aspect: 0.765;
+
+    --scene1-rocket-left: 44%;
+    --scene1-rocket-bottom: 36.1%;
+    --scene1-rocket-width: 39.5%;
+
+    --scene1-fire-left: 53.9%;
+    --scene1-fire-bottom: 16.3%;
+    --scene1-fire-width: 17.6%;
+
+    --scene1-smoke-left-left: 5.8vw;
+    --scene1-smoke-left-bottom: 5vh;
+    --scene1-smoke-left-width: min(18.6vw, 400px);
+
+    --scene1-smoke-right-left: 17.8vw;
+    --scene1-smoke-right-bottom: 5.2vh;
+    --scene1-smoke-right-width: min(18.6vw, 400px);
+  }
 }
 
 #scene1-stage {
@@ -879,6 +1000,18 @@ html.dark-mode .scene1-stage__sky-wash {
   user-select: none;
   -webkit-user-drag: none;
   will-change: transform, opacity, filter;
+}
+
+#scene1-stage .scene1-stage__vehicle {
+  position: absolute;
+  left: var(--scene1-vehicle-left);
+  bottom: var(--scene1-vehicle-bottom);
+  width: var(--scene1-vehicle-width);
+  height: auto;
+  aspect-ratio: var(--scene1-vehicle-aspect);
+  z-index: 2;
+  overflow: visible;
+  pointer-events: none;
 }
 
 #scene1-stage .scene1-stage__launchpad {
