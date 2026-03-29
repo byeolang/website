@@ -18,11 +18,12 @@ export class Scene {
 
     const scene = document.querySelector(`section#${this.getName()}`);
     const pinWrap = scene.querySelector(".pin-bg");
+    const pinDistance = () => Math.max(scene.offsetHeight - window.innerHeight + 1, 1);
 
     ScrollTrigger.create({
       trigger: scene,
       start: 'top top',
-      end: 'bottom botttom',
+      end: () => `+=${pinDistance()}`,
       invalidateOnRefresh: true,
       anticipatePin: 1,
       markers: true,

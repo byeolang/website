@@ -565,29 +565,61 @@ export class Scener {
     this.scenes = [
       new TakeOff(), new UprisingRocket()
     ];
+    this._didUserInteractDuringBoot = false;
+    this._teardownBootInteractionGuard = null;
   }
 
   init() {
     history.scrollRestoration = "manual";
     ScrollTrigger.clearScrollMemory();
     gsap.registerPlugin(ScrollTrigger);
+    this._installBootInteractionGuard();
 
     for(const s of this.scenes)
       s.init()
 
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
-
       this._jumpToBottom();
       requestAnimationFrame(() => {
         ScrollTrigger.refresh();
+        if (!this._didUserInteractDuringBoot) {
+          this._jumpToBottom();
+        }
         ScrollTrigger.update();
+        this._teardownBootInteractionGuard?.();
+        this._teardownBootInteractionGuard = null;
       });
     });
   }
 
+  _installBootInteractionGuard() {
+    this._didUserInteractDuringBoot = false;
+
+    const markInteraction = () => {
+      this._didUserInteractDuringBoot = true;
+    };
+
+    const listenerOptions = { passive: true };
+    window.addEventListener("wheel", markInteraction, listenerOptions);
+    window.addEventListener("touchstart", markInteraction, listenerOptions);
+    window.addEventListener("pointerdown", markInteraction, listenerOptions);
+    window.addEventListener("keydown", markInteraction);
+
+    this._teardownBootInteractionGuard = () => {
+      window.removeEventListener("wheel", markInteraction, listenerOptions);
+      window.removeEventListener("touchstart", markInteraction, listenerOptions);
+      window.removeEventListener("pointerdown", markInteraction, listenerOptions);
+      window.removeEventListener("keydown", markInteraction);
+    };
+  }
+
   _jumpToBottom() {
-    window.scrollTo({ top: document.documentElement.scrollHeight, left: 0, behavior: "auto" });
+    const maxScrollTop = Math.max(
+      document.documentElement.scrollHeight - window.innerHeight,
+      0,
+    );
+    window.scrollTo({ top: maxScrollTop, left: 0, behavior: "auto" });
   }
 }
 
