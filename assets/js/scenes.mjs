@@ -47,11 +47,14 @@ class TakeOff extends Scene {
 
     const stage = "#scene1-stage";
     const smokeStage = "#scene1-smoke-stage";
+    const smokeLeftSelector = `${smokeStage} .scene1-stage__smoke-wrap--left`;
+    const smokeRightSelector = `${smokeStage} .scene1-stage__smoke-wrap--right`;
     const rocketSelector = ".scene1-stage__rocket";
     const fireSelector = ".scene1-stage__fire";
     const initialLiftY = () => -window.innerHeight * 0.07;
     const ascentY = () => -window.innerHeight * 1.16;
-    const smokeTargets = `${smokeStage} .scene1-stage__smoke-left, ${smokeStage} .scene1-stage__smoke-right`;
+    const smokeTargets = `${smokeLeftSelector}, ${smokeRightSelector}`;
+    const smokeGroundedYPercent = (scale, extra = 0) => (scale - 1) * 8 + extra;
     const stageEl = document.querySelector(stage);
     const fireEl = document.querySelector(fireSelector);
     const flareEl = stageEl?.querySelector(".scene1-stage__flare");
@@ -321,18 +324,18 @@ class TakeOff extends Scene {
         y: 0,
         duration: 0.12,
       }, 0.62)
-      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+      .to(smokeLeftSelector, {
         autoAlpha: 0.48,
         scale: 1.04,
         xPercent: -6,
-        yPercent: -2,
+        yPercent: smokeGroundedYPercent(1.04, 0),
         duration: 0.52,
       }, 0.08)
-      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+      .to(smokeRightSelector, {
         autoAlpha: 0.48,
         scale: 1.04,
         xPercent: 6,
-        yPercent: -2,
+        yPercent: smokeGroundedYPercent(1.04, 0),
         duration: 0.52,
       }, 0.08)
       .to(fireSelector, {
@@ -401,18 +404,18 @@ class TakeOff extends Scene {
         scale: 1.96,
         duration: 0.32,
       }, 1.34)
-      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+      .to(smokeLeftSelector, {
         autoAlpha: 0.8,
         scale: 1.34,
         xPercent: -22,
-        yPercent: -14,
+        yPercent: smokeGroundedYPercent(1.34, 0.4),
         duration: 1.18,
       }, 0.27)
-      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+      .to(smokeRightSelector, {
         autoAlpha: 0.8,
         scale: 1.34,
         xPercent: 22,
-        yPercent: -16,
+        yPercent: smokeGroundedYPercent(1.34, 0.8),
         duration: 1.18,
       }, 0.27)
       .to(trailEl, {
@@ -480,32 +483,32 @@ class TakeOff extends Scene {
         yPercent: -8,
         duration: 0.56,
       }, 1.56)
-      .to(`${smokeStage} .scene1-stage__smoke-left`, {
+      .to(smokeLeftSelector, {
         autoAlpha: 0.46,
         scale: 1.5,
         xPercent: -32,
-        yPercent: -22,
+        yPercent: smokeGroundedYPercent(1.5, 0.8),
         duration: 0.74,
       }, 1.29)
-      .to(`${smokeStage} .scene1-stage__smoke-right`, {
+      .to(smokeRightSelector, {
         autoAlpha: 0.46,
         scale: 1.5,
         xPercent: 32,
-        yPercent: -24,
+        yPercent: smokeGroundedYPercent(1.5, 1.2),
         duration: 0.74,
       }, 1.29)
-      .to(`${smokeStage} .scene1-stage__smoke-left`, {
-        autoAlpha: 0.05,
+      .to(smokeLeftSelector, {
+        autoAlpha: 0,
         scale: 1.64,
         xPercent: -40,
-        yPercent: -30,
+        yPercent: smokeGroundedYPercent(1.64, 1.4),
         duration: 0.5,
       }, 1.89)
-      .to(`${smokeStage} .scene1-stage__smoke-right`, {
-        autoAlpha: 0.05,
+      .to(smokeRightSelector, {
+        autoAlpha: 0,
         scale: 1.64,
         xPercent: 40,
-        yPercent: -32,
+        yPercent: smokeGroundedYPercent(1.64, 1.8),
         duration: 0.5,
       }, 1.89)
       .to(glowEl, {
