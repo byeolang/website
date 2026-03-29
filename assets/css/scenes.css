@@ -101,13 +101,8 @@ section#UprisingRocket {
   --scene1-fire-bottom: 18%;
   --scene1-fire-width: 16.8%;
 
-  --scene1-smoke-left-left: 5.2vw;
-  --scene1-smoke-left-bottom: 5.6vh;
-  --scene1-smoke-left-width: min(17vw, 320px);
-
-  --scene1-smoke-right-left: 15.8vw;
-  --scene1-smoke-right-bottom: 5.8vh;
-  --scene1-smoke-right-width: min(17vw, 320px);
+  --scene1-smoke-width: min(17vw, 320px);
+  --scene1-smoke-tip-rise: calc(var(--scene1-smoke-width) * 50 / 706);
 }
 
 @media (max-height: 699px) {
@@ -156,13 +151,7 @@ section#UprisingRocket {
     --scene1-fire-bottom: 18%;
     --scene1-fire-width: 18%;
 
-    --scene1-smoke-left-left: 4.4vw;
-    --scene1-smoke-left-bottom: 6.8vh;
-    --scene1-smoke-left-width: min(15.2vw, 208px);
-
-    --scene1-smoke-right-left: 14.4vw;
-    --scene1-smoke-right-bottom: 6.9vh;
-    --scene1-smoke-right-width: min(15.2vw, 208px);
+    --scene1-smoke-width: min(15.2vw, 208px);
   }
 }
 
@@ -212,13 +201,7 @@ section#UprisingRocket {
     --scene1-fire-bottom: 16.3%;
     --scene1-fire-width: 17.6%;
 
-    --scene1-smoke-left-left: 5.8vw;
-    --scene1-smoke-left-bottom: 5vh;
-    --scene1-smoke-left-width: min(18.6vw, 400px);
-
-    --scene1-smoke-right-left: 17.8vw;
-    --scene1-smoke-right-bottom: 5.2vh;
-    --scene1-smoke-right-width: min(18.6vw, 400px);
+    --scene1-smoke-width: min(18.6vw, 400px);
   }
 }
 
@@ -970,17 +953,6 @@ html.dark-mode .scene1-stage__sky-wash {
   background: var(--bg-gradient-dark-top-shadow);
 }
 
-#scene1-smoke-stage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(var(--vh, 1vh) * 100 + 1px - var(--vfooter));
-  z-index: 5;
-  pointer-events: none;
-  overflow: hidden;
-}
-
 #scene1-stage img,
 #scene1-terrain-anchor img,
 #scene1-stage .scene1-stage__sky-wash,
@@ -1063,28 +1035,46 @@ html.dark-mode .scene1-stage__sky-wash {
   filter: drop-shadow(0 4px 8px rgba(255, 139, 21, 0.08));
 }
 
-#scene1-smoke-stage .scene1-stage__smoke-left,
-#scene1-smoke-stage .scene1-stage__smoke-right {
-  z-index: 10;
+#scene1-smoke-stage {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: calc(0px - var(--grass-top));
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1900 / 200;
+  z-index: 5;
+  pointer-events: none;
+  overflow: visible;
+}
+
+#scene1-smoke-stage .scene1-stage__smoke-wrap {
+  position: absolute;
+  bottom: calc(var(--scene1-launch-anchor-bottom) - var(--scene1-smoke-tip-rise));
+  width: var(--scene1-smoke-width);
+  aspect-ratio: 706 / 366;
+  z-index: 5;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.82);
+  overflow: visible;
+  pointer-events: none;
+}
+
+#scene1-smoke-stage .scene1-stage__smoke-wrap--left {
+  right: calc(100% - var(--scene1-launch-anchor-left));
+  transform-origin: 99.6% 68.6%;
+}
+
+#scene1-smoke-stage .scene1-stage__smoke-wrap--right {
+  left: var(--scene1-launch-anchor-left);
+  transform-origin: 0.4% 68.6%;
+}
+
+#scene1-smoke-stage .scene1-stage__smoke-left,
+#scene1-smoke-stage .scene1-stage__smoke-right {
+  inset: 0;
+  width: 100%;
+  height: 100%;
   mix-blend-mode: screen;
   filter: brightness(1) saturate(0.46) blur(1.1px);
-}
-
-#scene1-smoke-stage .scene1-stage__smoke-left {
-  left: var(--scene1-smoke-left-left);
-  bottom: var(--scene1-smoke-left-bottom);
-  width: var(--scene1-smoke-left-width);
-  transform: translate3d(8%, 4%, 0) scale(0.82);
-  transform-origin: 72% 100%;
-}
-
-#scene1-smoke-stage .scene1-stage__smoke-right {
-  left: var(--scene1-smoke-right-left);
-  bottom: var(--scene1-smoke-right-bottom);
-  width: var(--scene1-smoke-right-width);
-  transform: translate3d(-8%, 4%, 0) scale(0.82);
-  transform-origin: 28% 100%;
 }
