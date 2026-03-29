@@ -179,6 +179,7 @@ div#main-bg {
   overflow: hidden;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100 + 1px - var(--vfooter));
+  isolation: auto;
   transition: all .45s cubic-bezier(0.65, 0, 0.076, 1)
 }
 
