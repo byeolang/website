@@ -42,7 +42,7 @@ export class Scene1SparkLayer {
   }
 
   _initParticles() {
-    this.count = window.innerWidth <= 760 ? 156 : 296;
+    this.count = window.innerWidth <= 760 ? 192 : 360;
     this.positions = new Float32Array(this.count * 3);
     this.colors = new Float32Array(this.count * 3);
     this.sizes = new Float32Array(this.count);
@@ -126,29 +126,29 @@ export class Scene1SparkLayer {
     if (seedValue < 0.7) {
       const t = seedValue / 0.7;
       return {
-        sizeMul: 0.2 + t * 0.18,
-        trailLengthMul: 0.5 + t * 0.18,
-        trailWidthMul: 0.42 + t * 0.16,
-        brightnessMul: 0.88 + t * 0.08,
+        sizeMul: 0.24 + t * 0.22,
+        trailLengthMul: 0.56 + t * 0.2,
+        trailWidthMul: 0.5 + t * 0.18,
+        brightnessMul: 0.92 + t * 0.1,
       };
     }
 
     if (seedValue < 0.93) {
       const t = (seedValue - 0.7) / 0.23;
       return {
-        sizeMul: 0.62 + t * 0.26,
-        trailLengthMul: 0.86 + t * 0.22,
-        trailWidthMul: 0.76 + t * 0.18,
-        brightnessMul: 0.98 + t * 0.08,
+        sizeMul: 0.72 + t * 0.3,
+        trailLengthMul: 0.94 + t * 0.24,
+        trailWidthMul: 0.84 + t * 0.2,
+        brightnessMul: 1.02 + t * 0.1,
       };
     }
 
     const t = (seedValue - 0.93) / 0.07;
     return {
-      sizeMul: 1.15 + t * 0.55,
-      trailLengthMul: 1.18 + t * 0.34,
-      trailWidthMul: 1.06 + t * 0.26,
-      brightnessMul: 1.08 + t * 0.08,
+      sizeMul: 1.28 + t * 0.62,
+      trailLengthMul: 1.26 + t * 0.38,
+      trailWidthMul: 1.14 + t * 0.32,
+      brightnessMul: 1.14 + t * 0.1,
     };
   }
 
@@ -195,8 +195,8 @@ export class Scene1SparkLayer {
       const driftVelocity = (seed.spread - 0.5) * (14 + age * 22) + Math.cos(age * 9 + seed.curl * 5.4) * 3.2;
       const dropVelocity = 18 + seed.speed * 26 + age * 56;
       const velocityLength = Math.hypot(driftVelocity, dropVelocity) || 1;
-      const trailLength = (4.1 + (1 - age) * 6.1 + intensity * 4.6) * tier.trailLengthMul * (window.innerWidth <= 760 ? 0.8 : 1);
-      const trailWidth = Math.max(0.35, (0.36 + (1 - age) * 0.62 + intensity * 0.28) * tier.trailWidthMul * (window.innerWidth <= 760 ? 0.82 : 1));
+      const trailLength = (4.8 + (1 - age) * 7.2 + intensity * 5.4) * tier.trailLengthMul * (window.innerWidth <= 760 ? 0.84 : 1);
+      const trailWidth = Math.max(0.42, (0.42 + (1 - age) * 0.7 + intensity * 0.34) * tier.trailWidthMul * (window.innerWidth <= 760 ? 0.86 : 1));
 
       this.trails[offset] = (driftVelocity / velocityLength) * trailLength;
       this.trails[offset + 1] = (dropVelocity / velocityLength) * trailLength;
@@ -208,7 +208,7 @@ export class Scene1SparkLayer {
       this.colors[offset] = (0.96 + heatMix * 0.04) * brightness;
       this.colors[offset + 1] = (0.3 + heatMix * 0.58) * brightness;
       this.colors[offset + 2] = (0.03 + heatMix * 0.04) * brightness;
-      this.sizes[index] = (0.34 + (1 - age) * 0.72 + intensity * 0.44) * tier.sizeMul * (window.innerWidth <= 760 ? 0.78 : 1);
+      this.sizes[index] = (0.42 + (1 - age) * 0.86 + intensity * 0.54) * tier.sizeMul * (window.innerWidth <= 760 ? 0.84 : 1);
     }
 
     this.render();
@@ -236,7 +236,7 @@ export class Scene1SparkLayer {
       const r = clamp(this.colors[offset], 0, 1.5);
       const g = clamp(this.colors[offset + 1], 0, 1.5);
       const b = clamp(this.colors[offset + 2], 0, 1.1);
-      const alpha = clamp(Math.max(r * 0.78, g * 0.82), 0, 0.9);
+      const alpha = clamp(Math.max(r * 0.84, g * 0.88), 0, 0.94);
       const trailX = this.trails[offset];
       const trailY = this.trails[offset + 1];
       const trailWidth = this.trails[offset + 2];
@@ -256,7 +256,7 @@ export class Scene1SparkLayer {
       this.ctx.lineTo(tailX, tailY);
       this.ctx.stroke();
 
-      const glowGradient = this.ctx.createRadialGradient(x, y, 0, x, y, size * 1.08);
+      const glowGradient = this.ctx.createRadialGradient(x, y, 0, x, y, size * 1.18);
       glowGradient.addColorStop(0, `rgba(255, 248, 236, ${Math.min(alpha, 0.92)})`);
       glowGradient.addColorStop(0.25, `rgba(${Math.round(r * 255)}, ${Math.round(g * 238)}, ${Math.round((b + 0.02) * 160)}, ${alpha * 0.72})`);
       glowGradient.addColorStop(0.62, `rgba(255, 150, 44, ${alpha * 0.18})`);
@@ -264,7 +264,7 @@ export class Scene1SparkLayer {
 
       this.ctx.fillStyle = glowGradient;
       this.ctx.beginPath();
-      this.ctx.arc(x, y, size * 1.08, 0, Math.PI * 2);
+      this.ctx.arc(x, y, size * 1.18, 0, Math.PI * 2);
       this.ctx.fill();
     }
 
