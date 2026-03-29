@@ -23,7 +23,8 @@ class TakeOff extends Scene {
         return [];
       }
 
-      const source = (element.dataset.splitSource ?? element.textContent ?? "")
+      const htmlSource = element.dataset.splitSourceHtml ?? null;
+      const source = (htmlSource ?? element.dataset.splitSource ?? element.textContent ?? "")
         .split("\n")
         .map((line) => line.trim())
         .filter(Boolean);
@@ -32,13 +33,21 @@ class TakeOff extends Scene {
         return [];
       }
 
-      element.dataset.splitSource = source.join("\n");
+      if (htmlSource !== null) {
+        element.dataset.splitSourceHtml = source.join("\n");
+      } else {
+        element.dataset.splitSource = source.join("\n");
+      }
       element.replaceChildren();
 
       return source.map((line, index) => {
         const span = document.createElement("span");
         span.className = lineClass;
-        span.textContent = line;
+        if (htmlSource !== null) {
+          span.innerHTML = line;
+        } else {
+          span.textContent = line;
+        }
         span.style.setProperty("--line-index", index);
         element.appendChild(span);
         return span;

@@ -369,7 +369,7 @@ section#UprisingRocket {
   padding-left: clamp(24px, 2.8vw, 46px);
   font-size: clamp(14px, 1.1vw, 18px);
   line-height: 1.72;
-  white-space: pre-line;
+  white-space: normal;
   opacity: 0.92;
 }
 
@@ -379,6 +379,11 @@ section#UprisingRocket {
 
 #scene1-copy .scene1-copy__description-line + .scene1-copy__description-line {
   margin-top: 0.38em;
+}
+
+#scene1-copy .scene1-copy__description strong {
+  font-weight: 700;
+  color: var(--scene1-copy-emphasis-color, #E0B88D);
 }
 
 #scene1-copy .scene1-copy__cards {
@@ -392,6 +397,7 @@ section#UprisingRocket {
 
 #scene1-copy .scene1-copy__keyword-card,
 #scene1-copy .scene1-copy__code-card {
+  position: relative;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 18px;
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
@@ -416,11 +422,30 @@ section#UprisingRocket {
   margin: 8px 0 4px;
   font-size: clamp(44px, 3.2vw, 64px);
   line-height: 0.96;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    135deg,
+    var(--scene1-copy-accent-point, #4189A6) 0%,
+    var(--scene1-copy-accent-grass, #6AB04B) 58%,
+    var(--scene1-copy-accent-moon, #E0B88D) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 #scene1-copy .scene1-copy__keyword-note {
   line-height: 1.4;
   opacity: 0.74;
+}
+
+#scene1-copy .scene1-copy__keyword-label {
+  color: var(--scene1-copy-token-keyword, #4189A6);
+}
+
+#scene1-copy .scene1-copy__keyword-note {
+  color: var(--scene1-copy-token-comment, #CCCCCC);
 }
 
 #scene1-copy .scene1-copy__code-card {
@@ -430,6 +455,7 @@ section#UprisingRocket {
 }
 
 #scene1-copy .scene1-copy__code-pane {
+  position: relative;
   min-width: 0;
   padding: 14px 16px 16px;
 }
@@ -438,8 +464,31 @@ section#UprisingRocket {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+#scene1-copy .scene1-copy__code-pane--csharp {
+  background: linear-gradient(180deg, rgba(65, 137, 166, 0.14) 0%, rgba(65, 137, 166, 0.04) 100%);
+}
+
+#scene1-copy .scene1-copy__code-pane--byeol {
+  background: linear-gradient(180deg, rgba(106, 176, 75, 0.14) 0%, rgba(202, 95, 164, 0.06) 100%);
+}
+
 #scene1-copy .scene1-copy__code-label {
   margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#scene1-copy .scene1-copy__code-pane--csharp .scene1-copy__code-label {
+  color: var(--scene1-copy-accent-point, #4189A6);
+  background: rgba(65, 137, 166, 0.12);
+}
+
+#scene1-copy .scene1-copy__code-pane--byeol .scene1-copy__code-label {
+  color: var(--scene1-copy-accent-grass, #6AB04B);
+  background: rgba(106, 176, 75, 0.12);
 }
 
 #scene1-copy .scene1-copy__code-block {
@@ -450,6 +499,45 @@ section#UprisingRocket {
   white-space: pre-wrap;
   word-break: keep-all;
   opacity: 0.94;
+}
+
+#scene1-copy .scene1-copy__code-line {
+  display: block;
+}
+
+#scene1-copy .scene1-copy__code-token--keyword {
+  color: var(--scene1-copy-token-keyword, #4189A6);
+  font-weight: 700;
+}
+
+#scene1-copy .scene1-copy__code-token--comment {
+  color: var(--scene1-copy-token-comment, #CCCCCC);
+  font-style: italic;
+}
+
+#scene1-copy .scene1-copy__code-token--number {
+  color: var(--scene1-copy-token-number, #E9EBF2);
+}
+
+#scene1-copy .scene1-copy__code-token--string {
+  color: var(--scene1-copy-token-string, #CA5FA4);
+}
+
+#scene1-copy .scene1-copy__code-token--delimiter {
+  color: var(--scene1-copy-token-delimiter, #CCCCCC);
+}
+
+#scene1-copy .scene1-copy__code-token--operator {
+  color: var(--scene1-copy-token-operator, #CCCCCC);
+}
+
+#scene1-copy .scene1-copy__code-token--identifier {
+  color: var(--scene1-copy-token-identifier, #E0B88D);
+}
+
+#scene1-copy .scene1-copy__code-token--type {
+  color: var(--scene1-copy-token-type, #6AB04B);
+  font-weight: 700;
 }
 
 html #scene1-copy .scene1-copy__title {
@@ -474,15 +562,8 @@ html #scene1-copy .scene1-copy__eyebrow {
 }
 
 html #scene1-copy .scene1-copy__description,
-html #scene1-copy .scene1-copy__keyword-value,
 html #scene1-copy .scene1-copy__code-block {
   color: rgba(246, 250, 255, 0.96);
-}
-
-html #scene1-copy .scene1-copy__keyword-label,
-html #scene1-copy .scene1-copy__code-label,
-html #scene1-copy .scene1-copy__keyword-note {
-  color: rgba(223, 237, 251, 0.8);
 }
 
 html #scene1-copy .scene1-copy__keyword-card,
@@ -504,15 +585,8 @@ html.dark-mode #scene1-copy .scene1-copy__eyebrow {
 }
 
 html.dark-mode #scene1-copy .scene1-copy__description,
-html.dark-mode #scene1-copy .scene1-copy__keyword-value,
 html.dark-mode #scene1-copy .scene1-copy__code-block {
   color: rgba(248, 241, 227, 0.96);
-}
-
-html.dark-mode #scene1-copy .scene1-copy__keyword-label,
-html.dark-mode #scene1-copy .scene1-copy__code-label,
-html.dark-mode #scene1-copy .scene1-copy__keyword-note {
-  color: rgba(248, 231, 196, 0.78);
 }
 
 html.dark-mode #scene1-copy .scene1-copy__keyword-card,

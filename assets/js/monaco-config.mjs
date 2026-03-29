@@ -1,36 +1,23 @@
 import * as monaco from 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/+esm';
 import { DoxygenAwesomeDarkModeToggle } from './doxygen-awesome-darkmode-toggle.mjs';
 import { byeolLanguage } from './monaco-editor-byeol-language-min.mjs';
+import { colors, monacoTokenPalette } from './monaco-palette.mjs';
 
 monaco.languages.register({id: 'byeol'});
 monaco.languages.setMonarchTokensProvider('byeol', byeolLanguage);
-
-const colors = {
-  white: "#FFFFFF",
-  white2: "#E9EBF2",
-  white3: '#CCCCCC',
-  night: "#0B1C26",
-  night2: "#112A40",
-  night3: "#2E4559",
-  grass: "#6AB04B",
-  point: "#4189A6",
-  moon: "#E0B88D",
-  nebular: "#CA5FA4",
-  nebular2: "#F2B6D7",
-}
 
 monaco.editor.defineTheme('byeolTheme-dark', {
   base: 'vs-dark',
   inherit: false,
   rules: [
-    { token: "keyword", foreground: colors.point },
-    { token: "comment", foreground: colors.night3 },
-    { token: "number", foreground: colors.white2 },
-    { token: "string", foreground: colors.nebular },
-    { token: "delimiter", foreground: colors.night3 },
-    { token: "operator", foreground: colors.night3 },
-    { token: "identifier", foreground: colors.moon },
-    { token: "type", foreground: colors.grass },
+    { token: "keyword", foreground: monacoTokenPalette.dark.keyword },
+    { token: "comment", foreground: monacoTokenPalette.dark.comment },
+    { token: "number", foreground: monacoTokenPalette.dark.number },
+    { token: "string", foreground: monacoTokenPalette.dark.string },
+    { token: "delimiter", foreground: monacoTokenPalette.dark.delimiter },
+    { token: "operator", foreground: monacoTokenPalette.dark.operator },
+    { token: "identifier", foreground: monacoTokenPalette.dark.identifier },
+    { token: "type", foreground: monacoTokenPalette.dark.type },
   ],
   colors: {
     'editor.background': colors.night,
@@ -45,14 +32,14 @@ monaco.editor.defineTheme('byeolTheme-light', {
   base: 'vs',
   inherit: false,
   rules: [
-    { token: "keyword", foreground: colors.point },
-    { token: "comment", foreground: colors.white3 },
-    { token: "number", foreground: colors.night3 },
-    { token: "string", foreground: colors.nebular },
-    { token: "delimiter", foreground: colors.white3 },
-    { token: "operator", foreground: colors.white3 },
-    { token: "identifier", foreground: colors.moon },
-    { token: "type", foreground: colors.grass },
+    { token: "keyword", foreground: monacoTokenPalette.light.keyword },
+    { token: "comment", foreground: monacoTokenPalette.light.comment },
+    { token: "number", foreground: monacoTokenPalette.light.number },
+    { token: "string", foreground: monacoTokenPalette.light.string },
+    { token: "delimiter", foreground: monacoTokenPalette.light.delimiter },
+    { token: "operator", foreground: monacoTokenPalette.light.operator },
+    { token: "identifier", foreground: monacoTokenPalette.light.identifier },
+    { token: "type", foreground: monacoTokenPalette.light.type },
   ],
   colors: {
     'editor.background': colors.white,
