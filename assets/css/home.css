@@ -329,9 +329,3 @@ div#grass {
   z-index: 6;
   top: var(--grass-top);
 }
-
-div#hill1 {
-  top: var(--grass-top);
-  filter: brightness(0) saturate(100%) invert(43%) sepia(39%) saturate(351%) hue-rotate(135deg) brightness(94%) contrast(95%);
-  z-index: 5;
-}

@@ -47,11 +47,13 @@ class TakeOff extends Scene {
 
     const stage = "#scene1-stage";
     const smokeStage = "#scene1-smoke-stage";
+    const rocketSelector = ".scene1-stage__rocket";
+    const fireSelector = ".scene1-stage__fire";
     const initialLiftY = () => -window.innerHeight * 0.07;
     const ascentY = () => -window.innerHeight * 1.16;
     const smokeTargets = `${smokeStage} .scene1-stage__smoke-left, ${smokeStage} .scene1-stage__smoke-right`;
     const stageEl = document.querySelector(stage);
-    const fireEl = stageEl?.querySelector(".scene1-stage__fire");
+    const fireEl = document.querySelector(fireSelector);
     const flareEl = stageEl?.querySelector(".scene1-stage__flare");
     const glowEl = stageEl?.querySelector(".scene1-stage__ground-glow");
     const hazeEl = stageEl?.querySelector(".scene1-stage__heat-haze");
@@ -73,12 +75,12 @@ class TakeOff extends Scene {
     const ignitionLight = new Scene1IgnitionLight({
       hostSelector: `${stage} .scene1-stage__light3d`,
       stageSelector: stage,
-      fireSelector: `${stage} .scene1-stage__fire`,
-      rocketSelector: `${stage} .scene1-stage__rocket`,
+      fireSelector,
+      rocketSelector,
     });
     const sparks = new Scene1SparkLayer({
       hostSelector: `${stage} .scene1-stage__fx`,
-      fireSelector: `${stage} .scene1-stage__fire`,
+      fireSelector,
     });
 
     gsap.set(smokeTargets, {
@@ -242,7 +244,7 @@ class TakeOff extends Scene {
         yPercent: 0,
         duration: 0.26,
       }, 0.18)
-      .to(`${stage} .scene1-stage__fire`, {
+      .to(fireSelector, {
         autoAlpha: 0.22,
         scaleX: 0.7,
         scaleY: 0.34,
@@ -294,27 +296,27 @@ class TakeOff extends Scene {
         y: 0,
         duration: 0.38,
       }, 1.1)
-      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+      .to([rocketSelector, fireSelector], {
         x: -1.2,
         y: 0.7,
         duration: 0.07,
       }, 0.34)
-      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+      .to([rocketSelector, fireSelector], {
         x: 1.5,
         y: -0.5,
         duration: 0.07,
       }, 0.41)
-      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+      .to([rocketSelector, fireSelector], {
         x: -0.8,
         y: 1,
         duration: 0.07,
       }, 0.48)
-      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+      .to([rocketSelector, fireSelector], {
         x: 0.9,
         y: -0.4,
         duration: 0.07,
       }, 0.55)
-      .to([`${stage} .scene1-stage__rocket`, `${stage} .scene1-stage__fire`], {
+      .to([rocketSelector, fireSelector], {
         x: 0,
         y: 0,
         duration: 0.12,
@@ -333,7 +335,7 @@ class TakeOff extends Scene {
         yPercent: -2,
         duration: 0.52,
       }, 0.08)
-      .to(`${stage} .scene1-stage__fire`, {
+      .to(fireSelector, {
         autoAlpha: 0.86,
         scaleX: 0.94,
         scaleY: 1.18,
@@ -420,22 +422,22 @@ class TakeOff extends Scene {
         yPercent: -8,
         duration: 0.36,
       }, 1.16)
-      .to(`${stage} .scene1-stage__rocket`, {
+      .to(rocketSelector, {
         y: initialLiftY,
         scale: 0.98,
         duration: 0.16,
       }, 1.25)
-      .to(`${stage} .scene1-stage__fire`, {
+      .to(fireSelector, {
         y: initialLiftY,
         duration: 0.16,
       }, 1.25)
-      .to(`${stage} .scene1-stage__rocket`, {
+      .to(rocketSelector, {
         y: ascentY,
         xPercent: 0,
         scale: 0.9,
         duration: 0.92,
       }, 1.41)
-      .to(`${stage} .scene1-stage__fire`, {
+      .to(fireSelector, {
         y: ascentY,
         xPercent: 0,
         scaleX: 0.74,
@@ -464,7 +466,7 @@ class TakeOff extends Scene {
         yPercent: -5,
         duration: 0.34,
       }, 1.56)
-      .to(`${stage} .scene1-stage__fire`, {
+      .to(fireSelector, {
         autoAlpha: 0.03,
         scaleX: 0.52,
         scaleY: 0.28,
