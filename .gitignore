@@ -8,3 +8,5 @@ _site/
 *.patch
 *.env
 .bundle/
+.codex
+*Zone.Identifier
