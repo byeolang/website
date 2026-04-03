@@ -1188,7 +1188,6 @@ html.dark-mode .scene1-stage__sky-wash {
 
 #UprisingRocket .scene2-shell__image,
 #UprisingRocket .scene2-shell__rocket img {
-  z-index: 4;
   position: absolute;
   display: block;
   width: 100%;
@@ -1273,13 +1272,15 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 #UprisingRocket .scene2-shell__rocket {
-  z-index: 14;
   left: -4vw;
-  top: clamp(320px, 54vh, 520px);
+  top: 50%;
   width: min(46vw, 760px);
   aspect-ratio: 1 / 1;
-  --scene2-rocket-y: clamp(140px, 18vh, 200px);
-  transform: translate3d(29vw, calc(-1 * var(--scene2-rocket-y)), 0) scale(1.08) rotate(-7deg);
+  --scene2-rocket-x: 33vw;
+  --scene2-rocket-bias: -13vh;
+  --scene2-rocket-scale: 1.08;
+  --scene2-rocket-tilt: -7deg;
+  transform: translate3d(var(--scene2-rocket-x), calc(-50% - var(--scene2-rocket-bias)), 0) scale(var(--scene2-rocket-scale)) rotate(var(--scene2-rocket-tilt));
   transform-origin: 31% 77%;
   filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.28));
 }
@@ -1291,6 +1292,7 @@ html.dark-mode .scene1-stage__sky-wash {
 }
 
 #UprisingRocket .scene2-shell__rocket-flame {
+  z-index: 4;
   opacity: 0.95;
   transform: translate3d(0, 48%, 0) rotate(7deg) scale(1.26);
   transform-origin: 141% 3%;
@@ -1493,8 +1495,10 @@ html.dark-mode .scene1-stage__sky-wash {
   }
 
   #UprisingRocket .scene2-shell__rocket {
-    --scene2-rocket-y: clamp(120px, 14vh, 180px);
-    transform: translate3d(24vw, calc(-1 * var(--scene2-rocket-y)), 0) scale(1.02) rotate(-6deg);
+    --scene2-rocket-x: 24vw;
+    --scene2-rocket-bias: 9vh;
+    --scene2-rocket-scale: 1.02;
+    --scene2-rocket-tilt: -6deg;
   }
 }
 
@@ -1544,7 +1548,10 @@ html.dark-mode .scene1-stage__sky-wash {
 
   #UprisingRocket .scene2-shell__rocket {
     width: min(54vw, 360px);
-    transform: translate3d(20vw, -8vh, 0) scale(1.02) rotate(-7deg);
+    --scene2-rocket-x: 20vw;
+    --scene2-rocket-bias: 8vh;
+    --scene2-rocket-scale: 1.02;
+    --scene2-rocket-tilt: -7deg;
   }
 
   #UprisingRocket .scene2-shell__image--far {
@@ -1626,7 +1633,10 @@ html.dark-mode .scene1-stage__sky-wash {
 
   #UprisingRocket .scene2-shell__rocket {
     width: min(72vw, 320px);
-    transform: translate3d(12vw, -3vh, 0) scale(0.98) rotate(-5deg);
+    --scene2-rocket-x: 12vw;
+    --scene2-rocket-bias: 6vh;
+    --scene2-rocket-scale: 0.98;
+    --scene2-rocket-tilt: -5deg;
   }
 
   #UprisingRocket .scene2-shell__image--far {
