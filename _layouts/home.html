@@ -84,7 +84,71 @@
           each section's height will be applied by js.
           refer scenes.mjs for more info.
         -->
-        <section id="UprisingRocket" class="scene"></section>
+        <section id="UprisingRocket" class="scene">
+          <div class="pin-bg scene2-shell">
+            <div class="scene2-shell__sun-disc" aria-hidden="true"></div>
+
+            <div class="scene2-shell__layer scene2-shell__layer--far" aria-hidden="true">
+              <img class="scene2-shell__image scene2-shell__image--far" src="assets/images/scenes/scene2-cloud-far.png" alt="" />
+            </div>
+            <div class="scene2-shell__layer scene2-shell__layer--mid" aria-hidden="true">
+              <img class="scene2-shell__image scene2-shell__image--mid" src="assets/images/scenes/scene2-cloud-mid.png" alt="" />
+            </div>
+            <div class="scene2-shell__layer scene2-shell__layer--deck" aria-hidden="true">
+              <img class="scene2-shell__image scene2-shell__image--deck-band" src="assets/images/scenes/scene2-cloud-mid.png" alt="" />
+              <img class="scene2-shell__image scene2-shell__image--deck-soft" src="assets/images/scenes/scene2-cloud-overlay-mist.png" alt="" />
+            </div>
+            <div class="scene2-shell__layer scene2-shell__layer--front" aria-hidden="true">
+              <img class="scene2-shell__image scene2-shell__image--front" src="assets/images/scenes/scene2-cloud-near.png" alt="" />
+            </div>
+            <div class="scene2-shell__layer scene2-shell__layer--mist" aria-hidden="true">
+              <img class="scene2-shell__image scene2-shell__image--mist" src="assets/images/scenes/scene2-cloud-overlay-mist.png" alt="" />
+            </div>
+
+            <div class="scene2-shell__rocket" aria-hidden="true">
+              <img class="scene2-shell__rocket-smoke" src="assets/images/scenes/scene2-rocket-smoke.png" alt="" />
+              <img class="scene2-shell__rocket-flame" src="assets/images/scenes/scene2-rocket-fire.png" alt="" />
+              <img class="scene2-shell__rocket-core" src="assets/images/scenes/scene2-rocket.png" alt="" />
+            </div>
+
+            <article id="scene2-copy" class="scene2-copy">
+              <div class="scene2-copy__gradient"></div>
+              <div class="scene2-copy__content">
+                <p class="scene2-copy__eyebrow" data-lang="scene2-kicker"></p>
+                <h2 class="scene2-copy__title">
+                  <span class="scene2-copy__title-line" data-lang="scene2-title-line1"></span>
+                  <span class="scene2-copy__title-line" data-lang="scene2-title-line2"></span>
+                </h2>
+                <p class="scene2-copy__description">
+                  <span class="scene2-copy__description-line" data-lang="scene2-desc-line1"></span>
+                  <span class="scene2-copy__description-line" data-lang="scene2-desc-line2"></span>
+                </p>
+                <div class="scene2-copy__flow-card">
+                  <div class="scene2-copy__flow-column">
+                    <h3 data-lang="scene2-flow-left-label"></h3>
+                    <ol>
+                      <li data-lang="scene2-flow-left-step1"></li>
+                      <li data-lang="scene2-flow-left-step2"></li>
+                      <li data-lang="scene2-flow-left-step3"></li>
+                      <li data-lang="scene2-flow-left-step4"></li>
+                      <li data-lang="scene2-flow-left-step5"></li>
+                    </ol>
+                  </div>
+                  <div class="scene2-copy__flow-divider" aria-hidden="true"></div>
+                  <div class="scene2-copy__flow-column scene2-copy__flow-column--accent">
+                    <h3 data-lang="scene2-flow-right-label"></h3>
+                    <ol>
+                      <li data-lang="scene2-flow-right-step1"></li>
+                      <li data-lang="scene2-flow-right-step2"></li>
+                      <li data-lang="scene2-flow-right-step3"></li>
+                      <li data-lang="scene2-flow-right-step4"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
         <section id="TakeOff" class="scene">
           <div class="pin-bg scene1-shell">
             <div id="main-bg" class="pin-bg" role="main">
