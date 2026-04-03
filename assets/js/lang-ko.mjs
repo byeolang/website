@@ -33,7 +33,7 @@ export default {
   "scene1-code-csharp": "class Player {\n  int hp = 9;\n  public bool IsDanger() => hp < 10;\n}\nConsole.WriteLine(new Player().IsDanger());",
   "scene1-code-byeol": "def player\n  hp := 9\n  isDanger() bool: hp < 10\nprint(player.isDanger())",
   "scene2-kicker": "코드 작성에서 확인까지, 멈춤 없이",
-  "scene2-title-line1": "빌드 벽 없는",
+  "scene2-title-line1": "빌드 없는",
   "scene2-title-line2": "개발",
   "scene2-desc-line1": "빌드를 기다리느라 흐름을 끊지 않도록.",
   "scene2-desc-line2": "코딩, 반영, 디버깅이 하나의 빠른 루프로 이어지는 개발을 지향합니다.",
