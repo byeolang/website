@@ -1340,6 +1340,7 @@ html.dark-mode .scene1-stage__sky-wash {
   position: relative;
   z-index: 1;
   padding: clamp(18px, 2vw, 28px);
+  width: 100%;
   border: 1px solid var(--scene2-panel-line);
   border-radius: 24px;
   background: var(--scene2-panel);
