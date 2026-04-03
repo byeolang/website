@@ -1275,10 +1275,11 @@ html.dark-mode .scene1-stage__sky-wash {
 #UprisingRocket .scene2-shell__rocket {
   z-index: 14;
   left: -4vw;
-  top: 54vh;
+  top: clamp(320px, 54vh, 520px);
   width: min(46vw, 760px);
   aspect-ratio: 1 / 1;
-  transform: translate3d(29vw, -17vh, 0) scale(1.12) rotate(-8deg);
+  --scene2-rocket-y: clamp(140px, 18vh, 200px);
+  transform: translate3d(29vw, calc(-1 * var(--scene2-rocket-y)), 0) scale(1.08) rotate(-7deg);
   transform-origin: 31% 77%;
   filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.28));
 }
@@ -1308,14 +1309,21 @@ html.dark-mode .scene1-stage__sky-wash {
   max-width: calc(100vw - 32px);
   color: var(--scene2-text);
   transform: translate3d(0, -10px, 0);
+  --scene2-gradient-top: var(--scene1-gradient-top, -14vh);
+  --scene2-gradient-bottom: calc(var(--scene1-gradient-bottom, -16vh) - 8vh);
+  --scene2-gradient-left: -10vw;
+  --scene2-gradient-width: 78vw;
+  --scene2-gradient-bleed: calc(-1 * var(--scene2-gradient-bottom));
+  --scene2-gradient-height: calc(100vh - var(--scene2-gradient-top) + var(--scene2-gradient-bleed));
 }
 
 #scene2-copy .scene2-copy__gradient {
   position: absolute;
-  top: -14vh;
-  left: -10vw;
-  bottom: -16vh;
-  width: 78vw;
+  top: var(--scene2-gradient-top);
+  left: var(--scene2-gradient-left);
+  height: var(--scene2-gradient-height);
+  bottom: auto;
+  width: var(--scene2-gradient-width);
   z-index: 0;
   background: linear-gradient(258deg, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 0%) 33%, rgb(0 0 0 / 54%) 53%, rgb(0 0 0) 80%, rgb(0 0 0) 100%);
   opacity: 1;
@@ -1473,57 +1481,57 @@ html.dark-mode .scene1-stage__sky-wash {
   background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.16) 12%, rgba(255, 255, 255, 0.16) 88%, transparent 100%);
 }
 
-@media (max-width: 960px) {
+@media (max-height: 699px) {
   #scene2-copy {
-    width: min(92vw, 720px);
-    left: 50%;
-    top: clamp(18px, 5vh, 40px);
-    transform: translate3d(-50%, 0, 0);
+    top: clamp(10px, 4vh, 28px);
+    --scene2-gradient-top: calc(var(--scene1-gradient-top, -14vh) + 4vh);
+    --scene2-gradient-bottom: calc(var(--scene1-gradient-bottom, -16vh) - 4vh);
   }
 
   #scene2-copy .scene2-copy__content {
-    padding-top: clamp(84px, 11vh, 132px);
+    padding-top: clamp(62px, 8vh, 108px);
   }
 
   #UprisingRocket .scene2-shell__rocket {
-    width: min(44vw, 380px);
-    transform: translate3d(23vw, -9vh, 0) scale(1.04) rotate(-7deg);
+    --scene2-rocket-y: clamp(120px, 14vh, 180px);
+    transform: translate3d(24vw, calc(-1 * var(--scene2-rocket-y)), 0) scale(1.02) rotate(-6deg);
+  }
+}
+
+@media (min-height: 1080px) {
+  #scene2-copy {
+    --scene2-gradient-top: calc(var(--scene1-gradient-top, -14vh) - 2vh);
+    --scene2-gradient-bottom: calc(var(--scene1-gradient-bottom, -16vh) - 30vh);
+    --scene2-gradient-width: 84vw;
   }
 
-  #UprisingRocket .scene2-shell__image--far {
-    left: -30vw;
-    bottom: 0;
-    width: 126vw;
+  #scene2-copy .scene2-copy__content {
+    padding-top: clamp(120px, 14vh, 170px);
+  }
+}
+
+@media (max-width: 899px) {
+  #scene2-copy {
+    width: min(94vw, 680px);
+    left: 50%;
+    right: auto;
+    top: clamp(18px, 6vh, 56px);
+    bottom: auto;
+    transform: translate3d(-50%, 0, 0);
+    --scene2-gradient-left: -16vw;
+    --scene2-gradient-width: 96vw;
   }
 
-  #UprisingRocket .scene2-shell__image--foreground {
-    left: -48vw;
-    bottom: -14vh;
-    width: 138vw;
+  #scene2-copy .scene2-copy__content {
+    padding-top: clamp(92px, 12vh, 148px);
   }
 
-  #UprisingRocket .scene2-shell__image--deck-band {
-    left: -62vw;
-    bottom: -22vh;
-    width: 160vw;
+  #scene2-copy .scene2-copy__title {
+    font-size: clamp(30px, 6vw, 56px);
   }
 
-  #UprisingRocket .scene2-shell__image--deck-soft {
-    left: -34vw;
-    bottom: -4vh;
-    width: 116vw;
-  }
-
-  #UprisingRocket .scene2-shell__image--frame {
-    left: -64vw;
-    bottom: -6vh;
-    width: 110vw;
-  }
-
-  #UprisingRocket .scene2-shell__image--mist {
-    left: -14vw;
-    bottom: 8vh;
-    width: 82vw;
+  #scene2-copy .scene2-copy__text {
+    width: 100%;
   }
 
   #scene2-copy .scene2-copy__flow-card {
@@ -1533,60 +1541,127 @@ html.dark-mode .scene1-stage__sky-wash {
   #scene2-copy .scene2-copy__flow-divider {
     display: none;
   }
-}
-
-@media (max-width: 640px) {
-  #scene2-copy {
-    top: auto;
-    bottom: 22px;
-  }
-
-  #scene2-copy .scene2-copy__content {
-    padding-top: clamp(72px, 10vh, 110px);
-  }
 
   #UprisingRocket .scene2-shell__rocket {
-    width: min(60vw, 320px);
-    transform: translate3d(17vw, -5vh, 0) scale(1.02) rotate(-6deg);
+    width: min(54vw, 360px);
+    transform: translate3d(20vw, -8vh, 0) scale(1.02) rotate(-7deg);
   }
 
   #UprisingRocket .scene2-shell__image--far {
-    left: -40vw;
-    bottom: 1vh;
-    width: 140vw;
+    left: -34vw;
+    bottom: 0;
+    width: 134vw;
   }
 
   #UprisingRocket .scene2-shell__image--foreground {
-    left: -56vw;
-    bottom: -10vh;
-    width: 152vw;
+    left: -52vw;
+    bottom: -12vh;
+    width: 148vw;
   }
 
   #UprisingRocket .scene2-shell__image--deck-band {
-    left: -72vw;
+    left: -68vw;
     bottom: -18vh;
-    width: 176vw;
+    width: 168vw;
   }
 
   #UprisingRocket .scene2-shell__image--deck-soft {
-    left: -44vw;
-    bottom: -1vh;
-    width: 128vw;
+    left: -36vw;
+    bottom: -2vh;
+    width: 124vw;
   }
 
   #UprisingRocket .scene2-shell__image--frame {
-    left: -74vw;
-    bottom: -2vh;
-    width: 122vw;
+    left: -68vw;
+    bottom: -4vh;
+    width: 118vw;
   }
 
   #UprisingRocket .scene2-shell__image--mist {
-    left: -16vw;
-    bottom: 8vh;
+    left: -18vw;
+    bottom: 7vh;
     width: 88vw;
+  }
+}
+
+@media (max-width: 499px) {
+  #scene2-copy {
+    width: calc(100vw - clamp(24px, 8vw, 48px));
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: clamp(14px, 5vh, 32px);
+    transform: translate3d(-50%, 0, 0);
+    --scene2-gradient-top: -10vh;
+    --scene2-gradient-bottom: -24vh;
+    --scene2-gradient-left: -12vw;
+    --scene2-gradient-width: 120vw;
+  }
+
+  #scene2-copy .scene2-copy__content {
+    padding: clamp(18px, 6vw, 28px);
+  }
+
+  #scene2-copy .scene2-copy__eyebrow {
+    font-size: clamp(10px, 2.6vw, 12px);
+    letter-spacing: 0.12em;
+  }
+
+  #scene2-copy .scene2-copy__title {
+    font-size: clamp(26px, 8.8vw, 42px);
+  }
+
+  #scene2-copy .scene2-copy__description {
+    font-size: clamp(13px, 3.6vw, 16px);
+    line-height: 1.62;
   }
 
   #scene2-copy .scene2-copy__panel {
-    padding: 16px;
+    padding: clamp(14px, 4.8vw, 22px);
+  }
+
+  #scene2-copy .scene2-copy__flow-column li {
+    font-size: clamp(12px, 3.4vw, 14px);
+  }
+
+  #UprisingRocket .scene2-shell__rocket {
+    width: min(72vw, 320px);
+    transform: translate3d(12vw, -3vh, 0) scale(0.98) rotate(-5deg);
+  }
+
+  #UprisingRocket .scene2-shell__image--far {
+    left: -42vw;
+    bottom: 2vh;
+    width: 150vw;
+  }
+
+  #UprisingRocket .scene2-shell__image--foreground {
+    left: -60vw;
+    bottom: -8vh;
+    width: 164vw;
+  }
+
+  #UprisingRocket .scene2-shell__image--deck-band {
+    left: -78vw;
+    bottom: -16vh;
+    width: 186vw;
+  }
+
+  #UprisingRocket .scene2-shell__image--deck-soft {
+    left: -48vw;
+    bottom: 0;
+    width: 134vw;
+  }
+
+  #UprisingRocket .scene2-shell__image--frame {
+    left: -82vw;
+    bottom: -1vh;
+    width: 130vw;
+  }
+
+  #UprisingRocket .scene2-shell__image--mist {
+    left: -20vw;
+    bottom: 8vh;
+    width: 94vw;
   }
 }
