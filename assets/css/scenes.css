@@ -1311,11 +1311,13 @@ html.dark-mode .scene1-stage__sky-wash {
 
 #scene2-copy .scene2-copy__gradient {
   position: absolute;
-  inset: -14% -16% -16% -12%;
+  top: -14vh;
+  left: -10vw;
+  bottom: -16vh;
+  width: 78vw;
   z-index: 0;
-  border-radius: 36px;
-  background: linear-gradient(90deg, rgba(5, 8, 18, 0.82) 0%, rgba(5, 8, 18, 0.52) 52%, rgba(5, 8, 18, 0) 100%);
-  filter: blur(18px);
+  background: linear-gradient(258deg, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 0%) 33%, rgb(0 0 0 / 54%) 53%, rgb(0 0 0) 80%, rgb(0 0 0) 100%);
+  opacity: 1;
   pointer-events: none;
 }
 
