@@ -4,17 +4,305 @@ import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 
 class UprisingRocket extends Scene {
   constructor() {
-    super(7);
+    super(13);
   }
 
   _onAnimate(tl) {
-    return tl;
+    const sceneEl = document.querySelector(`#${this.getName()}`);
+    const copyEl = document.querySelector("#scene2-copy");
+    const gradientEl = copyEl?.querySelector(".scene2-copy__gradient");
+    const eyebrowEl = copyEl?.querySelector(".scene2-copy__eyebrow");
+    const titleLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__title-line")) : [];
+    const descLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__description-line")) : [];
+    const panelEl = copyEl?.querySelector(".scene2-copy__panel");
+    const flowColumns = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__flow-column")) : [];
+    const flowItems = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__flow-column li")) : [];
+
+    const rocketEl = sceneEl?.querySelector(".scene2-shell__rocket");
+    const rocketFlameEl = rocketEl?.querySelector(".scene2-shell__rocket-flame");
+    const farLayer = sceneEl?.querySelector(".scene2-shell__image--far");
+    const deckLayer = sceneEl?.querySelector(".scene2-shell__image--deck-band");
+    const softLayer = sceneEl?.querySelector(".scene2-shell__image--deck-soft");
+    const foreLayer = sceneEl?.querySelector(".scene2-shell__image--foreground");
+    const frameLayer = sceneEl?.querySelector(".scene2-shell__image--frame");
+    const mistLayer = sceneEl?.querySelector(".scene2-shell__image--mist");
+    const sunDisc = sceneEl?.querySelector(".scene2-shell__sun-disc");
+
+    const capturePose = (el, props) =>
+      el
+        ? props.reduce((acc, prop) => {
+            acc[prop] = gsap.getProperty(el, prop);
+            return acc;
+          }, {})
+        : null;
+
+    const layerMid = {
+      far: capturePose(farLayer, ["xPercent", "yPercent", "scale", "autoAlpha"]),
+      deck: capturePose(deckLayer, ["xPercent", "yPercent", "scale", "autoAlpha"]),
+      soft: capturePose(softLayer, ["xPercent", "yPercent", "autoAlpha"]),
+      foreground: capturePose(foreLayer, ["xPercent", "yPercent", "scale", "autoAlpha"]),
+      frame: capturePose(frameLayer, ["yPercent", "autoAlpha"]),
+      mist: capturePose(mistLayer, ["yPercent", "autoAlpha"]),
+      sun: capturePose(sunDisc, ["autoAlpha"]),
+    };
+
+    const sceneWidth = sceneEl?.clientWidth ?? window.innerWidth;
+    const sceneHeight = sceneEl?.clientHeight ?? window.innerHeight;
+    const rocketMid = {
+      x: gsap.getProperty(rocketEl, "x") || 0,
+      y: gsap.getProperty(rocketEl, "y") || 0,
+      scale: gsap.getProperty(rocketEl, "scaleX") || 1,
+      rotation: gsap.getProperty(rocketEl, "rotation") || 0,
+    };
+    const rocketVector = {
+      x: sceneWidth * 0.42,
+      y: -sceneHeight * 0.28,
+    };
+    const scaleDelta = rocketMid.scale * 0.18;
+    const rotationDelta = 7;
+    const rocketStart = {
+      x: rocketMid.x - rocketVector.x * 0.5,
+      y: rocketMid.y - rocketVector.y * 0.2,
+      scale: rocketMid.scale + scaleDelta,
+      rotation: rocketMid.rotation - rotationDelta,
+    };
+    const rocketEnd = {
+      x: rocketMid.x + rocketVector.x * 0.5,
+      y: rocketMid.y + rocketVector.y * 0.5,
+      scale: Math.max(0.1, rocketMid.scale - scaleDelta),
+      rotation: rocketMid.rotation + rotationDelta,
+    };
+
+    if (copyEl) {
+      gsap.set(copyEl, { autoAlpha: 0, yPercent: 10 });
+    }
+    if (gradientEl) {
+      gsap.set(gradientEl, { autoAlpha: 0 });
+    }
+    if (eyebrowEl) {
+      gsap.set(eyebrowEl, { autoAlpha: 0, yPercent: 26 });
+    }
+    if (titleLines.length) {
+      gsap.set(titleLines, { autoAlpha: 0, yPercent: 24 });
+    }
+    if (descLines.length) {
+      gsap.set(descLines, { autoAlpha: 0, yPercent: 18 });
+    }
+    if (panelEl) {
+      gsap.set(panelEl, { autoAlpha: 0, yPercent: 14 });
+    }
+    if (flowColumns.length) {
+      gsap.set(flowColumns, { autoAlpha: 0, yPercent: 18 });
+    }
+    if (flowItems.length) {
+      gsap.set(flowItems, { autoAlpha: 0, scale: 0.94 });
+    }
+
+    if (farLayer) {
+      gsap.set(farLayer, {
+        xPercent: (layerMid.far?.xPercent ?? 0) - 4,
+        yPercent: (layerMid.far?.yPercent ?? 0) + 14,
+        scale: (layerMid.far?.scale ?? 1) + 0.08,
+        autoAlpha: (layerMid.far?.autoAlpha ?? 1) + 0.18,
+      });
+    }
+    if (deckLayer) {
+      gsap.set(deckLayer, {
+        xPercent: (layerMid.deck?.xPercent ?? 0) - 6,
+        yPercent: (layerMid.deck?.yPercent ?? 0) + 22,
+        scale: (layerMid.deck?.scale ?? 1.5) + 0.06,
+        autoAlpha: (layerMid.deck?.autoAlpha ?? 1) + 0.12,
+      });
+    }
+    if (softLayer) {
+      gsap.set(softLayer, {
+        xPercent: (layerMid.soft?.xPercent ?? 0) - 4,
+        yPercent: (layerMid.soft?.yPercent ?? 0) + 18,
+        autoAlpha: (layerMid.soft?.autoAlpha ?? 0.5) + 0.18,
+      });
+    }
+    if (foreLayer) {
+      gsap.set(foreLayer, {
+        xPercent: (layerMid.foreground?.xPercent ?? 0) - 4,
+        yPercent: (layerMid.foreground?.yPercent ?? 0) + 18,
+        scale: (layerMid.foreground?.scale ?? 1.2) + 0.06,
+        autoAlpha: (layerMid.foreground?.autoAlpha ?? 1),
+      });
+    }
+    if (frameLayer) {
+      gsap.set(frameLayer, {
+        yPercent: (layerMid.frame?.yPercent ?? 0) + 12,
+        autoAlpha: (layerMid.frame?.autoAlpha ?? 0.8) + 0.1,
+      });
+    }
+    if (mistLayer) {
+      gsap.set(mistLayer, {
+        yPercent: (layerMid.mist?.yPercent ?? 0) + 10,
+        autoAlpha: (layerMid.mist?.autoAlpha ?? 0.2) + 0.2,
+      });
+    }
+    if (sunDisc) {
+      gsap.set(sunDisc, { autoAlpha: (layerMid.sun?.autoAlpha ?? 0.5) - 0.2 });
+    }
+
+    if (rocketEl) {
+      gsap.set(rocketEl, {
+        x: rocketStart.x,
+        y: rocketStart.y,
+        scale: rocketStart.scale,
+        rotation: rocketStart.rotation,
+        transformOrigin: "31% 77%",
+      });
+    }
+    if (rocketFlameEl) {
+      gsap.set(rocketFlameEl, {
+        autoAlpha: 0.7,
+        scaleY: 0.68,
+        transformOrigin: "30% 18%",
+      });
+    }
+
+    const sceneTl = tl;
+
+    if (rocketEl) {
+      sceneTl.to(
+        rocketEl,
+        {
+          x: rocketEnd.x,
+          y: rocketEnd.y,
+          scale: rocketEnd.scale,
+          rotation: rocketEnd.rotation,
+          duration: 1.3,
+          ease: "linear",
+        },
+        0,
+      );
+    }
+
+    if (rocketFlameEl) {
+      sceneTl.to(
+        rocketFlameEl,
+        {
+          autoAlpha: layerMid.flame?.autoAlpha ?? 0.92,
+          scaleY: (layerMid.flame?.scaleY ?? 1) * 1.05,
+          duration: 0.5,
+          ease: "power1.out",
+        },
+        0,
+      );
+      sceneTl.to(
+        rocketFlameEl,
+        {
+          autoAlpha: 0.5,
+          scaleY: 1.5,
+          duration: 0.46,
+          ease: "power1.in",
+        },
+        0.54,
+      );
+    }
+
+    const parallax = [
+      {
+        element: farLayer,
+        mid: layerMid.far,
+        start: { xPercent: -4, yPercent: 14, scale: 0.08, autoAlpha: 0.12 },
+        end: { xPercent: 4, yPercent: -36, scale: -0.14, autoAlpha: 0.3 },
+      },
+      {
+        element: deckLayer,
+        mid: layerMid.deck,
+        start: { xPercent: -6, yPercent: 20, scale: 0.06, autoAlpha: 0.1 },
+        end: { xPercent: 6, yPercent: -64, scale: -0.32, autoAlpha: -0.4 },
+      },
+      {
+        element: softLayer,
+        mid: layerMid.soft,
+        start: { xPercent: -4, yPercent: 18, autoAlpha: 0.18 },
+        end: { xPercent: 4, yPercent: -48, autoAlpha: -0.22 },
+      },
+      {
+        element: foreLayer,
+        mid: layerMid.foreground,
+        start: { xPercent: -4, yPercent: 16, scale: 0.06, autoAlpha: 0.08 },
+        end: { xPercent: 4, yPercent: -44, scale: -0.3, autoAlpha: -0.4 },
+      },
+      {
+        element: frameLayer,
+        mid: layerMid.frame,
+        start: { yPercent: 10, autoAlpha: 0.08 },
+        end: { yPercent: -32, autoAlpha: -0.24 },
+      },
+      {
+        element: mistLayer,
+        mid: layerMid.mist,
+        start: { yPercent: 10, autoAlpha: 0.18 },
+        end: { yPercent: -28, autoAlpha: -0.28 },
+      },
+      {
+        element: sunDisc,
+        mid: layerMid.sun,
+        start: { autoAlpha: -0.2 },
+        end: { autoAlpha: 0.3 },
+      },
+    ];
+
+    parallax.forEach(({ element, mid, start, end }) => {
+      if (!element || !mid) return;
+      const startProps = {};
+      const midProps = {};
+      const endProps = {};
+      Object.keys(mid).forEach((prop) => {
+        const base = mid[prop] ?? 0;
+        startProps[prop] = base + (start[prop] ?? 0);
+        midProps[prop] = base;
+        endProps[prop] = base + (end[prop] ?? 0);
+      });
+      gsap.set(element, startProps);
+      sceneTl.to(element, { ...midProps, duration: 0.5, ease: "power2.out" }, 0);
+      sceneTl.to(element, { ...endProps, duration: 0.5, ease: "power2.in" }, 0.5);
+    });
+
+    if (copyEl) {
+      sceneTl.to(copyEl, { autoAlpha: 1, yPercent: 0, duration: 0.4, ease: "power2.out" }, 0.12);
+      sceneTl.to(copyEl, { autoAlpha: 0, yPercent: -6, duration: 0.32, ease: "power2.in" }, 0.72);
+    }
+    if (gradientEl) {
+      sceneTl.to(gradientEl, { autoAlpha: 1, duration: 0.4, ease: "power2.out" }, 0.1);
+      sceneTl.to(gradientEl, { autoAlpha: 0, duration: 0.3, ease: "power2.in" }, 0.72);
+    }
+    if (eyebrowEl) {
+      sceneTl.to(eyebrowEl, { autoAlpha: 1, yPercent: 0, duration: 0.32, ease: "power2.out" }, 0.18);
+      sceneTl.to(eyebrowEl, { autoAlpha: 0, yPercent: -8, duration: 0.28, ease: "power2.in" }, 0.74);
+    }
+    if (titleLines.length) {
+      sceneTl.to(titleLines, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out", stagger: 0.08 }, 0.24);
+      sceneTl.to(titleLines, { autoAlpha: 0, yPercent: -10, duration: 0.24, ease: "power2.in", stagger: 0.06 }, 0.72);
+    }
+    if (descLines.length) {
+      sceneTl.to(descLines, { autoAlpha: 1, yPercent: 0, duration: 0.32, ease: "power2.out", stagger: 0.06 }, 0.36);
+      sceneTl.to(descLines, { autoAlpha: 0, yPercent: -8, duration: 0.22, ease: "power2.in", stagger: 0.04 }, 0.68);
+    }
+    if (panelEl) {
+      sceneTl.to(panelEl, { autoAlpha: 1, yPercent: 0, duration: 0.36, ease: "power2.out" }, 0.48);
+      sceneTl.to(panelEl, { autoAlpha: 0, yPercent: -8, duration: 0.28, ease: "power2.in" }, 0.7);
+    }
+    if (flowColumns.length) {
+      sceneTl.to(flowColumns, { autoAlpha: 1, yPercent: 0, duration: 0.36, ease: "power2.out", stagger: 0.08 }, 0.52);
+      sceneTl.to(flowColumns, { autoAlpha: 0, yPercent: -8, duration: 0.26, ease: "power2.in", stagger: 0.06 }, 0.72);
+    }
+    if (flowItems.length) {
+      sceneTl.to(flowItems, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "power1.out", stagger: 0.02 }, 0.56);
+      sceneTl.to(flowItems, { autoAlpha: 0, scale: 0.92, duration: 0.18, ease: "power1.in", stagger: 0.02 }, 0.72);
+    }
+
+    return sceneTl;
   }
 }
 
 class TakeOff extends Scene {
   constructor() {
-    super(17.5);
+    super(13);
   }
 
   _onAnimate(tl) {
