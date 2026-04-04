@@ -264,36 +264,36 @@ class UprisingRocket extends Scene {
     });
 
     if (copyEl) {
-      sceneTl.to(copyEl, { autoAlpha: 1, yPercent: 0, duration: 0.4, ease: "power2.out" }, 0.12);
-      sceneTl.to(copyEl, { autoAlpha: 0, yPercent: -6, duration: 0.32, ease: "power2.in" }, 0.72);
+      sceneTl.to(copyEl, { autoAlpha: 1, yPercent: 0, duration: 0.32, ease: "power2.out" }, 0.02);
+      sceneTl.to(copyEl, { autoAlpha: 0, yPercent: -6, duration: 0.22, ease: "power2.in" }, 0.86);
     }
     if (gradientEl) {
-      sceneTl.to(gradientEl, { autoAlpha: 1, duration: 0.4, ease: "power2.out" }, 0.1);
-      sceneTl.to(gradientEl, { autoAlpha: 0, duration: 0.3, ease: "power2.in" }, 0.72);
+      sceneTl.to(gradientEl, { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 0.02);
+      sceneTl.to(gradientEl, { autoAlpha: 0, duration: 0.2, ease: "power2.in" }, 0.86);
     }
     if (eyebrowEl) {
-      sceneTl.to(eyebrowEl, { autoAlpha: 1, yPercent: 0, duration: 0.32, ease: "power2.out" }, 0.18);
-      sceneTl.to(eyebrowEl, { autoAlpha: 0, yPercent: -8, duration: 0.28, ease: "power2.in" }, 0.74);
+      sceneTl.to(eyebrowEl, { autoAlpha: 1, yPercent: 0, duration: 0.28, ease: "power2.out" }, 0.04);
+      sceneTl.to(eyebrowEl, { autoAlpha: 0, yPercent: -8, duration: 0.22, ease: "power2.in" }, 0.88);
     }
     if (titleLines.length) {
-      sceneTl.to(titleLines, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out", stagger: 0.08 }, 0.24);
-      sceneTl.to(titleLines, { autoAlpha: 0, yPercent: -10, duration: 0.24, ease: "power2.in", stagger: 0.06 }, 0.72);
+      sceneTl.to(titleLines, { autoAlpha: 1, yPercent: 0, duration: 0.28, ease: "power2.out", stagger: 0.06 }, 0.08);
+      sceneTl.to(titleLines, { autoAlpha: 0, yPercent: -10, duration: 0.2, ease: "power2.in", stagger: 0.06 }, 0.84);
     }
     if (descLines.length) {
-      sceneTl.to(descLines, { autoAlpha: 1, yPercent: 0, duration: 0.32, ease: "power2.out", stagger: 0.06 }, 0.36);
-      sceneTl.to(descLines, { autoAlpha: 0, yPercent: -8, duration: 0.22, ease: "power2.in", stagger: 0.04 }, 0.68);
+      sceneTl.to(descLines, { autoAlpha: 1, yPercent: 0, duration: 0.28, ease: "power2.out", stagger: 0.04 }, 0.14);
+      sceneTl.to(descLines, { autoAlpha: 0, yPercent: -8, duration: 0.2, ease: "power2.in", stagger: 0.04 }, 0.84);
     }
     if (panelEl) {
-      sceneTl.to(panelEl, { autoAlpha: 1, yPercent: 0, duration: 0.36, ease: "power2.out" }, 0.48);
-      sceneTl.to(panelEl, { autoAlpha: 0, yPercent: -8, duration: 0.28, ease: "power2.in" }, 0.7);
+      sceneTl.to(panelEl, { autoAlpha: 1, yPercent: 0, duration: 0.3, ease: "power2.out" }, 0.28);
+      sceneTl.to(panelEl, { autoAlpha: 0, yPercent: -8, duration: 0.22, ease: "power2.in" }, 0.84);
     }
     if (flowColumns.length) {
-      sceneTl.to(flowColumns, { autoAlpha: 1, yPercent: 0, duration: 0.36, ease: "power2.out", stagger: 0.08 }, 0.52);
-      sceneTl.to(flowColumns, { autoAlpha: 0, yPercent: -8, duration: 0.26, ease: "power2.in", stagger: 0.06 }, 0.72);
+      sceneTl.to(flowColumns, { autoAlpha: 1, yPercent: 0, duration: 0.3, ease: "power2.out", stagger: 0.06 }, 0.36);
+      sceneTl.to(flowColumns, { autoAlpha: 0, yPercent: -8, duration: 0.22, ease: "power2.in", stagger: 0.06 }, 0.86);
     }
     if (flowItems.length) {
-      sceneTl.to(flowItems, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "power1.out", stagger: 0.02 }, 0.56);
-      sceneTl.to(flowItems, { autoAlpha: 0, scale: 0.92, duration: 0.18, ease: "power1.in", stagger: 0.02 }, 0.72);
+      sceneTl.to(flowItems, { autoAlpha: 1, scale: 1, duration: 0.16, ease: "power1.out", stagger: 0.02 }, 0.42);
+      sceneTl.to(flowItems, { autoAlpha: 0, scale: 0.92, duration: 0.14, ease: "power1.in", stagger: 0.02 }, 0.86);
     }
 
     return sceneTl;
