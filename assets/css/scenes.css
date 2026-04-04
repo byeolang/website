@@ -1453,7 +1453,8 @@ html.dark-mode .scene1-stage__sky-wash {
   margin-top: 0.38em;
 }
 
-#scene2-copy .scene2-copy__description strong {
+#scene2-copy .scene2-copy__description strong,
+#scene2-copy .scene2-copy__description-em {
   font-weight: 700;
   color: var(--scene2-emphasis, #f3d9a4);
 }
