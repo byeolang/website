@@ -1273,7 +1273,7 @@ html.dark-mode .scene1-stage__sky-wash {
   pointer-events: none;
 }
 
-#UprisingRocket .scene2-shell__rocket {
+#UprisingRocket .scene2-shell__rocket-wrap {
   left: 50%;
   top: 50%;
   width: min(46vw, 760px);
@@ -1287,6 +1287,20 @@ html.dark-mode .scene1-stage__sky-wash {
   filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.28));
 }
 
+#UprisingRocket .scene2-shell__rocket-core,
+#UprisingRocket .scene2-shell__rocket-flame {
+  position: absolute;
+  inset: 0;
+}
+
+#UprisingRocket .scene2-shell__rocket-core img {
+  position: relative;
+  width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 #UprisingRocket .scene2-shell__rocket-flame {
   z-index: 4;
   opacity: 0.95;
@@ -1294,7 +1308,15 @@ html.dark-mode .scene1-stage__sky-wash {
   transform-origin: 141% 3%;
 }
 
+#UprisingRocket .scene2-shell__rocket-flame-inner {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: inherit;
+}
+
 #UprisingRocket .scene2-shell__rocket-core {
+  position: relative;
   z-index: 3;
 }
 
@@ -1490,7 +1512,7 @@ html.dark-mode .scene1-stage__sky-wash {
     padding-top: clamp(62px, 8vh, 108px);
   }
 
-  #UprisingRocket .scene2-shell__rocket {
+  #UprisingRocket .scene2-shell__rocket-wrap {
     --scene2-rocket-x: 24vw;
     --scene2-rocket-bias: 9vh;
     --scene2-rocket-scale: 1.02;
@@ -1542,7 +1564,7 @@ html.dark-mode .scene1-stage__sky-wash {
     display: none;
   }
 
-  #UprisingRocket .scene2-shell__rocket {
+  #UprisingRocket .scene2-shell__rocket-wrap {
     width: min(54vw, 360px);
     --scene2-rocket-x: 20vw;
     --scene2-rocket-bias: 8vh;
@@ -1649,7 +1671,7 @@ html.dark-mode .scene1-stage__sky-wash {
     top: clamp(10px, 3.2vw, 26px);
   }
 
-  #UprisingRocket .scene2-shell__rocket {
+  #UprisingRocket .scene2-shell__rocket-wrap {
     width: min(72vw, 320px);
     --scene2-rocket-x: 12vw;
     --scene2-rocket-bias: 6vh;
