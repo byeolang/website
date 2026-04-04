@@ -1,317 +1,445 @@
-# byeol 홈페이지 Scrollytelling 작업 메모 (최신 인계)
+# Scene3 구현 브리프 (Codex 전달용)
 
-이 문서는 2026-04-05 기준 최신 상태를 반영한 Scene2 인계 문서다.
-이제 목적은 "자산 생성 준비"가 아니라, 실제 홈페이지 기준으로 Scene2 애니메이션 반영까지 완료한 뒤 어떤 상태로 멈췄는지를 공유하는 것이다.
+## 0. 목적
+이 문서는 **byeol 홈페이지 Scrollytelling의 Scene3**를 Codex가 바로 구현할 수 있도록,
+장면의 **스토리/흐름**, **레퍼런스**, **자산 사용 계획**, **현재까지 생성된 이미지의 용도**,
+**이미지로 만들지 않고 코드로 처리할 효과**, **레이어/깊이/성능/반응형 규칙**을 하나로 정리한 문서다.
 
-중요:
+이 문서 기준으로 Scene3는 다음 원칙을 따른다.
 
-- Scene2는 정적 레이아웃 + 애니메이션까지 실제 코드베이스에 반영되어 있다.
-- Scene2 copy / 백플레이트 구성은 Scene1 원칙과 동일한 구조로 고정했다.
-- 현재 작업은 Scene2 시퀀스를 완전히 마무리한 시점에서 멈췄으며, 이제 자연스럽게 Scene3 착수 준비 단계로 넘어가면 된다.
+- Scene3 기능 메시지: **스크립트처럼 가볍게, 오류는 먼저**
+- 장면 역할: **지구를 떠난 뒤 우주를 항해하며 소행성 벨트를 통과하는 구간**
+- 핵심 감정: **빠르고 가볍게 전진하지만, 위험은 미리 읽고 피하는 지적인 긴장감**
+- 핵심 시각 은유: **충돌 후 실패가 아니라, 충돌 전 경고와 회피**
+- 구현 원칙: **우주 포스터 한 장**이 아니라 **배경 / 성운 / 로켓 / 소행성 / 파티클 / UI를 분리 합성**
+- 기술 원칙: Scene3는 **Three.js 비중이 가장 큰 씬**이며, 형태가 필요한 자산만 이미지로 쓰고, 동적 공간감과 파티클은 코드로 만든다.
 
-## 현재 결론 요약
+---
 
-- Scene1(`TakeOff`)은 실제 홈페이지에 구현되어 있다.
-- Scene2(`UprisingRocket`)는 실제 홈페이지에 정적 레이아웃과 애니메이션까지 반영되어 있다.
-- Scene2용 PNG 자산은 `resource-generation/`뿐 아니라 `assets/images/scenes/`에도 이미 동기화되어 있다.
-- Scene2 텍스트는 `data-lang` 기반 키로 분리되어 있다.
-- Scene2의 제목 / 설명 / 좌측 그라데이션은 Scene1 표현 방식에 맞춰 고정되었고, 정적 기준 레이아웃 검수까지 마쳤다.
-- `assets/js/scenes.mjs`의 `UprisingRocket` 애니메이션 구현을 작성해 현재 DOM 기준 pose → 상승 플라이트 → 페이드 아웃 시퀀스를 구성했다.
-- 최종 responsive 튜닝과 Scene1↔Scene2 전환 QA까지 마쳤다.
+## 1. Scene3 한 줄 요약
+로켓이 지구를 뒤로 하고 깊은 우주로 진입한다. 전방에는 소행성 벨트가 나타나고, 로켓은 민첩하게 진로를 조정하며 위험을 피한다. 특정 장애물에는 **충돌 전 경고**가 먼저 나타나고, 우측에는 코드/오류 카드가 함께 떠서 **실행 전 감지** 메시지를 강화한다. 이후 벨트를 통과하면 새로운 행성이 전방에 커지며 Scene4로 이어진다.
 
-## 실제 프로젝트 구조
+---
 
-### 진입점
+## 2. Story / Animation Flow
 
-- `index.html`은 front matter만 포함하고, 홈 화면의 실체는 `_layouts/home.html`이다.
-- `_layouts/home.html`에서 `assets/css/home.css`, `assets/css/scenes.css`, `assets/js/scenes.mjs` 등을 모두 로드한다.
-- 스크롤 기반 씬의 루트는 `div#scroll-section`이다.
+### Scene2 → Scene3 전환
+- Scene2 끝에서 카메라가 넓어지며 아래쪽에 지구가 보이기 시작한다.
+- 구름/대기권의 밝은 톤에서 딥스페이스의 어두운 톤으로 자연스럽게 넘어간다.
+- Scene2의 상승 추진력이 끊기지 않은 채, Scene3에서 "우주 항해"로 해석이 전환되어야 한다.
 
-### 씬 DOM 구조
+### Scene3 메인 흐름 (권장 progress 구간)
+이 퍼센트는 실제 구현용 기준치다. 수치 미세조정은 가능하되, 서사는 유지한다.
 
-현재 `_layouts/home.html` 기준 씬 구조는 아래와 같다.
+#### 0% ~ 15%
+- Scene2 → Scene3 전환 완료
+- 카메라가 와이드하게 열림
+- 하단 또는 후방에 지구가 보임
+- 성운/별 레이어가 서서히 드러남
+- 로켓은 이미 진행 중인 상태로 시작
 
-- `section#UprisingRocket`
-- `section#TakeOff`
+#### 15% ~ 35%
+- 딥스페이스 안정화 구간
+- 배경 성운, 원경 별, 중경 별의 패럴랙스 차이 정착
+- 지구는 천천히 뒤로 멀어짐
+- 로켓은 후방-사선 구도 유지
 
-이제 `UprisingRocket`는 비어 있지 않다.
-현재 이 섹션 안에는 Scene2용 `.pin-bg.scene2-shell`, 구름 레이어, 로켓 스택, 카피 블록이 들어 있다.
+#### 35% ~ 70%
+- 소행성 벨트 접근 및 통과 메인 구간
+- large / medium asteroid가 depth band 별로 진입
+- small asteroid single 4~5개를 군집처럼 배치한 묶음들이 통과
+- 로켓은 미세하게 좌우/상하 궤적을 바꿔 회피
+- 특정 위험 소행성 근처에서 경고 마커가 먼저 등장
 
-### 씬 엔진
+#### 45% ~ 65%
+- 코드 카드와 오류 카드가 강조되는 구간
+- 경고 마커와 시각적으로 연결되도록 timing을 맞춤
+- 메시지 포인트: "실행 후 실패"가 아니라 "실행 전 감지"
 
-공통 씬 엔진은 `assets/js/scene.mjs`에 있다.
+#### 70% ~ 85%
+- 벨트 이탈 구간
+- 소행성 밀도 감소
+- 파티클 수와 속도감도 조금 줄어듦
+- 카메라 시선이 다시 전방으로 집중됨
 
-핵심 규칙:
+#### 85% ~ 100%
+- Scene4 프리뷰 전환
+- 전방에 새로운 행성이 커지기 시작
+- 로켓 진행 방향을 따라 카메라가 앞으로 당겨짐
+- Scene4로 넘길 준비
 
-- 각 Scene 클래스 이름이 곧 section id와 대응된다.
-- `Scene` 생성자에서 `heightRatio`를 받아 section 높이를 `vh` 단위로 설정한다.
-- 각 scene 내부에는 반드시 `.pin-bg` 요소가 있어야 한다.
-- pin은 `ScrollTrigger`로 걸린다.
-- `pinSpacing: false`를 사용한다.
-- 타임라인 진행도는 `tl.progress(1 - self.progress)`로 반전해서 넣는다.
+---
 
-즉 standalone 프로토타입의 `progress = 0 -> 1` 공식을 실제 프로젝트에 그대로 붙이면 방향이 반대로 느껴질 수 있다.
+## 3. Mood / Atmosphere Rules
 
-### 부팅 동작
+### 기본 분위기
+- Scene2보다 더 차갑고 더 높은 고도의 느낌
+- 하지만 너무 공포스럽거나 무겁게 가지 않음
+- **정교하고 지적인 우주 항법**의 느낌이 중요
 
-`assets/js/scenes.mjs`의 `Scener.init()`은 일반적인 top-start 페이지처럼 동작하지 않는다.
+### 금지 방향
+- 우주 포스터 한 장처럼 완결된 일러스트 느낌
+- 과도한 SF HUD 세계관 이미지
+- 지나치게 현실적인 NASA 시뮬레이션 풍
+- 소행성 장면이 공포/재난 영화처럼 과하게 어두워지는 방향
 
-현재 부팅 로직 특징:
+### 지향 방향
+- 깊은 우주 + 성운 + 별빛은 **넓고 시원한 공간감**
+- 소행성 통과는 **속도감과 긴장감**
+- 오류 감지는 **기계적 HUD**보다 **제품 UI 카드 + 경고 마커**로 명확히 읽힘
 
-- `ScrollTrigger.refresh()`를 여러 번 호출한다.
-- 페이지 로드 직후 최하단으로 스크롤을 이동시키는 로직이 있다.
-- 사용자가 부팅 중 직접 스크롤하면 그 동작을 존중한다.
+---
 
-즉 Scene2 애니메이션을 붙일 때는 단순한 정방향 scrollytelling로 생각하면 안 된다.
+## 4. Reference Art / Files
 
-### 배경 시스템
-
-홈페이지는 Scene 외에도 별도 배경 시스템을 이미 사용 중이다.
-
-- `assets/js/homeBg.mjs`
-- `assets/js/seaBg.mjs`
-- `assets/css/home.css`
-
-특히 아래 CSS 변수가 이미 사용된다.
-
-- `--vh`
-- `--vfooter`
-- `--vheader`
-
-`#main-bg` 높이와 배경 레이아웃이 이 값들에 의존하므로, Scene2는 Scene1 배경 세계를 복제하지 않고 독립 shell로 유지하는 편이 안전하다.
-
-## Scene1 구현 상태 요약
-
-Scene1은 `TakeOff`이며, 현재 홈페이지의 기준 구현이다.
-
-- 단순 이미지 한 장이 아니라 실제 배경 / 카피 / 로켓 / 연기 / FX / 지형 / 푸터까지 포함한 큰 pin shell 구조다.
-- `assets/css/scenes.css`에서 대부분의 위치와 크기를 `--scene1-*` 커스텀 프로퍼티로 관리한다.
-- 텍스트는 `data-lang` 기반이고, 설명 강조 처리와 코드 하이라이트까지 수행한다.
-
-Scene2 작업에서 특히 참고할 만한 Scene1 포인트:
-
-- 제목은 패널 안에 들어가지 않고 별도 `title-lockup`으로 분리되어 있다.
-- 좌우 그라데이션 백플레이트는 큰 배경 성격으로 쓰고, 카드 패널과 역할을 분리한다.
-- layout은 절대배치 + CSS 기준값으로 잡고, motion은 JS 타임라인으로 붙인다.
-
-## Scene2 자산 상태
-
-### 원본 작업 폴더
-
-Scene2 관련 원본 작업 파일은 `resource-generation/`에 있다.
-
-- `resource-generation/scene2-rocket.png`
-- `resource-generation/scene2-rocket-fire.png`
-- `resource-generation/scene2-rocket-smoke.png`
-- `resource-generation/scene2-cloud-far.png`
-- `resource-generation/scene2-cloud-mid.png`
-- `resource-generation/scene2-cloud-near.png`
-- `resource-generation/scene2-cloud-overlay-mist.png`
-- `resource-generation/scene2-background-concept-art.png`
+### 무드/장면 레퍼런스
+- `resource-generation/scene3_컨셉아트.png`
+  - Scene3 전체 톤과 우주 항해 무드의 1순위 레퍼런스
 - `resource-generation/scene2_컨셉아트.png`
-- `resource-generation/scene2-scroll-prototype-baseline-visible.html`
-
-### 운영용 자산 경로
-
-Scene2 운영 자산은 이미 `assets/images/scenes/`에도 들어 있다.
-
-즉 아래 진술은 이제 틀리다:
-
-- "Scene2 PNG는 아직 resource-generation에만 있다"
-- "운영 경로 정리가 아직 안 됐다"
-
-현재는 실제 홈페이지가 `assets/images/scenes/scene2-*`를 직접 읽는 상태다.
-
-## Scene2 현재 구현 상태
-
-### DOM
-
-`_layouts/home.html`의 `section#UprisingRocket` 안에는 아래가 이미 반영되어 있다.
-
-- Scene2 전용 `.pin-bg.scene2-shell`
-- 태양 디스크
-- 구름 레이어
-- 로켓 스택
-- Scene2 copy 블록
-
-즉 Scene2는 더 이상 "빈 section"이 아니다.
-
-### CSS
-
-`assets/css/scenes.css`에는 Scene2 전용 정적 레이아웃이 이미 있다.
-
-현재 포함된 것:
-
-- Scene2 배경 gradient
-- 구름 레이어 위치 / z-index
-- 로켓 위치 / 크기
-- Scene2 copy 위치
-- title / eyebrow / description / flow panel 스타일
-- 최종 responsive breakpoint 규칙
-
-### JS
-
-- `assets/js/scenes.mjs`의 `class UprisingRocket`이 `_onAnimate(tl)`을 구현했다. DOM의 현재 pose를 `capturePose()`로 잡고, 로켓 시작/중간/끝 벡터, 구름 레이어 패럴랙스, 카피/패널 페이드 타이밍을 역진행 `tl.progress(1 - self.progress)` 규칙에 맞춰 배치했다.
-- 로켓 불꽃(`.scene2-shell__rocket-flame-inner`)은 mid pose 캡처는 없이 기본값으로 세팅하고, 초반 boost + 후반 감소 2구간으로 나눈다.
-- ScrollTrigger는 Scene 베이스 클래스 설정을 그대로 따르므로 `markers: true`, `pinSpacing: false`, `scrub: 1` 상태다. 프로덕션 릴리스 시에는 markers를 꺼야 한다.
-- 코드에는 여전히 `scene2-shell__image--deck-soft`용 세팅이 남아있지만 DOM에는 해당 레이어가 없다. 재사용 계획이 없다면 JS/CSS 훅을 정리해도 된다.
-
-즉 현재 상태는:
-
-- 정적 레이아웃: 구현 완료
-- 애니메이션: 구현 완료(추가 QA·정리 완료)
-- 최종 responsive polish: 완료
-
-### i18n
-
-Scene2는 더 이상 하드코딩 텍스트 상태가 아니다.
-`assets/js/lang-ko.mjs`, `assets/js/lang-en.mjs`에 Scene2 관련 번역 키가 이미 추가되어 있다.
-
-현재 키 범위:
-
-- Scene2 kicker
-- Scene2 title 2줄
-- Scene2 description 2줄
-- flow 카드 라벨
-- flow 카드 항목
-
-## Scene2 레이어 의미 정리
-
-프로토타입 기준 이름과, 현재 실제 배치 의미가 완전히 같지는 않다.
-현재는 아래 의미로 읽는 것이 맞다.
-
-### far
-
-- 가장 멀리 있는 하단 구름층
-- `deck` 뒤에 있는 배경용 depth 레이어
-
-### deck
-
-- 하단 cloud bed의 뒤쪽 레이어
-- 하단 구름층에 입체감을 주는 용도
-
-### foreground
-
-- 예전 프로토타입의 `mid`에 가까운 자산이지만, 현재 역할은 "전경 하단 구름층"이다
-- 하단에 짙고 불투명하게 깔린 cloud bed를 암시한다
-
-### frame
-
-- 예전 프로토타입의 `front`에 가까운 자산이지만, 현재 역할은 "화면 테두리 프레이밍"이다
-- U자 형태로 화면 가장자리를 감싼다
-- 우상단은 열려 있어서 로켓의 진행 방향과 상승성을 암시한다
-
-### mist
-
-- 가장 전경의 투명한 안개층
-- 화면 하단 중간을 넓게 덮는 보조 레이어
-
-### 제거된 레이어
-
-- `deck-soft`는 실제 레이아웃 검수 과정에서 제거됐다
-- 이유는 하단 구름층 표현에서 오히려 직선적인 어색함을 만들거나 레이어 역할이 중복됐기 때문이다
-
-## Scene2 카피 구조 정리
-
-Scene2 카피도 초기 상태와 달라졌다.
-
-현재 기준 구조는 다음과 같다.
-
-- 큰 좌측 그라데이션은 Scene1과 같은 역할의 백플레이트다
-- 제목은 패널 안이 아니라 `title-lockup`으로 분리되어 있다
-- eyebrow + description도 표 밖에 있다
-- flow 비교표만 별도 패널 안에 있다
-
-즉 Scene2도 이제 Scene1과 같은 원칙으로 읽으면 된다:
-
-- title / text는 독립 카피
-- panel은 비교 카드
-- gradient는 카드가 아니라 배경성 보조 장치
-
-## 프로토타입 파일의 현재 위치
-
-`resource-generation/scene2-scroll-prototype-baseline-visible.html`은 여전히 중요한 참고 파일이다.
-하지만 이 파일은 계속 아래 의미로만 취급해야 한다.
-
-- 깜빡임 원인 분리용
-- Three.js 제거된 최소 baseline
-- 레이어와 progress 공식을 참고하기 위한 프로토타입
-
-즉 현재는 "실제 소스"가 아니라 "애니메이션 설계 참고용"이다.
-
-프로토타입의 한계는 여전히 같다.
-
-- standalone HTML이다
-- GSAP / ScrollTrigger를 CDN으로 직접 불러온다
-- debug UI가 포함돼 있다
-- 현재 프로젝트의 `Scene` 추상 클래스 구조를 따르지 않는다
-- 실제 프로젝트는 진행도 반전 로직을 쓴다
-
-## 앞으로 할 일
-
-이제 남은 일은 아래 2단계, 3단계가 핵심이다.
-
-### 2단계. Scene2 애니메이션 구현 — 완료
-
-- 2026-04-05에 `assets/js/scenes.mjs`의 `UprisingRocket._onAnimate(tl)`을 작성해 정적 pose → 상승 → 페이드 아웃 타임라인을 연결했다.
-- 로켓은 Scene2 DOM에 맞춰 계산한 `rocketVector`(뷰포트 대비 0.9 x / -0.28 y)로 이동하며, 시작과 끝 scale/rotation을 따로 잡았다.
-- `capturePose()`로 `far / deck / foreground / frame / mist / sun` mid pose를 읽어 들인 뒤, 패럴랙스를 `start/mid/end` 구간으로 나눠 `power2` easing으로 움직인다.
-- 카피/패널은 Scene1과 동일하게 eyebrow → title → description → panel → flow 순으로 stagger 등장 후 0.84~0.88 구간에서 동시에 빠진다.
-- 남아 있는 자잘한 개선거리: 불꽃 mid pose가 기본값 기반이라 실제 DOM을 캡처하지 않고 있고, deck-soft 레이어 훅이 코드에만 남아 있다. 필요 시 정리할 것.
-
-### 3단계. 최종 responsive 정리 — 완료
-
-- 2026-04-05 기준으로 Scene2 breakpoint 규칙을 재정리하고, 모바일~데스크톱 구간에서 카피/로켓/레이어 충돌 여부를 검수했다.
-- Scene1↔Scene2 전환 지점에서 pin shell 간 여백과 z-index 충돌을 확인해 문제 없음을 검증했다.
-- 잔여 과제는 ScrollTrigger marker 제거, deck-soft 잔존 코드 정리, 불꽃 pose 캡처 같은 미세 정돈뿐이다. Scene2 시퀀스 자체는 반응형까지 포함해 완료된 상태다.
-
-## 계속 유지해야 할 규칙
-
-### 1. 프로토타입 HTML 전체를 그대로 복붙하지 않는다
-
-실제 프로젝트는 이미 아래 구조를 갖고 있다.
-
-- `_layouts/home.html`이 씬 DOM을 만듦
-- `assets/css/scenes.css`가 씬 레이아웃을 잡음
-- `assets/js/scenes.mjs`가 애니메이션을 제어함
-- `lang-*.mjs`와 `lang-toggle.mjs`가 텍스트를 관리함
-
-따라서 Scene2는 계속 "DOM / CSS / JS / i18n / 자산 경로"로 분해해서 관리해야 한다.
-
-### 2. `resource-generation/`는 참고 폴더이지 운영 폴더가 아니다
-
-현재 운영 경로 정리는 끝났지만, 그렇다고 `resource-generation/`를 직접 서비스 자산처럼 취급하면 안 된다.
-
-이 폴더의 역할은 아래다.
-
-- 원본 작업물 보관
-- 컨셉아트 / 프로토타입 참조
-- 인계 문서 보관
-
-### 3. 진행도 방향을 반드시 재해석해야 한다
-
-실제 홈페이지는 공통 Scene 엔진에서 `tl.progress(1 - self.progress)`를 사용한다.
-Scene2 motion 구현 시 이 점을 계속 잊지 말아야 한다.
-
-### 4. Scene1 구조를 통째로 복제하지 않는다
-
-Scene1은 `#main-bg`, 바다, 산, 잔디, footer까지 포함한 대형 세계다.
-Scene2는 독립적인 하늘 + 구름 + 로켓 + copy 무대로 유지하는 것이 맞다.
-
-## 현재 기준 가장 중요한 사실
-
-이 문서를 읽는 다음 작업자는 아래 6가지만 기억하면 된다.
-
-1. Scene2 자산 생성은 사실상 끝났고, 운영 자산 경로 동기화도 끝났다.
-2. Scene2 정적 레이아웃은 실제 홈페이지에 이미 붙어 있다.
-3. Scene2 텍스트도 이미 `data-lang` 체계에 들어가 있다.
-4. `UprisingRocket` 애니메이션이 `assets/js/scenes.mjs` 기준으로 구현되어 있으며, Scene1과 동일한 copy 순서/연출 규칙을 따른다.
-5. 현재 확정된 레이어 의미는 `far / deck / foreground / frame / mist`다.
-6. Scene2 responsive polish까지 끝났으므로, 다음 주요 작업은 Scene3 설계/구현이며 Scene2 쪽은 deck-soft 잔존 코드나 ScrollTrigger marker 같은 미세 정돈만 남았다.
-
-## 마지막 메모
-
-2026-04-05 기준 현재 상태는 Scene2 애니메이션 + responsive 정리를 끝내고 Scene3으로 넘어갈 준비가 된 시점이다.
-Scene2 관련 후속 조치는 미세 정돈(ScrollTrigger markers 제거, deck-soft 잔존 코드/불꽃 pose 캡처 등)뿐이며, 다음 주요 단계는 Scene3 설계와 구현이다.
-
-이 문서는 그 기준을 빠르게 공유하기 위한 최신 인계 문서다.
+  - Scene2 → Scene3 전환 톤 참고
+- `resource-generation/scene2-background-concept-art.png`
+  - Scene2 말미에서 Scene3로 넘어올 때 색 전환 참고
+- `resource-generation/scene4_컨셉아트.png`
+  - Scene3 마지막에서 Scene4 프리뷰 연결 시 전방 행성 톤 참고
+
+### 실제 구현 스타일 기준
+- `assets/images/scenes/rocket.png`
+- `assets/images/scenes/rocket-fire.png`
+- `assets/images/scenes/scene2-rocket.png`
+- `assets/images/scenes/scene2-rocket-fire.png`
+- `resource-generation/scene2-background-concept-art.png`
+
+주의:
+- Scene3는 **Scene3 컨셉아트의 화풍을 통째로 복제**하는 작업이 아니라,
+  **실제 Scene1 / Scene2 구현 자산 문법을 우주 장면으로 확장**하는 작업이다.
+- 로켓은 끝까지 **2.5D 스프라이트 계열**로 유지한다.
+
+---
+
+## 5. Asset Policy (중요)
+
+### 원안 대비 실무 결정 변경점
+문서 원안에는 small-cluster, foreground-blur, particle-atlas가 이미지 자산으로 포함되어 있었지만,
+실제 생성 테스트 결과를 반영해 아래와 같이 변경한다.
+
+#### 유지
+- large asteroid 이미지
+- medium asteroid 이미지
+- small asteroid single 이미지
+- deep space backdrop 이미지
+- nebula band 이미지
+- rocket rear-oblique 이미지
+
+#### 이미지 생성 중단 / 코드 처리 전환
+- `small-cluster-01.png`, `small-cluster-02.png`
+  - **생성 중단**
+  - **small single 4~5개를 GSAP 배치로 군집 구성**
+- `foreground-blur-01.png`, `foreground-blur-02.png`
+  - **생성 중단**
+  - **existing small single sprite + GSAP/CSS blur/afterimage 처리**
+- `space-dust-particle-atlas.png`
+  - **생성 중단**
+  - **Three.js procedural particles로 구현**
+
+이 결정은 Scene3 원칙과도 맞는다. Scene3의 별/우주먼지/파티클은 원래도 **Three.js 또는 2.5D 파티클**로 처리 가능한 영역이며, Scene3는 Three.js 비중이 가장 높은 씬이다.
+
+---
+
+## 6. Final Asset List (구현 기준)
+
+### A. 이미지 자산 (실제 사용)
+
+#### 배경 / 환경
+- `assets/images/scenes/scene3-space-backdrop-deep.png`
+  - 깊은 우주 기본 배경
+  - very far background
+- `assets/images/scenes/scene3-nebula-band-diagonal.png`
+  - 성운 띠 / 방향성 있는 공간감
+  - backdrop 위 중첩 레이어
+- `assets/images/scenes/scene3-earth-horizon-fallback.png`
+  - fallback 전용
+  - 기본 우선순위는 **Three.js sphere 지구**
+
+#### 주인공
+- `assets/images/scenes/scene3-rocket-rear-oblique.png`
+  - 후방-사선 구도의 Scene3 전용 로켓
+  - Scene1/2 계열 디자인 유지
+
+#### 장애물 - large
+- `assets/images/scenes/scene3-asteroid-large-01.png`
+- `assets/images/scenes/scene3-asteroid-large-02.png`
+  - 큰 덩어리 / hero obstacle
+  - far-mid depth에서 진입
+
+#### 장애물 - medium
+- `assets/images/scenes/scene3-asteroid-medium-01.png`
+- `assets/images/scenes/scene3-asteroid-medium-02.png`
+  - large보다 작고 회피용 리듬을 만드는 메인 장애물
+
+#### 장애물 - small singles (현재 승인 방향)
+- `assets/images/scenes/scene3-asteroid-small-01.png`
+- `assets/images/scenes/scene3-asteroid-small-02.png`
+- `assets/images/scenes/scene3-asteroid-small-03.png`
+- `assets/images/scenes/scene3-asteroid-small-04.png`
+- `assets/images/scenes/scene3-asteroid-small-05.png`
+
+용도:
+- 개별 small obstacle
+- 여러 개를 GSAP 배치로 묶어 pseudo-cluster 구성
+- foreground blur의 원본 소스 재사용 가능
+
+### B. 이미지 자산 (채택 안 함 / 참고용 실패 샘플)
+- `resource-generation/운석 파편의 빠른 비행.jpeg`
+  - foreground blur 이미지 생성 실패 샘플
+  - 사용하지 않음
+- particle atlas 관련 생성 결과물 전부
+  - 사용하지 않음
+
+### C. 코드로 구현할 것
+- far stars
+- mid stars
+- space dust / tiny particles
+- short streak particles
+- warning marker
+- code card / error card / title / description / black gradient backplate
+- foreground blur asteroid afterimage effect
+
+---
+
+## 7. Layer Ownership Table
+
+### Image + GSAP
+- deep space backdrop
+- nebula band
+- rocket rear-oblique sprite
+- large asteroid sprites
+- medium asteroid sprites
+- small asteroid single sprites
+
+### Three.js
+- earth sphere (main)
+- far space particles
+- mid particles
+- short streak particles
+- optional near-depth floating specks
+
+### DOM + GSAP
+- title
+- description
+- code card
+- error card
+- black gradient backplate
+- warning markers
+
+### GSAP/CSS post effect
+- foreground blur asteroid
+  - small single sprite를 재사용
+  - blur / opacity / offset / scale / rotation을 코드로 처리
+
+---
+
+## 8. Depth Bands / Render Order
+권장 depth band:
+
+1. far background color / gradient base
+2. deep space backdrop image
+3. far nebula band
+4. far star / dust particles
+5. earth sphere
+6. rocket sprite
+7. medium-depth asteroids
+8. near-depth asteroids
+9. small asteroid pseudo-clusters
+10. foreground blur asteroid layers (generated from existing sprite)
+11. warning marker layer
+12. text + code card + error card + gradient backplate
+
+주의:
+- foreground blur asteroid는 UI보다 아래, 일반 asteroid보다 위
+- warning marker는 asteroid와 시각적으로 연결되지만, 시독성을 위해 asteroid보다 위
+- code/error cards는 항상 최상단 정보 계층
+
+---
+
+## 9. Three.js Particle Design
+이번 작업에서는 particle atlas 이미지를 쓰지 않는다.
+
+### Far dust
+- `THREE.Points`
+- 매우 작은 점
+- 수량 많음
+- opacity 낮음
+- 매우 천천히 이동
+
+### Mid particles
+- `THREE.Points` 또는 small billboards
+- far dust보다 조금 밝음
+- twinkle 약간 허용
+
+### Short streak particles
+- 소량
+- 진행 방향에 맞는 짧은 streak 느낌
+- 이미지 자산이 아니라 코드로 방향/속도 기반 처리
+
+### 추천
+- 먼지 점들: `THREE.Points + BufferGeometry`
+- 아주 짧은 streak: 작은 sprite/plane 또는 stretched point effect
+
+---
+
+## 10. Foreground Blur Asteroid Policy
+이미지 생성으로 새로 뽑지 않는다.
+
+### 이유
+- 생성기로 만들면 운석 비행 일러스트처럼 굳어짐
+- 배경/붓터치/장면 찌꺼기가 붙음
+- 이미 맞춘 소행성 세트 스타일이 흔들림
+
+### 구현 방식
+- `scene3-asteroid-small-0X.png` 중 하나를 원본으로 사용
+- 동일 이미지를 2~3장 겹침
+  - 본체 레이어: blur 없음
+  - afterimage-1: 낮은 opacity + blur + 진행 반대 방향 offset
+  - afterimage-2: 더 낮은 opacity + 더 큰 blur + 더 긴 offset
+- 필요 시 scaleX / skew 약간 적용
+- 일부는 프레임 밖으로 잘리게 배치
+
+---
+
+## 11. Small Asteroid Cluster Policy
+small-cluster는 별도 이미지 생성하지 않는다.
+
+### 구현 방식
+- `scene3-asteroid-small-01 ~ 05`를 재사용
+- 한 컨테이너 안에 3~5개 배치
+- scale / rotate / x / y를 약간씩 다르게
+- 좌우 반전은 광원 방향 깨질 수 있으니 기본적으로 지양
+
+### 장점
+- 스타일 유지
+- 군집 밀도 조절 가능
+- 반복 재사용 가능
+- Scene3 진행도에 따라 흩어지거나 모이게 연출 가능
+
+---
+
+## 12. Code Card / Error Card Content
+Scene3는 **실행 전 감지**를 직관적으로 보여줘야 한다.
+
+### Title
+스크립트처럼 가볍게, 오류는 먼저
+
+### Description
+가볍게 시작할 수 있는 스크립트 언어이지만,
+실수는 실행 전에 최대한 먼저 잡아내도록.
+빠른 실험과 정적 검사를 함께 노립니다.
+
+### Example Code
+```byeol
+let hp: int = "low"
+print(move(player, hp))
+```
+
+### Error Markers
+- type mismatch: `int` expected, got `string`
+- invalid call or incompatible argument in `move(...)`
+
+### Message Point
+- 실행 후 실패가 아니라 실행 전 감지
+- 우주 장면에서는 충돌 전 경고 UI와 시각적으로 대응
+
+---
+
+## 13. Responsive Rules
+
+### Desktop
+- 텍스트/UI는 우측 상단 또는 우측 중앙
+- 코드 카드와 오류 카드는 세로 배치
+- 로켓 진행 방향과 반대편에 정보 카드 배치
+
+### Tablet
+- 카드 폭 축소
+- 카드 수를 줄이지는 않되 간격 압축
+
+### Mobile
+- 카드 2장을 동시에 크게 띄우기 어렵다면,
+  핵심 타이틀 + 짧은 오류 카드 중심으로 축소
+- 별/파티클 수량 감소
+- asteroid 수량과 blur 강도 감소
+
+---
+
+## 14. Performance Budget (권장 상한)
+Codex가 과하게 구현하지 않도록 권장 예산을 준다.
+
+### Particles
+- far dust: 400 ~ 800
+- mid particles: 120 ~ 250
+- short streaks: 20 ~ 40
+
+### Asteroids
+- large active count: 2 ~ 4
+- medium active count: 4 ~ 8
+- small active count: 8 ~ 15
+- pseudo-cluster instance count: 2 ~ 4 groups
+
+### Notes
+- 모바일에서는 모든 수량 하향
+- drawcall / transparency / blur filter 비용 주의
+- foreground blur asteroid는 동시에 1~2개 정도면 충분
+
+---
+
+## 15. What Not To Generate As Images
+아래는 이미지 생성 대상이 아니다.
+
+- 경고 마커
+- 코드 카드 / 오류 카드 / 타이틀 / 설명
+- 검정 → 투명 그라데이션 백플레이트
+- particle atlas
+- foreground blur 전용 신규 이미지
+- small-cluster 완성 이미지
+
+---
+
+## 16. Implementation Notes for Codex
+- Scene3는 **포스터 일러스트 한 장 방식으로 구현하지 말 것**
+- 반드시 **레이어 합성 / depth separation / procedural particles**로 갈 것
+- rocket은 끝까지 **2.5D sprite** 유지
+- earth는 가능하면 **Three.js sphere** 사용, `scene3-earth-horizon-fallback.png`는 fallback만
+- small asteroid는 canonical rename 후 바로 재배치 가능하게 구성
+- Scene2 → Scene3 → Scene4 연결을 progress 기반으로 끊김 없이 설계
+
+---
+
+## 17. 최종 요약
+Scene3는
+**지구를 떠난 로켓이 우주를 항해하며 소행성 벨트를 통과하는 구간**이고,
+**빠르고 가볍지만 위험은 미리 감지하는 지적인 긴장감**을 보여줘야 한다.
+
+자산 전략은 다음처럼 고정한다.
+
+- **형태가 필요한 것만 이미지**
+  - rocket
+  - deep backdrop
+  - nebula band
+  - large / medium / small asteroid singles
+- **동적 공간감은 Three.js**
+  - earth
+  - stars
+  - space dust
+  - tiny particles
+  - short streaks
+- **정보 표현은 DOM + GSAP**
+  - title
+  - description
+  - code card
+  - error card
+  - warning marker
+- **foreground blur / cluster는 새 이미지 생성 대신 기존 sprite 재사용 + 코드 처리**
+
+이 문서의 핵심 실무 결정은 아래 세 줄이다.
+
+- `small-cluster`는 이미지 생성 포기, **small single 4~5개를 GSAP로 군집화**
+- `foreground-blur asteroid`는 이미지 생성 포기, **existing small sprite + blur/afterimage**
+- `space dust / particle atlas`는 이미지 생성 포기, **Three.js procedural particles**
