@@ -18,8 +18,8 @@ class UprisingRocket extends Scene {
     const flowColumns = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__flow-column")) : [];
     const flowItems = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene2-copy__flow-column li")) : [];
 
-    const rocketEl = sceneEl?.querySelector(".scene2-shell__rocket");
-    const rocketFlameEl = rocketEl?.querySelector(".scene2-shell__rocket-flame");
+    const rocketEl = sceneEl?.querySelector(".scene2-shell__rocket-wrap");
+    const rocketFlameEl = sceneEl?.querySelector(".scene2-shell__rocket-flame-inner");
     const farLayer = sceneEl?.querySelector(".scene2-shell__image--far");
     const deckLayer = sceneEl?.querySelector(".scene2-shell__image--deck-band");
     const softLayer = sceneEl?.querySelector(".scene2-shell__image--deck-soft");
@@ -55,21 +55,21 @@ class UprisingRocket extends Scene {
       rotation: gsap.getProperty(rocketEl, "rotation") || 0,
     };
     const rocketVector = {
-      x: sceneWidth * 0.42,
+      x: sceneWidth * 0.9,
       y: -sceneHeight * 0.28,
     };
-    const scaleDelta = rocketMid.scale * 0.18;
+    const scaleDelta = rocketMid.scale * 0.5;
     const rotationDelta = 7;
     const rocketStart = {
-      x: rocketMid.x - rocketVector.x * 0.5,
-      y: rocketMid.y - rocketVector.y * 0.2,
+      x: rocketMid.x + rocketVector.x * 0.2,
+      y: rocketMid.y - rocketVector.y * 0.4,
       scale: rocketMid.scale + scaleDelta,
       rotation: rocketMid.rotation - rotationDelta,
     };
     const rocketEnd = {
-      x: rocketMid.x + rocketVector.x * 0.5,
-      y: rocketMid.y + rocketVector.y * 0.5,
-      scale: Math.max(0.1, rocketMid.scale - scaleDelta),
+      x: rocketMid.x + rocketVector.x * 0.75,
+      y: rocketMid.y + rocketVector.y * 0.2,
+      scale: Math.max(0.1, rocketMid.scale - scaleDelta - 0.5),
       rotation: rocketMid.rotation + rotationDelta,
     };
 
