@@ -62,7 +62,7 @@ export const i18n = new I18n();
 i18n.init();
 
 const csharpTokenPattern = /(?<comment>\/\/.*$)|(?<string>"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|(?<number>\b\d+(?:\.\d+)?\b)|(?<type>\b(?:bool|byte|char|decimal|double|float|int|long|object|short|string|var)\b)|(?<keyword>\b(?:class|public|private|protected|internal|new|return|void|static|using|namespace)\b)|(?<operator>=>|==|!=|<=|>=|&&|\|\||[=+\-*/%!<>?:]+)|(?<delimiter>[{}()[\].,;:])|(?<identifier>\b[A-Za-z_]\w*\b)/gm;
-const byeolTokenPattern = /(?<comment>#.*$)|(?<string>"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|(?<number>\b\d+(?:\.\d+)?\b)|(?<type>\b(?:bool|int|float|string)\b)|(?<keyword>\b(?:def|print|if|else|elif|while|for|return|true|false)\b)|(?<operator>:=|==|!=|<=|>=|&&|\|\||[=+\-*/%!<>|]+)|(?<delimiter>[{}()[\].,;:])|(?<identifier>\b[A-Za-z_]\w*\b)/gm;
+const byeolTokenPattern = /(?<comment>#.*$)|(?<string>"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|(?<number>\b\d+(?:\.\d+)?\b)|(?<type>\b(?:bool|int|float|string)\b)|(?<keyword>\b(?:def|let|print|if|else|elif|while|for|return|true|false)\b)|(?<operator>:=|==|!=|<=|>=|&&|\|\||[=+\-*/%!<>|]+)|(?<delimiter>[{}()[\].,;:])|(?<identifier>\b[A-Za-z_]\w*\b)/gm;
 let scene1ThemeObserver = null;
 
 function escapeHtml(value) {
@@ -175,12 +175,20 @@ function renderScene1Description() {
     .join("");
 }
 
-function renderScene1CodeBlocks() {
-  document.querySelectorAll(".scene1-copy__code-block[data-code-language]").forEach((element) => {
+function renderHighlightedCodeBlocks(selector) {
+  document.querySelectorAll(selector).forEach((element) => {
     const language = element.dataset.codeLanguage;
     const source = i18n.t(element.getAttribute("data-lang"));
     element.innerHTML = renderHighlightedCode(source, language);
   });
+}
+
+function renderScene1CodeBlocks() {
+  renderHighlightedCodeBlocks(".scene1-copy__code-block[data-code-language]");
+}
+
+function renderScene3CodeBlocks() {
+  renderHighlightedCodeBlocks(".scene3-copy__code-block[data-code-language]");
 }
 
 function renderScene1RichCopy() {
@@ -190,6 +198,16 @@ function renderScene1RichCopy() {
 
   renderScene1Description();
   renderScene1CodeBlocks();
+  applyScene1CopyTheme();
+  installScene1ThemeObserver();
+}
+
+function renderScene3RichCopy() {
+  if (!document.querySelector("#scene3-copy")) {
+    return;
+  }
+
+  renderScene3CodeBlocks();
   applyScene1CopyTheme();
   installScene1ThemeObserver();
 }
@@ -211,4 +229,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   renderScene1RichCopy();
+  renderScene3RichCopy();
 });

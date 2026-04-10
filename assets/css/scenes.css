@@ -1766,3 +1766,792 @@ html.dark-mode #scene2-copy .scene2-copy__gradient {
     width: 94vw;
   }
 }
+
+section#AsteroidBelt {
+  background-color: transparent;
+}
+
+.scene3-shell {
+  --scene3-text: rgba(236, 244, 255, 0.96);
+  --scene3-soft: rgba(212, 225, 245, 0.88);
+  --scene3-muted: rgba(167, 185, 219, 0.72);
+  --scene3-panel: rgba(7, 11, 23, 0.78);
+  --scene3-panel-line: rgba(150, 187, 255, 0.16);
+  --scene3-danger: #ffb98f;
+  --scene3-danger-strong: #ff8e68;
+  --scene3-accent: #8fd0ff;
+  --scene3-planet-core: #f4d4ab;
+  --scene3-planet-shadow: #8b6c8e;
+  background:
+    radial-gradient(circle at 76% 18%, rgba(112, 174, 255, 0.14), transparent 26%),
+    radial-gradient(circle at 17% 78%, rgba(53, 117, 201, 0.18), transparent 34%),
+    linear-gradient(180deg, #030813 0%, #071127 44%, #030711 100%);
+}
+
+.scene3-shell::before,
+.scene3-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.scene3-shell::before {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 16% 26%, rgba(255, 255, 255, 0.11), transparent 0.18vw),
+    radial-gradient(circle at 25% 44%, rgba(255, 255, 255, 0.08), transparent 0.14vw),
+    radial-gradient(circle at 62% 18%, rgba(255, 255, 255, 0.09), transparent 0.16vw),
+    radial-gradient(circle at 80% 54%, rgba(255, 255, 255, 0.12), transparent 0.18vw),
+    radial-gradient(circle at 92% 20%, rgba(255, 255, 255, 0.08), transparent 0.13vw),
+    radial-gradient(circle at 54% 72%, rgba(255, 255, 255, 0.06), transparent 0.15vw);
+}
+
+.scene3-shell::after {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(2, 5, 11, 0.08) 0%, rgba(2, 5, 11, 0) 26%, rgba(2, 5, 11, 0) 74%, rgba(2, 5, 11, 0.16) 100%),
+    radial-gradient(circle at 72% 62%, rgba(47, 112, 204, 0.12), transparent 28%);
+}
+
+html.dark-mode .scene3-shell {
+  --scene3-text: rgba(248, 239, 226, 0.96);
+  --scene3-soft: rgba(229, 217, 196, 0.88);
+  --scene3-muted: rgba(191, 177, 160, 0.72);
+  --scene3-panel: rgba(11, 10, 18, 0.78);
+  --scene3-panel-line: rgba(255, 236, 208, 0.12);
+  --scene3-danger: #ffc1a0;
+  --scene3-danger-strong: #ff8f72;
+  --scene3-accent: #98d6ff;
+  background:
+    radial-gradient(circle at 74% 18%, rgba(255, 205, 149, 0.1), transparent 24%),
+    radial-gradient(circle at 18% 84%, rgba(53, 82, 167, 0.18), transparent 36%),
+    linear-gradient(180deg, #02040d 0%, #040917 48%, #02040a 100%);
+}
+
+.scene3-shell__bg,
+#AsteroidBelt .scene3-shell__layer,
+#AsteroidBelt .scene3-shell__three,
+#AsteroidBelt .scene3-shell__earth-fallback,
+#AsteroidBelt .scene3-shell__planet,
+#AsteroidBelt .scene3-shell__rocket,
+#AsteroidBelt .scene3-shell__asteroids,
+#AsteroidBelt .scene3-shell__clusters,
+#AsteroidBelt .scene3-shell__foreground-blur,
+#AsteroidBelt .scene3-shell__warnings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#AsteroidBelt .scene3-shell__image,
+#AsteroidBelt .scene3-shell__asteroid,
+#AsteroidBelt .scene3-shell__blur-layer,
+#AsteroidBelt .scene3-shell__rocket-image,
+#AsteroidBelt .scene3-shell__earth-fallback-image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#AsteroidBelt .scene3-shell__layer--backdrop {
+  z-index: 2;
+  opacity: 0.92;
+}
+
+#AsteroidBelt .scene3-shell__image--backdrop {
+  left: -10vw;
+  top: -6vh;
+  width: 126vw;
+  filter: saturate(0.92) brightness(0.92);
+}
+
+#AsteroidBelt .scene3-shell__layer--nebula {
+  z-index: 3;
+  opacity: 0.72;
+}
+
+#AsteroidBelt .scene3-shell__image--nebula {
+  left: -6vw;
+  top: -8vh;
+  width: 118vw;
+  mix-blend-mode: screen;
+  filter: saturate(0.96) brightness(0.88);
+}
+
+#AsteroidBelt .scene3-shell__three {
+  z-index: 4;
+}
+
+#AsteroidBelt .scene3-shell__three canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#AsteroidBelt .scene3-shell__earth-fallback {
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scene3-shell--fallback .scene3-shell__earth-fallback {
+  opacity: 1;
+  visibility: visible;
+}
+
+#AsteroidBelt .scene3-shell__earth-fallback-image {
+  left: -10vw;
+  bottom: -28vh;
+  width: min(62vw, 920px);
+  opacity: 0.86;
+  filter: saturate(0.84) brightness(0.84);
+}
+
+#AsteroidBelt .scene3-shell__planet {
+  z-index: 5;
+  left: auto;
+  top: 18vh;
+  right: max(5vw, 46px);
+  bottom: auto;
+  width: min(20vw, 320px);
+  height: min(20vw, 320px);
+}
+
+#AsteroidBelt .scene3-shell__planet-glow,
+#AsteroidBelt .scene3-shell__planet-core {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+}
+
+#AsteroidBelt .scene3-shell__planet-glow {
+  background:
+    radial-gradient(circle, rgba(255, 231, 194, 0.22) 0%, rgba(190, 157, 220, 0.18) 32%, rgba(94, 129, 218, 0.06) 62%, rgba(94, 129, 218, 0) 78%);
+  transform: scale(1.5);
+  filter: blur(14px);
+}
+
+#AsteroidBelt .scene3-shell__planet-core {
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255, 245, 226, 0.94), rgba(244, 212, 171, 0.92) 26%, rgba(214, 158, 161, 0.9) 54%, rgba(106, 89, 143, 0.92) 100%);
+  box-shadow:
+    inset -1.5vw -1.2vw 2vw rgba(53, 35, 79, 0.42),
+    0 0 4vw rgba(200, 162, 202, 0.16);
+}
+
+#AsteroidBelt .scene3-shell__rocket {
+  z-index: 6;
+  left: clamp(8px, 4.8vw, 74px);
+  top: auto;
+  bottom: clamp(16px, 11vh, 108px);
+  right: auto;
+  width: min(29vw, 410px);
+  height: min(29vw, 410px);
+  transform: translate3d(0, 0, 0);
+  transform-origin: 34% 54%;
+  filter: drop-shadow(0 26px 54px rgba(0, 0, 0, 0.42));
+}
+
+#AsteroidBelt .scene3-shell__rocket-image {
+  inset: 0;
+}
+
+#AsteroidBelt .scene3-shell__rocket-glow,
+#AsteroidBelt .scene3-shell__rocket-trail {
+  position: absolute;
+  pointer-events: none;
+}
+
+#AsteroidBelt .scene3-shell__rocket-glow {
+  left: 8%;
+  top: 43%;
+  width: 34%;
+  height: 24%;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(158, 221, 255, 0.46) 0%, rgba(92, 167, 255, 0.16) 42%, rgba(92, 167, 255, 0) 80%);
+  filter: blur(10px);
+  animation: scene3-engine-pulse 1.6s ease-in-out infinite;
+}
+
+#AsteroidBelt .scene3-shell__rocket-trail {
+  left: -16%;
+  top: 45%;
+  width: 38%;
+  height: 12%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(94, 178, 255, 0) 0%, rgba(94, 178, 255, 0.12) 24%, rgba(213, 240, 255, 0.38) 74%, rgba(235, 247, 255, 0.04) 100%);
+  filter: blur(12px);
+  transform: rotate(-6deg);
+  opacity: 0.74;
+  animation: scene3-trail-flow 1.9s linear infinite;
+}
+
+#AsteroidBelt .scene3-shell__asteroids--mid {
+  z-index: 7;
+}
+
+#AsteroidBelt .scene3-shell__clusters {
+  z-index: 9;
+}
+
+#AsteroidBelt .scene3-shell__foreground-blur {
+  z-index: 10;
+}
+
+#AsteroidBelt .scene3-shell__warnings {
+  z-index: 11;
+}
+
+#AsteroidBelt .scene3-shell__asteroid,
+#AsteroidBelt .scene3-shell__cluster,
+#AsteroidBelt .scene3-shell__blur-asteroid,
+#AsteroidBelt .scene3-shell__warning {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+
+#AsteroidBelt .scene3-shell__asteroid {
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.22));
+}
+
+#AsteroidBelt .scene3-shell__asteroid--large {
+  width: min(22vw, 320px);
+}
+
+#AsteroidBelt .scene3-shell__asteroid--medium {
+  width: min(12vw, 188px);
+}
+
+#AsteroidBelt .scene3-shell__asteroid--small {
+  width: min(6vw, 92px);
+}
+
+#AsteroidBelt .scene3-shell__cluster {
+  width: min(20vw, 240px);
+  height: min(18vw, 220px);
+}
+
+#AsteroidBelt .scene3-shell__cluster .scene3-shell__asteroid:nth-child(1) {
+  left: 2%;
+  top: 18%;
+  transform: rotate(-18deg);
+}
+
+#AsteroidBelt .scene3-shell__cluster .scene3-shell__asteroid:nth-child(2) {
+  left: 44%;
+  top: 4%;
+  transform: scale(0.86) rotate(12deg);
+}
+
+#AsteroidBelt .scene3-shell__cluster .scene3-shell__asteroid:nth-child(3) {
+  left: 58%;
+  top: 42%;
+  transform: scale(1.08) rotate(-8deg);
+}
+
+#AsteroidBelt .scene3-shell__cluster .scene3-shell__asteroid:nth-child(4) {
+  left: 14%;
+  top: 56%;
+  transform: scale(0.76) rotate(16deg);
+}
+
+#AsteroidBelt .scene3-shell__blur-asteroid {
+  width: min(20vw, 260px);
+  height: min(20vw, 260px);
+}
+
+#AsteroidBelt .scene3-shell__blur-layer {
+  inset: 0;
+  width: 100%;
+}
+
+#AsteroidBelt .scene3-shell__blur-layer--base {
+  filter: none;
+  opacity: 0.92;
+}
+
+#AsteroidBelt .scene3-shell__blur-layer--ghost-a {
+  opacity: 0.3;
+  transform: translate3d(-14%, 2%, 0) scale(1.04);
+  filter: blur(8px);
+}
+
+#AsteroidBelt .scene3-shell__blur-layer--ghost-b {
+  opacity: 0.14;
+  transform: translate3d(-24%, 4%, 0) scale(1.12);
+  filter: blur(18px);
+}
+
+#AsteroidBelt .scene3-shell__warning {
+  width: min(14vw, 180px);
+  height: min(11vw, 140px);
+}
+
+#AsteroidBelt .scene3-shell__warning-ring,
+#AsteroidBelt .scene3-shell__warning-dot,
+#AsteroidBelt .scene3-shell__warning-line {
+  position: absolute;
+  display: block;
+}
+
+#AsteroidBelt .scene3-shell__warning-ring {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 214, 177, 0.58);
+}
+
+#AsteroidBelt .scene3-shell__warning-ring--outer {
+  inset: 8% auto auto 6%;
+  width: 32%;
+  height: 42%;
+  opacity: 0.68;
+  box-shadow: 0 0 1.6vw rgba(255, 166, 120, 0.1);
+}
+
+#AsteroidBelt .scene3-shell__warning-ring--inner {
+  inset: 17% auto auto 15%;
+  width: 14%;
+  height: 18%;
+  opacity: 0.94;
+}
+
+#AsteroidBelt .scene3-shell__warning-dot {
+  left: 21%;
+  top: 25%;
+  width: 6%;
+  height: 7%;
+  border-radius: 999px;
+  background: var(--scene3-danger-strong);
+  box-shadow: 0 0 14px rgba(255, 143, 104, 0.4);
+}
+
+#AsteroidBelt .scene3-shell__warning-line {
+  right: 0;
+  top: 31%;
+  width: 62%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 185, 145, 0.42) 0%, rgba(255, 185, 145, 0.12) 58%, rgba(255, 185, 145, 0) 100%);
+}
+
+#scene3-copy {
+  position: absolute;
+  z-index: 12;
+  right: clamp(18px, 4.2vw, 62px);
+  top: clamp(24px, 9vh, 94px);
+  width: min(34vw, 500px);
+  max-width: calc(100vw - 32px);
+  color: var(--scene3-text);
+}
+
+#scene3-copy .scene3-copy__gradient {
+  position: absolute;
+  top: -12vh;
+  right: -12vw;
+  width: 70vw;
+  height: 132vh;
+  z-index: 0;
+  background: linear-gradient(98deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.04) 24%, rgba(0, 0, 0, 0.44) 46%, rgba(0, 0, 0, 0.84) 74%, rgba(0, 0, 0, 0.96) 100%);
+  pointer-events: none;
+}
+
+#scene3-copy .scene3-copy__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+}
+
+#scene3-copy .scene3-copy__title-lockup {
+  display: grid;
+  gap: 14px;
+}
+
+#scene3-copy .scene3-copy__eyebrow {
+  margin: 0;
+  position: relative;
+  padding-left: clamp(22px, 2vw, 32px);
+  font-size: clamp(11px, 0.9vw, 15px);
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--scene3-muted);
+}
+
+#scene3-copy .scene3-copy__eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: clamp(16px, 1.8vw, 28px);
+  height: max(1px, 0.08vw);
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, rgba(215, 236, 255, 0.9) 0%, rgba(215, 236, 255, 0.14) 100%);
+}
+
+#scene3-copy .scene3-copy__title {
+  margin: 0;
+  display: grid;
+  gap: 2px;
+  font-size: clamp(44px, 4.7vw, 78px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+#scene3-copy .scene3-copy__title-line {
+  display: block;
+}
+
+#scene3-copy .scene3-copy__description {
+  margin: 0;
+  display: grid;
+  gap: 0.38em;
+  padding-left: clamp(22px, 2vw, 34px);
+  font-size: clamp(14px, 1.04vw, 18px);
+  line-height: 1.68;
+  color: var(--scene3-soft);
+}
+
+#scene3-copy .scene3-copy__description-line {
+  display: block;
+}
+
+#scene3-copy .scene3-copy__description-em {
+  color: var(--scene3-accent);
+  font-weight: 700;
+}
+
+#scene3-copy .scene3-copy__cards {
+  display: grid;
+  gap: 14px;
+}
+
+#scene3-copy .scene3-copy__card {
+  position: relative;
+  padding: clamp(16px, 1.7vw, 24px);
+  border-radius: 24px;
+  border: 1px solid var(--scene3-panel-line);
+  background: var(--scene3-panel);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.26);
+}
+
+#scene3-copy .scene3-copy__card--code {
+  background:
+    linear-gradient(180deg, rgba(87, 168, 255, 0.12) 0%, rgba(87, 168, 255, 0.04) 100%),
+    var(--scene3-panel);
+}
+
+#scene3-copy .scene3-copy__card--error {
+  background:
+    linear-gradient(180deg, rgba(255, 161, 122, 0.14) 0%, rgba(255, 161, 122, 0.04) 100%),
+    var(--scene3-panel);
+}
+
+#scene3-copy .scene3-copy__card-top {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#scene3-copy .scene3-copy__card-label,
+#scene3-copy .scene3-copy__card-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#scene3-copy .scene3-copy__card-label {
+  color: var(--scene3-muted);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#scene3-copy .scene3-copy__card-chip {
+  color: var(--scene3-accent);
+  border: 1px solid rgba(143, 208, 255, 0.16);
+  background: rgba(143, 208, 255, 0.1);
+}
+
+#scene3-copy .scene3-copy__card-alert {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--scene3-danger-strong);
+  box-shadow: 0 0 18px rgba(255, 143, 104, 0.42);
+}
+
+#scene3-copy .scene3-copy__code-block {
+  margin: 0;
+  font-family: Galmuri9, Monaco, Consolas, "Lucida Console", monospace;
+  font-size: clamp(12px, 0.96vw, 14px);
+  line-height: 1.66;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  color: rgba(246, 250, 255, 0.96);
+}
+
+#scene3-copy .scene1-copy__code-line {
+  display: block;
+}
+
+#scene3-copy .scene1-copy__code-token--keyword {
+  color: var(--scene1-copy-token-keyword, #4189A6);
+  font-weight: 700;
+}
+
+#scene3-copy .scene1-copy__code-token--comment {
+  color: var(--scene1-copy-token-comment, #CCCCCC);
+  font-style: italic;
+}
+
+#scene3-copy .scene1-copy__code-token--number {
+  color: var(--scene1-copy-token-number, #E9EBF2);
+}
+
+#scene3-copy .scene1-copy__code-token--string {
+  color: var(--scene1-copy-token-string, #CA5FA4);
+}
+
+#scene3-copy .scene1-copy__code-token--delimiter {
+  color: var(--scene1-copy-token-delimiter, #CCCCCC);
+}
+
+#scene3-copy .scene1-copy__code-token--operator {
+  color: var(--scene1-copy-token-operator, #CCCCCC);
+}
+
+#scene3-copy .scene1-copy__code-token--identifier {
+  color: var(--scene1-copy-token-identifier, #E0B88D);
+}
+
+#scene3-copy .scene1-copy__code-token--type {
+  color: var(--scene1-copy-token-type, #6AB04B);
+  font-weight: 700;
+}
+
+#scene3-copy .scene3-copy__error-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+#scene3-copy .scene3-copy__error-list li {
+  position: relative;
+  padding: 0 0 0 18px;
+  color: rgba(255, 226, 206, 0.92);
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.42;
+}
+
+#scene3-copy .scene3-copy__error-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.44em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--scene3-danger-strong);
+  box-shadow: 0 0 16px rgba(255, 143, 104, 0.36);
+}
+
+html #scene3-copy .scene3-copy__title {
+  color: #f4f9ff;
+  text-shadow:
+    0 0.2vh 0 rgba(222, 235, 255, 0.5),
+    0 1vh 2vh rgba(8, 16, 32, 0.46);
+}
+
+html #scene3-copy .scene3-copy__title-line:last-child {
+  color: #ffffff;
+}
+
+html.dark-mode #scene3-copy .scene3-copy__title {
+  color: #fff1de;
+  text-shadow:
+    0 0.2vh 0 rgba(255, 238, 210, 0.52),
+    0 1vh 2.2vh rgba(0, 0, 0, 0.54);
+}
+
+@keyframes scene3-engine-pulse {
+  0%,
+  100% {
+    opacity: 0.44;
+    transform: scale(0.94);
+  }
+
+  50% {
+    opacity: 0.88;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes scene3-trail-flow {
+  0% {
+    opacity: 0.38;
+    transform: rotate(-6deg) scaleX(0.9);
+  }
+
+  50% {
+    opacity: 0.82;
+    transform: rotate(-5deg) scaleX(1.08);
+  }
+
+  100% {
+    opacity: 0.38;
+    transform: rotate(-6deg) scaleX(0.9);
+  }
+}
+
+@media (max-height: 699px) {
+  #scene3-copy {
+    top: clamp(12px, 5vh, 30px);
+  }
+
+  #AsteroidBelt .scene3-shell__rocket {
+    left: clamp(6px, 4vw, 56px);
+    bottom: clamp(10px, 9vh, 78px);
+    width: min(26vw, 320px);
+    height: min(26vw, 320px);
+  }
+}
+
+@media (max-width: 899px) {
+  #scene3-copy {
+    left: 50%;
+    right: auto;
+    top: clamp(18px, 6vh, 54px);
+    width: min(92vw, 680px);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  #scene3-copy .scene3-copy__gradient {
+    left: 50%;
+    right: auto;
+    top: -10vh;
+    width: 112vw;
+    transform: translateX(-50%);
+  }
+
+  #scene3-copy .scene3-copy__title {
+    font-size: clamp(30px, 6vw, 56px);
+  }
+
+  #AsteroidBelt .scene3-shell__rocket {
+    left: clamp(2px, 3vw, 20px);
+    bottom: clamp(12px, 12vh, 72px);
+    top: auto;
+    width: min(36vw, 260px);
+    height: min(36vw, 260px);
+  }
+
+  #AsteroidBelt .scene3-shell__planet {
+    top: 15vh;
+    right: 3vw;
+    width: min(26vw, 220px);
+    height: min(26vw, 220px);
+  }
+
+  #AsteroidBelt .scene3-shell__warning {
+    width: min(18vw, 140px);
+    height: min(14vw, 110px);
+  }
+}
+
+@media (max-width: 499px) {
+  #scene3-copy {
+    width: calc(100vw - clamp(20px, 8vw, 36px));
+    top: clamp(12px, 6vh, 30px);
+  }
+
+  #scene3-copy .scene3-copy__gradient {
+    width: 124vw;
+  }
+
+  #scene3-copy .scene3-copy__title {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
+  #scene3-copy .scene3-copy__eyebrow {
+    font-size: clamp(9px, 2.5vw, 11px);
+    letter-spacing: 0.12em;
+  }
+
+  #scene3-copy .scene3-copy__description {
+    font-size: clamp(12px, 3.2vw, 15px);
+    line-height: 1.54;
+  }
+
+  #scene3-copy .scene3-copy__card {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  #scene3-copy .scene3-copy__card--code {
+    display: none;
+  }
+
+  #scene3-copy .scene3-copy__error-list li {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  #AsteroidBelt .scene3-shell__rocket {
+    left: clamp(-10px, 1vw, 8px);
+    bottom: clamp(10px, 10vh, 44px);
+    top: auto;
+    width: min(50vw, 210px);
+    height: min(50vw, 210px);
+  }
+
+  #AsteroidBelt .scene3-shell__planet {
+    top: 18vh;
+    right: -3vw;
+    width: min(34vw, 180px);
+    height: min(34vw, 180px);
+  }
+
+  #AsteroidBelt .scene3-shell__earth-fallback-image {
+    left: -28vw;
+    bottom: -18vh;
+    width: min(92vw, 500px);
+  }
+
+  #AsteroidBelt .scene3-shell__cluster {
+    width: min(28vw, 160px);
+    height: min(24vw, 138px);
+  }
+
+  #AsteroidBelt .scene3-shell__blur-asteroid {
+    width: min(24vw, 150px);
+    height: min(24vw, 150px);
+  }
+
+  #AsteroidBelt .scene3-shell__warning {
+    width: min(22vw, 110px);
+    height: min(16vw, 84px);
+  }
+
+  #AsteroidBelt .scene3-shell__warning-line {
+    width: 52%;
+  }
+}
