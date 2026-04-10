@@ -84,6 +84,143 @@
           each section's height will be applied by js.
           refer scenes.mjs for more info.
         -->
+        <section id="AsteroidBelt" class="scene">
+          <div class="pin-bg scene3-shell">
+            <div class="scene3-shell__bg" aria-hidden="true"></div>
+
+            <div class="scene3-shell__layer scene3-shell__layer--backdrop" aria-hidden="true">
+              <img class="scene3-shell__image scene3-shell__image--backdrop" src="assets/images/scenes/scene3-space-backdrop-deep.png" alt="" />
+            </div>
+
+            <div class="scene3-shell__layer scene3-shell__layer--nebula" aria-hidden="true">
+              <img class="scene3-shell__image scene3-shell__image--nebula" src="assets/images/scenes/scene3-nebular-band-diagonal.png" alt="" />
+            </div>
+
+            <div class="scene3-shell__three" aria-hidden="true"></div>
+
+            <div class="scene3-shell__earth-fallback" aria-hidden="true">
+              <img class="scene3-shell__earth-fallback-image" src="assets/images/scenes/scene3-earth-horizon-fallback.png" alt="" />
+            </div>
+
+            <div class="scene3-shell__planet" aria-hidden="true">
+              <span class="scene3-shell__planet-glow"></span>
+              <span class="scene3-shell__planet-core"></span>
+            </div>
+
+            <div class="scene3-shell__rocket" aria-hidden="true">
+              <div class="scene3-shell__rocket-glow"></div>
+              <div class="scene3-shell__rocket-trail"></div>
+              <img class="scene3-shell__rocket-image" src="assets/images/scenes/scene3-rocket-rear-oblique.png" alt="" />
+            </div>
+
+            <div class="scene3-shell__asteroids scene3-shell__asteroids--mid" aria-hidden="true">
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--large" data-asteroid="large-a" src="assets/images/scenes/scene3-asteroid-large-01.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--large" data-asteroid="large-b" src="assets/images/scenes/scene3-asteroid-large-02.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-a" src="assets/images/scenes/scene3-asteroid-medium-01.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-b" src="assets/images/scenes/scene3-asteroid-medium-02.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-c" src="assets/images/scenes/scene3-asteroid-medium-01.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-d" src="assets/images/scenes/scene3-asteroid-medium-02.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-e" src="assets/images/scenes/scene3-asteroid-medium-01.png" alt="" />
+              <img class="scene3-shell__asteroid scene3-shell__asteroid--medium" data-asteroid="medium-f" src="assets/images/scenes/scene3-asteroid-medium-02.png" alt="" />
+            </div>
+
+            <div class="scene3-shell__clusters" aria-hidden="true">
+              <div class="scene3-shell__cluster" data-cluster="alpha">
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-01.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-03.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-02.png" alt="" />
+              </div>
+              <div class="scene3-shell__cluster" data-cluster="beta">
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-04.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-02.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-01.png" alt="" />
+              </div>
+              <div class="scene3-shell__cluster" data-cluster="gamma">
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-03.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-04.png" alt="" />
+                <img class="scene3-shell__asteroid scene3-shell__asteroid--small" src="assets/images/scenes/scene3-asteroid-small-02.png" alt="" />
+              </div>
+            </div>
+
+            <div class="scene3-shell__foreground-blur" aria-hidden="true">
+              <div class="scene3-shell__blur-asteroid" data-blur="alpha">
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--base" src="assets/images/scenes/scene3-asteroid-small-03.png" alt="" />
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--ghost-a" src="assets/images/scenes/scene3-asteroid-small-03.png" alt="" />
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--ghost-b" src="assets/images/scenes/scene3-asteroid-small-03.png" alt="" />
+              </div>
+              <div class="scene3-shell__blur-asteroid" data-blur="beta">
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--base" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--ghost-a" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+                <img class="scene3-shell__blur-layer scene3-shell__blur-layer--ghost-b" src="assets/images/scenes/scene3-asteroid-small-05.png" alt="" />
+              </div>
+            </div>
+
+            <div class="scene3-shell__warnings" aria-hidden="true">
+              <div class="scene3-shell__warning" data-warning="type">
+                <span class="scene3-shell__warning-ring scene3-shell__warning-ring--outer"></span>
+                <span class="scene3-shell__warning-ring scene3-shell__warning-ring--inner"></span>
+                <span class="scene3-shell__warning-dot"></span>
+                <span class="scene3-shell__warning-line"></span>
+              </div>
+              <div class="scene3-shell__warning" data-warning="call">
+                <span class="scene3-shell__warning-ring scene3-shell__warning-ring--outer"></span>
+                <span class="scene3-shell__warning-ring scene3-shell__warning-ring--inner"></span>
+                <span class="scene3-shell__warning-dot"></span>
+                <span class="scene3-shell__warning-line"></span>
+              </div>
+            </div>
+
+            <article id="scene3-copy" class="scene3-copy">
+              <div class="scene3-copy__gradient"></div>
+              <div class="scene3-copy__content">
+                <div class="scene3-copy__title-lockup">
+                  <p class="scene3-copy__eyebrow" data-lang="scene3-kicker"></p>
+                  <h2 class="scene3-copy__title">
+                    <span class="scene3-copy__title-line" data-lang="scene3-title-line1"></span>
+                    <span class="scene3-copy__title-line" data-lang="scene3-title-line2"></span>
+                  </h2>
+                </div>
+
+                <p class="scene3-copy__description">
+                  <span class="scene3-copy__description-line">
+                    <span data-lang="scene3-desc-line1-prefix"></span>
+                    <span class="scene3-copy__description-em" data-lang="scene3-desc-line1-em"></span>
+                    <span data-lang="scene3-desc-line1-rest"></span>
+                  </span>
+                  <span class="scene3-copy__description-line">
+                    <span data-lang="scene3-desc-line2-prefix"></span>
+                    <span class="scene3-copy__description-em" data-lang="scene3-desc-line2-em"></span>
+                    <span data-lang="scene3-desc-line2-rest"></span>
+                  </span>
+                </p>
+
+                <div class="scene3-copy__cards">
+                  <section class="scene3-copy__card scene3-copy__card--code">
+                    <div class="scene3-copy__card-top">
+                      <div class="scene3-copy__card-label" data-lang="scene3-code-label"></div>
+                      <div class="scene3-copy__card-chip">byeol</div>
+                    </div>
+                    <pre class="scene3-copy__code-block" data-lang="scene3-code" data-code-language="byeol"></pre>
+                  </section>
+
+                  <section class="scene3-copy__card scene3-copy__card--error">
+                    <div class="scene3-copy__card-top">
+                      <div class="scene3-copy__card-label" data-lang="scene3-error-label"></div>
+                      <div class="scene3-copy__card-alert" aria-hidden="true"></div>
+                    </div>
+                    <ul class="scene3-copy__error-list">
+                      <li data-lang="scene3-error-line1"></li>
+                      <li data-lang="scene3-error-line2"></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
         <section id="UprisingRocket" class="scene">
           <div class="pin-bg scene2-shell">
             <div class="scene2-shell__sun-disc" aria-hidden="true"></div>

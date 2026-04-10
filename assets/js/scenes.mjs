@@ -1,6 +1,430 @@
 import { Scene } from "./scene.mjs"
 import { Scene1IgnitionLight } from "./scene1-ignition-light.mjs"
 import { Scene1SparkLayer } from "./scene1-sparks.mjs"
+import { Scene3SpaceField } from "./scene3-space-field.mjs"
+
+class AsteroidBelt extends Scene {
+  constructor() {
+    super(14);
+  }
+
+  _onAnimate(tl) {
+    const sceneEl = document.querySelector(`#${this.getName()}`);
+    const shellEl = sceneEl?.querySelector(".scene3-shell");
+
+    if (!sceneEl || !shellEl) {
+      return tl;
+    }
+
+    const sceneWidth = sceneEl.clientWidth || window.innerWidth;
+    const sceneHeight = sceneEl.clientHeight || window.innerHeight;
+    const density = window.innerWidth < 500 ? 0.74 : window.innerWidth < 900 ? 0.9 : 1;
+    const vw = sceneWidth / 100;
+    const vh = sceneHeight / 100;
+
+    const copyEl = sceneEl.querySelector("#scene3-copy");
+    const gradientEl = copyEl?.querySelector(".scene3-copy__gradient");
+    const eyebrowEl = copyEl?.querySelector(".scene3-copy__eyebrow");
+    const titleLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene3-copy__title-line")) : [];
+    const descLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene3-copy__description-line")) : [];
+    const cards = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene3-copy__card")) : [];
+    const errorItems = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene3-copy__error-list li")) : [];
+
+    const backdropEl = sceneEl.querySelector(".scene3-shell__image--backdrop");
+    const nebulaEl = sceneEl.querySelector(".scene3-shell__image--nebula");
+    const fallbackEarthEl = sceneEl.querySelector(".scene3-shell__earth-fallback");
+    const planetEl = sceneEl.querySelector(".scene3-shell__planet");
+    const rocketEl = sceneEl.querySelector(".scene3-shell__rocket");
+    const rocketGlowEl = sceneEl.querySelector(".scene3-shell__rocket-glow");
+    const rocketTrailEl = sceneEl.querySelector(".scene3-shell__rocket-trail");
+
+    const asteroidById = (id) => sceneEl.querySelector(`[data-asteroid="${id}"]`);
+    const clusterById = (id) => sceneEl.querySelector(`[data-cluster="${id}"]`);
+    const blurById = (id) => sceneEl.querySelector(`[data-blur="${id}"]`);
+    const warningById = (id) => sceneEl.querySelector(`[data-warning="${id}"]`);
+
+    const setBox = (element, width, height = width) => {
+      if (!element) return;
+      element.style.width = `${Math.round(width)}px`;
+      element.style.height = `${Math.round(height)}px`;
+    };
+
+    const setFlightSize = (element, width) => {
+      if (!element) return;
+      element.style.width = `${Math.round(width)}px`;
+    };
+
+    const addFlight = (element, config) => {
+      if (!element) return;
+
+      if (config.width) {
+        setFlightSize(element, config.width);
+      }
+
+      gsap.set(element, {
+        x: config.start.x,
+        y: config.start.y,
+        rotation: config.start.rotation ?? 0,
+        scale: config.start.scale ?? 1,
+        autoAlpha: config.start.autoAlpha ?? 1,
+        force3D: true,
+        transformOrigin: config.transformOrigin ?? "50% 50%",
+      });
+
+      tl.to(
+        element,
+        {
+          x: config.mid.x,
+          y: config.mid.y,
+          rotation: config.mid.rotation ?? config.start.rotation ?? 0,
+          scale: config.mid.scale ?? config.start.scale ?? 1,
+          autoAlpha: config.mid.autoAlpha ?? 1,
+          force3D: true,
+          duration: Math.max(0.01, config.midAt - (config.startAt ?? 0)),
+          ease: config.easeIn ?? "power1.out",
+        },
+        config.startAt ?? 0,
+      );
+
+      tl.to(
+        element,
+        {
+          x: config.end.x,
+          y: config.end.y,
+          rotation: config.end.rotation ?? config.mid.rotation ?? 0,
+          scale: config.end.scale ?? config.mid.scale ?? 1,
+          autoAlpha: config.end.autoAlpha ?? config.mid.autoAlpha ?? 1,
+          force3D: true,
+          duration: Math.max(0.01, config.endAt - config.midAt),
+          ease: config.easeOut ?? "power2.in",
+        },
+        config.midAt,
+      );
+    };
+
+    const spaceField = new Scene3SpaceField({
+      host: sceneEl.querySelector(".scene3-shell__three"),
+      shell: shellEl,
+    });
+
+    const syncSpaceField = () => {
+      spaceField.setProgress(tl.progress());
+    };
+
+    window.addEventListener("resize", () => {
+      spaceField.resize();
+    }, { passive: true });
+
+    tl.eventCallback("onUpdate", syncSpaceField);
+    syncSpaceField();
+
+    gsap.set(shellEl, { transformPerspective: 1200 });
+
+    if (backdropEl) {
+      gsap.set(backdropEl, {
+        scale: 1.12,
+        xPercent: -4,
+        yPercent: 8,
+        autoAlpha: 0.44,
+        transformOrigin: "50% 50%",
+      });
+      tl.to(backdropEl, { scale: 1.02, xPercent: 0, yPercent: 0, autoAlpha: 0.96, duration: 0.24, ease: "power2.out" }, 0);
+      tl.to(backdropEl, { scale: 0.94, xPercent: 4, yPercent: -10, autoAlpha: 0.84, duration: 0.84, ease: "none" }, 0.24);
+    }
+
+    if (nebulaEl) {
+      gsap.set(nebulaEl, {
+        scale: 1.18,
+        xPercent: -8,
+        yPercent: 10,
+        autoAlpha: 0.28,
+        transformOrigin: "50% 50%",
+      });
+      tl.to(nebulaEl, { scale: 1.02, xPercent: -1, yPercent: 1, autoAlpha: 0.72, duration: 0.28, ease: "power2.out" }, 0.04);
+      tl.to(nebulaEl, { scale: 0.94, xPercent: 8, yPercent: -12, autoAlpha: 0.58, duration: 0.8, ease: "none" }, 0.28);
+    }
+
+    if (fallbackEarthEl) {
+      gsap.set(fallbackEarthEl, {
+        x: -sceneWidth * 0.06,
+        y: sceneHeight * 0.08,
+        scale: 1.18,
+        autoAlpha: 0,
+      });
+      tl.to(fallbackEarthEl, { x: -sceneWidth * 0.03, y: sceneHeight * 0.02, scale: 1, autoAlpha: 0.92, duration: 0.1, ease: "power2.out" }, 0);
+      tl.to(fallbackEarthEl, { x: -sceneWidth * 0.18, y: sceneHeight * 0.24, scale: 0.62, autoAlpha: 0, duration: 0.28, ease: "power2.in" }, 0.1);
+    }
+
+    if (planetEl) {
+      gsap.set(planetEl, {
+        autoAlpha: 0,
+        scale: 0.48,
+        xPercent: 16,
+        yPercent: 8,
+        transformOrigin: "50% 50%",
+      });
+      tl.to(planetEl, { autoAlpha: 0.2, scale: 0.62, duration: 0.1, ease: "power1.out" }, 0.84);
+      tl.to(planetEl, { autoAlpha: 1, scale: 1, xPercent: 0, yPercent: 0, duration: 0.24, ease: "power2.out" }, 0.9);
+    }
+
+    if (rocketEl) {
+      gsap.set(rocketEl, {
+        x: -vw * 2,
+        y: vh * 1,
+        scale: 1.02 * density,
+        rotation: -10,
+        transformOrigin: "34% 54%",
+      });
+
+      tl.to(rocketEl, { x: vw * 4, y: -vh * 4, scale: 0.98 * density, rotation: -6, duration: 0.18, ease: "power1.out" }, 0);
+      tl.to(rocketEl, { x: vw * 8, y: -vh * 7, scale: 0.96 * density, rotation: -11, duration: 0.18, ease: "sine.inOut" }, 0.18);
+      tl.to(rocketEl, { x: vw * 6, y: -vh * 3.5, scale: 0.95 * density, rotation: -3, duration: 0.14, ease: "sine.inOut" }, 0.36);
+      tl.to(rocketEl, { x: vw * 11, y: -vh * 8.5, scale: 0.92 * density, rotation: -10, duration: 0.18, ease: "sine.inOut" }, 0.5);
+      tl.to(rocketEl, { x: vw * 9, y: -vh * 5.5, scale: 0.9 * density, rotation: -5, duration: 0.14, ease: "sine.inOut" }, 0.68);
+      tl.to(rocketEl, { x: vw * 14, y: -vh * 10, scale: 0.86 * density, rotation: -12, duration: 0.24, ease: "power2.in" }, 0.82);
+    }
+
+    if (rocketGlowEl) {
+      gsap.set(rocketGlowEl, { autoAlpha: 0.48, scale: 0.94 });
+      tl.to(rocketGlowEl, { autoAlpha: 0.82, scale: 1.06, duration: 0.24, ease: "power1.out" }, 0.14);
+      tl.to(rocketGlowEl, { autoAlpha: 0.38, scale: 0.88, duration: 0.3, ease: "power2.in" }, 0.72);
+    }
+
+    if (rocketTrailEl) {
+      gsap.set(rocketTrailEl, { autoAlpha: 0.44, scaleX: 0.86, transformOrigin: "100% 50%" });
+      tl.to(rocketTrailEl, { autoAlpha: 0.84, scaleX: 1.16, duration: 0.24, ease: "power1.out" }, 0.14);
+      tl.to(rocketTrailEl, { autoAlpha: 0.22, scaleX: 0.72, duration: 0.28, ease: "power2.in" }, 0.76);
+    }
+
+    [
+      {
+        element: asteroidById("large-a"),
+        width: Math.min(sceneWidth * 0.24, 320) * density,
+        startAt: 0.18,
+        midAt: 0.42,
+        endAt: 0.72,
+        start: { x: vw * 110, y: vh * 10, rotation: -12, scale: 0.24, autoAlpha: 0 },
+        mid: { x: vw * 76, y: vh * 18, rotation: 18, scale: 0.74, autoAlpha: 0.98 },
+        end: { x: vw * 24, y: vh * 52, rotation: 84, scale: 1.9, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("large-b"),
+        width: Math.min(sceneWidth * 0.2, 280) * density,
+        startAt: 0.28,
+        midAt: 0.5,
+        endAt: 0.8,
+        start: { x: vw * 114, y: -vh * 2, rotation: 8, scale: 0.18, autoAlpha: 0 },
+        mid: { x: vw * 82, y: vh * 12, rotation: -16, scale: 0.62, autoAlpha: 0.92 },
+        end: { x: vw * 38, y: vh * 34, rotation: -64, scale: 1.72, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-a"),
+        width: Math.min(sceneWidth * 0.13, 180) * density,
+        startAt: 0.22,
+        midAt: 0.46,
+        endAt: 0.66,
+        start: { x: vw * 102, y: vh * 28, rotation: -20, scale: 0.22, autoAlpha: 0 },
+        mid: { x: vw * 74, y: vh * 32, rotation: 22, scale: 0.78, autoAlpha: 0.94 },
+        end: { x: vw * 34, y: vh * 42, rotation: 72, scale: 1.74, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-b"),
+        width: Math.min(sceneWidth * 0.12, 168) * density,
+        startAt: 0.34,
+        midAt: 0.5,
+        endAt: 0.72,
+        start: { x: vw * 100, y: vh * 54, rotation: -8, scale: 0.18, autoAlpha: 0 },
+        mid: { x: vw * 72, y: vh * 50, rotation: -24, scale: 0.72, autoAlpha: 0.9 },
+        end: { x: vw * 30, y: vh * 58, rotation: -82, scale: 1.64, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-c"),
+        width: Math.min(sceneWidth * 0.115, 156) * density,
+        startAt: 0.42,
+        midAt: 0.58,
+        endAt: 0.78,
+        start: { x: vw * 98, y: vh * 14, rotation: 6, scale: 0.16, autoAlpha: 0 },
+        mid: { x: vw * 68, y: vh * 18, rotation: 24, scale: 0.62, autoAlpha: 0.88 },
+        end: { x: vw * 26, y: vh * 24, rotation: 72, scale: 1.52, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-d"),
+        width: Math.min(sceneWidth * 0.118, 164) * density,
+        startAt: 0.48,
+        midAt: 0.62,
+        endAt: 0.82,
+        start: { x: vw * 104, y: vh * 68, rotation: -14, scale: 0.18, autoAlpha: 0 },
+        mid: { x: vw * 78, y: vh * 58, rotation: -36, scale: 0.66, autoAlpha: 0.86 },
+        end: { x: vw * 42, y: vh * 66, rotation: -84, scale: 1.58, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-e"),
+        width: Math.min(sceneWidth * 0.11, 150) * density,
+        startAt: 0.52,
+        midAt: 0.68,
+        endAt: 0.88,
+        start: { x: vw * 92, y: vh * 2, rotation: -18, scale: 0.14, autoAlpha: 0 },
+        mid: { x: vw * 68, y: vh * 8, rotation: 16, scale: 0.56, autoAlpha: 0.84 },
+        end: { x: vw * 38, y: vh * 14, rotation: 54, scale: 1.34, autoAlpha: 0 },
+      },
+      {
+        element: asteroidById("medium-f"),
+        width: Math.min(sceneWidth * 0.116, 160) * density,
+        startAt: 0.58,
+        midAt: 0.74,
+        endAt: 0.94,
+        start: { x: vw * 94, y: vh * 40, rotation: 14, scale: 0.14, autoAlpha: 0 },
+        mid: { x: vw * 70, y: vh * 36, rotation: -18, scale: 0.52, autoAlpha: 0.78 },
+        end: { x: vw * 40, y: vh * 28, rotation: -58, scale: 1.28, autoAlpha: 0 },
+      },
+    ].forEach(addFlight);
+
+    [
+      {
+        element: clusterById("alpha"),
+        width: Math.min(sceneWidth * 0.18, 236) * density,
+        height: Math.min(sceneWidth * 0.15, 196) * density,
+        startAt: 0.32,
+        midAt: 0.5,
+        endAt: 0.74,
+        start: { x: vw * 98, y: vh * 26, rotation: -10, scale: 0.34, autoAlpha: 0 },
+        mid: { x: vw * 70, y: vh * 34, rotation: 10, scale: 0.82, autoAlpha: 0.92 },
+        end: { x: vw * 26, y: vh * 56, rotation: 30, scale: 1.48, autoAlpha: 0 },
+      },
+      {
+        element: clusterById("beta"),
+        width: Math.min(sceneWidth * 0.16, 210) * density,
+        height: Math.min(sceneWidth * 0.13, 176) * density,
+        startAt: 0.42,
+        midAt: 0.6,
+        endAt: 0.82,
+        start: { x: vw * 102, y: vh * 10, rotation: 12, scale: 0.28, autoAlpha: 0 },
+        mid: { x: vw * 74, y: vh * 18, rotation: -10, scale: 0.74, autoAlpha: 0.88 },
+        end: { x: vw * 34, y: vh * 30, rotation: -34, scale: 1.36, autoAlpha: 0 },
+      },
+      {
+        element: clusterById("gamma"),
+        width: Math.min(sceneWidth * 0.14, 184) * density,
+        height: Math.min(sceneWidth * 0.12, 150) * density,
+        startAt: 0.54,
+        midAt: 0.7,
+        endAt: 0.9,
+        start: { x: vw * 92, y: vh * 58, rotation: -18, scale: 0.24, autoAlpha: 0 },
+        mid: { x: vw * 68, y: vh * 50, rotation: 8, scale: 0.66, autoAlpha: 0.74 },
+        end: { x: vw * 30, y: vh * 64, rotation: 28, scale: 1.3, autoAlpha: 0 },
+      },
+    ].forEach((config) => {
+      if (config.element) {
+        setBox(config.element, config.width, config.height);
+      }
+      addFlight(config.element, config);
+    });
+
+    [
+      {
+        element: blurById("alpha"),
+        width: Math.min(sceneWidth * 0.22, 280) * density,
+        height: Math.min(sceneWidth * 0.22, 280) * density,
+        startAt: 0.42,
+        midAt: 0.6,
+        endAt: 0.76,
+        start: { x: vw * 108, y: vh * 6, rotation: -22, scale: 0.56, autoAlpha: 0 },
+        mid: { x: vw * 72, y: vh * 16, rotation: -40, scale: 1.08, autoAlpha: 0.82 },
+        end: { x: vw * 32, y: vh * 26, rotation: -74, scale: 1.88, autoAlpha: 0 },
+      },
+      {
+        element: blurById("beta"),
+        width: Math.min(sceneWidth * 0.18, 220) * density,
+        height: Math.min(sceneWidth * 0.18, 220) * density,
+        startAt: 0.62,
+        midAt: 0.74,
+        endAt: 0.9,
+        start: { x: vw * 96, y: vh * 48, rotation: -12, scale: 0.42, autoAlpha: 0 },
+        mid: { x: vw * 68, y: vh * 42, rotation: -36, scale: 0.94, autoAlpha: 0.68 },
+        end: { x: vw * 24, y: vh * 32, rotation: -58, scale: 1.68, autoAlpha: 0 },
+      },
+    ].forEach((config) => {
+      if (config.element) {
+        setBox(config.element, config.width, config.height);
+      }
+      addFlight(config.element, config);
+    });
+
+    [
+      {
+        element: warningById("type"),
+        width: Math.min(sceneWidth * 0.12, 160) * density,
+        height: Math.min(sceneWidth * 0.09, 120) * density,
+        startAt: 0.46,
+        midAt: 0.56,
+        endAt: 0.66,
+        start: { x: sceneWidth * 0.6, y: sceneHeight * 0.13, rotation: -4, scale: 0.9, autoAlpha: 0 },
+        mid: { x: sceneWidth * 0.53, y: sceneHeight * 0.17, rotation: -2, scale: 1, autoAlpha: 1 },
+        end: { x: sceneWidth * 0.5, y: sceneHeight * 0.19, rotation: 2, scale: 1.08, autoAlpha: 0 },
+      },
+      {
+        element: warningById("call"),
+        width: Math.min(sceneWidth * 0.11, 150) * density,
+        height: Math.min(sceneWidth * 0.085, 110) * density,
+        startAt: 0.54,
+        midAt: 0.64,
+        endAt: 0.74,
+        start: { x: sceneWidth * 0.64, y: sceneHeight * 0.33, rotation: 8, scale: 0.9, autoAlpha: 0 },
+        mid: { x: sceneWidth * 0.58, y: sceneHeight * 0.32, rotation: 4, scale: 1, autoAlpha: 0.98 },
+        end: { x: sceneWidth * 0.54, y: sceneHeight * 0.29, rotation: -2, scale: 1.08, autoAlpha: 0 },
+      },
+    ].forEach((config) => {
+      if (config.element) {
+        setBox(config.element, config.width, config.height);
+      }
+      addFlight(config.element, config);
+    });
+
+    if (copyEl) {
+      gsap.set(copyEl, { autoAlpha: 0, y: 26 });
+      tl.to(copyEl, { autoAlpha: 1, y: 0, duration: 0.24, ease: "power2.out" }, 0.2);
+      tl.to(copyEl, { autoAlpha: 0, y: -18, duration: 0.18, ease: "power2.in" }, 0.88);
+    }
+
+    if (gradientEl) {
+      gsap.set(gradientEl, { autoAlpha: 0 });
+      tl.to(gradientEl, { autoAlpha: 1, duration: 0.26, ease: "power2.out" }, 0.16);
+      tl.to(gradientEl, { autoAlpha: 0, duration: 0.18, ease: "power2.in" }, 0.88);
+    }
+
+    if (eyebrowEl) {
+      gsap.set(eyebrowEl, { autoAlpha: 0, yPercent: 24 });
+      tl.to(eyebrowEl, { autoAlpha: 1, yPercent: 0, duration: 0.22, ease: "power2.out" }, 0.22);
+      tl.to(eyebrowEl, { autoAlpha: 0, yPercent: -10, duration: 0.16, ease: "power2.in" }, 0.86);
+    }
+
+    if (titleLines.length) {
+      gsap.set(titleLines, { autoAlpha: 0, yPercent: 20 });
+      tl.to(titleLines, { autoAlpha: 1, yPercent: 0, duration: 0.24, ease: "power2.out", stagger: 0.06 }, 0.26);
+      tl.to(titleLines, { autoAlpha: 0, yPercent: -10, duration: 0.18, ease: "power2.in", stagger: 0.04 }, 0.84);
+    }
+
+    if (descLines.length) {
+      gsap.set(descLines, { autoAlpha: 0, yPercent: 16 });
+      tl.to(descLines, { autoAlpha: 1, yPercent: 0, duration: 0.22, ease: "power2.out", stagger: 0.04 }, 0.34);
+      tl.to(descLines, { autoAlpha: 0, yPercent: -8, duration: 0.16, ease: "power2.in", stagger: 0.04 }, 0.84);
+    }
+
+    if (cards.length) {
+      gsap.set(cards, { autoAlpha: 0, yPercent: 12, scale: 0.96 });
+      tl.to(cards, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 0.26, ease: "power2.out", stagger: 0.08 }, 0.44);
+      tl.to(cards, { autoAlpha: 0, yPercent: -8, scale: 0.96, duration: 0.16, ease: "power2.in", stagger: 0.04 }, 0.86);
+    }
+
+    if (errorItems.length) {
+      gsap.set(errorItems, { autoAlpha: 0, x: 10 });
+      tl.to(errorItems, { autoAlpha: 1, x: 0, duration: 0.18, ease: "power2.out", stagger: 0.04 }, 0.52);
+      tl.to(errorItems, { autoAlpha: 0, x: 8, duration: 0.14, ease: "power2.in", stagger: 0.03 }, 0.86);
+    }
+
+    return tl;
+  }
+}
 
 class UprisingRocket extends Scene {
   constructor() {
@@ -860,7 +1284,7 @@ class TakeOff extends Scene {
 export class Scener {
   constructor() {
     this.scenes = [
-      new TakeOff(), new UprisingRocket()
+      new TakeOff(), new UprisingRocket(), new AsteroidBelt()
     ];
     this._didUserInteractDuringBoot = false;
     this._teardownBootInteractionGuard = null;
@@ -871,6 +1295,23 @@ export class Scener {
     ScrollTrigger.clearScrollMemory();
     gsap.registerPlugin(ScrollTrigger);
     this._installBootInteractionGuard();
+
+    let bootCleanupDone = false;
+    const settleBootScroll = (finalize = false) => {
+      ScrollTrigger.refresh();
+
+      if (!this._didUserInteractDuringBoot) {
+        this._jumpToBottom();
+      }
+
+      ScrollTrigger.update();
+
+      if (finalize && !bootCleanupDone) {
+        bootCleanupDone = true;
+        this._teardownBootInteractionGuard?.();
+        this._teardownBootInteractionGuard = null;
+      }
+    };
 
     for(const s of this.scenes)
       s.init()
@@ -884,10 +1325,15 @@ export class Scener {
           this._jumpToBottom();
         }
         ScrollTrigger.update();
-        this._teardownBootInteractionGuard?.();
-        this._teardownBootInteractionGuard = null;
       });
     });
+
+    if (document.readyState === "complete") {
+      setTimeout(() => settleBootScroll(true), 0);
+    } else {
+      window.addEventListener("load", () => settleBootScroll(true), { once: true });
+    }
+    setTimeout(() => settleBootScroll(false), 320);
   }
 
   _installBootInteractionGuard() {
