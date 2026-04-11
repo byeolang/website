@@ -1,3 +1,5 @@
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js";
+
 const prefersReducedMotion = typeof window !== "undefined"
   && typeof window.matchMedia === "function"
   && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -36,13 +38,12 @@ export class Scene3SpaceField {
   constructor({ host, shell }) {
     this.host = host;
     this.shell = shell;
-    this.THREE = window.THREE;
     this.width = 0;
     this.height = 0;
     this.progress = 0;
     this.enabled = false;
 
-    if (!this.host || !this.THREE || prefersReducedMotion) {
+    if (!this.host || prefersReducedMotion) {
       this._enableFallback();
       return;
     }
@@ -65,8 +66,6 @@ export class Scene3SpaceField {
   }
 
   _init() {
-    const THREE = this.THREE;
-
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
       antialias: true,
@@ -82,7 +81,7 @@ export class Scene3SpaceField {
     this.host.appendChild(this.renderer.domElement);
 
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(38, 1, 0.1, 120);
+    this.camera = new THREE.PerspectiveCamera(42, 1, 0.1, 160);
     this.camera.position.set(0, 0, 24);
 
     const ambient = new THREE.AmbientLight(0x8ab6ff, 1.35);
@@ -97,6 +96,7 @@ export class Scene3SpaceField {
     this.scene.add(this.root);
 
     this._createEarth();
+    this._createPreviewPlanet();
     this.farDust = this._createParticleField({
       count: 620,
       color: 0xd8e8ff,
@@ -130,7 +130,6 @@ export class Scene3SpaceField {
   }
 
   _createEarthTexture() {
-    const THREE = this.THREE;
     const canvas = document.createElement("canvas");
     const size = 512;
 
@@ -172,7 +171,6 @@ export class Scene3SpaceField {
   }
 
   _createEarth() {
-    const THREE = this.THREE;
     const earthTexture = this._createEarthTexture();
     const geometry = new THREE.SphereGeometry(2.4, 48, 48);
 
@@ -208,8 +206,178 @@ export class Scene3SpaceField {
     this.earthTexture = earthTexture;
   }
 
+  _createPreviewPlanetTexture() {
+    const canvas = document.createElement("canvas");
+    const size = 1024;
+
+    canvas.width = size;
+    canvas.height = size;
+
+    const ctx = canvas.getContext("2d");
+
+    const base = ctx.createLinearGradient(0, 0, size, size);
+    base.addColorStop(0, "#f8edbf");
+    base.addColorStop(0.18, "#ddb779");
+    base.addColorStop(0.38, "#b47a58");
+    base.addColorStop(0.62, "#d9b286");
+    base.addColorStop(0.82, "#8c6b59");
+    base.addColorStop(1, "#55485d");
+    ctx.fillStyle = base;
+    ctx.fillRect(0, 0, size, size);
+
+    const haze = ctx.createRadialGradient(size * 0.3, size * 0.24, size * 0.03, size * 0.3, size * 0.24, size * 0.52);
+    haze.addColorStop(0, "rgba(255,248,231,0.96)");
+    haze.addColorStop(0.16, "rgba(255,226,164,0.66)");
+    haze.addColorStop(0.46, "rgba(255,183,110,0.18)");
+    haze.addColorStop(1, "rgba(255,183,110,0)");
+    ctx.fillStyle = haze;
+    ctx.fillRect(0, 0, size, size);
+
+    const drawBand = (y, h, angle, stops) => {
+      const gradient = ctx.createLinearGradient(size * 0.06, y, size * 0.94, y + h);
+      stops.forEach(([stop, color]) => gradient.addColorStop(stop, color));
+      ctx.save();
+      ctx.translate(size * 0.5, size * 0.5);
+      ctx.rotate(angle);
+      ctx.translate(-size * 0.5, -size * 0.5);
+      ctx.fillStyle = gradient;
+      ctx.fillRect(size * 0.04, y, size * 0.92, h);
+      ctx.restore();
+    };
+
+    drawBand(size * 0.12, size * 0.08, -0.02, [
+      [0, "rgba(255,255,255,0)"],
+      [0.14, "rgba(247,224,180,0.34)"],
+      [0.48, "rgba(247,224,180,0.78)"],
+      [0.84, "rgba(170,126,92,0.32)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+    drawBand(size * 0.22, size * 0.1, 0.01, [
+      [0, "rgba(255,255,255,0)"],
+      [0.18, "rgba(196,132,85,0.3)"],
+      [0.5, "rgba(196,132,85,0.74)"],
+      [0.82, "rgba(255,226,181,0.3)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+    drawBand(size * 0.34, size * 0.11, -0.01, [
+      [0, "rgba(255,255,255,0)"],
+      [0.16, "rgba(250,218,170,0.26)"],
+      [0.48, "rgba(250,218,170,0.62)"],
+      [0.82, "rgba(138,97,74,0.4)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+    drawBand(size * 0.48, size * 0.12, 0.02, [
+      [0, "rgba(255,255,255,0)"],
+      [0.18, "rgba(154,104,78,0.28)"],
+      [0.5, "rgba(154,104,78,0.72)"],
+      [0.82, "rgba(255,214,162,0.3)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+    drawBand(size * 0.62, size * 0.11, 0.03, [
+      [0, "rgba(255,255,255,0)"],
+      [0.18, "rgba(237,198,142,0.28)"],
+      [0.5, "rgba(237,198,142,0.66)"],
+      [0.82, "rgba(118,86,76,0.36)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+    drawBand(size * 0.76, size * 0.08, 0.01, [
+      [0, "rgba(255,255,255,0)"],
+      [0.18, "rgba(170,120,84,0.24)"],
+      [0.5, "rgba(170,120,84,0.56)"],
+      [0.82, "rgba(255,228,194,0.22)"],
+      [1, "rgba(255,255,255,0)"],
+    ]);
+
+    ctx.fillStyle = "rgba(255,247,230,0.08)";
+    for (let index = 0; index < 12; index += 1) {
+      const x = randomBetween(size * 0.08, size * 0.92);
+      const y = randomBetween(size * 0.12, size * 0.88);
+      const w = randomBetween(size * 0.08, size * 0.18);
+      const h = randomBetween(size * 0.01, size * 0.024);
+      ctx.beginPath();
+      ctx.ellipse(x, y, w, h, randomBetween(-0.12, 0.12), 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    return texture;
+  }
+
+  _createPreviewPlanet() {
+    this.previewPlanetTexture = this._createPreviewPlanetTexture();
+    this.previewPlanetGeometry = new THREE.SphereGeometry(4.1, 64, 64);
+
+    this.previewPlanetMaterial = new THREE.MeshStandardMaterial({
+      map: this.previewPlanetTexture,
+      color: 0xffffff,
+      roughness: 0.82,
+      metalness: 0.01,
+      emissive: 0x6f58d8,
+      emissiveIntensity: 0.38,
+      transparent: true,
+      opacity: 1,
+    });
+
+    this.previewPlanetAtmosphereMaterial = new THREE.MeshBasicMaterial({
+      color: 0xaec8ff,
+      transparent: true,
+      opacity: 0.58,
+      side: THREE.BackSide,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+
+    this.previewPlanetCloudMaterial = new THREE.MeshBasicMaterial({
+      color: 0xfff7ee,
+      transparent: true,
+      opacity: 0.16,
+      side: THREE.DoubleSide,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+
+    this.previewPlanetRingGeometry = new THREE.RingGeometry(5.4, 8.8, 96);
+    this.previewPlanetRingMaterial = new THREE.MeshBasicMaterial({
+      color: 0xe9d4a4,
+      transparent: true,
+      opacity: 0.52,
+      side: THREE.DoubleSide,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+
+    this.previewPlanetGroup = new THREE.Group();
+    this.previewPlanetMesh = new THREE.Mesh(
+      this.previewPlanetGeometry,
+      this.previewPlanetMaterial,
+    );
+    this.previewPlanetAtmosphere = new THREE.Mesh(
+      this.previewPlanetGeometry,
+      this.previewPlanetAtmosphereMaterial,
+    );
+    this.previewPlanetAtmosphere.scale.setScalar(1.14);
+
+    this.previewPlanetClouds = new THREE.Mesh(
+      this.previewPlanetGeometry,
+      this.previewPlanetCloudMaterial,
+    );
+    this.previewPlanetClouds.scale.setScalar(1.035);
+
+    this.previewPlanetRing = new THREE.Mesh(
+      this.previewPlanetRingGeometry,
+      this.previewPlanetRingMaterial,
+    );
+    this.previewPlanetRing.rotation.x = Math.PI * 0.42;
+    this.previewPlanetRing.rotation.y = -0.22;
+    this.previewPlanetRing.position.set(0, 0.18, 0);
+
+    
+    this.previewPlanetGroup.add(this.previewPlanetRing, this.previewPlanetMesh, this.previewPlanetClouds, this.previewPlanetAtmosphere);
+    this.root.add(this.previewPlanetGroup);
+  }
+
   _createParticleField({ count, color, size, opacity, xRange, yRange, zRange, travel, sway, rotationScale }) {
-    const THREE = this.THREE;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     const data = [];
@@ -261,7 +429,6 @@ export class Scene3SpaceField {
   }
 
   _createStreakTexture() {
-    const THREE = this.THREE;
     const canvas = document.createElement("canvas");
     canvas.width = 192;
     canvas.height = 64;
@@ -284,7 +451,6 @@ export class Scene3SpaceField {
   }
 
   _createStreaks(count) {
-    const THREE = this.THREE;
     const texture = this._createStreakTexture();
 
     this.streakTexture = texture;
@@ -335,6 +501,32 @@ export class Scene3SpaceField {
     this.earthMesh.rotation.y = progress * 0.96;
     this.earthMaterial.opacity = visibility;
     this.atmosphereMaterial.opacity = 0.34 * visibility;
+  }
+
+  _updatePreviewPlanet(progress) {
+    const visibility = smoothstep(0.08, 0.2, progress) * (1 - smoothstep(0.995, 1, progress) * 0.16);
+    const travel = smoothstep(0.1, 1, progress);
+
+    this.previewPlanetGroup.visible = visibility > 0.01;
+    this.previewPlanetGroup.position.set(
+      mix(9.6, 8.1, travel),
+      mix(4.6, 3.8, travel),
+      mix(-36, -1.4, travel),
+    );
+
+    const scale = mix(0.68, 7.4, travel);
+    this.previewPlanetGroup.scale.setScalar(scale);
+    this.previewPlanetGroup.rotation.z = mix(-0.02, 0.03, travel);
+    this.previewPlanetMesh.rotation.y = mix(0.16, 0.92, travel);
+    this.previewPlanetMesh.rotation.x = mix(0.08, 0.18, travel);
+    this.previewPlanetClouds.rotation.y = mix(0.24, 1.36, travel);
+    this.previewPlanetClouds.rotation.x = mix(0.04, 0.12, travel);
+    this.previewPlanetRing.rotation.z = mix(0.04, 0.16, travel);
+    this.previewPlanetMaterial.opacity = visibility;
+    this.previewPlanetMaterial.emissiveIntensity = mix(0.42, 0.62, travel) * visibility;
+    this.previewPlanetCloudMaterial.opacity = mix(0.12, 0.24, travel) * visibility;
+    this.previewPlanetAtmosphereMaterial.opacity = 0.96 * visibility;
+    this.previewPlanetRingMaterial.opacity = 0.72 * visibility;
   }
 
   _updateParticleField(field, progress, opacityBoost = 1) {
@@ -417,10 +609,16 @@ export class Scene3SpaceField {
     const spaceVisibility = smoothstep(0.02, 0.14, this.progress) * (1 - smoothstep(0.88, 1, this.progress) * 0.18);
     const farOpacity = mix(0.32, 1, spaceVisibility);
     const midOpacity = mix(0.18, 1, spaceVisibility);
+    const cameraDrift = smoothstep(0.08, 0.9, this.progress);
+
+    this.camera.position.x = mix(0.4, -0.35, cameraDrift);
+    this.camera.position.y = mix(-0.45, 0.15, cameraDrift);
+    this.camera.lookAt(mix(-1.2, 1.5, cameraDrift), mix(-0.6, 0.15, cameraDrift), -10);
 
     this._updateEarth(this.progress);
+    this._updatePreviewPlanet(this.progress);
     this._updateParticleField(this.farDust, this.progress, farOpacity);
-    this._updateParticleField(this.midParticles, this.progress, midOpacity);
+    this._updateParticleField(this.midParticles, this.progress, midOpacity * 1.08);
     this._updateStreaks(this.progress);
     this.renderer.render(this.scene, this.camera);
   }
@@ -447,6 +645,13 @@ export class Scene3SpaceField {
     this.earthMaterial?.dispose?.();
     this.atmosphereMaterial?.dispose?.();
     this.earthTexture?.dispose?.();
+    this.previewPlanetTexture?.dispose?.();
+    this.previewPlanetGeometry?.dispose?.();
+    this.previewPlanetRingGeometry?.dispose?.();
+    this.previewPlanetMaterial?.dispose?.();
+    this.previewPlanetCloudMaterial?.dispose?.();
+    this.previewPlanetAtmosphereMaterial?.dispose?.();
+    this.previewPlanetRingMaterial?.dispose?.();
     this.renderer?.dispose?.();
 
     if (this.renderer?.domElement?.parentNode) {

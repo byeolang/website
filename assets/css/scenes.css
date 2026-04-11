@@ -1888,12 +1888,14 @@ html.dark-mode .scene3-shell {
 
 #AsteroidBelt .scene3-shell__three {
   z-index: 4;
+  overflow: hidden;
 }
 
 #AsteroidBelt .scene3-shell__three canvas {
   display: block;
   width: 100%;
   height: 100%;
+  opacity: 0.98;
 }
 
 #AsteroidBelt .scene3-shell__earth-fallback {
@@ -1918,11 +1920,37 @@ html.dark-mode .scene3-shell {
 #AsteroidBelt .scene3-shell__planet {
   z-index: 5;
   left: auto;
-  top: 18vh;
-  right: max(5vw, 46px);
+  top: 16vh;
+  right: max(10vw, 120px);
   bottom: auto;
-  width: min(20vw, 320px);
-  height: min(20vw, 320px);
+  width: min(26vw, 440px);
+  height: min(26vw, 440px);
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.scene3-shell--fallback .scene3-shell__planet {
+  opacity: 0;
+  visibility: visible;
+}
+
+#AsteroidBelt .scene3-shell__planet::before {
+  content: "";
+  position: absolute;
+  left: -22%;
+  right: -22%;
+  top: 44%;
+  height: 18%;
+  border-radius: 999px;
+  border-top: 2px solid rgba(244, 227, 181, 0.68);
+  border-bottom: 2px solid rgba(165, 126, 86, 0.38);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(240,221,182,0.4) 18%, rgba(214,179,128,0.78) 50%, rgba(122,96,78,0.44) 82%, rgba(255,255,255,0) 100%);
+  box-shadow: 0 0 14px rgba(233, 210, 160, 0.18);
+  transform: rotate(-18deg);
+  transform-origin: 50% 50%;
+  opacity: 0.92;
+  z-index: 0;
 }
 
 #AsteroidBelt .scene3-shell__planet-glow,
@@ -1934,27 +1962,51 @@ html.dark-mode .scene3-shell {
 
 #AsteroidBelt .scene3-shell__planet-glow {
   background:
-    radial-gradient(circle, rgba(255, 231, 194, 0.22) 0%, rgba(190, 157, 220, 0.18) 32%, rgba(94, 129, 218, 0.06) 62%, rgba(94, 129, 218, 0) 78%);
-  transform: scale(1.5);
-  filter: blur(14px);
+    radial-gradient(circle at 32% 28%, rgba(255, 249, 233, 0.82) 0%, rgba(255, 230, 184, 0.38) 18%, rgba(138, 186, 255, 0.22) 46%, rgba(138, 186, 255, 0) 72%);
+  transform: scale(1.22);
+  filter: blur(16px);
+  z-index: 1;
 }
 
 #AsteroidBelt .scene3-shell__planet-core {
   background:
-    radial-gradient(circle at 34% 28%, rgba(255, 245, 226, 0.94), rgba(244, 212, 171, 0.92) 26%, rgba(214, 158, 161, 0.9) 54%, rgba(106, 89, 143, 0.92) 100%);
+    radial-gradient(circle at 32% 26%, rgba(255, 249, 236, 0.96) 0%, rgba(255, 229, 173, 0.88) 16%, rgba(255, 229, 173, 0) 28%),
+    repeating-linear-gradient(
+      174deg,
+      #f4e5c1 0%,
+      #f4e5c1 8%,
+      #d8bb8f 8%,
+      #d8bb8f 16%,
+      #b27e57 16%,
+      #b27e57 24%,
+      #efd0a4 24%,
+      #efd0a4 33%,
+      #9b6e54 33%,
+      #9b6e54 42%,
+      #dcbc8e 42%,
+      #dcbc8e 52%,
+      #7f604f 52%,
+      #7f604f 62%,
+      #cab08d 62%,
+      #cab08d 72%,
+      #614f5b 72%,
+      #614f5b 100%
+    );
   box-shadow:
-    inset -1.5vw -1.2vw 2vw rgba(53, 35, 79, 0.42),
-    0 0 4vw rgba(200, 162, 202, 0.16);
+    inset -1.7vw -1.4vw 2.4vw rgba(66, 45, 36, 0.42),
+    inset 0.9vw 0.4vw 1.2vw rgba(255, 247, 225, 0.18),
+    0 0 2.8vw rgba(174, 201, 255, 0.24);
+  z-index: 2;
 }
 
 #AsteroidBelt .scene3-shell__rocket {
   z-index: 6;
-  left: clamp(8px, 4.8vw, 74px);
+  left: clamp(20px, 7vw, 116px);
   top: auto;
-  bottom: clamp(16px, 11vh, 108px);
+  bottom: clamp(30px, 8vh, 82px);
   right: auto;
-  width: min(29vw, 410px);
-  height: min(29vw, 410px);
+  width: min(34vw, 500px);
+  height: min(34vw, 500px);
   transform: translate3d(0, 0, 0);
   transform-origin: 34% 54%;
   filter: drop-shadow(0 26px 54px rgba(0, 0, 0, 0.42));
@@ -2024,6 +2076,12 @@ html.dark-mode .scene3-shell {
 
 #AsteroidBelt .scene3-shell__asteroid {
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.22));
+  opacity: 0;
+}
+
+#AsteroidBelt .scene3-shell__cluster .scene3-shell__asteroid,
+#AsteroidBelt .scene3-shell__blur-layer {
+  opacity: 1;
 }
 
 #AsteroidBelt .scene3-shell__asteroid--large {
