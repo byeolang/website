@@ -33,7 +33,9 @@ class AsteroidBelt extends Scene {
     const backdropEl = sceneEl.querySelector(".scene3-shell__image--backdrop");
     const nebulaEl = sceneEl.querySelector(".scene3-shell__image--nebula");
     const fallbackEarthEl = sceneEl.querySelector(".scene3-shell__earth-fallback");
-    const planetEl = sceneEl.querySelector(".scene3-shell__planet");
+    const fallbackPlanetEl = sceneEl.querySelector(".scene3-shell__planet");
+    const fallbackPlanetGlowEl = fallbackPlanetEl?.querySelector(".scene3-shell__planet-glow");
+    const fallbackPlanetCoreEl = fallbackPlanetEl?.querySelector(".scene3-shell__planet-core");
     const rocketEl = sceneEl.querySelector(".scene3-shell__rocket");
     const rocketGlowEl = sceneEl.querySelector(".scene3-shell__rocket-glow");
     const rocketTrailEl = sceneEl.querySelector(".scene3-shell__rocket-trail");
@@ -55,7 +57,7 @@ class AsteroidBelt extends Scene {
     };
 
     const addFlight = (element, config) => {
-      if (!element) return;
+      if (!element || !config?.start || !config?.mid || !config?.end) return;
 
       if (config.width) {
         setFlightSize(element, config.width);
@@ -155,67 +157,90 @@ class AsteroidBelt extends Scene {
       tl.to(fallbackEarthEl, { x: -sceneWidth * 0.18, y: sceneHeight * 0.24, scale: 0.62, autoAlpha: 0, duration: 0.28, ease: "power2.in" }, 0.1);
     }
 
-    if (planetEl) {
-      gsap.set(planetEl, {
-        autoAlpha: 0,
-        scale: 0.48,
-        xPercent: 16,
-        yPercent: 8,
-        transformOrigin: "50% 50%",
-      });
-      tl.to(planetEl, { autoAlpha: 0.2, scale: 0.62, duration: 0.1, ease: "power1.out" }, 0.84);
-      tl.to(planetEl, { autoAlpha: 1, scale: 1, xPercent: 0, yPercent: 0, duration: 0.24, ease: "power2.out" }, 0.9);
-    }
-
     if (rocketEl) {
       gsap.set(rocketEl, {
-        x: -vw * 2,
-        y: vh * 1,
-        scale: 1.02 * density,
-        rotation: -10,
+        x: vw * 0.2,
+        y: vh * 1.8,
+        scale: 1.08 * density,
+        rotation: -7,
+        autoAlpha: 1,
         transformOrigin: "34% 54%",
       });
 
-      tl.to(rocketEl, { x: vw * 4, y: -vh * 4, scale: 0.98 * density, rotation: -6, duration: 0.18, ease: "power1.out" }, 0);
-      tl.to(rocketEl, { x: vw * 8, y: -vh * 7, scale: 0.96 * density, rotation: -11, duration: 0.18, ease: "sine.inOut" }, 0.18);
-      tl.to(rocketEl, { x: vw * 6, y: -vh * 3.5, scale: 0.95 * density, rotation: -3, duration: 0.14, ease: "sine.inOut" }, 0.36);
-      tl.to(rocketEl, { x: vw * 11, y: -vh * 8.5, scale: 0.92 * density, rotation: -10, duration: 0.18, ease: "sine.inOut" }, 0.5);
-      tl.to(rocketEl, { x: vw * 9, y: -vh * 5.5, scale: 0.9 * density, rotation: -5, duration: 0.14, ease: "sine.inOut" }, 0.68);
-      tl.to(rocketEl, { x: vw * 14, y: -vh * 10, scale: 0.86 * density, rotation: -12, duration: 0.24, ease: "power2.in" }, 0.82);
+      tl.to(rocketEl, { x: vw * 1.4, y: vh * 1.2, scale: 1.08 * density, rotation: -5, duration: 0.18, ease: "power1.out" }, 0);
+      tl.to(rocketEl, { x: vw * 2.1, y: vh * 1.7, scale: 1.07 * density, rotation: -8, duration: 0.18, ease: "sine.inOut" }, 0.18);
+      tl.to(rocketEl, { x: vw * 2.9, y: vh * 0.9, scale: 1.06 * density, rotation: -4, duration: 0.14, ease: "sine.inOut" }, 0.36);
+      tl.to(rocketEl, { x: vw * 3.8, y: vh * 1.5, scale: 1.05 * density, rotation: -7, duration: 0.18, ease: "sine.inOut" }, 0.5);
+      tl.to(rocketEl, { x: vw * 4.4, y: vh * 0.8, scale: 1.03 * density, rotation: -5, duration: 0.14, ease: "sine.inOut" }, 0.68);
+      tl.to(rocketEl, { x: vw * 5.2, y: vh * 1.2, scale: 1.01 * density, rotation: -6, duration: 0.24, ease: "power2.inOut" }, 0.82);
     }
 
     if (rocketGlowEl) {
-      gsap.set(rocketGlowEl, { autoAlpha: 0.48, scale: 0.94 });
-      tl.to(rocketGlowEl, { autoAlpha: 0.82, scale: 1.06, duration: 0.24, ease: "power1.out" }, 0.14);
-      tl.to(rocketGlowEl, { autoAlpha: 0.38, scale: 0.88, duration: 0.3, ease: "power2.in" }, 0.72);
+      gsap.set(rocketGlowEl, { autoAlpha: 0.52, scale: 0.96 });
+      tl.to(rocketGlowEl, { autoAlpha: 0.86, scale: 1.1, duration: 0.24, ease: "power1.out" }, 0.14);
+      tl.to(rocketGlowEl, { autoAlpha: 0.56, scale: 0.98, duration: 0.3, ease: "power2.inOut" }, 0.72);
     }
 
     if (rocketTrailEl) {
-      gsap.set(rocketTrailEl, { autoAlpha: 0.44, scaleX: 0.86, transformOrigin: "100% 50%" });
-      tl.to(rocketTrailEl, { autoAlpha: 0.84, scaleX: 1.16, duration: 0.24, ease: "power1.out" }, 0.14);
-      tl.to(rocketTrailEl, { autoAlpha: 0.22, scaleX: 0.72, duration: 0.28, ease: "power2.in" }, 0.76);
+      gsap.set(rocketTrailEl, { autoAlpha: 0.5, scaleX: 0.92, transformOrigin: "100% 50%" });
+      tl.to(rocketTrailEl, { autoAlpha: 0.9, scaleX: 1.24, duration: 0.24, ease: "power1.out" }, 0.14);
+      tl.to(rocketTrailEl, { autoAlpha: 0.46, scaleX: 1.02, duration: 0.28, ease: "power2.inOut" }, 0.76);
+    }
+
+    const isFallbackPlanetVisible = shellEl.classList.contains("scene3-shell--fallback");
+
+    if (fallbackPlanetEl && isFallbackPlanetVisible) {
+      gsap.set(fallbackPlanetEl, {
+        x: 0,
+        y: 0,
+        scale: 0.52,
+        autoAlpha: 0,
+        transformOrigin: "50% 50%",
+      });
+      tl.to(
+        fallbackPlanetEl,
+        {
+          x: 0,
+          y: 0,
+          scale: 1.9,
+          autoAlpha: 0.98,
+          duration: 0.84,
+          ease: "none",
+        },
+        0.22,
+      );
+    }
+
+    if (fallbackPlanetGlowEl && isFallbackPlanetVisible) {
+      gsap.set(fallbackPlanetGlowEl, { scale: 1.12, autoAlpha: 0, transformOrigin: "50% 50%" });
+      tl.to(fallbackPlanetGlowEl, { scale: 1.68, autoAlpha: 0.82, duration: 0.84, ease: "none" }, 0.22);
+    }
+
+    if (fallbackPlanetCoreEl && isFallbackPlanetVisible) {
+      gsap.set(fallbackPlanetCoreEl, { scale: 0.98, autoAlpha: 0, transformOrigin: "50% 50%" });
+      tl.to(fallbackPlanetCoreEl, { scale: 1.12, autoAlpha: 1, duration: 0.84, ease: "none" }, 0.22);
     }
 
     [
       {
         element: asteroidById("large-a"),
-        width: Math.min(sceneWidth * 0.24, 320) * density,
-        startAt: 0.18,
-        midAt: 0.42,
-        endAt: 0.72,
-        start: { x: vw * 110, y: vh * 10, rotation: -12, scale: 0.24, autoAlpha: 0 },
-        mid: { x: vw * 76, y: vh * 18, rotation: 18, scale: 0.74, autoAlpha: 0.98 },
-        end: { x: vw * 24, y: vh * 52, rotation: 84, scale: 1.9, autoAlpha: 0 },
+        width: Math.min(sceneWidth * 0.28, 380) * density,
+        startAt: 0.08,
+        midAt: 0.3,
+        endAt: 0.58,
+        start: { x: vw * 118, y: vh * 18, rotation: -12, scale: 0.34, autoAlpha: 0 },
+        mid: { x: vw * 82, y: vh * 24, rotation: 18, scale: 0.98, autoAlpha: 1 },
+        end: { x: vw * 18, y: vh * 58, rotation: 84, scale: 2.4, autoAlpha: 0 },
       },
       {
         element: asteroidById("large-b"),
-        width: Math.min(sceneWidth * 0.2, 280) * density,
-        startAt: 0.28,
-        midAt: 0.5,
-        endAt: 0.8,
-        start: { x: vw * 114, y: -vh * 2, rotation: 8, scale: 0.18, autoAlpha: 0 },
-        mid: { x: vw * 82, y: vh * 12, rotation: -16, scale: 0.62, autoAlpha: 0.92 },
-        end: { x: vw * 38, y: vh * 34, rotation: -64, scale: 1.72, autoAlpha: 0 },
+        width: Math.min(sceneWidth * 0.24, 320) * density,
+        startAt: 0.16,
+        midAt: 0.38,
+        endAt: 0.66,
+        start: { x: vw * 118, y: -vh * 2, rotation: 8, scale: 0.28, autoAlpha: 0 },
+        mid: { x: vw * 84, y: vh * 10, rotation: -16, scale: 0.86, autoAlpha: 0.96 },
+        end: { x: vw * 30, y: vh * 30, rotation: -64, scale: 2.08, autoAlpha: 0 },
       },
       {
         element: asteroidById("medium-a"),
@@ -277,7 +302,9 @@ class AsteroidBelt extends Scene {
         mid: { x: vw * 70, y: vh * 36, rotation: -18, scale: 0.52, autoAlpha: 0.78 },
         end: { x: vw * 40, y: vh * 28, rotation: -58, scale: 1.28, autoAlpha: 0 },
       },
-    ].forEach(addFlight);
+    ].forEach((config) => {
+      addFlight(config.element, config);
+    });
 
     [
       {
@@ -1296,23 +1323,6 @@ export class Scener {
     gsap.registerPlugin(ScrollTrigger);
     this._installBootInteractionGuard();
 
-    let bootCleanupDone = false;
-    const settleBootScroll = (finalize = false) => {
-      ScrollTrigger.refresh();
-
-      if (!this._didUserInteractDuringBoot) {
-        this._jumpToBottom();
-      }
-
-      ScrollTrigger.update();
-
-      if (finalize && !bootCleanupDone) {
-        bootCleanupDone = true;
-        this._teardownBootInteractionGuard?.();
-        this._teardownBootInteractionGuard = null;
-      }
-    };
-
     for(const s of this.scenes)
       s.init()
 
@@ -1325,15 +1335,10 @@ export class Scener {
           this._jumpToBottom();
         }
         ScrollTrigger.update();
+        this._teardownBootInteractionGuard?.();
+        this._teardownBootInteractionGuard = null;
       });
     });
-
-    if (document.readyState === "complete") {
-      setTimeout(() => settleBootScroll(true), 0);
-    } else {
-      window.addEventListener("load", () => settleBootScroll(true), { once: true });
-    }
-    setTimeout(() => settleBootScroll(false), 320);
   }
 
   _installBootInteractionGuard() {
