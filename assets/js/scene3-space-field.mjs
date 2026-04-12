@@ -95,8 +95,8 @@ export class Scene3SpaceField {
     this.root = new THREE.Group();
     this.scene.add(this.root);
 
-    this._createEarth();
     this._createPreviewPlanet();
+    this._createAsteroidSprites();
     this.farDust = this._createParticleField({
       count: 620,
       color: 0xd8e8ff,
@@ -206,106 +206,21 @@ export class Scene3SpaceField {
     this.earthTexture = earthTexture;
   }
 
-  _createPreviewPlanetTexture() {
-    const canvas = document.createElement("canvas");
-    const size = 1024;
-
-    canvas.width = size;
-    canvas.height = size;
-
-    const ctx = canvas.getContext("2d");
-
-    const base = ctx.createLinearGradient(0, 0, size, size);
-    base.addColorStop(0, "#f8edbf");
-    base.addColorStop(0.18, "#ddb779");
-    base.addColorStop(0.38, "#b47a58");
-    base.addColorStop(0.62, "#d9b286");
-    base.addColorStop(0.82, "#8c6b59");
-    base.addColorStop(1, "#55485d");
-    ctx.fillStyle = base;
-    ctx.fillRect(0, 0, size, size);
-
-    const haze = ctx.createRadialGradient(size * 0.3, size * 0.24, size * 0.03, size * 0.3, size * 0.24, size * 0.52);
-    haze.addColorStop(0, "rgba(255,248,231,0.96)");
-    haze.addColorStop(0.16, "rgba(255,226,164,0.66)");
-    haze.addColorStop(0.46, "rgba(255,183,110,0.18)");
-    haze.addColorStop(1, "rgba(255,183,110,0)");
-    ctx.fillStyle = haze;
-    ctx.fillRect(0, 0, size, size);
-
-    const drawBand = (y, h, angle, stops) => {
-      const gradient = ctx.createLinearGradient(size * 0.06, y, size * 0.94, y + h);
-      stops.forEach(([stop, color]) => gradient.addColorStop(stop, color));
-      ctx.save();
-      ctx.translate(size * 0.5, size * 0.5);
-      ctx.rotate(angle);
-      ctx.translate(-size * 0.5, -size * 0.5);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(size * 0.04, y, size * 0.92, h);
-      ctx.restore();
-    };
-
-    drawBand(size * 0.12, size * 0.08, -0.02, [
-      [0, "rgba(255,255,255,0)"],
-      [0.14, "rgba(247,224,180,0.34)"],
-      [0.48, "rgba(247,224,180,0.78)"],
-      [0.84, "rgba(170,126,92,0.32)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-    drawBand(size * 0.22, size * 0.1, 0.01, [
-      [0, "rgba(255,255,255,0)"],
-      [0.18, "rgba(196,132,85,0.3)"],
-      [0.5, "rgba(196,132,85,0.74)"],
-      [0.82, "rgba(255,226,181,0.3)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-    drawBand(size * 0.34, size * 0.11, -0.01, [
-      [0, "rgba(255,255,255,0)"],
-      [0.16, "rgba(250,218,170,0.26)"],
-      [0.48, "rgba(250,218,170,0.62)"],
-      [0.82, "rgba(138,97,74,0.4)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-    drawBand(size * 0.48, size * 0.12, 0.02, [
-      [0, "rgba(255,255,255,0)"],
-      [0.18, "rgba(154,104,78,0.28)"],
-      [0.5, "rgba(154,104,78,0.72)"],
-      [0.82, "rgba(255,214,162,0.3)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-    drawBand(size * 0.62, size * 0.11, 0.03, [
-      [0, "rgba(255,255,255,0)"],
-      [0.18, "rgba(237,198,142,0.28)"],
-      [0.5, "rgba(237,198,142,0.66)"],
-      [0.82, "rgba(118,86,76,0.36)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-    drawBand(size * 0.76, size * 0.08, 0.01, [
-      [0, "rgba(255,255,255,0)"],
-      [0.18, "rgba(170,120,84,0.24)"],
-      [0.5, "rgba(170,120,84,0.56)"],
-      [0.82, "rgba(255,228,194,0.22)"],
-      [1, "rgba(255,255,255,0)"],
-    ]);
-
-    ctx.fillStyle = "rgba(255,247,230,0.08)";
-    for (let index = 0; index < 12; index += 1) {
-      const x = randomBetween(size * 0.08, size * 0.92);
-      const y = randomBetween(size * 0.12, size * 0.88);
-      const w = randomBetween(size * 0.08, size * 0.18);
-      const h = randomBetween(size * 0.01, size * 0.024);
-      ctx.beginPath();
-      ctx.ellipse(x, y, w, h, randomBetween(-0.12, 0.12), 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    const texture = new THREE.CanvasTexture(canvas);
-    texture.needsUpdate = true;
-    return texture;
-  }
-
   _createPreviewPlanet() {
-    this.previewPlanetTexture = this._createPreviewPlanetTexture();
+    const textureLoader = new THREE.TextureLoader();
+    this.previewPlanetTexture = textureLoader.load("assets/images/scenes/scene3-target-planet-surface-texture.png");
+    this.previewPlanetAtmosphereTexture = textureLoader.load("assets/images/scenes/scene3-target-planet-atmosphere.png");
+
+    this.previewPlanetTexture.colorSpace = THREE.SRGBColorSpace;
+    this.previewPlanetTexture.wrapS = THREE.RepeatWrapping;
+    this.previewPlanetTexture.wrapT = THREE.ClampToEdgeWrapping;
+    this.previewPlanetTexture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy?.() || 1);
+
+    this.previewPlanetAtmosphereTexture.colorSpace = THREE.SRGBColorSpace;
+    this.previewPlanetAtmosphereTexture.wrapS = THREE.RepeatWrapping;
+    this.previewPlanetAtmosphereTexture.wrapT = THREE.ClampToEdgeWrapping;
+    this.previewPlanetAtmosphereTexture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy?.() || 1);
+
     this.previewPlanetGeometry = new THREE.SphereGeometry(4.1, 64, 64);
 
     this.previewPlanetMaterial = new THREE.MeshStandardMaterial({
@@ -320,30 +235,33 @@ export class Scene3SpaceField {
     });
 
     this.previewPlanetAtmosphereMaterial = new THREE.MeshBasicMaterial({
-      color: 0xaec8ff,
+      map: this.previewPlanetAtmosphereTexture,
+      color: 0xcbd9ff,
       transparent: true,
-      opacity: 0.58,
+      opacity: 0.82,
       side: THREE.BackSide,
       depthWrite: false,
       blending: THREE.AdditiveBlending,
     });
 
     this.previewPlanetCloudMaterial = new THREE.MeshBasicMaterial({
-      color: 0xfff7ee,
+      map: this.previewPlanetAtmosphereTexture,
+      color: 0xf4f7ff,
       transparent: true,
-      opacity: 0.16,
+      opacity: 0.22,
       side: THREE.DoubleSide,
       depthWrite: false,
       blending: THREE.AdditiveBlending,
     });
 
-    this.previewPlanetRingGeometry = new THREE.RingGeometry(5.4, 8.8, 96);
+    this.previewPlanetRingGeometry = new THREE.RingGeometry(5.9, 7.6, 96);
     this.previewPlanetRingMaterial = new THREE.MeshBasicMaterial({
-      color: 0xe9d4a4,
+      color: 0xf2dfbf,
       transparent: true,
       opacity: 0.52,
       side: THREE.DoubleSide,
       depthWrite: false,
+      depthTest: true,
       blending: THREE.AdditiveBlending,
     });
 
@@ -362,19 +280,119 @@ export class Scene3SpaceField {
       this.previewPlanetGeometry,
       this.previewPlanetCloudMaterial,
     );
-    this.previewPlanetClouds.scale.setScalar(1.035);
+    this.previewPlanetClouds.scale.setScalar(1.045);
 
     this.previewPlanetRing = new THREE.Mesh(
       this.previewPlanetRingGeometry,
       this.previewPlanetRingMaterial,
     );
-    this.previewPlanetRing.rotation.x = Math.PI * 0.42;
-    this.previewPlanetRing.rotation.y = -0.22;
-    this.previewPlanetRing.position.set(0, 0.18, 0);
+    this.previewPlanetRing.rotation.x = Math.PI * 0.47;
+    this.previewPlanetRing.rotation.y = -0.16;
+    this.previewPlanetRing.position.set(0, 0.08, 0);
 
-    
     this.previewPlanetGroup.add(this.previewPlanetRing, this.previewPlanetMesh, this.previewPlanetClouds, this.previewPlanetAtmosphere);
     this.root.add(this.previewPlanetGroup);
+  }
+
+  _createAsteroidSprites() {
+    const textureLoader = new THREE.TextureLoader();
+    const asteroidSources = [
+      "assets/images/scenes/scene3-asteroid-small-01.png",
+      "assets/images/scenes/scene3-asteroid-small-03.png",
+      "assets/images/scenes/scene3-asteroid-small-05.png",
+    ].map((path) => {
+      const texture = textureLoader.load(path);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      return texture;
+    });
+
+    this.asteroidTextures = asteroidSources;
+    this.asteroidGroup = new THREE.Group();
+    this.root.add(this.asteroidGroup);
+    this.asteroidSprites = [];
+
+    const depthBands = {
+      far: {
+        count: 18,
+        base: [0.1, 0.18],
+        boost: [0.08, 0.18],
+        opacity: [0.34, 0.52],
+        z: [-42, -30],
+        endZ: [-24, -16],
+        speed: [0.22, 0.34],
+        drift: [0.01, 0.03],
+        radial: [3.2, 5.8],
+      },
+      mid: {
+        count: 22,
+        base: [0.14, 0.24],
+        boost: [0.16, 0.32],
+        opacity: [0.42, 0.64],
+        z: [-30, -20],
+        endZ: [-14, -8],
+        speed: [0.3, 0.48],
+        drift: [0.015, 0.05],
+        radial: [4.8, 8.4],
+      },
+      near: {
+        count: 12,
+        base: [0.2, 0.34],
+        boost: [0.24, 0.48],
+        opacity: [0.56, 0.78],
+        z: [-20, -14],
+        endZ: [-6, -2],
+        speed: [0.42, 0.62],
+        drift: [0.02, 0.07],
+        radial: [6.4, 11.2],
+      },
+    };
+
+    const makeEntry = (bandName) => {
+      const band = depthBands[bandName];
+      const texture = asteroidSources[Math.floor(Math.random() * asteroidSources.length)];
+      const material = new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false,
+        depthTest: true,
+        toneMapped: false,
+        color: bandName == 'near' ? 0xefe6d8 : bandName == 'mid' ? 0xe8dfd2 : 0xe1d8ca,
+      });
+      const sprite = new THREE.Sprite(material);
+      this.asteroidGroup.add(sprite);
+
+      const startRadius = randomBetween(1.4, 5.4);
+      const startAngle = randomBetween(0, Math.PI * 2);
+      const endAngle = startAngle + randomBetween(-0.42, 0.42);
+      const endRadius = randomBetween(band.radial[0], band.radial[1]);
+      const centerX = randomBetween(-0.8, 1.2);
+      const centerY = randomBetween(-0.6, 0.4);
+
+      return {
+        sprite,
+        band: bandName,
+        startX: centerX + Math.cos(startAngle) * startRadius,
+        startY: centerY + Math.sin(startAngle) * startRadius,
+        endX: centerX + Math.cos(endAngle) * endRadius,
+        endY: centerY + Math.sin(endAngle) * endRadius,
+        baseZ: randomBetween(band.z[0], band.z[1]),
+        endZ: randomBetween(band.endZ[0], band.endZ[1]),
+        scaleBase: randomBetween(band.base[0], band.base[1]),
+        scaleBoost: randomBetween(band.boost[0], band.boost[1]),
+        drift: randomBetween(band.drift[0], band.drift[1]),
+        spin: randomBetween(-0.35, 0.35),
+        phase: Math.random(),
+        speed: randomBetween(band.speed[0], band.speed[1]),
+        opacityMax: randomBetween(band.opacity[0], band.opacity[1]),
+      };
+    };
+
+    Object.keys(depthBands).forEach((bandName) => {
+      for (let index = 0; index < depthBands[bandName].count; index += 1) {
+        this.asteroidSprites.push(makeEntry(bandName));
+      }
+    });
   }
 
   _createParticleField({ count, color, size, opacity, xRange, yRange, zRange, travel, sway, rotationScale }) {
@@ -486,25 +504,8 @@ export class Scene3SpaceField {
     }
   }
 
-  _updateEarth(progress) {
-    const earthTravel = clamp01(progress / 0.34);
-    const visibility = 1 - smoothstep(0.08, 0.38, progress);
-
-    this.earthGroup.visible = visibility > 0.01;
-    this.earthGroup.position.set(
-      mix(-8.8, -14.2, earthTravel),
-      mix(-6.4, -11.6, earthTravel),
-      mix(-9.5, -11.5, earthTravel),
-    );
-    this.earthGroup.scale.setScalar(mix(1.92, 0.86, earthTravel));
-    this.earthGroup.rotation.z = mix(0.18, 0.52, earthTravel);
-    this.earthMesh.rotation.y = progress * 0.96;
-    this.earthMaterial.opacity = visibility;
-    this.atmosphereMaterial.opacity = 0.34 * visibility;
-  }
-
   _updatePreviewPlanet(progress) {
-    const visibility = smoothstep(0.08, 0.2, progress) * (1 - smoothstep(0.995, 1, progress) * 0.16);
+    const visibility = 1 - smoothstep(0.995, 1, progress) * 0.16;
     const travel = smoothstep(0.1, 1, progress);
 
     this.previewPlanetGroup.visible = visibility > 0.01;
@@ -522,11 +523,14 @@ export class Scene3SpaceField {
     this.previewPlanetClouds.rotation.y = mix(0.24, 1.36, travel);
     this.previewPlanetClouds.rotation.x = mix(0.04, 0.12, travel);
     this.previewPlanetRing.rotation.z = mix(0.04, 0.16, travel);
+    this.previewPlanetTexture.offset.x = progress * 0.01;
+    this.previewPlanetAtmosphereTexture.offset.x = progress * 0.016;
+
     this.previewPlanetMaterial.opacity = visibility;
-    this.previewPlanetMaterial.emissiveIntensity = mix(0.42, 0.62, travel) * visibility;
-    this.previewPlanetCloudMaterial.opacity = mix(0.12, 0.24, travel) * visibility;
-    this.previewPlanetAtmosphereMaterial.opacity = 0.96 * visibility;
-    this.previewPlanetRingMaterial.opacity = 0.72 * visibility;
+    this.previewPlanetMaterial.emissiveIntensity = mix(0.28, 0.44, travel) * visibility;
+    this.previewPlanetCloudMaterial.opacity = mix(0.14, 0.28, travel) * visibility;
+    this.previewPlanetAtmosphereMaterial.opacity = 0.88 * visibility;
+    this.previewPlanetRingMaterial.opacity = 0.28 * visibility;
   }
 
   _updateParticleField(field, progress, opacityBoost = 1) {
@@ -576,6 +580,29 @@ export class Scene3SpaceField {
     });
   }
 
+  _updateAsteroidSprites(progress) {
+    if (!this.asteroidSprites?.length) {
+      return;
+    }
+
+    const fieldVisibility = 1 - smoothstep(0.9, 0.985, progress);
+    this.asteroidGroup.visible = fieldVisibility > 0.01;
+
+    this.asteroidSprites.forEach((entry, index) => {
+      const cycle = (progress * entry.speed + entry.phase) % 1;
+      const approach = smoothstep(0, 0.98, cycle);
+      const x = mix(entry.startX, entry.endX, approach);
+      const y = mix(entry.startY, entry.endY, approach) + Math.sin(progress * 3.8 + index) * entry.drift;
+      const z = mix(entry.baseZ, entry.endZ, approach);
+      const scale = entry.scaleBase + approach * entry.scaleBoost;
+
+      entry.sprite.position.set(x, y, z);
+      entry.sprite.scale.set(scale, scale, 1);
+      entry.sprite.material.opacity = entry.opacityMax * fieldVisibility;
+      entry.sprite.material.rotation = entry.spin + approach * 0.32;
+    });
+  }
+
   _resize() {
     if (!this.host || !this.renderer || !this.camera) {
       return;
@@ -615,8 +642,8 @@ export class Scene3SpaceField {
     this.camera.position.y = mix(-0.45, 0.15, cameraDrift);
     this.camera.lookAt(mix(-1.2, 1.5, cameraDrift), mix(-0.6, 0.15, cameraDrift), -10);
 
-    this._updateEarth(this.progress);
     this._updatePreviewPlanet(this.progress);
+    this._updateAsteroidSprites(this.progress);
     this._updateParticleField(this.farDust, this.progress, farOpacity);
     this._updateParticleField(this.midParticles, this.progress, midOpacity * 1.08);
     this._updateStreaks(this.progress);
@@ -637,7 +664,11 @@ export class Scene3SpaceField {
     this.streaks?.forEach(({ sprite }) => {
       sprite.material?.dispose?.();
     });
+    this.asteroidSprites?.forEach(({ sprite }) => {
+      sprite.material?.dispose?.();
+    });
     this.streakTexture?.dispose?.();
+    this.asteroidTextures?.forEach((texture) => texture?.dispose?.());
     this.farDust?.geometry?.dispose?.();
     this.farDust?.material?.dispose?.();
     this.midParticles?.geometry?.dispose?.();
@@ -646,6 +677,7 @@ export class Scene3SpaceField {
     this.atmosphereMaterial?.dispose?.();
     this.earthTexture?.dispose?.();
     this.previewPlanetTexture?.dispose?.();
+    this.previewPlanetAtmosphereTexture?.dispose?.();
     this.previewPlanetGeometry?.dispose?.();
     this.previewPlanetRingGeometry?.dispose?.();
     this.previewPlanetMaterial?.dispose?.();
