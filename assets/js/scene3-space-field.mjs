@@ -94,9 +94,13 @@ export class Scene3SpaceField {
 
     this.root = new THREE.Group();
     this.scene.add(this.root);
+    this._trailSourceWorld = new THREE.Vector3();
+    this._trailPlanetEdgeWorld = new THREE.Vector3();
     this._trailHeadWorld = new THREE.Vector3();
     this._trailTailWorld = new THREE.Vector3();
     this._trailMidWorld = new THREE.Vector3();
+    this._trailSourceScreen = new THREE.Vector3();
+    this._trailPlanetEdgeScreen = new THREE.Vector3();
     this._trailHeadScreen = new THREE.Vector3();
     this._trailTailScreen = new THREE.Vector3();
 
@@ -245,6 +249,8 @@ export class Scene3SpaceField {
       emissiveIntensity: 0.38,
       transparent: true,
       opacity: 1,
+      depthWrite: true,
+      depthTest: true,
     });
 
     this.previewPlanetAtmosphereMaterial = new THREE.MeshBasicMaterial({
@@ -283,6 +289,7 @@ export class Scene3SpaceField {
       this.previewPlanetGeometry,
       this.previewPlanetMaterial,
     );
+    this.previewPlanetMesh.renderOrder = 31;
     this.previewPlanetAtmosphere = new THREE.Mesh(
       this.previewPlanetGeometry,
       this.previewPlanetAtmosphereMaterial,
@@ -294,6 +301,7 @@ export class Scene3SpaceField {
       this.previewPlanetCloudMaterial,
     );
     this.previewPlanetClouds.scale.setScalar(1.045);
+    this.previewPlanetClouds.renderOrder = 32;
 
     this.previewPlanetRing = new THREE.Mesh(
       this.previewPlanetRingGeometry,
@@ -302,6 +310,8 @@ export class Scene3SpaceField {
     this.previewPlanetRing.rotation.x = Math.PI * 0.47;
     this.previewPlanetRing.rotation.y = -0.16;
     this.previewPlanetRing.position.set(0, 0.08, 0);
+    this.previewPlanetRing.renderOrder = 30;
+    this.previewPlanetAtmosphere.renderOrder = 33;
 
     this.previewPlanetGroup.add(this.previewPlanetRing, this.previewPlanetMesh, this.previewPlanetClouds, this.previewPlanetAtmosphere);
     this.root.add(this.previewPlanetGroup);
@@ -438,42 +448,36 @@ export class Scene3SpaceField {
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     const data = [];
-    const focusStartX = -1.2;
-    const focusStartY = -0.6;
-    const focusEndX = 1.5;
-    const focusEndY = 0.15;
     const centerExclusion = 0.18;
 
     for (let index = 0; index < count; index += 1) {
       const angle = randomBetween(0, Math.PI * 2);
-      const startRadius = randomBetween(centerExclusion, 0.92);
-      const endRadius = Math.min(1.38, startRadius + randomBetween(0.24, 0.54));
       const radialX = Math.cos(angle);
       const radialY = Math.sin(angle);
-      const x = radialX * xRange * startRadius;
-      const y = radialY * yRange * startRadius;
-      const endOffsetX = radialX * xRange * endRadius;
-      const endOffsetY = radialY * yRange * endRadius;
       const drift = randomBetween(0.6, 1.4);
-      const staticOffsetX = Math.sin(randomBetween(0, Math.PI * 2)) * sway * drift * 0.7;
-      const staticOffsetY = Math.cos(randomBetween(0, Math.PI * 2)) * sway * drift * 0.7;
+      const edgeBias = randomBetween(centerExclusion, 1.16);
+      const targetX = radialX * xRange * expandEnd * edgeBias;
+      const targetY = radialY * yRange * expandEnd * edgeBias;
+      const forwardDepth = randomBetween(
+        Math.abs(zRange[0]) * 0.62,
+        Math.abs(zRange[0]) * 0.92 + zEndRange[1] * 0.14,
+      );
+      const endDistance = Math.hypot(targetX, targetY, forwardDepth);
+      const startDistance = Math.max(0.85, endDistance * randomBetween(0.022, 0.058));
       const point = {
-        x,
-        y,
-        z: randomBetween(zRange[0], zRange[1]),
-        endZ: randomBetween(zEndRange[0], zEndRange[1]),
         phase: randomBetween(0, Math.PI * 2),
         drift,
-        startX: focusStartX + x * expandStart + staticOffsetX * 0.35,
-        startY: focusStartY + y * expandStart + staticOffsetY * 0.35,
-        endX: focusEndX + endOffsetX * expandEnd + staticOffsetX * 1.15,
-        endY: focusEndY + endOffsetY * expandEnd + staticOffsetY * 1.15,
+        dirX: targetX / endDistance,
+        dirY: targetY / endDistance,
+        dirZ: forwardDepth / endDistance,
+        startDistance,
+        endDistance,
       };
 
       data.push(point);
-      positions[index * 3] = point.x;
-      positions[index * 3 + 1] = point.y;
-      positions[index * 3 + 2] = point.z;
+      positions[index * 3] = point.dirX * point.startDistance;
+      positions[index * 3 + 1] = point.dirY * point.startDistance;
+      positions[index * 3 + 2] = point.dirZ * point.startDistance;
     }
 
     geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
@@ -507,11 +511,12 @@ export class Scene3SpaceField {
         transparent: true,
         opacity: 0,
         depthWrite: false,
-        depthTest: false,
+        depthTest: true,
         toneMapped: false,
         blending: THREE.AdditiveBlending,
       });
       const trailSprite = new THREE.Sprite(trailMaterial);
+      trailSprite.renderOrder = 5;
       trailGroup.add(trailSprite);
       trails.push({
         sprite: trailSprite,
@@ -642,6 +647,21 @@ export class Scene3SpaceField {
 
   _updateParticleField(field, progress, opacityBoost = 1) {
     const positions = field.positions;
+    const sourceX = this.previewPlanetGroup?.position.x ?? 9.6;
+    const sourceY = this.previewPlanetGroup?.position.y ?? 4.6;
+    const sourceZ = (this.previewPlanetGroup?.position.z ?? -36) - 0.9;
+    const sourceWorld = this._trailSourceWorld.set(sourceX, sourceY, sourceZ);
+    const sourceScreen = this._trailSourceScreen.copy(sourceWorld).project(this.camera);
+    const planetRadiusWorld = 4.1 * (this.previewPlanetGroup?.scale.x ?? 1);
+    const planetEdgeWorld = this._trailPlanetEdgeWorld.set(sourceX + planetRadiusWorld, sourceY, sourceZ);
+    const planetEdgeScreen = this._trailPlanetEdgeScreen.copy(planetEdgeWorld).project(this.camera);
+    const planetRadiusPx = Math.max(
+      1,
+      Math.hypot(
+        (planetEdgeScreen.x - sourceScreen.x) * this.width * 0.5,
+        (planetEdgeScreen.y - sourceScreen.y) * this.height * 0.5,
+      ),
+    );
 
     field.points.rotation.z = progress * field.rotationScale;
     field.material.opacity = field.opacity * opacityBoost;
@@ -655,9 +675,14 @@ export class Scene3SpaceField {
       const trail = field.trails?.[index];
       const cycle = (progress * field.travel * point.drift + point.phase / (Math.PI * 2)) % 1;
       const approach = smoothstep(0, 0.985, cycle);
-      const headX = mix(point.startX, point.endX, approach);
-      const headY = mix(point.startY, point.endY, approach);
-      const headZ = mix(point.z, point.endZ, approach);
+      const maxDistance = Math.max(
+        point.startDistance + 0.2,
+        (this.camera.position.z - 2.2 - sourceZ) / Math.max(0.08, point.dirZ),
+      );
+      const headDistance = Math.min(mix(point.startDistance, point.endDistance, approach), maxDistance);
+      const headX = sourceX + point.dirX * headDistance;
+      const headY = sourceY + point.dirY * headDistance;
+      const headZ = sourceZ + point.dirZ * headDistance;
 
       positions[index * 3] = headX;
       positions[index * 3 + 1] = headY;
@@ -665,18 +690,26 @@ export class Scene3SpaceField {
 
       if (trail) {
         const tailApproach = Math.max(0, approach - trail.lag);
-        const tailX = mix(point.startX, point.endX, tailApproach);
-        const tailY = mix(point.startY, point.endY, tailApproach);
-        const tailZ = mix(point.z, point.endZ, tailApproach);
+        const tailDistance = Math.min(mix(point.startDistance, point.endDistance, tailApproach), headDistance);
+        const tailX = sourceX + point.dirX * tailDistance;
+        const tailY = sourceY + point.dirY * tailDistance;
+        const tailZ = sourceZ + point.dirZ * tailDistance;
         const headWorld = this._trailHeadWorld.set(headX, headY, headZ);
         const tailWorld = this._trailTailWorld.set(tailX, tailY, tailZ);
         const midWorld = this._trailMidWorld.copy(headWorld).lerp(tailWorld, 0.5);
         const headScreen = this._trailHeadScreen.copy(headWorld).project(this.camera);
         const tailScreen = this._trailTailScreen.copy(tailWorld).project(this.camera);
-        const dx = (headScreen.x - tailScreen.x) * this.width * 0.5;
-        const dy = (headScreen.y - tailScreen.y) * this.height * 0.5;
+        const dx = (headScreen.x - sourceScreen.x) * this.width * 0.5;
+        const dy = (headScreen.y - sourceScreen.y) * this.height * 0.5;
+        const trailDx = (headScreen.x - tailScreen.x) * this.width * 0.5;
+        const trailDy = (headScreen.y - tailScreen.y) * this.height * 0.5;
         const screenDistance = Math.hypot(dx, dy);
         const alignmentVisibility = smoothstep(3, 14, screenDistance);
+        const planetExitVisibility = smoothstep(
+          planetRadiusPx + 10,
+          planetRadiusPx + 34,
+          screenDistance,
+        );
         const length = Math.max(
           trail.baseLength * mix(0.82, 1.94, approach),
           headWorld.distanceTo(tailWorld) * 1.1,
@@ -689,7 +722,11 @@ export class Scene3SpaceField {
           1,
         );
         trail.sprite.material.rotation = Math.atan2(dy, dx);
-        trail.sprite.material.opacity = field.material.opacity * mix(0.22, 0.78, approach) * alignmentVisibility;
+        trail.sprite.material.opacity = field.material.opacity
+          * mix(0.22, 0.78, approach)
+          * alignmentVisibility
+          * planetExitVisibility
+          * smoothstep(2, 12, Math.hypot(trailDx, trailDy));
       }
     }
 
