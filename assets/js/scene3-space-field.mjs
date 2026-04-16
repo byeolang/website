@@ -94,34 +94,47 @@ export class Scene3SpaceField {
 
     this.root = new THREE.Group();
     this.scene.add(this.root);
+    this._trailHeadWorld = new THREE.Vector3();
+    this._trailTailWorld = new THREE.Vector3();
+    this._trailMidWorld = new THREE.Vector3();
+    this._trailHeadScreen = new THREE.Vector3();
+    this._trailTailScreen = new THREE.Vector3();
 
     this._createPreviewPlanet();
-    this._createAsteroidSprites();
+    // Asteroid sprites are temporarily disabled while the particle-only belt
+    // pass is tuned.
+    // this._createAsteroidSprites();
     this.farDust = this._createParticleField({
-      count: 620,
+      count: 760,
       color: 0xd8e8ff,
-      size: 0.11,
-      opacity: 0.24,
-      xRange: 20,
-      yRange: 12,
-      zRange: [-28, -6],
-      travel: 8.4,
-      sway: 0.26,
+      size: 0.14,
+      opacity: 0.3,
+      xRange: 13,
+      yRange: 8,
+      zRange: [-54, -24],
+      zEndRange: [18, 30],
+      travel: 1.85,
+      sway: 0.12,
+      expandStart: 0.64,
+      expandEnd: 1.56,
       rotationScale: 0.05,
     });
     this.midParticles = this._createParticleField({
-      count: 180,
+      count: 260,
       color: 0xf3f7ff,
-      size: 0.18,
-      opacity: 0.42,
-      xRange: 18,
-      yRange: 11,
-      zRange: [-12, 2],
-      travel: 12.8,
-      sway: 0.4,
-      rotationScale: -0.08,
+      size: 0.22,
+      opacity: 0.48,
+      xRange: 8.8,
+      yRange: 5.6,
+      zRange: [-34, -12],
+      zEndRange: [24, 38],
+      travel: 2.65,
+      sway: 0.16,
+      expandStart: 0.72,
+      expandEnd: 1.86,
+      rotationScale: -0.04,
     });
-    this._createStreaks(26);
+    this._createStreaks(0);
 
     this.enabled = true;
     this._disableFallback();
@@ -303,6 +316,9 @@ export class Scene3SpaceField {
     ].map((path) => {
       const texture = textureLoader.load(path);
       texture.colorSpace = THREE.SRGBColorSpace;
+      texture.minFilter = THREE.NearestFilter;
+      texture.magFilter = THREE.NearestFilter;
+      texture.generateMipmaps = false;
       return texture;
     });
 
@@ -313,37 +329,58 @@ export class Scene3SpaceField {
 
     const depthBands = {
       far: {
-        count: 18,
-        base: [0.1, 0.18],
-        boost: [0.08, 0.18],
-        opacity: [0.34, 0.52],
-        z: [-42, -30],
-        endZ: [-24, -16],
-        speed: [0.22, 0.34],
-        drift: [0.01, 0.03],
-        radial: [3.2, 5.8],
+        count: 56,
+        base: [0.16, 0.24],
+        boost: [0.04, 0.08],
+        opacity: [0.18, 0.3],
+        z: [-56, -42],
+        endZ: [-10, -2],
+        speed: [0.16, 0.24],
+        laneX: [-0.7, 0.7],
+        laneY: [-0.56, 0.56],
+        laneDrift: [1.04, 1.12],
+        wobbleX: [0.006, 0.018],
+        wobbleY: [0.008, 0.024],
+        stretch: [1.04, 1.18],
+        squash: [0.86, 0.98],
+        rotation: [-0.16, 0.16],
+        color: 0xded8cf,
       },
       mid: {
-        count: 22,
-        base: [0.14, 0.24],
-        boost: [0.16, 0.32],
-        opacity: [0.42, 0.64],
-        z: [-30, -20],
-        endZ: [-14, -8],
-        speed: [0.3, 0.48],
-        drift: [0.015, 0.05],
-        radial: [4.8, 8.4],
+        count: 34,
+        base: [0.22, 0.34],
+        boost: [0.06, 0.12],
+        opacity: [0.24, 0.4],
+        z: [-42, -28],
+        endZ: [-4, 4],
+        speed: [0.24, 0.34],
+        laneX: [-0.62, 0.62],
+        laneY: [-0.5, 0.5],
+        laneDrift: [1.08, 1.18],
+        wobbleX: [0.012, 0.03],
+        wobbleY: [0.016, 0.038],
+        stretch: [0.98, 1.12],
+        squash: [0.9, 1.02],
+        rotation: [-0.12, 0.12],
+        color: 0xe6dfd3,
       },
       near: {
-        count: 12,
-        base: [0.2, 0.34],
-        boost: [0.24, 0.48],
-        opacity: [0.56, 0.78],
-        z: [-20, -14],
-        endZ: [-6, -2],
-        speed: [0.42, 0.62],
-        drift: [0.02, 0.07],
-        radial: [6.4, 11.2],
+        count: 18,
+        base: [0.32, 0.46],
+        boost: [0.08, 0.16],
+        opacity: [0.34, 0.52],
+        z: [-30, -18],
+        endZ: [6, 14],
+        speed: [0.32, 0.44],
+        laneX: [-0.48, 0.48],
+        laneY: [-0.4, 0.4],
+        laneDrift: [1.14, 1.26],
+        wobbleX: [0.018, 0.042],
+        wobbleY: [0.022, 0.05],
+        stretch: [0.94, 1.08],
+        squash: [0.92, 1.04],
+        rotation: [-0.08, 0.08],
+        color: 0xefe8de,
       },
     };
 
@@ -357,31 +394,33 @@ export class Scene3SpaceField {
         depthWrite: false,
         depthTest: true,
         toneMapped: false,
-        color: bandName == 'near' ? 0xefe6d8 : bandName == 'mid' ? 0xe8dfd2 : 0xe1d8ca,
+        color: 0xffffff,
       });
       const sprite = new THREE.Sprite(material);
       this.asteroidGroup.add(sprite);
 
-      const startRadius = randomBetween(1.4, 5.4);
-      const startAngle = randomBetween(0, Math.PI * 2);
-      const endAngle = startAngle + randomBetween(-0.42, 0.42);
-      const endRadius = randomBetween(band.radial[0], band.radial[1]);
-      const centerX = randomBetween(-0.8, 1.2);
-      const centerY = randomBetween(-0.6, 0.4);
+      const laneStartX = randomBetween(band.laneX[0], band.laneX[1]);
+      const laneStartY = randomBetween(band.laneY[0], band.laneY[1]);
+      const laneEndX = laneStartX * randomBetween(band.laneDrift[0], band.laneDrift[1]);
+      const laneEndY = laneStartY * randomBetween(band.laneDrift[0], band.laneDrift[1]);
 
       return {
         sprite,
         band: bandName,
-        startX: centerX + Math.cos(startAngle) * startRadius,
-        startY: centerY + Math.sin(startAngle) * startRadius,
-        endX: centerX + Math.cos(endAngle) * endRadius,
-        endY: centerY + Math.sin(endAngle) * endRadius,
+        laneStartX,
+        laneStartY,
+        laneEndX,
+        laneEndY,
         baseZ: randomBetween(band.z[0], band.z[1]),
         endZ: randomBetween(band.endZ[0], band.endZ[1]),
         scaleBase: randomBetween(band.base[0], band.base[1]),
         scaleBoost: randomBetween(band.boost[0], band.boost[1]),
-        drift: randomBetween(band.drift[0], band.drift[1]),
-        spin: randomBetween(-0.35, 0.35),
+        wobbleX: randomBetween(band.wobbleX[0], band.wobbleX[1]),
+        wobbleY: randomBetween(band.wobbleY[0], band.wobbleY[1]),
+        spin: randomBetween(-0.04, 0.04),
+        stretch: randomBetween(band.stretch[0], band.stretch[1]),
+        squash: randomBetween(band.squash[0], band.squash[1]),
+        rotationBase: randomBetween(band.rotation[0], band.rotation[1]),
         phase: Math.random(),
         speed: randomBetween(band.speed[0], band.speed[1]),
         opacityMax: randomBetween(band.opacity[0], band.opacity[1]),
@@ -395,18 +434,40 @@ export class Scene3SpaceField {
     });
   }
 
-  _createParticleField({ count, color, size, opacity, xRange, yRange, zRange, travel, sway, rotationScale }) {
+  _createParticleField({ count, color, size, opacity, xRange, yRange, zRange, zEndRange, travel, sway, expandStart, expandEnd, rotationScale }) {
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(count * 3);
     const data = [];
+    const focusStartX = -1.2;
+    const focusStartY = -0.6;
+    const focusEndX = 1.5;
+    const focusEndY = 0.15;
+    const centerExclusion = 0.18;
 
     for (let index = 0; index < count; index += 1) {
+      const angle = randomBetween(0, Math.PI * 2);
+      const startRadius = randomBetween(centerExclusion, 0.92);
+      const endRadius = Math.min(1.38, startRadius + randomBetween(0.24, 0.54));
+      const radialX = Math.cos(angle);
+      const radialY = Math.sin(angle);
+      const x = radialX * xRange * startRadius;
+      const y = radialY * yRange * startRadius;
+      const endOffsetX = radialX * xRange * endRadius;
+      const endOffsetY = radialY * yRange * endRadius;
+      const drift = randomBetween(0.6, 1.4);
+      const staticOffsetX = Math.sin(randomBetween(0, Math.PI * 2)) * sway * drift * 0.7;
+      const staticOffsetY = Math.cos(randomBetween(0, Math.PI * 2)) * sway * drift * 0.7;
       const point = {
-        x: randomBetween(-xRange, xRange),
-        y: randomBetween(-yRange, yRange),
+        x,
+        y,
         z: randomBetween(zRange[0], zRange[1]),
+        endZ: randomBetween(zEndRange[0], zEndRange[1]),
         phase: randomBetween(0, Math.PI * 2),
-        drift: randomBetween(0.6, 1.4),
+        drift,
+        startX: focusStartX + x * expandStart + staticOffsetX * 0.35,
+        startY: focusStartY + y * expandStart + staticOffsetY * 0.35,
+        endX: focusEndX + endOffsetX * expandEnd + staticOffsetX * 1.15,
+        endY: focusEndY + endOffsetY * expandEnd + staticOffsetY * 1.15,
       };
 
       data.push(point);
@@ -431,17 +492,51 @@ export class Scene3SpaceField {
     const points = new THREE.Points(geometry, material);
     this.root.add(points);
 
+    if (!this.streakTexture) {
+      this.streakTexture = this._createStreakTexture();
+    }
+
+    const trailGroup = new THREE.Group();
+    this.root.add(trailGroup);
+    const trails = [];
+
+    for (let index = 0; index < count; index += 1) {
+      const trailMaterial = new THREE.SpriteMaterial({
+        map: this.streakTexture,
+        color,
+        transparent: true,
+        opacity: 0,
+        depthWrite: false,
+        depthTest: false,
+        toneMapped: false,
+        blending: THREE.AdditiveBlending,
+      });
+      const trailSprite = new THREE.Sprite(trailMaterial);
+      trailGroup.add(trailSprite);
+      trails.push({
+        sprite: trailSprite,
+        baseLength: randomBetween(size * 6.5, size * 11.5),
+        baseThickness: randomBetween(size * 0.42, size * 0.7),
+        lag: randomBetween(0.048, 0.088),
+      });
+    }
+
     return {
       data,
       geometry,
       material,
       points,
+      trailGroup,
+      trails,
       positions,
+      size,
       xRange,
       yRange,
       travel,
       sway,
       opacity,
+      expandStart,
+      expandEnd,
       rotationScale,
     };
   }
@@ -477,6 +572,15 @@ export class Scene3SpaceField {
     this.streaks = [];
 
     for (let index = 0; index < count; index += 1) {
+      const rawLaneX = randomBetween(-0.46, 0.46);
+      const rawLaneY = randomBetween(-0.34, 0.34);
+      const laneX = Math.abs(rawLaneX) < 0.12
+        ? (rawLaneX < 0 ? -0.12 : 0.12)
+        : rawLaneX;
+      const laneY = Math.abs(rawLaneY) < 0.08
+        ? (rawLaneY < 0 ? -0.08 : 0.08)
+        : rawLaneY;
+
       const material = new THREE.SpriteMaterial({
         map: texture,
         color: 0xe9f5ff,
@@ -493,13 +597,16 @@ export class Scene3SpaceField {
       this.streakGroup.add(sprite);
       this.streaks.push({
         sprite,
-        x: randomBetween(-18, 18),
-        y: randomBetween(-9.5, 9.5),
-        z: randomBetween(-4, 4),
-        scaleX: randomBetween(2.6, 4.4),
-        scaleY: randomBetween(0.16, 0.24),
+        laneX,
+        laneY,
+        driftX: randomBetween(1.04, 1.22),
+        driftY: randomBetween(1.02, 1.16),
+        z: randomBetween(-40, -18),
+        endZ: randomBetween(14, 22),
+        scaleX: randomBetween(0.9, 1.6),
+        scaleY: randomBetween(0.045, 0.08),
         phase: randomBetween(0, 1),
-        speed: randomBetween(5.8, 8.8),
+        speed: randomBetween(1.8, 2.8),
       });
     }
   }
@@ -538,45 +645,105 @@ export class Scene3SpaceField {
 
     field.points.rotation.z = progress * field.rotationScale;
     field.material.opacity = field.opacity * opacityBoost;
+    field.points.visible = false;
+    if (field.trailGroup) {
+      field.trailGroup.visible = field.material.opacity > 0.01;
+    }
 
     for (let index = 0; index < field.data.length; index += 1) {
       const point = field.data[index];
-      positions[index * 3] = wrapRange(
-        point.x - progress * field.travel * point.drift,
-        -field.xRange,
-        field.xRange,
-      );
-      positions[index * 3 + 1] = wrapRange(
-        point.y + Math.sin(progress * 7 + point.phase) * field.sway * point.drift,
-        -field.yRange,
-        field.yRange,
-      );
-      positions[index * 3 + 2] = point.z;
+      const trail = field.trails?.[index];
+      const cycle = (progress * field.travel * point.drift + point.phase / (Math.PI * 2)) % 1;
+      const approach = smoothstep(0, 0.985, cycle);
+      const headX = mix(point.startX, point.endX, approach);
+      const headY = mix(point.startY, point.endY, approach);
+      const headZ = mix(point.z, point.endZ, approach);
+
+      positions[index * 3] = headX;
+      positions[index * 3 + 1] = headY;
+      positions[index * 3 + 2] = headZ;
+
+      if (trail) {
+        const tailApproach = Math.max(0, approach - trail.lag);
+        const tailX = mix(point.startX, point.endX, tailApproach);
+        const tailY = mix(point.startY, point.endY, tailApproach);
+        const tailZ = mix(point.z, point.endZ, tailApproach);
+        const headWorld = this._trailHeadWorld.set(headX, headY, headZ);
+        const tailWorld = this._trailTailWorld.set(tailX, tailY, tailZ);
+        const midWorld = this._trailMidWorld.copy(headWorld).lerp(tailWorld, 0.5);
+        const headScreen = this._trailHeadScreen.copy(headWorld).project(this.camera);
+        const tailScreen = this._trailTailScreen.copy(tailWorld).project(this.camera);
+        const dx = (headScreen.x - tailScreen.x) * this.width * 0.5;
+        const dy = (headScreen.y - tailScreen.y) * this.height * 0.5;
+        const screenDistance = Math.hypot(dx, dy);
+        const alignmentVisibility = smoothstep(3, 14, screenDistance);
+        const length = Math.max(
+          trail.baseLength * mix(0.82, 1.94, approach),
+          headWorld.distanceTo(tailWorld) * 1.1,
+        );
+
+        trail.sprite.position.copy(midWorld);
+        trail.sprite.scale.set(
+          length,
+          trail.baseThickness + approach * field.size * 0.34,
+          1,
+        );
+        trail.sprite.material.rotation = Math.atan2(dy, dx);
+        trail.sprite.material.opacity = field.material.opacity * mix(0.22, 0.78, approach) * alignmentVisibility;
+      }
     }
 
     field.geometry.attributes.position.needsUpdate = true;
   }
 
   _updateStreaks(progress) {
-    const visibility = smoothstep(0.16, 0.34, progress) * (1 - smoothstep(0.76, 0.94, progress));
+    const visibility = smoothstep(0.08, 0.2, progress) * (1 - smoothstep(0.92, 1, progress) * 0.08);
+    const cameraDrift = smoothstep(0.08, 0.9, progress);
+    const focusX = mix(-1.2, 1.5, cameraDrift);
+    const focusY = mix(-0.6, 0.15, cameraDrift);
+    const halfFovTan = Math.tan((this.camera.fov * Math.PI) / 360);
 
     this.streakGroup.visible = visibility > 0.01;
 
-    this.streaks.forEach((streak, index) => {
+    this.streaks.forEach((streak) => {
       const sprite = streak.sprite;
-      const travel = progress * streak.speed * 8 + streak.phase * 14;
+      const cycle = (progress * streak.speed + streak.phase) % 1;
+      const approach = smoothstep(0, 0.992, cycle);
+      const tailApproach = Math.max(0, approach - 0.12);
+
+      const projectPose = (sampleApproach) => {
+        const z = mix(streak.z, streak.endZ, sampleApproach);
+        const distance = Math.max(1, this.camera.position.z - z);
+        const halfHeight = halfFovTan * distance * 1.06;
+        const halfWidth = halfHeight * this.camera.aspect * 1.06;
+        const laneX = streak.laneX * mix(1, streak.driftX, sampleApproach);
+        const laneY = streak.laneY * mix(1, streak.driftY, sampleApproach);
+
+        return {
+          x: focusX + laneX * halfWidth,
+          y: focusY + laneY * halfHeight,
+          z,
+        };
+      };
+
+      const head = projectPose(approach);
+      const tail = projectPose(tailApproach);
+      const dx = head.x - tail.x;
+      const dy = head.y - tail.y;
+      const trailLength = Math.max(streak.scaleX, Math.hypot(dx, dy) * 1.28);
 
       sprite.position.set(
-        wrapRange(streak.x - travel, -22, 22),
-        wrapRange(streak.y + Math.sin(progress * 10 + streak.phase * 8) * 0.44, -11, 11),
-        streak.z,
+        (head.x + tail.x) * 0.5,
+        (head.y + tail.y) * 0.5,
+        (head.z + tail.z) * 0.5,
       );
       sprite.scale.set(
-        streak.scaleX + visibility * 1.8,
-        streak.scaleY + visibility * 0.08,
+        trailLength,
+        streak.scaleY + approach * 0.06,
         1,
       );
-      sprite.material.opacity = visibility * (0.12 + (index % 4) * 0.025);
+      sprite.material.rotation = Math.atan2(dy, dx);
+      sprite.material.opacity = visibility * mix(0.12, 0.48, approach);
     });
   }
 
@@ -585,21 +752,32 @@ export class Scene3SpaceField {
       return;
     }
 
-    const fieldVisibility = 1 - smoothstep(0.9, 0.985, progress);
-    this.asteroidGroup.visible = fieldVisibility > 0.01;
+    const cameraDrift = smoothstep(0.08, 0.9, progress);
+    const focusX = mix(-1.2, 1.5, cameraDrift);
+    const focusY = mix(-0.6, 0.15, cameraDrift);
+    const halfFovTan = Math.tan((this.camera.fov * Math.PI) / 360);
+
+    this.asteroidGroup.visible = true;
 
     this.asteroidSprites.forEach((entry, index) => {
       const cycle = (progress * entry.speed + entry.phase) % 1;
       const approach = smoothstep(0, 0.98, cycle);
-      const x = mix(entry.startX, entry.endX, approach);
-      const y = mix(entry.startY, entry.endY, approach) + Math.sin(progress * 3.8 + index) * entry.drift;
       const z = mix(entry.baseZ, entry.endZ, approach);
       const scale = entry.scaleBase + approach * entry.scaleBoost;
+      const distance = Math.max(1, this.camera.position.z - z);
+      const halfHeight = halfFovTan * distance * 1.08;
+      const halfWidth = halfHeight * this.camera.aspect * 1.08;
+      const laneX = mix(entry.laneStartX, entry.laneEndX, approach);
+      const laneY = mix(entry.laneStartY, entry.laneEndY, approach);
+      const flowJitterX = Math.sin(progress * 4.8 + index * 0.61 + entry.phase * Math.PI * 2) * entry.wobbleX;
+      const flowJitterY = Math.cos(progress * 5.6 + index * 0.47 + entry.phase * Math.PI * 2) * entry.wobbleY;
+      const x = focusX + (laneX + flowJitterX) * halfWidth;
+      const y = focusY + (laneY + flowJitterY) * halfHeight;
 
       entry.sprite.position.set(x, y, z);
-      entry.sprite.scale.set(scale, scale, 1);
-      entry.sprite.material.opacity = entry.opacityMax * fieldVisibility;
-      entry.sprite.material.rotation = entry.spin + approach * 0.32;
+      entry.sprite.scale.set(scale * entry.stretch, scale * entry.squash, 1);
+      entry.sprite.material.opacity = entry.opacityMax;
+      entry.sprite.material.rotation = entry.rotationBase + entry.spin * approach;
     });
   }
 
@@ -641,12 +819,20 @@ export class Scene3SpaceField {
     this.camera.position.x = mix(0.4, -0.35, cameraDrift);
     this.camera.position.y = mix(-0.45, 0.15, cameraDrift);
     this.camera.lookAt(mix(-1.2, 1.5, cameraDrift), mix(-0.6, 0.15, cameraDrift), -10);
+    this.camera.updateMatrixWorld();
 
     this._updatePreviewPlanet(this.progress);
-    this._updateAsteroidSprites(this.progress);
+    // Asteroid sprites are temporarily disabled while the particle-only belt
+    // pass is tuned.
+    // this._updateAsteroidSprites(this.progress);
+    if (this.asteroidGroup) {
+      this.asteroidGroup.visible = false;
+    }
     this._updateParticleField(this.farDust, this.progress, farOpacity);
     this._updateParticleField(this.midParticles, this.progress, midOpacity * 1.08);
-    this._updateStreaks(this.progress);
+    if (this.streakGroup) {
+      this.streakGroup.visible = false;
+    }
     this.renderer.render(this.scene, this.camera);
   }
 
