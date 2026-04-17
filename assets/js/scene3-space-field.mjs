@@ -107,6 +107,8 @@ export class Scene3SpaceField {
     this._beltRightWorld = new THREE.Vector3();
     this._beltUpWorld = new THREE.Vector3();
     this._asteroidPositionWorld = new THREE.Vector3();
+    this._largeTargetWorld = new THREE.Vector3();
+    this._largeRouteWorld = new THREE.Vector3();
     this._planetSourceState = {};
 
     this._createPreviewPlanet();
@@ -337,8 +339,12 @@ export class Scene3SpaceField {
       "assets/images/scenes/scene3-asteroid-small-04.png",
       "assets/images/scenes/scene3-asteroid-small-05.png",
     ].map(loadTexture);
+    const largeAsteroidSources = [
+      "assets/images/scenes/scene3-asteroid-large-01.png",
+      "assets/images/scenes/scene3-asteroid-large-02.png",
+    ].map(loadTexture);
 
-    this.asteroidTextures = asteroidSources;
+    this.asteroidTextures = [...asteroidSources, ...largeAsteroidSources];
     this.asteroidGroup = new THREE.Group();
     this.root.add(this.asteroidGroup);
     this.asteroidSprites = [];
@@ -396,6 +402,67 @@ export class Scene3SpaceField {
 
     for (let index = 0; index < layer.count; index += 1) {
       this.asteroidSprites.push(makeEntry());
+    }
+
+    this.largeAsteroidGroup = new THREE.Group();
+    this.root.add(this.largeAsteroidGroup);
+    this.largeAsteroidSprites = [];
+
+    const largeLayer = {
+      count: 7,
+      startDistance: [10, 16],
+      targetDepth: [4.8, 6.3],
+      targetNormX: [-1.08, 1.08],
+      targetNormY: [0.64, 1.04],
+      worldScale: [1.35, 1.9],
+      staggerStart: 22,
+      staggerStep: 12,
+      travelDistance: 128,
+      exitDistance: [10, 18],
+      stretch: [0.94, 1.08],
+      squash: [0.9, 1.02],
+      rotation: [-0.18, 0.18],
+      spin: [0.08, 0.22],
+      color: 0xf1e7da,
+      renderOrder: 36,
+    };
+
+    const makeLargeEntry = (index) => {
+      const texture = largeAsteroidSources[Math.floor(Math.random() * largeAsteroidSources.length)];
+      const material = new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false,
+        depthTest: true,
+        toneMapped: false,
+        color: largeLayer.color,
+      });
+      const sprite = new THREE.Sprite(material);
+      sprite.renderOrder = largeLayer.renderOrder;
+      this.largeAsteroidGroup.add(sprite);
+
+      return {
+        sprite,
+        startDistance: randomBetween(largeLayer.startDistance[0], largeLayer.startDistance[1]),
+        targetDepth: randomBetween(largeLayer.targetDepth[0], largeLayer.targetDepth[1]),
+        targetNormX: randomBetween(largeLayer.targetNormX[0], largeLayer.targetNormX[1]),
+        targetNormY: randomBetween(largeLayer.targetNormY[0], largeLayer.targetNormY[1]),
+        worldScale: randomBetween(largeLayer.worldScale[0], largeLayer.worldScale[1]),
+        staggerDistance: largeLayer.staggerStart
+          + (index * largeLayer.staggerStep)
+          + randomBetween(-2.2, 2.2),
+        travelDistance: largeLayer.travelDistance,
+        exitDistance: randomBetween(largeLayer.exitDistance[0], largeLayer.exitDistance[1]),
+        stretch: randomBetween(largeLayer.stretch[0], largeLayer.stretch[1]),
+        squash: randomBetween(largeLayer.squash[0], largeLayer.squash[1]),
+        rotationBase: randomBetween(largeLayer.rotation[0], largeLayer.rotation[1]),
+        spin: randomBetween(largeLayer.spin[0], largeLayer.spin[1]),
+      };
+    };
+
+    for (let index = 0; index < largeLayer.count; index += 1) {
+      this.largeAsteroidSprites.push(makeLargeEntry(index));
     }
   }
 
@@ -814,6 +881,58 @@ export class Scene3SpaceField {
         + travel * entry.spin
         + entry.phase * Math.PI * 2;
     });
+
+    if (!this.largeAsteroidSprites?.length) {
+      return;
+    }
+
+    const largeVisibility = progress > 0.08 && progress < 0.96;
+    const largeSceneProgress = clamp01((progress - 0.08) / 0.88);
+
+    this.largeAsteroidGroup.visible = largeVisibility;
+
+    if (!this.largeAsteroidGroup.visible) {
+      return;
+    }
+
+    this.largeAsteroidSprites.forEach((entry) => {
+      const targetHalfHeight = halfFovTan * entry.targetDepth * 1.1;
+      const targetHalfWidth = targetHalfHeight * this.camera.aspect * 1.1;
+      const targetWorld = this._largeTargetWorld
+        .copy(this.camera.position)
+        .addScaledVector(forwardWorld, entry.targetDepth)
+        .addScaledVector(rightWorld, entry.targetNormX * targetHalfWidth)
+        .addScaledVector(upWorld, entry.targetNormY * targetHalfHeight);
+      const routeWorld = this._largeRouteWorld
+        .copy(targetWorld)
+        .sub(sourceState.sourceWorld);
+      const routeLength = Math.max(0.001, routeWorld.length());
+      routeWorld.multiplyScalar(1 / routeLength);
+
+      const distanceAlongRoute = entry.startDistance
+        + (entry.travelDistance * largeSceneProgress)
+        - entry.staggerDistance;
+      const visible = distanceAlongRoute >= entry.startDistance
+        && distanceAlongRoute <= routeLength + entry.exitDistance;
+
+      entry.sprite.visible = visible;
+
+      if (!visible) {
+        return;
+      }
+
+      entry.sprite.position
+        .copy(sourceState.sourceWorld)
+        .addScaledVector(routeWorld, distanceAlongRoute);
+      entry.sprite.scale.set(
+        entry.worldScale * entry.stretch,
+        entry.worldScale * entry.squash,
+        1,
+      );
+      entry.sprite.material.opacity = 1;
+      entry.sprite.material.rotation = entry.rotationBase
+        + largeSceneProgress * entry.spin;
+    });
   }
 
   _resize() {
@@ -882,6 +1001,9 @@ export class Scene3SpaceField {
       sprite.material?.dispose?.();
     });
     this.asteroidSprites?.forEach(({ sprite }) => {
+      sprite.material?.dispose?.();
+    });
+    this.largeAsteroidSprites?.forEach(({ sprite }) => {
       sprite.material?.dispose?.();
     });
     this.streakTexture?.dispose?.();
