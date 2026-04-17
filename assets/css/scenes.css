@@ -1898,6 +1898,13 @@ html.dark-mode .scene3-shell {
   opacity: 0.98;
 }
 
+#AsteroidBelt .scene3-shell:not(.scene3-shell--fallback) .scene3-shell__asteroids,
+#AsteroidBelt .scene3-shell:not(.scene3-shell--fallback) .scene3-shell__clusters,
+#AsteroidBelt .scene3-shell:not(.scene3-shell--fallback) .scene3-shell__foreground-blur {
+  opacity: 0;
+  visibility: hidden;
+}
+
 #AsteroidBelt .scene3-shell__earth-fallback {
   z-index: 4;
   opacity: 0;
