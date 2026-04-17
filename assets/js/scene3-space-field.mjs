@@ -103,11 +103,14 @@ export class Scene3SpaceField {
     this._trailPlanetEdgeScreen = new THREE.Vector3();
     this._trailHeadScreen = new THREE.Vector3();
     this._trailTailScreen = new THREE.Vector3();
+    this._beltDirectionWorld = new THREE.Vector3();
+    this._beltRightWorld = new THREE.Vector3();
+    this._beltUpWorld = new THREE.Vector3();
+    this._asteroidPositionWorld = new THREE.Vector3();
+    this._planetSourceState = {};
 
     this._createPreviewPlanet();
-    // Asteroid sprites are temporarily disabled while the particle-only belt
-    // pass is tuned.
-    // this._createAsteroidSprites();
+    this._createAsteroidSprites();
     this.farDust = this._createParticleField({
       count: 760,
       color: 0xd8e8ff,
@@ -319,83 +322,46 @@ export class Scene3SpaceField {
 
   _createAsteroidSprites() {
     const textureLoader = new THREE.TextureLoader();
-    const asteroidSources = [
-      "assets/images/scenes/scene3-asteroid-small-01.png",
-      "assets/images/scenes/scene3-asteroid-small-03.png",
-      "assets/images/scenes/scene3-asteroid-small-05.png",
-    ].map((path) => {
+    const loadTexture = (path) => {
       const texture = textureLoader.load(path);
       texture.colorSpace = THREE.SRGBColorSpace;
       texture.minFilter = THREE.NearestFilter;
       texture.magFilter = THREE.NearestFilter;
       texture.generateMipmaps = false;
       return texture;
-    });
+    };
+    const asteroidSources = [
+      "assets/images/scenes/scene3-asteroid-small-01.png",
+      "assets/images/scenes/scene3-asteroid-small-02.png",
+      "assets/images/scenes/scene3-asteroid-small-03.png",
+      "assets/images/scenes/scene3-asteroid-small-04.png",
+      "assets/images/scenes/scene3-asteroid-small-05.png",
+    ].map(loadTexture);
 
     this.asteroidTextures = asteroidSources;
     this.asteroidGroup = new THREE.Group();
     this.root.add(this.asteroidGroup);
     this.asteroidSprites = [];
 
-    const depthBands = {
-      far: {
-        count: 56,
-        base: [0.16, 0.24],
-        boost: [0.04, 0.08],
-        opacity: [0.18, 0.3],
-        z: [-56, -42],
-        endZ: [-10, -2],
-        speed: [0.16, 0.24],
-        laneX: [-0.7, 0.7],
-        laneY: [-0.56, 0.56],
-        laneDrift: [1.04, 1.12],
-        wobbleX: [0.006, 0.018],
-        wobbleY: [0.008, 0.024],
-        stretch: [1.04, 1.18],
-        squash: [0.86, 0.98],
-        rotation: [-0.16, 0.16],
-        color: 0xded8cf,
-      },
-      mid: {
-        count: 34,
-        base: [0.22, 0.34],
-        boost: [0.06, 0.12],
-        opacity: [0.24, 0.4],
-        z: [-42, -28],
-        endZ: [-4, 4],
-        speed: [0.24, 0.34],
-        laneX: [-0.62, 0.62],
-        laneY: [-0.5, 0.5],
-        laneDrift: [1.08, 1.18],
-        wobbleX: [0.012, 0.03],
-        wobbleY: [0.016, 0.038],
-        stretch: [0.98, 1.12],
-        squash: [0.9, 1.02],
-        rotation: [-0.12, 0.12],
-        color: 0xe6dfd3,
-      },
-      near: {
-        count: 18,
-        base: [0.32, 0.46],
-        boost: [0.08, 0.16],
-        opacity: [0.34, 0.52],
-        z: [-30, -18],
-        endZ: [6, 14],
-        speed: [0.32, 0.44],
-        laneX: [-0.48, 0.48],
-        laneY: [-0.4, 0.4],
-        laneDrift: [1.14, 1.26],
-        wobbleX: [0.018, 0.042],
-        wobbleY: [0.022, 0.05],
-        stretch: [0.94, 1.08],
-        squash: [0.92, 1.04],
-        rotation: [-0.08, 0.08],
-        color: 0xefe8de,
-      },
+    const layer = {
+      count: 220,
+      zStart: [-62, -38],
+      travelDistance: [3, 7],
+      laneX: [-1.08, 1.08],
+      laneY: [-0.82, 0.82],
+      driftX: [0.995, 1.005],
+      driftY: [0.995, 1.005],
+      base: [0.44, 0.7],
+      stretch: [0.96, 1.08],
+      squash: [0.94, 1.04],
+      rotation: [-0.2, 0.2],
+      spin: [0.04, 0.16],
+      radialDrift: [1.6, 3.8],
+      color: 0xf2ece4,
+      renderOrder: 34,
     };
 
-    const makeEntry = (bandName) => {
-      const band = depthBands[bandName];
+    const makeEntry = () => {
       const texture = asteroidSources[Math.floor(Math.random() * asteroidSources.length)];
       const material = new THREE.SpriteMaterial({
         map: texture,
@@ -404,44 +370,33 @@ export class Scene3SpaceField {
         depthWrite: false,
         depthTest: true,
         toneMapped: false,
-        color: 0xffffff,
+        color: layer.color,
       });
       const sprite = new THREE.Sprite(material);
+      sprite.renderOrder = layer.renderOrder;
       this.asteroidGroup.add(sprite);
-
-      const laneStartX = randomBetween(band.laneX[0], band.laneX[1]);
-      const laneStartY = randomBetween(band.laneY[0], band.laneY[1]);
-      const laneEndX = laneStartX * randomBetween(band.laneDrift[0], band.laneDrift[1]);
-      const laneEndY = laneStartY * randomBetween(band.laneDrift[0], band.laneDrift[1]);
 
       return {
         sprite,
-        band: bandName,
-        laneStartX,
-        laneStartY,
-        laneEndX,
-        laneEndY,
-        baseZ: randomBetween(band.z[0], band.z[1]),
-        endZ: randomBetween(band.endZ[0], band.endZ[1]),
-        scaleBase: randomBetween(band.base[0], band.base[1]),
-        scaleBoost: randomBetween(band.boost[0], band.boost[1]),
-        wobbleX: randomBetween(band.wobbleX[0], band.wobbleX[1]),
-        wobbleY: randomBetween(band.wobbleY[0], band.wobbleY[1]),
-        spin: randomBetween(-0.04, 0.04),
-        stretch: randomBetween(band.stretch[0], band.stretch[1]),
-        squash: randomBetween(band.squash[0], band.squash[1]),
-        rotationBase: randomBetween(band.rotation[0], band.rotation[1]),
+        laneX: randomBetween(layer.laneX[0], layer.laneX[1]),
+        laneY: randomBetween(layer.laneY[0], layer.laneY[1]),
+        driftX: randomBetween(layer.driftX[0], layer.driftX[1]),
+        driftY: randomBetween(layer.driftY[0], layer.driftY[1]),
+        zStart: randomBetween(layer.zStart[0], layer.zStart[1]),
+        travelDistance: randomBetween(layer.travelDistance[0], layer.travelDistance[1]),
+        scaleBase: randomBetween(layer.base[0], layer.base[1]),
+        stretch: randomBetween(layer.stretch[0], layer.stretch[1]),
+        squash: randomBetween(layer.squash[0], layer.squash[1]),
+        rotationBase: randomBetween(layer.rotation[0], layer.rotation[1]),
+        spin: randomBetween(layer.spin[0], layer.spin[1]),
+        radialDrift: randomBetween(layer.radialDrift[0], layer.radialDrift[1]),
         phase: Math.random(),
-        speed: randomBetween(band.speed[0], band.speed[1]),
-        opacityMax: randomBetween(band.opacity[0], band.opacity[1]),
       };
     };
 
-    Object.keys(depthBands).forEach((bandName) => {
-      for (let index = 0; index < depthBands[bandName].count; index += 1) {
-        this.asteroidSprites.push(makeEntry(bandName));
-      }
-    });
+    for (let index = 0; index < layer.count; index += 1) {
+      this.asteroidSprites.push(makeEntry());
+    }
   }
 
   _createParticleField({ count, color, size, opacity, xRange, yRange, zRange, zEndRange, travel, sway, expandStart, expandEnd, rotationScale }) {
@@ -645,8 +600,7 @@ export class Scene3SpaceField {
     this.previewPlanetRingMaterial.opacity = 0.28 * visibility;
   }
 
-  _updateParticleField(field, progress, opacityBoost = 1) {
-    const positions = field.positions;
+  _getPlanetSourceState() {
     const sourceX = this.previewPlanetGroup?.position.x ?? 9.6;
     const sourceY = this.previewPlanetGroup?.position.y ?? 4.6;
     const sourceZ = (this.previewPlanetGroup?.position.z ?? -36) - 0.9;
@@ -662,6 +616,27 @@ export class Scene3SpaceField {
         (planetEdgeScreen.y - sourceScreen.y) * this.height * 0.5,
       ),
     );
+    const directionWorld = this._beltDirectionWorld.copy(this.camera.position).sub(sourceWorld);
+    const sourceToCameraDistance = Math.max(0.001, directionWorld.length());
+    directionWorld.multiplyScalar(1 / sourceToCameraDistance);
+
+    const state = this._planetSourceState;
+    state.sourceX = sourceX;
+    state.sourceY = sourceY;
+    state.sourceZ = sourceZ;
+    state.sourceWorld = sourceWorld;
+    state.sourceScreen = sourceScreen;
+    state.planetRadiusPx = planetRadiusPx;
+    state.sourceToCameraDistance = sourceToCameraDistance;
+    state.directionWorld = directionWorld;
+    state.rightWorld = this._beltRightWorld.setFromMatrixColumn(this.camera.matrixWorld, 0).normalize();
+    state.upWorld = this._beltUpWorld.setFromMatrixColumn(this.camera.matrixWorld, 1).normalize();
+    return state;
+  }
+
+  _updateParticleField(field, progress, opacityBoost = 1, sourceState = this._getPlanetSourceState()) {
+    const positions = field.positions;
+    const { sourceX, sourceY, sourceZ, sourceScreen, planetRadiusPx } = sourceState;
 
     field.points.rotation.z = progress * field.rotationScale;
     field.material.opacity = field.opacity * opacityBoost;
@@ -784,37 +759,60 @@ export class Scene3SpaceField {
     });
   }
 
-  _updateAsteroidSprites(progress) {
+  _updateAsteroidSprites(progress, sourceState = this._getPlanetSourceState()) {
     if (!this.asteroidSprites?.length) {
       return;
     }
 
+    const travel = smoothstep(0.02, 0.98, progress);
     const cameraDrift = smoothstep(0.08, 0.9, progress);
     const focusX = mix(-1.2, 1.5, cameraDrift);
     const focusY = mix(-0.6, 0.15, cameraDrift);
     const halfFovTan = Math.tan((this.camera.fov * Math.PI) / 360);
+    const rawPlanetScreenX = sourceState.sourceScreen?.x ?? 0;
+    const rawPlanetScreenY = sourceState.sourceScreen?.y ?? 0;
+    const planetScreenX = Math.max(-0.82, Math.min(0.82, rawPlanetScreenX));
+    const planetScreenY = Math.max(-0.74, Math.min(0.74, rawPlanetScreenY));
+    const forwardWorld = this._beltDirectionWorld
+      .set(focusX, focusY, -10)
+      .sub(this.camera.position)
+      .normalize();
+    const rightWorld = this._beltRightWorld.setFromMatrixColumn(this.camera.matrixWorld, 0).normalize();
+    const upWorld = this._beltUpWorld.setFromMatrixColumn(this.camera.matrixWorld, 1).normalize();
 
     this.asteroidGroup.visible = true;
 
-    this.asteroidSprites.forEach((entry, index) => {
-      const cycle = (progress * entry.speed + entry.phase) % 1;
-      const approach = smoothstep(0, 0.98, cycle);
-      const z = mix(entry.baseZ, entry.endZ, approach);
-      const scale = entry.scaleBase + approach * entry.scaleBoost;
-      const distance = Math.max(1, this.camera.position.z - z);
-      const halfHeight = halfFovTan * distance * 1.08;
-      const halfWidth = halfHeight * this.camera.aspect * 1.08;
-      const laneX = mix(entry.laneStartX, entry.laneEndX, approach);
-      const laneY = mix(entry.laneStartY, entry.laneEndY, approach);
-      const flowJitterX = Math.sin(progress * 4.8 + index * 0.61 + entry.phase * Math.PI * 2) * entry.wobbleX;
-      const flowJitterY = Math.cos(progress * 5.6 + index * 0.47 + entry.phase * Math.PI * 2) * entry.wobbleY;
-      const x = focusX + (laneX + flowJitterX) * halfWidth;
-      const y = focusY + (laneY + flowJitterY) * halfHeight;
+    this.asteroidSprites.forEach((entry) => {
+      const depthDistance = Math.max(6, (this.camera.position.z - entry.zStart) - entry.travelDistance * travel);
+      const halfHeight = halfFovTan * depthDistance * 1.14;
+      const halfWidth = halfHeight * this.camera.aspect * 1.14;
+      const baseNormX = entry.laneX * entry.driftX;
+      const baseNormY = entry.laneY * entry.driftY;
+      const radialNormDx = baseNormX - planetScreenX;
+      const radialNormDy = baseNormY - planetScreenY;
+      const radialNormLength = Math.hypot(radialNormDx, radialNormDy) || 1;
+      const currentNormX = baseNormX + ((radialNormDx / radialNormLength) * entry.radialDrift * travel * 0.06);
+      const currentNormY = baseNormY + ((radialNormDy / radialNormLength) * entry.radialDrift * travel * 0.06);
+      const screenRadius = Math.hypot(
+        currentNormX,
+        currentNormY,
+      );
+      const centerScale = mix(0.66, 1, smoothstep(0.08, 0.72, screenRadius));
 
-      entry.sprite.position.set(x, y, z);
-      entry.sprite.scale.set(scale * entry.stretch, scale * entry.squash, 1);
-      entry.sprite.material.opacity = entry.opacityMax;
-      entry.sprite.material.rotation = entry.rotationBase + entry.spin * approach;
+      entry.sprite.position
+        .copy(this.camera.position)
+        .addScaledVector(forwardWorld, depthDistance)
+        .addScaledVector(rightWorld, currentNormX * halfWidth)
+        .addScaledVector(upWorld, currentNormY * halfHeight);
+      entry.sprite.scale.set(
+        entry.scaleBase * centerScale * entry.stretch,
+        entry.scaleBase * centerScale * entry.squash,
+        1,
+      );
+      entry.sprite.material.opacity = 1;
+      entry.sprite.material.rotation = entry.rotationBase
+        + travel * entry.spin
+        + entry.phase * Math.PI * 2;
     });
   }
 
@@ -859,14 +857,10 @@ export class Scene3SpaceField {
     this.camera.updateMatrixWorld();
 
     this._updatePreviewPlanet(this.progress);
-    // Asteroid sprites are temporarily disabled while the particle-only belt
-    // pass is tuned.
-    // this._updateAsteroidSprites(this.progress);
-    if (this.asteroidGroup) {
-      this.asteroidGroup.visible = false;
-    }
-    this._updateParticleField(this.farDust, this.progress, farOpacity);
-    this._updateParticleField(this.midParticles, this.progress, midOpacity * 1.08);
+    const sourceState = this._getPlanetSourceState();
+    this._updateAsteroidSprites(this.progress, sourceState);
+    this._updateParticleField(this.farDust, this.progress, farOpacity, sourceState);
+    this._updateParticleField(this.midParticles, this.progress, midOpacity * 1.08, sourceState);
     if (this.streakGroup) {
       this.streakGroup.visible = false;
     }

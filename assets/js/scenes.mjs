@@ -124,26 +124,26 @@ class AsteroidBelt extends Scene {
 
     if (backdropEl) {
       gsap.set(backdropEl, {
-        scale: 1.12,
-        xPercent: -4,
-        yPercent: 8,
-        autoAlpha: 0.44,
+        scale: 1.02,
+        xPercent: 0,
+        yPercent: 0,
+        autoAlpha: 0.78,
         transformOrigin: "50% 50%",
       });
-      tl.to(backdropEl, { scale: 1.02, xPercent: 0, yPercent: 0, autoAlpha: 0.96, duration: 0.24, ease: "power2.out" }, 0);
-      tl.to(backdropEl, { scale: 0.94, xPercent: 4, yPercent: -10, autoAlpha: 0.84, duration: 0.84, ease: "none" }, 0.24);
+      tl.to(backdropEl, { scale: 1.04, xPercent: 0, yPercent: 0, autoAlpha: 0.9, duration: 0.24, ease: "power2.out" }, 0);
+      tl.to(backdropEl, { scale: 1.08, xPercent: 0, yPercent: 0, autoAlpha: 0.92, duration: 0.84, ease: "none" }, 0.24);
     }
 
     if (nebulaEl) {
       gsap.set(nebulaEl, {
-        scale: 1.18,
-        xPercent: -8,
-        yPercent: 10,
-        autoAlpha: 0.28,
+        scale: 1.03,
+        xPercent: 0,
+        yPercent: 0,
+        autoAlpha: 0.44,
         transformOrigin: "50% 50%",
       });
-      tl.to(nebulaEl, { scale: 1.02, xPercent: -1, yPercent: 1, autoAlpha: 0.72, duration: 0.28, ease: "power2.out" }, 0.04);
-      tl.to(nebulaEl, { scale: 0.94, xPercent: 8, yPercent: -12, autoAlpha: 0.58, duration: 0.8, ease: "none" }, 0.28);
+      tl.to(nebulaEl, { scale: 1.05, xPercent: 0, yPercent: 0, autoAlpha: 0.58, duration: 0.28, ease: "power2.out" }, 0.04);
+      tl.to(nebulaEl, { scale: 1.1, xPercent: 0, yPercent: 0, autoAlpha: 0.62, duration: 0.8, ease: "none" }, 0.28);
     }
 
     if (fallbackEarthEl) {
@@ -189,6 +189,7 @@ class AsteroidBelt extends Scene {
     }
 
     const isFallbackPlanetVisible = shellEl.classList.contains("scene3-shell--fallback");
+    const useDomAsteroids = isFallbackPlanetVisible;
 
     if (fallbackPlanetEl && isFallbackPlanetVisible) {
       gsap.set(fallbackPlanetEl, {
@@ -222,161 +223,163 @@ class AsteroidBelt extends Scene {
       tl.to(fallbackPlanetCoreEl, { scale: 1.12, autoAlpha: 1, duration: 0.84, ease: "none" }, 0.22);
     }
 
-    [
-      {
-        element: asteroidById("large-a"),
-        width: Math.min(sceneWidth * 0.4, 520) * density,
-        startAt: 0,
-        midAt: 0.18,
-        endAt: 0.44,
-        start: { x: sceneWidth * 0.88, y: sceneHeight * 0.18, rotation: -12, scale: 0.56, autoAlpha: 0.28 },
-        mid: { x: sceneWidth * 0.58, y: sceneHeight * 0.24, rotation: 18, scale: 1.32, autoAlpha: 1 },
-        end: { x: sceneWidth * 0.02, y: sceneHeight * 0.62, rotation: 84, scale: 3.1, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("large-b"),
-        width: Math.min(sceneWidth * 0.34, 440) * density,
-        startAt: 0.04,
-        midAt: 0.24,
-        endAt: 0.5,
-        start: { x: sceneWidth * 0.92, y: sceneHeight * 0.04, rotation: 8, scale: 0.44, autoAlpha: 0.24 },
-        mid: { x: sceneWidth * 0.64, y: sceneHeight * 0.14, rotation: -16, scale: 1.08, autoAlpha: 1 },
-        end: { x: sceneWidth * 0.14, y: sceneHeight * 0.3, rotation: -64, scale: 2.5, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-a"),
-        width: Math.min(sceneWidth * 0.2, 260) * density,
-        startAt: 0.04,
-        midAt: 0.24,
-        endAt: 0.48,
-        start: { x: vw * 104, y: vh * 30, rotation: -20, scale: 0.34, autoAlpha: 0.18 },
-        mid: { x: vw * 64, y: vh * 34, rotation: 22, scale: 0.98, autoAlpha: 1 },
-        end: { x: vw * 18, y: vh * 48, rotation: 72, scale: 1.98, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-b"),
-        width: Math.min(sceneWidth * 0.18, 230) * density,
-        startAt: 0.12,
-        midAt: 0.3,
-        endAt: 0.54,
-        start: { x: vw * 102, y: vh * 56, rotation: -8, scale: 0.28, autoAlpha: 0.16 },
-        mid: { x: vw * 68, y: vh * 52, rotation: -24, scale: 0.88, autoAlpha: 0.96 },
-        end: { x: vw * 20, y: vh * 62, rotation: -82, scale: 1.82, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-c"),
-        width: Math.min(sceneWidth * 0.115, 156) * density,
-        startAt: 0.42,
-        midAt: 0.58,
-        endAt: 0.78,
-        start: { x: vw * 98, y: vh * 14, rotation: 6, scale: 0.16, autoAlpha: 0 },
-        mid: { x: vw * 68, y: vh * 18, rotation: 24, scale: 0.62, autoAlpha: 0.88 },
-        end: { x: vw * 26, y: vh * 24, rotation: 72, scale: 1.52, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-d"),
-        width: Math.min(sceneWidth * 0.118, 164) * density,
-        startAt: 0.48,
-        midAt: 0.62,
-        endAt: 0.82,
-        start: { x: vw * 104, y: vh * 68, rotation: -14, scale: 0.18, autoAlpha: 0 },
-        mid: { x: vw * 78, y: vh * 58, rotation: -36, scale: 0.66, autoAlpha: 0.86 },
-        end: { x: vw * 42, y: vh * 66, rotation: -84, scale: 1.58, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-e"),
-        width: Math.min(sceneWidth * 0.11, 150) * density,
-        startAt: 0.52,
-        midAt: 0.68,
-        endAt: 0.88,
-        start: { x: vw * 92, y: vh * 2, rotation: -18, scale: 0.14, autoAlpha: 0 },
-        mid: { x: vw * 68, y: vh * 8, rotation: 16, scale: 0.56, autoAlpha: 0.84 },
-        end: { x: vw * 38, y: vh * 14, rotation: 54, scale: 1.34, autoAlpha: 0 },
-      },
-      {
-        element: asteroidById("medium-f"),
-        width: Math.min(sceneWidth * 0.116, 160) * density,
-        startAt: 0.58,
-        midAt: 0.74,
-        endAt: 0.94,
-        start: { x: vw * 94, y: vh * 40, rotation: 14, scale: 0.14, autoAlpha: 0 },
-        mid: { x: vw * 70, y: vh * 36, rotation: -18, scale: 0.52, autoAlpha: 0.78 },
-        end: { x: vw * 40, y: vh * 28, rotation: -58, scale: 1.28, autoAlpha: 0 },
-      },
-    ].forEach((config) => {
-      addFlight(config.element, config);
-    });
+    if (useDomAsteroids) {
+      [
+        {
+          element: asteroidById("large-a"),
+          width: Math.min(sceneWidth * 0.4, 520) * density,
+          startAt: 0,
+          midAt: 0.18,
+          endAt: 0.44,
+          start: { x: sceneWidth * 0.88, y: sceneHeight * 0.18, rotation: -12, scale: 0.56, autoAlpha: 0.28 },
+          mid: { x: sceneWidth * 0.58, y: sceneHeight * 0.24, rotation: 18, scale: 1.32, autoAlpha: 1 },
+          end: { x: sceneWidth * 0.02, y: sceneHeight * 0.62, rotation: 84, scale: 3.1, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("large-b"),
+          width: Math.min(sceneWidth * 0.34, 440) * density,
+          startAt: 0.04,
+          midAt: 0.24,
+          endAt: 0.5,
+          start: { x: sceneWidth * 0.92, y: sceneHeight * 0.04, rotation: 8, scale: 0.44, autoAlpha: 0.24 },
+          mid: { x: sceneWidth * 0.64, y: sceneHeight * 0.14, rotation: -16, scale: 1.08, autoAlpha: 1 },
+          end: { x: sceneWidth * 0.14, y: sceneHeight * 0.3, rotation: -64, scale: 2.5, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-a"),
+          width: Math.min(sceneWidth * 0.2, 260) * density,
+          startAt: 0.04,
+          midAt: 0.24,
+          endAt: 0.48,
+          start: { x: vw * 104, y: vh * 30, rotation: -20, scale: 0.34, autoAlpha: 0.18 },
+          mid: { x: vw * 64, y: vh * 34, rotation: 22, scale: 0.98, autoAlpha: 1 },
+          end: { x: vw * 18, y: vh * 48, rotation: 72, scale: 1.98, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-b"),
+          width: Math.min(sceneWidth * 0.18, 230) * density,
+          startAt: 0.12,
+          midAt: 0.3,
+          endAt: 0.54,
+          start: { x: vw * 102, y: vh * 56, rotation: -8, scale: 0.28, autoAlpha: 0.16 },
+          mid: { x: vw * 68, y: vh * 52, rotation: -24, scale: 0.88, autoAlpha: 0.96 },
+          end: { x: vw * 20, y: vh * 62, rotation: -82, scale: 1.82, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-c"),
+          width: Math.min(sceneWidth * 0.115, 156) * density,
+          startAt: 0.42,
+          midAt: 0.58,
+          endAt: 0.78,
+          start: { x: vw * 98, y: vh * 14, rotation: 6, scale: 0.16, autoAlpha: 0 },
+          mid: { x: vw * 68, y: vh * 18, rotation: 24, scale: 0.62, autoAlpha: 0.88 },
+          end: { x: vw * 26, y: vh * 24, rotation: 72, scale: 1.52, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-d"),
+          width: Math.min(sceneWidth * 0.118, 164) * density,
+          startAt: 0.48,
+          midAt: 0.62,
+          endAt: 0.82,
+          start: { x: vw * 104, y: vh * 68, rotation: -14, scale: 0.18, autoAlpha: 0 },
+          mid: { x: vw * 78, y: vh * 58, rotation: -36, scale: 0.66, autoAlpha: 0.86 },
+          end: { x: vw * 42, y: vh * 66, rotation: -84, scale: 1.58, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-e"),
+          width: Math.min(sceneWidth * 0.11, 150) * density,
+          startAt: 0.52,
+          midAt: 0.68,
+          endAt: 0.88,
+          start: { x: vw * 92, y: vh * 2, rotation: -18, scale: 0.14, autoAlpha: 0 },
+          mid: { x: vw * 68, y: vh * 8, rotation: 16, scale: 0.56, autoAlpha: 0.84 },
+          end: { x: vw * 38, y: vh * 14, rotation: 54, scale: 1.34, autoAlpha: 0 },
+        },
+        {
+          element: asteroidById("medium-f"),
+          width: Math.min(sceneWidth * 0.116, 160) * density,
+          startAt: 0.58,
+          midAt: 0.74,
+          endAt: 0.94,
+          start: { x: vw * 94, y: vh * 40, rotation: 14, scale: 0.14, autoAlpha: 0 },
+          mid: { x: vw * 70, y: vh * 36, rotation: -18, scale: 0.52, autoAlpha: 0.78 },
+          end: { x: vw * 40, y: vh * 28, rotation: -58, scale: 1.28, autoAlpha: 0 },
+        },
+      ].forEach((config) => {
+        addFlight(config.element, config);
+      });
 
-    [
-      {
-        element: clusterById("alpha"),
-        width: Math.min(sceneWidth * 0.26, 320) * density,
-        height: Math.min(sceneWidth * 0.2, 250) * density,
-        startAt: 0.12,
-        midAt: 0.32,
-        endAt: 0.56,
-        start: { x: sceneWidth * 0.86, y: sceneHeight * 0.28, rotation: -10, scale: 0.52, autoAlpha: 0.18 },
-        mid: { x: sceneWidth * 0.56, y: sceneHeight * 0.34, rotation: 10, scale: 1.08, autoAlpha: 1 },
-        end: { x: sceneWidth * 0.08, y: sceneHeight * 0.6, rotation: 30, scale: 1.86, autoAlpha: 0 },
-      },
-      {
-        element: clusterById("beta"),
-        width: Math.min(sceneWidth * 0.22, 280) * density,
-        height: Math.min(sceneWidth * 0.18, 220) * density,
-        startAt: 0.08,
-        midAt: 0.24,
-        endAt: 0.44,
-        start: { x: sceneWidth * 0.92, y: sceneHeight * 0.1, rotation: 12, scale: 0.42, autoAlpha: 0.14 },
-        mid: { x: sceneWidth * 0.62, y: sceneHeight * 0.18, rotation: -10, scale: 0.92, autoAlpha: 0.96 },
-        end: { x: sceneWidth * 0.16, y: sceneHeight * 0.32, rotation: -34, scale: 1.62, autoAlpha: 0 },
-      },
-      {
-        element: clusterById("gamma"),
-        width: Math.min(sceneWidth * 0.14, 184) * density,
-        height: Math.min(sceneWidth * 0.12, 150) * density,
-        startAt: 0.54,
-        midAt: 0.7,
-        endAt: 0.9,
-        start: { x: vw * 92, y: vh * 58, rotation: -18, scale: 0.24, autoAlpha: 0 },
-        mid: { x: vw * 68, y: vh * 50, rotation: 8, scale: 0.66, autoAlpha: 0.74 },
-        end: { x: vw * 30, y: vh * 64, rotation: 28, scale: 1.3, autoAlpha: 0 },
-      },
-    ].forEach((config) => {
-      if (config.element) {
-        setBox(config.element, config.width, config.height);
-      }
-      addFlight(config.element, config);
-    });
+      [
+        {
+          element: clusterById("alpha"),
+          width: Math.min(sceneWidth * 0.26, 320) * density,
+          height: Math.min(sceneWidth * 0.2, 250) * density,
+          startAt: 0.12,
+          midAt: 0.32,
+          endAt: 0.56,
+          start: { x: sceneWidth * 0.86, y: sceneHeight * 0.28, rotation: -10, scale: 0.52, autoAlpha: 0.18 },
+          mid: { x: sceneWidth * 0.56, y: sceneHeight * 0.34, rotation: 10, scale: 1.08, autoAlpha: 1 },
+          end: { x: sceneWidth * 0.08, y: sceneHeight * 0.6, rotation: 30, scale: 1.86, autoAlpha: 0 },
+        },
+        {
+          element: clusterById("beta"),
+          width: Math.min(sceneWidth * 0.22, 280) * density,
+          height: Math.min(sceneWidth * 0.18, 220) * density,
+          startAt: 0.08,
+          midAt: 0.24,
+          endAt: 0.44,
+          start: { x: sceneWidth * 0.92, y: sceneHeight * 0.1, rotation: 12, scale: 0.42, autoAlpha: 0.14 },
+          mid: { x: sceneWidth * 0.62, y: sceneHeight * 0.18, rotation: -10, scale: 0.92, autoAlpha: 0.96 },
+          end: { x: sceneWidth * 0.16, y: sceneHeight * 0.32, rotation: -34, scale: 1.62, autoAlpha: 0 },
+        },
+        {
+          element: clusterById("gamma"),
+          width: Math.min(sceneWidth * 0.14, 184) * density,
+          height: Math.min(sceneWidth * 0.12, 150) * density,
+          startAt: 0.54,
+          midAt: 0.7,
+          endAt: 0.9,
+          start: { x: vw * 92, y: vh * 58, rotation: -18, scale: 0.24, autoAlpha: 0 },
+          mid: { x: vw * 68, y: vh * 50, rotation: 8, scale: 0.66, autoAlpha: 0.74 },
+          end: { x: vw * 30, y: vh * 64, rotation: 28, scale: 1.3, autoAlpha: 0 },
+        },
+      ].forEach((config) => {
+        if (config.element) {
+          setBox(config.element, config.width, config.height);
+        }
+        addFlight(config.element, config);
+      });
 
-    [
-      {
-        element: blurById("alpha"),
-        width: Math.min(sceneWidth * 0.34, 420) * density,
-        height: Math.min(sceneWidth * 0.34, 420) * density,
-        startAt: 0.06,
-        midAt: 0.22,
-        endAt: 0.4,
-        start: { x: sceneWidth * 0.9, y: sceneHeight * 0.14, rotation: -18, scale: 0.74, autoAlpha: 0.18 },
-        mid: { x: sceneWidth * 0.58, y: sceneHeight * 0.18, rotation: -42, scale: 1.42, autoAlpha: 0.98 },
-        end: { x: sceneWidth * 0.12, y: sceneHeight * 0.24, rotation: -78, scale: 2.44, autoAlpha: 0 },
-      },
-      {
-        element: blurById("beta"),
-        width: Math.min(sceneWidth * 0.28, 340) * density,
-        height: Math.min(sceneWidth * 0.28, 340) * density,
-        startAt: 0.16,
-        midAt: 0.32,
-        endAt: 0.5,
-        start: { x: sceneWidth * 0.84, y: sceneHeight * 0.56, rotation: -10, scale: 0.62, autoAlpha: 0.14 },
-        mid: { x: sceneWidth * 0.54, y: sceneHeight * 0.5, rotation: -34, scale: 1.18, autoAlpha: 0.9 },
-        end: { x: sceneWidth * 0.08, y: sceneHeight * 0.38, rotation: -60, scale: 2.08, autoAlpha: 0 },
-      },
-    ].forEach((config) => {
-      if (config.element) {
-        setBox(config.element, config.width, config.height);
-      }
-      addFlight(config.element, config);
-    });
+      [
+        {
+          element: blurById("alpha"),
+          width: Math.min(sceneWidth * 0.34, 420) * density,
+          height: Math.min(sceneWidth * 0.34, 420) * density,
+          startAt: 0.06,
+          midAt: 0.22,
+          endAt: 0.4,
+          start: { x: sceneWidth * 0.9, y: sceneHeight * 0.14, rotation: -18, scale: 0.74, autoAlpha: 0.18 },
+          mid: { x: sceneWidth * 0.58, y: sceneHeight * 0.18, rotation: -42, scale: 1.42, autoAlpha: 0.98 },
+          end: { x: sceneWidth * 0.12, y: sceneHeight * 0.24, rotation: -78, scale: 2.44, autoAlpha: 0 },
+        },
+        {
+          element: blurById("beta"),
+          width: Math.min(sceneWidth * 0.28, 340) * density,
+          height: Math.min(sceneWidth * 0.28, 340) * density,
+          startAt: 0.16,
+          midAt: 0.32,
+          endAt: 0.5,
+          start: { x: sceneWidth * 0.84, y: sceneHeight * 0.56, rotation: -10, scale: 0.62, autoAlpha: 0.14 },
+          mid: { x: sceneWidth * 0.54, y: sceneHeight * 0.5, rotation: -34, scale: 1.18, autoAlpha: 0.9 },
+          end: { x: sceneWidth * 0.08, y: sceneHeight * 0.38, rotation: -60, scale: 2.08, autoAlpha: 0 },
+        },
+      ].forEach((config) => {
+        if (config.element) {
+          setBox(config.element, config.width, config.height);
+        }
+        addFlight(config.element, config);
+      });
+    }
 
     [
       {
