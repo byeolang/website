@@ -409,28 +409,67 @@ export class Scene3SpaceField {
     this.largeAsteroidSprites = [];
 
     const largeLayer = {
-      count: 7,
-      startDistance: [10, 16],
-      targetDepth: [4.8, 6.3],
-      targetNormX: [-1.08, 1.08],
-      targetNormY: [0.64, 1.04],
-      worldScale: [1.35, 1.9],
-      staggerStart: 22,
-      staggerStep: 12,
-      travelDistance: 128,
-      exitDistance: [10, 18],
-      stretch: [0.94, 1.08],
-      squash: [0.9, 1.02],
-      rotation: [-0.18, 0.18],
-      spin: [0.08, 0.22],
+      count: 3,
       color: 0xf1e7da,
       renderOrder: 36,
+      travelDistance: 236,
     };
 
+    const largeConfigs = [
+      {
+        texture: largeAsteroidSources[0],
+        sourceNormX: -1.22,
+        sourceNormY: -1.1,
+        targetDepth: 5.2,
+        targetNormX: -0.92,
+        targetNormY: -0.72,
+        routeBackOffset: -12.4,
+        initialRouteOffset: 1.2,
+        worldScale: 2.83,
+        exitDistance: 12,
+        stretch: 1.02,
+        squash: 0.94,
+        rotationBase: -0.08,
+        spin: 0.12,
+      },
+      {
+        texture: largeAsteroidSources[1],
+        sourceNormX: -1.16,
+        sourceNormY: 1.06,
+        targetDepth: 5.7,
+        targetNormX: -0.84,
+        targetNormY: 0.82,
+        routeBackOffset: 65.8,
+        initialRouteOffset: 1.5,
+        worldScale: 3.07,
+        exitDistance: 14,
+        stretch: 0.98,
+        squash: 0.92,
+        rotationBase: 0.06,
+        spin: 0.16,
+      },
+      {
+        texture: largeAsteroidSources[0],
+        sourceNormX: 1.28,
+        sourceNormY: 0.08,
+        targetDepth: 6.1,
+        targetNormX: 0.9,
+        targetNormY: 0.18,
+        routeBackOffset: 15.6,
+        initialRouteOffset: 1.8,
+        worldScale: 3.28,
+        exitDistance: 16,
+        stretch: 1.04,
+        squash: 0.96,
+        rotationBase: 0.1,
+        spin: 0.18,
+      },
+    ];
+
     const makeLargeEntry = (index) => {
-      const texture = largeAsteroidSources[Math.floor(Math.random() * largeAsteroidSources.length)];
+      const config = largeConfigs[index];
       const material = new THREE.SpriteMaterial({
-        map: texture,
+        map: config.texture,
         transparent: true,
         opacity: 1,
         depthWrite: false,
@@ -444,20 +483,20 @@ export class Scene3SpaceField {
 
       return {
         sprite,
-        startDistance: randomBetween(largeLayer.startDistance[0], largeLayer.startDistance[1]),
-        targetDepth: randomBetween(largeLayer.targetDepth[0], largeLayer.targetDepth[1]),
-        targetNormX: randomBetween(largeLayer.targetNormX[0], largeLayer.targetNormX[1]),
-        targetNormY: randomBetween(largeLayer.targetNormY[0], largeLayer.targetNormY[1]),
-        worldScale: randomBetween(largeLayer.worldScale[0], largeLayer.worldScale[1]),
-        staggerDistance: largeLayer.staggerStart
-          + (index * largeLayer.staggerStep)
-          + randomBetween(-2.2, 2.2),
+        targetDepth: config.targetDepth,
+        targetNormX: config.targetNormX,
+        targetNormY: config.targetNormY,
+        sourceNormX: config.sourceNormX,
+        sourceNormY: config.sourceNormY,
+        routeBackOffset: config.routeBackOffset,
+        worldScale: config.worldScale,
+        initialRouteOffset: config.initialRouteOffset,
         travelDistance: largeLayer.travelDistance,
-        exitDistance: randomBetween(largeLayer.exitDistance[0], largeLayer.exitDistance[1]),
-        stretch: randomBetween(largeLayer.stretch[0], largeLayer.stretch[1]),
-        squash: randomBetween(largeLayer.squash[0], largeLayer.squash[1]),
-        rotationBase: randomBetween(largeLayer.rotation[0], largeLayer.rotation[1]),
-        spin: randomBetween(largeLayer.spin[0], largeLayer.spin[1]),
+        exitDistance: config.exitDistance,
+        stretch: config.stretch,
+        squash: config.squash,
+        rotationBase: config.rotationBase,
+        spin: config.spin,
       };
     };
 
@@ -886,8 +925,8 @@ export class Scene3SpaceField {
       return;
     }
 
-    const largeVisibility = progress > 0.08 && progress < 0.96;
-    const largeSceneProgress = clamp01((progress - 0.08) / 0.88);
+    const largeVisibility = progress < 0.96;
+    const largeSceneProgress = clamp01(progress / 0.96);
 
     this.largeAsteroidGroup.visible = largeVisibility;
 
@@ -896,6 +935,7 @@ export class Scene3SpaceField {
     }
 
     this.largeAsteroidSprites.forEach((entry) => {
+      const localProgress = largeSceneProgress;
       const targetHalfHeight = halfFovTan * entry.targetDepth * 1.1;
       const targetHalfWidth = targetHalfHeight * this.camera.aspect * 1.1;
       const targetWorld = this._largeTargetWorld
@@ -903,17 +943,25 @@ export class Scene3SpaceField {
         .addScaledVector(forwardWorld, entry.targetDepth)
         .addScaledVector(rightWorld, entry.targetNormX * targetHalfWidth)
         .addScaledVector(upWorld, entry.targetNormY * targetHalfHeight);
+
+      const planetRadiusWorld = 4.1 * (this.previewPlanetGroup?.scale.x ?? 1);
+      const baseSourceWorld = this._asteroidPositionWorld
+        .copy(sourceState.sourceWorld)
+        .addScaledVector(rightWorld, entry.sourceNormX * planetRadiusWorld)
+        .addScaledVector(upWorld, entry.sourceNormY * planetRadiusWorld);
+
       const routeWorld = this._largeRouteWorld
         .copy(targetWorld)
-        .sub(sourceState.sourceWorld);
-      const routeLength = Math.max(0.001, routeWorld.length());
-      routeWorld.multiplyScalar(1 / routeLength);
+        .sub(baseSourceWorld);
+      const baseRouteLength = Math.max(0.001, routeWorld.length());
+      routeWorld.multiplyScalar(1 / baseRouteLength);
 
-      const distanceAlongRoute = entry.startDistance
-        + (entry.travelDistance * largeSceneProgress)
-        - entry.staggerDistance;
-      const visible = distanceAlongRoute >= entry.startDistance
-        && distanceAlongRoute <= routeLength + entry.exitDistance;
+      const startWorld = baseSourceWorld.addScaledVector(routeWorld, -entry.routeBackOffset);
+      const routeLength = baseRouteLength + entry.routeBackOffset;
+
+      const distanceAlongRoute = entry.initialRouteOffset
+        + (entry.travelDistance * localProgress);
+      const visible = distanceAlongRoute <= routeLength + entry.exitDistance;
 
       entry.sprite.visible = visible;
 
@@ -922,7 +970,7 @@ export class Scene3SpaceField {
       }
 
       entry.sprite.position
-        .copy(sourceState.sourceWorld)
+        .copy(startWorld)
         .addScaledVector(routeWorld, distanceAlongRoute);
       entry.sprite.scale.set(
         entry.worldScale * entry.stretch,
@@ -931,7 +979,7 @@ export class Scene3SpaceField {
       );
       entry.sprite.material.opacity = 1;
       entry.sprite.material.rotation = entry.rotationBase
-        + largeSceneProgress * entry.spin;
+        + localProgress * entry.spin;
     });
   }
 
