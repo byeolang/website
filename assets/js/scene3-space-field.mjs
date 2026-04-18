@@ -339,12 +339,16 @@ export class Scene3SpaceField {
       "assets/images/scenes/scene3-asteroid-small-04.png",
       "assets/images/scenes/scene3-asteroid-small-05.png",
     ].map(loadTexture);
+    const mediumAsteroidSources = [
+      "assets/images/scenes/scene3-asteroid-medium-01.png",
+      "assets/images/scenes/scene3-asteroid-medium-02.png",
+    ].map(loadTexture);
     const largeAsteroidSources = [
       "assets/images/scenes/scene3-asteroid-large-01.png",
       "assets/images/scenes/scene3-asteroid-large-02.png",
     ].map(loadTexture);
 
-    this.asteroidTextures = [...asteroidSources, ...largeAsteroidSources];
+    this.asteroidTextures = [...asteroidSources, ...mediumAsteroidSources, ...largeAsteroidSources];
     this.asteroidGroup = new THREE.Group();
     this.root.add(this.asteroidGroup);
     this.asteroidSprites = [];
@@ -404,6 +408,155 @@ export class Scene3SpaceField {
       this.asteroidSprites.push(makeEntry());
     }
 
+    this.mediumAsteroidGroup = new THREE.Group();
+    this.root.add(this.mediumAsteroidGroup);
+    this.mediumAsteroidSprites = [];
+
+    const mediumLayer = {
+      count: 6,
+      color: 0xeee5d8,
+      renderOrder: 35,
+      travelDistance: 148,
+    };
+
+    const mediumConfigs = [
+      {
+        texture: mediumAsteroidSources[0],
+        sourceDepth: 11.2,
+        sourceNormX: -0.58,
+        sourceNormY: -0.42,
+        targetDepth: 6.2,
+        targetNormX: -0.9,
+        targetNormY: -0.7,
+        initialRouteOffset: -2.6,
+        worldScale: 0.7,
+        exitDistance: 12,
+        stretch: 1.02,
+        squash: 0.96,
+        rotationBase: -0.1,
+        spin: 0.1,
+      },
+      {
+        texture: mediumAsteroidSources[1],
+        sourceDepth: 15.8,
+        sourceNormX: -0.44,
+        sourceNormY: -0.08,
+        targetDepth: 7.8,
+        targetNormX: -0.76,
+        targetNormY: -0.12,
+        initialRouteOffset: -6.8,
+        worldScale: 0.85,
+        exitDistance: 12,
+        stretch: 0.98,
+        squash: 0.94,
+        rotationBase: 0.08,
+        spin: 0.12,
+      },
+      {
+        texture: mediumAsteroidSources[0],
+        sourceDepth: 21.6,
+        sourceNormX: -0.38,
+        sourceNormY: 0.36,
+        targetDepth: 9.4,
+        targetNormX: -0.62,
+        targetNormY: 0.56,
+        initialRouteOffset: -8.8,
+        worldScale: 0.65,
+        exitDistance: 15,
+        stretch: 1.04,
+        squash: 0.96,
+        rotationBase: -0.04,
+        spin: 0.09,
+      },
+      {
+        texture: mediumAsteroidSources[1],
+        sourceDepth: 12.8,
+        sourceNormX: 0.46,
+        sourceNormY: -0.34,
+        targetDepth: 6.8,
+        targetNormX: 0.78,
+        targetNormY: -0.62,
+        initialRouteOffset: -4.4,
+        worldScale: 0.72,
+        exitDistance: 12,
+        stretch: 1,
+        squash: 0.94,
+        rotationBase: 0.12,
+        spin: 0.11,
+      },
+      {
+        texture: mediumAsteroidSources[0],
+        sourceDepth: 18.4,
+        sourceNormX: 0.5,
+        sourceNormY: 0.06,
+        targetDepth: 8.6,
+        targetNormX: 0.82,
+        targetNormY: 0.08,
+        initialRouteOffset: 6.8,
+        worldScale: 0.62,
+        exitDistance: 14,
+        stretch: 1.02,
+        squash: 0.95,
+        rotationBase: -0.02,
+        spin: 0.13,
+      },
+      {
+        texture: mediumAsteroidSources[1],
+        sourceDepth: 24.8,
+        sourceNormX: 0.42,
+        sourceNormY: 0.38,
+        targetDepth: 10.2,
+        targetNormX: 0.74,
+        targetNormY: 0.66,
+        initialRouteOffset: -7.6,
+        worldScale: 0.60,
+        exitDistance: 16,
+        stretch: 0.98,
+        squash: 0.93,
+        rotationBase: 0.05,
+        spin: 0.1,
+      },
+    ];
+
+    const makeMediumEntry = (index) => {
+      const config = mediumConfigs[index];
+      const material = new THREE.SpriteMaterial({
+        map: config.texture,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false,
+        depthTest: true,
+        toneMapped: false,
+        color: mediumLayer.color,
+      });
+      const sprite = new THREE.Sprite(material);
+      sprite.renderOrder = mediumLayer.renderOrder;
+      this.mediumAsteroidGroup.add(sprite);
+
+      return {
+        sprite,
+        targetDepth: config.targetDepth,
+        targetNormX: config.targetNormX,
+        targetNormY: config.targetNormY,
+        sourceDepth: config.sourceDepth,
+        sourceNormX: config.sourceNormX,
+        sourceNormY: config.sourceNormY,
+        distributedStart: true,
+        worldScale: config.worldScale,
+        initialRouteOffset: config.initialRouteOffset,
+        travelDistance: mediumLayer.travelDistance,
+        exitDistance: config.exitDistance,
+        stretch: config.stretch,
+        squash: config.squash,
+        rotationBase: config.rotationBase,
+        spin: config.spin,
+      };
+    };
+
+    for (let index = 0; index < mediumLayer.count; index += 1) {
+      this.mediumAsteroidSprites.push(makeMediumEntry(index));
+    }
+
     this.largeAsteroidGroup = new THREE.Group();
     this.root.add(this.largeAsteroidGroup);
     this.largeAsteroidSprites = [];
@@ -425,7 +578,7 @@ export class Scene3SpaceField {
         targetNormY: -0.72,
         routeBackOffset: -12.4,
         initialRouteOffset: 1.2,
-        worldScale: 2.83,
+        worldScale: 3.83,
         exitDistance: 12,
         stretch: 1.02,
         squash: 0.94,
@@ -441,7 +594,7 @@ export class Scene3SpaceField {
         targetNormY: 0.82,
         routeBackOffset: 65.8,
         initialRouteOffset: 1.5,
-        worldScale: 3.07,
+        worldScale: 4.07,
         exitDistance: 14,
         stretch: 0.98,
         squash: 0.92,
@@ -457,7 +610,7 @@ export class Scene3SpaceField {
         targetNormY: 0.18,
         routeBackOffset: 15.6,
         initialRouteOffset: 1.8,
-        worldScale: 3.28,
+        worldScale: 4.28,
         exitDistance: 16,
         stretch: 1.04,
         squash: 0.96,
@@ -678,17 +831,17 @@ export class Scene3SpaceField {
   }
 
   _updatePreviewPlanet(progress) {
-    const visibility = 1 - smoothstep(0.995, 1, progress) * 0.16;
-    const travel = smoothstep(0.1, 1, progress);
+    const visibility = 1 - smoothstep(0.9, 0.98, progress) * 0.16;
+    const travel = smoothstep(0.1, 0.78, progress);
 
     this.previewPlanetGroup.visible = visibility > 0.01;
     this.previewPlanetGroup.position.set(
-      mix(9.6, 8.1, travel),
-      mix(4.6, 3.8, travel),
-      mix(-36, -1.4, travel),
+      mix(9.6, 8.35, travel),
+      mix(4.6, 3.95, travel),
+      mix(-36, -6.8, travel),
     );
 
-    const scale = mix(0.68, 7.4, travel);
+    const scale = mix(0.68, 5.6, travel);
     this.previewPlanetGroup.scale.setScalar(scale);
     this.previewPlanetGroup.rotation.z = mix(-0.02, 0.03, travel);
     this.previewPlanetMesh.rotation.y = mix(0.16, 0.92, travel);
@@ -921,21 +1074,19 @@ export class Scene3SpaceField {
         + entry.phase * Math.PI * 2;
     });
 
-    if (!this.largeAsteroidSprites?.length) {
-      return;
-    }
+    const updateRouteSprites = (entries, group, sceneProgress) => {
+      if (!entries?.length) {
+        return;
+      }
 
-    const largeVisibility = progress < 0.96;
-    const largeSceneProgress = clamp01(progress / 0.96);
+      group.visible = progress < 0.96;
 
-    this.largeAsteroidGroup.visible = largeVisibility;
+      if (!group.visible) {
+        return;
+      }
 
-    if (!this.largeAsteroidGroup.visible) {
-      return;
-    }
-
-    this.largeAsteroidSprites.forEach((entry) => {
-      const localProgress = largeSceneProgress;
+      entries.forEach((entry) => {
+      const localProgress = sceneProgress;
       const targetHalfHeight = halfFovTan * entry.targetDepth * 1.1;
       const targetHalfWidth = targetHalfHeight * this.camera.aspect * 1.1;
       const targetWorld = this._largeTargetWorld
@@ -945,10 +1096,16 @@ export class Scene3SpaceField {
         .addScaledVector(upWorld, entry.targetNormY * targetHalfHeight);
 
       const planetRadiusWorld = 4.1 * (this.previewPlanetGroup?.scale.x ?? 1);
-      const baseSourceWorld = this._asteroidPositionWorld
-        .copy(sourceState.sourceWorld)
-        .addScaledVector(rightWorld, entry.sourceNormX * planetRadiusWorld)
-        .addScaledVector(upWorld, entry.sourceNormY * planetRadiusWorld);
+      const baseSourceWorld = entry.distributedStart
+        ? this._asteroidPositionWorld
+          .copy(this.camera.position)
+          .addScaledVector(forwardWorld, entry.sourceDepth)
+          .addScaledVector(rightWorld, entry.sourceNormX * (halfFovTan * entry.sourceDepth * this.camera.aspect * 1.02))
+          .addScaledVector(upWorld, entry.sourceNormY * (halfFovTan * entry.sourceDepth * 1.02))
+        : this._asteroidPositionWorld
+          .copy(sourceState.sourceWorld)
+          .addScaledVector(rightWorld, entry.sourceNormX * planetRadiusWorld)
+          .addScaledVector(upWorld, entry.sourceNormY * planetRadiusWorld);
 
       const routeWorld = this._largeRouteWorld
         .copy(targetWorld)
@@ -956,8 +1113,12 @@ export class Scene3SpaceField {
       const baseRouteLength = Math.max(0.001, routeWorld.length());
       routeWorld.multiplyScalar(1 / baseRouteLength);
 
-      const startWorld = baseSourceWorld.addScaledVector(routeWorld, -entry.routeBackOffset);
-      const routeLength = baseRouteLength + entry.routeBackOffset;
+      const startWorld = entry.distributedStart
+        ? baseSourceWorld
+        : baseSourceWorld.addScaledVector(routeWorld, -entry.routeBackOffset);
+      const routeLength = entry.distributedStart
+        ? baseRouteLength
+        : baseRouteLength + entry.routeBackOffset;
 
       const distanceAlongRoute = entry.initialRouteOffset
         + (entry.travelDistance * localProgress);
@@ -981,6 +1142,17 @@ export class Scene3SpaceField {
       entry.sprite.material.rotation = entry.rotationBase
         + localProgress * entry.spin;
     });
+    };
+
+    updateRouteSprites(this.mediumAsteroidSprites, this.mediumAsteroidGroup, clamp01(progress / 0.98));
+
+    if (!this.largeAsteroidSprites?.length) {
+      return;
+    }
+
+    const largeSceneProgress = clamp01(progress / 0.96);
+
+    updateRouteSprites(this.largeAsteroidSprites, this.largeAsteroidGroup, largeSceneProgress);
   }
 
   _resize() {
@@ -1049,6 +1221,9 @@ export class Scene3SpaceField {
       sprite.material?.dispose?.();
     });
     this.asteroidSprites?.forEach(({ sprite }) => {
+      sprite.material?.dispose?.();
+    });
+    this.mediumAsteroidSprites?.forEach(({ sprite }) => {
       sprite.material?.dispose?.();
     });
     this.largeAsteroidSprites?.forEach(({ sprite }) => {
