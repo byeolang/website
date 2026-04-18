@@ -833,15 +833,28 @@ export class Scene3SpaceField {
   _updatePreviewPlanet(progress) {
     const visibility = 1 - smoothstep(0.9, 0.98, progress) * 0.16;
     const travel = smoothstep(0.1, 0.78, progress);
+    let targetX = 8.35;
+    let targetY = 3.95;
+    let targetScale = 5.6;
+
+    if (this.width < 700) {
+      targetX = 0;
+      targetY = 0.95;
+      targetScale = 3.2;
+    } else if (this.width < 900) {
+      targetX = 7.1;
+      targetY = 3.35;
+      targetScale = 4.7;
+    }
 
     this.previewPlanetGroup.visible = visibility > 0.01;
     this.previewPlanetGroup.position.set(
-      mix(9.6, 8.35, travel),
-      mix(4.6, 3.95, travel),
+      mix(9.6, targetX, travel),
+      mix(4.6, targetY, travel),
       mix(-36, -6.8, travel),
     );
 
-    const scale = mix(0.68, 5.6, travel);
+    const scale = mix(0.68, targetScale, travel);
     this.previewPlanetGroup.scale.setScalar(scale);
     this.previewPlanetGroup.rotation.z = mix(-0.02, 0.03, travel);
     this.previewPlanetMesh.rotation.y = mix(0.16, 0.92, travel);
