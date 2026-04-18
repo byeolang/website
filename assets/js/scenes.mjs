@@ -110,7 +110,9 @@ class AsteroidBelt extends Scene {
     });
 
     const syncSpaceField = () => {
-      spaceField.setProgress(tl.progress());
+      const sceneProgress = tl.progress();
+      const fieldProgress = sceneProgress * 0.78;
+      spaceField.setProgress(fieldProgress);
     };
 
     window.addEventListener("resize", () => {
