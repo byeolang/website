@@ -3,6 +3,240 @@ import { Scene1IgnitionLight } from "./scene1-ignition-light.mjs"
 import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 import { Scene3SpaceField } from "./scene3-space-field.mjs"
 
+class DreamLanding extends Scene {
+  constructor() {
+    super(11);
+  }
+
+  _onAnimate(tl) {
+    const sceneEl = document.querySelector(`#${this.getName()}`);
+
+    if (!sceneEl) {
+      return tl;
+    }
+
+    const skyEl = sceneEl.querySelector(".scene4-shell__image--sky");
+    const glowEl = sceneEl.querySelector(".scene4-shell__image--horizon-glow");
+    const ridgeEl = sceneEl.querySelector(".scene4-shell__image--horizon-ridge");
+    const surfaceEl = sceneEl.querySelector(".scene4-shell__image--surface");
+    const rearCrystalEl = sceneEl.querySelector(".scene4-shell__crystal--rear");
+    const frontCrystalEl = sceneEl.querySelector(".scene4-shell__crystal--front");
+    const rocketGroupEl = sceneEl.querySelector(".scene4-shell__rocket-group");
+    const rocketFireEl = sceneEl.querySelector(".scene4-shell__rocket-fire");
+    const dustEl = sceneEl.querySelector(".scene4-shell__landing-dust");
+
+    gsap.set(skyEl, {
+      scale: 1.04,
+      xPercent: 0,
+      yPercent: 0,
+      autoAlpha: 1,
+      transformOrigin: "50% 50%",
+    });
+
+    gsap.set(glowEl, {
+      scale: 1.02,
+      yPercent: 2,
+      autoAlpha: 0.24,
+      transformOrigin: "50% 58%",
+    });
+
+    gsap.set(ridgeEl, {
+      scale: 1.03,
+      yPercent: 4,
+      autoAlpha: 0.42,
+      transformOrigin: "50% 64%",
+    });
+
+    gsap.set(surfaceEl, {
+      scale: 1.02,
+      yPercent: 2,
+      autoAlpha: 1,
+      transformOrigin: "50% 74%",
+    });
+
+    gsap.set(rearCrystalEl, {
+      xPercent: 4,
+      yPercent: 4,
+      autoAlpha: 0.72,
+      scale: 0.94,
+      transformOrigin: "50% 100%",
+    });
+
+    gsap.set(frontCrystalEl, {
+      xPercent: -5,
+      yPercent: 5,
+      autoAlpha: 0.82,
+      scale: 0.98,
+      transformOrigin: "50% 100%",
+    });
+
+    gsap.set(rocketGroupEl, {
+      xPercent: -50,
+      yPercent: -50,
+      x: 0,
+      y: "-62vh",
+      scale: 0.64,
+      rotation: -1,
+      autoAlpha: 0,
+      transformOrigin: "50% 78%",
+    });
+
+    gsap.set(rocketFireEl, {
+      autoAlpha: 0,
+      scaleX: 0.28,
+      scaleY: 0.22,
+      yPercent: -4,
+      transformOrigin: "50% 8%",
+    });
+
+    gsap.set(dustEl, {
+      xPercent: -50,
+      yPercent: -50,
+      autoAlpha: 0,
+      scaleX: 0.22,
+      scaleY: 0.22,
+      transformOrigin: "50% 50%",
+    });
+
+    tl.to(skyEl, {
+      scale: 1.01,
+      yPercent: -1,
+      duration: 1.4,
+      ease: "none",
+    }, 0);
+
+    tl.to(glowEl, {
+      autoAlpha: 0.58,
+      yPercent: 0,
+      scale: 1,
+      duration: 0.42,
+      ease: "power2.out",
+    }, 0.02);
+
+    tl.to(glowEl, {
+      autoAlpha: 0.5,
+      scale: 1.015,
+      duration: 0.72,
+      ease: "sine.inOut",
+    }, 0.56);
+
+    tl.to(ridgeEl, {
+      autoAlpha: 0.72,
+      yPercent: 0,
+      scale: 1,
+      duration: 0.46,
+      ease: "power2.out",
+    }, 0.06);
+
+    tl.to(surfaceEl, {
+      yPercent: 0,
+      scale: 1,
+      duration: 0.42,
+      ease: "power2.out",
+    }, 0.04);
+
+    tl.to(rearCrystalEl, {
+      xPercent: 0,
+      yPercent: 0,
+      autoAlpha: 0.78,
+      scale: 1,
+      duration: 1.2,
+      ease: "none",
+    }, 0);
+
+    tl.to(frontCrystalEl, {
+      xPercent: 0,
+      yPercent: 0,
+      autoAlpha: 0.9,
+      scale: 1,
+      duration: 1.2,
+      ease: "none",
+    }, 0);
+
+    tl.to(rocketGroupEl, {
+      autoAlpha: 1,
+      y: "-42vh",
+      scale: 0.72,
+      rotation: 0.6,
+      duration: 0.2,
+      ease: "power2.out",
+    }, 0.08);
+
+    tl.to(rocketGroupEl, {
+      y: "-16vh",
+      scale: 0.88,
+      rotation: -0.3,
+      duration: 0.46,
+      ease: "sine.inOut",
+    }, 0.28);
+
+    tl.to(rocketGroupEl, {
+      y: "0vh",
+      scale: 1,
+      rotation: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    }, 0.72);
+
+    tl.to(rocketFireEl, {
+      autoAlpha: 0.2,
+      scaleX: 0.42,
+      scaleY: 0.34,
+      yPercent: -2,
+      duration: 0.24,
+      ease: "power2.out",
+    }, 0.26);
+
+    tl.to(rocketFireEl, {
+      autoAlpha: 0.66,
+      scaleX: 0.58,
+      scaleY: 0.7,
+      yPercent: 0,
+      duration: 0.24,
+      ease: "power2.out",
+    }, 0.68);
+
+    tl.to(rocketFireEl, {
+      autoAlpha: 0.08,
+      scaleX: 0.26,
+      scaleY: 0.2,
+      yPercent: -8,
+      duration: 0.22,
+      ease: "power2.in",
+    }, 0.98);
+
+    tl.to(dustEl, {
+      autoAlpha: 0.64,
+      scaleX: 0.92,
+      scaleY: 0.34,
+      duration: 0.16,
+      ease: "power2.out",
+    }, 0.94);
+
+    tl.to(dustEl, {
+      autoAlpha: 0.34,
+      scaleX: 1.2,
+      scaleY: 0.38,
+      duration: 0.32,
+      ease: "sine.out",
+    }, 1.1);
+
+    tl.to(rocketGroupEl, {
+      y: "0.8vh",
+      duration: 0.1,
+      ease: "power1.out",
+    }, 0.98);
+
+    tl.to(rocketGroupEl, {
+      y: "0vh",
+      duration: 0.14,
+      ease: "power1.inOut",
+    }, 1.08);
+
+    return tl;
+  }
+}
+
 class AsteroidBelt extends Scene {
   constructor() {
     super(14);
@@ -1317,7 +1551,7 @@ class TakeOff extends Scene {
 export class Scener {
   constructor() {
     this.scenes = [
-      new TakeOff(), new UprisingRocket(), new AsteroidBelt()
+      new TakeOff(), new UprisingRocket(), new AsteroidBelt(), new DreamLanding()
     ];
     this._didUserInteractDuringBoot = false;
     this._teardownBootInteractionGuard = null;

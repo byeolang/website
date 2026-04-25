@@ -25,6 +25,159 @@ div#rect2 {
 }
 
 /* styles for each scene: */
+section#DreamLanding {
+  background: #06131b;
+}
+
+#DreamLanding .scene4-shell {
+  --scene4-landing-x: 50%;
+  --scene4-landing-y: 70.5%;
+  --scene4-rocket-width: clamp(84px, 8.4vw, 142px);
+  --scene4-dust-width: min(48vw, 760px);
+  --scene4-crystal-front-width: min(24vw, 350px);
+  --scene4-crystal-rear-width: min(18vw, 250px);
+  background: #071722;
+  overflow: hidden;
+}
+
+#DreamLanding .scene4-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 66%, rgba(194, 222, 230, 0.12), rgba(194, 222, 230, 0) 22%),
+    linear-gradient(180deg, rgba(3, 10, 17, 0.06) 0%, rgba(3, 10, 17, 0) 42%, rgba(3, 10, 17, 0.28) 100%);
+  mix-blend-mode: screen;
+  opacity: 0.74;
+}
+
+#DreamLanding .scene4-shell__layer,
+#DreamLanding .scene4-shell__crystal,
+#DreamLanding .scene4-shell__landing-dust,
+#DreamLanding .scene4-shell__rocket-group {
+  position: absolute;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+#DreamLanding .scene4-shell__layer {
+  inset: 0;
+}
+
+#DreamLanding .scene4-shell__image,
+#DreamLanding .scene4-shell__crystal img,
+#DreamLanding .scene4-shell__landing-dust img,
+#DreamLanding .scene4-shell__rocket,
+#DreamLanding .scene4-shell__rocket-fire {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#DreamLanding .scene4-shell__image {
+  object-fit: cover;
+}
+
+#DreamLanding .scene4-shell__layer--sky {
+  z-index: 0;
+}
+
+#DreamLanding .scene4-shell__layer--horizon-glow {
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+#DreamLanding .scene4-shell__image--horizon-glow {
+  opacity: 0.78;
+}
+
+#DreamLanding .scene4-shell__layer--horizon-ridge {
+  z-index: 3;
+}
+
+#DreamLanding .scene4-shell__image--horizon-ridge {
+  opacity: 0.9;
+}
+
+#DreamLanding .scene4-shell__layer--surface {
+  z-index: 4;
+}
+
+#DreamLanding .scene4-shell__crystal {
+  aspect-ratio: 1;
+}
+
+#DreamLanding .scene4-shell__crystal img {
+  object-fit: contain;
+}
+
+#DreamLanding .scene4-shell__crystal--rear {
+  z-index: 5;
+  right: clamp(8px, 9vw, 150px);
+  bottom: clamp(16px, 7vh, 88px);
+  width: var(--scene4-crystal-rear-width);
+  opacity: 0.78;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.32));
+}
+
+#DreamLanding .scene4-shell__crystal--front {
+  z-index: 6;
+  left: clamp(8px, 7vw, 124px);
+  bottom: clamp(-8px, 2vh, 28px);
+  width: var(--scene4-crystal-front-width);
+  opacity: 0.9;
+  filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.38));
+}
+
+#DreamLanding .scene4-shell__landing-dust {
+  z-index: 7;
+  left: var(--scene4-landing-x);
+  top: calc(var(--scene4-landing-y) + var(--scene4-rocket-width) * 1.48);
+  width: var(--scene4-dust-width);
+  aspect-ratio: 1672 / 941;
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+
+#DreamLanding .scene4-shell__landing-dust img {
+  object-fit: contain;
+  opacity: 0.78;
+}
+
+#DreamLanding .scene4-shell__rocket-group {
+  z-index: 9;
+  left: var(--scene4-landing-x);
+  top: var(--scene4-landing-y);
+  width: var(--scene4-rocket-width);
+  height: calc(var(--scene4-rocket-width) * 2.08);
+}
+
+#DreamLanding .scene4-shell__rocket {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.42));
+}
+
+#DreamLanding .scene4-shell__rocket-fire {
+  position: absolute;
+  z-index: 1;
+  left: 28.6%;
+  top: 65.4%;
+  width: 43%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  filter: drop-shadow(0 0 12px rgba(255, 186, 113, 0.18));
+}
+
 section#UprisingRocket {
   background-color: transparent;
 }
