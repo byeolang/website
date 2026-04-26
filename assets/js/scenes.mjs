@@ -214,7 +214,7 @@ class DreamLanding extends Scene {
     }, 0.94);
 
     tl.to(dustEl, {
-      autoAlpha: 0.34,
+      autoAlpha: 0.42,
       scaleX: 1.2,
       scaleY: 0.38,
       duration: 0.32,
