@@ -16,6 +16,7 @@ class DreamLanding extends Scene {
     }
 
     const skyEl = sceneEl.querySelector(".scene4-shell__image--sky");
+    const atmosphereEl = sceneEl.querySelector(".scene4-shell__image--atmosphere");
     const glowEl = sceneEl.querySelector(".scene4-shell__image--horizon-glow");
     const ridgeEl = sceneEl.querySelector(".scene4-shell__image--horizon-ridge");
     const surfaceEl = sceneEl.querySelector(".scene4-shell__image--surface");
@@ -26,47 +27,55 @@ class DreamLanding extends Scene {
     const dustEl = sceneEl.querySelector(".scene4-shell__landing-dust");
 
     gsap.set(skyEl, {
-      scale: 1.04,
+      scale: 1.08,
       xPercent: 0,
-      yPercent: 0,
+      yPercent: 2,
       autoAlpha: 1,
       transformOrigin: "50% 50%",
     });
 
+    gsap.set(atmosphereEl, {
+      scale: 1.28,
+      xPercent: 0,
+      yPercent: 18,
+      autoAlpha: 0.72,
+      transformOrigin: "50% 45%",
+    });
+
     gsap.set(glowEl, {
-      scale: 1.02,
-      yPercent: 2,
-      autoAlpha: 0.24,
+      scale: 1.08,
+      yPercent: 54,
+      autoAlpha: 0,
       transformOrigin: "50% 58%",
     });
 
     gsap.set(ridgeEl, {
-      scale: 1.03,
-      yPercent: 4,
-      autoAlpha: 0.42,
+      scale: 1.1,
+      yPercent: 54,
+      autoAlpha: 0,
       transformOrigin: "50% 64%",
     });
 
     gsap.set(surfaceEl, {
-      scale: 1.02,
-      yPercent: 2,
-      autoAlpha: 1,
-      transformOrigin: "50% 74%",
+      scale: 1.12,
+      yPercent: 48,
+      autoAlpha: 0,
+      transformOrigin: "50% 78%",
     });
 
     gsap.set(rearCrystalEl, {
       xPercent: 4,
-      yPercent: 4,
-      autoAlpha: 0.72,
-      scale: 0.94,
+      yPercent: 32,
+      autoAlpha: 0,
+      scale: 0.88,
       transformOrigin: "50% 100%",
     });
 
     gsap.set(frontCrystalEl, {
       xPercent: -5,
-      yPercent: 5,
-      autoAlpha: 0.82,
-      scale: 0.98,
+      yPercent: 36,
+      autoAlpha: 0,
+      scale: 0.9,
       transformOrigin: "50% 100%",
     });
 
@@ -74,18 +83,18 @@ class DreamLanding extends Scene {
       xPercent: -50,
       yPercent: -50,
       x: 0,
-      y: "-62vh",
-      scale: 0.64,
-      rotation: -1,
-      autoAlpha: 0,
+      y: "-16vh",
+      scale: 0.94,
+      rotation: -0.4,
+      autoAlpha: 1,
       transformOrigin: "50% 78%",
     });
 
     gsap.set(rocketFireEl, {
       autoAlpha: 0,
-      scaleX: 0.28,
-      scaleY: 0.22,
-      yPercent: -4,
+      scaleX: 0.24,
+      scaleY: 0.18,
+      yPercent: -8,
       transformOrigin: "50% 8%",
     });
 
@@ -99,139 +108,180 @@ class DreamLanding extends Scene {
     });
 
     tl.to(skyEl, {
-      scale: 1.01,
-      yPercent: -1,
-      duration: 1.4,
+      scale: 1.02,
+      yPercent: -3,
+      duration: 1.5,
       ease: "none",
     }, 0);
 
-    tl.to(glowEl, {
-      autoAlpha: 0.58,
-      yPercent: 0,
+    tl.to(atmosphereEl, {
+      yPercent: -34,
+      scale: 1.08,
+      autoAlpha: 0.44,
+      duration: 0.82,
+      ease: "sine.inOut",
+    }, 0);
+
+    tl.to(atmosphereEl, {
+      yPercent: -58,
       scale: 1,
-      duration: 0.42,
-      ease: "power2.out",
-    }, 0.02);
+      autoAlpha: 0.18,
+      duration: 0.48,
+      ease: "power1.in",
+    }, 0.82);
 
     tl.to(glowEl, {
-      autoAlpha: 0.5,
-      scale: 1.015,
-      duration: 0.72,
-      ease: "sine.inOut",
-    }, 0.56);
+      autoAlpha: 0.42,
+      yPercent: 12,
+      scale: 1.02,
+      duration: 0.52,
+      ease: "power1.out",
+    }, 0.16);
+
+    tl.to(glowEl, {
+      autoAlpha: 0.56,
+      yPercent: 0,
+      scale: 1,
+      duration: 0.62,
+      ease: "sine.out",
+    }, 0.68);
 
     tl.to(ridgeEl, {
-      autoAlpha: 0.72,
+      autoAlpha: 0.62,
+      yPercent: 16,
+      scale: 1.04,
+      duration: 0.54,
+      ease: "power1.out",
+    }, 0.14);
+
+    tl.to(ridgeEl, {
+      autoAlpha: 0.78,
       yPercent: 0,
       scale: 1,
-      duration: 0.46,
-      ease: "power2.out",
-    }, 0.06);
+      duration: 0.66,
+      ease: "sine.out",
+    }, 0.66);
 
     tl.to(surfaceEl, {
+      autoAlpha: 0.82,
+      yPercent: 18,
+      scale: 1.04,
+      duration: 0.6,
+      ease: "power1.out",
+    }, 0.22);
+
+    tl.to(surfaceEl, {
+      autoAlpha: 1,
       yPercent: 0,
       scale: 1,
-      duration: 0.42,
-      ease: "power2.out",
-    }, 0.04);
+      duration: 0.62,
+      ease: "sine.out",
+    }, 0.78);
 
     tl.to(rearCrystalEl, {
       xPercent: 0,
       yPercent: 0,
-      autoAlpha: 0.78,
-      scale: 1,
-      duration: 1.2,
-      ease: "none",
-    }, 0);
+      autoAlpha: 0.62,
+      scale: 0.96,
+      duration: 0.52,
+      ease: "power1.out",
+    }, 0.72);
 
     tl.to(frontCrystalEl, {
       xPercent: 0,
       yPercent: 0,
-      autoAlpha: 0.9,
+      autoAlpha: 0.82,
       scale: 1,
-      duration: 1.2,
-      ease: "none",
+      duration: 0.5,
+      ease: "power1.out",
+    }, 0.82);
+
+    tl.to(rocketGroupEl, {
+      y: "-8vh",
+      scale: 0.98,
+      rotation: 0.35,
+      duration: 0.36,
+      ease: "sine.inOut",
     }, 0);
 
     tl.to(rocketGroupEl, {
-      autoAlpha: 1,
-      y: "-42vh",
-      scale: 0.72,
-      rotation: 0.6,
-      duration: 0.2,
-      ease: "power2.out",
-    }, 0.08);
-
-    tl.to(rocketGroupEl, {
-      y: "-16vh",
-      scale: 0.88,
-      rotation: -0.3,
-      duration: 0.46,
+      y: "1vh",
+      scale: 1.03,
+      rotation: -0.18,
+      duration: 0.44,
       ease: "sine.inOut",
-    }, 0.28);
+    }, 0.36);
 
     tl.to(rocketGroupEl, {
       y: "0vh",
       scale: 1,
       rotation: 0,
-      duration: 0.3,
+      duration: 0.38,
       ease: "power2.out",
-    }, 0.72);
+    }, 0.88);
 
     tl.to(rocketFireEl, {
-      autoAlpha: 0.2,
-      scaleX: 0.42,
-      scaleY: 0.34,
-      yPercent: -2,
-      duration: 0.24,
-      ease: "power2.out",
-    }, 0.26);
-
-    tl.to(rocketFireEl, {
-      autoAlpha: 0.66,
-      scaleX: 0.58,
-      scaleY: 0.7,
-      yPercent: 0,
-      duration: 0.24,
-      ease: "power2.out",
-    }, 0.68);
-
-    tl.to(rocketFireEl, {
-      autoAlpha: 0.08,
-      scaleX: 0.26,
-      scaleY: 0.2,
-      yPercent: -8,
+      autoAlpha: 0.16,
+      scaleX: 0.36,
+      scaleY: 0.3,
+      yPercent: -5,
       duration: 0.22,
-      ease: "power2.in",
-    }, 0.98);
-
-    tl.to(dustEl, {
-      autoAlpha: 0.64,
-      scaleX: 0.92,
-      scaleY: 0.34,
-      duration: 0.16,
       ease: "power2.out",
-    }, 0.94);
+    }, 0.34);
+
+    tl.to(rocketFireEl, {
+      autoAlpha: 0.72,
+      scaleX: 0.68,
+      scaleY: 0.78,
+      yPercent: 0,
+      duration: 0.28,
+      ease: "power2.out",
+    }, 0.76);
+
+    tl.to(rocketFireEl, {
+      autoAlpha: 0.04,
+      scaleX: 0.22,
+      scaleY: 0.16,
+      yPercent: -10,
+      duration: 0.28,
+      ease: "power2.in",
+    }, 1.08);
 
     tl.to(dustEl, {
-      autoAlpha: 0.42,
-      scaleX: 1.2,
-      scaleY: 0.38,
-      duration: 0.32,
+      autoAlpha: 0.18,
+      scaleX: 0.54,
+      scaleY: 0.24,
+      duration: 0.22,
       ease: "sine.out",
-    }, 1.1);
+    }, 0.78);
+
+    tl.to(dustEl, {
+      autoAlpha: 0.68,
+      scaleX: 1.02,
+      scaleY: 0.32,
+      duration: 0.18,
+      ease: "power2.out",
+    }, 1.02);
+
+    tl.to(dustEl, {
+      autoAlpha: 0.34,
+      scaleX: 1.34,
+      scaleY: 0.36,
+      duration: 0.42,
+      ease: "sine.out",
+    }, 1.18);
 
     tl.to(rocketGroupEl, {
-      y: "0.8vh",
+      y: "1vh",
       duration: 0.1,
       ease: "power1.out",
-    }, 0.98);
+    }, 1.02);
 
     tl.to(rocketGroupEl, {
       y: "0vh",
-      duration: 0.14,
+      duration: 0.18,
       ease: "power1.inOut",
-    }, 1.08);
+    }, 1.12);
 
     return tl;
   }
