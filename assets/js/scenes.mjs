@@ -2,6 +2,8 @@ import { Scene } from "./scene.mjs"
 import { Scene1IgnitionLight } from "./scene1-ignition-light.mjs"
 import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 import { Scene3SpaceField } from "./scene3-space-field.mjs"
+import { Scene4AtmosphereField } from "./scene4-atmosphere-field.mjs"
+import { Scene4EngineSparks } from "./scene4-engine-sparks.mjs"
 
 class DreamLanding extends Scene {
   constructor() {
@@ -10,11 +12,14 @@ class DreamLanding extends Scene {
 
   _onAnimate(tl) {
     const sceneEl = document.querySelector(`#${this.getName()}`);
+    const shellEl = sceneEl?.querySelector(".scene4-shell");
 
-    if (!sceneEl) {
+    if (!sceneEl || !shellEl) {
       return tl;
     }
 
+    const fxHostEl = sceneEl.querySelector(".scene4-shell__three");
+    const sparkHostEl = sceneEl.querySelector(".scene4-shell__engine-sparks");
     const skyEl = sceneEl.querySelector(".scene4-shell__image--sky");
     const atmosphereEl = sceneEl.querySelector(".scene4-shell__image--atmosphere");
     const glowEl = sceneEl.querySelector(".scene4-shell__image--horizon-glow");
@@ -66,7 +71,7 @@ class DreamLanding extends Scene {
     gsap.set(rearCrystalEl, {
       xPercent: 4,
       yPercent: 32,
-      autoAlpha: 0,
+      autoAlpha: 0.24,
       scale: 0.88,
       transformOrigin: "50% 100%",
     });
@@ -74,7 +79,7 @@ class DreamLanding extends Scene {
     gsap.set(frontCrystalEl, {
       xPercent: -5,
       yPercent: 36,
-      autoAlpha: 0,
+      autoAlpha: 0.3,
       scale: 0.9,
       transformOrigin: "50% 100%",
     });
@@ -92,8 +97,8 @@ class DreamLanding extends Scene {
 
     gsap.set(rocketFireEl, {
       autoAlpha: 0,
-      scaleX: 0.24,
-      scaleY: 0.18,
+      scaleX: 0.34,
+      scaleY: 0.24,
       yPercent: -8,
       transformOrigin: "50% 8%",
     });
@@ -102,8 +107,8 @@ class DreamLanding extends Scene {
       xPercent: -50,
       yPercent: -50,
       autoAlpha: 0,
-      scaleX: 0.22,
-      scaleY: 0.22,
+      scaleX: 0.3,
+      scaleY: 0.28,
       transformOrigin: "50% 50%",
     });
 
@@ -181,7 +186,7 @@ class DreamLanding extends Scene {
     tl.to(rearCrystalEl, {
       xPercent: 0,
       yPercent: 0,
-      autoAlpha: 0.62,
+      autoAlpha: 0.68,
       scale: 0.96,
       duration: 0.52,
       ease: "power1.out",
@@ -190,7 +195,7 @@ class DreamLanding extends Scene {
     tl.to(frontCrystalEl, {
       xPercent: 0,
       yPercent: 0,
-      autoAlpha: 0.82,
+      autoAlpha: 0.88,
       scale: 1,
       duration: 0.5,
       ease: "power1.out",
@@ -221,55 +226,63 @@ class DreamLanding extends Scene {
     }, 0.88);
 
     tl.to(rocketFireEl, {
-      autoAlpha: 0.16,
-      scaleX: 0.36,
-      scaleY: 0.3,
+      autoAlpha: 0.24,
+      scaleX: 0.5,
+      scaleY: 0.46,
       yPercent: -5,
       duration: 0.22,
       ease: "power2.out",
-    }, 0.34);
+    }, 0.2);
 
     tl.to(rocketFireEl, {
-      autoAlpha: 0.72,
-      scaleX: 0.68,
-      scaleY: 0.78,
+      autoAlpha: 0.86,
+      scaleX: 0.98,
+      scaleY: 1.12,
       yPercent: 0,
       duration: 0.28,
       ease: "power2.out",
-    }, 0.76);
+    }, 0.52);
 
     tl.to(rocketFireEl, {
       autoAlpha: 0.04,
-      scaleX: 0.22,
-      scaleY: 0.16,
+      scaleX: 0.3,
+      scaleY: 0.2,
       yPercent: -10,
       duration: 0.28,
       ease: "power2.in",
-    }, 1.08);
+    }, 0.98);
 
     tl.to(dustEl, {
-      autoAlpha: 0.18,
-      scaleX: 0.54,
-      scaleY: 0.24,
+      autoAlpha: 0.28,
+      scaleX: 0.78,
+      scaleY: 0.34,
       duration: 0.22,
       ease: "sine.out",
     }, 0.78);
 
     tl.to(dustEl, {
-      autoAlpha: 0.68,
-      scaleX: 1.02,
-      scaleY: 0.32,
+      autoAlpha: 0.82,
+      scaleX: 1.26,
+      scaleY: 0.46,
       duration: 0.18,
       ease: "power2.out",
     }, 1.02);
 
     tl.to(dustEl, {
-      autoAlpha: 0.34,
-      scaleX: 1.34,
-      scaleY: 0.36,
+      autoAlpha: 0.48,
+      scaleX: 1.62,
+      scaleY: 0.5,
       duration: 0.42,
       ease: "sine.out",
     }, 1.18);
+
+    tl.to(dustEl, {
+      autoAlpha: 0.08,
+      scaleX: 1.9,
+      scaleY: 0.42,
+      duration: 0.38,
+      ease: "sine.inOut",
+    }, 1.56);
 
     tl.to(rocketGroupEl, {
       y: "1vh",
@@ -282,6 +295,29 @@ class DreamLanding extends Scene {
       duration: 0.18,
       ease: "power1.inOut",
     }, 1.12);
+
+    const atmosphereField = new Scene4AtmosphereField({
+      host: fxHostEl,
+    });
+    const engineSparks = new Scene4EngineSparks({
+      host: sparkHostEl,
+      fire: rocketFireEl,
+    });
+
+    if (atmosphereField.enabled || engineSparks.enabled) {
+      const syncSceneFourFx = () => {
+        if (atmosphereField.enabled) {
+          atmosphereField.setPhase(tl.time(), tl.duration());
+        }
+
+        if (engineSparks.enabled) {
+          engineSparks.setPhase(tl.time());
+        }
+      };
+
+      gsap.ticker.add(syncSceneFourFx);
+      syncSceneFourFx();
+    }
 
     return tl;
   }

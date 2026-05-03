@@ -33,7 +33,7 @@ section#DreamLanding {
   --scene4-landing-x: 50%;
   --scene4-landing-y: 70.5%;
   --scene4-rocket-width: clamp(118px, 10.8vw, 176px);
-  --scene4-dust-width: min(56vw, 840px);
+  --scene4-dust-width: min(72vw, 1040px);
   --scene4-crystal-front-width: min(23vw, 330px);
   --scene4-crystal-rear-width: min(18vw, 250px);
   background: #071722;
@@ -57,6 +57,7 @@ section#DreamLanding {
 #DreamLanding .scene4-shell__three,
 #DreamLanding .scene4-shell__crystal,
 #DreamLanding .scene4-shell__landing-dust,
+#DreamLanding .scene4-shell__engine-sparks,
 #DreamLanding .scene4-shell__rocket-group {
   position: absolute;
   pointer-events: none;
@@ -70,12 +71,14 @@ section#DreamLanding {
 
 #DreamLanding .scene4-shell__three {
   inset: 0;
-  z-index: 1;
+  z-index: 11;
+  mix-blend-mode: screen;
 }
 
 #DreamLanding .scene4-shell__image,
 #DreamLanding .scene4-shell__crystal img,
 #DreamLanding .scene4-shell__landing-dust img,
+#DreamLanding .scene4-shell__spark-canvas,
 #DreamLanding .scene4-shell__rocket,
 #DreamLanding .scene4-shell__rocket-fire {
   display: block;
@@ -165,8 +168,14 @@ section#DreamLanding {
   opacity: 0.78;
 }
 
+#DreamLanding .scene4-shell__engine-sparks {
+  inset: 0;
+  z-index: 12;
+  mix-blend-mode: screen;
+}
+
 #DreamLanding .scene4-shell__rocket-group {
-  z-index: 10;
+  z-index: 11;
   left: var(--scene4-landing-x);
   top: var(--scene4-landing-y);
   width: var(--scene4-rocket-width);
@@ -185,9 +194,9 @@ section#DreamLanding {
 #DreamLanding .scene4-shell__rocket-fire {
   position: absolute;
   z-index: 1;
-  left: 28.6%;
+  left: 21%;
   top: 65.4%;
-  width: 43%;
+  width: 58%;
   height: auto;
   object-fit: contain;
   opacity: 0;
