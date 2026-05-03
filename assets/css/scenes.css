@@ -430,28 +430,119 @@ html.dark-mode #scene4-copy .scene4-copy__closing {
 }
 
 @media (max-width: 900px) {
+  #DreamLanding .scene4-shell {
+    --scene4-landing-x: 68%;
+    --scene4-landing-y: 72%;
+    --scene4-rocket-width: clamp(112px, 14vw, 132px);
+    --scene4-dust-width: min(82vw, 780px);
+    --scene4-crystal-front-width: min(24vw, 210px);
+    --scene4-crystal-rear-width: min(19vw, 170px);
+  }
+
   #scene4-copy {
     top: clamp(44px, 10vh, 92px);
-    width: min(58vw, 520px);
+    width: min(54vw, 490px);
     --scene4-gradient-width: 92vw;
   }
 
   #scene4-copy .scene4-copy__title {
-    font-size: clamp(30px, 4.6vw, 48px);
+    font-size: clamp(30px, 4.2vw, 42px);
+  }
+
+  #scene4-copy .scene4-copy__description {
+    max-width: 28em;
+    font-size: clamp(13px, 1.7vw, 15px);
+  }
+
+  #scene4-copy .scene4-nav {
+    width: min(100%, 25em);
+    margin-top: clamp(42px, 6vh, 70px);
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
+  #DreamLanding .scene4-shell {
+    --scene4-landing-x: 72%;
+    --scene4-landing-y: 74%;
+    --scene4-rocket-width: clamp(104px, 17vw, 120px);
+    --scene4-crystal-front-width: min(26vw, 170px);
+    --scene4-crystal-rear-width: min(21vw, 138px);
+  }
+
   #scene4-copy {
-    left: 18px;
-    top: clamp(36px, 8vh, 72px);
-    width: calc(100vw - 36px);
+    left: clamp(18px, 4vw, 28px);
+    top: clamp(36px, 7vh, 62px);
+    width: min(62vw, 410px);
     --scene4-gradient-left: -18px;
-    --scene4-gradient-width: 106vw;
+    --scene4-gradient-width: 112vw;
+  }
+
+  #scene4-copy .scene4-copy__eyebrow {
+    margin-bottom: 1.1vh;
+    font-size: 10px;
   }
 
   #scene4-copy .scene4-copy__title {
-    font-size: clamp(24px, 7.2vw, 34px);
+    font-size: clamp(25px, 5.2vw, 34px);
+    line-height: 1.06;
+    letter-spacing: -0.012em;
+  }
+
+  #scene4-copy .scene4-copy__title-line {
+    white-space: normal;
+  }
+
+  #scene4-copy .scene4-copy__description {
+    margin-top: 18px;
+    max-width: 27em;
+    padding-left: clamp(14px, 3vw, 22px);
+    font-size: 12.5px;
+    line-height: 1.46;
+  }
+
+  #scene4-copy .scene4-copy__description-spacer {
+    height: 1.46em;
+  }
+
+  #scene4-copy .scene4-copy__closing {
+    margin-top: 1.9em;
+  }
+
+  #scene4-copy .scene4-nav {
+    width: min(100%, 24em);
+    margin-top: clamp(34px, 5.2vh, 52px);
+    padding-left: clamp(14px, 3vw, 22px);
+  }
+
+  #scene4-copy .scene4-nav__header {
+    gap: 16px;
+  }
+
+  #scene4-copy .scene4-nav__distance {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  #DreamLanding .scene4-shell {
+    --scene4-landing-x: 74%;
+    --scene4-landing-y: 77%;
+    --scene4-rocket-width: clamp(98px, 22vw, 112px);
+    --scene4-dust-width: 110vw;
+    --scene4-crystal-front-width: min(30vw, 150px);
+    --scene4-crystal-rear-width: min(24vw, 118px);
+  }
+
+  #scene4-copy {
+    left: 18px;
+    top: clamp(30px, 5vh, 46px);
+    width: calc(100vw - 36px);
+    --scene4-gradient-left: -18px;
+    --scene4-gradient-width: 118vw;
+  }
+
+  #scene4-copy .scene4-copy__title {
+    font-size: clamp(23px, 6.3vw, 30px);
     letter-spacing: -0.01em;
   }
 
@@ -460,26 +551,37 @@ html.dark-mode #scene4-copy .scene4-copy__closing {
   }
 
   #scene4-copy .scene4-copy__description {
-    max-width: 24em;
+    max-width: 28em;
     padding-left: clamp(14px, 4vw, 24px);
-    font-size: 13px;
-    line-height: 1.48;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  #scene4-copy .scene4-copy__closing {
+    margin-top: 1.72em;
   }
 
   #scene4-copy .scene4-nav {
+    width: min(100%, 25em);
+    margin-top: clamp(36px, 6vh, 54px);
     padding-left: clamp(14px, 4vw, 24px);
   }
 
   #scene4-copy .scene4-nav__status {
-    font-size: 9px;
+    font-size: 8.5px;
   }
 
   #scene4-copy .scene4-nav__header {
-    gap: 10px;
+    gap: 14px;
   }
 
   #scene4-copy .scene4-nav__distance {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  #scene4-copy .scene4-nav__readouts {
+    gap: 5px 12px;
+    font-size: 8px;
   }
 }
 
