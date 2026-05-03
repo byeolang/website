@@ -20,6 +20,11 @@ class DreamLanding extends Scene {
 
     const fxHostEl = sceneEl.querySelector(".scene4-shell__three");
     const sparkHostEl = sceneEl.querySelector(".scene4-shell__engine-sparks");
+    const copyEl = sceneEl.querySelector("#scene4-copy");
+    const copyGradientEl = copyEl?.querySelector(".scene4-copy__gradient");
+    const copyEyebrowEl = copyEl?.querySelector(".scene4-copy__eyebrow");
+    const copyTitleLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene4-copy__title-line")) : [];
+    const copyDescLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene4-copy__description-line")) : [];
     const skyEl = sceneEl.querySelector(".scene4-shell__image--sky");
     const atmosphereEl = sceneEl.querySelector(".scene4-shell__image--atmosphere");
     const glowEl = sceneEl.querySelector(".scene4-shell__image--horizon-glow");
@@ -111,6 +116,22 @@ class DreamLanding extends Scene {
       scaleY: 0.28,
       transformOrigin: "50% 50%",
     });
+
+    if (copyEl) {
+      gsap.set(copyEl, { autoAlpha: 0, yPercent: 10 });
+    }
+    if (copyGradientEl) {
+      gsap.set(copyGradientEl, { autoAlpha: 0 });
+    }
+    if (copyEyebrowEl) {
+      gsap.set(copyEyebrowEl, { autoAlpha: 0, yPercent: 22 });
+    }
+    if (copyTitleLines.length) {
+      gsap.set(copyTitleLines, { autoAlpha: 0, yPercent: 20 });
+    }
+    if (copyDescLines.length) {
+      gsap.set(copyDescLines, { autoAlpha: 0, yPercent: 16 });
+    }
 
     tl.to(skyEl, {
       scale: 1.02,
@@ -295,6 +316,22 @@ class DreamLanding extends Scene {
       duration: 0.18,
       ease: "power1.inOut",
     }, 1.12);
+
+    if (copyEl) {
+      tl.to(copyEl, { autoAlpha: 1, yPercent: 0, duration: 0.42, ease: "power2.out" }, 1.44);
+    }
+    if (copyGradientEl) {
+      tl.to(copyGradientEl, { autoAlpha: 1, duration: 0.46, ease: "power2.out" }, 1.36);
+    }
+    if (copyEyebrowEl) {
+      tl.to(copyEyebrowEl, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out" }, 1.48);
+    }
+    if (copyTitleLines.length) {
+      tl.to(copyTitleLines, { autoAlpha: 1, yPercent: 0, duration: 0.38, ease: "power2.out", stagger: 0.06 }, 1.52);
+    }
+    if (copyDescLines.length) {
+      tl.to(copyDescLines, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out", stagger: 0.04 }, 1.66);
+    }
 
     const atmosphereField = new Scene4AtmosphereField({
       host: fxHostEl,

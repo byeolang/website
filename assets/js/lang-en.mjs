@@ -66,6 +66,18 @@ export default {
   "scene3-code": "let hp: int = \"low\"\nprint(move(player, hp))",
   "scene3-error-line1": "type mismatch: int expected, got string",
   "scene3-error-line2": "invalid call: incompatible argument in move(player, hp)",
+  "scene4-kicker": "Landing complete",
+  "scene4-title-line1": "For every AI,",
+  "scene4-title-line2": "and humanity's last programmer.",
+  "scene4-desc-line1-prefix": "Even in an age where AI writes code, ",
+  "scene4-desc-line1-em": "the joy of programming",
+  "scene4-desc-line1-rest": " will not disappear.",
+  "scene4-desc-line2": "Someone will still want to make things by hand,",
+  "scene4-desc-line3": "fix them,",
+  "scene4-desc-line4": "and understand them.",
+  "scene4-desc-line5": "byeol is made for that person,",
+  "scene4-desc-line6": "and for every AI",
+  "scene4-desc-line7": "that writes code alongside them.",
 
   // download:
   "packaging message": ":> packaging for you...",

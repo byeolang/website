@@ -66,6 +66,18 @@ export default {
   "scene3-code": "let hp: int = \"low\"\nprint(move(player, hp))",
   "scene3-error-line1": "type mismatch: int expected, got string",
   "scene3-error-line2": "invalid call: incompatible argument in move(player, hp)",
+  "scene4-kicker": "착륙 완료",
+  "scene4-title-line1": "모든 AI와,",
+  "scene4-title-line2": "인류의 마지막 프로그래머를 위하여.",
+  "scene4-desc-line1-prefix": "AI가 코드를 쓰는 시대가 와도, ",
+  "scene4-desc-line1-em": "프로그래밍의 즐거움",
+  "scene4-desc-line1-rest": "은 사라지지 않습니다.",
+  "scene4-desc-line2": "누군가는 여전히 직접 만들고,",
+  "scene4-desc-line3": "고치고,",
+  "scene4-desc-line4": "이해하고 싶어 할 것입니다.",
+  "scene4-desc-line5": "byeol은 그 사람을 위해,",
+  "scene4-desc-line6": "그리고 그 사람과 함께 코드를 쓰는",
+  "scene4-desc-line7": "모든 AI를 위해 만들어집니다.",
 
   // download:
   "packaging message": "=ㅅ= 열심히 포장 중...",
