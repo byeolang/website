@@ -284,6 +284,93 @@ section#DreamLanding {
   padding-left: 0.6vw;
 }
 
+#scene4-copy .scene4-nav {
+  display: block;
+  width: min(100%, 29em);
+  margin-top: clamp(48px, 7vh, 86px);
+  padding-left: clamp(24px, 2.8vw, 46px);
+  color: rgba(222, 234, 255, 0.62);
+}
+
+#scene4-copy .scene4-nav__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: clamp(18px, 2.4vw, 34px);
+}
+
+#scene4-copy .scene4-nav__track {
+  padding-top: 10px;
+}
+
+#scene4-copy .scene4-nav__route {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 10px);
+  gap: clamp(10px, 1vw, 14px);
+  align-items: center;
+}
+
+#scene4-copy .scene4-nav__route::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 58px;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, rgba(164, 193, 241, 0.16), rgba(164, 193, 241, 0.42) 68%, rgba(255, 213, 138, 0.62));
+}
+
+#scene4-copy .scene4-nav__node {
+  position: relative;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(220, 234, 255, 0.68);
+  border-radius: 50%;
+  background: rgba(16, 25, 40, 0.72);
+  box-shadow: 0 0 10px rgba(150, 190, 255, 0.18);
+}
+
+#scene4-copy .scene4-nav__node--active {
+  width: 9px;
+  height: 9px;
+  border-color: rgba(255, 218, 150, 0.94);
+  background: #ffd58a;
+  box-shadow:
+    0 0 0 3px rgba(255, 213, 138, 0.12),
+    0 0 14px rgba(255, 213, 138, 0.48);
+}
+
+#scene4-copy .scene4-nav__status {
+  font-size: clamp(9px, 0.66vw, 11px);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: rgba(219, 232, 255, 0.58);
+  white-space: nowrap;
+}
+
+#scene4-copy .scene4-nav__distance {
+  font-size: clamp(13px, 1.02vw, 17px);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: rgba(255, 213, 138, 0.88);
+  text-shadow: 0 0 12px rgba(255, 213, 138, 0.2);
+  white-space: nowrap;
+}
+
+#scene4-copy .scene4-nav__readouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px clamp(12px, 1.5vw, 22px);
+  margin-top: 7px;
+  font-size: clamp(8px, 0.6vw, 10px);
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  color: rgba(203, 221, 250, 0.46);
+}
+
 #scene4-copy .scene4-copy__description {
   position: relative;
   margin: 22px 0 0;
@@ -292,17 +379,6 @@ section#DreamLanding {
   font-size: clamp(14px, 1.08vw, 18px);
   line-height: 1.58;
   color: rgba(235, 242, 250, 0.9);
-}
-
-#scene4-copy .scene4-copy__description::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.18em;
-  bottom: 0.18em;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(214, 229, 255, 0.14) 0%, rgba(214, 229, 255, 0.46) 36%, rgba(255, 213, 138, 0.64) 100%);
-  box-shadow: 0 0 14px rgba(156, 194, 255, 0.16);
 }
 
 #scene4-copy .scene4-copy__description-line {
@@ -316,22 +392,6 @@ section#DreamLanding {
 #scene4-copy .scene4-copy__description-spacer {
   display: block;
   height: 1.58em;
-}
-
-#scene4-copy .scene4-copy__description-line--gap {
-  position: relative;
-  margin-top: 3.16em;
-}
-
-#scene4-copy .scene4-copy__description-line--gap::before {
-  content: "";
-  position: absolute;
-  left: calc(clamp(24px, 2.8vw, 46px) * -1);
-  top: 0.78em;
-  width: clamp(8px, 0.8vw, 12px);
-  height: 1px;
-  background: rgba(223, 235, 255, 0.58);
-  box-shadow: 0 0 10px rgba(169, 202, 255, 0.24);
 }
 
 #scene4-copy .scene4-copy__description-em {
@@ -348,29 +408,6 @@ section#DreamLanding {
   text-shadow:
     0 0 12px rgba(255, 196, 103, 0.28),
     0 0 28px rgba(129, 174, 255, 0.16);
-}
-
-#scene4-copy .scene4-copy__closing::before {
-  content: "";
-  position: absolute;
-  left: calc(clamp(24px, 2.8vw, 46px) * -1 - 3px);
-  top: 0.56em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #ffd58a;
-  box-shadow:
-    0 0 0 3px rgba(255, 213, 138, 0.14),
-    0 0 16px rgba(255, 213, 138, 0.48);
-}
-
-#scene4-copy .scene4-copy__closing::after {
-  content: "";
-  display: block;
-  width: min(100%, 22em);
-  height: 1px;
-  margin-top: 0.72em;
-  background: linear-gradient(90deg, rgba(255, 213, 138, 0.62) 0%, rgba(255, 213, 138, 0.12) 62%, rgba(255, 213, 138, 0%) 100%);
 }
 
 html.dark-mode #scene4-copy .scene4-copy__title {
@@ -429,16 +466,20 @@ html.dark-mode #scene4-copy .scene4-copy__closing {
     line-height: 1.48;
   }
 
-  #scene4-copy .scene4-copy__description-line--gap {
-    margin-top: 2.96em;
+  #scene4-copy .scene4-nav {
+    padding-left: clamp(14px, 4vw, 24px);
   }
 
-  #scene4-copy .scene4-copy__description-line--gap::before {
-    left: calc(clamp(14px, 4vw, 24px) * -1);
+  #scene4-copy .scene4-nav__status {
+    font-size: 9px;
   }
 
-  #scene4-copy .scene4-copy__closing::before {
-    left: calc(clamp(14px, 4vw, 24px) * -1 - 3px);
+  #scene4-copy .scene4-nav__header {
+    gap: 10px;
+  }
+
+  #scene4-copy .scene4-nav__distance {
+    font-size: 12px;
   }
 }
 
