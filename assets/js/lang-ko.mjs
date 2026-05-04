@@ -23,6 +23,8 @@ export default {
   // home:
   "The Byeol Programming Language": "'별' 프로그래밍 언어",
   "start": "시작하기",
+  "journey-scroll": "스크롤을 올려,\n여행을 시작하세요",
+  "journey-download": "다운로드",
   "scene1-kicker": "문법은 덜고, 구조는 먼저",
   "scene1-title": "적은 문법, 빠른 이해",
   "scene1-desc": "문법을 공부하는 시간보다\n아이디어를 코드로 옮기는 시간이 더 길어지도록.\nbyeol은 적은 문법 요소로 같은 일을 표현하는 언어를 지향합니다.",

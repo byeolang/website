@@ -175,6 +175,47 @@ div#main-content-title {
   top: var(--main-title-top);
 }
 
+#main-content-navi .main-content-action {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#main-content-navi .main-content-action--journey .learn-more {
+  width: clamp(15.5rem, 26vw, 21rem);
+}
+
+#main-content-navi .main-content-action--journey .learn-more .button-text {
+  left: 3.55rem;
+  right: 0.8rem;
+  margin: 0;
+  padding: 0.28rem 0 0.84rem;
+  line-height: 1.32;
+  text-align: left;
+  white-space: pre-line;
+}
+
+#main-content-navi.main-content-navi--returning .main-content-action--journey .learn-more .button-text {
+  left: 1.85rem;
+  right: 0;
+  padding: 0.75rem 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#main-content-navi .main-content-action[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+}
+
+#main-content-navi .main-content-action[aria-disabled="true"] .learn-more {
+  cursor: default;
+}
+
+#main-content-navi .main-content-action[aria-disabled="true"] .learn-more .circle,
+#main-content-navi .main-content-action[aria-disabled="true"] .learn-more .button-text {
+  transition: none;
+}
+
 div#main-bg {
   overflow: hidden;
   width: 100%;

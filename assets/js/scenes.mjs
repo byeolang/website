@@ -4,6 +4,25 @@ import { Scene1SparkLayer } from "./scene1-sparks.mjs"
 import { Scene3SpaceField } from "./scene3-space-field.mjs"
 import { Scene4AtmosphereField } from "./scene4-atmosphere-field.mjs"
 import { Scene4EngineSparks } from "./scene4-engine-sparks.mjs"
+import { i18n } from "./lang-toggle.mjs"
+
+const JOURNEY_SEEN_STORAGE_KEY = "byeol-home-journey-seen";
+
+const safelyReadLocalStorage = (key) => {
+  try {
+    return window.localStorage?.getItem(key) ?? null;
+  } catch {
+    return null;
+  }
+};
+
+const safelyWriteLocalStorage = (key, value) => {
+  try {
+    window.localStorage?.setItem(key, value);
+  } catch {
+    // Ignore storage failures in private browsing or restricted contexts.
+  }
+};
 
 class DreamLanding extends Scene {
   constructor() {
@@ -134,6 +153,11 @@ class DreamLanding extends Scene {
       gsap.set(copyDescLines, { autoAlpha: 0, yPercent: 16 });
     }
     if (downloadEl) {
+      const downloadLinkEl = downloadEl.querySelector("a");
+      downloadLinkEl?.addEventListener("click", () => {
+        safelyWriteLocalStorage(JOURNEY_SEEN_STORAGE_KEY, "true");
+      });
+
       gsap.set(downloadEl, { autoAlpha: 0, yPercent: 18, scale: 0.96 });
     }
 
@@ -337,7 +361,13 @@ class DreamLanding extends Scene {
       tl.to(copyDescLines, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out", stagger: 0.04 }, 1.66);
     }
     if (downloadEl) {
-      tl.to(downloadEl, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 0.36, ease: "back.out(1.5)" }, 1.98);
+      tl.to(downloadEl, {
+        autoAlpha: 1,
+        yPercent: 0,
+        scale: 1,
+        duration: 0.36,
+        ease: "back.out(1.5)",
+      }, 1.98);
     }
 
     const atmosphereField = new Scene4AtmosphereField({
@@ -1685,12 +1715,14 @@ export class Scener {
     ];
     this._didUserInteractDuringBoot = false;
     this._teardownBootInteractionGuard = null;
+    this._startJourneyLink = null;
   }
 
   init() {
     history.scrollRestoration = "manual";
     ScrollTrigger.clearScrollMemory();
     gsap.registerPlugin(ScrollTrigger);
+    this._setupHeroJourneyActions();
     this._installBootInteractionGuard();
 
     for(const s of this.scenes)
@@ -1730,6 +1762,37 @@ export class Scener {
       window.removeEventListener("pointerdown", markInteraction, listenerOptions);
       window.removeEventListener("keydown", markInteraction);
     };
+  }
+
+  _setupHeroJourneyActions() {
+    const hasSeenJourney = safelyReadLocalStorage(JOURNEY_SEEN_STORAGE_KEY) === "true";
+    const heroNaviEl = document.querySelector("#main-content-navi");
+    const ctaTextEl = heroNaviEl?.querySelector("[data-lang='journey-scroll']");
+    const ctaLinkEl = heroNaviEl?.querySelector("[data-journey-action='cta']");
+
+    heroNaviEl?.classList.toggle("main-content-navi--returning", hasSeenJourney);
+
+    if (ctaTextEl && hasSeenJourney) {
+      ctaTextEl.setAttribute("data-lang", "journey-download");
+      ctaTextEl.textContent = i18n.t("journey-download");
+    }
+
+    if (!ctaLinkEl) {
+      return;
+    }
+
+    this._startJourneyLink = ctaLinkEl;
+    ctaLinkEl.classList.toggle("main-content-action--download", hasSeenJourney);
+    ctaLinkEl.setAttribute("aria-disabled", hasSeenJourney ? "false" : "true");
+
+    if (hasSeenJourney) {
+      ctaLinkEl.setAttribute("href", "/download/");
+    } else {
+      ctaLinkEl.removeAttribute("href");
+      ctaLinkEl.addEventListener("click", (event) => {
+        event.preventDefault();
+      });
+    }
   }
 
   _jumpToBottom() {
