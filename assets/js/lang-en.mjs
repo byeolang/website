@@ -78,6 +78,8 @@ export default {
   "scene4-desc-line5": "byeol is made for that person,",
   "scene4-desc-line6": "and for every AI",
   "scene4-desc-line7": "that writes code alongside them.",
+  "scene4-download-line1": "PRESS",
+  "scene4-download-line2": "DOWNLOAD",
 
   // download:
   "packaging message": ":> packaging for you...",

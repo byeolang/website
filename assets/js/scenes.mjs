@@ -25,6 +25,7 @@ class DreamLanding extends Scene {
     const copyEyebrowEl = copyEl?.querySelector(".scene4-copy__eyebrow");
     const copyTitleLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene4-copy__title-line")) : [];
     const copyDescLines = copyEl ? gsap.utils.toArray(copyEl.querySelectorAll(".scene4-copy__description-line")) : [];
+    const downloadEl = sceneEl.querySelector("#scene4-download");
     const skyEl = sceneEl.querySelector(".scene4-shell__image--sky");
     const atmosphereEl = sceneEl.querySelector(".scene4-shell__image--atmosphere");
     const glowEl = sceneEl.querySelector(".scene4-shell__image--horizon-glow");
@@ -131,6 +132,9 @@ class DreamLanding extends Scene {
     }
     if (copyDescLines.length) {
       gsap.set(copyDescLines, { autoAlpha: 0, yPercent: 16 });
+    }
+    if (downloadEl) {
+      gsap.set(downloadEl, { autoAlpha: 0, yPercent: 18, scale: 0.96 });
     }
 
     tl.to(skyEl, {
@@ -331,6 +335,9 @@ class DreamLanding extends Scene {
     }
     if (copyDescLines.length) {
       tl.to(copyDescLines, { autoAlpha: 1, yPercent: 0, duration: 0.34, ease: "power2.out", stagger: 0.04 }, 1.66);
+    }
+    if (downloadEl) {
+      tl.to(downloadEl, { autoAlpha: 1, yPercent: 0, scale: 1, duration: 0.36, ease: "back.out(1.5)" }, 1.98);
     }
 
     const atmosphereField = new Scene4AtmosphereField({

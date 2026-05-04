@@ -78,6 +78,8 @@ export default {
   "scene4-desc-line5": "byeol은 그 사람을 위해,",
   "scene4-desc-line6": "그리고 그 사람과 함께 코드를 쓰는",
   "scene4-desc-line7": "모든 AI를 위해 만들어집니다.",
+  "scene4-download-line1": "PRESS",
+  "scene4-download-line2": "DOWNLOAD",
 
   // download:
   "packaging message": "=ㅅ= 열심히 포장 중...",
