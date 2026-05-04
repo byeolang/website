@@ -6,7 +6,7 @@ layout: default
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
-% elsif page.header.video.id and page.header.video.provider %}
+{% elsif page.header.video.id and page.header.video.provider %}
   {% include page__hero_video.html %}
 {% endif %}
 
@@ -21,39 +21,56 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div class="archive">
-    <div id="download">
-      <button id="download-button" data-lang="download"></button>
-      <details id="dropdown">
-        <summary>▼</summary>
-        <div id="download-dropdown">
-          <a href="https://github.com/byeolang/byeol/releases/latest/download/byeol-win-x64.msi" data-lang="windows"></a>
-          <a href="https://github.com/byeolang/byeol/releases/latest/download/byeol-ubuntu-x64.deb" data-lang="ubuntu"></a>
-          <a href="https://github.com/byeolang/byeol/releases/latest/download/byeol-macos-arm64.zip" data-lang="mac"></a>
+  <div class="archive download-archive">
+    <section class="download-page" aria-labelledby="download-title">
+      <div class="download-hero">
+        <span class="download-kicker"><span aria-hidden="true">✦</span><span data-lang="download-kicker"></span></span>
+        <h1 id="download-title" data-lang="download-title"></h1>
+        <p data-lang="download-desc"></p>
+      </div>
+
+      <div class="download-console">
+        <div class="download-shields" aria-label="Repository status">
+          <a href="https://github.com/byeolang/byeol/releases">
+            <img alt="latest release" src="https://img.shields.io/github/v/release/byeolang/byeol.svg?include_prereleases&label=latest%20release&style=flat-square">
+          </a>
+          <a href="https://github.com/byeolang/byeol/releases">
+            <img alt="release date" src="https://img.shields.io/github/release-date-pre/byeolang/byeol.svg?label=on&style=flat-square">
+          </a>
         </div>
-      </details>
-    </div>
+
+        <div id="download">
+          <button id="download-button" data-lang="download-auto"></button>
+        </div>
+
+        <div class="download-platforms" aria-label="Platform downloads">
+          <a class="download-platform" href="https://github.com/byeolang/byeol/releases/latest/download/byeol-win-x64.msi">
+            <span class="download-platform__icon" aria-hidden="true">▦</span>
+            <span class="download-platform__name" data-lang="windows"></span>
+            <span class="download-platform__file">win-x64.msi</span>
+          </a>
+          <a class="download-platform" href="https://github.com/byeolang/byeol/releases/latest/download/byeol-ubuntu-x64.deb">
+            <span class="download-platform__icon" aria-hidden="true">◌</span>
+            <span class="download-platform__name" data-lang="ubuntu"></span>
+            <span class="download-platform__file">ubuntu-x64.deb</span>
+          </a>
+          <a class="download-platform" href="https://github.com/byeolang/byeol/releases/latest/download/byeol-macos-arm64.pkg">
+            <span class="download-platform__icon" aria-hidden="true">⌘</span>
+            <span class="download-platform__name" data-lang="mac"></span>
+            <span class="download-platform__file">macos-arm64.pkg</span>
+          </a>
+        </div>
+
+        <div class="download-guide">
+          <span data-lang="download-guide-label"></span>
+          <a href="../guide/" data-lang="download-guide-link"></a>
+        </div>
+      </div>
+    </section>
 
     <div id="packaging-message" style="display: none;">
       <span id="packaging-text"></span>
     </div>
     <div id="package"></div>
-
-
-    <div class="feature">
-      <div class="feature-title" data-lang="feature-title1"></div>
-      <div class="feature-description" data-lang="feature-desc1"></div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-title" data-lang="feature-title2"></div>
-      <div class="feature-description" data-lang="feature-desc2"></div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-title" data-lang="feature-title3"></div>
-      <div class="feature-description" data-lang="feature-desc3"></div>
-    </div>
-
   </div>
 </div>

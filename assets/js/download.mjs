@@ -76,7 +76,9 @@ class Package {
           this.messageDiv.style.display = 'none';
           setTimeout(() => {
             this.pkg.classList.remove('fade-out');
-            button.onclick = onClick;
+            button.onclick = function() {
+              onClick(getDefaultUrl());
+            };
           }, 700);
         }, 8200);
 
@@ -102,13 +104,10 @@ function getDefaultUrl() {
 const pkgAnimation = new Package();
 
 function onClick(url) {
-  const dropdown = document.getElementById('dropdown');
   if (url == null) {
-    dropdown.setAttribute('open', 'true');
     return;
   }
 
-  dropdown.removeAttribute('open');
   pkgAnimation.animate(url);
 }
 
@@ -119,11 +118,11 @@ window.addEventListener('load', function() {
     onClick(getDefaultUrl());
   };
 
-  const dropdown = document.getElementById('dropdown');
-  const options = dropdown.querySelectorAll('#download-dropdown a');
-  options.forEach(option => {
-    option.onclick = function() {
-      onClick(option.href);
+  const platforms = document.querySelectorAll('.download-platform');
+  platforms.forEach(platform => {
+    platform.onclick = function(event) {
+      event.preventDefault();
+      onClick(platform.href);
     }
   });
 });
