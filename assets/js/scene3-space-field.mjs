@@ -34,6 +34,12 @@ const wrapRange = (value, min, max) => {
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
+const isIPadLike = typeof navigator !== "undefined"
+  && (
+    /iPad|iPhone|iPod/.test(navigator.platform)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+
 export class Scene3SpaceField {
   constructor({ host, shell }) {
     this.host = host;
@@ -43,7 +49,7 @@ export class Scene3SpaceField {
     this.progress = 0;
     this.enabled = false;
 
-    if (!this.host || prefersReducedMotion) {
+    if (!this.host || prefersReducedMotion || isIPadLike) {
       this._enableFallback();
       return;
     }
@@ -327,9 +333,10 @@ export class Scene3SpaceField {
     const loadTexture = (path) => {
       const texture = textureLoader.load(path);
       texture.colorSpace = THREE.SRGBColorSpace;
-      texture.minFilter = THREE.NearestFilter;
-      texture.magFilter = THREE.NearestFilter;
-      texture.generateMipmaps = false;
+      texture.minFilter = THREE.LinearMipmapLinearFilter;
+      texture.magFilter = THREE.LinearFilter;
+      texture.generateMipmaps = true;
+      texture.anisotropy = Math.min(4, this.renderer.capabilities.getMaxAnisotropy?.() || 1);
       return texture;
     };
     const asteroidSources = [
@@ -368,7 +375,7 @@ export class Scene3SpaceField {
       spin: [0.04, 0.16],
       radialDrift: [1.6, 3.8],
       color: 0xf2ece4,
-      renderOrder: 34,
+      renderOrder: 29,
     };
 
     const makeEntry = () => {
@@ -377,8 +384,9 @@ export class Scene3SpaceField {
         map: texture,
         transparent: true,
         opacity: 1,
+        alphaTest: 0.035,
         depthWrite: false,
-        depthTest: true,
+        depthTest: false,
         toneMapped: false,
         color: layer.color,
       });
@@ -524,8 +532,9 @@ export class Scene3SpaceField {
         map: config.texture,
         transparent: true,
         opacity: 1,
+        alphaTest: 0.035,
         depthWrite: false,
-        depthTest: true,
+        depthTest: false,
         toneMapped: false,
         color: mediumLayer.color,
       });
@@ -625,8 +634,9 @@ export class Scene3SpaceField {
         map: config.texture,
         transparent: true,
         opacity: 1,
+        alphaTest: 0.035,
         depthWrite: false,
-        depthTest: true,
+        depthTest: false,
         toneMapped: false,
         color: largeLayer.color,
       });
