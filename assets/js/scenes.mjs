@@ -1787,6 +1787,9 @@ export class Scener {
 
     if (hasSeenJourney) {
       ctaLinkEl.setAttribute("href", "/download/");
+      window.setTimeout(() => {
+        heroNaviEl?.classList.add("main-content-navi--show-revisit");
+      }, 1000);
     } else {
       ctaLinkEl.removeAttribute("href");
       ctaLinkEl.addEventListener("click", (event) => {
