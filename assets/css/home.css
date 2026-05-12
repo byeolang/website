@@ -5,6 +5,115 @@ div.initial-content {
   flex: 0;
 }
 
+html.home-booting,
+body.home-booting {
+  overflow: hidden;
+}
+
+html.no-js,
+html.no-js body.home-booting {
+  overflow: auto;
+}
+
+html.no-js .home-loader {
+  display: none;
+}
+
+.home-loader {
+  --home-loader-progress: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 420;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(24px, 5vw, 56px);
+  background: rgba(0, 0, 0, 0.96);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 420ms ease, visibility 420ms ease;
+  pointer-events: auto;
+}
+
+html.home-booted .home-loader,
+body.home-booted .home-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home-loader__panel {
+  width: min(100%, 18rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: rgba(244, 247, 252, 0.92);
+  font-family: Galmuri9, monospace;
+}
+
+.home-loader__panel::before,
+.home-loader__panel::after {
+  content: none;
+}
+
+.home-loader__eyebrow {
+  display: none;
+}
+
+.home-loader__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-loader__status {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.home-loader__value {
+  min-width: 3ch;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: right;
+}
+
+.home-loader__track {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  border: 0;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.home-loader__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(var(--home-loader-progress));
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease-out;
+}
+
+@media (max-width: 640px) {
+  .home-loader {
+    padding: 1rem;
+  }
+
+  .home-loader__panel {
+    width: min(100%, 15rem);
+  }
+
+  .home-loader__meta {
+    font-size: 0.58rem;
+  }
+}
+
 div#footer {
   position: absolute;
   bottom: 0px;

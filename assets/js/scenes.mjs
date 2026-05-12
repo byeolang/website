@@ -24,6 +24,193 @@ const safelyWriteLocalStorage = (key, value) => {
   }
 };
 
+const HOME_LOADER_MIN_VISIBLE_MS = 480;
+const HOME_LOADER_RENDER_FRAMES = 3;
+
+const HOME_LOADER_COPY = Object.freeze({
+  loading: "LOADING ASSETS",
+  finalizing: "FINALIZING",
+  rendering: "RENDERING SCENE",
+  ready: "READY",
+});
+
+const HOME_SCENE_PRELOAD_ASSETS = Object.freeze([
+  "assets/images/scenes/scene3-target-planet-surface-texture.png",
+  "assets/images/scenes/scene3-target-planet-atmosphere.png",
+]);
+
+const clamp01 = (value) => Math.max(0, Math.min(1, value));
+
+const wait = (duration) => new Promise((resolve) => {
+  window.setTimeout(resolve, duration);
+});
+
+const waitForAnimationFrames = (count = 1) => new Promise((resolve) => {
+  const step = (remaining) => {
+    if (remaining <= 0) {
+      resolve();
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      step(remaining - 1);
+    });
+  };
+
+  step(count);
+});
+
+const waitForWindowLoad = () => new Promise((resolve) => {
+  if (document.readyState === "complete") {
+    resolve();
+    return;
+  }
+
+  window.addEventListener("load", resolve, { once: true });
+});
+
+const waitForDocumentFonts = () => document.fonts?.ready ?? Promise.resolve();
+
+const toAbsoluteAssetUrl = (path) => new URL(path, window.location.href).href;
+
+const preloadImageAsset = (url) => new Promise((resolve) => {
+  const image = new Image();
+  let settled = false;
+
+  const finalize = () => {
+    if (settled) {
+      return;
+    }
+
+    settled = true;
+    image.onload = null;
+    image.onerror = null;
+    resolve();
+  };
+
+  image.decoding = "async";
+  image.onload = finalize;
+  image.onerror = finalize;
+  image.src = url;
+
+  if (image.complete) {
+    if (typeof image.decode === "function") {
+      image.decode().catch(() => {}).finally(finalize);
+    } else {
+      finalize();
+    }
+  }
+});
+
+const collectHomePreloadAssets = () => {
+  const imageUrls = Array.from(
+    document.querySelectorAll("img[src]"),
+    (image) => image.getAttribute("src"),
+  )
+    .filter((src) => Boolean(src) && !src.startsWith("data:"))
+    .map(toAbsoluteAssetUrl);
+
+  return [...new Set([
+    ...imageUrls,
+    ...HOME_SCENE_PRELOAD_ASSETS.map(toAbsoluteAssetUrl),
+  ])];
+};
+
+const setHomeBootState = (state) => {
+  const isBooting = state === "booting";
+  const isBooted = state === "booted";
+
+  for (const element of [document.documentElement, document.body]) {
+    if (!element) {
+      continue;
+    }
+
+    element.classList.toggle("home-booting", isBooting);
+    element.classList.toggle("home-booted", isBooted);
+  }
+};
+
+class HomeBootLoader {
+  constructor() {
+    this.root = document.querySelector("[data-home-loader]");
+    this.meter = document.querySelector("[data-home-loader-meter]");
+    this.statusEl = document.querySelector("[data-home-loader-status]");
+    this.valueEl = document.querySelector("[data-home-loader-value]");
+    this.displayedProgress = 0;
+    this.targetProgress = 0;
+    this.frame = null;
+    this.startedAt = performance.now();
+
+    setHomeBootState("booting");
+    this._queueRender();
+  }
+
+  setStatus(label) {
+    if (this.statusEl) {
+      this.statusEl.textContent = label;
+    }
+  }
+
+  setProgress(value) {
+    this.targetProgress = clamp01(value);
+    this._queueRender();
+  }
+
+  _queueRender() {
+    if (!this.root || this.frame !== null) {
+      return;
+    }
+
+    this.frame = requestAnimationFrame(() => {
+      this.frame = null;
+      this._render();
+    });
+  }
+
+  _render() {
+    if (!this.root) {
+      return;
+    }
+
+    const delta = this.targetProgress - this.displayedProgress;
+    this.displayedProgress = Math.abs(delta) < 0.003
+      ? this.targetProgress
+      : this.displayedProgress + delta * 0.24;
+
+    this.root.style.setProperty("--home-loader-progress", this.displayedProgress.toFixed(4));
+
+    const percent = Math.round(this.displayedProgress * 100);
+    if (this.valueEl) {
+      this.valueEl.textContent = `${String(percent).padStart(2, "0")}%`;
+    }
+    this.meter?.setAttribute("aria-valuenow", String(percent));
+
+    if (Math.abs(this.targetProgress - this.displayedProgress) >= 0.003) {
+      this._queueRender();
+    }
+  }
+
+  async finish() {
+    this.setStatus(HOME_LOADER_COPY.ready);
+    this.setProgress(1);
+    await waitForAnimationFrames(2);
+
+    const remainingDuration = HOME_LOADER_MIN_VISIBLE_MS - (performance.now() - this.startedAt);
+
+    if (remainingDuration > 0) {
+      await wait(remainingDuration);
+    }
+
+    setHomeBootState("booted");
+    await wait(420);
+
+    if (this.frame !== null) {
+      cancelAnimationFrame(this.frame);
+      this.frame = null;
+    }
+  }
+}
+
 class DreamLanding extends Scene {
   constructor() {
     super(11);
@@ -1809,6 +1996,67 @@ export class Scener {
 
 var scener = new Scener()
 
-$(function() {
-  scener.init()
-})
+const bootHome = async () => {
+  const loader = new HomeBootLoader();
+  const assetUrls = collectHomePreloadAssets();
+  const totalSteps = assetUrls.length + 3;
+  let completedSteps = 0;
+  let scenesStarted = false;
+
+  const markStepComplete = () => {
+    completedSteps += 1;
+    loader.setProgress(completedSteps / totalSteps);
+  };
+
+  const trackStep = async (promise) => {
+    try {
+      await promise;
+    } finally {
+      markStepComplete();
+    }
+  };
+
+  const startScenes = () => {
+    if (scenesStarted) {
+      return;
+    }
+
+    scenesStarted = true;
+    scener.init();
+  };
+
+  try {
+    loader.setStatus(HOME_LOADER_COPY.loading);
+    await Promise.all([
+      ...assetUrls.map((assetUrl) => trackStep(preloadImageAsset(assetUrl))),
+      trackStep(waitForDocumentFonts()),
+    ]);
+
+    loader.setStatus(HOME_LOADER_COPY.finalizing);
+    await trackStep(waitForWindowLoad());
+
+    loader.setStatus(HOME_LOADER_COPY.rendering);
+    startScenes();
+    await waitForAnimationFrames(HOME_LOADER_RENDER_FRAMES);
+    markStepComplete();
+  } catch (error) {
+    console.error("Home scene bootstrap failed:", error);
+    startScenes();
+    loader.setProgress(1);
+  } finally {
+    await loader.finish();
+  }
+};
+
+const onDocumentReady = (callback) => {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", callback, { once: true });
+    return;
+  }
+
+  callback();
+};
+
+onDocumentReady(() => {
+  void bootHome();
+});

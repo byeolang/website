@@ -5,7 +5,7 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js home-booting">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
@@ -49,7 +49,19 @@
     <script type="module" src="assets/js/scenes.mjs"></script>
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body class="home-booting layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    <div class="home-loader" data-home-loader role="status" aria-live="polite" aria-label="Loading home scene">
+      <div class="home-loader__panel">
+        <p class="home-loader__eyebrow">STAR ROUTE</p>
+        <div class="home-loader__meta">
+          <span class="home-loader__status" data-home-loader-status>LOADING ASSETS</span>
+          <span class="home-loader__value" data-home-loader-value>00%</span>
+        </div>
+        <div class="home-loader__track" data-home-loader-meter role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="home-loader__fill"></span>
+        </div>
+      </div>
+    </div>
     {% include skip-links.html %}
     {% include masthead.html %}
 
