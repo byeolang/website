@@ -3361,3 +3361,19 @@ html.dark-mode #scene3-copy .scene3-copy__title {
     width: 52%;
   }
 }
+
+html[lang="en"] #scene1-copy .scene1-copy__title {
+  letter-spacing: -0.045em;
+}
+
+html[lang="en"] #scene2-copy .scene2-copy__title {
+  letter-spacing: -0.045em;
+}
+
+html[lang="en"] #scene3-copy .scene3-copy__title {
+  letter-spacing: -0.035em;
+}
+
+html[lang="en"] #scene4-copy .scene4-copy__title {
+  letter-spacing: -0.008em;
+}

@@ -28,11 +28,16 @@ class I18n {
     const newLang = this.currentLanguage === 'ko' ? 'en' : 'ko';
     this.currentLanguage = newLang;
     localStorage.setItem('language', newLang);
+    this.updateDocumentLanguage(newLang);
     this.updateLanguageFlag(newLang);
 
     setTimeout(() => {
       window.location.reload();
     }, 300);
+  }
+
+  updateDocumentLanguage(lang) {
+    document.documentElement.lang = lang;
   }
 
   updateLanguageFlag(lang) {
@@ -43,6 +48,7 @@ class I18n {
   }
 
   init() {
+    this.updateDocumentLanguage(this.currentLanguage);
     this.updateTooltips();
     this.updateLanguageFlag(this.currentLanguage);
   }
