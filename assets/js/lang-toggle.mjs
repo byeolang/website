@@ -15,7 +15,9 @@ class I18n {
 
   t(key, defaultValue = key) {
     const translation = this.translations[this.currentLanguage];
-    return translation && translation[key] ? translation[key] : defaultValue;
+    return translation && Object.prototype.hasOwnProperty.call(translation, key)
+      ? translation[key]
+      : defaultValue;
   }
 
   getLang() {
