@@ -139,8 +139,8 @@ Inheritance diagram for by::tifTemplate&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ed1e9bc3797d5100910c969dc36ee18" id="r_a7ed1e9bc3797d5100910c969dc36ee18"><td class="memTemplParams" colspan="2"><a id="a7ed1e9bc3797d5100910c969dc36ee18" name="a7ed1e9bc3797d5100910c969dc36ee18"></a>
-template&lt;<a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> &gt; <a class="el" href="structby_1_1no_wrap.html">class</a> Template, <a class="el" href="structby_1_1no_wrap.html">typename</a> X &gt; </td></tr>
-<tr class="memitem:a7ed1e9bc3797d5100910c969dc36ee18"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">yes</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_foo</b> (<a class="el" href="structby_1_1no_wrap.html">Template</a>&lt; X &gt; *)</td></tr>
+template&lt;<a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> &gt; <a class="el" href="structby_1_1no_wrap.html">class</a> Template, <a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">X</a> &gt; </td></tr>
+<tr class="memitem:a7ed1e9bc3797d5100910c969dc36ee18"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">yes</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_foo</b> (<a class="el" href="structby_1_1no_wrap.html">Template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">X</a> &gt; *)</td></tr>
 <tr class="separator:a7ed1e9bc3797d5100910c969dc36ee18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4797121be71911590f495fa51892f6b9" id="r_a4797121be71911590f495fa51892f6b9"><td class="memItemLeft" align="right" valign="top"><a id="a4797121be71911590f495fa51892f6b9" name="a4797121be71911590f495fa51892f6b9"></a>
 <a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">no</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_foo</b> (...)</td></tr>
@@ -149,7 +149,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a cl
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a21a353db2d7984e0b3a36ebff783c88d" id="r_a21a353db2d7984e0b3a36ebff783c88d"><td class="memItemLeft" align="right" valign="top"><a id="a21a353db2d7984e0b3a36ebff783c88d" name="a21a353db2d7984e0b3a36ebff783c88d"></a>
-<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">constexpr</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> = <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(_foo((T*) 0)) == <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">yes</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">constexpr</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> = <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(_foo((<a class="el" href="structby_1_1no_wrap.html">T</a>*) 0)) == <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">yes</a>)</td></tr>
 <tr class="separator:a21a353db2d7984e0b3a36ebff783c88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -163,11 +163,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac4ddbc6bcb3a6baedcce9e94ed2d3222 inherit pub_types_structby_1_1meta_if"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a>&gt;<br />
 struct by::tifTemplate&lt; T &gt;</div><p>Type trait to check if type is a template specialization. </p>
 <p>Uses SFINAE to determine if T is a template specialization at compile-time. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

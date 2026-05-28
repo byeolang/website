@@ -159,7 +159,7 @@ ncnt&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamCount</b> ()
 <tr class="memitem:a0f373a9a5099c2ea3f9c148be4772504" id="r_a0f373a9a5099c2ea3f9c148be4772504"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f373a9a5099c2ea3f9c148be4772504">logFormatBypass</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> nchar *fmt,...)</td></tr>
 <tr class="memdesc:a0f373a9a5099c2ea3f9c148be4772504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs formatted message bypassing rich logging conversion.  <br /></td></tr>
 <tr class="separator:a0f373a9a5099c2ea3f9c148be4772504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a704d20510894ee46cdfa91687ba7e0e8" id="r_a704d20510894ee46cdfa91687ba7e0e8"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704d20510894ee46cdfa91687ba7e0e8">log</a> (errLv::level lv, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">filename</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> nchar *<a class="el" href="classby_1_1func.html">func</a>, <a class="el" href="structby_1_1no_wrap.html">int</a> <a class="el" href="classby_1_1line.html">line</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> nchar *fmt,...)</td></tr>
+<tr class="memitem:a704d20510894ee46cdfa91687ba7e0e8" id="r_a704d20510894ee46cdfa91687ba7e0e8"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704d20510894ee46cdfa91687ba7e0e8">log</a> (errLv::level <a class="el" href="structby_1_1no_wrap.html">lv</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">filename</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> nchar *<a class="el" href="structby_1_1no_wrap.html">func</a>, <a class="el" href="structby_1_1no_wrap.html">int</a> <a class="el" href="classby_1_1line.html">line</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> nchar *fmt,...)</td></tr>
 <tr class="memdesc:a704d20510894ee46cdfa91687ba7e0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main logging function with full context information.  <br /></td></tr>
 <tr class="separator:a704d20510894ee46cdfa91687ba7e0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1920d09c867647e5249ff0f677e98b3" id="r_ab1920d09c867647e5249ff0f677e98b3"><td class="memItemLeft" align="right" valign="top">nbool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1920d09c867647e5249ff0f677e98b3">pushStream</a> (<a class="el" href="classby_1_1stream.html">stream</a> *<a class="el" href="structby_1_1no_wrap.html">new_stream</a>)</td></tr>
@@ -219,21 +219,20 @@ Public Attributes</h2></td></tr>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p>Basic usage with macros: </p><div class="fragment"><div class="line">BY_I(<span class="stringliteral">&quot;pods[%s] origins loaded.&quot;</span>, getName());</div>
-</div><!-- fragment --><p>This produces output like: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">Oct</a> 22 2025  21:26:13 <a class="code hl_struct" href="structby_1_1no_wrap.html">I</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">cppPodLoa &lt;_loadLibs#49&gt;</a> <a class="code hl_class" href="classby_1_1pod.html">pod</a>[<a class="code hl_struct" href="structby_1_1no_wrap.html">cpp</a>] <a class="code hl_struct" href="structby_1_1no_wrap.html">origins</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">loaded</a>.</div>
-<div class="ttc" id="aclassby_1_1pod_html"><div class="ttname"><a href="classby_1_1pod.html">by::pod</a></div><div class="ttdoc">Pod.</div><div class="ttdef"><b>Definition</b> pod.hpp:21</div></div>
+</div><!-- fragment --><p>This produces output like: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">Oct</a> 22 2025  21:26:13 <a class="code hl_struct" href="structby_1_1no_wrap.html">I</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">cppPodLoa &lt;_loadLibs#49&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">pod</a>[<a class="code hl_struct" href="structby_1_1no_wrap.html">cpp</a>] <a class="code hl_struct" href="structby_1_1no_wrap.html">origins</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">loaded</a>.</div>
 <div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --><p>The log shows:</p><ol type="1">
 <li>Date (Oct 22 2025) and time (21:26:13)</li>
 <li>Log level (I for Info) - ERR, WARN, INFO are available</li>
-<li>Class name (<a class="el" href="classby_1_1cpp_pod_loading.html" title="C++ native pod loading implementation.">cppPodLoading</a>, abbreviated)</li>
+<li>Class name (cppPodLoading, abbreviated)</li>
 <li>Function (_loadLibs) and line number (49)</li>
 <li>Log message (pod[cpp] origins loaded)</li>
 </ol>
 <h1><a class="anchor" id="stream_concept"></a>
 stream</h1>
 <p>The core of the clog module is <a class="el" href="classby_1_1stream.html">stream</a>. A stream represents the logging output destination. Currently <a class="el" href="classby_1_1console_stream.html">consoleStream</a> and <a class="el" href="classby_1_1file_log_stream.html">fileLogStream</a> exist. All streams are owned by the logger class from the start.</p>
-<p>Each stream follows the standard byeol state diagram: </p><div class="fragment"><div class="line">RELEASED ---init()---&gt; <a class="code hl_struct" href="structby_1_1no_wrap.html">INITIALIZED</a></div>
-<div class="line">RELEASED &lt;--rel()----- <a class="code hl_struct" href="structby_1_1no_wrap.html">INITIALIZED</a></div>
+<p>Each stream follows the standard byeol state diagram: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">RELEASED</a> ---init()---&gt; <a class="code hl_struct" href="structby_1_1no_wrap.html">INITIALIZED</a></div>
+<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">RELEASED</a> &lt;--rel()----- <a class="code hl_struct" href="structby_1_1no_wrap.html">INITIALIZED</a></div>
 </div><!-- fragment --><p>Streams also manage enable status. Using setEnable(false) disables a specific stream. The logger class itself inherits from stream, so it provides the same API. Logger redirects each API call to all owned streams. For example, <code><a class="el" href="#ad017486e7f948b1d25558c97758400cc" title="Get singleton logger instance.">logger::get()</a>.setEnable(false)</code> disables all streams.</p>
 <h1><a class="anchor" id="logging_macros"></a>
 macro</h1>
@@ -482,7 +481,7 @@ filterable</h1>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/clog/<a class="el" href="logger_8hpp_source.html">logger.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/clog/<a class="el" href="logger_8hpp_source.html">logger.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

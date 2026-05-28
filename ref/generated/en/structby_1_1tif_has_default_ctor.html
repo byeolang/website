@@ -139,18 +139,18 @@ Inheritance diagram for by::tifHasDefaultCtor&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a972bea57ca2ac92f4774ca9710f545" id="r_a2a972bea57ca2ac92f4774ca9710f545"><td class="memTemplParams" colspan="2"><a id="a2a972bea57ca2ac92f4774ca9710f545" name="a2a972bea57ca2ac92f4774ca9710f545"></a>
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> X , <a class="el" href="structby_1_1no_wrap.html">typename</a>  = decltype(X())&gt; </td></tr>
-<tr class="memitem:a2a972bea57ca2ac92f4774ca9710f545"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">yes</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>test</b> (X *)</td></tr>
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">X</a> , <a class="el" href="structby_1_1no_wrap.html">typename</a>  = decltype(X())&gt; </td></tr>
+<tr class="memitem:a2a972bea57ca2ac92f4774ca9710f545"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">yes</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>test</b> (<a class="el" href="structby_1_1no_wrap.html">X</a> *)</td></tr>
 <tr class="separator:a2a972bea57ca2ac92f4774ca9710f545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8441039fabcc75f911289db4ec5b970e" id="r_a8441039fabcc75f911289db4ec5b970e"><td class="memTemplParams" colspan="2"><a id="a8441039fabcc75f911289db4ec5b970e" name="a8441039fabcc75f911289db4ec5b970e"></a>
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> X &gt; </td></tr>
+template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">X</a> &gt; </td></tr>
 <tr class="memitem:a8441039fabcc75f911289db4ec5b970e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">no</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>test</b> (...)</td></tr>
 <tr class="separator:a8441039fabcc75f911289db4ec5b970e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a304346ba6610a34c9fbdd90e88d59c5d" id="r_a304346ba6610a34c9fbdd90e88d59c5d"><td class="memItemLeft" align="right" valign="top"><a id="a304346ba6610a34c9fbdd90e88d59c5d" name="a304346ba6610a34c9fbdd90e88d59c5d"></a>
-<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">constexpr</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> = <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">decltype</a>(test&lt;T&gt;(nullptr))) == <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">yes</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">constexpr</a> nbool&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> = <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">decltype</a>(test&lt;<a class="el" href="structby_1_1no_wrap.html">T</a>&gt;(<a class="el" href="structby_1_1no_wrap.html">nullptr</a>))) == <a class="el" href="structby_1_1no_wrap.html">sizeof</a>(<a class="el" href="structby_1_1no_wrap.html">yes</a>)</td></tr>
 <tr class="separator:a304346ba6610a34c9fbdd90e88d59c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -164,11 +164,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac4ddbc6bcb3a6baedcce9e94ed2d3222 inherit pub_types_structby_1_1meta_if"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a>&gt;<br />
 struct by::tifHasDefaultCtor&lt; T &gt;</div><p>Type trait to check if type has default constructor. </p>
 <p>Uses SFINAE to determine at compile-time whether type T can be default-constructed. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -233,7 +233,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory watcher for tracking instance lifecycle and allocation. </p>
-<p>One pillar of memory management that manages created object lifecycles. Whenever an instance is created, watcher additionally allocates a <a class="el" href="classby_1_1life.html">life</a> object and uses reference counting to determine object destruction timing.</p>
+<p>One pillar of memory management that manages created object lifecycles. Whenever an <a class="el" href="classby_1_1instance.html">instance</a> is created, watcher additionally allocates a <a class="el" href="classby_1_1life.html">life</a> object and uses reference counting to determine object destruction timing.</p>
 <h1><a class="anchor" id="reference_counting"></a>
 Reference counting</h1>
 <p>When <a class="el" href="classby_1_1binder.html">binder</a> binds an instance, life increments its strong count by 1. When binder calls rel() on instance, decrements count by 1. At 0, deletes from memory. instance uses <code>operator delete()</code> to make <a class="el" href="classby_1_1instancer.html">instancer</a> execute memory release work. </p>
@@ -361,7 +361,7 @@ Reference counting</h1>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/memlite/watcher/<a class="el" href="watcher_2watcher_8hpp_source.html">watcher.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/memlite/watcher/<a class="el" href="watcher_2watcher_8hpp_source.html">watcher.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

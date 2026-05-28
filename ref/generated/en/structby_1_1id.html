@@ -133,10 +133,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>id</b> (nint <a class="el" href="structby_1_1no_wrap.html">new_tagN</a>, nint <a class="el" href="structby_1_1no_wrap.html">newChkN</a>, nuint <a class="el" href="structby_1_1no_wrap.html">newSerial</a>)</td></tr>
 <tr class="separator:a8292e261c183b994eb5da59d28cf34f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a151ebf0f412b77ed70fa85b2f29d60f8" id="r_a151ebf0f412b77ed70fa85b2f29d60f8"><td class="memItemLeft" align="right" valign="top"><a id="a151ebf0f412b77ed70fa85b2f29d60f8" name="a151ebf0f412b77ed70fa85b2f29d60f8"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1id.html">id</a> &amp;rhs) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1id.html">id</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a151ebf0f412b77ed70fa85b2f29d60f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5367a10aacddb22bafa31b5addb12e73" id="r_a5367a10aacddb22bafa31b5addb12e73"><td class="memItemLeft" align="right" valign="top"><a id="a5367a10aacddb22bafa31b5addb12e73" name="a5367a10aacddb22bafa31b5addb12e73"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1id.html">id</a> &amp;rhs) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1id.html">id</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a5367a10aacddb22bafa31b5addb12e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e27563518ce88b2489d602e130f6465" id="r_a8e27563518ce88b2489d602e130f6465"><td class="memItemLeft" align="right" valign="top"><a id="a8e27563518ce88b2489d602e130f6465" name="a8e27563518ce88b2489d602e130f6465"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
@@ -163,7 +163,7 @@ nuint&#160;</td><td class="memItemRight" valign="bottom"><b>serial</b>: 21</td><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Unique identifier for instances in memlite system. </p>
-<p>64-bit integer instance identifier. tagN identifies <a class="el" href="classby_1_1life.html">life</a>, chkN indicates which <a class="el" href="classby_1_1chunk.html">chunk</a>, and serial is used for object validation.</p>
+<p>64-bit integer <a class="el" href="classby_1_1instance.html">instance</a> identifier. tagN identifies <a class="el" href="classby_1_1life.html">life</a>, chkN indicates which <a class="el" href="classby_1_1chunk.html">chunk</a>, and serial is used for object validation.</p>
 <h1><a class="anchor" id="serial_field"></a>
 serial is instance creation count during process execution</h1>
 <p>As seen from <a class="el" href="classby_1_1pool.html">pool</a> and chunk, using a custom memory pool means when memory is released, only the destructor is called without initializing all memory. Previously allocated and destroyed data remains, and accessing this data is even possible. (If accessing used data causes exceptions or UB, implementing <a class="el" href="classby_1_1binder.html">binder</a> with weak or strong pointers would be impossible.) binder additionally compares serial to distinguish whether retrieved data is truly valid.</p>
@@ -195,8 +195,8 @@ chkN used for retrieving chunk objects</h1>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/runner/work/byeol/byeol/module/memlite/interface/<a class="el" href="id_8hpp_source.html">id.hpp</a></li>
-<li>/home/runner/work/byeol/byeol/module/memlite/interface/<b>id.cpp</b></li>
+<li>/home/runner/work/stela/stela/module/memlite/interface/<a class="el" href="id_8hpp_source.html">id.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/memlite/interface/<b>id.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

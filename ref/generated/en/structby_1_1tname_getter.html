@@ -136,12 +136,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0360e303e33333f5d0fdbe50c45e75ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a>&gt;<br />
 struct by::tnameGetter&lt; T &gt;</div><p>Template name getter for type introspection. </p>
 <p>TClass is a class template using monostate pattern. so it duplicates all static variables on each modules and it causes that can't check hierarchy properly. sure, I can exports them,template classes, as external symbol for 3rd party modules to link and make it act well. but this requires user to declare another macro or statements such as burden to get them be annoy. instead of that, I put those inside of static symbols at normal nested private class. now, TClass of course will be duplicated on each modules and code bloated but it will act like proxy pointing this nested class.</p>
 <p>in conclusion, users can ignore this background reasons and use CLASS macro without additional consideration. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/byeol/byeol/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
+<li>/home/runner/work/stela/stela/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

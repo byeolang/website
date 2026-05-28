@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['life_2ehpp_0',['life.hpp',['../life_8hpp.html',1,'']]],
-  ['line_2ehpp_1',['line.hpp',['../line_8hpp.html',1,'']]],
-  ['loader_2ehpp_2',['loader.hpp',['../loader_8hpp.html',1,'']]],
-  ['logger_2ehpp_3',['logger.hpp',['../logger_8hpp.html',1,'']]],
-  ['logstructureflag_2ehpp_4',['logStructureFlag.hpp',['../log_structure_flag_8hpp.html',1,'']]],
-  ['loopexpr_2ehpp_5',['loopExpr.hpp',['../loop_expr_8hpp.html',1,'']]]
+  ['macro_2ehpp_0',['macro.hpp',['../clog_2common_2macro_8hpp.html',1,'(Global Namespace)'],['../indep_2macro_8hpp.html',1,'(Global Namespace)'],['../meta_2common_2macro_8hpp.html',1,'(Global Namespace)']]],
+  ['memoryhaver_2ehpp_1',['memoryHaver.hpp',['../memory_haver_8hpp.html',1,'']]],
+  ['modules_2edox_2',['modules.dox',['../modules_8dox.html',1,'']]]
 ];
