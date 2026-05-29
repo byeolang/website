@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orgcache_0',['orgCache',['../group__core.html#gae7bef416778c285966d6b55c2184d722',1,'by']]]
+  ['flagstrs_0',['flagStrs',['../group__frontend.html#ga98876efc7456ed46f5df53203ca24f15',1,'by']]]
 ];

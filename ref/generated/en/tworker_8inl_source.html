@@ -131,13 +131,13 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structby_1_1worker_adapter.html">    8</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1worker_adapter.html">workerAdapter</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">static</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">R</a> adaptWork(<a class="code hl_struct" href="structby_1_1no_wrap.html">tworker&lt;R, T&gt;</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">w</a>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">static</span> <a class="code hl_class" href="classby_1_1tnarr.html">R</a> adaptWork(<a class="code hl_class" href="classby_1_1tnarr.html">tworker&lt;R, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">w</a>);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    };</div>
 </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structby_1_1worker_adapter_3_01void_00_01_t_01_4.html">   12</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1worker_adapter.html">workerAdapter</a>&lt;void, T&gt; {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> adaptWork(<a class="code hl_struct" href="structby_1_1no_wrap.html">tworker&lt;void, T&gt;</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">w</a>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> adaptWork(<a class="code hl_class" href="classby_1_1tnarr.html">tworker&lt;void, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">w</a>);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    };</div>
 </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
@@ -241,7 +241,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    TEMPLATE</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    R ME::adaptWork(tworker&lt;R, T&gt;&amp; w) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;R, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">line::incLv</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            line::incLv();</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            BY_I(<span class="stringliteral">&quot;▶ %s.work()&quot;</span>, w);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
@@ -258,7 +258,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        w._onEndWork();</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;R, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_function" href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">line::decLv</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            line::decLv();</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            BY_I(<span class="stringliteral">&quot;◀ %s ends!&quot;</span>, w);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> ret;</div>
@@ -273,7 +273,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> ME::adaptWork(tworker&lt;void, T&gt;&amp; w) {</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;void, T&gt;::GUARD)) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            BY_I(<span class="stringliteral">&quot;▶ %s.work()&quot;</span>, w);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">line::incLv</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            line::incLv();</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        w._prepare();</div>
@@ -281,7 +281,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        enablesZone prev;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            enablesZone internal;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span>(!w.isFlag(tworker&lt;void, T&gt;::INTERNAL)) <a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setEnable(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span>(!w.isFlag(tworker&lt;void, T&gt;::INTERNAL)) logger::get().setEnable(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            w._onWork();</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
@@ -291,7 +291,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        w._onEndWork();</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;void, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_function" href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">line::decLv</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            line::decLv();</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            BY_I(<span class="stringliteral">&quot;◀ %s ends!&quot;</span>, w);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
@@ -299,12 +299,9 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#undef ME</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#undef TEMPLATE</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>} <span class="comment">// namespace by</span></div>
-<div class="ttc" id="aclassby_1_1line_html_a4edc878d49948fd15dc8bff7fcb88915"><div class="ttname"><a href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">by::line::incLv</a></div><div class="ttdeci">static void incLv()</div><div class="ttdoc">Increases the current depth level.</div><div class="ttdef"><b>Definition</b> line.cpp:33</div></div>
-<div class="ttc" id="aclassby_1_1line_html_a7171a51e94c4dbbacb004cf86ec11aa2"><div class="ttname"><a href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">by::line::decLv</a></div><div class="ttdeci">static void decLv()</div><div class="ttdoc">Decreases the current depth level.</div><div class="ttdef"><b>Definition</b> line.cpp:38</div></div>
-<div class="ttc" id="aclassby_1_1logger_html_ad017486e7f948b1d25558c97758400cc"><div class="ttname"><a href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">by::logger::get</a></div><div class="ttdeci">static logger &amp; get()</div><div class="ttdoc">Get singleton logger instance.</div></div>
 <div class="ttc" id="aclassby_1_1thread_html"><div class="ttname"><a href="classby_1_1thread.html">by::thread</a></div><div class="ttdoc">Thread execution context for byeol runtime.</div><div class="ttdef"><b>Definition</b> thread.hpp:46</div></div>
+<div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr</a></div><div class="ttdef"><b>Definition</b> tnarr.hpp:9</div></div>
 <div class="ttc" id="aclassby_1_1tworker_html"><div class="ttname"><a href="classby_1_1tworker.html">by::tworker</a></div><div class="ttdoc">Base worker template for processing tasks.</div><div class="ttdef"><b>Definition</b> tworker.hpp:58</div></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 <div class="ttc" id="astructby_1_1worker_adapter_html"><div class="ttname"><a href="structby_1_1worker_adapter.html">by::workerAdapter</a></div><div class="ttdef"><b>Definition</b> tworker.inl:8</div></div>
 <div class="ttc" id="athread_8hpp_html"><div class="ttname"><a href="thread_8hpp.html">thread.hpp</a></div></div>
 <div class="ttc" id="atworker_8hpp_html"><div class="ttname"><a href="tworker_8hpp.html">tworker.hpp</a></div></div>
@@ -312,5 +309,6 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

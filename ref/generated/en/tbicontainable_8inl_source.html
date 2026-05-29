@@ -170,12 +170,12 @@ $(function(){initNavTree('tbicontainable_8inl_source.html',''); initResizable();
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    TEMPL</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V1&gt; V1* ME::get(<span class="keyword">const</span> K&amp; key) { <span class="keywordflow">return</span> get(key) <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(<span class="keyword">template</span> cast&lt;V1&gt;()); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V1&gt; V1* ME::get(<span class="keyword">const</span> K&amp; key) { <span class="keywordflow">return</span> get(key) TO(<span class="keyword">template</span> cast&lt;V1&gt;()); }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    TEMPL</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V1&gt; V1* ME::get(std::function&lt;nbool(<span class="keyword">const</span> K&amp;, <span class="keyword">const</span> V1&amp;)&gt; l) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> e = begin(); e; ++e) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            V1&amp; val = e.getVal() <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            V1&amp; val = e.getVal() TO(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            const K&amp; key = e.getKey() OR_CONTINUE;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            if(!l(key, val)) continue;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            return &amp;val;</div>
@@ -203,7 +203,7 @@ $(function(){initNavTree('tbicontainable_8inl_source.html',''); initResizable();
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V1&gt; tnarr&lt;V1&gt; ME::getAll(std::function&lt;nbool(<span class="keyword">const</span> K&amp;, <span class="keyword">const</span> V1&amp;)&gt; l)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        tnarr&lt;V1&gt; ret;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> e = begin(); e; ++e) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keyword">const</span> V1&amp; val = e.getVal() <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keyword">const</span> V1&amp; val = e.getVal() TO(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            const K&amp; key = e.getKey() OR_CONTINUE;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            if(!l(key, val)) continue;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -219,7 +219,7 @@ $(function(){initNavTree('tbicontainable_8inl_source.html',''); initResizable();
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    TEMPL</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V1&gt; <span class="keywordtype">void</span> ME::each(std::function&lt;nbool(<span class="keyword">const</span> K&amp;, V1&amp;)&gt; l) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> e = begin(); e; ++e) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            V1&amp; val = e.getVal() <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            V1&amp; val = e.getVal() TO(<span class="keyword">template</span> cast&lt;V1&gt;()) OR_CONTINUE;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            const K&amp; key = e.getKey() OR_CONTINUE;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            if(!l(key, val)) break;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
@@ -306,12 +306,12 @@ $(function(){initNavTree('tbicontainable_8inl_source.html',''); initResizable();
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#undef TEMPL</span></div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="aclassiter_html"><div class="ttname"><a href="classiter.html">iter</a></div><div class="ttdoc">Bidirectional iterator for key-value containers.</div><div class="ttdef"><b>Definition</b> biter.hpp:10</div></div>
-<div class="ttc" id="agroup__indep_html_gab66a6cdf25aca4c8eeb667e884fc905a"><div class="ttname"><a href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a></div><div class="ttdeci">#define TO(fn)</div><div class="ttdef"><b>Definition</b> to.hpp:175</div></div>
 <div class="ttc" id="anode_8hpp_html"><div class="ttname"><a href="node_8hpp.html">node.hpp</a></div></div>
 <div class="ttc" id="atbicontainable_8hpp_html"><div class="ttname"><a href="tbicontainable_8hpp.html">tbicontainable.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

@@ -171,11 +171,11 @@ WHEN 매크로</h1>
 <hr  />
 <h1><a class="anchor" id="autotoc_md180"></a>
 tmay 클래스</h1>
-<p><a class="el" href="classby_1_1tmay.html">tmay</a> 클래스는 값으로 반환하는 함수에 대해 속도가 느린 exception을 사용하지 않고도 에러임을 알려주는 클래스입니다. <code>std::optional&lt;T&gt;</code>과 거의 동일합니다. API look을 프로젝트 컨벤션에 맞춘 것에 가깝습니다.</p>
-<p>정상동작일 경우 <a class="el" href="classby_1_1tmay.html">tmay</a> 의 생성자로 값을 T&amp;로 넘기면 됩니다. 에러상황일 경우 기본 생성자 <code>tmay&lt;T&gt;()</code>를 사용하면 됩니다. 내부적으로 <a class="el" href="classby_1_1tmedium.html">tmedium</a> 클래스를 사용하여 값의 유무를 추적합니다. <a class="el" href="classby_1_1tmedium.html">tmedium</a> 은 값을 저장하는 중간 계층으로, T&amp;와 nullptr 모두를 받을 수 있는 유연한 인터페이스를 제공합니다.</p>
+<p>tmay 클래스는 값으로 반환하는 함수에 대해 속도가 느린 exception을 사용하지 않고도 에러임을 알려주는 클래스입니다. <code>std::optional&lt;T&gt;</code>과 거의 동일합니다. API look을 프로젝트 컨벤션에 맞춘 것에 가깝습니다.</p>
+<p>정상동작일 경우 tmay 의 생성자로 값을 T&amp;로 넘기면 됩니다. 에러상황일 경우 기본 생성자 <code>tmay&lt;T&gt;()</code>를 사용하면 됩니다. 내부적으로 tmedium 클래스를 사용하여 값의 유무를 추적합니다. tmedium 은 값을 저장하는 중간 계층으로, T&amp;와 nullptr 모두를 받을 수 있는 유연한 인터페이스를 제공합니다.</p>
 <p><code>has()</code> 나 <code>get()</code>, <code>rel()</code>, <code>set()</code> 함수를 제공하는데, 이는 프로젝트 전반적으로 많이 사용되는 네이밍 컨벤션입니다.</p>
 <p><b>사용 예시</b></p>
-<p><a class="el" href="classby_1_1tmay.html">tmay</a> 는 에러를 반환할 수 있는 함수의 반환 타입으로 사용됩니다:</p>
+<p>tmay 는 에러를 반환할 수 있는 함수의 반환 타입으로 사용됩니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">tmay&lt;int&gt; divide(int a, int b) {</div>
 <div class="line">    if (b == 0)</div>
@@ -197,7 +197,7 @@ tres 클래스</h1>
 <div class="plantumlgraph">
 <img src="inline_umlgraph_3.png" />
 </div>
-<p><a class="el" href="classby_1_1tres.html">tres</a> 클래스는 <a class="el" href="classby_1_1tmay.html">tmay</a> 와 동일하나, 에러일 경우, 원하는 에러 타입을 갖도록 정의할 수 있습니다. 예를들어 tmay는 에러인지 아닌지만 알 수 있지만, tres&lt;A, std::string&gt;으로 정의하면 에러일 경우, 어떤 에러인지 메시지도 알 수 있도록 만들 수 있습니다. 이는 Result 타입 또는 Either 타입으로 알려진 idium입니다.</p>
+<p>tres 클래스는 tmay 와 동일하나, 에러일 경우, 원하는 에러 타입을 갖도록 정의할 수 있습니다. 예를들어 tmay는 에러인지 아닌지만 알 수 있지만, tres&lt;A, std::string&gt;으로 정의하면 에러일 경우, 어떤 에러인지 메시지도 알 수 있도록 만들 수 있습니다. 이는 Result 타입 또는 Either 타입으로 알려진 idium입니다.</p>
 <p><b>사용 예시</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">tres&lt;int, std::string&gt; parseNumber(const std::string&amp; str) {</div>
@@ -222,7 +222,7 @@ tres 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md184"></a>
 platformAPI 클래스</h1>
-<p><a class="el" href="namespaceby_1_1platform_a_p_i.html">platformAPI</a> 클래스는 단발성으로 호출되는, 플랫폼 종속적인 API들을 독립적으로 제공하는 일종의 완충작용을 합니다. Facade 패턴을 사용하여 복잡한 플랫폼별 API들을 단순한 인터페이스로 제공합니다.</p>
+<p>platformAPI 클래스는 단발성으로 호출되는, 플랫폼 종속적인 API들을 독립적으로 제공하는 일종의 완충작용을 합니다. Facade 패턴을 사용하여 복잡한 플랫폼별 API들을 단순한 인터페이스로 제공합니다.</p>
 <p>예를들면 텍스트 출력시 색깔을 입히려면 posix 계열 플랫폼에서는 ANSI escape sequence를 사용하지만 윈도우에서는 WINAPI를 사용해야 합니다. 이렇게요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">#ifdef _LINUX</div>
@@ -232,7 +232,7 @@ platformAPI 클래스</h1>
 <div class="line">#endif</div>
 <div class="line"> </div>
 <div class="line">cout &lt;&lt; &quot;some message\n&quot;;</div>
-</div><!-- fragment --><p>이때 이 diff를 <a class="el" href="namespaceby_1_1platform_a_p_i.html#a050387b0ba726cc4aa5ef7275f914246">foreColor()</a> 라는 함수로 잘 감싸면 사용하면,</p>
+</div><!-- fragment --><p>이때 이 diff를 foreColor() 라는 함수로 잘 감싸면 사용하면,</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">cout &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; &quot;(&quot; &lt;&lt; foreColor(YELLOW) &lt;&lt; _encodeNewLine(rightName)</div>
 <div class="line">     &lt;&lt; foreColor(LIGHTGRAY) &lt;&lt; &quot;)&quot;;</div>
@@ -240,7 +240,7 @@ platformAPI 클래스</h1>
 <hr  />
 <h2><a class="anchor" id="autotoc_md186"></a>
 buildFeature 클래스</h2>
-<p><a class="el" href="classby_1_1build_feature.html">buildFeature</a> 클래스는 CMake에 의해서 자동으로 생성되는 buildInformation.hpp 에 정의된 정보를 반환하는 클래스입니다. 절대 수동으로 값을 변경해서는 안됩니다.</p>
+<p>buildFeature 클래스는 CMake에 의해서 자동으로 생성되는 buildInformation.hpp 에 정의된 정보를 반환하는 클래스입니다. 절대 수동으로 값을 변경해서는 안됩니다.</p>
 <p>빌드 일시, 버전, 빌드한 OS, 바이너리 타입에 대한 정보를 갖습니다. buildInformation.hpp에 값의 원본이 #define으로 정의되어 있으므로, 필요하다면 이를 사용해도 되죠. #ifdef시에도 종종 사용되니 참고하세요.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">if(buildFeature::config::isDbg()) // debug binary일때만 뭔가 하고 싶습니다:</div>
@@ -255,7 +255,7 @@ buildFeature 클래스</h2>
 <hr  />
 <h1><a class="anchor" id="autotoc_md188"></a>
 파일 시스템 - fsystem 클래스</h1>
-<p><a class="el" href="classby_1_1fsystem.html">fsystem</a> 클래스는 지정한 폴더에서 파일을 재귀적으로 탐색하는 간단한 클래스입니다. 윈도우와 posix 계열 운영체제에서 모두 사용가능한 플랫폼 독립적인 API를 제공합니다. 핵심 API는 iterator 클래스를 통해 이뤄집니다.</p>
+<p>fsystem 클래스는 지정한 폴더에서 파일을 재귀적으로 탐색하는 간단한 클래스입니다. 윈도우와 posix 계열 운영체제에서 모두 사용가능한 플랫폼 독립적인 API를 제공합니다. 핵심 API는 iterator 클래스를 통해 이뤄집니다.</p>
 <p>사용 예제는 아래와 같습니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">auto e = fsystem::find(&quot;../your/path&quot;);</div>
@@ -268,9 +268,9 @@ buildFeature 클래스</h2>
 <hr  />
 <h1><a class="anchor" id="autotoc_md190"></a>
 cpIter 클래스</h1>
-<p><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 클래스는 문자열에 대해서 codepoint 기반의 iteration을 담당합니다. 주로 <a class="el" href="classby_1_1n_str.html">nStr</a> 에서 UTF8 unicode와 같은 multibyte 문자열을 순회할 때 사용합니다. Bidirectional Iterator 패턴을 구현하여 정방향과 역방향 순회를 모두 지원합니다.</p>
-<p>일반적인 iterator 답게, 전위 증가 및 후위증가연산자, 역참조 연산자, bool 형변환 연산자 등을 지원합니다. <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 를 생성할때 순회할 문자열과 함께 기본 iteration의 방향을 지정할 수 있습니다.</p>
-<p><a class="el" href="classby_1_1cp_iter.html">cpIter</a> 생성시 입력한 방향은 iter 자체의 기본 방향과 초기 위치를 정의한 것입니다. reverse = true로 argument로 주면 <a class="el" href="classby_1_1cp_iter.html">cpIter</a> 는 문자열 끝에서 역방향으로 출발합니다. 그러나 이때 stepBackward()나 stepForward()를 명시적으로 호출하면, 이 기본 방향과 관계없이 해당 방향으로 전진합니다.</p>
+<p>cpIter 클래스는 문자열에 대해서 codepoint 기반의 iteration을 담당합니다. 주로 <a class="el" href="classby_1_1n_str.html">nStr</a> 에서 UTF8 unicode와 같은 multibyte 문자열을 순회할 때 사용합니다. Bidirectional Iterator 패턴을 구현하여 정방향과 역방향 순회를 모두 지원합니다.</p>
+<p>일반적인 iterator 답게, 전위 증가 및 후위증가연산자, 역참조 연산자, bool 형변환 연산자 등을 지원합니다. cpIter 를 생성할때 순회할 문자열과 함께 기본 iteration의 방향을 지정할 수 있습니다.</p>
+<p>cpIter 생성시 입력한 방향은 iter 자체의 기본 방향과 초기 위치를 정의한 것입니다. reverse = true로 argument로 주면 cpIter 는 문자열 끝에서 역방향으로 출발합니다. 그러나 이때 stepBackward()나 stepForward()를 명시적으로 호출하면, 이 기본 방향과 관계없이 해당 방향으로 전진합니다.</p>
 <p>STL과 마찬가지로 begin은 첫번째 원소를 가리키지만, end는 마지막 원소의 다음 위치를 가리킵니다. (past-the-end) 따라서 역방향 순회시에는 먼저 next()를 해야만 합니다.</p>
 <p><b>기본 사용 예제 (정방향 순회)</b></p>
 <p>먼저 간단한 정방향 순회 예제입니다:</p>
@@ -301,14 +301,14 @@ cpIter 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md192"></a>
 동적 라이브러리 로딩 - dlib 클래스</h1>
-<p><a class="el" href="classby_1_1dlib.html">dlib</a> 클래스는 dynamic loading for library의 약자입니다. 플랫폼 독립적인 동적 로딩을 담당합니다. 라이브러리의 메모리 적재, 원하는 함수을 찾아 함수포인터로 변환할 수 있습니다.</p>
+<p>dlib 클래스는 dynamic loading for library의 약자입니다. 플랫폼 독립적인 동적 로딩을 담당합니다. 라이브러리의 메모리 적재, 원하는 함수을 찾아 함수포인터로 변환할 수 있습니다.</p>
 <p>다음과 같이 사용합니다:</p><ol type="1">
-<li><a class="el" href="classby_1_1dlib.html">dlib</a> 객체를 생성한다.</li>
+<li>dlib 객체를 생성한다.</li>
 <li>로딩할 라이브러리의 위치를 지정한다.</li>
 <li>함수명을 통해 원하는 함수를 찾아 함수포인터로 받는다.</li>
 </ol>
-<p><a class="el" href="classby_1_1tmay.html">tmay</a> 를 사용하므로 <a class="el" href="classby_1_1tmay.html">tmay</a> 를 사전에 익혀두는 걸 권장합니다.</p>
-<p><a class="el" href="classby_1_1dlib.html">dlib</a> 은 RAII idiom으로 구현되어 있습니다. 해당 인스턴스가 소멸될때 외부로 반환된 함수포인터는 사용할 수 없게 되죠.</p>
+<p>tmay 를 사용하므로 tmay 를 사전에 익혀두는 걸 권장합니다.</p>
+<p>dlib 은 RAII idiom으로 구현되어 있습니다. 해당 인스턴스가 소멸될때 외부로 반환된 함수포인터는 사용할 수 없게 되죠.</p>
 <p><b>사용예제</b></p>
 <p>다음 예제는 동적 라이브러리를 로드하고 함수를 호출하는 전체 과정을 보여줍니다. 코드에서 <code>rel()</code>은 리소스를 명시적으로 해제하는 함수로, 에러 발생 시 dlib 객체를 정리한 후 반환하기 위해 comma 연산자 <code>(rel(), false)</code>를 사용합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -329,7 +329,7 @@ cpIter 클래스</h1>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md194"></a>
 end 클래스</h1>
-<p><a class="el" href="classby_1_1end.html">end</a> 클래스는 코드 실행을 지연시킵니다. 다른 언어에서 <code>defer</code>와 같은 키워드와 같은 역할입니다. RAII 기반의 Scope Guard 패턴을 구현하여, 스코프 종료 시 자동으로 정리 작업을 수행합니다.</p>
+<p>end 클래스는 코드 실행을 지연시킵니다. 다른 언어에서 <code>defer</code>와 같은 키워드와 같은 역할입니다. RAII 기반의 Scope Guard 패턴을 구현하여, 스코프 종료 시 자동으로 정리 작업을 수행합니다.</p>
 <p><b>사용 예시</b></p>
 <p>RAII 패턴을 활용하여 스코프 종료 시 특정 코드를 실행합니다:</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
@@ -358,8 +358,7 @@ Side Func</h1>
 <div class="line"><span class="comment">// 매우 지겹습니다.</span></div>
 </div><!-- fragment --><p>byeol에서는 이 편의함수를 <code>Side Func</code> 이라고 부르고 있습니다. 의미는 동일해요. 타입이 다른 인자를, 살짝 가공해서 메인이 되는 함수로 위임될 수 있도록 도와주는 함수입니다. 이 side func을 구현할때 <code>BY_SIDE_FUNC</code> 매크로를 사용해서 한줄로 표현합니다.</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node&amp; it) <span class="keyword">const</span>; <span class="comment">// 핵심 함수</span></div>
-<div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node* it) <span class="keyword">const</span> <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(promote); <span class="comment">// 위 예제의 promote(const node*)와 동일한 함수입니다.</span></div>
-<div class="ttc" id="agroup__indep_html_gaf9728243b720c9bd25896286411e6e11"><div class="ttname"><a href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a></div><div class="ttdeci">#define BY_SIDE_FUNC(...)</div><div class="ttdoc">Side function macros for safe pointer operations</div><div class="ttdef"><b>Definition</b> sideFunc.hpp:24</div></div>
+<div class="line"><span class="keyword">const</span> node* promote(<span class="keyword">const</span> node* it) <span class="keyword">const</span> BY_SIDE_FUNC(promote); <span class="comment">// 위 예제의 promote(const node*)와 동일한 함수입니다.</span></div>
 </div><!-- fragment --><hr  />
 <p><b>다음 문서</b>: <a class="el" href="ag-architecture-clog.html">clog 모듈 - 로깅 시스템</a> </p>
 </div></div><!-- contents -->
@@ -367,5 +366,6 @@ Side Func</h1>
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

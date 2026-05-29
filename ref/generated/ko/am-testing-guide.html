@@ -134,14 +134,14 @@ Unit Test (단위 테스트)</h1>
 <div class="line"><span class="keyword">using namespace </span>by;</div>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1no_wrap.html">argsTest</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">byeolTest</a> {};</div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_class" href="classby_1_1tnarr.html">argsTest</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tnarr.html">byeolTest</a> {};</div>
+<div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr</a></div><div class="ttdef"><b>Definition</b> tnarr.hpp:9</div></div>
 </div><!-- fragment --><p>테스트 케이스는 Google Test의 <code>TEST_F</code> 매크로를 사용하여 작성합니다. 첫 번째 인자는 테스트 클래스명이고, 두 번째 인자는 테스트 케이스의 이름입니다. 테스트 케이스 이름은 무엇을 테스트하는지 명확하게 드러내야 합니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">argsTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">testDefaultConstructor</a>) {</div>
-<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>;</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">argsTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">testDefaultConstructor</a>) {</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_class" href="classby_1_1tnarr.html">a</a>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.len(), 0);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.getMe(), <span class="keyword">nullptr</span>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>.len(), 0);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>.getMe(), <span class="keyword">nullptr</span>);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1args_html"><div class="ttname"><a href="classby_1_1args.html">by::args</a></div><div class="ttdoc">Function or object evaluation arguments</div><div class="ttdef"><b>Definition</b> args.hpp:22</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md491"></a>
@@ -155,40 +155,39 @@ Google Test 검증 매크로</h2>
 <h2><a class="anchor" id="autotoc_md493"></a>
 실전 예제</h2>
 <p>다음은 <code>args</code> 클래스의 다양한 생성자를 테스트하는 예제예요. 각 테스트는 특정 생성자 하나에 집중하며, 해당 생성자의 동작을 철저히 검증합니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">argsTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">testConstructorWithNarr</a>) {</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">argsTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">testConstructorWithNarr</a>) {</div>
 <div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">narr</a> <a class="code hl_class" href="classby_1_1arr.html">arr</a>;</div>
 <div class="line">    <a class="code hl_class" href="classby_1_1arr.html">arr</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_int.html">nInt</a>(1));</div>
 <div class="line">    <a class="code hl_class" href="classby_1_1arr.html">arr</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_int.html">nInt</a>(2));</div>
 <div class="line">    <a class="code hl_class" href="classby_1_1arr.html">arr</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_int.html">nInt</a>(3));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>(<a class="code hl_class" href="classby_1_1arr.html">arr</a>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_class" href="classby_1_1tnarr.html">a</a>(<a class="code hl_class" href="classby_1_1arr.html">arr</a>);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.len(), 3);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[0].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nInt&gt;</a>()-&gt;get(), 1);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[1].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nInt&gt;</a>()-&gt;get(), 2);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[2].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nInt&gt;</a>()-&gt;get(), 3);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>.len(), 3);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[0].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nInt&gt;</a>()-&gt;get(), 1);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[1].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nInt&gt;</a>()-&gt;get(), 2);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[2].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nInt&gt;</a>()-&gt;get(), 3);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">argsTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">testMixedArgumentTypes</a>) {</div>
-<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>;</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">argsTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">testMixedArgumentTypes</a>) {</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1args.html">args</a> <a class="code hl_class" href="classby_1_1tnarr.html">a</a>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_int.html">nInt</a>(42));</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_str.html">nStr</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_flt.html">nFlt</a>(3.14f));</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_bool.html">nBool</a>(<span class="keyword">true</span>));</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_int.html">nInt</a>(42));</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_str.html">nStr</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_flt.html">nFlt</a>(3.14f));</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">a</a>.add(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1n_bool.html">nBool</a>(<span class="keyword">true</span>));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>.len(), 4);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[0].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nInt&gt;</a>()-&gt;get(), 42);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[1].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nStr&gt;</a>()-&gt;get(), <span class="stringliteral">&quot;hello&quot;</span>);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[2].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nFlt&gt;</a>()-&gt;get(), 3.14f);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>[3].<a class="code hl_struct" href="structby_1_1no_wrap.html">cast&lt;nBool&gt;</a>()-&gt;get(), <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>.len(), 4);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[0].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nInt&gt;</a>()-&gt;get(), 42);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[1].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nStr&gt;</a>()-&gt;get(), <span class="stringliteral">&quot;hello&quot;</span>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[2].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nFlt&gt;</a>()-&gt;get(), 3.14f);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">a</a>[3].<a class="code hl_class" href="classby_1_1tnarr.html">cast&lt;nBool&gt;</a>()-&gt;get(), <span class="keyword">true</span>);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1arr_html"><div class="ttname"><a href="classby_1_1arr.html">by::arr</a></div><div class="ttdoc">Scripted array container for byeol language</div><div class="ttdef"><b>Definition</b> arr.hpp:15</div></div>
 <div class="ttc" id="aclassby_1_1n_bool_html"><div class="ttname"><a href="classby_1_1n_bool.html">by::nBool</a></div><div class="ttdoc">Boolean primitive type in byeol language</div><div class="ttdef"><b>Definition</b> nBool.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1n_flt_html"><div class="ttname"><a href="classby_1_1n_flt.html">by::nFlt</a></div><div class="ttdoc">Float primitive type in byeol language</div><div class="ttdef"><b>Definition</b> nFlt.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1n_int_html"><div class="ttname"><a href="classby_1_1n_int.html">by::nInt</a></div><div class="ttdoc">Integer primitive type in byeol language</div><div class="ttdef"><b>Definition</b> nInt.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1n_str_html"><div class="ttname"><a href="classby_1_1n_str.html">by::nStr</a></div><div class="ttdoc">String primitive type in byeol language</div><div class="ttdef"><b>Definition</b> nStr.hpp:14</div></div>
-<div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr&lt; node &gt;</a></div></div>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md495"></a>
 Integration Test (통합 테스트)</h1>
@@ -209,10 +208,10 @@ Antipattern Test?</h2>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>{</div>
-<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1no_wrap.html">defFuncIntegTest</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">byeolIntegTest</a> {};</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_class" href="classby_1_1tnarr.html">defFuncIntegTest</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tnarr.html">byeolIntegTest</a> {};</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">defFuncIntegTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">testScenario</a>) {</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">defFuncIntegTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">testScenario</a>) {</div>
 <div class="line">    <span class="comment">// 테스트 코드</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md499"></a>
@@ -233,9 +232,9 @@ byeolIntegTest의 빌더 패턴</h2>
 <div class="line"><span class="stringliteral">    main() void</span></div>
 <div class="line"><span class="stringliteral">        a := 22</span></div>
 <div class="line"><span class="stringliteral">)SRC&quot;)</span></div>
-<div class="line"><span class="stringliteral">        .<a class="code hl_struct" href="structby_1_1no_wrap.html">shouldParsed</a>(</span><span class="keyword">true</span>)) {</div>
+<div class="line"><span class="stringliteral">        .<a class="code hl_class" href="classby_1_1tnarr.html">shouldParsed</a>(</span><span class="keyword">true</span>)) {</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = <a class="code hl_struct" href="structby_1_1no_wrap.html">getSubPack</a>() <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(res);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = <a class="code hl_class" href="classby_1_1tnarr.html">getSubPack</a>() <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(res);</div>
 <div class="line">    <span class="comment">// res를 사용한 추가 검증</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1node_html"><div class="ttname"><a href="classby_1_1node.html">by::node</a></div><div class="ttdoc">Base class for all AST nodes in the byeol language</div><div class="ttdef"><b>Definition</b> node.hpp:195</div></div>
@@ -243,7 +242,7 @@ byeolIntegTest의 빌더 패턴</h2>
 <h2><a class="anchor" id="autotoc_md501"></a>
 Negative 테스트</h2>
 <p>오류 케이스를 테스트할 때는 <code>negative()</code> 메서드를 호출해야 합니다. Negative TC에서는 파서나 인터프리터가 의도적으로 실패하는데, 시스템의 기본 동작이 실패 시 로그를 출력하는 것이기 때문에 <code>negative()</code>를 호출하지 않으면 마치 오동작한 것처럼 로그창이 지저분해집니다. <code>negative()</code>를 호출하면 이러한 예상된 실패에 대한 로그 출력을 억제하여 테스트 결과를 깔끔하게 유지할 수 있습니다. Antipattern 테스트에서는 거의 모든 테스트 케이스에 <code>negative()</code>가 포함됩니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">defFuncIntegTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">distinguishDefineFuncOrCall2</a>) {</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">defFuncIntegTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">distinguishDefineFuncOrCall2</a>) {</div>
 <div class="line">    make()</div>
 <div class="line">        .negative()</div>
 <div class="line">        .parse(R<span class="stringliteral">&quot;SRC(</span></div>
@@ -257,7 +256,7 @@ Negative 테스트</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md502"></a>
 shouldParsed vs shouldVerified</h2>
 <p>byeol 시스템은 파싱(parsing)과 검증(verification) 두 단계로 나뉩니다. 파싱은 문법적으로 올바른지 확인하고, 검증은 타입이 맞는지, 변수가 정의되었는지 등을 확인합니다. 따라서 문법 오류를 테스트할 때는 <code>shouldParsed(false)</code>를 사용하고, 타입 오류나 정의되지 않은 변수 등을 테스트할 때는 <code>shouldParsed(true)</code> 후에 <code>shouldVerified(false)</code>를 사용합니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">arrAntiTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">emptyArrayWithoutType</a>) {</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">arrAntiTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">emptyArrayWithoutType</a>) {</div>
 <div class="line">    make()</div>
 <div class="line">        .negative()</div>
 <div class="line">        .parse(R<span class="stringliteral">&quot;SRC(</span></div>
@@ -265,13 +264,13 @@ shouldParsed vs shouldVerified</h2>
 <div class="line"><span class="stringliteral">            arr := {}</span></div>
 <div class="line"><span class="stringliteral">    )SRC&quot;)</span></div>
 <div class="line"><span class="stringliteral">        .shouldParsed(</span><span class="keyword">true</span>);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">shouldVerified</a>(<span class="keyword">false</span>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">shouldVerified</a>(<span class="keyword">false</span>);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>위 예제에서 빈 배열 <code>{}</code>는 문법적으로는 올바르지만(파싱 성공), 타입을 추론할 수 없으므로 검증 단계에서 실패합니다.</p>
 <h2><a class="anchor" id="autotoc_md503"></a>
 런타임 에러 테스트</h2>
 <p>파싱과 검증을 모두 통과하지만 실행 시 에러가 발생하는 경우도 있습니다. 예를 들어 배열 인덱스가 범위를 벗어나는 경우입니다. 이런 경우 <code>shouldVerified(true)</code>로 검증을 통과시킨 후, <code>run()</code> 메서드로 실제 코드를 실행하고 에러를 검증합니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">arrAntiTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">negativeArrayIndexNegative</a>) {</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">arrAntiTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">negativeArrayIndexNegative</a>) {</div>
 <div class="line">    make()</div>
 <div class="line">        .negative()</div>
 <div class="line">        .parse(R<span class="stringliteral">&quot;SRC(</span></div>
@@ -281,18 +280,17 @@ shouldParsed vs shouldVerified</h2>
 <div class="line"><span class="stringliteral">    )SRC&quot;)</span></div>
 <div class="line"><span class="stringliteral">        .shouldVerified(</span><span class="keyword">true</span>);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classby_1_1tstr.html">str</a> res = run();</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_TRUE</a>(res);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1nerr.html">nerr</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">resErr</a> = res.cast&lt;<a class="code hl_struct" href="structby_1_1nerr.html">nerr</a>&gt;() <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">resErr</a>);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">resErr</a>.getErrCode(), errCode::OUT_OF_RANGE);</div>
+<div class="line">    str res = <a class="code hl_class" href="classby_1_1tnarr.html">run</a>();</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_TRUE</a>(res);</div>
+<div class="line">    <a class="code hl_struct" href="structby_1_1nerr.html">nerr</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">resErr</a> = res.cast&lt;<a class="code hl_struct" href="structby_1_1nerr.html">nerr</a>&gt;() <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(<a class="code hl_class" href="classby_1_1tnarr.html">resErr</a>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">resErr</a>.getErrCode(), errCode::OUT_OF_RANGE);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassby_1_1tstr_html"><div class="ttname"><a href="classby_1_1tstr.html">by::tstr&lt; node &gt;</a></div></div>
 <div class="ttc" id="astructby_1_1nerr_html"><div class="ttname"><a href="structby_1_1nerr.html">by::nerr</a></div><div class="ttdef"><b>Definition</b> nerr.hpp:18</div></div>
 </div><!-- fragment --><p><code>run()</code> 메서드는 코드를 실행하고 결과를 반환합니다. 정상 실행 시 결과값을 반환하고, 에러 발생 시 <code>nerr</code> 객체를 반환합니다. <code>res.cast&lt;nerr&gt;()</code>로 에러 객체로 캐스팅한 후 <code>getErrCode()</code>로 에러 코드를 확인할 수 있습니다. <code>errCode::OUT_OF_RANGE</code>, <code>errCode::NULL_REF</code>, <code>errCode::TYPE_MISMATCH</code> 등 다양한 에러 코드가 정의되어 있습니다.</p>
 <h2><a class="anchor" id="autotoc_md504"></a>
 실전 예제</h2>
 <p>다음은 함수 정의와 함수 호출을 구분하는 기능을 테스트하는 예제예요.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">defFuncIntegTest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">distinguishDefineFuncOrCall</a>) {</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">defFuncIntegTest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">distinguishDefineFuncOrCall</a>) {</div>
 <div class="line">    <span class="keywordflow">if</span>(make()</div>
 <div class="line">            .parse(R<span class="stringliteral">&quot;SRC(</span></div>
 <div class="line"><span class="stringliteral">        foo(x int, y int) void</span></div>
@@ -302,18 +300,17 @@ shouldParsed vs shouldVerified</h2>
 <div class="line"><span class="stringliteral">            a := 22</span></div>
 <div class="line"><span class="stringliteral">            foo(a, 22)</span></div>
 <div class="line"><span class="stringliteral">    )SRC&quot;)</span></div>
-<div class="line"><span class="stringliteral">            .<a class="code hl_struct" href="structby_1_1no_wrap.html">shouldParsed</a>(</span><span class="keyword">true</span>)) {</div>
+<div class="line"><span class="stringliteral">            .<a class="code hl_class" href="classby_1_1tnarr.html">shouldParsed</a>(</span><span class="keyword">true</span>)) {</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = <a class="code hl_struct" href="structby_1_1no_wrap.html">getSubPack</a>() <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(res);</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = <a class="code hl_class" href="classby_1_1tnarr.html">getSubPack</a>() <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(res);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">const</a> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a> = res.sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(&quot;main&quot;, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>()) <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
-<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>.getParams().len(), 0);</div>
-<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>.getRet()-&gt;getType(), <a class="code hl_class" href="classby_1_1ttype.html">ttype</a>&lt;<a class="code hl_class" href="classby_1_1n_void.html">nVoid</a>&gt;());</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1tnarr.html">const</a> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">f</a> = res.sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(&quot;main&quot;, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>()) <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(<a class="code hl_class" href="classby_1_1tnarr.html">f</a>);</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">f</a>.getParams().len(), 0);</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(<a class="code hl_class" href="classby_1_1tnarr.html">f</a>.getRet()-&gt;getType(), <a class="code hl_class" href="classby_1_1tnarr.html">ttype</a>&lt;<a class="code hl_class" href="classby_1_1n_void.html">nVoid</a>&gt;());</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1base_func_html"><div class="ttname"><a href="classby_1_1base_func.html">by::baseFunc</a></div><div class="ttdoc">Base class for all function types</div><div class="ttdef"><b>Definition</b> baseFunc.hpp:41</div></div>
 <div class="ttc" id="aclassby_1_1n_void_html"><div class="ttname"><a href="classby_1_1n_void.html">by::nVoid</a></div><div class="ttdoc">Void primitive type in byeol language</div><div class="ttdef"><b>Definition</b> nVoid.hpp:13</div></div>
-<div class="ttc" id="aclassby_1_1ttype_html"><div class="ttname"><a href="classby_1_1ttype.html">by::ttype</a></div><div class="ttdoc">Template type wrapper providing entry point for meta information</div><div class="ttdef"><b>Definition</b> ttype.hpp:37</div></div>
 </div><!-- fragment --><p>이 테스트는 <code>foo</code> 함수 정의와 <code>main</code> 함수 정의, 그리고 <code>foo</code> 함수 호출이 올바르게 파싱되는지 확인합니다. 파싱된 결과에서 <code>main</code> 함수를 찾아 파라미터 개수와 리턴 타입을 검증합니다.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md506"></a>
@@ -330,9 +327,9 @@ E2E Test (종단간 테스트)</h1>
 <div class="line"><span class="keyword">using namespace </span>by;</div>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1no_wrap.html">cliE2ETest</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">byeolE2ETest</a> {};</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_class" href="classby_1_1tnarr.html">cliE2ETest</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1tnarr.html">byeolE2ETest</a> {};</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">cliE2ETest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">testScenario</a>) {</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">cliE2ETest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">testScenario</a>) {</div>
 <div class="line">    <span class="comment">// 테스트 코드</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md509"></a>
@@ -349,15 +346,15 @@ parse와 run</h2>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> res = parse(2, <span class="stringliteral">&quot;testdata/a-main.byeol&quot;</span>, <span class="stringliteral">&quot;testdata/a.byeol&quot;</span>).run();</div>
 </div><!-- fragment --><p><code>run()</code> 메서드는 CLI를 실행하고 <code>programRes</code> 구조체를 반환합니다. 이 구조체는 <code>res</code> 필드(프로그램 종료 코드)와 <code>rpt</code> 필드(에러 리포트)를 가지고 있습니다. 정상 실행 시 <code>res</code>는 프로그램의 리턴값이 되고 <code>rpt</code>는 null입니다. 에러 발생 시 <code>res</code>는 0이 아니고 <code>rpt</code>는 에러 정보를 담고 있습니다.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> res = parse(2, <span class="stringliteral">&quot;testdata/a-main.byeol&quot;</span>, <span class="stringliteral">&quot;testdata/a.byeol&quot;</span>).run();</div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_EQ</a>(res.res, 132);      <span class="comment">// 100 + 32 = 132</span></div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_FALSE</a>(res.rpt);        <span class="comment">// 에러 없음</span></div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_EQ</a>(res.res, 132);      <span class="comment">// 100 + 32 = 132</span></div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_FALSE</a>(res.rpt);        <span class="comment">// 에러 없음</span></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md511"></a>
 Negative 테스트</h2>
 <p>E2E Test에서도 <code>negative()</code> 메서드를 사용하여 실패를 기대하는 테스트를 작성할 수 있습니다. <code>negative()</code>를 호출하면 실패 시 발생하는 로그 출력을 억제하여 테스트 결과를 깔끔하게 유지할 수 있습니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">TEST_F</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">cliE2ETest</a>, <a class="code hl_struct" href="structby_1_1no_wrap.html">interpretPartialFileNegative</a>) {</div>
-<div class="line">    <span class="keyword">auto</span> res = <a class="code hl_struct" href="structby_1_1no_wrap.html">negative</a>().parse(1, <span class="stringliteral">&quot;testdata/a-main.byeol&quot;</span>).run();</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_NE</a>(res.res, 0);</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_TRUE</a>(res.rpt);</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">TEST_F</a>(<a class="code hl_class" href="classby_1_1tnarr.html">cliE2ETest</a>, <a class="code hl_class" href="classby_1_1tnarr.html">interpretPartialFileNegative</a>) {</div>
+<div class="line">    <span class="keyword">auto</span> res = <a class="code hl_class" href="classby_1_1tnarr.html">negative</a>().parse(1, <span class="stringliteral">&quot;testdata/a-main.byeol&quot;</span>).run();</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_NE</a>(res.res, 0);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_TRUE</a>(res.rpt);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>이 테스트는 <code>a-main.byeol</code> 파일만 로드하면 <code>foo</code> 함수가 정의되지 않아 실패해야 함을 검증합니다.</p>
 <hr  />
@@ -391,13 +388,13 @@ negative() 호출</h2>
 OR_ASSERT 사용</h2>
 <p>OR 매크로는 참조자를 가져올때 <code>nullptr</code> 일때는 함수를 종료합니다. 이를 응용한 <code>OR_ASSERT</code>는 <code>nullptr</code> 일때 테스트를 실패하게 합니다. 필요에 의해서 편하게 사용하면 됩니다.</p>
 <div class="fragment"><div class="line"><span class="comment">// 기존 코드</span></div>
-<div class="line"><a class="code hl_class" href="classby_1_1node.html">node</a>* res = <a class="code hl_struct" href="structby_1_1no_wrap.html">getSubPack</a>();</div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">ASSERT_TRUE</a>(res);</div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a> = res-&gt;sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(<span class="stringliteral">&quot;main&quot;</span>, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>());</div>
+<div class="line"><a class="code hl_class" href="classby_1_1node.html">node</a>* res = <a class="code hl_class" href="classby_1_1tnarr.html">getSubPack</a>();</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">ASSERT_TRUE</a>(res);</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">f</a> = res-&gt;sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(<span class="stringliteral">&quot;main&quot;</span>, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>());</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// OR_ASSERT 적용: </span></div>
-<div class="line"><a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = getSubPod() <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(res); <span class="comment">// 참조자로 받을 수 있게 됨.</span></div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">const</a> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a> = res.sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(&quot;main&quot;, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>()) <a class="code hl_struct" href="structby_1_1no_wrap.html">OR_ASSERT</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>);</div>
+<div class="line"><a class="code hl_class" href="classby_1_1node.html">node</a>&amp; res = getSubPod() <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(res); <span class="comment">// 참조자로 받을 수 있게 됨.</span></div>
+<div class="line"><a class="code hl_class" href="classby_1_1tnarr.html">const</a> <a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">f</a> = res.sub&lt;<a class="code hl_class" href="classby_1_1base_func.html">baseFunc</a>&gt;(&quot;main&quot;, <a class="code hl_class" href="classby_1_1tnarr.html">narr</a>()) <a class="code hl_class" href="classby_1_1tnarr.html">OR_ASSERT</a>(<a class="code hl_class" href="classby_1_1tnarr.html">f</a>);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md517"></a>
 shouldParsed vs shouldVerified vs run()</h2>
 <p>세 가지 검증 단계를 명확히 구분해야 합니다. 문법 오류는 <code>shouldParsed(false)</code>, 타입 오류나 미정의 변수는 <code>shouldVerified(false)</code>, 런타임 오류는 <code>run()</code> 후 에러 검증으로 테스트합니다.</p>
@@ -407,12 +404,12 @@ Raw String Literal 구분자</h2>
 <h2><a class="anchor" id="autotoc_md519"></a>
 SetUp/TearDown 오버라이드</h2>
 <p><code>SetUp</code>이나 <code>TearDown</code> 메서드를 오버라이드할 때는 반드시 부모 클래스의 메서드를 호출해야 합니다. 이를 빠뜨리면 부모 클래스의 초기화나 정리 작업이 수행되지 않아 테스트가 올바르게 동작하지 않을 수 있습니다.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">SetUp</a>()<span class="keyword"> override </span>{</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_class" href="classby_1_1tnarr.html">SetUp</a>()<span class="keyword"> override </span>{</div>
 <div class="line">    byeolIntegTest::SetUp();  <span class="comment">// 먼저 부모 호출 필수</span></div>
 <div class="line">    arr::_cache.clear();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">TearDown</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_class" href="classby_1_1tnarr.html">TearDown</a>()<span class="keyword"> override </span>{</div>
 <div class="line">    <span class="comment">// 정리 작업</span></div>
 <div class="line">    byeolIntegTest::TearDown();  <span class="comment">// 나중에 부모 호출 필수</span></div>
 <div class="line">}</div>
@@ -483,5 +480,6 @@ verbose 모드</h2>
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

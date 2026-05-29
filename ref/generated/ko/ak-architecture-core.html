@@ -1384,7 +1384,7 @@ podLoading 클래스 - Pod 로딩 추상 클래스</h2>
 cppPodLoading 클래스 - C++ Pod 로더</h2>
 <p><code>podLoader</code>에 의해 cpp 패키지를 로딩할 때 사용되는 <code>podLoading</code> 중 하나입니다. 이름 그대로 C++ pod을 동적 라이브러리 파일에서 로딩하는 역할을 합니다.</p>
 <p><b>Entrypoint</b></p>
-<p><a class="el" href="group__indep.html">Indep</a> 모듈의 <a class="el" href="classby_1_1dlib.html">dlib</a> 을 사용해서 동적 라이브러리를 로딩합니다. entrypoint는 이미 정의되어 있는 ENTRYPOINT_NAME 의 값을 사용합니다.</p>
+<p><a class="el" href="group__indep.html">Indep</a> 모듈의 dlib 을 사용해서 동적 라이브러리를 로딩합니다. entrypoint는 이미 정의되어 있는 ENTRYPOINT_NAME 의 값을 사용합니다.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md431"></a>
 Visitor 패턴 및 AST 순회</h1>
@@ -1527,7 +1527,7 @@ parser 클래스 - 파싱의 진입점</h2>
 </div><!-- fragment --><hr  />
 <h2><a class="anchor" id="autotoc_md444"></a>
 smartDedent, tokenScan 클래스 - Indentation 관리</h2>
-<p>byeol 파서의 <code>smartDedent</code>와 <code>tokenScan</code>은 <a class="el" href="classby_1_1stela.html">stela</a> 모듈의 <code>stelaSmartDedent</code>, <code>stelaTokenScan</code>과 동일한 원리로 동작합니다. Indentation을 배열로 관리하고, scan mode를 동적으로 전환하는 방식은 완전히 같습니다.</p>
+<p>byeol 파서의 <code>smartDedent</code>와 <code>tokenScan</code>은 stela 모듈의 <code>stelaSmartDedent</code>, <code>stelaTokenScan</code>과 동일한 원리로 동작합니다. Indentation을 배열로 관리하고, scan mode를 동적으로 전환하는 방식은 완전히 같습니다.</p>
 <p>상세한 동작 원리와 예제는 <a class="el" href="group__stela.html">Stela</a> 모듈의 해당 클래스들을 참조하세요. byeol 파서의 경우 더 복잡한 문법을 가지므로 명령 토큰(<code>SCAN_AGAIN</code>, <code>SCAN_EXIT</code> 등)이 더 다양합니다</p>
 <p>자세한 명령 토큰 목록은 <code>lowparser.y</code>의 <code>// mode:</code> 단락을 참조하세요.</p>
 <hr  />
@@ -1771,5 +1771,6 @@ core 모듈을 마무리 하며</h1>
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

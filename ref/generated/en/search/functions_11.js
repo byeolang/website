@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['toaddrid_0',['toAddrId',['../namespaceby_1_1platform_a_p_i.html#a4b2317ee32d074d0bfa4e87a5e1d0ec3',1,'by::platformAPI']]],
-  ['tstr_1',['tstr',['../classby_1_1tstr.html#a756225b757274b181c7dbfef0a1e2614',1,'by::tstr']]]
+  ['verify_0',['verify',['../classby_1_1pod_makable.html#a1be695810561e0d93a341a05cde03a95',1,'by::podMakable::verify()'],['../classby_1_1trust_pod_loading.html#af0d0ef130ee33c8fc237ca05dfa52b5c',1,'by::trustPodLoading::verify()']]]
 ];

@@ -137,10 +137,10 @@ $(function(){initNavTree('autopod_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classby_1_1autopod.html">   96</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1autopod.html">autopod</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1pod.html">pod</a>, <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1pod_makable.html">podMakable</a> {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        BY(<a class="code hl_struct" href="structby_1_1no_wrap.html">CLASS</a>(<a class="code hl_class" href="classby_1_1autopod.html">autopod</a>, <a class="code hl_class" href="classby_1_1pod.html">pod</a>), <a class="code hl_struct" href="structby_1_1no_wrap.html">VISIT</a>())</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        BY(CLASS(<a class="code hl_class" href="classby_1_1autopod.html">autopod</a>, <a class="code hl_class" href="classby_1_1pod.html">pod</a>), VISIT())</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="classby_1_1autopod.html">autopod</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1manifest.html">manifest</a>&amp; <a class="code hl_struct" href="structby_1_1manifest.html">manifest</a>, <span class="keyword">const</span> podLoadings&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">loadingsInHeap</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="classby_1_1autopod.html">autopod</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1manifest.html">manifest</a>&amp; <a class="code hl_struct" href="structby_1_1manifest.html">manifest</a>, <span class="keyword">const</span> podLoadings&amp; loadingsInHeap);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_class" href="classby_1_1autopod.html">~autopod</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">public</span>:</div>
@@ -149,7 +149,7 @@ $(function(){initNavTree('autopod_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        state getState() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordtype">void</span> setState(state new1) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> isValid() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        nbool isValid() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classby_1_1autopod.html#ac411fa91f92030a724f46e77f048b0ca">  111</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1autopod.html#ac411fa91f92030a724f46e77f048b0ca">rel</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
@@ -157,10 +157,10 @@ $(function(){initNavTree('autopod_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classby_1_1autopod.html#ad35baeef744bf61c009311a632c0ef37">  114</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1autopod.html#ad35baeef744bf61c009311a632c0ef37">_invalidate</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> parse(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">pak</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> expand(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">pak</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> verify(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">pak</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> link();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        nbool parse(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; pak) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        nbool expand(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; pak) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        nbool verify(<a class="code hl_class" href="classby_1_1err_report.html">errReport</a>&amp; rpt, <a class="code hl_class" href="classby_1_1pod.html">pod</a>&amp; pak) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        nbool link();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordtype">void</span> _rel();</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">private</span>:</div>
@@ -182,10 +182,10 @@ $(function(){initNavTree('autopod_8hpp_source.html',''); initResizable(); });
 <div class="ttc" id="ascope_8hpp_html"><div class="ttname"><a href="scope_8hpp.html">scope.hpp</a></div></div>
 <div class="ttc" id="astatable_8hpp_html"><div class="ttname"><a href="statable_8hpp.html">statable.hpp</a></div></div>
 <div class="ttc" id="astructby_1_1manifest_html"><div class="ttname"><a href="structby_1_1manifest.html">by::manifest</a></div><div class="ttdoc">pod manifest information</div><div class="ttdef"><b>Definition</b> manifest.hpp:32</div></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

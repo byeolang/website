@@ -1,8 +1,9 @@
 var dir_5f738bae6583a4cfea43cfb007306a08 =
 [
     [ "common", "dir_3219867a053bcd8b5ed6b13c28d7b84c.html", "dir_3219867a053bcd8b5ed6b13c28d7b84c" ],
-    [ "flag", "dir_7d4ff2dbe0c2ddbcaf29e6bee5f3c6ec.html", "dir_7d4ff2dbe0c2ddbcaf29e6bee5f3c6ec" ],
+    [ "flags", "dir_5e4ca6573a9f08772b4e86e19e945dd8.html", "dir_5e4ca6573a9f08772b4e86e19e945dd8" ],
     [ "cli.hpp", "cli_8hpp.html", "cli_8hpp" ],
     [ "common.hpp", "frontend_2common_8hpp.html", null ],
-    [ "flag.hpp", "flag_8hpp_source.html", null ]
+    [ "flags.hpp", "flags_8hpp.html", null ],
+    [ "frontendStacker.hpp", "frontend_stacker_8hpp_source.html", null ]
 ];

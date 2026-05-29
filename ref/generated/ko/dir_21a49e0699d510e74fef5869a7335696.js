@@ -5,7 +5,7 @@ var dir_21a49e0699d510e74fef5869a7335696 =
     [ "visitor", "dir_438f5fcb64d58d8fef6e610aa76399ca.html", "dir_438f5fcb64d58d8fef6e610aa76399ca" ],
     [ "defBlock.hpp", "def_block_8hpp.html", null ],
     [ "interpreter.hpp", "interpreter_8hpp.html", null ],
-    [ "parser.hpp", "core_2worker_2parser_8hpp.html", null ],
+    [ "parser.hpp", "parser_8hpp.html", null ],
     [ "smartDedent.hpp", "smart_dedent_8hpp.html", null ],
     [ "supply.hpp", "supply_8hpp.html", null ],
     [ "tokenDispatcher.hpp", "token_dispatcher_8hpp.html", null ],
