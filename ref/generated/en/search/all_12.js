@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['unconstfunc_2ehpp_0',['unconstFunc.hpp',['../unconst_func_8hpp.html',1,'']]],
-  ['unlimitcoredump_1',['unlimitCoreDump',['../namespaceby_1_1platform_a_p_i.html#a8d0627a3307cd33ee3c9460b071ef53a',1,'by::platformAPI']]],
-  ['usage_2',['Usage',['../namespaceby_1_1platform_a_p_i.html#usage',1,'']]],
-  ['use_20by_5f_20_5fscope_20macro_20in_20if_20block_20statement_3',['careful when you use BY_?_SCOPE macro in &apos;if&apos; block statement',['../clog_2common_2macro_8hpp.html#be',1,'']]],
-  ['use_20shared_5fptr_4',['Why not use shared_ptr?',['../classby_1_1binder.html#why_not_shared_ptr',1,'']]],
-  ['used_20for_20accessing_20life_20objects_5',['tagN used for accessing life objects',['../structby_1_1id.html#tagn_field',1,'']]],
-  ['used_20for_20retrieving_20chunk_20objects_6',['chkN used for retrieving chunk objects',['../structby_1_1id.html#chkn_field',1,'']]],
-  ['uselater_7',['useLater',['../classby_1_1stela_smart_dedent.html#a8f35e4fbf2c848211db264ee5e2b6169',1,'by::stelaSmartDedent']]],
-  ['usewrap_8',['useWrap',['../structby_1_1use_wrap.html',1,'by']]]
+  ['uiter_2ehpp_0',['uiter.hpp',['../uiter_8hpp.html',1,'']]],
+  ['uiterable_2ehpp_1',['uiterable.hpp',['../uiterable_8hpp.html',1,'']]],
+  ['uiteration_2ehpp_2',['uiteration.hpp',['../uiteration_8hpp.html',1,'']]],
+  ['understanding_20difficulty_3',['Understanding Difficulty',['../classby_1_1verifier.html#understanding_difficulty',1,'']]],
+  ['unlike_20obj_20baseobj_20s_20origin_20object_20exists_20only_20once_4',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
+  ['up_5',['Main Function Look Up',['../classby_1_1starter.html#main_function_lookup',1,'']]],
+  ['usage_6',['Basic Usage',['../classby_1_1tbridger.html#basic_usage',1,'']]],
+  ['usage_20example_7',['Usage Example',['../classby_1_1starter.html#usage_example',1,'']]],
+  ['usage_20with_20starter_8',['Usage with starter',['../classby_1_1interpreter.html#usage_with_starter',1,'']]],
+  ['used_9',['How Scope is Used',['../group__core.html#scope_usage',1,'']]],
+  ['uselater_10',['useLater',['../classby_1_1smart_dedent.html#aee0fd59da69771ea37b378c814278248',1,'by::smartDedent']]],
+  ['using_20dispatcher_11',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]],
+  ['using_20when_20macros_12',['Verification Using WHEN Macros',['../classby_1_1verifier.html#when_macro_verification',1,'']]],
+  ['util_13',['util',['../classby_1_1util.html',1,'by']]],
+  ['util_2ehpp_14',['util.hpp',['../util_8hpp.html',1,'']]]
 ];
