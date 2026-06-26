@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['obj_0',['obj',['../classby_1_1obj.html#a3c6bfdab0bde82383bc34dbab1281124',1,'by::obj::obj()'],['../classby_1_1obj.html#af6df2b87b379af1ba6ba386d416350d9',1,'by::obj::obj(const scope &amp;subs)'],['../classby_1_1obj.html#aeadbf6d33242dd79e86ca3687356c8fc',1,'by::obj::obj(const me &amp;rhs)'],['../classby_1_1obj.html#a28fc870f01f52d8c8137040d4780b9e8',1,'by::obj::obj(const scope &amp;shares, scope &amp;owns)']]],
-  ['onclonedeep_1',['onCloneDeep',['../classby_1_1obj.html#acd76932abe434cf7df2337e548ffd6bf',1,'by::obj::onCloneDeep()'],['../classby_1_1tnmap.html#ab46d8ebc1f5c4ad5bbf0219a236b1026',1,'by::tnmap::onCloneDeep()'],['../classby_1_1mgd_type.html#ac0826c2f41cee2dac6dd0298999848ba',1,'by::mgdType::onCloneDeep()']]],
-  ['ondedent_2',['onDedent',['../classby_1_1parser.html#a1b1c47a63550fa9c235afc171ef5bf78',1,'by::parser']]],
-  ['onendfunc_3',['onEndFunc',['../classby_1_1parser.html#a4b04d156df1721fd4094e31faa6a86ee',1,'by::parser']]],
-  ['onignoreindent_4',['onIgnoreIndent',['../classby_1_1parser.html#aff47e1010e0290b689c80d32620303ba',1,'by::parser']]],
-  ['onindent_5',['onIndent',['../classby_1_1parser.html#a3ba8c6b10a1ac7309f63c243b325d842',1,'by::parser']]],
-  ['onparseerr_6',['onParseErr',['../classby_1_1parser.html#a85450077b0ac7149f8df24a632e09ff8',1,'by::parser']]],
-  ['onscan_7',['onScan',['../classby_1_1token_scan.html#a84e4156b48848dd9eb0ffb28ed92d8f8',1,'by::tokenScan::onScan()'],['../classby_1_1normal_scan.html#a059d0419c8ba0f49d041c7ba78f12af5',1,'by::normalScan::onScan()'],['../classby_1_1indent_scan.html#a6258881f1d243375cce55e2a462840ed',1,'by::indentScan::onScan()'],['../classby_1_1parser.html#a7f16ab848d06c543653cf4cfbb5fc1aa',1,'by::parser::onScan()'],['../classby_1_1token_scanable.html#ac9d2bac3fab34cab03c0b916e2fc786d',1,'by::tokenScanable::onScan(parser &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner)'],['../classby_1_1token_scanable.html#acbc0f62c3b21da42fdabef0ed5f4f8e7',1,'by::tokenScanable::onScan(parser &amp;ps, YYSTYPE *yylval, YYLTYPE *loc, yyscan_t yyscanner, nbool &amp;isBypass)=0'],['../classby_1_1token_scan.html#ac9d2bac3fab34cab03c0b916e2fc786d',1,'by::tokenScan::onScan(parser &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner)'],['../classby_1_1token_scan.html#acbc0f62c3b21da42fdabef0ed5f4f8e7',1,'by::tokenScan::onScan(parser &amp;ps, YYSTYPE *yylval, YYLTYPE *loc, yyscan_t yyscanner, nbool &amp;isBypass)=0'],['../classby_1_1parser.html#ac9d2bac3fab34cab03c0b916e2fc786d',1,'by::parser::onScan(parser &amp;ps, YYSTYPE *val, YYLTYPE *loc, yyscan_t scanner)'],['../classby_1_1parser.html#acbc0f62c3b21da42fdabef0ed5f4f8e7',1,'by::parser::onScan(parser &amp;ps, YYSTYPE *yylval, YYLTYPE *loc, yyscan_t yyscanner, nbool &amp;isBypass)=0']]],
-  ['onscanunexpected_8',['onScanUnexpected',['../classby_1_1parser.html#acc9168a8f5b7183cacbc91673bfa82e9',1,'by::parser']]],
-  ['onsignal_9',['onSignal',['../classby_1_1signaler.html#a54d04b615cca02f7f05b6f0b63f2ea93',1,'by::signaler']]],
-  ['onsrcarea_10',['onSrcArea',['../classby_1_1parser.html#a821207dfefc5f268f8b0dd41afd845c0',1,'by::parser']]],
-  ['onsupplysrc_11',['onSupplySrc',['../classby_1_1buf_supply.html#ae56e1f3304ec771af918d25d63e8ad2e',1,'by::bufSupply::onSupplySrc()'],['../classby_1_1file_supply.html#a57aa50aa7cac9794c03aef75f4569bd7',1,'by::fileSupply::onSupplySrc()'],['../classby_1_1src_supply.html#ae09cb86e1124f6402ba86700e527da33',1,'by::srcSupply::onSupplySrc()']]],
-  ['ontokenbeginstr_12',['onTokenBeginStr',['../classby_1_1parser.html#a04acb2126d3e158cef0d8cd294341d3a',1,'by::parser']]],
-  ['ontokencolon_13',['onTokenColon',['../classby_1_1parser.html#ac9015b56982ef9aa4a9098dd4a1b4800',1,'by::parser']]],
-  ['ontokencomma_14',['onTokenComma',['../classby_1_1parser.html#ae72c80c30ee2a7a86bd423953d558ef8',1,'by::parser']]],
-  ['ontokenendofbraces_15',['onTokenEndOfBraces',['../classby_1_1parser.html#ac53999dfca7615c3671860bc92e28a72',1,'by::parser']]],
-  ['ontokenendoffile_16',['onTokenEndOfFile',['../classby_1_1parser.html#a12ddc909e18de2881e40173a45f62778',1,'by::parser']]],
-  ['ontokenlparan_17',['onTokenLParan',['../classby_1_1parser.html#a419cff20352e40ad0a43cc0db5caad39',1,'by::parser']]],
-  ['ontokennewline_18',['onTokenNewLine',['../classby_1_1parser.html#a332a88581f09e239034bb7d4d442934f',1,'by::parser']]],
-  ['ontokenrparan_19',['onTokenRParan',['../classby_1_1parser.html#a6e115cb9e0f62bcbde1fee60c9c32897',1,'by::parser']]],
-  ['ontokenstartofstrtemplatebrace_20',['onTokenStartOfStrTemplateBrace',['../classby_1_1parser.html#a623cfd253a321c0926f86da7d1e860f4',1,'by::parser']]],
-  ['operator_3d_3d_21',['operator==',['../classby_1_1func_type.html#a2a02405c114437ad3e88301ed89fd3c9',1,'by::funcType::operator==()'],['../classby_1_1ntype.html#a285ac10dfea37b07951801498c0549a8',1,'by::ntype::operator==()']]]
+  ['make_0',['make',['../classby_1_1ttype_base_3_01void_00_01type_01_4.html#ac30f3b021276b3d284b2ff975da7588c',1,'by::ttypeBase&lt; void, type &gt;::make()'],['../classby_1_1type.html#a0ada2d17adf7691a294b682f4e340aeb',1,'by::type::make()']]]
 ];
