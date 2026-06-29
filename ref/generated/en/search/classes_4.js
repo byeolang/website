@@ -1,6 +1,20 @@
 var searchData=
 [
-  ['date_0',['date',['../structby_1_1build_feature_1_1date.html',1,'by::buildFeature']]],
-  ['dlib_1',['dlib',['../classby_1_1dlib.html',1,'by']]],
-  ['dumpable_2',['dumpable',['../classby_1_1dumpable.html',1,'by']]]
+  ['defarrayexpr_0',['defArrayExpr',['../classby_1_1def_array_expr.html',1,'by']]],
+  ['defassignexpr_1',['defAssignExpr',['../classby_1_1def_assign_expr.html',1,'by']]],
+  ['defaultcopyctor_2',['defaultCopyCtor',['../classby_1_1default_copy_ctor.html',1,'by']]],
+  ['defaultctor_3',['defaultCtor',['../classby_1_1default_ctor.html',1,'by']]],
+  ['defaultsigzone_4',['defaultSigZone',['../classby_1_1default_sig_zone.html',1,'by']]],
+  ['defblock_5',['defBlock',['../classby_1_1def_block.html',1,'by']]],
+  ['defnestedfuncexpr_6',['defNestedFuncExpr',['../classby_1_1def_nested_func_expr.html',1,'by']]],
+  ['defpropexpr_7',['defPropExpr',['../classby_1_1def_prop_expr.html',1,'by']]],
+  ['defseqexpr_8',['defSeqExpr',['../classby_1_1def_seq_expr.html',1,'by']]],
+  ['defvarexpr_9',['defVarExpr',['../classby_1_1def_var_expr.html',1,'by']]],
+  ['dirflag_10',['dirFlag',['../classby_1_1dir_flag.html',1,'by']]],
+  ['dummodifier_11',['dumModifier',['../classby_1_1dum_modifier.html',1,'by']]],
+  ['dummyerrreport_12',['dummyErrReport',['../classby_1_1dummy_err_report.html',1,'by']]],
+  ['dumparams_13',['dumParams',['../classby_1_1dum_params.html',1,'by']]],
+  ['dumscope_14',['dumScope',['../classby_1_1dum_scope.html',1,'by']]],
+  ['dumsrc_15',['dumSrc',['../classby_1_1dum_src.html',1,'by']]],
+  ['dumsrcfile_16',['dumSrcFile',['../classby_1_1dum_src_file.html',1,'by']]]
 ];
