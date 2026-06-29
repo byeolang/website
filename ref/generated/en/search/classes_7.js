@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['generalizer_0',['generalizer',['../classby_1_1generalizer.html',1,'by']]],
-  ['genericorigin_1',['genericOrigin',['../classby_1_1generic_origin.html',1,'by']]],
-  ['getexpr_2',['getExpr',['../classby_1_1get_expr.html',1,'by']]],
-  ['getgenericexpr_3',['getGenericExpr',['../classby_1_1get_generic_expr.html',1,'by']]],
-  ['graphvisitor_4',['graphVisitor',['../classby_1_1graph_visitor.html',1,'by']]]
+  ['id_0',['id',['../structby_1_1id.html',1,'by']]],
+  ['initiator_1',['Initiator',['../structby_1_1_initiator.html',1,'by']]],
+  ['instance_2',['instance',['../classby_1_1instance.html',1,'by']]],
+  ['instancer_3',['instancer',['../classby_1_1instancer.html',1,'by']]]
 ];
