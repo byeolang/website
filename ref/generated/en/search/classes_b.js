@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['manifest_0',['manifest',['../structby_1_1manifest.html',1,'by']]],
-  ['marshalerr_1',['marshalErr',['../structby_1_1marshal_err.html',1,'by']]],
-  ['mgdtype_2',['mgdType',['../classby_1_1mgd_type.html',1,'by']]],
-  ['modifier_3',['modifier',['../classby_1_1modifier.html',1,'by']]]
+  ['platform_0',['platform',['../structby_1_1build_feature_1_1platform.html',1,'by::buildFeature']]],
+  ['point_1',['point',['../structby_1_1point.html',1,'by']]],
+  ['pool_2',['pool',['../classby_1_1pool.html',1,'by']]]
 ];
