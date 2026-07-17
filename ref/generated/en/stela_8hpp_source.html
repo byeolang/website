@@ -149,7 +149,7 @@ $(function(){initNavTree('stela_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        me&amp; sub(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        me&amp; sub(<span class="keyword">const</span> std::string* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(it, sub(*it), *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        me&amp; sub(<span class="keyword">const</span> std::string* it) BY_SIDE_FUNC(it, sub(*it), *<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">const</span> me&amp; sub(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span> BY_CONST_FUNC(sub(name))</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">const</span> me&amp; sub(<span class="keyword">const</span> std::string* name) <span class="keyword">const</span> BY_CONST_FUNC(sub(name))</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        me&amp; sub(<span class="keyword">const</span> nchar* name);</div>
@@ -158,20 +158,20 @@ $(function(){initNavTree('stela_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">const</span> me&amp; sub(nidx n) <span class="keyword">const</span> BY_CONST_FUNC(sub(n))</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        nbool has(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        nbool has(<span class="keyword">const</span> std::string* it) <span class="keyword">const</span> <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(has);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        nbool has(<span class="keyword">const</span> std::string* it) <span class="keyword">const</span> BY_SIDE_FUNC(has);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">void</span> add(<span class="keyword">const</span> stela&amp; it);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">void</span> add(<span class="keyword">const</span> stela* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(add);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">void</span> add(<span class="keyword">const</span> stela* it) BY_SIDE_FUNC(add);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">void</span> add(std::initializer_list&lt;stela*&gt; subs);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> stela&amp; it);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> stela* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(del);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> stela* it) BY_SIDE_FUNC(del);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> std::string* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(del);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> std::string* it) BY_SIDE_FUNC(del);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">void</span> del(<span class="keyword">const</span> nchar* name);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">const</span> std::string&amp; getName() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">void</span> setName(<span class="keyword">const</span> std::string&amp; newName);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">void</span> setName(<span class="keyword">const</span> std::string* it) <a class="code hl_define" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(setName);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">void</span> setName(<span class="keyword">const</span> std::string* it) BY_SIDE_FUNC(setName);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">void</span> setName(<span class="keyword">const</span> nchar* newName);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        ncnt len() <span class="keyword">const</span>;</div>
@@ -192,7 +192,6 @@ $(function(){initNavTree('stela_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        std::string _name;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    };</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>} <span class="comment">// namespace by</span></div>
-<div class="ttc" id="agroup__indep_html_gaf9728243b720c9bd25896286411e6e11"><div class="ttname"><a href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a></div><div class="ttdeci">#define BY_SIDE_FUNC(...)</div><div class="ttdoc">Side function macros for safe pointer operations.</div><div class="ttdef"><b>Definition</b> sideFunc.hpp:24</div></div>
 <div class="ttc" id="astela_2common_8hpp_html"><div class="ttname"><a href="stela_2common_8hpp.html">common.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

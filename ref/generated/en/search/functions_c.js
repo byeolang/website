@@ -1,10 +1,19 @@
 var searchData=
 [
-  ['params_0',['params',['../classby_1_1params.html#a2569cdafdf647d9127adfa7135306e22',1,'by::params']]],
-  ['parse_1',['parse',['../classby_1_1byeol_pod_loading.html#a7a25740b38ffb602ee7ac2442dc1a08b',1,'by::byeolPodLoading::parse()'],['../classby_1_1cpp_pod_loading.html#ad7e6860520cae0cf64b384ae1ee25378',1,'by::cppPodLoading::parse()'],['../classby_1_1pod_makable.html#a7e6ea7b14bebdaa7939bb454eb66a375',1,'by::podMakable::parse()']]],
-  ['pop_2',['pop',['../classby_1_1token_dispatcher.html#ac08e499a3917cd55bb0ec98747effa90',1,'by::tokenDispatcher']]],
-  ['popstate_3',['popState',['../classby_1_1parser.html#a39e0cbda536ac4abf37885c3b90d9b63',1,'by::parser']]],
-  ['prioritize_4',['prioritize',['../classby_1_1expr.html#a31d760e6647054482a123889b4261799',1,'by::expr::prioritize()'],['../classby_1_1ret_expr.html#aea39c3c888feaf0bbe8371e4ed3ee171',1,'by::retExpr::prioritize()']]],
-  ['promote_5',['promote',['../classby_1_1node.html#a3c27e99e2b0d28af967ea721acc3df40',1,'by::node::promote()'],['../classby_1_1ntype.html#a9d1dcd0f80540899c91258702275d3a4',1,'by::ntype::promote(const ntype &amp;r) const'],['../classby_1_1ntype.html#ab303c05ede5fe2308c449613a649a455',1,'by::ntype::promote(const ntype &amp;l, const ntype &amp;r)']]],
-  ['pushstate_6',['pushState',['../classby_1_1parser.html#acace2571483d9c20c3bd15fd78f7f3f9',1,'by::parser']]]
+  ['ondedent_0',['onDedent',['../classby_1_1stela_parser.html#ae86562b13cfeec03f8bf61ccc0226154',1,'by::stelaParser']]],
+  ['onignoreindent_1',['onIgnoreIndent',['../classby_1_1stela_parser.html#aa8126f9843f87ccbc37510c074a0ce28',1,'by::stelaParser']]],
+  ['onindent_2',['onIndent',['../classby_1_1stela_parser.html#a2eeb608b2f3a2679d7483803eaedc7b3',1,'by::stelaParser']]],
+  ['onparseerr_3',['onParseErr',['../classby_1_1stela_parser.html#a6e1284a605428cf15c4f41fd69fc26a4',1,'by::stelaParser']]],
+  ['onprimitive_4',['onPrimitive',['../classby_1_1stela_parser.html#aaef4803bc084bc2ec2467126fc47a136',1,'by::stelaParser']]],
+  ['onscan_5',['onScan',['../classby_1_1stela_token_scan.html#afc7ac9ff1572980b8d4f4f7c58cb2f00',1,'by::stelaTokenScan::onScan()'],['../classby_1_1stela_normal_scan.html#aa519f183711cc62b52407949e0514b28',1,'by::stelaNormalScan::onScan()'],['../classby_1_1stela_indent_scan.html#a6e8ee4063b0d6cbca11a9db57d98e6f5',1,'by::stelaIndentScan::onScan()'],['../classby_1_1stela_parser.html#a27e3e9ac29663ba84c3ce585e5b51157',1,'by::stelaParser::onScan()'],['../classby_1_1stela_token_scanable.html#a8015252731a807792d7b4259dfd50686',1,'by::stelaTokenScanable::onScan(stelaParser &amp;ps, ZZSTYPE *val, ZZLTYPE *loc, zzscan_t scanner)'],['../classby_1_1stela_token_scanable.html#a90e07f1a1661efce2498fe520694fd0c',1,'by::stelaTokenScanable::onScan(stelaParser &amp;ps, ZZSTYPE *yylval, ZZLTYPE *loc, zzscan_t yyscanner, nbool &amp;isBypass)=0'],['../classby_1_1stela_token_scan.html#a8015252731a807792d7b4259dfd50686',1,'by::stelaTokenScan::onScan(stelaParser &amp;ps, ZZSTYPE *val, ZZLTYPE *loc, zzscan_t scanner)'],['../classby_1_1stela_token_scan.html#a90e07f1a1661efce2498fe520694fd0c',1,'by::stelaTokenScan::onScan(stelaParser &amp;ps, ZZSTYPE *yylval, ZZLTYPE *loc, zzscan_t yyscanner, nbool &amp;isBypass)=0'],['../classby_1_1stela_parser.html#a8015252731a807792d7b4259dfd50686',1,'by::stelaParser::onScan(stelaParser &amp;ps, ZZSTYPE *val, ZZLTYPE *loc, zzscan_t scanner)'],['../classby_1_1stela_parser.html#a90e07f1a1661efce2498fe520694fd0c',1,'by::stelaParser::onScan(stelaParser &amp;ps, ZZSTYPE *yylval, ZZLTYPE *loc, zzscan_t yyscanner, nbool &amp;isBypass)=0']]],
+  ['onscanunexpected_6',['onScanUnexpected',['../classby_1_1stela_parser.html#aa28a51c35babe9656a0e61519512d79f',1,'by::stelaParser']]],
+  ['onstrong_7',['onStrong',['../classby_1_1life.html#aa3c93c105c20c6601c5a2e71836922de',1,'by::life']]],
+  ['ontokencolon_8',['onTokenColon',['../classby_1_1stela_parser.html#a729fa1d82ee9d25247be9da1e54392ef',1,'by::stelaParser']]],
+  ['ontokencomma_9',['onTokenComma',['../classby_1_1stela_parser.html#a6a7cc336cb31b6bb393af9b37989976f',1,'by::stelaParser']]],
+  ['ontokenendoffile_10',['onTokenEndOfFile',['../classby_1_1stela_parser.html#ae798717c044a3fa9e47419230f1382fe',1,'by::stelaParser']]],
+  ['ontokennewline_11',['onTokenNewLine',['../classby_1_1stela_parser.html#ae5c6b199ffc51752f6c0f9f81dd507d6',1,'by::stelaParser']]],
+  ['operator_20nbool_12',['operator nbool',['../classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650',1,'by::stela']]],
+  ['operator_2a_13',['operator*',['../classby_1_1binder.html#a50e8d38d79c0911aeb647047784660d2',1,'by::binder']]],
+  ['operator_2d_3e_14',['operator-&gt;',['../classby_1_1binder.html#a31ae31b7732a4dbcf9ed895308f56c8e',1,'by::binder']]],
+  ['operator_3d_3d_15',['operator==',['../classby_1_1type.html#a8e116c6818fe73d3e95dd0837ead65dd',1,'by::type']]]
 ];

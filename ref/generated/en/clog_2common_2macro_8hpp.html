@@ -211,10 +211,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();            \</div>
+<b>Value:</b><div class="fragment"><div class="line">        ::by::line::incLv();            \</div>
 <div class="line">        BY_E(<span class="stringliteral">&quot;▶  &quot;</span> fmt, ##__VA_ARGS__); \</div>
 <div class="line">        BY_END(scopeLog, [&amp;](nllong elapsed) { <a class="code hl_define" href="#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a>(<span class="stringliteral">&quot;◀  &quot;</span> fmt, ##__VA_ARGS__); });</div>
-<div class="ttc" id="aclassby_1_1line_html_a4edc878d49948fd15dc8bff7fcb88915"><div class="ttname"><a href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">by::line::incLv</a></div><div class="ttdeci">static void incLv()</div><div class="ttdoc">Increases the current depth level.</div><div class="ttdef"><b>Definition</b> line.cpp:33</div></div>
 <div class="ttc" id="aclog_2common_2macro_8hpp_html_a39decaf05c8269cf9d21c83ff19014a4"><div class="ttname"><a href="#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a></div><div class="ttdeci">#define BY_E(fmt,...)</div><div class="ttdoc">Log macro: prints debug log on console and file.</div><div class="ttdef"><b>Definition</b> macro.hpp:22</div></div>
 </div><!-- fragment -->
 <p>Logs scope entry and exit with execution time and depth visualization. </p>
@@ -241,7 +240,7 @@ careful when you use BY_?_SCOPE macro in 'if' block statement</h1>
 <div class="line">}</div>
 </div><!-- fragment --><p>in above example, macro will expand like below, </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> foo() {</div>
 <div class="line">    <span class="keywordflow">if</span>(isVerbose)</div>
-<div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();</div>
+<div class="line">        ::by::line::incLv();</div>
 <div class="line">    <a class="code hl_define" href="#a39decaf05c8269cf9d21c83ff19014a4">BY_E</a>(<span class="stringliteral">&quot;▶  okay, verbose mode is on.&quot;</span>);</div>
 <div class="line">    BY_END(scopeLog, ...., <span class="stringliteral">&quot;◀  okay, verbose mode is on.&quot;</span>)</div>
 <div class="line">    BY_I(&quot;hello&quot;);</div>
@@ -292,7 +291,7 @@ careful when you use BY_?_SCOPE macro in 'if' block statement</h1>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">::by::line::incLv</a>();            \</div>
+<b>Value:</b><div class="fragment"><div class="line">        ::by::line::incLv();            \</div>
 <div class="line">        BY_W(<span class="stringliteral">&quot;▶  &quot;</span> fmt, ##__VA_ARGS__); \</div>
 <div class="line">        BY_END(scopeLog, [&amp;](nllong elapsed) { BY_W(<span class="stringliteral">&quot;◀  &quot;</span> fmt, ##__VA_ARGS__); });</div>
 </div><!-- fragment -->

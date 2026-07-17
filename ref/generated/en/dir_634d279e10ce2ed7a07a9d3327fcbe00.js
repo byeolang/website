@@ -10,5 +10,5 @@ var dir_634d279e10ce2ed7a07a9d3327fcbe00 =
     [ "richLog.hpp", "clog_2rich_log_8hpp.html", "clog_2rich_log_8hpp" ],
     [ "scopeLog.hpp", "scope_log_8hpp.html", null ],
     [ "stream.hpp", "stream_8hpp.html", null ],
-    [ "when.hpp", "clog_2when_8hpp.html", null ]
+    [ "when.hpp", "when_8hpp.html", null ]
 ];
