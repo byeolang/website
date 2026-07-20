@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "byeol", "index.html", [
+    [ "Hello!", "index.html", null ],
     [ "Modules", "topics.html", "topics" ],
     [ "Class Index", "classes.html", null ],
     [ "File List", "files.html", "files" ]
@@ -33,8 +34,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"adam_8hpp.html",
-"instance_8hpp.html"
+"__nout_8hpp.html",
+"classby_1_1obj.html#a28fc870f01f52d8c8137040d4780b9e8",
+"expander_2expander_8hpp_source.html",
+"tndum_chain_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
