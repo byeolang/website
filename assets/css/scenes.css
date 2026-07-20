@@ -1,4 +1,12 @@
 /* common styles for all scenes: */
+
+/* Scene images are wrapped in <picture> (responsive WebP + PNG fallback).
+   display:contents removes the wrapper box so the inner <img> keeps behaving
+   as a direct child of its layer (percentage sizing / positioning intact). */
+.scene picture {
+  display: contents;
+}
+
 div.scroll-stage {
   width: 100%;
   height: 100%;

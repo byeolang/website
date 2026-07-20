@@ -30,6 +30,13 @@ def listen_handler(base, options)
   end
 end
 
+namespace :images do
+  desc "Generate WebP variants (full + -sm) for scene images. Requires cwebp + python3."
+  task :variants do
+    sh "bash", File.expand_path("bin/gen-scene-webp.sh", __dir__)
+  end
+end
+
 task :preview do
   base = Pathname.new('.').expand_path
   options = {
