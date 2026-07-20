@@ -66,7 +66,7 @@ export default {
   "scene3-desc-line2-rest": " before execution.",
   "scene3-code-label": "Example Code",
   "scene3-error-label": "Early Warnings",
-  "scene3-code": "let hp: int = \"low\"\nprint(move(player, hp))",
+  "scene3-code": "hp int := \"low\"\nprint(move(player, hp))",
   "scene3-error-line1": "type mismatch: int expected, got string",
   "scene3-error-line2": "invalid call: incompatible argument in move(player, hp)",
   "scene4-kicker": "Landing complete",

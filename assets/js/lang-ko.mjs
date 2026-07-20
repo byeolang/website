@@ -66,7 +66,7 @@ export default {
   "scene3-desc-line2-rest": "를 지향합니다.",
   "scene3-code-label": "예시 코드",
   "scene3-error-label": "사전 감지",
-  "scene3-code": "let hp: int = \"low\"\nprint(move(player, hp))",
+  "scene3-code": "hp int := \"low\"\nprint(move(player, hp))",
   "scene3-error-line1": "type mismatch: int expected, got string",
   "scene3-error-line2": "invalid call: incompatible argument in move(player, hp)",
   "scene4-kicker": "착륙 완료",
