@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['의한_20패턴매칭_0',['정규식에 의한 패턴매칭',['../al-architecture-frontend.html#autotoc_md480',1,'']]]
+  ['왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
 ];

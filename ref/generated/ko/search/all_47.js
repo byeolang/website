@@ -1,18 +1,15 @@
 var searchData=
 [
-  ['문법_20syntax_20을_20추가하고_20싶어요_0',['새로운 문법(Syntax)을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md8',1,'']]],
-  ['문서의_20종류_1',['문서의 종류',['../ab-dev-env.html#autotoc_md38',1,'']]],
-  ['문서의_20톤과_20어조_2',['문서의 톤과 어조',['../an-document-convention.html#autotoc_md535',1,'']]],
-  ['문서의_20doxygen_20커스터마이징_3',['문서의 doxygen 커스터마이징',['../ab-dev-env.html#autotoc_md40',1,'']]],
-  ['문서화_20표준_4',['문서화 표준',['../ad-convention-rules.html#autotoc_md154',1,'']]],
-  ['문서_5',['doc/ - 문서',['../ac-build-structure.html#autotoc_md60',1,'']]],
-  ['문서_20구조_6',['문서 구조',['../an-document-convention.html#autotoc_md539',1,'']]],
-  ['문서_20분할_20subpage_7',['문서 분할 (Subpage)',['../an-document-convention.html#autotoc_md547',1,'']]],
-  ['문서_20생성_8',['가이드 / 레퍼런스 문서 생성',['../ab-dev-env.html#autotoc_md35',1,'']]],
-  ['문서_20생성_20알고리즘_9',['문서 생성 알고리즘',['../ab-dev-env.html#autotoc_md36',1,'']]],
-  ['문서_20작성_20규칙_10',['문서 작성 규칙',['../an-document-convention.html',1,'']]],
-  ['문서_20작성_20스타일_11',['문서 작성 스타일',['../an-document-convention.html#autotoc_md557',1,'']]],
-  ['문서_20체계_20및_20분류_12',['문서 체계 및 분류',['../an-document-convention.html#autotoc_md541',1,'']]],
-  ['문서_20추가_20절차_13',['새 문서 추가 절차',['../an-document-convention.html#autotoc_md545',1,'']]],
-  ['문서_20navigation_14',['문서 Navigation',['../an-document-convention.html#autotoc_md543',1,'']]]
+  ['메모리_20관리_0',['메모리 관리',['../ai-architecture-memlite.html',1,'memlite 모듈 - 커스텀 메모리 관리'],['../ai-architecture-memlite.html#autotoc_md264',1,'pool - 크기별 메모리 관리']]],
+  ['메모리_20관리_20인터페이스_1',['메모리 관리 인터페이스',['../ai-architecture-memlite.html#autotoc_md275',1,'']]],
+  ['메모리_20관리_20조정자_2',['instancer - 메모리 관리 조정자',['../ai-architecture-memlite.html#autotoc_md273',1,'']]],
+  ['메모리_20관리_20컴포넌트_3',['메모리 관리 컴포넌트',['../ai-architecture-memlite.html#autotoc_md261',1,'']]],
+  ['메모리_20풀_20사용_4',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md255',1,'']]],
+  ['메모리_20풀_20패키지_20개요_5',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md259',1,'']]],
+  ['메타데이터_6',['메타데이터',['../ak-architecture-core.html#autotoc_md347',1,'manifest 클래스 - pod 메타데이터'],['../ak-architecture-core.html#autotoc_md420',1,'manifest 클래스 - pod 메타데이터']]],
+  ['메타_20정보가_20어떻게_20생성되나_7',['메타 정보가 어떻게 생성되나',['../ah-architecture-meta.html#autotoc_md237',1,'']]],
+  ['메타_20정보의_20생성과_20관리_8',['메타 정보의 생성과 관리',['../ah-architecture-meta.html#autotoc_md236',1,'']]],
+  ['메타_20정보_20자동_20생성_9',['메타 정보 자동 생성',['../ah-architecture-meta.html#autotoc_md238',1,'']]],
+  ['메타_20타입_20정보_20관리_10',['메타 타입 정보 관리',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
+  ['메타_20타입_20확장하기_11',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md242',1,'']]]
 ];

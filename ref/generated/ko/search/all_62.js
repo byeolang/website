@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['설계_0',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]],
-  ['설명_1',['디렉토리 설명',['../ac-build-structure.html#autotoc_md53',1,'']]],
-  ['설정_20언어_2',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]]
+  ['상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md534',1,'']]],
+  ['상수_20네이밍_1',['로컬 상수 네이밍',['../ad-convention-rules.html#autotoc_md152',1,'']]]
 ];

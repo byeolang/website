@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['종단간_20테스트_0',['E2E Test (종단간 테스트)',['../am-testing-guide.html#autotoc_md506',1,'']]],
-  ['종료_20키워드_1',['retStateExpr 클래스 - 블록 종료 키워드',['../ak-architecture-core.html#autotoc_md362',1,'']]],
-  ['종류_2',['문서의 종류',['../ab-dev-env.html#autotoc_md38',1,'']]]
+  ['전략_0',['stelaTokenScan 클래스 - 스캔 모드 전략',['../aj-architecture-stela.html#autotoc_md295',1,'']]],
+  ['전에_1',['시작하기 전에',['../ad-convention-rules.html#autotoc_md106',1,'']]]
 ];

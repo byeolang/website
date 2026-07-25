@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['인스턴스_20생성_0',['인스턴스 생성',['../ah-architecture-meta.html#autotoc_md226',1,'']]],
-  ['인스턴스_20자체에_20붙어있다_1',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md247',1,'']]],
-  ['인자를_20consume하기_2',['복수의 flag 인자를 consume하기',['../al-architecture-frontend.html#autotoc_md482',1,'']]],
-  ['인자_3',['args 클래스 - 함수 인자',['../ak-architecture-core.html#autotoc_md316',1,'']]],
-  ['인터페이스_4',['인터페이스',['../ai-architecture-memlite.html#autotoc_md270',1,'메모리 관리 인터페이스'],['../ai-architecture-memlite.html#autotoc_md242',1,'바인딩 인터페이스'],['../al-architecture-frontend.html',1,'frontend 모듈 - CLI 인터페이스'],['../ak-architecture-core.html#autotoc_md365',1,'tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스']]],
-  ['인터페이스_20네이밍_5',['인터페이스 네이밍',['../ad-convention-rules.html#autotoc_md122',1,'']]]
+  ['위치와_20네이밍_0',['위치와 네이밍',['../an-testing-guide.html#autotoc_md509',1,'파일 위치와 네이밍'],['../an-testing-guide.html#autotoc_md517',1,'파일 위치와 네이밍'],['../an-testing-guide.html#autotoc_md527',1,'파일 위치와 네이밍']]],
+  ['위치_20정보_1',['src, srcFile 클래스 - 소스 위치 정보',['../ak-architecture-core.html#autotoc_md319',1,'']]],
+  ['위한_20언더스코어_20접두사_2',['non public accessor를 위한 언더스코어 접두사',['../ad-convention-rules.html#autotoc_md119',1,'']]],
+  ['위해_20로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_3',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]]
 ];

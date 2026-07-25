@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['비교표_0',['빌드 타겟 비교표',['../ac-build-structure.html#autotoc_md96',1,'']]]
+  ['불필요하게_20긴_20예제_0',['❌ 불필요하게 긴 예제',['../ad-convention-rules.html#autotoc_md128',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
+  ['오버라이드_0',['SetUp/TearDown 오버라이드',['../an-testing-guide.html#autotoc_md539',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['절차_0',['새 문서 추가 절차',['../an-document-convention.html#autotoc_md545',1,'']]]
+  ['잘못된_20예제_0',['잘못된 예제',['../ad-convention-rules.html#autotoc_md115',1,'❌ 잘못된 예제'],['../ad-convention-rules.html#autotoc_md118',1,'❌ 잘못된 예제']]]
 ];

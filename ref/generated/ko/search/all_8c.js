@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['저장소_0',['scope 클래스 - Symbol 저장소',['../ak-architecture-core.html#autotoc_md399',1,'']]]
+  ['있는_20이유_0',['stela가 인프라를 함께 담고 있는 이유',['../ae-architecture-overview.html#autotoc_md173',1,'']]]
 ];

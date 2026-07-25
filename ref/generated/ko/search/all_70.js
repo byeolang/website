@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['앞_20공백_3a_20공백_20없음_0',['괄호 앞 공백: 공백 없음',['../ad-convention-rules.html#autotoc_md139',1,'']]]
+  ['쓰는_20이유_0',['exec 대신 spawn을 쓰는 이유',['../am-deployment.html#autotoc_md501',1,'']]]
 ];

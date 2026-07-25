@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['매칭_0',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md481',1,'']]],
-  ['매크로_1',['매크로',['../am-testing-guide.html#autotoc_md492',1,'Google Test 검증 매크로'],['../ag-architecture-clog.html#autotoc_md203',1,'Scope 로깅 매크로'],['../af-architecture-indep.html#autotoc_md178',1,'WHEN 매크로']]],
-  ['매크로_20사용_2',['TO 매크로 사용',['../ad-convention-rules.html#autotoc_md145',1,'']]],
-  ['매크로_3a_20upper_5fsnake_5fcase_3',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md116',1,'']]]
+  ['로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_0',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['로그_20기능을_20넣고_20싶어요_1',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['로깅의_20기본_20사용법_2',['로깅의 기본 사용법',['../ag-architecture-clog.html#autotoc_md206',1,'']]],
+  ['로깅_3',['로깅',['../ak-architecture-core.html#autotoc_md442',1,'graphVisitor 클래스 - AST 로깅'],['../ag-architecture-clog.html#autotoc_md210',1,'richLog - 다형성 로깅']]],
+  ['로깅_20매크로_4',['Scope 로깅 매크로',['../ag-architecture-clog.html#autotoc_md208',1,'']]],
+  ['로깅_20시스템_5',['clog 모듈 - 로깅 시스템',['../ag-architecture-clog.html',1,'ae-architecture-overview']]],
+  ['로깅_20시스템_20아키텍처_6',['로깅 시스템 아키텍처',['../ag-architecture-clog.html#autotoc_md204',1,'']]],
+  ['로더_7',['로더',['../ak-architecture-core.html#autotoc_md434',1,'cppPodLoading 클래스 - C++ Pod 로더'],['../ak-architecture-core.html#autotoc_md429',1,'podLoader 클래스 - pod 로더']]],
+  ['로딩_8',['autopod 클래스 - Lazy pod 로딩',['../ak-architecture-core.html#autotoc_md424',1,'']]],
+  ['로딩_20추상_20클래스_9',['podLoading 클래스 - Pod 로딩 추상 클래스',['../ak-architecture-core.html#autotoc_md432',1,'']]],
+  ['로딩_20dlib_20클래스_10',['동적 라이브러리 로딩 - dlib 클래스',['../af-architecture-indep.html#autotoc_md197',1,'']]],
+  ['로컬_20상수_20네이밍_11',['로컬 상수 네이밍',['../ad-convention-rules.html#autotoc_md152',1,'']]]
 ];

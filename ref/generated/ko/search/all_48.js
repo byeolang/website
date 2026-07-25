@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['및_20분류_0',['문서 체계 및 분류',['../an-document-convention.html#autotoc_md541',1,'']]],
-  ['및_20빌드_20산출물_1',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['및_20타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
-  ['및_20ast_20순회_3',['Visitor 패턴 및 AST 순회',['../ak-architecture-core.html#autotoc_md431',1,'']]]
+  ['명령줄_20플래그_20처리_0',['flag 클래스 - 명령줄 플래그 처리',['../al-architecture-frontend.html#autotoc_md483',1,'']]],
+  ['명명_20규칙_1',['파일 명명 규칙',['../ad-convention-rules.html#autotoc_md125',1,'']]],
+  ['명확한_20테스트_20이름_2',['명확한 테스트 이름',['../an-testing-guide.html#autotoc_md542',1,'']]]
 ];

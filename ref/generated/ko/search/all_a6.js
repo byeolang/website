@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../am-testing-guide.html#autotoc_md527',1,'']]],
-  ['케이스_20작성_20가이드_1',['테스트 케이스 작성 가이드',['../am-testing-guide.html',1,'']]]
+  ['체계_20및_20분류_0',['문서 체계 및 분류',['../ao-document-convention.html#autotoc_md561',1,'']]],
+  ['체킹_1',['동적 타입 체킹',['../ai-architecture-memlite.html#autotoc_md254',1,'']]]
 ];

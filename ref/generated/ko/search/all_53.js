@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['본격적으로_20시작해보죠_0',['본격적으로 시작해보죠.',['../aa-onboarding.html#autotoc_md14',1,'']]]
+  ['베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md534',1,'']]]
 ];

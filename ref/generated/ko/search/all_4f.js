@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../am-testing-guide.html#autotoc_md514',1,'']]]
+  ['방법_0',['저장소를 합치는 방법',['../ae-architecture-overview.html#autotoc_md175',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['태그_0',['@file 태그',['../ad-convention-rules.html#autotoc_md159',1,'']]]
+  ['케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../an-testing-guide.html#autotoc_md547',1,'']]],
+  ['케이스_20작성_20가이드_1',['테스트 케이스 작성 가이드',['../an-testing-guide.html',1,'']]]
 ];

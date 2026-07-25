@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['템플릿_0',['tbaseObjOrigin 클래스 - baseObj Origin 템플릿',['../ak-architecture-core.html#autotoc_md333',1,'']]],
-  ['템플릿_20구체화_20네이밍_1',['템플릿 구체화 네이밍',['../ad-convention-rules.html#autotoc_md123',1,'']]]
+  ['크기별_20메모리_20관리_0',['pool - 크기별 메모리 관리',['../ai-architecture-memlite.html#autotoc_md264',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['어떻게_20생성되나_0',['메타 정보가 어떻게 생성되나',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
-  ['어조_1',['문서의 톤과 어조',['../an-document-convention.html#autotoc_md535',1,'']]]
+  ['아키텍처_0',['로깅 시스템 아키텍처',['../ag-architecture-clog.html#autotoc_md204',1,'']]],
+  ['아키텍처_20개요_1',['아키텍처 개요',['../ae-architecture-overview.html#autotoc_md177',1,'']]],
+  ['아키텍쳐와_20설계_2',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]]
 ];

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['올바른_20베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../am-testing-guide.html#autotoc_md514',1,'']]],
-  ['올바른_20예제_1',['올바른 예제',['../ad-convention-rules.html#autotoc_md114',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md117',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md127',1,'✅ 올바른 예제']]]
+  ['에러의_20기반_0',['baseErr 클래스 - 에러의 기반',['../ak-architecture-core.html#autotoc_md473',1,'']]],
+  ['에러_20리포트_20확인_1',['에러 리포트 확인',['../an-testing-guide.html#autotoc_md550',1,'']]],
+  ['에러_20수집_2',['errReport 클래스 - 에러 수집',['../ak-architecture-core.html#autotoc_md474',1,'']]],
+  ['에러_20처리흐름_20정리_3',['에러 처리흐름 정리',['../ak-architecture-core.html#autotoc_md476',1,'']]],
+  ['에러_20처리_4',['에러 처리',['../ak-architecture-core.html#autotoc_md472',1,'에러 처리'],['../af-architecture-indep.html#autotoc_md181',1,'Early-return 패턴과 에러 처리']]],
+  ['에러_20테스트_5',['런타임 에러 테스트',['../an-testing-guide.html#autotoc_md523',1,'']]]
 ];

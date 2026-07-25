@@ -1,0 +1,194 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>byeol: 배포와 실행 구조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
+<script type="text/javascript" src="dynsections.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="byeol.css" rel="stylesheet" type="text/css"/>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<!-- extensions: -->
+<!--    fragement copy to clipboard: -->
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!--    paragraph linking: -->
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<!--    interactive toc: -->
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+<!-- end of extension -->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('am-deployment.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">배포와 실행 구조</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2am-deployment"></a> 이 문서는 여러 저장소에서 만들어진 산출물들이 어떻게 하나의 배포 트리로 합쳐지고, 사용자가 <code>byeol</code> 명령을 실행했을 때 실제로 무슨 일이 벌어지는지를 설명합니다. 저장소들이 어떤 관계로 엮여 있는지는 <a class="el" href="ae-architecture-overview.html">아키텍쳐와 설계</a> 의 저장소 구조 섹션에서 다루므로, 여기서는 빌드가 끝난 다음의 이야기에 집중합니다.</p>
+<p>이 문서를 관통하는 원칙은 하나입니다. <b>사용자는 byeol 하나만 본다</b>는 것이죠. 내부적으로 아무리 여러 실행파일이 협력하더라도, 사용자가 알아야 하는 이름은 <code>byeol</code> 뿐이어야 합니다. 아래의 모든 결정은 이 원칙에서 파생됩니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md493"></a>
+두 개의 실행파일</h1>
+<p>배포된 byeol에는 실행파일이 두 개 있습니다. 이름이 똑같이 <code>byeol</code>이라서 혼란스러울 수 있지만, 역할은 전혀 다릅니다.</p>
+<p>첫 번째는 <b>launcher</b>입니다. 사용자의 PATH에 잡히는 진입점이며, 실제로 언어를 실행하지는 않습니다. 어느 버전의 인터프리터를 써야 하는지 결정하고, 업데이트를 처리하고, 패키지 매니저 명령을 전달하는 얇은 프록시입니다.</p>
+<p>두 번째는 <b>인터프리터 본체</b>입니다. 파싱, 검증, 실행 등 언어의 모든 일을 실제로 수행하는 프로그램이며, <a class="el" href="ae-architecture-overview.html">아키텍쳐와 설계</a> 에서 설명하는 계층 구조를 담고 있는 것이 바로 이 실행파일입니다.</p>
+<p>launcher를 따로 둔 이유는 <b>버전을 자유롭게 바꾸기 위해서</b>입니다. rbenv나 pyenv가 하는 일과 같습니다. 사용자가 치는 명령은 <code>ruby</code>이지 <code>rbenv</code>가 아니듯, byeol에서도 사용자가 치는 명령은 언제나 <code>byeol</code>이고 그 뒤에서 어떤 버전이 선택되는지는 launcher가 알아서 처리합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md495"></a>
+빌드 이름과 배포 이름</h1>
+<p>두 실행파일의 이름이 모두 <code>byeol</code>이면 개발자가 빌드 디렉토리에서 둘을 구분할 수 없습니다. 그래서 빌드할 때와 배포할 때 이름을 다르게 씁니다.</p>
+<p>빌드 단계에서는 각자 고유한 타깃 이름을 가집니다. launcher 저장소의 CMake 타깃은 <code>launcher</code>이고, byeol 저장소의 타깃은 <code>byeol</code>입니다. 개발자는 빌드 디렉토리에서 이름만 보고 둘을 구분할 수 있죠.</p>
+<p>배포 단계에서는 둘 다 최종 파일명이 <code>byeol</code>이 됩니다. launcher 저장소의 CMakeLists.txt에는 이 의도가 그대로 드러나 있습니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">set(exeName    &quot;launcher&quot;)   # 프로젝트/타깃 이름 (내부 식별자)</div>
+<div class="line">set(outputName &quot;byeol&quot;)      # 사용자에게 보이는 파일 이름</div>
+<div class="line"> </div>
+<div class="line">set_target_properties(${exeName} PROPERTIES OUTPUT_NAME ${outputName})</div>
+</div><!-- fragment --><p><code>launcher</code>라는 이름은 저장소와 빌드와 문서에서만 쓰이는 <b>내부 식별자</b>이며, 사용자 시야에는 절대 닿지 않습니다. launcher에 그럴싸한 브랜드명을 붙이지 않는 것도 같은 이유입니다. 사용자가 가장 먼저 만지는 프로그램에 독립된 이름을 붙이면 그게 언어 이름이라고 오해하게 되니까요.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md497"></a>
+배포 폴더 구조</h1>
+<p>이름이 같은 두 실행파일은 <b>경로로 구분</b>됩니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">&lt;root&gt;/</div>
+<div class="line">  byeol                    ← launcher (PATH에 잡히는 진입점)</div>
+<div class="line">  toolchains/</div>
+<div class="line">    v0.1.1/</div>
+<div class="line">      byeol                ← 인터프리터 본체</div>
+<div class="line">      extraFiles...</div>
+<div class="line">    v0.1.4/</div>
+<div class="line">      byeol                ← 인터프리터 본체</div>
+<div class="line">      extraFiles...</div>
+</div><!-- fragment --><p>규칙은 단순합니다. 루트의 <code>byeol</code>은 절대로 버전 폴더 안으로 들어가지 않고, 인터프리터는 절대로 루트에 나오지 않습니다. 그래서 경로만 보면 어느 쪽인지 즉시 알 수 있죠. 디버깅을 하거나 로그를 읽을 때 "이 byeol이 대체 뭐냐"는 질문에 절대경로가 바로 답을 줍니다. 루트에 있으면 launcher, <code>toolchains/&lt;버전&gt;/</code> 아래에 있으면 인터프리터입니다.</p>
+<p>여러 버전이 <code>toolchains/</code> 아래에 나란히 설치될 수 있다는 점도 중요합니다. 버전을 바꾼다는 것은 새로 설치하고 덮어쓰는 일이 아니라, 이미 있는 폴더 중 어느 것을 쓸지 고르는 일입니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md499"></a>
+실행 흐름</h1>
+<p>사용자가 <code>byeol hello.by</code>를 입력하면 다음 순서로 일이 진행됩니다.</p>
+<p>먼저 PATH에 잡힌 launcher가 실행됩니다. launcher는 인자를 해석해서 이것이 자기가 직접 처리할 명령인지, 인터프리터에게 넘길 명령인지 판단합니다. <code>toolchain</code> 관련 명령이나 <code>self update</code>는 launcher가 직접 처리하고, 코드를 실행하는 명령은 인터프리터에게 넘깁니다.</p>
+<p>넘길 명령이라면 launcher는 활성 버전을 해소합니다. 버전 설정 파일을 읽어서 어느 toolchain을 쓸지 결정하고, 그에 해당하는 <code>toolchains/&lt;버전&gt;/byeol</code> 경로를 얻습니다.</p>
+<p>그다음 launcher는 그 인터프리터를 <b>자식 프로세스로 spawn</b>하면서 자신의 표준 입출력을 <b>그대로 물려줍니다</b>. 그리고 자식이 끝날 때까지 부모로 남아 기다립니다. 자식이 종료되면 그 종료 코드를 그대로 반환하고 자신도 종료합니다.</p>
+<p>여기서 핵심은 <b>launcher가 데이터를 중계하지 않는다</b>는 점입니다. 표준 입출력을 상속시켰기 때문에 터미널이나 IDE는 인터프리터와 직접 이야기하며, launcher는 오가는 바이트를 건드리지 않습니다. 그래서 launcher가 중간에 살아 있어도 속도에 아무런 영향이 없습니다. 기다리는 동안 launcher는 잠들어 있으므로 비용도 사실상 없죠.</p>
+<p>그런데도 launcher를 종료시키지 않고 남겨두는 이유는 <b>세션 생명주기 관리</b> 때문입니다. 인터프리터가 끝나면 launcher의 대기가 풀리면서 세션이 깔끔하게 닫히고, IDE 입장에서는 추적해야 할 프로세스가 명확해집니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md501"></a>
+exec 대신 spawn을 쓰는 이유</h1>
+<p>Unix 계열에는 현재 프로세스를 다른 프로그램으로 바꿔치기하는 exec가 있습니다. launcher처럼 "넘기고 빠지는" 역할에는 얼핏 더 어울려 보이죠. 그런데 Windows에는 이에 대응하는 기능이 없습니다.</p>
+<p>플랫폼마다 다른 방식을 쓰면 프로세스 트리 모양이 달라지고, 그 차이가 자식 정리나 세션 추적 같은 곳에서 미묘한 버그로 되돌아옵니다. 그래서 <b>양쪽 플랫폼 모두 spawn 후 대기하는 방식으로 통일</b>했습니다. 어느 운영체제에서든 프로세스 구조가 동일하게 유지되죠.</p>
+<p>프로세스를 하나 더 띄우는 비용이 걱정될 수 있지만, 인터프리터가 시작해서 소스를 파싱하는 비용에 비하면 무시할 수 있는 수준입니다. 빌드 대기를 줄이자는 byeol의 방향과도 충돌하지 않습니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md503"></a>
+플랫폼 종속 코드의 격리</h1>
+<p>프로세스를 생성하고, 표준 입출력을 물려주고, 자식을 정리하는 일은 운영체제마다 방식이 완전히 다릅니다. Unix에서는 fork나 posix_spawn을 쓰고 파일 디스크립터가 자연스럽게 상속되지만, Windows에서는 <code>CreateProcess</code>에 상속 옵션을 켜고 표준 핸들을 따로 지정해야 합니다.</p>
+<p>이런 차이는 전부 <a class="el" href="group__indep.html">Indep</a> 모듈 안에 갇힙니다. launcher를 비롯한 상위 코드는 추상화된 인터페이스만 보며, <code>#ifdef</code>를 직접 쓰지 않습니다. 조건부 컴파일은 오직 indep 내부의 플랫폼별 구현 파일에만 존재하죠.</p>
+<p>경계에서 플랫폼 고유 타입을 노출하지 않는 것도 중요한 규칙입니다. Windows의 <code>HANDLE</code>이나 Unix의 <code>pid_t</code>가 상위 코드에 보이면 그 순간 플랫폼 독립성이 깨집니다. 대신 프로젝트가 정의한 추상 타입만 상위로 전달됩니다.</p>
+<p>이 원칙은 <a class="el" href="ae-architecture-overview.html">아키텍쳐와 설계</a> 에서 설명하는 계층 구조가 launcher에도 똑같이 적용된 결과입니다. indep이 여러 저장소에서 공유되는 이유이기도 하죠.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md505"></a>
+디버깅 연결</h1>
+<p>IDE에서 byeol 코드를 디버깅할 때는 DAP(Debug Adapter Protocol) 방식으로 통신합니다. JSON 기반의 메시지를 주고받으며, 전송 수단으로는 소켓이 아니라 <b>파이프(표준 입출력)</b>를 사용합니다.</p>
+<p>파이프를 고른 이유는 앞서 설명한 프로세스 모델과 자연스럽게 맞물리기 때문입니다. launcher가 이미 표준 입출력을 인터프리터에게 물려주고 있으므로, IDE는 추가 설정 없이 인터프리터와 직접 대화할 수 있습니다. 소켓을 쓰면 포트를 협상하고, 충돌을 처리하고, 보안 바인딩을 신경 써야 하는데 그 고민을 통째로 피할 수 있죠. 대부분의 DAP 어댑터가 표준 입출력을 기본으로 쓰는 것도 같은 이유입니다.</p>
+<p>IDE는 어느 버전의 인터프리터가 실제로 실행되는지 알 필요가 없습니다. IDE는 launcher만 바라보고, 버전 해소는 launcher가 책임집니다. 이것이 launcher를 버전 스위처로 둔 설계가 디버깅까지 일관되게 이어지는 지점입니다.</p>
+<hr  />
+<p><b>다음 문서</b>: <a class="el" href="an-testing-guide.html">테스트 케이스 작성 가이드</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
+</body>
+</html>

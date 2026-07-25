@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['모델_0',['객체 모델',['../ak-architecture-core.html#autotoc_md320',1,'']]],
-  ['모듈을_20마무리_20하며_1',['core 모듈을 마무리 하며',['../ak-architecture-core.html#autotoc_md473',1,'']]],
-  ['모듈_20경량_20설정_20언어_2',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]],
-  ['모듈_20런타임_20타입_20시스템_3',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]],
-  ['모듈_20로깅_20시스템_4',['clog 모듈 - 로깅 시스템',['../ag-architecture-clog.html',1,'ae-architecture-overview']]],
-  ['모듈_20언어_20구현의_20핵심_5',['core 모듈 - 언어 구현의 핵심',['../ak-architecture-core.html',1,'ae-architecture-overview']]],
-  ['모듈_20커스텀_20메모리_20관리_6',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]],
-  ['모듈_20플랫폼_20추상화_20계층_7',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]],
-  ['모듈_20cli_20인터페이스_8',['frontend 모듈 - CLI 인터페이스',['../al-architecture-frontend.html',1,'ae-architecture-overview']]],
-  ['모드_9',['verbose 모드',['../am-testing-guide.html#autotoc_md528',1,'']]],
-  ['모드_20전략_10',['stelaTokenScan 클래스 - 스캔 모드 전략',['../aj-architecture-stela.html#autotoc_md290',1,'']]]
+  ['매칭_0',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md486',1,'']]],
+  ['매크로_1',['매크로',['../an-testing-guide.html#autotoc_md512',1,'Google Test 검증 매크로'],['../ag-architecture-clog.html#autotoc_md208',1,'Scope 로깅 매크로'],['../af-architecture-indep.html#autotoc_md183',1,'WHEN 매크로']]],
+  ['매크로_20사용_2',['TO 매크로 사용',['../ad-convention-rules.html#autotoc_md145',1,'']]],
+  ['매크로_3a_20upper_5fsnake_5fcase_3',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md116',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['선호_0',['선호',['../ad-convention-rules.html#autotoc_md130',1,'간단하고 직관적인 단어 선호'],['../ad-convention-rules.html#autotoc_md144',1,'Early-Return Pattern 선호']]]
+  ['삽입_20순서를_20기억하는_20multimap_0',['smultimap 클래스 - 삽입 순서를 기억하는 Multimap',['../ak-architecture-core.html#autotoc_md383',1,'']]]
 ];

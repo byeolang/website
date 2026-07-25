@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['배열_0',['arr 클래스 - scripted 배열',['../ak-architecture-core.html#autotoc_md374',1,'']]],
-  ['배열_20리터럴_1',['defArrayExpr 클래스 - 배열 리터럴',['../ak-architecture-core.html#autotoc_md354',1,'']]],
-  ['배치_2',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md137',1,'']]],
-  ['배치_20작업의_20기반_3',['tworker 클래스 - 배치 작업의 기반',['../ak-architecture-core.html#autotoc_md452',1,'']]]
+  ['바이너리_20확인_0',['바이너리 확인',['../ab-dev-env.html#autotoc_md24',1,'']]],
+  ['바인더_20제공_1',['범용 바인더 제공',['../ai-architecture-memlite.html#autotoc_md253',1,'']]],
+  ['바인딩_20인터페이스_2',['바인딩 인터페이스',['../ai-architecture-memlite.html#autotoc_md247',1,'']]]
 ];

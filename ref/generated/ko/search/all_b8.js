@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['풀_20사용_0',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md250',1,'']]],
-  ['풀_20패키지_20개요_1',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md254',1,'']]]
+  ['특정_20테스트_20케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../an-testing-guide.html#autotoc_md547',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['데이터_0',['testdata/ - 테스트 데이터',['../ac-build-structure.html#autotoc_md83',1,'']]],
-  ['데이터_20파일_1',['테스트 데이터 파일',['../am-testing-guide.html#autotoc_md509',1,'']]]
+  ['대비_20장점_0',['std::shared_ptr 대비 장점',['../ai-architecture-memlite.html#autotoc_md251',1,'']]],
+  ['대신_20spawn을_20쓰는_20이유_1',['exec 대신 spawn을 쓰는 이유',['../am-deployment.html#autotoc_md501',1,'']]]
 ];

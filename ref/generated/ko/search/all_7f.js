@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['원본_0',['origin 클래스 - 타입의 원본',['../ak-architecture-core.html#autotoc_md330',1,'']]]
+  ['완료_20코드_20표시_3a_20verified_0',['검증 완료 코드 표시: verified',['../ao-document-convention.html#autotoc_md574',1,'']]]
 ];
