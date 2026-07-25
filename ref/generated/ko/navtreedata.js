@@ -185,73 +185,71 @@ var NAVTREE =
       [ "빌드 이름과 배포 이름", "am-deployment.html#autotoc_md495", null ],
       [ "배포 폴더 구조", "am-deployment.html#autotoc_md497", null ],
       [ "실행 흐름", "am-deployment.html#autotoc_md499", null ],
-      [ "exec 대신 spawn을 쓰는 이유", "am-deployment.html#autotoc_md501", null ],
-      [ "플랫폼 종속 코드의 격리", "am-deployment.html#autotoc_md503", null ],
-      [ "디버깅 연결", "am-deployment.html#autotoc_md505", null ]
+      [ "디버깅 연결", "am-deployment.html#autotoc_md501", null ]
     ] ],
     [ "테스트 케이스 작성 가이드", "an-testing-guide.html", [
-      [ "Unit Test (단위 테스트)", "an-testing-guide.html#autotoc_md508", [
-        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md509", null ],
-        [ "기본 구조", "an-testing-guide.html#autotoc_md510", null ],
-        [ "byeolTest 클래스의 주요 기능", "an-testing-guide.html#autotoc_md511", null ],
-        [ "Google Test 검증 매크로", "an-testing-guide.html#autotoc_md512", null ],
-        [ "실전 예제", "an-testing-guide.html#autotoc_md513", null ]
+      [ "Unit Test (단위 테스트)", "an-testing-guide.html#autotoc_md504", [
+        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md505", null ],
+        [ "기본 구조", "an-testing-guide.html#autotoc_md506", null ],
+        [ "byeolTest 클래스의 주요 기능", "an-testing-guide.html#autotoc_md507", null ],
+        [ "Google Test 검증 매크로", "an-testing-guide.html#autotoc_md508", null ],
+        [ "실전 예제", "an-testing-guide.html#autotoc_md509", null ]
       ] ],
-      [ "Integration Test (통합 테스트)", "an-testing-guide.html#autotoc_md515", [
-        [ "Antipattern Test?", "an-testing-guide.html#autotoc_md516", null ],
-        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md517", null ],
-        [ "기본 구조", "an-testing-guide.html#autotoc_md518", null ],
-        [ "byeolIntegTest의 빌더 패턴", "an-testing-guide.html#autotoc_md519", null ],
-        [ "파싱 결과 검증", "an-testing-guide.html#autotoc_md520", null ],
-        [ "Negative 테스트", "an-testing-guide.html#autotoc_md521", null ],
-        [ "shouldParsed vs shouldVerified", "an-testing-guide.html#autotoc_md522", null ],
-        [ "런타임 에러 테스트", "an-testing-guide.html#autotoc_md523", null ],
-        [ "실전 예제", "an-testing-guide.html#autotoc_md524", null ]
+      [ "Integration Test (통합 테스트)", "an-testing-guide.html#autotoc_md511", [
+        [ "Antipattern Test?", "an-testing-guide.html#autotoc_md512", null ],
+        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md513", null ],
+        [ "기본 구조", "an-testing-guide.html#autotoc_md514", null ],
+        [ "byeolIntegTest의 빌더 패턴", "an-testing-guide.html#autotoc_md515", null ],
+        [ "파싱 결과 검증", "an-testing-guide.html#autotoc_md516", null ],
+        [ "Negative 테스트", "an-testing-guide.html#autotoc_md517", null ],
+        [ "shouldParsed vs shouldVerified", "an-testing-guide.html#autotoc_md518", null ],
+        [ "런타임 에러 테스트", "an-testing-guide.html#autotoc_md519", null ],
+        [ "실전 예제", "an-testing-guide.html#autotoc_md520", null ]
       ] ],
-      [ "E2E Test (종단간 테스트)", "an-testing-guide.html#autotoc_md526", [
-        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md527", null ],
-        [ "기본 구조", "an-testing-guide.html#autotoc_md528", null ],
-        [ "테스트 데이터 파일", "an-testing-guide.html#autotoc_md529", null ],
-        [ "parse와 run", "an-testing-guide.html#autotoc_md530", null ],
-        [ "Negative 테스트", "an-testing-guide.html#autotoc_md531", null ]
+      [ "E2E Test (종단간 테스트)", "an-testing-guide.html#autotoc_md522", [
+        [ "파일 위치와 네이밍", "an-testing-guide.html#autotoc_md523", null ],
+        [ "기본 구조", "an-testing-guide.html#autotoc_md524", null ],
+        [ "테스트 데이터 파일", "an-testing-guide.html#autotoc_md525", null ],
+        [ "parse와 run", "an-testing-guide.html#autotoc_md526", null ],
+        [ "Negative 테스트", "an-testing-guide.html#autotoc_md527", null ]
       ] ],
-      [ "테스트 작성 시 주의사항", "an-testing-guide.html#autotoc_md533", [
-        [ "올바른 베이스 클래스 상속", "an-testing-guide.html#autotoc_md534", null ],
-        [ "negative() 호출", "an-testing-guide.html#autotoc_md535", null ],
-        [ "OR_ASSERT 사용", "an-testing-guide.html#autotoc_md536", null ],
-        [ "shouldParsed vs shouldVerified vs run()", "an-testing-guide.html#autotoc_md537", null ],
-        [ "Raw String Literal 구분자", "an-testing-guide.html#autotoc_md538", null ],
-        [ "SetUp/TearDown 오버라이드", "an-testing-guide.html#autotoc_md539", null ],
-        [ "테스트 독립성", "an-testing-guide.html#autotoc_md540", null ],
-        [ "한 가지만 테스트", "an-testing-guide.html#autotoc_md541", null ],
-        [ "명확한 테스트 이름", "an-testing-guide.html#autotoc_md542", null ],
-        [ "Negative 테스트 포함", "an-testing-guide.html#autotoc_md543", null ],
-        [ "리소스 정리", "an-testing-guide.html#autotoc_md544", null ]
+      [ "테스트 작성 시 주의사항", "an-testing-guide.html#autotoc_md529", [
+        [ "올바른 베이스 클래스 상속", "an-testing-guide.html#autotoc_md530", null ],
+        [ "negative() 호출", "an-testing-guide.html#autotoc_md531", null ],
+        [ "OR_ASSERT 사용", "an-testing-guide.html#autotoc_md532", null ],
+        [ "shouldParsed vs shouldVerified vs run()", "an-testing-guide.html#autotoc_md533", null ],
+        [ "Raw String Literal 구분자", "an-testing-guide.html#autotoc_md534", null ],
+        [ "SetUp/TearDown 오버라이드", "an-testing-guide.html#autotoc_md535", null ],
+        [ "테스트 독립성", "an-testing-guide.html#autotoc_md536", null ],
+        [ "한 가지만 테스트", "an-testing-guide.html#autotoc_md537", null ],
+        [ "명확한 테스트 이름", "an-testing-guide.html#autotoc_md538", null ],
+        [ "Negative 테스트 포함", "an-testing-guide.html#autotoc_md539", null ],
+        [ "리소스 정리", "an-testing-guide.html#autotoc_md540", null ]
       ] ],
-      [ "디버깅", "an-testing-guide.html#autotoc_md546", [
-        [ "특정 테스트 케이스만 실행하기", "an-testing-guide.html#autotoc_md547", null ],
-        [ "verbose 모드", "an-testing-guide.html#autotoc_md548", null ],
-        [ "디버거 사용", "an-testing-guide.html#autotoc_md549", null ],
-        [ "에러 리포트 확인", "an-testing-guide.html#autotoc_md550", null ],
-        [ "테스트 실행", "an-testing-guide.html#autotoc_md552", null ]
+      [ "디버깅", "an-testing-guide.html#autotoc_md542", [
+        [ "특정 테스트 케이스만 실행하기", "an-testing-guide.html#autotoc_md543", null ],
+        [ "verbose 모드", "an-testing-guide.html#autotoc_md544", null ],
+        [ "디버거 사용", "an-testing-guide.html#autotoc_md545", null ],
+        [ "에러 리포트 확인", "an-testing-guide.html#autotoc_md546", null ],
+        [ "테스트 실행", "an-testing-guide.html#autotoc_md548", null ]
       ] ]
     ] ],
     [ "문서 작성 규칙", "ao-document-convention.html", [
-      [ "문서의 톤과 어조", "ao-document-convention.html#autotoc_md555", null ],
-      [ "Doxygen 호환성", "ao-document-convention.html#autotoc_md557", null ],
-      [ "문서 구조", "ao-document-convention.html#autotoc_md559", null ],
-      [ "문서 체계 및 분류", "ao-document-convention.html#autotoc_md561", null ],
-      [ "문서 Navigation", "ao-document-convention.html#autotoc_md563", null ],
-      [ "새 문서 추가 절차", "ao-document-convention.html#autotoc_md565", null ],
-      [ "문서 분할 (Subpage)", "ao-document-convention.html#autotoc_md567", null ],
-      [ "예시의 중요성", "ao-document-convention.html#autotoc_md569", null ],
-      [ "Style Annotation 시스템", "ao-document-convention.html#autotoc_md571", [
-        [ "언어 지정", "ao-document-convention.html#autotoc_md572", null ],
-        [ "실행 가능 코드 표시", "ao-document-convention.html#autotoc_md573", null ],
-        [ "검증 완료 코드 표시: verified", "ao-document-convention.html#autotoc_md574", null ],
-        [ "보여지는 코드와 실행 코드 분리: shown", "ao-document-convention.html#autotoc_md575", null ]
+      [ "문서의 톤과 어조", "ao-document-convention.html#autotoc_md551", null ],
+      [ "Doxygen 호환성", "ao-document-convention.html#autotoc_md553", null ],
+      [ "문서 구조", "ao-document-convention.html#autotoc_md555", null ],
+      [ "문서 체계 및 분류", "ao-document-convention.html#autotoc_md557", null ],
+      [ "문서 Navigation", "ao-document-convention.html#autotoc_md559", null ],
+      [ "새 문서 추가 절차", "ao-document-convention.html#autotoc_md561", null ],
+      [ "문서 분할 (Subpage)", "ao-document-convention.html#autotoc_md563", null ],
+      [ "예시의 중요성", "ao-document-convention.html#autotoc_md565", null ],
+      [ "Style Annotation 시스템", "ao-document-convention.html#autotoc_md567", [
+        [ "언어 지정", "ao-document-convention.html#autotoc_md568", null ],
+        [ "실행 가능 코드 표시", "ao-document-convention.html#autotoc_md569", null ],
+        [ "검증 완료 코드 표시: verified", "ao-document-convention.html#autotoc_md570", null ],
+        [ "보여지는 코드와 실행 코드 분리: shown", "ao-document-convention.html#autotoc_md571", null ]
       ] ],
-      [ "문서 작성 스타일", "ao-document-convention.html#autotoc_md577", null ]
+      [ "문서 작성 스타일", "ao-document-convention.html#autotoc_md573", null ]
     ] ],
     [ "모듈", "topics.html", "topics" ],
     [ "클래스 색인", "classes.html", null ],
@@ -263,9 +261,9 @@ var NAVTREEINDEX =
 [
 "__nout_8hpp.html",
 "ak-architecture-core.html#autotoc_md383",
-"classby_1_1dum_src_file.html",
-"cli_8hpp_source.html",
-"pod_loader_8hpp.html"
+"classby_1_1end_expr.html",
+"closure_8hpp_source.html",
+"pod_loading_8hpp.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

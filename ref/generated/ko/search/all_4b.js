@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['및_20분류_0',['문서 체계 및 분류',['../ao-document-convention.html#autotoc_md561',1,'']]],
-  ['및_20빌드_20산출물_1',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['및_20타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
-  ['및_20ast_20순회_3',['Visitor 패턴 및 AST 순회',['../ak-architecture-core.html#autotoc_md436',1,'']]]
+  ['바이너리_20확인_0',['바이너리 확인',['../ab-dev-env.html#autotoc_md24',1,'']]],
+  ['바인더_20제공_1',['범용 바인더 제공',['../ai-architecture-memlite.html#autotoc_md253',1,'']]],
+  ['바인딩_20인터페이스_2',['바인딩 인터페이스',['../ai-architecture-memlite.html#autotoc_md247',1,'']]]
 ];

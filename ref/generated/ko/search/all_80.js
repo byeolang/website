@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['왜_20일반적인_20c_20컨벤션과_20다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md107',1,'']]]
+  ['왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
 ];

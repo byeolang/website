@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['참고_20사항_0',['참고 사항',['../ac-build-structure.html#autotoc_md103',1,'']]],
-  ['참조의_20진입점_1',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ak-architecture-core.html#autotoc_md388',1,'']]],
-  ['참조_2',['ref로 다른 코드 참조',['../ad-convention-rules.html#autotoc_md165',1,'']]],
-  ['참조_20정렬_3a_20왼쪽_20정렬_3',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
+  ['철학을_20요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md108',1,'']]],
+  ['철학_1',['철학',['../ad-convention-rules.html#autotoc_md126',1,'네이밍 철학'],['../ad-convention-rules.html#autotoc_md109',1,'C++ 코드에 반영된 철학']]]
 ];

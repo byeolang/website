@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['일반적인_20네이밍_20가이드_0',['일반적인 네이밍 가이드',['../ad-convention-rules.html#autotoc_md129',1,'']]],
-  ['일반적인_20c_20컨벤션과_20다른가_1',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md107',1,'']]]
+  ['자동_20생성_0',['메타 정보 자동 생성',['../ah-architecture-meta.html#autotoc_md238',1,'']]],
+  ['자동_20적용_1',['코딩 스타일은 clang-format으로 자동 적용',['../ad-convention-rules.html#autotoc_md110',1,'']]],
+  ['자명한_20코드에는_20주석_20금지_2',['자명한 코드에는 주석 금지',['../ad-convention-rules.html#autotoc_md167',1,'']]],
+  ['자주_20사용하는_20동사_3',['자주 사용하는 동사',['../ad-convention-rules.html#autotoc_md131',1,'']]],
+  ['자체에_20붙어있다_4',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]],
+  ['자체_20메모리_20풀_20사용_5',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md255',1,'']]]
 ];

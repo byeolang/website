@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['잡기_20위해_20로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_0',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]]
+  ['저장소를_20합치는_20방법_0',['저장소를 합치는 방법',['../ae-architecture-overview.html#autotoc_md175',1,'']]],
+  ['저장소_1',['scope 클래스 - Symbol 저장소',['../ak-architecture-core.html#autotoc_md404',1,'']]],
+  ['저장소_20간_20의존_20관계_2',['저장소 간 의존 관계',['../ae-architecture-overview.html#autotoc_md174',1,'']]],
+  ['저장소_20구조_3',['저장소 구조',['../ae-architecture-overview.html#autotoc_md172',1,'']]]
 ];

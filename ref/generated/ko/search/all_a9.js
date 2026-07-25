@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['커스터마이징_0',['문서의 doxygen 커스터마이징',['../ab-dev-env.html#autotoc_md40',1,'']]],
-  ['커스텀_20메모리_20관리_1',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
+  ['컴포넌트의_20진입점_0',['tbridger 클래스 - Bridge 컴포넌트의 진입점',['../ak-architecture-core.html#autotoc_md396',1,'']]],
+  ['컴포넌트_1',['컴포넌트',['../ai-architecture-memlite.html#autotoc_md266',1,'라이프 사이클 관리 컴포넌트'],['../ai-architecture-memlite.html#autotoc_md261',1,'메모리 관리 컴포넌트']]]
 ];

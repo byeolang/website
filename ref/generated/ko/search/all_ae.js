@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['크기별_20메모리_20관리_0',['pool - 크기별 메모리 관리',['../ai-architecture-memlite.html#autotoc_md264',1,'']]]
+  ['키워드_0',['키워드',['../ak-architecture-core.html#autotoc_md365',1,'endExpr 클래스 - End 키워드'],['../ak-architecture-core.html#autotoc_md367',1,'retStateExpr 클래스 - 블록 종료 키워드']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['단락_0',['예제 2: 복잡한 클래스 - 여러 단락',['../ad-convention-rules.html#autotoc_md162',1,'']]],
-  ['단어_20선호_1',['간단하고 직관적인 단어 선호',['../ad-convention-rules.html#autotoc_md130',1,'']]],
-  ['단위_2',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md262',1,'']]],
-  ['단위_20테스트_3',['Unit Test (단위 테스트)',['../an-testing-guide.html#autotoc_md508',1,'']]]
+  ['담고_20있는_20이유_0',['stela가 인프라를 함께 담고 있는 이유',['../ae-architecture-overview.html#autotoc_md173',1,'']]]
 ];

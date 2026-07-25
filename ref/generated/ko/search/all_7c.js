@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['예시의_20중요성_0',['예시의 중요성',['../ao-document-convention.html#autotoc_md569',1,'']]],
-  ['예제_1',['예제',['../ad-convention-rules.html#autotoc_md114',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md117',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md127',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md128',1,'❌ 불필요하게 긴 예제'],['../ad-convention-rules.html#autotoc_md115',1,'❌ 잘못된 예제'],['../ad-convention-rules.html#autotoc_md118',1,'❌ 잘못된 예제'],['../an-testing-guide.html#autotoc_md513',1,'실전 예제'],['../an-testing-guide.html#autotoc_md524',1,'실전 예제']]],
-  ['예제_201_3a_20간단한_20클래스_2',['예제 1: 간단한 클래스',['../ad-convention-rules.html#autotoc_md161',1,'']]],
-  ['예제_202_3a_20복잡한_20클래스_20여러_20단락_3',['예제 2: 복잡한 클래스 - 여러 단락',['../ad-convention-rules.html#autotoc_md162',1,'']]]
+  ['올바른_20베이스_20클래스_20상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md530',1,'']]],
+  ['올바른_20예제_1',['올바른 예제',['../ad-convention-rules.html#autotoc_md114',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md117',1,'✅ 올바른 예제'],['../ad-convention-rules.html#autotoc_md127',1,'✅ 올바른 예제']]]
 ];

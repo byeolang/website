@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['반영된_20철학_0',['C++ 코드에 반영된 철학',['../ad-convention-rules.html#autotoc_md109',1,'']]]
+  ['방법_0',['저장소를 합치는 방법',['../ae-architecture-overview.html#autotoc_md175',1,'']]]
 ];

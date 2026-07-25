@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['타겟_0',['빌드 타겟',['../ac-build-structure.html#autotoc_md85',1,'']]],
-  ['타겟_20비교표_1',['빌드 타겟 비교표',['../ac-build-structure.html#autotoc_md96',1,'']]],
-  ['타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
-  ['타입의_20구체화_3',['generalizer 클래스 - Generic 타입의 구체화',['../ak-architecture-core.html#autotoc_md392',1,'']]],
-  ['타입의_20생성과_20관리_4',['genericOrigin 클래스 - Generic 타입의 생성과 관리',['../ak-architecture-core.html#autotoc_md390',1,'']]],
-  ['타입의_20원본_5',['origin 클래스 - 타입의 원본',['../ak-architecture-core.html#autotoc_md335',1,'']]],
-  ['타입_6',['타입',['../ah-architecture-meta.html#autotoc_md240',1,'adam - 최상위 타입'],['../aj-architecture-stela.html#autotoc_md287',1,'verStela 클래스 - 버전 타입']]],
-  ['타입_20사용_7',['기본 타입 사용',['../ad-convention-rules.html#autotoc_md124',1,'']]],
-  ['타입_20시스템_8',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]],
-  ['타입_20식별_9',['기본 타입 식별',['../ah-architecture-meta.html#autotoc_md229',1,'']]],
-  ['타입_20정보_20관리_10',['메타 타입 정보 관리',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
-  ['타입_20참조의_20진입점_11',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ak-architecture-core.html#autotoc_md388',1,'']]],
-  ['타입_20처리_12',['immutableTactic 클래스 - Immutable 타입 처리',['../ak-architecture-core.html#autotoc_md345',1,'']]],
-  ['타입_20체킹_13',['동적 타입 체킹',['../ai-architecture-memlite.html#autotoc_md254',1,'']]],
-  ['타입_20추론_14',['expander 클래스 - 사전 타입 추론',['../ak-architecture-core.html#autotoc_md453',1,'']]],
-  ['타입_20확장하기_15',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md242',1,'']]]
+  ['테스트_0',['테스트',['../an-testing-guide.html#autotoc_md519',1,'런타임 에러 테스트'],['../ab-dev-env.html#autotoc_md33',1,'테스트'],['../an-testing-guide.html#autotoc_md537',1,'한 가지만 테스트'],['../an-testing-guide.html#autotoc_md522',1,'E2E Test (종단간 테스트)'],['../an-testing-guide.html#autotoc_md511',1,'Integration Test (통합 테스트)'],['../an-testing-guide.html#autotoc_md517',1,'Negative 테스트'],['../an-testing-guide.html#autotoc_md527',1,'Negative 테스트'],['../an-testing-guide.html#autotoc_md504',1,'Unit Test (단위 테스트)']]],
+  ['테스트_20데이터_1',['testdata/ - 테스트 데이터',['../ac-build-structure.html#autotoc_md83',1,'']]],
+  ['테스트_20데이터_20파일_2',['테스트 데이터 파일',['../an-testing-guide.html#autotoc_md525',1,'']]],
+  ['테스트_20독립성_3',['테스트 독립성',['../an-testing-guide.html#autotoc_md536',1,'']]],
+  ['테스트_20실행_4',['테스트 실행',['../an-testing-guide.html#autotoc_md548',1,'']]],
+  ['테스트_20이름_5',['명확한 테스트 이름',['../an-testing-guide.html#autotoc_md538',1,'']]],
+  ['테스트_20작성_20시_20주의사항_6',['테스트 작성 시 주의사항',['../an-testing-guide.html#autotoc_md529',1,'']]],
+  ['테스트_20케이스만_20실행하기_7',['특정 테스트 케이스만 실행하기',['../an-testing-guide.html#autotoc_md543',1,'']]],
+  ['테스트_20케이스_20작성_20가이드_8',['테스트 케이스 작성 가이드',['../an-testing-guide.html',1,'']]],
+  ['테스트_20포함_9',['Negative 테스트 포함',['../an-testing-guide.html#autotoc_md539',1,'']]]
 ];

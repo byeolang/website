@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['잘못된_20예제_0',['잘못된 예제',['../ad-convention-rules.html#autotoc_md115',1,'❌ 잘못된 예제'],['../ad-convention-rules.html#autotoc_md118',1,'❌ 잘못된 예제']]]
+  ['장점_0',['std::shared_ptr 대비 장점',['../ai-architecture-memlite.html#autotoc_md251',1,'']]]
 ];

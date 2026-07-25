@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['알고리즘_0',['알고리즘',['../ab-dev-env.html#autotoc_md36',1,'문서 생성 알고리즘'],['../ag-architecture-clog.html#autotoc_md211',1,'핵심 알고리즘']]]
+  ['어떻게_20생성되나_0',['메타 정보가 어떻게 생성되나',['../ah-architecture-meta.html#autotoc_md237',1,'']]],
+  ['어조_1',['문서의 톤과 어조',['../ao-document-convention.html#autotoc_md551',1,'']]]
 ];

@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['이름과_20배포_20이름_0',['빌드 이름과 배포 이름',['../am-deployment.html#autotoc_md495',1,'']]],
-  ['이름_1',['이름',['../an-testing-guide.html#autotoc_md542',1,'명확한 테스트 이름'],['../am-deployment.html#autotoc_md495',1,'빌드 이름과 배포 이름']]],
-  ['이유_2',['이유',['../am-deployment.html#autotoc_md501',1,'exec 대신 spawn을 쓰는 이유'],['../ae-architecture-overview.html#autotoc_md173',1,'stela가 인프라를 함께 담고 있는 이유']]]
+  ['인스턴스_20생성_0',['인스턴스 생성',['../ah-architecture-meta.html#autotoc_md231',1,'']]],
+  ['인스턴스_20자체에_20붙어있다_1',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]],
+  ['인자를_20consume하기_2',['복수의 flag 인자를 consume하기',['../al-architecture-frontend.html#autotoc_md487',1,'']]],
+  ['인자_3',['args 클래스 - 함수 인자',['../ak-architecture-core.html#autotoc_md321',1,'']]],
+  ['인터페이스_4',['인터페이스',['../ai-architecture-memlite.html#autotoc_md275',1,'메모리 관리 인터페이스'],['../ai-architecture-memlite.html#autotoc_md247',1,'바인딩 인터페이스'],['../al-architecture-frontend.html',1,'frontend 모듈 - CLI 인터페이스'],['../ak-architecture-core.html#autotoc_md370',1,'tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스']]],
+  ['인터페이스_20네이밍_5',['인터페이스 네이밍',['../ad-convention-rules.html#autotoc_md122',1,'']]],
+  ['인프라를_20함께_20담고_20있는_20이유_6',['stela가 인프라를 함께 담고 있는 이유',['../ae-architecture-overview.html#autotoc_md173',1,'']]]
 ];

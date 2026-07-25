@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['폴더_20구조_0',['배포 폴더 구조',['../am-deployment.html#autotoc_md497',1,'']]]
+  ['풀_20사용_0',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md255',1,'']]],
+  ['풀_20패키지_20개요_1',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md259',1,'']]]
 ];

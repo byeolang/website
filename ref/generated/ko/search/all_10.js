@@ -37,7 +37,7 @@ var searchData=
   ['ontokenstartofstrtemplatebrace_34',['onTokenStartOfStrTemplateBrace',['../classby_1_1parser.html#a623cfd253a321c0926f86da7d1e860f4',1,'by::parser']]],
   ['operation_20method_35',['Operation Method',['../group__core.html#operation_method',1,'']]],
   ['operator_3d_3d_36',['operator==',['../classby_1_1func_type.html#a2a02405c114437ad3e88301ed89fd3c9',1,'by::funcType::operator==()'],['../classby_1_1ntype.html#a285ac10dfea37b07951801498c0549a8',1,'by::ntype::operator==()']]],
-  ['or_5fassert_20사용_37',['OR_ASSERT 사용',['../an-testing-guide.html#autotoc_md536',1,'']]],
+  ['or_5fassert_20사용_37',['OR_ASSERT 사용',['../an-testing-guide.html#autotoc_md532',1,'']]],
   ['orgcache_38',['orgCache',['../group__core.html#gae7bef416778c285966d6b55c2184d722',1,'by']]],
   ['origin_39',['origin',['../classby_1_1origin.html',1,'by']]],
   ['origin_20클래스_20타입의_20원본_40',['origin 클래스 - 타입의 원본',['../ak-architecture-core.html#autotoc_md335',1,'']]],

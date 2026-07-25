@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['삽입_20순서를_20기억하는_20multimap_0',['smultimap 클래스 - 삽입 순서를 기억하는 Multimap',['../ak-architecture-core.html#autotoc_md383',1,'']]]
+  ['상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md530',1,'']]],
+  ['상수_20네이밍_1',['로컬 상수 네이밍',['../ad-convention-rules.html#autotoc_md152',1,'']]]
 ];

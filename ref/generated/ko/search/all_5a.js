@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['붙어있다_0',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]]
+  ['브리징_0',['Native-Script 브리징',['../ak-architecture-core.html#autotoc_md394',1,'']]]
 ];

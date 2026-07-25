@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['속도_20개선_0',['속도 개선',['../ai-architecture-memlite.html#autotoc_md256',1,'']]]
+  ['수집_0',['errReport 클래스 - 에러 수집',['../ak-architecture-core.html#autotoc_md474',1,'']]]
 ];

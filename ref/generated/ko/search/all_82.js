@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
+  ['원본_0',['origin 클래스 - 타입의 원본',['../ak-architecture-core.html#autotoc_md335',1,'']]]
 ];

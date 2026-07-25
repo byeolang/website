@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['불필요하게_20긴_20예제_0',['❌ 불필요하게 긴 예제',['../ad-convention-rules.html#autotoc_md128',1,'']]]
+  ['붙어있다_0',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]]
 ];

@@ -1,7 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classby_1_1dum_src_file.html":[9,5,59],
-"classby_1_1dummy_err_report.html":[9,5,90],
 "classby_1_1end_expr.html":[9,5,27],
 "classby_1_1end_expr.html#a6012dac87e80856bf6a2b7bad39a7845":[9,5,27,0],
 "classby_1_1err.html":[9,5,88],
@@ -249,5 +247,7 @@ var NAVTREEINDEX2 =
 "classiteration.html":[9,5,80],
 "classnchain_iteration.html":[9,5,79],
 "classnchain_iteration.html#a1efa87fb1a86b30ce0767d135a40f500":[9,5,79,0],
-"cli_8hpp.html":[11,0,1,2]
+"cli_8hpp.html":[11,0,1,2],
+"cli_8hpp_source.html":[11,0,1,2],
+"closure_8hpp.html":[11,0,0,0,8]
 };
