@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md108',1,'']]]
+  ['오버라이드_0',['SetUp/TearDown 오버라이드',['../an-testing-guide.html#autotoc_md535',1,'']]]
 ];

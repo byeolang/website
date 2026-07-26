@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['안녕하세요_0',['안녕하세요',['../index.html',1,'']]]
+  ['아키텍쳐와_20설계_0',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]]
 ];

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['언더스코어_20접두사_0',['non public accessor를 위한 언더스코어 접두사',['../ad-convention-rules.html#autotoc_md119',1,'']]],
-  ['언어의_20기본_20기능_1',['stela 언어의 기본 기능',['../aj-architecture-stela.html#autotoc_md283',1,'']]],
-  ['언어의_20핵심_20철학을_20요약하면_2',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md108',1,'']]],
-  ['언어_3',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]],
-  ['언어_20구현의_20핵심_4',['core 모듈 - 언어 구현의 핵심',['../ak-architecture-core.html',1,'ae-architecture-overview']]],
-  ['언어_20지정_5',['언어 지정',['../ao-document-convention.html#autotoc_md568',1,'']]]
+  ['아래로_20내린다_0',['플랫폼 종속 코드는 아래로 내린다',['../ap-contribution-guide.html#autotoc_md580',1,'']]],
+  ['아키텍처_1',['로깅 시스템 아키텍처',['../ag-architecture-clog.html#autotoc_md204',1,'']]],
+  ['아키텍처_20개요_2',['아키텍처 개요',['../ae-architecture-overview.html#autotoc_md177',1,'']]],
+  ['아키텍쳐와_20설계_3',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['톤과_20어조_0',['문서의 톤과 어조',['../ao-document-convention.html#autotoc_md551',1,'']]]
+  ['크기별_20메모리_20관리_0',['pool - 크기별 메모리 관리',['../ai-architecture-memlite.html#autotoc_md264',1,'']]]
 ];

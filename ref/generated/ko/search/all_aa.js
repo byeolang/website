@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['케이스만_20실행하기_0',['특정 테스트 케이스만 실행하기',['../an-testing-guide.html#autotoc_md543',1,'']]],
-  ['케이스_20작성_20가이드_1',['테스트 케이스 작성 가이드',['../an-testing-guide.html',1,'']]]
+  ['철학을_20요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md108',1,'']]],
+  ['철학_1',['철학',['../ad-convention-rules.html#autotoc_md126',1,'네이밍 철학'],['../ad-convention-rules.html#autotoc_md109',1,'C++ 코드에 반영된 철학']]]
 ];

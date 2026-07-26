@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['할당_20단위_0',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md262',1,'']]],
-  ['할당_20표현식_1',['assignExpr 클래스 - 할당 표현식',['../ak-architecture-core.html#autotoc_md355',1,'']]]
+  ['폴더_20구조_0',['배포 폴더 구조',['../am-deployment.html#autotoc_md497',1,'']]]
 ];

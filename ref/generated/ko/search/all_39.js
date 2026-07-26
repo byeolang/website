@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['데이터_0',['testdata/ - 테스트 데이터',['../ac-build-structure.html#autotoc_md83',1,'']]],
-  ['데이터_20파일_1',['테스트 데이터 파일',['../an-testing-guide.html#autotoc_md525',1,'']]]
+  ['담고_20있는_20이유_0',['stela가 인프라를 함께 담고 있는 이유',['../ae-architecture-overview.html#autotoc_md173',1,'']]]
 ];

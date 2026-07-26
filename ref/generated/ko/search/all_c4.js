@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['함께하느라_20고생하셨습니다_0',['긴 여정을 함께하느라 고생하셨습니다.',['../al-architecture-frontend.html#autotoc_md490',1,'']]],
-  ['함께_20담고_20있는_20이유_1',['stela가 인프라를 함께 담고 있는 이유',['../ae-architecture-overview.html#autotoc_md173',1,'']]],
-  ['함수_20블록_3a_20한_20줄_20허용_2',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]],
-  ['함수_20인자_3',['args 클래스 - 함수 인자',['../ak-architecture-core.html#autotoc_md321',1,'']]],
-  ['함수_20정의_4',['defNestedFuncExpr 클래스 - 중첩 함수 정의',['../ak-architecture-core.html#autotoc_md361',1,'']]],
-  ['함수_20주석_5',['함수 주석',['../ad-convention-rules.html#autotoc_md163',1,'']]],
-  ['함수_20native_20function_20및_20타입을_20추가하고_20싶어요_6',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]]
+  ['표시_0',['실행 가능 코드 표시',['../ao-document-convention.html#autotoc_md569',1,'']]],
+  ['표시_3a_20verified_1',['검증 완료 코드 표시: verified',['../ao-document-convention.html#autotoc_md570',1,'']]],
+  ['표준_2',['문서화 표준',['../ad-convention-rules.html#autotoc_md154',1,'']]],
+  ['표현식_3',['표현식',['../ak-architecture-core.html#autotoc_md355',1,'assignExpr 클래스 - 할당 표현식'],['../ak-architecture-core.html#autotoc_md357',1,'blockExpr 클래스 - 블록 표현식'],['../ak-architecture-core.html#autotoc_md363',1,'defSeqExpr 클래스 - 시퀀스 표현식'],['../ak-architecture-core.html#autotoc_md353',1,'FBOExpr, FUOExpr 클래스 - 연산자 표현식']]],
+  ['표현식_20expression_20시스템_4',['표현식 (Expression) 시스템',['../ak-architecture-core.html#autotoc_md351',1,'']]],
+  ['표현_5',['표현',['../ak-architecture-core.html#autotoc_md398',1,'tbridge 클래스 - Native 클래스의 Script 표현'],['../aj-architecture-stela.html#autotoc_md286',1,'valStela 클래스 - Scalar 값 표현']]]
 ];

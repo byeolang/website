@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['합치는_20방법_0',['저장소를 합치는 방법',['../ae-architecture-overview.html#autotoc_md175',1,'']]]
+  ['풀_20사용_0',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md255',1,'']]],
+  ['풀_20패키지_20개요_1',['메모리 풀 패키지 개요',['../ai-architecture-memlite.html#autotoc_md259',1,'']]]
 ];

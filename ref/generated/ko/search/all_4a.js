@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['및_20분류_0',['문서 체계 및 분류',['../ao-document-convention.html#autotoc_md557',1,'']]],
-  ['및_20빌드_20산출물_1',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['및_20타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
-  ['및_20ast_20순회_3',['Visitor 패턴 및 AST 순회',['../ak-architecture-core.html#autotoc_md436',1,'']]]
+  ['매칭_0',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md486',1,'']]],
+  ['매크로_1',['매크로',['../an-testing-guide.html#autotoc_md508',1,'Google Test 검증 매크로'],['../ag-architecture-clog.html#autotoc_md208',1,'Scope 로깅 매크로'],['../af-architecture-indep.html#autotoc_md183',1,'WHEN 매크로']]],
+  ['매크로_20사용_2',['TO 매크로 사용',['../ad-convention-rules.html#autotoc_md145',1,'']]],
+  ['매크로_3a_20upper_5fsnake_5fcase_3',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md116',1,'']]]
 ];

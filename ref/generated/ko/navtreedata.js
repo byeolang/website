@@ -251,6 +251,23 @@ var NAVTREE =
       ] ],
       [ "문서 작성 스타일", "ao-document-convention.html#autotoc_md573", null ]
     ] ],
+    [ "기여 가이드", "ap-contribution-guide.html", [
+      [ "CI가 잡는 것과 사람이 봐야 하는 것", "ap-contribution-guide.html#autotoc_md576", null ],
+      [ "기존 설계를 망치지 않으려면", "ap-contribution-guide.html#autotoc_md578", [
+        [ "계층을 확인한다", "ap-contribution-guide.html#autotoc_md579", null ],
+        [ "플랫폼 종속 코드는 아래로 내린다", "ap-contribution-guide.html#autotoc_md580", null ]
+      ] ],
+      [ "중복을 만들지 않으려면", "ap-contribution-guide.html#autotoc_md582", null ],
+      [ "커밋을 나누는 방법", "ap-contribution-guide.html#autotoc_md584", [
+        [ "하나의 커밋은 하나의 변경", "ap-contribution-guide.html#autotoc_md585", null ],
+        [ "기계적 변경과 의미적 변경을 반드시 분리한다", "ap-contribution-guide.html#autotoc_md586", null ],
+        [ "큰 작업을 쪼개는 순서", "ap-contribution-guide.html#autotoc_md587", null ]
+      ] ],
+      [ "커밋 메시지", "ap-contribution-guide.html#autotoc_md589", null ],
+      [ "PR을 올리는 단위", "ap-contribution-guide.html#autotoc_md591", null ],
+      [ "저장소를 넘나드는 변경", "ap-contribution-guide.html#autotoc_md593", null ],
+      [ "올리기 전 확인", "ap-contribution-guide.html#autotoc_md595", null ]
+    ] ],
     [ "모듈", "topics.html", "topics" ],
     [ "클래스 색인", "classes.html", null ],
     [ "파일 목록", "files.html", "files" ]
@@ -261,9 +278,9 @@ var NAVTREEINDEX =
 [
 "__nout_8hpp.html",
 "ak-architecture-core.html#autotoc_md383",
-"classby_1_1end_expr.html",
-"closure_8hpp_source.html",
-"pod_loading_8hpp.html"
+"classby_1_1def_seq_expr.html#a6ea08763c22b92f46ec10ad6a8bf1e92",
+"classby_1_1while_expr.html#a9ecd23f964db38b7a23bb1ca5405739f",
+"origin_8hpp_source.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

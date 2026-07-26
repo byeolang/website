@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['포인터_20참조_20정렬_3a_20왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]],
-  ['포함_1',['포함',['../ad-convention-rules.html#autotoc_md169',1,'헤더 파일 포함'],['../an-testing-guide.html#autotoc_md539',1,'Negative 테스트 포함']]]
+  ['템플릿_0',['tbaseObjOrigin 클래스 - baseObj Origin 템플릿',['../ak-architecture-core.html#autotoc_md338',1,'']]],
+  ['템플릿_20구체화_20네이밍_1',['템플릿 구체화 네이밍',['../ad-convention-rules.html#autotoc_md123',1,'']]]
 ];

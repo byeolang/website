@@ -1,0 +1,245 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>byeol: 기여 가이드</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
+<script type="text/javascript" src="dynsections.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://github.com/byeolang/highlightjs-byeol/releases/download/v0.2.8/highlightjs-byeol-min.js"></script>
+<script type="text/javascript" src="postprocess.js"></script>
+<script type="text/javascript" src="pageInjector.js"></script>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="byeol.css" rel="stylesheet" type="text/css"/>
+<link href="highlightjs-theme-byeol.css" rel="stylesheet" type="text/css"/>
+<!-- extensions: -->
+<!--    fragement copy to clipboard: -->
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!--    paragraph linking: -->
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<!--    interactive toc: -->
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+<!-- end of extension -->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('ap-contribution-guide.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">기여 가이드</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2byeol_2byeol_2doc_2ref_2ko_2ap-contribution-guide"></a> 이 문서는 코드를 고치고 커밋을 만들어 PR을 올리기까지의 작업 방식을 설명합니다. 코드가 어떻게 생겨야 하는지는 <a class="el" href="ad-convention-rules.html">Byeol 코딩 규칙</a> 가, 테스트를 어떻게 짜는지는 <a class="el" href="an-testing-guide.html">테스트 케이스 작성 가이드</a> 가 다루므로 여기서는 반복하지 않습니다. 이 문서가 다루는 것은 <b>변경을 어떤 단위로 나누고 어떤 순서로 올리는가</b>입니다.</p>
+<p>외부 기여자를 위한 짧은 안내는 저장소 루트의 <code>CONTRIBUTING.md</code>에 영어로 있습니다. 이 문서는 그보다 깊은 내용을 담으며, 왜 그런 규칙이 필요한지까지 설명합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md576"></a>
+CI가 잡는 것과 사람이 봐야 하는 것</h1>
+<p>무엇을 신경 써야 하는지 알려면 먼저 무엇을 신경 쓰지 않아도 되는지 알아야 합니다.</p>
+<p>CI는 clang-format으로 코드 포맷을 검사하고, Linux와 macOS와 Windows와 WebAssembly 네 환경에서 빌드한 뒤 테스트를 돌립니다. 그러니 들여쓰기가 틀렸거나, 특정 플랫폼에서만 깨지거나, 테스트가 실패하는 문제는 자동으로 걸립니다. 이런 것들을 사람이 눈으로 확인하려 애쓸 필요는 없어요.</p>
+<p>반대로 CI가 절대 잡지 못하는 것이 있습니다. 계층 의존을 어긴 코드는 컴파일도 되고 테스트도 통과합니다. 이미 있는 기능을 다시 구현한 코드도 마찬가지죠. 리뷰가 불가능할 만큼 큰 PR도 CI에게는 아무 문제가 없습니다. 이 문서가 집중하는 것이 바로 이 영역입니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md578"></a>
+기존 설계를 망치지 않으려면</h1>
+<h2><a class="anchor" id="autotoc_md579"></a>
+계층을 확인한다</h2>
+<p>Byeol의 모듈은 엄격한 순서로 쌓여 있고, 각 모듈은 자기 바로 아래 계층에만 의존합니다. 이 관계는 말로만 있는 것이 아니라 각 모듈의 CMakeLists.txt에 그대로 적혀 있습니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">clog    -&gt; indep</div>
+<div class="line">meta    -&gt; clog</div>
+<div class="line">memlite -&gt; meta</div>
+<div class="line">stela   -&gt; memlite</div>
+<div class="line">core    -&gt; stela</div>
+<div class="line">frontend-&gt; core</div>
+</div><!-- fragment --><p>코드를 고치기 전에 지금 손대는 파일이 어느 모듈에 속하는지, 그 모듈이 무엇을 볼 수 있는지 확인하세요. 예를 들어 <a class="el" href="group__meta.html">Meta</a> 안에서 <a class="el" href="group__memlite.html">Memlite</a> 의 클래스를 쓰고 싶어졌다면, 그것은 방향이 반대이므로 설계를 어기는 것입니다. 컴파일이 통과하더라도 마찬가지예요.</p>
+<p>이런 유혹이 생겼다는 것은 대개 두 가지 중 하나를 뜻합니다. 그 기능이 지금 있는 자리가 아니라 더 아래 계층에 있어야 하거나, 아니면 애초에 의존 방향을 잘못 잡았거나입니다. 어느 쪽이든 억지로 참조를 뚫는 것보다 자리를 옮기는 편이 낫습니다.</p>
+<p>저장소 사이에서도 원칙은 같습니다. <a class="el" href="ae-architecture-overview.html">아키텍쳐와 설계</a> 에서 설명하듯 의존은 언제나 한 방향이며, 아래에 있는 저장소가 위를 참조하는 일은 없습니다.</p>
+<h2><a class="anchor" id="autotoc_md580"></a>
+플랫폼 종속 코드는 아래로 내린다</h2>
+<p><code>#ifdef _WIN32</code> 같은 조건부 컴파일은 <a class="el" href="group__indep.html">Indep</a> 모듈 안에서만 허용됩니다. 다른 곳에서 플랫폼을 분기하고 싶어졌다면 그 기능을 indep으로 내리고 추상 인터페이스를 통해 쓰세요. 이 규칙 하나가 나머지 모든 코드의 플랫폼 독립성을 지탱합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md582"></a>
+중복을 만들지 않으려면</h1>
+<p>Byeol은 비슷한 유틸리티가 여러 계층에 흩어지기 쉬운 구조입니다. 문자열 처리, 포인터 래퍼, 타입 검사 같은 것들이 <a class="el" href="group__indep.html">Indep</a> 과 <a class="el" href="group__memlite.html">Memlite</a> 와 <a class="el" href="group__core.html">Core</a> 어디에나 있을 법하거든요. 그래서 무언가 일반적인 이름의 헬퍼를 만들려 한다면 <b>먼저 찾아보는 것이 규칙</b>입니다.</p>
+<p>각 모듈에는 공개 헤더가 하나씩 있어서 검색 진입점이 됩니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">module/core.hpp</div>
+<div class="line">module/frontend.hpp</div>
+</div><!-- fragment --><p>stela 저장소에는 <code>clog.hpp</code>, <code>meta.hpp</code>, <code>memlite.hpp</code>, <code>stela.hpp</code>가 같은 역할을 합니다. 이 헤더들을 먼저 훑어보면 이미 있는 것을 다시 만드는 일을 상당 부분 막을 수 있어요.</p>
+<p>이름이 다를 뿐 같은 일을 하는 코드가 이미 있는 경우도 흔합니다. <code>find</code>, <code>get</code>, <code>has</code> 처럼 이 프로젝트가 즐겨 쓰는 동사 목록이 <a class="el" href="ad-convention-rules.html">Byeol 코딩 규칙</a> 에 정리되어 있으니, 찾을 때 그 어휘로 검색하면 놓칠 확률이 줄어듭니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md584"></a>
+커밋을 나누는 방법</h1>
+<h2><a class="anchor" id="autotoc_md585"></a>
+하나의 커밋은 하나의 변경</h2>
+<p>커밋 하나는 하나의 논리적 변경만 담습니다. 되돌리고 싶을 때 그 커밋만 되돌리면 되는 상태가 기준이에요. 버그를 고치면서 눈에 거슬리는 변수명을 바꾸고 주석도 손봤다면, 나중에 그 버그 수정만 취소하기가 어려워집니다.</p>
+<h2><a class="anchor" id="autotoc_md586"></a>
+기계적 변경과 의미적 변경을 반드시 분리한다</h2>
+<p>이것이 대량 변경을 다룰 때 가장 중요한 규칙입니다.</p>
+<p>이름을 일괄로 바꾸거나 포매터를 돌리는 변경은 파일 수백 개를 건드리지만, 읽는 사람은 "정말
+기계적인 치환만 있었는가"만 확인하면 됩니다. 반대로 의미가 바뀌는 변경은 파일이 몇 개뿐이어도 한 줄씩 읽어야 하죠. 성격이 이렇게 다른 두 가지가 한 커밋에 섞이면 리뷰가 불가능해집니다. 기계적 변경 속에 숨은 한 줄의 의미 변경을 사람이 찾아내기란 사실상 불가능하니까요.</p>
+<p>실제 이력에서 좋은 예를 볼 수 있습니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">style: rename `pack` to `pod`        98 files changed</div>
+<div class="line">style: apply formatter</div>
+</div><!-- fragment --><p>둘 다 거대하지만 순수하게 기계적이라 안전하게 리뷰할 수 있습니다. 커밋 타입이 <code>style</code>이라는 사실 자체가 "여기에 의미 변화는 없다"는 약속으로 읽히죠.</p>
+<h2><a class="anchor" id="autotoc_md587"></a>
+큰 작업을 쪼개는 순서</h2>
+<p>저장소를 분리하거나 대규모 리팩터링을 하는 것처럼 변경이 커질 때는 다음 순서로 나누면 각 단계가 독립적으로 리뷰 가능해집니다.</p>
+<p>먼저 순수한 이동이나 이름 변경을 따로 커밋합니다. 그다음 구조를 바꾸되 동작은 유지하는 변경을 올립니다. 마지막으로 실제 동작이 달라지는 변경을 담습니다. 이렇게 하면 문제가 생겼을 때 어느 단계에서 깨졌는지 이분 탐색하듯 좁혀갈 수 있어요.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md589"></a>
+커밋 메시지</h1>
+<p>커밋 메시지는 <b>항상 영어로</b> 작성하며 형식은 다음과 같습니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">type(scope): subject</div>
+<div class="line"> </div>
+<div class="line">body</div>
+</div><!-- fragment --><p><code>type</code>은 아래 아홉 가지 중 하나를 씁니다.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">type   </th><th class="markdownTableHeadNone">의미    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">feat   </td><td class="markdownTableBodyNone">새 기능 추가    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">fix   </td><td class="markdownTableBodyNone">버그 수정    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">doc   </td><td class="markdownTableBodyNone">문서 변경    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">style   </td><td class="markdownTableBodyNone">포맷, 이름 변경 등 동작에 영향 없는 기계적 변경    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">refactor   </td><td class="markdownTableBodyNone">동작은 그대로 두고 구조를 개선    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">test   </td><td class="markdownTableBodyNone">테스트 추가나 수정    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">build   </td><td class="markdownTableBodyNone">빌드 시스템 변경    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ci   </td><td class="markdownTableBodyNone">CI 설정 변경    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">chore   </td><td class="markdownTableBodyNone">의존 버전 갱신 등 그 밖의 잡일   </td></tr>
+</table>
+<p><code>scope</code>는 변경한 모듈이나 영역이며, 저장소 전체에 걸친 변경이라면 생략할 수 있습니다.</p>
+<p>본문에는 <b>무엇을 했는지가 아니라 왜 그렇게 했는지</b>를 씁니다. 무엇이 바뀌었는지는 diff가 이미 보여주니까요. 어떤 문제가 있었고 왜 이 방법을 골랐는지, 고려했지만 택하지 않은 선택지가 있다면 그것까지 적어두면 나중에 읽는 사람에게 큰 도움이 됩니다.</p>
+<p>다음은 실제 이력에서 가져온 예시입니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">fix(frontend): cmake&#39;s `project()` func won&#39;t be called inside of fetching dependency</div>
+<div class="line">feat(ci): include byeol binary and pod/sys in release artifacts</div>
+<div class="line">refactor(build): remove cmake duplicated settings by using build-common</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md591"></a>
+PR을 올리는 단위</h1>
+<p>PR 하나는 하나의 목적을 가집니다. 서로 관련 없는 두 가지를 고쳤다면 PR도 둘로 나누세요. 리뷰어가 "이건 왜 여기 있지?"라고 묻게 되는 변경이 섞여 있다면 나눠야 한다는 신호입니다.</p>
+<p>크기 자체보다 <b>리뷰 가능성</b>이 기준입니다. 기계적인 변경이라면 파일 200개짜리 PR도 괜찮지만, 설계가 바뀌는 변경이라면 파일 10개도 클 수 있어요. PR 설명에 "이것은 순수한 이름 변경입니다"처럼 성격을 밝혀두면 리뷰어가 어떤 눈으로 읽어야 할지 알 수 있습니다.</p>
+<p>의도적으로 남겨둔 부분이 있다면 설명에 적어주세요. 빠뜨린 것인지 일부러 미룬 것인지 리뷰어가 구분할 수 있어야 합니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md593"></a>
+저장소를 넘나드는 변경</h1>
+<p>여러 저장소를 함께 고쳐야 할 때는 <b>아래쪽 저장소부터</b> 처리합니다.</p>
+<p>예를 들어 <a class="el" href="group__indep.html">Indep</a> 에 기능을 추가하고 그것을 <a class="el" href="group__core.html">Core</a> 에서 쓰려 한다면, 먼저 indep에 PR을 올려 머지하고 새 버전을 릴리스합니다. 그다음 byeol 저장소에서 FetchContent의 태그를 새 버전으로 올리는 PR을 따로 올립니다.</p>
+<p>이 순서를 지켜야 하는 이유는 의존이 태그로 고정되어 있기 때문입니다. 상위 저장소는 자기가 명시적으로 태그를 올리기 전까지 하위의 변경을 보지 못합니다. 덕분에 하위 저장소가 바뀌어도 상위가 갑자기 깨지는 일이 없죠. 대신 순서를 거꾸로 하면 상위 PR이 존재하지 않는 태그를 가리키게 되어 빌드가 실패합니다.</p>
+<p>태그를 올리는 커밋은 다른 변경과 섞지 말고 따로 두는 편이 좋습니다. 어느 시점에 어떤 버전으로 올라갔는지 이력에서 바로 보이니까요.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md595"></a>
+올리기 전 확인</h1>
+<p>CI가 검사하는 항목은 다시 확인할 필요가 없습니다. 대신 다음을 스스로 점검하세요.</p>
+<p>손댄 모듈이 자기보다 위에 있는 모듈을 참조하고 있지 않은지 확인합니다. 새로 만든 함수나 클래스가 이미 어딘가에 있던 것은 아닌지 다시 한번 검색해봅니다. <code>#ifdef</code>를 <a class="el" href="group__indep.html">Indep</a> 밖에서 쓰지 않았는지 봅니다. 동작이 바뀌었다면 그에 맞는 테스트가 있는지 확인합니다. 공개 인터페이스가 바뀌었다면 관련 문서도 함께 고쳤는지 살핍니다.</p>
+<p>마지막으로 로컬에서 테스트를 한 번 돌려보세요. CI가 어차피 돌리지만, 실패를 미리 알면 왕복이 줄어듭니다.</p>
+<div class="fragment"><div class="line">@style: verified language-txt</div>
+<div class="line">python3 build/builder.py test</div>
+</div><!-- fragment --><hr  />
+<p><b>다음 문서</b>: <a class="el" href="index.html#reference-main">안녕하세요</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
+</body>
+</html>

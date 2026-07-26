@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['제공_0',['제공',['../ai-architecture-memlite.html#autotoc_md253',1,'범용 바인더 제공'],['../ai-architecture-memlite.html#autotoc_md257',1,'추가 정보 제공']]],
-  ['제어자_20순서_1',['접근 제어자 순서',['../ad-convention-rules.html#autotoc_md143',1,'']]],
-  ['제어_2',['스트림 제어',['../ag-architecture-clog.html#autotoc_md217',1,'']]],
-  ['제한자_3',['modifier 클래스 - 접근 제한자',['../ak-architecture-core.html#autotoc_md341',1,'']]],
-  ['제한_4',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md135',1,'']]]
+  ['저장소를_20넘나드는_20변경_0',['저장소를 넘나드는 변경',['../ap-contribution-guide.html#autotoc_md593',1,'']]],
+  ['저장소를_20합치는_20방법_1',['저장소를 합치는 방법',['../ae-architecture-overview.html#autotoc_md175',1,'']]],
+  ['저장소_2',['scope 클래스 - Symbol 저장소',['../ak-architecture-core.html#autotoc_md404',1,'']]],
+  ['저장소_20간_20의존_20관계_3',['저장소 간 의존 관계',['../ae-architecture-overview.html#autotoc_md174',1,'']]],
+  ['저장소_20구조_4',['저장소 구조',['../ae-architecture-overview.html#autotoc_md172',1,'']]]
 ];

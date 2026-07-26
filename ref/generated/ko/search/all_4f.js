@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['배열_0',['arr 클래스 - scripted 배열',['../ak-architecture-core.html#autotoc_md379',1,'']]],
-  ['배열_20리터럴_1',['defArrayExpr 클래스 - 배열 리터럴',['../ak-architecture-core.html#autotoc_md359',1,'']]],
-  ['배치_2',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md137',1,'']]],
-  ['배치_20작업의_20기반_3',['tworker 클래스 - 배치 작업의 기반',['../ak-architecture-core.html#autotoc_md457',1,'']]],
-  ['배포와_20실행_20구조_4',['배포와 실행 구조',['../am-deployment.html',1,'']]],
-  ['배포_20이름_5',['빌드 이름과 배포 이름',['../am-deployment.html#autotoc_md495',1,'']]],
-  ['배포_20폴더_20구조_6',['배포 폴더 구조',['../am-deployment.html#autotoc_md497',1,'']]]
+  ['및_20분류_0',['문서 체계 및 분류',['../ao-document-convention.html#autotoc_md557',1,'']]],
+  ['및_20빌드_20산출물_1',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
+  ['및_20타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
+  ['및_20ast_20순회_3',['Visitor 패턴 및 AST 순회',['../ak-architecture-core.html#autotoc_md436',1,'']]]
 ];

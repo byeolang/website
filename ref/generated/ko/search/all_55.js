@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['복사_20생성자_0',['defaultCopyCtor 클래스 - 기본 복사 생성자',['../ak-architecture-core.html#autotoc_md343',1,'']]],
-  ['복수의_20flag_20인자를_20consume하기_1',['복수의 flag 인자를 consume하기',['../al-architecture-frontend.html#autotoc_md487',1,'']]],
-  ['복수_20패턴_20매칭_2',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md486',1,'']]],
-  ['복잡한_20클래스_20여러_20단락_3',['예제 2: 복잡한 클래스 - 여러 단락',['../ad-convention-rules.html#autotoc_md162',1,'']]]
+  ['버그를_20잡기_20위해_20로그를_20추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_0',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['버전_20타입_1',['verStela 클래스 - 버전 타입',['../aj-architecture-stela.html#autotoc_md287',1,'']]]
 ];

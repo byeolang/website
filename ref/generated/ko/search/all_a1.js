@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['참고_20사항_0',['참고 사항',['../ac-build-structure.html#autotoc_md103',1,'']]],
-  ['참조의_20진입점_1',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ak-architecture-core.html#autotoc_md388',1,'']]],
-  ['참조_2',['ref로 다른 코드 참조',['../ad-convention-rules.html#autotoc_md165',1,'']]],
-  ['참조_20정렬_3a_20왼쪽_20정렬_3',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]]
+  ['줄에_20배치_0',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md137',1,'']]],
+  ['줄_20길이와_20들여쓰기_1',['줄 길이와 들여쓰기',['../ad-convention-rules.html#autotoc_md134',1,'']]],
+  ['줄_20길이_20제한_2',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md135',1,'']]],
+  ['줄_20허용_3',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]]
 ];

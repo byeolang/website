@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['의존_20관계_0',['저장소 간 의존 관계',['../ae-architecture-overview.html#autotoc_md174',1,'']]],
-  ['의한_20패턴매칭_1',['정규식에 의한 패턴매칭',['../al-architecture-frontend.html#autotoc_md485',1,'']]]
+  ['외부_20라이브러리_0',['external/ - 외부 라이브러리',['../ac-build-structure.html#autotoc_md62',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['한_20가지만_20테스트_0',['한 가지만 테스트',['../an-testing-guide.html#autotoc_md537',1,'']]],
-  ['한_20줄_20허용_1',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]]
+  ['포인터_20참조_20정렬_3a_20왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]],
+  ['포함_1',['포함',['../ad-convention-rules.html#autotoc_md169',1,'헤더 파일 포함'],['../an-testing-guide.html#autotoc_md539',1,'Negative 테스트 포함']]]
 ];

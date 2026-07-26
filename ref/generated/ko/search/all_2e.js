@@ -1,5 +1,21 @@
 var searchData=
 [
-  ['긴_20여정을_20함께하느라_20고생하셨습니다_0',['긴 여정을 함께하느라 고생하셨습니다.',['../al-architecture-frontend.html#autotoc_md490',1,'']]],
-  ['긴_20예제_1',['❌ 불필요하게 긴 예제',['../ad-convention-rules.html#autotoc_md128',1,'']]]
+  ['기계적_20변경과_20의미적_20변경을_20반드시_20분리한다_0',['기계적 변경과 의미적 변경을 반드시 분리한다',['../ap-contribution-guide.html#autotoc_md586',1,'']]],
+  ['기능을_20넣고_20싶어요_1',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
+  ['기능을_20더_20추가하고_20싶어요_2',['리플렉션 기능을 더 추가하고 싶어요.',['../aa-onboarding.html#autotoc_md12',1,'']]],
+  ['기능_3',['기능',['../an-testing-guide.html#autotoc_md507',1,'byeolTest 클래스의 주요 기능'],['../aj-architecture-stela.html#autotoc_md283',1,'stela 언어의 기본 기능']]],
+  ['기반_4',['기반',['../ak-architecture-core.html#autotoc_md473',1,'baseErr 클래스 - 에러의 기반'],['../ak-architecture-core.html#autotoc_md327',1,'baseObj 클래스 - 객체의 기반'],['../ak-architecture-core.html#autotoc_md307',1,'node 클래스 - AST의 기반'],['../ak-architecture-core.html#autotoc_md457',1,'tworker 클래스 - 배치 작업의 기반']]],
+  ['기본_20구조_5',['기본 구조',['../an-testing-guide.html#autotoc_md506',1,'기본 구조'],['../an-testing-guide.html#autotoc_md514',1,'기본 구조'],['../an-testing-guide.html#autotoc_md524',1,'기본 구조'],['../ak-architecture-core.html#autotoc_md306',1,'AST 기본 구조']]],
+  ['기본_20규칙_6',['Doxygen 주석 기본 규칙',['../ad-convention-rules.html#autotoc_md155',1,'']]],
+  ['기본_20기능_7',['stela 언어의 기본 기능',['../aj-architecture-stela.html#autotoc_md283',1,'']]],
+  ['기본_20동작_8',['기본 동작',['../al-architecture-frontend.html#autotoc_md484',1,'']]],
+  ['기본_20복사_20생성자_9',['defaultCopyCtor 클래스 - 기본 복사 생성자',['../ak-architecture-core.html#autotoc_md343',1,'']]],
+  ['기본_20사용법_10',['기본 사용법',['../ai-architecture-memlite.html#autotoc_md249',1,'기본 사용법'],['../ag-architecture-clog.html#autotoc_md206',1,'로깅의 기본 사용법']]],
+  ['기본_20타입_20사용_11',['기본 타입 사용',['../ad-convention-rules.html#autotoc_md124',1,'']]],
+  ['기본_20타입_20식별_12',['기본 타입 식별',['../ah-architecture-meta.html#autotoc_md229',1,'']]],
+  ['기억하는_20multimap_13',['smultimap 클래스 - 삽입 순서를 기억하는 Multimap',['../ak-architecture-core.html#autotoc_md383',1,'']]],
+  ['기여_20가이드_14',['기여 가이드',['../ap-contribution-guide.html',1,'']]],
+  ['기존_20설계를_20망치지_20않으려면_15',['기존 설계를 망치지 않으려면',['../ap-contribution-guide.html#autotoc_md578',1,'']]],
+  ['기타_20산출물_16',['기타 산출물',['../ac-build-structure.html#autotoc_md80',1,'']]],
+  ['기타_20코딩_20관습_17',['기타 코딩 관습',['../ad-convention-rules.html#autotoc_md149',1,'']]]
 ];

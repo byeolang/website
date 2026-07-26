@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['설계_0',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]],
-  ['설명_1',['디렉토리 설명',['../ac-build-structure.html#autotoc_md53',1,'']]],
-  ['설정_20언어_2',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]]
+  ['산출물_0',['산출물',['../ac-build-structure.html#autotoc_md80',1,'기타 산출물'],['../ac-build-structure.html#autotoc_md64',1,'빌드 산출물'],['../ac-build-structure.html',1,'프로젝트 구조 및 빌드 산출물'],['../ac-build-structure.html#autotoc_md56',1,'bin/ - 빌드 산출물']]]
 ];
