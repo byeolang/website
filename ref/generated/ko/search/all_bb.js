@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['폴더_20구조_0',['배포 폴더 구조',['../am-deployment.html#autotoc_md497',1,'']]]
+  ['포인터_20참조_20정렬_3a_20왼쪽_20정렬_0',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md144',1,'']]],
+  ['포함_1',['포함',['../ad-convention-rules.html#autotoc_md175',1,'헤더 파일 포함'],['../an-testing-guide.html#autotoc_md534',1,'Negative 테스트 포함']]]
 ];
