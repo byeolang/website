@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['로깅_20시스템_0',['clog 모듈 - 로깅 시스템',['../ag-architecture-clog.html',1,'ae-architecture-overview']]]
+  ['메모리_20관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
 ];

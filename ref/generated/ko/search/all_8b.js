@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['의미적_20변경을_20반드시_20분리한다_0',['기계적 변경과 의미적 변경을 반드시 분리한다',['../ap-contribution-guide.html#autotoc_md586',1,'']]],
-  ['의존_20관계_1',['저장소 간 의존 관계',['../ae-architecture-overview.html#autotoc_md174',1,'']]],
-  ['의한_20패턴매칭_2',['정규식에 의한 패턴매칭',['../al-architecture-frontend.html#autotoc_md485',1,'']]]
+  ['자동_20생성_0',['메타 정보 자동 생성',['../ah-architecture-meta.html#autotoc_md238',1,'']]],
+  ['자동_20적용_1',['코딩 스타일은 clang-format으로 자동 적용',['../ad-convention-rules.html#autotoc_md110',1,'']]],
+  ['자명한_20코드에는_20주석_20금지_2',['자명한 코드에는 주석 금지',['../ad-convention-rules.html#autotoc_md167',1,'']]],
+  ['자주_20사용하는_20동사_3',['자주 사용하는 동사',['../ad-convention-rules.html#autotoc_md131',1,'']]],
+  ['자체에_20붙어있다_4',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]],
+  ['자체_20메모리_20풀_20사용_5',['자체 메모리 풀 사용',['../ai-architecture-memlite.html#autotoc_md255',1,'']]]
 ];

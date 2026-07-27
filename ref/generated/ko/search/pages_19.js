@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['실행_20구조_0',['배포와 실행 구조',['../am-deployment.html',1,'']]]
+  ['아키텍쳐와_20설계_0',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]]
 ];

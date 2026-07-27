@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['연결되는_20컨테이너_0',['tnchain 클래스 - Chain으로 연결되는 컨테이너',['../ak-architecture-core.html#autotoc_md375',1,'']]],
-  ['연결_1',['연결',['../am-deployment.html#autotoc_md501',1,'디버깅 연결'],['../ak-architecture-core.html#autotoc_md410',1,'frame 클래스 - Scope들의 동적 연결']]],
-  ['연산자_20표현식_2',['FBOExpr, FUOExpr 클래스 - 연산자 표현식',['../ak-architecture-core.html#autotoc_md353',1,'']]]
+  ['외부_20라이브러리_0',['external/ - 외부 라이브러리',['../ac-build-structure.html#autotoc_md62',1,'']]]
 ];

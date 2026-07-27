@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['마무리하며_0',['개요를 마무리하며',['../ak-architecture-core.html#autotoc_md302',1,'']]],
-  ['마무리_20하며_1',['core 모듈을 마무리 하며',['../ak-architecture-core.html#autotoc_md478',1,'']]]
+  ['명령줄_20플래그_20처리_0',['flag 클래스 - 명령줄 플래그 처리',['../al-architecture-frontend.html#autotoc_md483',1,'']]],
+  ['명명_20규칙_1',['파일 명명 규칙',['../ad-convention-rules.html#autotoc_md125',1,'']]],
+  ['명확한_20테스트_20이름_2',['명확한 테스트 이름',['../an-testing-guide.html#autotoc_md538',1,'']]]
 ];

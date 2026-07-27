@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md530',1,'']]],
-  ['상수_20네이밍_1',['로컬 상수 네이밍',['../ad-convention-rules.html#autotoc_md152',1,'']]]
+  ['속도_20개선_0',['속도 개선',['../ai-architecture-memlite.html#autotoc_md256',1,'']]]
 ];

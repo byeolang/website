@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['여행_20코스_20가이드_0',['여행 코스 가이드',['../aa-onboarding.html',1,'']]]
+  ['인터페이스_0',['frontend 모듈 - CLI 인터페이스',['../al-architecture-frontend.html',1,'ae-architecture-overview']]]
 ];

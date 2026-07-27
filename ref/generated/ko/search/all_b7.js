@@ -1,19 +1,16 @@
 var searchData=
 [
-  ['타겟_0',['빌드 타겟',['../ac-build-structure.html#autotoc_md85',1,'']]],
-  ['타겟_20비교표_1',['빌드 타겟 비교표',['../ac-build-structure.html#autotoc_md96',1,'']]],
-  ['타입을_20추가하고_20싶어요_2',['시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요',['../aa-onboarding.html#autotoc_md5',1,'']]],
-  ['타입의_20구체화_3',['generalizer 클래스 - Generic 타입의 구체화',['../ak-architecture-core.html#autotoc_md392',1,'']]],
-  ['타입의_20생성과_20관리_4',['genericOrigin 클래스 - Generic 타입의 생성과 관리',['../ak-architecture-core.html#autotoc_md390',1,'']]],
-  ['타입의_20원본_5',['origin 클래스 - 타입의 원본',['../ak-architecture-core.html#autotoc_md335',1,'']]],
-  ['타입_6',['타입',['../ah-architecture-meta.html#autotoc_md240',1,'adam - 최상위 타입'],['../aj-architecture-stela.html#autotoc_md287',1,'verStela 클래스 - 버전 타입']]],
-  ['타입_20사용_7',['기본 타입 사용',['../ad-convention-rules.html#autotoc_md124',1,'']]],
-  ['타입_20시스템_8',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]],
-  ['타입_20식별_9',['기본 타입 식별',['../ah-architecture-meta.html#autotoc_md229',1,'']]],
-  ['타입_20정보_20관리_10',['메타 타입 정보 관리',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
-  ['타입_20참조의_20진입점_11',['getGenericExpr 클래스 - Generic 타입 참조의 진입점',['../ak-architecture-core.html#autotoc_md388',1,'']]],
-  ['타입_20처리_12',['immutableTactic 클래스 - Immutable 타입 처리',['../ak-architecture-core.html#autotoc_md345',1,'']]],
-  ['타입_20체킹_13',['동적 타입 체킹',['../ai-architecture-memlite.html#autotoc_md254',1,'']]],
-  ['타입_20추론_14',['expander 클래스 - 사전 타입 추론',['../ak-architecture-core.html#autotoc_md453',1,'']]],
-  ['타입_20확장하기_15',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md242',1,'']]]
+  ['파라메터_20정의_0',['param 클래스 - 파라메터 정의',['../ak-architecture-core.html#autotoc_md323',1,'']]],
+  ['파서_20구조_1',['stela 파서 구조',['../aj-architecture-stela.html#autotoc_md289',1,'']]],
+  ['파싱의_20진입점_2',['parser 클래스 - 파싱의 진입점',['../ak-architecture-core.html#autotoc_md446',1,'']]],
+  ['파싱_3',['파싱',['../ak-architecture-core.html#autotoc_md444',1,'']]],
+  ['파싱_20결과_20검증_4',['파싱 결과 검증',['../an-testing-guide.html#autotoc_md516',1,'']]],
+  ['파싱_20진입점_5',['stelaParser 클래스 - 파싱 진입점',['../aj-architecture-stela.html#autotoc_md290',1,'']]],
+  ['파일_6',['파일',['../ac-build-structure.html#autotoc_md65',1,'실행 파일'],['../ac-build-structure.html#autotoc_md99',1,'추적되는 파일'],['../ac-build-structure.html#autotoc_md101',1,'추적되지 않는 파일'],['../an-testing-guide.html#autotoc_md525',1,'테스트 데이터 파일'],['../ac-build-structure.html#autotoc_md81',1,'pod/ - 팩 파일']]],
+  ['파일_20명명_20규칙_7',['파일 명명 규칙',['../ad-convention-rules.html#autotoc_md125',1,'']]],
+  ['파일_20시스템_20fsystem_20클래스_8',['파일 시스템 - fsystem 클래스',['../af-architecture-indep.html#autotoc_md193',1,'']]],
+  ['파일_20위치와_20네이밍_9',['파일 위치와 네이밍',['../an-testing-guide.html#autotoc_md505',1,'파일 위치와 네이밍'],['../an-testing-guide.html#autotoc_md513',1,'파일 위치와 네이밍'],['../an-testing-guide.html#autotoc_md523',1,'파일 위치와 네이밍']]],
+  ['파일_20주석_10',['파일 주석',['../ad-convention-rules.html#autotoc_md158',1,'']]],
+  ['파일_20포함_11',['헤더 파일 포함',['../ad-convention-rules.html#autotoc_md169',1,'']]],
+  ['파일_20cpp_20규칙_12',['구현 파일 (.cpp) 규칙',['../ad-convention-rules.html#autotoc_md146',1,'']]]
 ];

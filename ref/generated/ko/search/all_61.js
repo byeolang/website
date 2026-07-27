@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['블록문_3a_20중괄호_20생략_0',['1줄 블록문: 중괄호 생략',['../ad-convention-rules.html#autotoc_md142',1,'']]],
-  ['블록은_20인스턴스_20자체에_20붙어있다_1',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md252',1,'']]],
-  ['블록_20사용_2',['code 블록 사용',['../ad-convention-rules.html#autotoc_md164',1,'']]],
-  ['블록_20종료_20키워드_3',['retStateExpr 클래스 - 블록 종료 키워드',['../ak-architecture-core.html#autotoc_md367',1,'']]],
-  ['블록_20표현식_4',['blockExpr 클래스 - 블록 표현식',['../ak-architecture-core.html#autotoc_md357',1,'']]],
-  ['블록_3a_20한_20줄_20허용_5',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]]
+  ['상속_0',['올바른 베이스 클래스 상속',['../an-testing-guide.html#autotoc_md530',1,'']]],
+  ['상수_20네이밍_1',['로컬 상수 네이밍',['../ad-convention-rules.html#autotoc_md152',1,'']]]
 ];

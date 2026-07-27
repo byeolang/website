@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['정규식에_20의한_20패턴매칭_0',['정규식에 의한 패턴매칭',['../al-architecture-frontend.html#autotoc_md485',1,'']]],
-  ['정렬_1',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]],
-  ['정렬_3a_20왼쪽_20정렬_2',['포인터/참조 정렬: 왼쪽 정렬',['../ad-convention-rules.html#autotoc_md138',1,'']]],
-  ['정리하기_3',['정리하기',['../ah-architecture-meta.html#autotoc_md244',1,'정리하기'],['../ai-architecture-memlite.html#autotoc_md279',1,'정리하기'],['../aj-architecture-stela.html#autotoc_md298',1,'정리하기']]],
-  ['정리_4',['정리',['../an-testing-guide.html#autotoc_md540',1,'리소스 정리'],['../ak-architecture-core.html#autotoc_md476',1,'에러 처리흐름 정리'],['../ag-architecture-clog.html#autotoc_md225',1,'정리']]],
-  ['정보가_20어떻게_20생성되나_5',['메타 정보가 어떻게 생성되나',['../ah-architecture-meta.html#autotoc_md237',1,'']]],
-  ['정보의_20생성과_20관리_6',['메타 정보의 생성과 관리',['../ah-architecture-meta.html#autotoc_md236',1,'']]],
-  ['정보_7',['정보',['../ah-architecture-meta.html#autotoc_md230',1,'클래스 계층 관련 정보'],['../ak-architecture-core.html#autotoc_md319',1,'src, srcFile 클래스 - 소스 위치 정보']]],
-  ['정보_20관리_8',['메타 타입 정보 관리',['../ah-architecture-meta.html#autotoc_md232',1,'']]],
-  ['정보_20자동_20생성_9',['메타 정보 자동 생성',['../ah-architecture-meta.html#autotoc_md238',1,'']]],
-  ['정보_20제공_10',['추가 정보 제공',['../ai-architecture-memlite.html#autotoc_md257',1,'']]],
-  ['정의_11',['정의',['../ak-architecture-core.html#autotoc_md361',1,'defNestedFuncExpr 클래스 - 중첩 함수 정의'],['../ak-architecture-core.html#autotoc_md323',1,'param 클래스 - 파라메터 정의']]]
+  ['줄에_20배치_0',['중괄호 스타일: 같은 줄에 배치',['../ad-convention-rules.html#autotoc_md137',1,'']]],
+  ['줄_20길이와_20들여쓰기_1',['줄 길이와 들여쓰기',['../ad-convention-rules.html#autotoc_md134',1,'']]],
+  ['줄_20길이_20제한_2',['줄 길이 제한',['../ad-convention-rules.html#autotoc_md135',1,'']]],
+  ['줄_20허용_3',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]]
 ];

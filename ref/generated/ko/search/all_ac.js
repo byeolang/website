@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['최상위_20타입_0',['adam - 최상위 타입',['../ah-architecture-meta.html#autotoc_md240',1,'']]],
-  ['최소_20할당_20단위_1',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md262',1,'']]]
+  ['크기별_20메모리_20관리_0',['pool - 크기별 메모리 관리',['../ai-architecture-memlite.html#autotoc_md264',1,'']]]
 ];

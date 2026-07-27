@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['프로젝트_20구조_20및_20빌드_20산출물_0',['프로젝트 구조 및 빌드 산출물',['../ac-build-structure.html',1,'']]],
-  ['프로젝트_20디렉토리_20구조_1',['프로젝트 디렉토리 구조',['../ac-build-structure.html#autotoc_md51',1,'']]]
+  ['핵심_0',['핵심',['../al-architecture-frontend.html#autotoc_md481',1,'cli 클래스 - Frontend의 핵심'],['../ak-architecture-core.html',1,'core 모듈 - 언어 구현의 핵심'],['../ak-architecture-core.html#autotoc_md438',1,'visitor 클래스 - AST 순회의 핵심']]],
+  ['핵심_20알고리즘_1',['핵심 알고리즘',['../ag-architecture-clog.html#autotoc_md211',1,'']]],
+  ['핵심_20철학을_20요약하면_2',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md108',1,'']]]
 ];

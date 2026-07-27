@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['코딩_20규칙_0',['Byeol 코딩 규칙',['../ad-convention-rules.html',1,'']]],
-  ['코스_20가이드_1',['여행 코스 가이드',['../aa-onboarding.html',1,'']]]
+  ['타입_20시스템_0',['meta 모듈 - 런타임 타입 시스템',['../ah-architecture-meta.html',1,'ae-architecture-overview']]]
 ];

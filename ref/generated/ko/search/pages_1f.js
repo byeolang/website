@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['작성_20가이드_0',['테스트 케이스 작성 가이드',['../an-testing-guide.html',1,'']]],
-  ['작성_20규칙_1',['문서 작성 규칙',['../ao-document-convention.html',1,'']]]
+  ['추상화_20계층_0',['indep 모듈 - 플랫폼 추상화 계층',['../af-architecture-indep.html',1,'ae-architecture-overview']]]
 ];

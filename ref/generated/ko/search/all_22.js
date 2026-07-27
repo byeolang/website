@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['것과_20사람이_20봐야_20하는_20것_0',['CI가 잡는 것과 사람이 봐야 하는 것',['../ap-contribution-guide.html#autotoc_md576',1,'']]],
-  ['것_1',['CI가 잡는 것과 사람이 봐야 하는 것',['../ap-contribution-guide.html#autotoc_md576',1,'']]]
+  ['결과물_0',['pod 클래스 - pod의 결과물',['../ak-architecture-core.html#autotoc_md422',1,'']]],
+  ['결과_20검증_1',['파싱 결과 검증',['../an-testing-guide.html#autotoc_md516',1,'']]]
 ];
