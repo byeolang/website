@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['코딩_20규칙_0',['Byeol 코딩 규칙',['../ad-convention-rules.html',1,'']]],
-  ['코스_20가이드_1',['여행 코스 가이드',['../aa-onboarding.html',1,'']]]
+  ['커스텀_20메모리_20관리_0',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
 ];
