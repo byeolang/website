@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['설계_0',['아키텍쳐와 설계',['../ae-architecture-overview.html',1,'']]],
-  ['설정_20언어_1',['stela 모듈 - 경량 설정 언어',['../aj-architecture-stela.html',1,'ae-architecture-overview']]]
+  ['시스템_0',['시스템',['../ag-architecture-clog.html',1,'clog 모듈 - 로깅 시스템'],['../ah-architecture-meta.html',1,'meta 모듈 - 런타임 타입 시스템']]]
 ];

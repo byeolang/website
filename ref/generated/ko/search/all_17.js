@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['wasm_0',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md92',1,'']]],
-  ['watcher_20클래스_1',['watcher 클래스',['../ai-architecture-memlite.html#autotoc_md269',1,'']]],
-  ['webassembly_20빌드_20wasm_2',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md92',1,'']]],
-  ['when_20매크로_3',['WHEN 매크로',['../af-architecture-indep.html#autotoc_md183',1,'']]],
+  ['wasm_0',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md98',1,'']]],
+  ['watcher_20클래스_1',['watcher 클래스',['../ai-architecture-memlite.html#autotoc_md275',1,'']]],
+  ['webassembly_20빌드_20wasm_2',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md98',1,'']]],
+  ['when_20매크로_3',['WHEN 매크로',['../af-architecture-indep.html#autotoc_md189',1,'']]],
   ['when_20macros_4',['Verification Using WHEN Macros',['../classby_1_1verifier.html#when_macro_verification',1,'']]],
   ['when_2ehpp_5',['when.hpp',['../when_8hpp.html',1,'']]],
   ['whileexpr_6',['whileExpr',['../classby_1_1while_expr.html',1,'by']]],
@@ -12,7 +12,7 @@ var searchData=
   ['windows_9',['Windows',['../ab-dev-env.html#autotoc_md48',1,'']]],
   ['windows_20visual_20studio_10',['Windows (Visual Studio)',['../ab-dev-env.html#autotoc_md22',1,'']]],
   ['windows_20wsl_11',['Windows WSL',['../ab-dev-env.html#autotoc_md29',1,'']]],
-  ['with_20debug_20info_20빌드_20reldbg_12',['Release with Debug Info 빌드 (reldbg)',['../ac-build-structure.html#autotoc_md90',1,'']]],
+  ['with_20debug_20info_20빌드_20reldbg_12',['Release with Debug Info 빌드 (reldbg)',['../ac-build-structure.html#autotoc_md96',1,'']]],
   ['with_20function_20calls_13',['Frames are Created with Function Calls',['../classby_1_1frame.html#frame_creation_with_function_call',1,'']]],
   ['with_20starter_14',['Usage with starter',['../classby_1_1interpreter.html#usage_with_starter',1,'']]],
   ['with_20thread_15',['Relationship with thread',['../classby_1_1frames.html#relationship_with_thread',1,'']]],
@@ -22,6 +22,6 @@ var searchData=
   ['workeradapter_19',['workerAdapter',['../structby_1_1worker_adapter.html',1,'by']]],
   ['workeradapter_3c_20void_2c_20t_20_3e_20',['workerAdapter&lt; void, T &gt;',['../structby_1_1worker_adapter_3_01void_00_01_t_01_4.html',1,'by']]],
   ['wrap_21',['wrap',['../structby_1_1smultimap_1_1wrap.html',1,'by::smultimap&lt; K, V &gt;::wrap'],['../classby_1_1tnchain.html#a153962bc5df4f3de4f39f991b5e20ef5',1,'by::tnchain::wrap()']]],
-  ['wrap_22',['wrap',['../ag-architecture-clog.html#autotoc_md213',1,'']]],
+  ['wrap_22',['wrap',['../ag-architecture-clog.html#autotoc_md219',1,'']]],
   ['wsl_23',['Windows WSL',['../ab-dev-env.html#autotoc_md29',1,'']]]
 ];

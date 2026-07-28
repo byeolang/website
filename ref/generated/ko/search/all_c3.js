@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['할당_20단위_0',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md262',1,'']]],
-  ['할당_20표현식_1',['assignExpr 클래스 - 할당 표현식',['../ak-architecture-core.html#autotoc_md355',1,'']]]
+  ['한_20가지만_20테스트_0',['한 가지만 테스트',['../an-testing-guide.html#autotoc_md532',1,'']]],
+  ['한_20줄_20허용_1',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md147',1,'']]]
 ];
