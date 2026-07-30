@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['속도_20개선_0',['속도 개선',['../ai-architecture-memlite.html#autotoc_md266',1,'']]]
+  ['속도_20개선_0',['속도 개선',['../ai-architecture-memlite.html#autotoc_md265',1,'']]]
 ];

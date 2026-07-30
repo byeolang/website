@@ -311,58 +311,46 @@ pin이 걸린 위치</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
 태그 형식</h2>
 <p>모든 저장소가 SemVer 형식(<code>vMAJOR.MINOR.PATCH</code>)을 씁니다. 예: <code>v0.1.7</code>. 판정 기준은 평소의 SemVer 그대로입니다. API를 깨지 않으면 <b>patch</b>, 하위 호환되는 새 기능이면 <b>minor</b>, 하위 호환을 깨는 변경이면 <b>major</b>입니다.</p>
-<h2><a class="anchor" id="autotoc_md93"></a>
-릴리스 절차</h2>
-<p>한 저장소에 변경이 쌓여 릴리스할 준비가 되면 아래 순서를 따릅니다.</p>
-<p>먼저 로컬에서 테스트가 통과하는지 확인합니다.</p>
-<div class="fragment"><div class="line">@style: language-txt verified</div>
-<div class="line">./build/builder.py test</div>
-</div><!-- fragment --><p>그다음 새 태그를 붙여 push합니다.</p>
-<div class="fragment"><div class="line">@style: language-txt verified</div>
-<div class="line">git tag vX.Y.Z</div>
-<div class="line">git push origin vX.Y.Z</div>
-</div><!-- fragment --><p>이 태그가 원격에 올라간 시점부터 상위 저장소가 pin을 이 태그로 올릴 수 있습니다. 상위 저장소에서는 위 표의 <code>GIT_TAG</code> 줄을 새 태그 이름으로 바꾸는 PR을 열고, 리뷰와 CI 통과를 거쳐 머지합니다. 커밋 메시지는 <code>chore: bump &lt;이름&gt; to vX.Y.Z</code> 형태를 씁니다.</p>
-<p>변경이 여러 저장소에 걸쳐 있으면, 항상 가장 아래층부터 이 절차를 반복합니다. 예를 들어 <code>indep</code>을 손봤다면 먼저 <code>indep</code>에 태그를 붙이고, 그다음 <code>stela</code>와 <code>launcher</code>가 각자 <code>GIT_TAG</code>를 갱신하고 태그를 붙이고, 마지막으로 <code>byeol</code>이 갱신됩니다. 이 순서는 저장소 의존 그래프의 역순입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md94"></a>
 빌드 타겟</h1>
 <p><code>builder.py</code>는 여러 빌드 타겟을 지원합니다. 각 타겟은 최적화 수준과 디버깅 정보 포함 여부가 다릅니다.</p>
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="autotoc_md95"></a>
 Debug 빌드 (dbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py dbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 없음(<code>-O0</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>), <b>특수 플래그</b>로는 <code>-DBY_DEBUG</code>, <code>-D_GLIBCXX_DEBUG</code>를 사용합니다. 개발 중 디버깅과 상세한 에러 메시지 확인을 위해 사용되죠.</p>
 <p>실행 속도가 느리고 바이너리 크기가 크지만, 디버거(gdb, lldb)로 편리하게 디버깅할 수 있습니다. 추가 런타임 검증이 활성화됩니다(STL 디버그 모드).</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md97"></a>
 Release 빌드 (rel)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py rel</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 배포용 빌드로 사용됩니다.</p>
 <p>실행 속도가 빠르고 바이너리 크기가 작지만, 디버깅이 어렵습니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 Release with Debug Info 빌드 (reldbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py reldbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>)합니다. Release 빌드에서만 발생하는 버그를 디버깅할 때 사용됩니다.</p>
 <p>Release 수준의 최적화가 적용되어 디버거 사용이 가능하지만, 최적화로 인해 일부 변수는 추적할 수 없습니다. 바이너리 크기는 Debug보다는 작지만 Release보다는 큽니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md101"></a>
 WebAssembly 빌드 (wasm)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py wasm</div>
 </div><!-- fragment --><p><b>최적화</b>는 웹 환경 최적화(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 웹 브라우저에서 Byeol을 실행하기 위해 사용됩니다.</p>
 <p>산출물로는 <code>.wasm</code> 파일(WebAssembly 바이너리)과 <code>.js</code> 파일(WebAssembly를 로드하고 실행하는 JavaScript 래퍼)이 생성됩니다. Emscripten 컴파일러를 사용하며, 동적 라이브러리 대신 정적 라이브러리(<code>.a</code>)를 생성합니다. <code>test</code> 모듈과 <code>bundle</code> 모듈은 빌드에서 제외됩니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md104"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Coverage 빌드 (cov)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py cov</div>
 </div><!-- fragment --><p><b>최적화</b>는 Debug 수준, <b>디버깅 심볼</b>은 포함입니다. 코드 커버리지 측정을 위해 사용됩니다.</p>
 <p><b>특수 플래그</b>로는 Clang의 경우 <code>-fprofile-instr-generate -fcoverage-mapping</code>을, GCC의 경우 <code>-fprofile-arcs -ftest-coverage</code>를 사용합니다. Linux와 macOS만 지원합니다. 테스트 실행 후 커버리지 리포트를 생성하며, <code>.profraw</code> 또는 <code>.gcda</code> 파일이 생성됩니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md106"></a>
+<h2><a class="anchor" id="autotoc_md105"></a>
 빌드 타겟 비교표</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -379,17 +367,17 @@ Coverage 빌드 (cov)</h2>
 <td class="markdownTableBodyNone">cov   </td><td class="markdownTableBodyNone">없음 (-O0)   </td><td class="markdownTableBodyNone">✓   </td><td class="markdownTableBodyNone">큼   </td><td class="markdownTableBodyNone">느림   </td><td class="markdownTableBodyNone">커버리지 측정   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md108"></a>
+<h1><a class="anchor" id="autotoc_md107"></a>
 Git Repository 구조</h1>
-<h2><a class="anchor" id="autotoc_md109"></a>
+<h2><a class="anchor" id="autotoc_md108"></a>
 추적되는 파일</h2>
 <p>Git으로 버전 관리되는 주요 디렉토리와 파일은 다음과 같습니다. <code>module/</code>은 모든 소스 코드를, <code>build/</code>는 빌드 스크립트 및 설정 파일(<code>builder.py</code>, <code>CMakeLists.txt</code>, <code>doxygen/</code> 문서 생성 설정)을 포함합니다. <code>doc/</code>은 문서 소스(Markdown)를, <code>.clang-format</code>은 코드 포맷팅 규칙을, <code>.clang-tidy</code>는 정적 분석 규칙을, <code>.gitignore</code>는 Git 무시 패턴을 정의합니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md111"></a>
+<h2><a class="anchor" id="autotoc_md110"></a>
 추적되지 않는 파일</h2>
 <p><code>.gitignore</code>에 의해 무시되는 디렉토리(자동 생성)는 다음과 같습니다. <code>bin/</code>은 빌드 산출물을, <code>build/module/</code>은 CMake 중간 산출물을, <code>build/.cmake/</code>는 CMake 캐시를, <code>external/</code>은 외부 라이브러리를 포함합니다. 또한 <code>*.o</code>, <code>*.a</code>, <code>*.so</code>, <code>*.dylib</code>, <code>*.dll</code>과 같은 컴파일 산출물과 <code>*.profraw</code>, <code>*.gcda</code>, <code>*.gcno</code>와 같은 커버리지 데이터도 무시됩니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md113"></a>
+<h1><a class="anchor" id="autotoc_md112"></a>
 참고 사항</h1>
 <p><b><code>bin/</code> 디렉토리는 수동으로 수정하지 마세요.</b> 빌드 과정에서 자동으로 생성되며, <code>builder.py clean</code> 실행 시 모두 삭제됩니다.</p>
 <p><b><code>external/</code> 디렉토리도 수동으로 수정하지 마세요.</b> CMake가 자동으로 관리합니다. <b>단, Google Test 오류 발생 시는 예외입니다.</b> 빌드 중 Google Test 관련 오류가 발생하거나 파일이 없다는 메시지가 나타나면, <code>external/googletest/</code> 디렉토리를 수동으로 삭제한 후 다시 빌드하세요. <code>builder.py clean</code> 명령은 <code>external/</code> 디렉토리를 삭제하지 않으므로 수동 삭제가 필요합니다.</p>
