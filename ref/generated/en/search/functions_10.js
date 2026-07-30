@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uselater_0',['useLater',['../classby_1_1smart_dedent.html#aee0fd59da69771ea37b378c814278248',1,'by::smartDedent']]]
+  ['tstr_0',['tstr',['../classby_1_1tstr.html#a756225b757274b181c7dbfef0a1e2614',1,'by::tstr']]]
 ];
