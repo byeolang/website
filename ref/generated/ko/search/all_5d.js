@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['빌더_20패턴_0',['byeolIntegTest의 빌더 패턴',['../an-testing-guide.html#autotoc_md510',1,'']]],
-  ['빌드하기_1',['빌드하기',['../ab-dev-env.html#autotoc_md20',1,'']]],
-  ['빌드_2',['빌드',['../ab-dev-env.html#autotoc_md17',1,'']]],
-  ['빌드_20산출물_3',['빌드 산출물',['../ac-build-structure.html#autotoc_md64',1,'빌드 산출물'],['../ac-build-structure.html',1,'프로젝트 구조 및 빌드 산출물'],['../ac-build-structure.html#autotoc_md56',1,'bin/ - 빌드 산출물']]],
-  ['빌드_20시스템_4',['build/ - 빌드 시스템',['../ac-build-structure.html#autotoc_md58',1,'']]],
-  ['빌드_20이름과_20배포_20이름_5',['빌드 이름과 배포 이름',['../ac-build-structure.html#autotoc_md86',1,'']]],
-  ['빌드_20타겟_6',['빌드 타겟',['../ac-build-structure.html#autotoc_md91',1,'']]],
-  ['빌드_20타겟_20비교표_7',['빌드 타겟 비교표',['../ac-build-structure.html#autotoc_md102',1,'']]],
-  ['빌드_20cov_8',['Coverage 빌드 (cov)',['../ac-build-structure.html#autotoc_md100',1,'']]],
-  ['빌드_20dbg_9',['Debug 빌드 (dbg)',['../ac-build-structure.html#autotoc_md92',1,'']]],
-  ['빌드_20rel_10',['Release 빌드 (rel)',['../ac-build-structure.html#autotoc_md94',1,'']]],
-  ['빌드_20reldbg_11',['Release with Debug Info 빌드 (reldbg)',['../ac-build-structure.html#autotoc_md96',1,'']]],
-  ['빌드_20wasm_12',['WebAssembly 빌드 (wasm)',['../ac-build-structure.html#autotoc_md98',1,'']]]
+  ['블록문_3a_20중괄호_20생략_0',['1줄 블록문: 중괄호 생략',['../ad-convention-rules.html#autotoc_md151',1,'']]],
+  ['블록은_20인스턴스_20자체에_20붙어있다_1',['reference counting 블록은 인스턴스 자체에 붙어있다',['../ai-architecture-memlite.html#autotoc_md261',1,'']]],
+  ['블록_20사용_2',['code 블록 사용',['../ad-convention-rules.html#autotoc_md173',1,'']]],
+  ['블록_20종료_20키워드_3',['retStateExpr 클래스 - 블록 종료 키워드',['../ak-architecture-core.html#autotoc_md376',1,'']]],
+  ['블록_20표현식_4',['blockExpr 클래스 - 블록 표현식',['../ak-architecture-core.html#autotoc_md366',1,'']]],
+  ['블록_3a_20한_20줄_20허용_5',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md150',1,'']]]
 ];

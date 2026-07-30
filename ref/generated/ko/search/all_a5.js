@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['최상위_20타입_0',['adam - 최상위 타입',['../ah-architecture-meta.html#autotoc_md246',1,'']]],
-  ['최소_20할당_20단위_1',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md268',1,'']]]
+  ['철학을_20요약하면_0',['Byeol 언어의 핵심 철학을 요약하면',['../ad-convention-rules.html#autotoc_md117',1,'']]],
+  ['철학_1',['철학',['../ad-convention-rules.html#autotoc_md135',1,'네이밍 철학'],['../ad-convention-rules.html#autotoc_md118',1,'C++ 코드에 반영된 철학']]]
 ];

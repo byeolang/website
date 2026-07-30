@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['단락_0',['예제 2: 복잡한 클래스 - 여러 단락',['../ad-convention-rules.html#autotoc_md168',1,'']]],
-  ['단어_20선호_1',['간단하고 직관적인 단어 선호',['../ad-convention-rules.html#autotoc_md136',1,'']]],
-  ['단위_2',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md268',1,'']]],
-  ['단위_20테스트_3',['Unit Test (단위 테스트)',['../an-testing-guide.html#autotoc_md499',1,'']]]
+  ['다른가_0',['왜 일반적인 C++ 컨벤션과 다른가?',['../ad-convention-rules.html#autotoc_md116',1,'']]],
+  ['다른_20코드_20참조_1',['ref로 다른 코드 참조',['../ad-convention-rules.html#autotoc_md174',1,'']]],
+  ['다중_20chunk_20관리_2',['chunks - 다중 chunk 관리',['../ai-architecture-memlite.html#autotoc_md272',1,'']]],
+  ['다형성_20로깅_3',['richLog - 다형성 로깅',['../ag-architecture-clog.html#autotoc_md219',1,'']]]
 ];

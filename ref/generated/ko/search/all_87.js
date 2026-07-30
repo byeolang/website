@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['익명_20네임스페이스_0',['익명 네임스페이스',['../ad-convention-rules.html#autotoc_md154',1,'']]]
+  ['의존_20관계_0',['저장소 간 의존 관계',['../ae-architecture-overview.html#autotoc_md183',1,'']]],
+  ['의한_20패턴매칭_1',['정규식에 의한 패턴매칭',['../al-architecture-frontend.html#autotoc_md494',1,'']]]
 ];

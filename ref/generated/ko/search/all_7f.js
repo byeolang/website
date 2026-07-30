@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['외부_20라이브러리_0',['external/ - 외부 라이브러리',['../ac-build-structure.html#autotoc_md62',1,'']]]
+  ['완료_20코드_20표시_3a_20verified_0',['검증 완료 코드 표시: verified',['../ao-document-convention.html#autotoc_md568',1,'']]]
 ];

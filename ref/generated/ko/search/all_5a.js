@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['브리징_0',['Native-Script 브리징',['../ak-architecture-core.html#autotoc_md400',1,'']]]
+  ['불필요하게_20긴_20예제_0',['❌ 불필요하게 긴 예제',['../ad-convention-rules.html#autotoc_md137',1,'']]]
 ];

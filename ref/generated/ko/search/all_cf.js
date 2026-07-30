@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['허용_0',['짧은 함수/블록: 한 줄 허용',['../ad-convention-rules.html#autotoc_md141',1,'']]]
+  ['흐름의_20관리자_0',['thread 클래스 - 실행 흐름의 관리자',['../ak-architecture-core.html#autotoc_md424',1,'']]],
+  ['흐름_1',['흐름',['../ac-build-structure.html#autotoc_md88',1,'실행 흐름'],['../ak-architecture-core.html#autotoc_md309',1,'주요 흐름']]]
 ];

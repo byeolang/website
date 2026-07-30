@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['확인_0',['확인',['../ab-dev-env.html#autotoc_md24',1,'바이너리 확인'],['../an-testing-guide.html#autotoc_md541',1,'에러 리포트 확인']]],
-  ['확장하기_1',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md248',1,'']]],
-  ['확장_2',['richLog 확장',['../ag-architecture-clog.html#autotoc_md220',1,'']]]
+  ['헤더_20파일_20포함_0',['헤더 파일 포함',['../ad-convention-rules.html#autotoc_md178',1,'']]]
 ];

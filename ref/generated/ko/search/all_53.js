@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['변수_3a_20camelcase_0',['클래스와 변수: camelCase',['../ad-convention-rules.html#autotoc_md119',1,'']]]
+  ['범용_20바인더_20제공_0',['범용 바인더 제공',['../ai-architecture-memlite.html#autotoc_md262',1,'']]],
+  ['범위형_20컨테이너_1',['nseq 클래스 - 범위형 컨테이너',['../ak-architecture-core.html#autotoc_md390',1,'']]]
 ];

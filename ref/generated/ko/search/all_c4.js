@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['할당_20단위_0',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md268',1,'']]],
-  ['할당_20표현식_1',['assignExpr 클래스 - 할당 표현식',['../ak-architecture-core.html#autotoc_md361',1,'']]]
+  ['하며_0',['core 모듈을 마무리 하며',['../ak-architecture-core.html#autotoc_md487',1,'']]]
 ];

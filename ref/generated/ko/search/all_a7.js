@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['커스터마이징_0',['문서의 doxygen 커스터마이징',['../ab-dev-env.html#autotoc_md40',1,'']]],
-  ['커스텀_20메모리_20관리_1',['memlite 모듈 - 커스텀 메모리 관리',['../ai-architecture-memlite.html',1,'ae-architecture-overview']]]
+  ['최상위_20타입_0',['adam - 최상위 타입',['../ah-architecture-meta.html#autotoc_md249',1,'']]],
+  ['최소_20할당_20단위_1',['chunk - 최소 할당 단위',['../ai-architecture-memlite.html#autotoc_md271',1,'']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['매칭_0',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md492',1,'']]],
-  ['매크로_1',['매크로',['../an-testing-guide.html#autotoc_md503',1,'Google Test 검증 매크로'],['../ag-architecture-clog.html#autotoc_md214',1,'Scope 로깅 매크로'],['../af-architecture-indep.html#autotoc_md189',1,'WHEN 매크로']]],
-  ['매크로_20사용_2',['TO 매크로 사용',['../ad-convention-rules.html#autotoc_md151',1,'']]],
-  ['매크로_3a_20upper_5fsnake_5fcase_3',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md122',1,'']]]
+  ['릴리스_0',['저장소간 릴리스',['../ac-build-structure.html#ac-build-structure-release',1,'']]]
 ];

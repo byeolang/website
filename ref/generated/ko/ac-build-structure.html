@@ -284,45 +284,73 @@ testdata/ - 테스트 데이터</h2>
 <p>파이프를 고른 이유는 앞서 설명한 프로세스 모델과 자연스럽게 맞물리기 때문입니다. launcher가 이미 표준 입출력을 인터프리터에게 물려주고 있으므로, IDE는 추가 설정 없이 인터프리터와 직접 대화할 수 있습니다. 소켓을 쓰면 포트를 협상하고, 충돌을 처리하고, 보안 바인딩을 신경 써야 하는데 그 고민을 통째로 피할 수 있죠. 대부분의 DAP 어댑터가 표준 입출력을 기본으로 쓰는 것도 같은 이유입니다.</p>
 <p>IDE는 어느 버전의 인터프리터가 실제로 실행되는지 알 필요가 없습니다. IDE는 launcher만 바라보고, 버전 해소는 launcher가 책임집니다. 이것이 launcher를 버전 스위처로 둔 설계가 디버깅까지 일관되게 이어지는 지점입니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md91"></a>
+<h1><a class="anchor" id="ac-build-structure-release"></a>
+저장소간 릴리스</h1>
+<p>byeol은 6개의 저장소로 나뉘어 있고, 상위 저장소는 하위 저장소를 <b>태그로 pin</b>해서 가져옵니다. 새 기능이나 수정이 하위 저장소에 담긴다면, 상위 저장소가 그 변경을 실제로 쓰기 위해서는 두 단계가 필요합니다. 하위 저장소가 먼저 태그를 붙여 릴리스하고, 그다음 상위 저장소가 pin을 그 태그로 갱신해야 합니다. 이 순서가 뒤집힐 수 없는 이유는 단순합니다. pin이 태그를 가리키고 있으므로, 태그가 존재하기 전까지 상위 저장소는 그 변경을 참조할 방법이 없습니다.</p>
+<h2><a class="anchor" id="autotoc_md91"></a>
+pin이 걸린 위치</h2>
+<p>각 pin은 상위 저장소의 CMake 파일 안에 <code>FetchContent_Declare(...)</code> 블록의 <code>GIT_TAG</code> 줄로 존재합니다. 갱신은 그 줄의 태그 이름을 바꾸는 커밋 하나면 됩니다.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">상위 → 하위   </th><th class="markdownTableHeadNone">파일    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">byeol → stela   </td><td class="markdownTableBodyNone"><code>module/core/CMakeLists.txt</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">byeol → flagStacker   </td><td class="markdownTableBodyNone"><code>module/frontend/CMakeLists.txt</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">launcher → indep   </td><td class="markdownTableBodyNone"><code>module/launcher/CMakeLists.txt</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">launcher → flagStacker   </td><td class="markdownTableBodyNone"><code>module/launcher/CMakeLists.txt</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">stela → indep   </td><td class="markdownTableBodyNone"><code>module/clog/CMakeLists.txt</code>   </td></tr>
+</table>
+<p><code>build-common</code>은 예외입니다. <code>FetchContent</code>가 아니라 <b>git subtree</b>로 byeol 저장소의 <code>external/build-common/</code> 아래에 병합되어 있습니다. 그래서 태그로 pin되지 않고, 갱신할 때는 subtree pull을 씁니다.</p>
+<div class="fragment"><div class="line">@style: language-txt verified</div>
+<div class="line">git subtree pull --prefix=external/build-common \</div>
+<div class="line">    https://github.com/byeolang/build-common main --squash</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
+태그 형식</h2>
+<p>모든 저장소가 SemVer 형식(<code>vMAJOR.MINOR.PATCH</code>)을 씁니다. 예: <code>v0.1.7</code>. 판정 기준은 평소의 SemVer 그대로입니다. API를 깨지 않으면 <b>patch</b>, 하위 호환되는 새 기능이면 <b>minor</b>, 하위 호환을 깨는 변경이면 <b>major</b>입니다.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md94"></a>
 빌드 타겟</h1>
 <p><code>builder.py</code>는 여러 빌드 타겟을 지원합니다. 각 타겟은 최적화 수준과 디버깅 정보 포함 여부가 다릅니다.</p>
-<h2><a class="anchor" id="autotoc_md92"></a>
+<h2><a class="anchor" id="autotoc_md95"></a>
 Debug 빌드 (dbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py dbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 없음(<code>-O0</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>), <b>특수 플래그</b>로는 <code>-DBY_DEBUG</code>, <code>-D_GLIBCXX_DEBUG</code>를 사용합니다. 개발 중 디버깅과 상세한 에러 메시지 확인을 위해 사용되죠.</p>
 <p>실행 속도가 느리고 바이너리 크기가 크지만, 디버거(gdb, lldb)로 편리하게 디버깅할 수 있습니다. 추가 런타임 검증이 활성화됩니다(STL 디버그 모드).</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md94"></a>
+<h2><a class="anchor" id="autotoc_md97"></a>
 Release 빌드 (rel)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py rel</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 배포용 빌드로 사용됩니다.</p>
 <p>실행 속도가 빠르고 바이너리 크기가 작지만, 디버깅이 어렵습니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 Release with Debug Info 빌드 (reldbg)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py reldbg</div>
 </div><!-- fragment --><p><b>최적화</b>는 최대(<code>-O2</code>), <b>디버깅 심볼</b>은 포함(<code>-g</code>)합니다. Release 빌드에서만 발생하는 버그를 디버깅할 때 사용됩니다.</p>
 <p>Release 수준의 최적화가 적용되어 디버거 사용이 가능하지만, 최적화로 인해 일부 변수는 추적할 수 없습니다. 바이너리 크기는 Debug보다는 작지만 Release보다는 큽니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md101"></a>
 WebAssembly 빌드 (wasm)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py wasm</div>
 </div><!-- fragment --><p><b>최적화</b>는 웹 환경 최적화(<code>-O2</code>), <b>디버깅 심볼</b>은 미포함입니다. 웹 브라우저에서 Byeol을 실행하기 위해 사용됩니다.</p>
 <p>산출물로는 <code>.wasm</code> 파일(WebAssembly 바이너리)과 <code>.js</code> 파일(WebAssembly를 로드하고 실행하는 JavaScript 래퍼)이 생성됩니다. Emscripten 컴파일러를 사용하며, 동적 라이브러리 대신 정적 라이브러리(<code>.a</code>)를 생성합니다. <code>test</code> 모듈과 <code>bundle</code> 모듈은 빌드에서 제외됩니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Coverage 빌드 (cov)</h2>
 <div class="fragment"><div class="line">@style: language-txt verified</div>
 <div class="line">./build/builder.py cov</div>
 </div><!-- fragment --><p><b>최적화</b>는 Debug 수준, <b>디버깅 심볼</b>은 포함입니다. 코드 커버리지 측정을 위해 사용됩니다.</p>
 <p><b>특수 플래그</b>로는 Clang의 경우 <code>-fprofile-instr-generate -fcoverage-mapping</code>을, GCC의 경우 <code>-fprofile-arcs -ftest-coverage</code>를 사용합니다. Linux와 macOS만 지원합니다. 테스트 실행 후 커버리지 리포트를 생성하며, <code>.profraw</code> 또는 <code>.gcda</code> 파일이 생성됩니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md105"></a>
 빌드 타겟 비교표</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -339,17 +367,17 @@ Coverage 빌드 (cov)</h2>
 <td class="markdownTableBodyNone">cov   </td><td class="markdownTableBodyNone">없음 (-O0)   </td><td class="markdownTableBodyNone">✓   </td><td class="markdownTableBodyNone">큼   </td><td class="markdownTableBodyNone">느림   </td><td class="markdownTableBodyNone">커버리지 측정   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md104"></a>
+<h1><a class="anchor" id="autotoc_md107"></a>
 Git Repository 구조</h1>
-<h2><a class="anchor" id="autotoc_md105"></a>
+<h2><a class="anchor" id="autotoc_md108"></a>
 추적되는 파일</h2>
 <p>Git으로 버전 관리되는 주요 디렉토리와 파일은 다음과 같습니다. <code>module/</code>은 모든 소스 코드를, <code>build/</code>는 빌드 스크립트 및 설정 파일(<code>builder.py</code>, <code>CMakeLists.txt</code>, <code>doxygen/</code> 문서 생성 설정)을 포함합니다. <code>doc/</code>은 문서 소스(Markdown)를, <code>.clang-format</code>은 코드 포맷팅 규칙을, <code>.clang-tidy</code>는 정적 분석 규칙을, <code>.gitignore</code>는 Git 무시 패턴을 정의합니다.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md107"></a>
+<h2><a class="anchor" id="autotoc_md110"></a>
 추적되지 않는 파일</h2>
 <p><code>.gitignore</code>에 의해 무시되는 디렉토리(자동 생성)는 다음과 같습니다. <code>bin/</code>은 빌드 산출물을, <code>build/module/</code>은 CMake 중간 산출물을, <code>build/.cmake/</code>는 CMake 캐시를, <code>external/</code>은 외부 라이브러리를 포함합니다. 또한 <code>*.o</code>, <code>*.a</code>, <code>*.so</code>, <code>*.dylib</code>, <code>*.dll</code>과 같은 컴파일 산출물과 <code>*.profraw</code>, <code>*.gcda</code>, <code>*.gcno</code>와 같은 커버리지 데이터도 무시됩니다.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md109"></a>
+<h1><a class="anchor" id="autotoc_md112"></a>
 참고 사항</h1>
 <p><b><code>bin/</code> 디렉토리는 수동으로 수정하지 마세요.</b> 빌드 과정에서 자동으로 생성되며, <code>builder.py clean</code> 실행 시 모두 삭제됩니다.</p>
 <p><b><code>external/</code> 디렉토리도 수동으로 수정하지 마세요.</b> CMake가 자동으로 관리합니다. <b>단, Google Test 오류 발생 시는 예외입니다.</b> 빌드 중 Google Test 관련 오류가 발생하거나 파일이 없다는 메시지가 나타나면, <code>external/googletest/</code> 디렉토리를 수동으로 삭제한 후 다시 빌드하세요. <code>builder.py clean</code> 명령은 <code>external/</code> 디렉토리를 삭제하지 않으므로 수동 삭제가 필요합니다.</p>

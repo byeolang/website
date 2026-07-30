@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['명령줄_20플래그_20처리_0',['flag 클래스 - 명령줄 플래그 처리',['../al-architecture-frontend.html#autotoc_md489',1,'']]],
-  ['명명_20규칙_1',['파일 명명 규칙',['../ad-convention-rules.html#autotoc_md131',1,'']]],
-  ['명확한_20테스트_20이름_2',['명확한 테스트 이름',['../an-testing-guide.html#autotoc_md533',1,'']]]
+  ['매칭_0',['복수 패턴 매칭',['../al-architecture-frontend.html#autotoc_md495',1,'']]],
+  ['매크로_1',['매크로',['../an-testing-guide.html#autotoc_md506',1,'Google Test 검증 매크로'],['../ag-architecture-clog.html#autotoc_md217',1,'Scope 로깅 매크로'],['../af-architecture-indep.html#autotoc_md192',1,'WHEN 매크로']]],
+  ['매크로_20사용_2',['TO 매크로 사용',['../ad-convention-rules.html#autotoc_md154',1,'']]],
+  ['매크로_3a_20upper_5fsnake_5fcase_3',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md125',1,'']]]
 ];
