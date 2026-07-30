@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['확인_0',['확인',['../ab-dev-env.html#autotoc_md24',1,'바이너리 확인'],['../an-testing-guide.html#autotoc_md544',1,'에러 리포트 확인']]],
-  ['확장하기_1',['메타 타입 확장하기',['../ah-architecture-meta.html#autotoc_md251',1,'']]],
-  ['확장_2',['richLog 확장',['../ag-architecture-clog.html#autotoc_md223',1,'']]]
+  ['호출_0',['negative() 호출',['../an-testing-guide.html#autotoc_md531',1,'']]],
+  ['호환성_1',['Doxygen 호환성',['../ao-document-convention.html#autotoc_md553',1,'']]]
 ];
