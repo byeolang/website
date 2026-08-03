@@ -108,11 +108,12 @@ var NAVTREEINDEX1 =
 "ao-document-convention.html#autotoc_md561":[7,6],
 "ao-document-convention.html#autotoc_md563":[7,7],
 "ao-document-convention.html#autotoc_md565":[7,8],
-"ao-document-convention.html#autotoc_md566":[7,8,0],
-"ao-document-convention.html#autotoc_md567":[7,8,1],
-"ao-document-convention.html#autotoc_md568":[7,8,2],
-"ao-document-convention.html#autotoc_md569":[7,8,3],
-"ao-document-convention.html#autotoc_md571":[7,9],
+"ao-document-convention.html#autotoc_md567":[7,9],
+"ao-document-convention.html#autotoc_md568":[7,9,0],
+"ao-document-convention.html#autotoc_md569":[7,9,1],
+"ao-document-convention.html#autotoc_md570":[7,9,2],
+"ao-document-convention.html#autotoc_md571":[7,9,3],
+"ao-document-convention.html#autotoc_md573":[7,10],
 "args_8hpp.html":[10,0,0,0,4],
 "args_8hpp_source.html":[10,0,0,0,4],
 "arr_8hpp.html":[10,0,0,2,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classby_1_1default_copy_ctor.html":[8,5,11],
 "classby_1_1default_ctor.html":[8,5,12],
 "classby_1_1dum_modifier.html":[8,5,48],
-"classby_1_1dum_params.html":[8,5,56],
-"classby_1_1dum_scope.html":[8,5,13]
+"classby_1_1dum_params.html":[8,5,56]
 };

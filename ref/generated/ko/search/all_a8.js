@@ -2,7 +2,7 @@ var searchData=
 [
   ['추가하거나_20새로운_20로그_20기능을_20넣고_20싶어요_0',['버그를 잡기 위해 로그를 추가하거나, 새로운 로그 기능을 넣고 싶어요.',['../aa-onboarding.html#autotoc_md10',1,'']]],
   ['추가하고_20싶어요_1',['추가하고 싶어요',['../aa-onboarding.html#autotoc_md12',1,'리플렉션 기능을 더 추가하고 싶어요.'],['../aa-onboarding.html#autotoc_md8',1,'새로운 문법(Syntax)을 추가하고 싶어요'],['../aa-onboarding.html#autotoc_md5',1,'시나리오: 새로운 내장 함수(Native Function) 및 타입을 추가하고 싶어요']]],
-  ['추가_20절차_2',['새 문서 추가 절차',['../ao-document-convention.html#autotoc_md559',1,'']]],
+  ['추가_20절차_2',['새 문서 추가 절차',['../ao-document-convention.html#autotoc_md561',1,'']]],
   ['추가_20정보_20제공_3',['추가 정보 제공',['../ai-architecture-memlite.html#autotoc_md266',1,'']]],
   ['추론_4',['expander 클래스 - 사전 타입 추론',['../ak-architecture-core.html#autotoc_md462',1,'']]],
   ['추상화_5',['srcSupply 클래스 - 소스 코드 공급 추상화',['../ak-architecture-core.html#autotoc_md460',1,'']]],
