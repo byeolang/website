@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['make_0',['make',['../classby_1_1expr_maker.html#a36b4004da75841c637b06de1951b84aa',1,'by::exprMaker::make()'],['../classby_1_1params.html#a020d01e2e85f3c525c3bd829d4ef2aad',1,'by::params::make(const strings &amp;names, const narr &amp;args)'],['../classby_1_1params.html#af04eca49ae0028058a6be7d061c068c8',1,'by::params::make(const narr &amp;args)']]],
-  ['makeassignexprfrom_1',['makeAssignExprFrom',['../classby_1_1expr_maker.html#a995aac9d52dbe3287e6727eb895ef88d',1,'by::exprMaker']]],
-  ['makecommonfunc_2',['makeCommonFunc',['../classby_1_1expr_maker.html#a6bec7515d346e0b50a84d6835c6adaf2',1,'by::exprMaker']]],
-  ['makeexpandfunc_3',['makeExpandFunc',['../classby_1_1expr_maker.html#a9163bf3827592ae12814af872fad6dd4',1,'by::exprMaker']]],
-  ['makeneworigin_4',['makeNewOrigin',['../classby_1_1def_var_expr.html#ad5d7b8842089b134993f05d0fe20497e',1,'by::defVarExpr']]],
-  ['makesuppliesfrom_5',['makeSuppliesFrom',['../classby_1_1src_supply.html#aa47db0eb46f6569fa960b7c53d572f10',1,'by::srcSupply']]],
-  ['mov_6',['mov',['../classby_1_1scalar.html#a67f8cae36d7b5e025a0bfd80fe99e34e',1,'by::scalar']]]
+  ['init_0',['init',['../classby_1_1stream.html#a061d678d31efbf65fa3bff94f10da2a3',1,'by::stream::init()'],['../classby_1_1type.html#a656d9a54739f8457195da12567e4410a',1,'by::type::init()']]],
+  ['isexist_1',['isExist',['../classby_1_1nul_stela.html#ade59de19316be7446865b99b7e81e992',1,'by::nulStela::isExist()'],['../classby_1_1stela.html#a0f135d3a966dde9b13386358142111aa',1,'by::stela::isExist()']]],
+  ['isheap_2',['isHeap',['../structby_1_1id.html#a2a827f9a34a3e6569d795fccfcf6f5e9',1,'by::id::isHeap()'],['../classby_1_1instance.html#a56f449486eea01ea434f348c3b142760',1,'by::instance::isHeap()']]],
+  ['isnull_3',['isNull',['../classby_1_1stream.html#a7398d28be5cd2e0cb2d61e7838300ae3',1,'by::stream']]],
+  ['issub_4',['isSub',['../classby_1_1type.html#a7511efc747aeb12a6b3fc2e2971eb31f',1,'by::type']]],
+  ['issuper_5',['isSuper',['../classby_1_1type.html#ab88ce436da22fc488bf6865cdd1b9ad3',1,'by::type']]]
 ];
