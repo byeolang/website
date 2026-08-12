@@ -1,13 +1,23 @@
 var searchData=
 [
-  ['real_20block_20size_0',['Real block size',['../classby_1_1chunk.html#real_block_size',1,'']]],
-  ['reference_20counting_1',['Reference counting',['../classby_1_1watcher.html#reference_counting',1,'']]],
-  ['rel_2',['rel',['../classby_1_1enables_zone.html#add455a9a8e88eb865221df38fd456175',1,'by::enablesZone::rel()'],['../classby_1_1filters.html#a3cc5445360a1dfa0a32b064a7653e617',1,'by::filters::rel()'],['../classby_1_1stream.html#ad9bf81760fc4ddedd5e773644357cbc6',1,'by::stream::rel()'],['../structby_1_1id.html#a8e27563518ce88b2489d602e130f6465',1,'by::id::rel()'],['../classby_1_1instancer.html#ab9cd1f8f69e7ddbeccb23e17804537be',1,'by::instancer::rel()'],['../classby_1_1pool.html#ac1b50e805ddbc54aeb24b8274fc8c1eb',1,'by::pool::rel()'],['../classby_1_1life.html#a5043e2e9c0a659a1ad2db1ece7e6da2a',1,'by::life::rel()']]],
-  ['report_3',['report',['../classby_1_1stela_parser.html#ab1dd5523034af2a1707e6a0a38b2594b',1,'by::stelaParser']]],
-  ['resize_4',['resize',['../classby_1_1chunks.html#a7761ce857f3989c96b8ea553230da06c',1,'by::chunks']]],
-  ['retrieving_20chunk_20objects_5',['chkN used for retrieving chunk objects',['../structby_1_1id.html#chkn_field',1,'']]],
-  ['richlog_6',['richLog',['../classby_1_1logger.html#rich_log',1,'']]],
-  ['richlog_2ehpp_7',['richLog.hpp',['../clog_2rich_log_8hpp.html',1,'(Global Namespace)'],['../meta_2common_2rich_log_8hpp.html',1,'(Global Namespace)'],['../stela_2common_2rich_log_8hpp.html',1,'(Global Namespace)']]],
-  ['rtti_2ehpp_8',['rtti.hpp',['../rtti_8hpp.html',1,'(Global Namespace)'],['../rtti_2rtti_8hpp.html',1,'(Global Namespace)']]],
-  ['rule_9',['Indentation rule',['../classby_1_1stela_parser.html#indentation_rule',1,'']]]
+  ['raii_0',['RAII',['../classby_1_1autopod.html#raii_section',1,'']]],
+  ['recursive_20loading_1',['Recursive Loading',['../classby_1_1autopod.html#recursive_loading',1,'']]],
+  ['reference_20to_20frames_2',['err has Strong Reference to frames',['../classby_1_1base_err.html#strong_frames_reference',1,'']]],
+  ['rel_3',['rel',['../classby_1_1autopod.html#ac411fa91f92030a724f46e77f048b0ca',1,'by::autopod::rel()'],['../classby_1_1block_expr.html#a5b63daeb5b5caff442a5be3936acf177',1,'by::blockExpr::rel()'],['../classby_1_1node.html#ac5a636219cb26fbd6c32e38f4b3a5c81',1,'by::node::rel()'],['../classby_1_1pod.html#a2980a3a358d60a9e1203de3b16235131',1,'by::pod::rel()'],['../classiter.html#aaf274264761ec432af9c496d598630d8',1,'iter::rel() override'],['../classiter.html#aaf274264761ec432af9c496d598630d8',1,'iter::rel() override'],['../classby_1_1arr.html#ab76c4b25f1d1ae165afedaf4710e1a2a',1,'by::arr::rel()'],['../classby_1_1n_str.html#a4b04b7d09a13b2036ceda8565a18ea00',1,'by::nStr::rel()'],['../classby_1_1frame.html#a2779d034aee4cd68fceeb892faf86bbd',1,'by::frame::rel()'],['../classby_1_1thread.html#a05563f2bb3df2fa85310a0f37f47c343',1,'by::thread::rel()']]],
+  ['relationship_20with_20thread_4',['Relationship with thread',['../classby_1_1frames.html#relationship_with_thread',1,'']]],
+  ['required_20to_20run_20an_20autopod_5',['is required to run an autopod',['../classby_1_1autopod.html#thread',1,'']]],
+  ['retconvergence_6',['retConvergence',['../classby_1_1ret_convergence.html',1,'by']]],
+  ['retconvergence_2ehpp_7',['retConvergence.hpp',['../ret_convergence_8hpp.html',1,'']]],
+  ['retexpr_8',['retExpr',['../classby_1_1ret_expr.html',1,'by']]],
+  ['retexpr_2ehpp_9',['retExpr.hpp',['../ret_expr_8hpp.html',1,'']]],
+  ['retstate_10',['retState',['../classby_1_1ret_state.html',1,'by']]],
+  ['retstateexpr_11',['retStateExpr',['../classby_1_1ret_state_expr.html',1,'by']]],
+  ['retstateexpr_2ehpp_12',['retStateExpr.hpp',['../ret_state_expr_8hpp.html',1,'']]],
+  ['return_13',['Parameters and Return',['../classby_1_1base_func.html#parameters_and_return',1,'']]],
+  ['return_20token_20in_20your_20rule_20after_20using_20dispatcher_14',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]],
+  ['returns_20nullptr_15',['Why cast&lt;origin&gt;() Returns nullptr',['../classby_1_1origin.html#why_cast_origin_returns_null',1,'']]],
+  ['richlog_2ehpp_16',['richLog.hpp',['../rich_log_8hpp.html',1,'']]],
+  ['rule_17',['Indentation Rule',['../classby_1_1parser.html#indentation_rule',1,'']]],
+  ['rule_20after_20using_20dispatcher_18',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]],
+  ['run_20an_20autopod_19',['is required to run an autopod',['../classby_1_1autopod.html#thread',1,'']]]
 ];
