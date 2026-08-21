@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['retconvergence_0',['retConvergence',['../classby_1_1ret_convergence.html',1,'by']]],
-  ['retexpr_1',['retExpr',['../classby_1_1ret_expr.html',1,'by']]],
-  ['retstate_2',['retState',['../classby_1_1ret_state.html',1,'by']]],
-  ['retstateexpr_3',['retStateExpr',['../classby_1_1ret_state_expr.html',1,'by']]]
+  ['watcher_0',['watcher',['../classby_1_1watcher.html',1,'by']]],
+  ['weaktactic_1',['weakTactic',['../classby_1_1weak_tactic.html',1,'by']]]
 ];

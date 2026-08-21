@@ -1,6 +1,7 @@
 var classby_1_1stela =
 [
     [ "stela", "classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163", null ],
+    [ "accept", "classby_1_1stela.html#a51222c3c3823b10c8a717b0492c88c68", null ],
     [ "add", "classby_1_1stela.html#a0b2f66a7e4de8302ceb4d5898eb45c75", null ],
     [ "add", "classby_1_1stela.html#a2040bd961bd3df0f3544c20b6f0df0a4", null ],
     [ "add", "classby_1_1stela.html#af0972c02471ab7877a31507945dcd1b6", null ],

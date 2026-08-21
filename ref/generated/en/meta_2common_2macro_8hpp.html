@@ -128,11 +128,153 @@ Macros</h2></td></tr>
 <tr class="memitem:a78634ab7e1f8517770f204cd623e9a67" id="r_a78634ab7e1f8517770f204cd623e9a67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78634ab7e1f8517770f204cd623e9a67">__BY__DECL_CLONE</a>(ME)</td></tr>
 <tr class="memdesc:a78634ab7e1f8517770f204cd623e9a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meta-programming macro definitions for byeol type system.  <br /></td></tr>
 <tr class="separator:a78634ab7e1f8517770f204cd623e9a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fbe954eb5c2c671401e3d7a0358d39" id="r_a73fbe954eb5c2c671401e3d7a0358d39"><td class="memItemLeft" align="right" valign="top"><a id="a73fbe954eb5c2c671401e3d7a0358d39" name="a73fbe954eb5c2c671401e3d7a0358d39"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__BY__BASE_TYPE</b>&#160;&#160;&#160;type</td></tr>
+<tr class="memdesc:a73fbe954eb5c2c671401e3d7a0358d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define super meta type for class type introspection. <br /></td></tr>
+<tr class="separator:a73fbe954eb5c2c671401e3d7a0358d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafceac8ed79afe6fdbc62b143db35a83" id="r_aafceac8ed79afe6fdbc62b143db35a83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafceac8ed79afe6fdbc62b143db35a83">__BY__DECL_TYPE</a>(METATYPE)</td></tr>
-<tr class="memdesc:aafceac8ed79afe6fdbc62b143db35a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define super meta type for class type introspection.  <br /></td></tr>
 <tr class="separator:aafceac8ed79afe6fdbc62b143db35a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad25dd408799e3ed65c68c1e626e9e2" id="r_a5ad25dd408799e3ed65c68c1e626e9e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ad25dd408799e3ed65c68c1e626e9e2">__BY__DECL_ADT_1</a>(ME)</td></tr>
+<tr class="separator:a5ad25dd408799e3ed65c68c1e626e9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06768fd739496de7dea510c6a0b3d371" id="r_a06768fd739496de7dea510c6a0b3d371"><td class="memItemLeft" align="right" valign="top"><a id="a06768fd739496de7dea510c6a0b3d371" name="a06768fd739496de7dea510c6a0b3d371"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__BY__DECL_ADT_2</b>(ME,  SUPER)&#160;&#160;&#160;__BY__DECL_ADT_3(ME, SUPER, <a class="el" href="#a73fbe954eb5c2c671401e3d7a0358d39">__BY__BASE_TYPE</a>)</td></tr>
+<tr class="separator:a06768fd739496de7dea510c6a0b3d371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb745232915deb819d9a5c542a764dd2" id="r_abb745232915deb819d9a5c542a764dd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb745232915deb819d9a5c542a764dd2">__BY__DECL_ADT_3</a>(ME,  SUPER,  SUPERTYPE)</td></tr>
+<tr class="separator:abb745232915deb819d9a5c542a764dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad1844a14c6c50440aaa9abc36df5d8" id="r_a1ad1844a14c6c50440aaa9abc36df5d8"><td class="memItemLeft" align="right" valign="top"><a id="a1ad1844a14c6c50440aaa9abc36df5d8" name="a1ad1844a14c6c50440aaa9abc36df5d8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__BY__DECL_ADT</b>(...)&#160;&#160;&#160;BY_OVERLOAD(__BY__DECL_ADT, __VA_ARGS__)</td></tr>
+<tr class="separator:a1ad1844a14c6c50440aaa9abc36df5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e57c4d825a2d072fbbafb89152cc96" id="r_a91e57c4d825a2d072fbbafb89152cc96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91e57c4d825a2d072fbbafb89152cc96">__BY__DECL_CLASS_1</a>(ME)</td></tr>
+<tr class="separator:a91e57c4d825a2d072fbbafb89152cc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40137c0ee31260485148d0c70bd7fac7" id="r_a40137c0ee31260485148d0c70bd7fac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40137c0ee31260485148d0c70bd7fac7">__BY__DECL_CLASS_2</a>(ME,  SUPER)</td></tr>
+<tr class="separator:a40137c0ee31260485148d0c70bd7fac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e4b91fb1169898fb77163409e37104" id="r_a18e4b91fb1169898fb77163409e37104"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18e4b91fb1169898fb77163409e37104">__BY__DECL_CLASS_3</a>(ME,  SUPER,  SUPERTYPE)</td></tr>
+<tr class="separator:a18e4b91fb1169898fb77163409e37104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e178d71bcd8a8dc812a83dc2ff8dc4d" id="r_a1e178d71bcd8a8dc812a83dc2ff8dc4d"><td class="memItemLeft" align="right" valign="top"><a id="a1e178d71bcd8a8dc812a83dc2ff8dc4d" name="a1e178d71bcd8a8dc812a83dc2ff8dc4d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__BY__DECL_CLASS</b>(...)&#160;&#160;&#160;BY_OVERLOAD(__BY__DECL_CLASS, __VA_ARGS__)</td></tr>
+<tr class="separator:a1e178d71bcd8a8dc812a83dc2ff8dc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a5ad25dd408799e3ed65c68c1e626e9e2" name="a5ad25dd408799e3ed65c68c1e626e9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad25dd408799e3ed65c68c1e626e9e2">&#9670;&#160;</a></span>__BY__DECL_ADT_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __BY__DECL_ADT_1</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ME</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    __BY__DECL_ME_1(ME)              \</div>
+<div class="line">    __BY__DECL_TYPE(<a class="code hl_define" href="#a73fbe954eb5c2c671401e3d7a0358d39">__BY__BASE_TYPE</a>) \</div>
+<div class="line">    __BY__DECL_INIT_META(ME)</div>
+<div class="ttc" id="ameta_2common_2macro_8hpp_html_a73fbe954eb5c2c671401e3d7a0358d39"><div class="ttname"><a href="#a73fbe954eb5c2c671401e3d7a0358d39">__BY__BASE_TYPE</a></div><div class="ttdeci">#define __BY__BASE_TYPE</div><div class="ttdoc">Define super meta type for class type introspection.</div><div class="ttdef"><b>Definition</b> macro.hpp:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb745232915deb819d9a5c542a764dd2" name="abb745232915deb819d9a5c542a764dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb745232915deb819d9a5c542a764dd2">&#9670;&#160;</a></span>__BY__DECL_ADT_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __BY__DECL_ADT_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ME, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">SUPER, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">SUPERTYPE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    __BY__DECL_ME_2(ME, SUPER)                 \</div>
+<div class="line">    __BY__DECL_TYPE(SUPERTYPE)                 \</div>
+<div class="line">    __BY__DECL_INIT_META(ME)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a91e57c4d825a2d072fbbafb89152cc96" name="a91e57c4d825a2d072fbbafb89152cc96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91e57c4d825a2d072fbbafb89152cc96">&#9670;&#160;</a></span>__BY__DECL_CLASS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __BY__DECL_CLASS_1</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ME</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    __BY__DECL_ADT_1(ME)       \</div>
+<div class="line">    __BY__DECL_CLONE(ME)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a40137c0ee31260485148d0c70bd7fac7" name="a40137c0ee31260485148d0c70bd7fac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40137c0ee31260485148d0c70bd7fac7">&#9670;&#160;</a></span>__BY__DECL_CLASS_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __BY__DECL_CLASS_2</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ME, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">SUPER</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    __BY__DECL_ADT_2(ME, SUPER)       \</div>
+<div class="line">    __BY__DECL_CLONE(ME)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a18e4b91fb1169898fb77163409e37104" name="a18e4b91fb1169898fb77163409e37104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e4b91fb1169898fb77163409e37104">&#9670;&#160;</a></span>__BY__DECL_CLASS_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __BY__DECL_CLASS_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ME, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">SUPER, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">SUPERTYPE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    __BY__DECL_ADT_3(ME, SUPER, SUPERTYPE)       \</div>
+<div class="line">    __BY__DECL_CLONE(ME)</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a78634ab7e1f8517770f204cd623e9a67" name="a78634ab7e1f8517770f204cd623e9a67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78634ab7e1f8517770f204cd623e9a67">&#9670;&#160;</a></span>__BY__DECL_CLONE</h2>
 
@@ -170,14 +312,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:                                                                \</div>
-<div class="line">    <span class="keyword">typedef</span> METATYPE metaType;                                         \</div>
-<div class="line">    <span class="keyword">const</span> ntype&amp; getType()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> ttype&lt;me&gt;::get(); } \</div>
-<div class="line">                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:                                                                          \</div>
+<div class="line">    <span class="keyword">typedef</span> METATYPE metaType;                                                   \</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_define" href="#a73fbe954eb5c2c671401e3d7a0358d39">__BY__BASE_TYPE</a>&amp; getType()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> ttype&lt;me&gt;::get(); } \</div>
+<div class="line">                                                                                 \</div>
 <div class="line"><span class="keyword">private</span>:</div>
 </div><!-- fragment -->
-<p>Define super meta type for class type introspection. </p>
-
 </div>
 </div>
 </div><!-- contents -->

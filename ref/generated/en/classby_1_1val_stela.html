@@ -121,7 +121,7 @@ $(function(){initNavTree('classby_1_1val_stela.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>Value stela node for storing primitive values.  
+<p>ADT base for value-holding stela nodes.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="val_stela_8hpp_source.html">valStela.hpp</a>&gt;</code></p>
@@ -131,11 +131,12 @@ Inheritance diagram for by::valStela:</div>
  <div class="center">
   <img src="classby_1_1val_stela.png" usemap="#by::valStela_map" alt=""/>
   <map id="by::valStela_map" name="by::valStela_map">
-<area href="classby_1_1stela.html" title="Core AST node for stela configuration language." alt="by::stela" shape="rect" coords="63,112,180,136"/>
+<area href="classby_1_1stela.html" alt="by::stela" shape="rect" coords="63,112,180,136"/>
 <area href="classby_1_1instance.html" title="Base class for all managed instances in memlite system." alt="by::instance" shape="rect" coords="63,56,180,80"/>
 <area href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information." alt="by::typeProvidable" shape="rect" coords="0,0,117,24"/>
 <area href="classby_1_1clonable.html" title="Interface for objects that can be cloned." alt="by::clonable" shape="rect" coords="127,0,244,24"/>
-<area href="classby_1_1ver_stela.html" title="Version stela node for semantic version handling." alt="by::verStela" shape="rect" coords="63,224,180,248"/>
+<area href="classby_1_1str_stela.html" title="String-value marker over valStela." alt="by::strStela" shape="rect" coords="0,224,117,248"/>
+<area href="classby_1_1ver_stela.html" title="Version stela node for semantic version handling." alt="by::verStela" shape="rect" coords="127,224,244,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -153,35 +154,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4487667d04a78efb8c54e1daa26603c" id="r_aa4487667d04a78efb8c54e1daa26603c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4487667d04a78efb8c54e1daa26603c">asBool</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
 <tr class="memdesc:aa4487667d04a78efb8c54e1daa26603c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the stela object's value to a boolean.  <br /></td></tr>
 <tr class="separator:aa4487667d04a78efb8c54e1daa26603c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6af2294420b72b81c81059a1a834de5" id="r_aa6af2294420b72b81c81059a1a834de5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6af2294420b72b81c81059a1a834de5">getType</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
-<tr class="separator:aa6af2294420b72b81c81059a1a834de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1stela"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1stela')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1stela.html">by::stela</a></td></tr>
-<tr class="memitem:a94b8ebbb3bb9577e5002b146a83a0163 inherit pub_methods_classby_1_1stela" id="r_a94b8ebbb3bb9577e5002b146a83a0163"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163">stela</a> (std::initializer_list&lt; <a class="el" href="structby_1_1no_wrap.html">me</a> * &gt; <a class="el" href="structby_1_1no_wrap.html">subs</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>=&quot;&quot;)</td></tr>
+<tr class="memitem:a94b8ebbb3bb9577e5002b146a83a0163 inherit pub_methods_classby_1_1stela" id="r_a94b8ebbb3bb9577e5002b146a83a0163"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163">stela</a> (std::initializer_list&lt; <a class="el" href="structby_1_1no_wrap.html">me</a> * &gt; <a class="el" href="structby_1_1no_wrap.html">subs</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="memdesc:a94b8ebbb3bb9577e5002b146a83a0163 inherit pub_methods_classby_1_1stela"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a stela object with an optional name and an initializer list of child stela objects.  <br /></td></tr>
 <tr class="separator:a94b8ebbb3bb9577e5002b146a83a0163 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee9557716bd5942865fbea609bfffa4 inherit pub_methods_classby_1_1stela" id="r_afee9557716bd5942865fbea609bfffa4"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>stela</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>=&quot;&quot;)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stela</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:afee9557716bd5942865fbea609bfffa4 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb10d77f3e2ec58754a295140504a020 inherit pub_methods_classby_1_1stela" id="r_abb10d77f3e2ec58754a295140504a020"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>stela</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>=&quot;&quot;)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stela</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:abb10d77f3e2ec58754a295140504a020 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab48a0a88758050bbaa86598b463bfcd8 inherit pub_methods_classby_1_1stela" id="r_ab48a0a88758050bbaa86598b463bfcd8"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name)</td></tr>
 <tr class="separator:ab48a0a88758050bbaa86598b463bfcd8 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77906fe729b10c5c54d3732a7ba822fe inherit pub_methods_classby_1_1stela" id="r_a77906fe729b10c5c54d3732a7ba822fe"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](<a class="el" href="structby_1_1no_wrap.html">name</a>))</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](name))</td></tr>
 <tr class="separator:a77906fe729b10c5c54d3732a7ba822fe inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf90f823660f6f666227387a4a45d55 inherit pub_methods_classby_1_1stela" id="r_a9bf90f823660f6f666227387a4a45d55"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">name</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *name)</td></tr>
 <tr class="separator:a9bf90f823660f6f666227387a4a45d55 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15287bd1c38fe374ca14815d3150dcf5 inherit pub_methods_classby_1_1stela" id="r_a15287bd1c38fe374ca14815d3150dcf5"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">name</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](<a class="el" href="structby_1_1no_wrap.html">name</a>))</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *name) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>[](name))</td></tr>
 <tr class="separator:a15287bd1c38fe374ca14815d3150dcf5 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add66eeb73db8dfa18546871281f4c650 inherit pub_methods_classby_1_1stela" id="r_add66eeb73db8dfa18546871281f4c650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650">operator nbool</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="memdesc:add66eeb73db8dfa18546871281f4c650 inherit pub_methods_classby_1_1stela"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the stela object to a boolean, indicating its existence.  <br /></td></tr>
 <tr class="separator:add66eeb73db8dfa18546871281f4c650 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b5833c88728319ea2996d04d310faf9 inherit pub_methods_classby_1_1stela" id="r_a7b5833c88728319ea2996d04d310faf9"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name)</td></tr>
 <tr class="separator:a7b5833c88728319ea2996d04d310faf9 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a106c6fa043f18de8f3be1a40b588a0 inherit pub_methods_classby_1_1stela" id="r_a7a106c6fa043f18de8f3be1a40b588a0"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(it</td></tr>
@@ -205,13 +204,13 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1stela.html">stela</a> *it) <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(del)</td></tr>
 <tr class="separator:a59000427021e76f426743dad255754ad inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d5a8a86077b06b4d061f0f1e8c0a5b inherit pub_methods_classby_1_1stela" id="r_a42d5a8a86077b06b4d061f0f1e8c0a5b"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name)</td></tr>
 <tr class="separator:a42d5a8a86077b06b4d061f0f1e8c0a5b inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0837bc3a0fd8ad41e600f8d92fbb38a inherit pub_methods_classby_1_1stela" id="r_ae0837bc3a0fd8ad41e600f8d92fbb38a"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string *it) <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(del)</td></tr>
 <tr class="separator:ae0837bc3a0fd8ad41e600f8d92fbb38a inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c2a70ce7c72dbf2a7d067c5978ca0d8 inherit pub_methods_classby_1_1stela" id="r_a7c2a70ce7c72dbf2a7d067c5978ca0d8"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">name</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *name)</td></tr>
 <tr class="separator:a7c2a70ce7c72dbf2a7d067c5978ca0d8 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0d2c7e4b90fc285023eac7b6dbf78f inherit pub_methods_classby_1_1stela" id="r_aef0d2c7e4b90fc285023eac7b6dbf78f"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
@@ -237,6 +236,10 @@ iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></
 <tr class="memitem:a0f135d3a966dde9b13386358142111aa inherit pub_methods_classby_1_1stela" id="r_a0f135d3a966dde9b13386358142111aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1stela.html#a0f135d3a966dde9b13386358142111aa">isExist</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="memdesc:a0f135d3a966dde9b13386358142111aa inherit pub_methods_classby_1_1stela"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stela object is considered "existent" (i.e., not a <a class="el" href="classby_1_1nul_stela.html">nulStela</a>).  <br /></td></tr>
 <tr class="separator:a0f135d3a966dde9b13386358142111aa inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51222c3c3823b10c8a717b0492c88c68 inherit pub_methods_classby_1_1stela" id="r_a51222c3c3823b10c8a717b0492c88c68"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1stela_visit_info.html">stelaVisitInfo</a> &amp;<a class="el" href="structby_1_1no_wrap.html">i</a>, <a class="el" href="classby_1_1stela_visitor.html">stelaVisitor</a> &amp;<a class="el" href="structby_1_1no_wrap.html">v</a>)</td></tr>
+<tr class="memdesc:a51222c3c3823b10c8a717b0492c88c68 inherit pub_methods_classby_1_1stela"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch entry for <a class="el" href="classby_1_1stela_visitor.html">stelaVisitor</a>. Base implementation calls <code>v.visit(i, *this)</code>; subclasses override via the VISIT macro. <br /></td></tr>
+<tr class="separator:a51222c3c3823b10c8a717b0492c88c68 inherit pub_methods_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1instance.html">by::instance</a></td></tr>
 <tr class="memitem:a16469e451673fecd6f99c75c1d584c78 inherit pub_methods_classby_1_1instance" id="r_a16469e451673fecd6f99c75c1d584c78"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> (<a class="el" href="structby_1_1id.html">id</a> <a class="el" href="structby_1_1no_wrap.html">newId</a>)</td></tr>
@@ -269,6 +272,9 @@ iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></
 <tr class="memitem:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable" id="r_a588f51a220cf4eca9e7df44ff04977e7"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable" id="r_aa4e69312548672dbcad53a369ded5630"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
+<tr class="separator:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable" id="r_a2f07327fb7b52a45b6fbaa48ae0eb89f"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,7 +343,7 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="structby_1_1no_wrap.html">me</a> sub *&#160;</td><td class="memItemRight" valign="bottom"><b>this</b></td></tr>
 <tr class="separator:aaf5d0b23580fdf8ec462f8f26b704506 inherit pub_attribs_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a8555f8189e89c9abdc9d020213df9 inherit pub_attribs_classby_1_1stela" id="r_a21a8555f8189e89c9abdc9d020213df9"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">name</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(sub(<a class="el" href="structby_1_1no_wrap.html">name</a>)) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">std</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> )(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">name</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(sub(<a class="el" href="structby_1_1no_wrap.html">name</a>)) <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">nidx</a> <a class="el" href="structby_1_1no_wrap.html">n</a>)</td></tr>
+<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(sub(name)) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">std</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> )(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *name) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(sub(name)) <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;sub(<a class="el" href="structby_1_1no_wrap.html">nidx</a> <a class="el" href="structby_1_1no_wrap.html">n</a>)</td></tr>
 <tr class="separator:a21a8555f8189e89c9abdc9d020213df9 inherit pub_attribs_classby_1_1stela"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classby_1_1instance"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classby_1_1instance')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classby_1_1instance.html">by::instance</a></td></tr>
 <tr class="memitem:a067b78083e79bea14beb1d015283019f inherit pro_methods_classby_1_1instance" id="r_a067b78083e79bea14beb1d015283019f"><td class="memItemLeft" align="right" valign="top">
@@ -349,8 +355,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac233c40e2381a0f3d0aefe0082cceeb8 inherit pro_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Value stela node for storing primitive values. </p>
-<p>Unlike <a class="el" href="classby_1_1nul_stela.html">nulStela</a>, this <a class="el" href="group__stela.html">Stela</a> holds scalar types like int, float, string. Internally stores value as a base string, and can convert to appropriate types on type conversion requests like <code><a class="el" href="#a706fc0eb1acfef5e24ae440dcf8502f2" title="Converts the stela object&#39;s value to an integer.">asInt()</a></code>.</p>
+<div class="textblock"><p>ADT base for value-holding stela nodes. </p>
+<p>Holds a scalar value as a raw string in <code>_rawVal</code> and converts to primitive types on request via <code><a class="el" href="#a706fc0eb1acfef5e24ae440dcf8502f2" title="Converts the stela object&#39;s value to an integer.">asInt()</a></code>, <code><a class="el" href="#aa4487667d04a78efb8c54e1daa26603c" title="Converts the stela object&#39;s value to a boolean.">asBool()</a></code>, etc. Concrete leaves <a class="el" href="classby_1_1str_stela.html">strStela</a>, <a class="el" href="classby_1_1ver_stela.html">verStela</a>) exist purely so visitors can discriminate between them; the value-access implementation lives here and is reused by every subclass.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Exception on type conversion failure If type conversion fails, an exception is thrown, so be careful. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4487667d04a78efb8c54e1daa26603c" name="aa4487667d04a78efb8c54e1daa26603c"></a>
@@ -470,33 +476,6 @@ Additional Inherited Members</h2></td></tr>
 <p>If the stela object has no value or is a <a class="el" href="classby_1_1nul_stela.html">nulStela</a>, it returns an empty string. </p><dl class="section return"><dt>Returns</dt><dd>A const reference to the string representation of the stela object's value. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classby_1_1stela.html#a14f7c34ed4fd17bc16daad2a41669411">by::stela</a>.</p>
-
-</div>
-</div>
-<a id="aa6af2294420b72b81c81059a1a834de5" name="aa6af2294420b72b81c81059a1a834de5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6af2294420b72b81c81059a1a834de5">&#9670;&#160;</a></span>getType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp; by::valStela::getType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classby_1_1stela.html">by::stela</a>.</p>
 
 </div>
 </div>

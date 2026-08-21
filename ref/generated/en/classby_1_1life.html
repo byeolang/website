@@ -177,8 +177,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a00dff374226915e1d09e232cc6ef43a3" id="r_a00dff374226915e1d09e232cc6ef43a3"><td class="memItemLeft" align="right" valign="top"><a id="a00dff374226915e1d09e232cc6ef43a3" name="a00dff374226915e1d09e232cc6ef43a3"></a>
 <a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a00dff374226915e1d09e232cc6ef43a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a513573b3bdd24819d77e1a228570bc34" id="r_a513573b3bdd24819d77e1a228570bc34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a513573b3bdd24819d77e1a228570bc34">getType</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
-<tr class="separator:a513573b3bdd24819d77e1a228570bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c93c105c20c6601c5a2e71836922de" id="r_aa3c93c105c20c6601c5a2e71836922de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c93c105c20c6601c5a2e71836922de">onStrong</a> (<a class="el" href="structby_1_1no_wrap.html">ncnt</a> <a class="el" href="structby_1_1no_wrap.html">vote</a>)</td></tr>
 <tr class="memdesc:aa3c93c105c20c6601c5a2e71836922de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates strong reference count by vote amount.  <br /></td></tr>
 <tr class="separator:aa3c93c105c20c6601c5a2e71836922de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable" id="r_a588f51a220cf4eca9e7df44ff04977e7"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable" id="r_aa4e69312548672dbcad53a369ded5630"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
+<tr class="separator:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable" id="r_a2f07327fb7b52a45b6fbaa48ae0eb89f"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
 <tr class="separator:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,33 +367,6 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 
 <p>Returns current strong reference count. </p>
 <dl class="section return"><dt>Returns</dt><dd>Number of strong references (tstr binders) pointing to this instance </dd></dl>
-
-</div>
-</div>
-<a id="a513573b3bdd24819d77e1a228570bc34" name="a513573b3bdd24819d77e1a228570bc34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a513573b3bdd24819d77e1a228570bc34">&#9670;&#160;</a></span>getType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp; by::life::getType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classby_1_1type_providable.html">by::typeProvidable</a>.</p>
 
 </div>
 </div>
