@@ -416,26 +416,26 @@ Enum 네이밍</h2>
 </ul>
 <div class="fragment"><div class="line">// ✅ 좋은 예 - 100 컬럼 이내 (권장)</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 사용자 정보를 검증하고 데이터베이스에 저장합니다</div>
-<div class="line"> * @param user 검증할 사용자 객체</div>
-<div class="line"> * @return 성공 시 true, 실패 시 false</div>
+<div class="line"> * @brief validates a user and stores it in the database</div>
+<div class="line"> * @param user the user to validate</div>
+<div class="line"> * @return true on success, false on failure</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">// ⚠️ 허용되지만 비권장 - 120 컬럼 이내</div>
 <div class="line">/** </div>
-<div class="line"> * @brief 사용자 정보를 검증하고 유효한 경우 데이터베이스에 저장하며 저장 후 로그를 남기고 캐시를 업데이트합니다</div>
+<div class="line"> * @brief validates a user, stores it in the database when valid, then writes a log and updates the cache</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">// ❌ 나쁜 예 - 120 컬럼 초과 (clang-format 오류)</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 이 함수는 사용자 정보를 검증하고 유효한 경우 데이터베이스에 저장하며 저장 후 로그를 남기고 캐시를 업데이트하며 이메일 알림을 전송합니다</div>
+<div class="line"> * @brief this function validates a user, stores it in the database when valid, then writes a log, updates the cache and sends an email</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">// ✅ 개선 - 여러 줄로 분리</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 사용자 정보를 검증하고 데이터베이스에 저장합니다</div>
-<div class="line"> * @details 검증 성공 시 데이터베이스에 저장하고,</div>
-<div class="line"> * 저장 후 로그를 남기며 캐시를 업데이트합니다.</div>
+<div class="line"> * @brief validates a user and stores it in the database</div>
+<div class="line"> * @details on a successful validation it stores the user, then writes</div>
+<div class="line"> * a log and updates the cache.</div>
 <div class="line"> */</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md145"></a>
 들여쓰기: 4 스페이스</h3>
@@ -809,28 +809,28 @@ Doxygen 주석 기본 규칙</h2>
 /** 스타일만 사용</h3>
 <div class="fragment"><div class="line">// ✅ 올바른 스타일</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 파일을 읽습니다</div>
-<div class="line"> * @param path 파일 경로</div>
-<div class="line"> * @return 파일 내용</div>
+<div class="line"> * @brief reads a file</div>
+<div class="line"> * @param path the file path</div>
+<div class="line"> * @return the file content</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">// ❌ 금지된 스타일</div>
-<div class="line">/// @brief 파일을 읽습니다</div>
-<div class="line">/// @param path 파일 경로</div>
-<div class="line">/// @return 파일 내용</div>
+<div class="line">/// @brief reads a file</div>
+<div class="line">/// @param path the file path</div>
+<div class="line">/// @return the file content</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md166"></a>
 @ 접두사 사용</h3>
 <div class="fragment"><div class="line">// ✅ 올바른 예</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 사용자를 생성합니다</div>
-<div class="line"> * @param name 사용자 이름</div>
-<div class="line"> * @return 생성된 사용자 포인터</div>
+<div class="line"> * @brief creates a user</div>
+<div class="line"> * @param name the user name</div>
+<div class="line"> * @return a pointer to the created user</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">// ❌ 잘못된 예 - \ 사용 금지</div>
 <div class="line">/**</div>
-<div class="line"> * \brief 사용자를 생성합니다   // 틀림!</div>
-<div class="line"> * \param name 사용자 이름       // 틀림!</div>
+<div class="line"> * \brief creates a user      // 틀림!</div>
+<div class="line"> * \param name the user name  // 틀림!</div>
 <div class="line"> */</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md167"></a>
 파일 주석</h2>
@@ -845,7 +845,7 @@ Doxygen 주석 기본 규칙</h2>
 <div class="line"> </div>
 <div class="line">/**</div>
 <div class="line"> * @ingroup core</div>
-<div class="line"> * @brief AST 노드를 표현하는 클래스</div>
+<div class="line"> * @brief a node of the AST</div>
 <div class="line"> */</div>
 <div class="line">class astNode {</div>
 <div class="line">    // ...</div>
@@ -853,10 +853,10 @@ Doxygen 주석 기본 규칙</h2>
 </div><!-- fragment --><div class="fragment"><div class="line">// 예제 2: 매크로만 있는 헤더 - 설명 필요</div>
 <div class="line">/**</div>
 <div class="line"> * @file</div>
-<div class="line"> * 문자열 조작을 위한 유틸리티 매크로</div>
+<div class="line"> * utility macros for string manipulation</div>
 <div class="line"> *</div>
-<div class="line"> * 문자열 연결, 변환, 포매팅 등의 기능을 제공하는</div>
-<div class="line"> * 매크로 모음입니다.</div>
+<div class="line"> * a collection of macros for concatenating, converting and</div>
+<div class="line"> * formatting strings.</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">#pragma once</div>
@@ -867,9 +867,9 @@ Doxygen 주석 기본 규칙</h2>
 </div><!-- fragment --><div class="fragment"><div class="line">// 예제 3: typedef만 있는 헤더 - 설명 필요</div>
 <div class="line">/**</div>
 <div class="line"> * @file</div>
-<div class="line"> * 타입 별칭 정의</div>
+<div class="line"> * type alias definitions</div>
 <div class="line"> *</div>
-<div class="line"> * 프로젝트 전반에서 사용되는 공통 타입 별칭을 정의합니다.</div>
+<div class="line"> * the common type aliases used across the project.</div>
 <div class="line"> */</div>
 <div class="line"> </div>
 <div class="line">#pragma once</div>
@@ -884,9 +884,9 @@ Doxygen 주석 기본 규칙</h2>
 예제 1: 간단한 클래스</h3>
 <div class="fragment"><div class="line">/**</div>
 <div class="line"> * @ingroup core</div>
-<div class="line"> * @brief AST 노드의 기본 클래스</div>
-<div class="line"> * @details 모든 AST 노드가 상속받는 베이스 클래스입니다.</div>
-<div class="line"> * 노드 순회, 타입 체킹 등의 기본 기능을 제공합니다.</div>
+<div class="line"> * @brief the base class of every AST node</div>
+<div class="line"> * @details every AST node inherits from this. it provides the basics such</div>
+<div class="line"> * as node traversal and type checking.</div>
 <div class="line"> */</div>
 <div class="line">class astNode {</div>
 <div class="line">public:</div>
@@ -897,15 +897,15 @@ Doxygen 주석 기본 규칙</h2>
 예제 2: 복잡한 클래스 - 여러 단락</h3>
 <div class="fragment"><div class="line">/**</div>
 <div class="line"> * @ingroup memlite</div>
-<div class="line"> * @brief 메모리 풀 관리자</div>
-<div class="line"> * @details 고성능 메모리 할당을 위한 풀 기반 메모리 관리자입니다.</div>
+<div class="line"> * @brief a memory pool manager</div>
+<div class="line"> * @details a pool based allocator for high performance allocation.</div>
 <div class="line"> *</div>
-<div class="line"> * 이 클래스는 고정 크기 메모리 블록을 미리 할당하고 재사용하여</div>
-<div class="line"> * 빈번한 메모리 할당/해제의 오버헤드를 줄입니다.</div>
+<div class="line"> * it preallocates fixed size blocks and reuses them, which cuts the</div>
+<div class="line"> * overhead of frequent allocation and release.</div>
 <div class="line"> *</div>
-<div class="line"> * 각 풀은 특정 크기의 객체를 관리하며, 요청된 크기에 따라</div>
-<div class="line"> * 적절한 풀을 자동으로 선택합니다. 스레드 안전성은 보장되지 않으므로</div>
-<div class="line"> * 다중 스레드 환경에서는 외부 동기화가 필요합니다.</div>
+<div class="line"> * each pool manages objects of one size, and the right pool is picked</div>
+<div class="line"> * automatically from the requested size. it is not thread safe, so a</div>
+<div class="line"> * multithreaded caller has to synchronize on its own.</div>
 <div class="line"> */</div>
 <div class="line">class memoryPool {</div>
 <div class="line">public:</div>
@@ -917,7 +917,7 @@ Doxygen 주석 기본 규칙</h2>
 <p>함수 주석에는 <code>@brief</code> (간단한 설명), <code>@param</code> (매개변수 설명), <code>@return</code> (반환값 설명) 태그를 필요에 따라 포함합니다.</p>
 <div class="fragment"><div class="line">// 예제 1: 간단한 함수 - @param 생략 가능</div>
 <div class="line">/** </div>
-<div class="line"> * @brief 사용자 이름을 반환합니다</div>
+<div class="line"> * @brief returns the user name</div>
 <div class="line"> */</div>
 <div class="line">std::string getName() const {</div>
 <div class="line">    return _name;</div>
@@ -925,19 +925,19 @@ Doxygen 주석 기본 규칙</h2>
 <div class="line"> </div>
 <div class="line">// 예제 2: @param과 @return이 필요한 경우</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 사용자를 생성하고 검증합니다</div>
-<div class="line"> * @param username 사용자 이름 (3-20자의 영숫자)</div>
-<div class="line"> * @param email 이메일 주소 (게스트는 nullptr 가능)</div>
-<div class="line"> * @param age 나이 (0-150 범위)</div>
-<div class="line"> * @return 성공 시 사용자 포인터, 실패 시 nullptr</div>
+<div class="line"> * @brief creates a user after validating it</div>
+<div class="line"> * @param username the user name (3-20 alphanumeric characters)</div>
+<div class="line"> * @param email the email address (nullptr for a guest)</div>
+<div class="line"> * @param age the age (0-150)</div>
+<div class="line"> * @return a pointer to the user on success, nullptr on failure</div>
 <div class="line"> */</div>
 <div class="line">user* createUser(const std::string&amp; username, const char* email, int age);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md173"></a>
 code 블록 사용</h2>
 <p>복잡한 API나 사용법이 명확하지 않은 경우 예제 코드 제공해야 합니다.</p>
 <div class="fragment"><div class="line">/**</div>
-<div class="line"> * @brief 설정 파일을 로드하고 파서를 초기화합니다</div>
-<div class="line"> * @details 복잡한 초기화 순서가 필요하므로 아래 예제를 참고하세요</div>
+<div class="line"> * @brief loads a config file and initializes the parser</div>
+<div class="line"> * @details the initialization order is involved, so follow the example below</div>
 <div class="line"> * @code</div>
 <div class="line"> *  configLoader loader;</div>
 <div class="line"> *  if(loader.load(&quot;config.stela&quot;)) {</div>
@@ -951,9 +951,9 @@ code 블록 사용</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md174"></a>
 ref로 다른 코드 참조</h2>
 <div class="fragment"><div class="line">/**</div>
-<div class="line"> * @brief @ref parser 를 사용하여 파일을 파싱합니다</div>
-<div class="line"> * @param p @ref parser 인스턴스</div>
-<div class="line"> * @return 파싱된 @ref astNode</div>
+<div class="line"> * @brief parses a file with a @ref parser</div>
+<div class="line"> * @param p the @ref parser instance</div>
+<div class="line"> * @return the parsed @ref astNode</div>
 <div class="line"> */</div>
 <div class="line">astNode* parseWithParser(parser&amp; p);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md175"></a>
@@ -963,31 +963,31 @@ ref로 다른 코드 참조</h2>
 <div class="line">// FIXME: 메모리 누수 존재</div>
 <div class="line">// HACK: 임시 해결책, 나중에 리팩토링 필요</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 파일을 읽습니다</div>
-<div class="line"> * @param path 파일 경로</div>
-<div class="line"> * @return 파일 내용</div>
+<div class="line"> * @brief reads a file</div>
+<div class="line"> * @param path the file path</div>
+<div class="line"> * @return the file content</div>
 <div class="line"> */</div>
 <div class="line">std::string readFile(const std::string&amp; path);</div>
 <div class="line"> </div>
 <div class="line">// ❌ 잘못된 예</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 파일을 읽습니다</div>
+<div class="line"> * @brief reads a file</div>
 <div class="line"> * TODO: 에러 핸들링 추가 필요        // 틀림!</div>
 <div class="line"> * FIXME: 메모리 누수 존재            // 틀림!</div>
-<div class="line"> * @param path 파일 경로</div>
-<div class="line"> * @return 파일 내용</div>
+<div class="line"> * @param path the file path</div>
+<div class="line"> * @return the file content</div>
 <div class="line"> */</div>
 <div class="line">std::string readFile(const std::string&amp; path);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md176"></a>
 자명한 코드에는 주석 금지</h2>
 <div class="fragment"><div class="line">// ❌ 나쁜 예 - 불필요한 주석</div>
-<div class="line">/** @brief 이름을 가져옵니다 */</div>
+<div class="line">/** @brief returns the name */</div>
 <div class="line">std::string getName() { return _name; }  // 너무 당연함!</div>
 <div class="line"> </div>
-<div class="line">/** @brief 나이를 설정합니다 */</div>
+<div class="line">/** @brief sets the age */</div>
 <div class="line">void setAge(int age) { _age = age; }     // 너무 당연함!</div>
 <div class="line"> </div>
-<div class="line">/** @brief i를 1 증가시킵니다 */</div>
+<div class="line">/** @brief increments i by one */</div>
 <div class="line">i++;                                      // 너무 당연함!</div>
 <div class="line"> </div>
 <div class="line">// ✅ 좋은 예 - 주석 없음 (자명함)</div>
@@ -996,10 +996,10 @@ ref로 다른 코드 참조</h2>
 <div class="line">i++;</div>
 </div><!-- fragment --><div class="fragment"><div class="line">// ✅ 좋은 예 - 주석이 필요한 경우</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 캐시를 고려하여 값을 가져옵니다</div>
-<div class="line"> * @details 캐시에 값이 있으면 캐시에서, 없으면 DB에서 조회하고</div>
-<div class="line"> * 결과를 캐시에 저장합니다. TTL은 5분입니다.</div>
-<div class="line"> * @return 사용자 이름</div>
+<div class="line"> * @brief returns the name, going through the cache</div>
+<div class="line"> * @details reads from the cache when it holds the value, otherwise queries</div>
+<div class="line"> * the DB and stores the result. the TTL is five minutes.</div>
+<div class="line"> * @return the user name</div>
 <div class="line"> */</div>
 <div class="line">std::string getName() {</div>
 <div class="line">    if(_cache.has(&quot;name&quot;))</div>
@@ -1020,30 +1020,30 @@ ref로 다른 코드 참조</h2>
 </ul>
 <div class="fragment"><div class="line">// ❌ 나쁜 예 - 같은 말을 세 번 반복</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 전송을 정체 기준으로 중단합니다</div>
-<div class="line"> * @details 이 함수는 전송이 정체되면 중단합니다. 평균 속도가 일정 시간 동안</div>
-<div class="line"> *          기준치 아래로 떨어지면 중단하는 방식입니다. 전체 시간에는 상한을</div>
-<div class="line"> *          두지 않는데, 왜냐하면 툴체인 zip 은 수십 MB 이므로 죽은 서버를</div>
-<div class="line"> *          잡아낼 만큼 짧은 상한을 걸면 느리지만 정상인 회선까지 함께</div>
-<div class="line"> *          끊어버리기 때문입니다.</div>
+<div class="line"> * @brief cuts a transfer once it stalls</div>
+<div class="line"> * @details this function cuts a transfer when it stalls. the way it works is</div>
+<div class="line"> *          that it cuts once the average speed stays under the limit for a</div>
+<div class="line"> *          while. the total time is left uncapped, because a toolchain zip is</div>
+<div class="line"> *          tens of MB, so any cap short enough to catch a dead server would</div>
+<div class="line"> *          also cut a slow but healthy link.</div>
 <div class="line"> */</div>
 <div class="line">void guardByStall();</div>
 <div class="line"> </div>
 <div class="line">// ✅ 좋은 예 - 근거만 남김</div>
 <div class="line">/**</div>
-<div class="line"> * @brief 전송을 정체 기준으로 중단합니다</div>
-<div class="line"> * @details 전체 시간 상한은 두지 않습니다. 죽은 서버를 잡을 만큼 짧으면</div>
-<div class="line"> *          느리지만 정상인 회선도 끊기 때문입니다.</div>
+<div class="line"> * @brief cuts a transfer once it stalls</div>
+<div class="line"> * @details the total time is left uncapped: a cap short enough to catch a dead</div>
+<div class="line"> *          server would cut a slow but healthy link too.</div>
 <div class="line"> */</div>
 <div class="line">void guardByStall();</div>
 </div><!-- fragment --><p>한 줄 주석도 마찬가지입니다.</p>
 <div class="fragment"><div class="line">// ❌ 나쁜 예</div>
-<div class="line">// 이 파일은 실제 libcurl 대신 링크되는 가짜 libcurl 입니다. curl.cpp 는</div>
-<div class="line">// 수정 없이 컴파일되며, 링커가 curl_easy_* 심볼을 이 파일의 정의로</div>
-<div class="line">// 해석하고, 그 정의들은 다시 테스트가 바인딩한 mock 으로 위임합니다.</div>
+<div class="line">// this file is the fake libcurl that gets linked instead of the real one.</div>
+<div class="line">// curl.cpp compiles untouched, the linker resolves its curl_easy_* symbols to</div>
+<div class="line">// the definitions here, and those in turn delegate to the mock a test bound.</div>
 <div class="line"> </div>
 <div class="line">// ✅ 좋은 예</div>
-<div class="line">// 실제 libcurl 대신 링크되는 가짜 libcurl.</div>
+<div class="line">// the fake libcurl linked in place of the real one.</div>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md179"></a>
 헤더 파일 포함</h1>
