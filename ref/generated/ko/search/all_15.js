@@ -6,7 +6,7 @@ var searchData=
   ['uiterable_2ehpp_3',['uiterable.hpp',['../uiterable_8hpp.html',1,'']]],
   ['uiteration_2ehpp_4',['uiteration.hpp',['../uiteration_8hpp.html',1,'']]],
   ['understanding_20difficulty_5',['Understanding Difficulty',['../classby_1_1verifier.html#understanding_difficulty',1,'']]],
-  ['unit_20test_20단위_20테스트_6',['Unit Test (단위 테스트)',['../an-testing-guide.html#autotoc_md502',1,'']]],
+  ['unit_20test_20단위_20테스트_6',['Unit Test (단위 테스트)',['../an-testing-guide.html#autotoc_md503',1,'']]],
   ['unlike_20obj_20baseobj_20s_20origin_20object_20exists_20only_20once_7',['Unlike obj, baseObj&apos;s Origin Object Exists Only Once',['../classby_1_1base_obj.html#baseobj_only_one_origin',1,'']]],
   ['up_8',['Main Function Look Up',['../classby_1_1starter.html#main_function_lookup',1,'']]],
   ['upper_5fsnake_5fcase_9',['매크로: UPPER_SNAKE_CASE',['../ad-convention-rules.html#autotoc_md125',1,'']]],
