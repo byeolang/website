@@ -91,7 +91,6 @@ var NAVTREEINDEX1 =
 "structby_1_1meta_if.html":[0,2,1],
 "structby_1_1no_wrap.html":[0,1,5],
 "structby_1_1point.html":[0,4,2],
-"structby_1_1sub_less.html":[0,4,4],
 "structby_1_1ta_empty_can.html":[0,2,5],
 "structby_1_1tadaptive_super.html":[0,2,7],
 "structby_1_1tif_has_default_ctor.html":[0,2,2],

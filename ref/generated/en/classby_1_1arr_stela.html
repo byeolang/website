@@ -350,15 +350,15 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ordered list of elements. </p>
-<p>A tag subtype so <a class="el" href="classby_1_1stela_writer.html">stelaWriter</a> emits <code>{a, b, c}</code> inline instead of a <code>def</code> block. It adds no storage and no methods: elements are ordinary children named "0", "1", "2", ... so every access goes through the plain <a class="el" href="group__stela.html">Stela</a> interface. Callers never need to downcast to reach an element.</p>
+<p>A tag subtype so <a class="el" href="classby_1_1stela_writer.html">stelaWriter</a> emits <code>{a, b, c}</code> inline instead of a <code>def</code> block. It adds no storage and no methods: elements are ordinary children named "0000", "0001", "0002", ... so every access goes through the plain <a class="el" href="group__stela.html">Stela</a> interface. Callers never need to downcast to reach an element.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1stela.html">stela</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">deps</a> = <a class="code hl_struct" href="structby_1_1no_wrap.html">root</a>-&gt;sub(<span class="stringliteral">&quot;deps&quot;</span>);</div>
 <div class="line"><span class="keywordflow">for</span>(<a class="code hl_struct" href="structby_1_1no_wrap.html">ncnt</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">n</a> = 0; <a class="code hl_struct" href="structby_1_1no_wrap.html">n</a> &lt; <a class="code hl_struct" href="structby_1_1no_wrap.html">deps</a>.len(); ++<a class="code hl_struct" href="structby_1_1no_wrap.html">n</a>)</div>
 <div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">deps</a>.sub(<a class="code hl_struct" href="structby_1_1no_wrap.html">n</a>).asStr();</div>
-<div class="ttc" id="aclassby_1_1stela_html"><div class="ttname"><a href="classby_1_1stela.html">by::stela</a></div><div class="ttdef"><b>Definition</b> stela.hpp:77</div></div>
+<div class="ttc" id="aclassby_1_1stela_html"><div class="ttname"><a href="classby_1_1stela.html">by::stela</a></div><div class="ttdef"><b>Definition</b> stela.hpp:52</div></div>
 <div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
-</div><!-- fragment --><dl class="section remark"><dt>Remarks</dt><dd>Element order Indices are kept in numeric order by <a class="el" href="structby_1_1sub_less.html">subLess</a>, not in the lexicographic order a plain <code>std::map</code> would give (which would put "10" before "2"). </dd></dl>
+</div><!-- fragment --><dl class="section remark"><dt>Remarks</dt><dd>Element order The index is zero-padded so that the child map's lexicographic key order is also numeric order; bare "10" would sort ahead of "2". The padding width caps how many elements keep their order — see stelaParser::IDX_WIDTH. </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/stela/stela/module/stela/ast/<a class="el" href="arr_stela_8hpp_source.html">arrStela.hpp</a></li>
 </ul>

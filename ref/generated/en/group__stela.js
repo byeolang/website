@@ -10,7 +10,6 @@ var group__stela =
     ] ],
     [ "by::point", "structby_1_1point.html", null ],
     [ "by::area", "structby_1_1area.html", null ],
-    [ "by::subLess", "structby_1_1sub_less.html", null ],
     [ "by::strStela", "classby_1_1str_stela.html", null ],
     [ "by::valStela", "classby_1_1val_stela.html", [
       [ "asBool", "classby_1_1val_stela.html#aa4487667d04a78efb8c54e1daa26603c", null ],

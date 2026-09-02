@@ -46,6 +46,5 @@ var searchData=
   ['structure_43',['- bison - stelaParser structure',['../classby_1_1stela_parser.html#scanner',1,'']]],
   ['structure_20to_20byeol_20parser_44',['Similar structure to byeol parser',['../classby_1_1stela_parser.html#similar_structure',1,'']]],
   ['strwrap_45',['strWrap',['../structby_1_1str_wrap.html',1,'by']]],
-  ['subless_46',['subLess',['../structby_1_1sub_less.html',1,'by']]],
-  ['sys_47',['Sys',['../group__sys.html',1,'']]]
+  ['sys_46',['Sys',['../group__sys.html',1,'']]]
 ];

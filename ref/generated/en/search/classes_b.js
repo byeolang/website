@@ -15,6 +15,5 @@ var searchData=
   ['stream_12',['stream',['../classby_1_1stream.html',1,'by']]],
   ['strstela_13',['strStela',['../classby_1_1str_stela.html',1,'by']]],
   ['strtactic_14',['strTactic',['../classby_1_1str_tactic.html',1,'by']]],
-  ['strwrap_15',['strWrap',['../structby_1_1str_wrap.html',1,'by']]],
-  ['subless_16',['subLess',['../structby_1_1sub_less.html',1,'by']]]
+  ['strwrap_15',['strWrap',['../structby_1_1str_wrap.html',1,'by']]]
 ];
