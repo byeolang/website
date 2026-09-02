@@ -1,5 +1,6 @@
 var group__stela =
 [
+    [ "by::arrStela", "classby_1_1arr_stela.html", null ],
     [ "by::nulStela", "classby_1_1nul_stela.html", [
       [ "asBool", "classby_1_1nul_stela.html#aa662a693dd496ab136946241cb84c83d", null ],
       [ "asChar", "classby_1_1nul_stela.html#a6724f91d87907e34d5f99e4f2e0f73d0", null ],
@@ -9,6 +10,7 @@ var group__stela =
     ] ],
     [ "by::point", "structby_1_1point.html", null ],
     [ "by::area", "structby_1_1area.html", null ],
+    [ "by::subLess", "structby_1_1sub_less.html", null ],
     [ "by::strStela", "classby_1_1str_stela.html", null ],
     [ "by::valStela", "classby_1_1val_stela.html", [
       [ "asBool", "classby_1_1val_stela.html#aa4487667d04a78efb8c54e1daa26603c", null ],
@@ -30,6 +32,9 @@ var group__stela =
     ] ],
     [ "by::stelaParser", "classby_1_1stela_parser.html", [
       [ "onDedent", "classby_1_1stela_parser.html#ae86562b13cfeec03f8bf61ccc0226154", null ],
+      [ "onDefArray", "classby_1_1stela_parser.html#a02e1c55c4a4ee8a1550231253adfd69f", null ],
+      [ "onDefArray", "classby_1_1stela_parser.html#a2cddc649728cd2e7ef9c5a0c2f07fb6e", null ],
+      [ "onDefArray", "classby_1_1stela_parser.html#a2dd1c1180b36402bd1701d7d30895d98", null ],
       [ "onIgnoreIndent", "classby_1_1stela_parser.html#aa8126f9843f87ccbc37510c074a0ce28", null ],
       [ "onIndent", "classby_1_1stela_parser.html#a2eeb608b2f3a2679d7483803eaedc7b3", null ],
       [ "onParseErr", "classby_1_1stela_parser.html#a6e1284a605428cf15c4f41fd69fc26a4", null ],
