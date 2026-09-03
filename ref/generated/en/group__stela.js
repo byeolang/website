@@ -68,7 +68,10 @@ var group__stela =
       [ "onScan", "classby_1_1stela_token_scanable.html#a8015252731a807792d7b4259dfd50686", null ],
       [ "onScan", "classby_1_1stela_token_scanable.html#a90e07f1a1661efce2498fe520694fd0c", null ]
     ] ],
-    [ "by::stelaVisitInfo", "classby_1_1stela_visit_info.html", null ],
+    [ "by::stelaVisitInfo", "classby_1_1stela_visit_info.html", [
+      [ "index", "classby_1_1stela_visit_info.html#a9c56c311056901f2499c006705bf7244", null ],
+      [ "len", "classby_1_1stela_visit_info.html#ae333562de94c4bceae9abf950d777d06", null ]
+    ] ],
     [ "by::stelaVisitor", "classby_1_1stela_visitor.html", null ],
     [ "by::stelaWriter", "classby_1_1stela_writer.html", [
       [ "write", "classby_1_1stela_writer.html#a17d3f204bb0f74664134d5ea53e67cc9", null ],

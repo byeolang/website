@@ -144,6 +144,8 @@ var NAVTREEINDEX0 =
 "classby_1_1stela_token_scanable.html#a8015252731a807792d7b4259dfd50686":[0,4,13,0],
 "classby_1_1stela_token_scanable.html#a90e07f1a1661efce2498fe520694fd0c":[0,4,13,1],
 "classby_1_1stela_visit_info.html":[0,4,14],
+"classby_1_1stela_visit_info.html#a9c56c311056901f2499c006705bf7244":[0,4,14,0],
+"classby_1_1stela_visit_info.html#ae333562de94c4bceae9abf950d777d06":[0,4,14,1],
 "classby_1_1stela_visitor.html":[0,4,15],
 "classby_1_1stela_writer.html":[0,4,16],
 "classby_1_1stela_writer.html#a17d3f204bb0f74664134d5ea53e67cc9":[0,4,16,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "group__indep.html":[0,0],
 "group__memlite.html":[0,3],
 "group__meta.html":[0,2],
-"group__stela.html":[0,4],
-"group__sys.html":[0,6],
-"id_8hpp.html":[2,0,1,2,1]
+"group__stela.html":[0,4]
 };
