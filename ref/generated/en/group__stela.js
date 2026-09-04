@@ -31,9 +31,6 @@ var group__stela =
     ] ],
     [ "by::stelaParser", "classby_1_1stela_parser.html", [
       [ "onDedent", "classby_1_1stela_parser.html#ae86562b13cfeec03f8bf61ccc0226154", null ],
-      [ "onDefArray", "classby_1_1stela_parser.html#a02e1c55c4a4ee8a1550231253adfd69f", null ],
-      [ "onDefArray", "classby_1_1stela_parser.html#a2cddc649728cd2e7ef9c5a0c2f07fb6e", null ],
-      [ "onDefArray", "classby_1_1stela_parser.html#a2dd1c1180b36402bd1701d7d30895d98", null ],
       [ "onIgnoreIndent", "classby_1_1stela_parser.html#aa8126f9843f87ccbc37510c074a0ce28", null ],
       [ "onIndent", "classby_1_1stela_parser.html#a2eeb608b2f3a2679d7483803eaedc7b3", null ],
       [ "onParseErr", "classby_1_1stela_parser.html#a6e1284a605428cf15c4f41fd69fc26a4", null ],
@@ -68,10 +65,7 @@ var group__stela =
       [ "onScan", "classby_1_1stela_token_scanable.html#a8015252731a807792d7b4259dfd50686", null ],
       [ "onScan", "classby_1_1stela_token_scanable.html#a90e07f1a1661efce2498fe520694fd0c", null ]
     ] ],
-    [ "by::stelaVisitInfo", "classby_1_1stela_visit_info.html", [
-      [ "index", "classby_1_1stela_visit_info.html#a9c56c311056901f2499c006705bf7244", null ],
-      [ "len", "classby_1_1stela_visit_info.html#ae333562de94c4bceae9abf950d777d06", null ]
-    ] ],
+    [ "by::stelaVisitInfo", "classby_1_1stela_visit_info.html", null ],
     [ "by::stelaVisitor", "classby_1_1stela_visitor.html", null ],
     [ "by::stelaWriter", "classby_1_1stela_writer.html", [
       [ "write", "classby_1_1stela_writer.html#a17d3f204bb0f74664134d5ea53e67cc9", null ],
