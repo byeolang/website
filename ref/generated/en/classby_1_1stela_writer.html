@@ -116,6 +116,7 @@ $(function(){initNavTree('classby_1_1stela_writer.html',''); initResizable(); })
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classby_1_1stela_writer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">by::stelaWriter Class Reference<div class="ingroups"><a class="el" href="group__stela.html">Stela</a></div></div></div>
@@ -230,6 +231,12 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 <a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onCloneDeep</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">from</a>)</td></tr>
 <tr class="separator:ad78216acb96f85e6e23db1b119a17bfa inherit pub_methods_classby_1_1clonable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a22c790e1e7960531e85b6c90a3a83aab" id="r_a22c790e1e7960531e85b6c90a3a83aab"><td class="memItemLeft" align="right" valign="top"><a id="a22c790e1e7960531e85b6c90a3a83aab" name="a22c790e1e7960531e85b6c90a3a83aab"></a>
+<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>false</b></td></tr>
+<tr class="separator:a22c790e1e7960531e85b6c90a3a83aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a823c3aec76ae7de8a57d13eb6163a99a" id="r_a823c3aec76ae7de8a57d13eb6163a99a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823c3aec76ae7de8a57d13eb6163a99a">onVisit</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1stela_visit_info.html">stelaVisitInfo</a> &amp;<a class="el" href="structby_1_1no_wrap.html">i</a>, <a class="el" href="classby_1_1stela.html">stela</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
@@ -251,11 +258,11 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Serializes a stela tree back to stela source text. </p>
 <p>Implemented as a <a class="el" href="classby_1_1stela_visitor.html">stelaVisitor</a>. writes a canonical, lossy form. What is NOT preserved:</p><ul>
 <li>comments in the original file</li>
-<li>original whitespace, blank lines, and indentation width beyond the writeter's configured indent</li>
+<li>original whitespace, blank lines, and indentation width beyond the writer's configured indent</li>
 <li>the original insertion order of children (<code>std::map</code> inside <a class="el" href="group__stela.html">Stela</a> sorts them alphabetically)</li>
 <li>the exact literal spelling of numbers (e.g. <code>1_000</code> becomes <code>1000</code>)</li>
 </ul>
-<p>What IS preserved: values and structure. Round-trip <code>parse -&gt; set -&gt; write -&gt; parse</code> gives the same value tree, and <code>write -&gt; parse -&gt; write</code> produces the same string (canonical fixed point).</p>
+<p>What IS preserved: values and structure. Round-trip <code>parse -&gt; edit -&gt; write -&gt; parse</code> gives the same value tree, and <code>write -&gt; parse -&gt; write</code> produces the same string (canonical fixed point).</p>
 <h1><a class="anchor" id="root_handling"></a>
 Root handling</h1>
 <p>The compilation-unit root itself is never emitted as <code>def &lt;name&gt;</code> — only its children are. This matches the shape of stela source, where the top level is implicit.</p>
