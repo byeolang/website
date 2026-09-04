@@ -1,6 +1,7 @@
 var group__stela =
 [
     [ "by::arrStela", "classby_1_1arr_stela.html", null ],
+    [ "by::defStela", "classby_1_1def_stela.html", null ],
     [ "by::nulStela", "classby_1_1nul_stela.html", [
       [ "asBool", "classby_1_1nul_stela.html#aa662a693dd496ab136946241cb84c83d", null ],
       [ "asChar", "classby_1_1nul_stela.html#a6724f91d87907e34d5f99e4f2e0f73d0", null ],

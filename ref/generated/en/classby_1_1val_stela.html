@@ -121,7 +121,7 @@ $(function(){initNavTree('classby_1_1val_stela.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>ADT base for value-holding stela nodes.  
+<p>Value-holding stela node.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="val_stela_8hpp_source.html">valStela.hpp</a>&gt;</code></p>
@@ -355,8 +355,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac233c40e2381a0f3d0aefe0082cceeb8 inherit pro_static_methods_classby_1_1instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>ADT base for value-holding stela nodes. </p>
-<p>Holds a scalar value as a raw string in <code>_rawVal</code> and converts to primitive types on request via <code><a class="el" href="#a706fc0eb1acfef5e24ae440dcf8502f2" title="Converts the stela object&#39;s value to an integer.">asInt()</a></code>, <code><a class="el" href="#aa4487667d04a78efb8c54e1daa26603c" title="Converts the stela object&#39;s value to a boolean.">asBool()</a></code>, etc. Concrete leaves <a class="el" href="classby_1_1str_stela.html">strStela</a>, <a class="el" href="classby_1_1ver_stela.html">verStela</a>) exist purely so visitors can discriminate between them; the value-access implementation lives here and is reused by every subclass.</p>
+<div class="textblock"><p>Value-holding stela node. </p>
+<p>Holds a scalar value as a raw string in <code>_rawVal</code> and converts to primitive types on request via <code><a class="el" href="#a706fc0eb1acfef5e24ae440dcf8502f2" title="Converts the stela object&#39;s value to an integer.">asInt()</a></code>, <code><a class="el" href="#aa4487667d04a78efb8c54e1daa26603c" title="Converts the stela object&#39;s value to a boolean.">asBool()</a></code>, etc.</p>
+<p>It is concrete, and the parser builds one directly for every numeric and boolean literal. The subtypes (<a class="el" href="classby_1_1str_stela.html">strStela</a>, <a class="el" href="classby_1_1ver_stela.html">verStela</a>) exist purely so visitors can discriminate between them; the value-access implementation lives here and is reused by every subclass.</p>
 <dl class="section remark"><dt>Remarks</dt><dd>Exception on type conversion failure If type conversion fails, an exception is thrown, so be careful. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4487667d04a78efb8c54e1daa26603c" name="aa4487667d04a78efb8c54e1daa26603c"></a>

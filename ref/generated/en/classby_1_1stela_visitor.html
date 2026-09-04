@@ -225,7 +225,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 <li>onTraverse() — descend into children (default: iterate the child map).</li>
 <li>onLeave() — post-visit hook.</li>
 </ol>
-<p>Typed overloads (<code>onVisit(..., <a class="el" href="classby_1_1val_stela.html" title="ADT base for value-holding stela nodes.">valStela</a>&amp;)</code>) are dispatched from each subclass's <code>accept()</code> (injected by the VISIT macro). A type-specific override that is not provided chains up to <code>onVisit(..., stela&amp;)</code> via the <code>super</code> typedef, matching byeol's convention.</p>
+<p>Typed overloads (<code>onVisit(..., <a class="el" href="classby_1_1val_stela.html" title="Value-holding stela node.">valStela</a>&amp;)</code>) are dispatched from each subclass's <code>accept()</code> (injected by the VISIT macro). A type-specific override that is not provided chains up to <code>onVisit(..., stela&amp;)</code> via the <code>super</code> typedef, matching byeol's convention.</p>
 <p>stela trees are pure (no shared subgraphs), so unlike byeol's visitor no visited-set is maintained. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/stela/stela/module/stela/visitor/<a class="el" href="stela_visitor_8hpp_source.html">stelaVisitor.hpp</a></li>
