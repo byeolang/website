@@ -9,6 +9,8 @@ var searchData=
   ['richlog_6',['richLog',['../classby_1_1logger.html#rich_log',1,'']]],
   ['richlog_2ehpp_7',['richLog.hpp',['../clog_2rich_log_8hpp.html',1,'(Global Namespace)'],['../meta_2common_2rich_log_8hpp.html',1,'(Global Namespace)'],['../stela_2common_2rich_log_8hpp.html',1,'(Global Namespace)']]],
   ['root_20handling_8',['Root handling',['../classby_1_1stela_writer.html#root_handling',1,'']]],
-  ['rtti_2ehpp_9',['rtti.hpp',['../rtti_8hpp.html',1,'(Global Namespace)'],['../rtti_2rtti_8hpp.html',1,'(Global Namespace)']]],
-  ['rule_10',['Indentation rule',['../classby_1_1stela_parser.html#indentation_rule',1,'']]]
+  ['rootstela_9',['rootStela',['../classby_1_1root_stela.html',1,'by']]],
+  ['rootstela_2ehpp_10',['rootStela.hpp',['../root_stela_8hpp.html',1,'']]],
+  ['rtti_2ehpp_11',['rtti.hpp',['../rtti_8hpp.html',1,'(Global Namespace)'],['../rtti_2rtti_8hpp.html',1,'(Global Namespace)']]],
+  ['rule_12',['Indentation rule',['../classby_1_1stela_parser.html#indentation_rule',1,'']]]
 ];

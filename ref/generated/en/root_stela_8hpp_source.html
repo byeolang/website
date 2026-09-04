@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/stela/stela/module/stela/ast.hpp File Reference</title>
+<title>byeol: /home/runner/work/stela/stela/module/stela/ast/rootStela.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
@@ -75,6 +75,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -88,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('ast_8hpp.html',''); initResizable(); });
+$(function(){initNavTree('root_stela_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -114,19 +119,30 @@ $(function(){initNavTree('ast_8hpp.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ast.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">rootStela.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="point_8hpp_source.html">stela/ast/point.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="def_stela_8hpp_source.html">stela/ast/defStela.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="root_stela_8hpp_source.html">stela/ast/rootStela.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="arr_stela_8hpp_source.html">stela/ast/arrStela.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="str_stela_8hpp_source.html">stela/ast/strStela.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ver_stela_8hpp_source.html">stela/ast/verStela.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="nul_stela_8hpp_source.html">stela/ast/nulStela.hpp</a>&quot;</code><br />
+<a href="root_stela_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="def_stela_8hpp.html">stela/ast/defStela.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>by {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classby_1_1root_stela.html">   22</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1root_stela.html">rootStela</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1def_stela.html">defStela</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        BY(<a class="code hl_struct" href="structby_1_1no_wrap.html">CLASS</a>(<a class="code hl_class" href="classby_1_1root_stela.html">rootStela</a>, <a class="code hl_class" href="classby_1_1def_stela.html">defStela</a>), <a class="code hl_struct" href="structby_1_1no_wrap.html">VISIT</a>())</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">using </span>super::defStela;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
 </div>
-<p><a href="ast_8hpp_source.html">Go to the source code of this file.</a></p>
-</div><!-- contents -->
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// namespace by</span></div>
+<div class="ttc" id="aclassby_1_1def_stela_html"><div class="ttname"><a href="classby_1_1def_stela.html">by::defStela</a></div><div class="ttdoc">Named block of children — the def form of stela source.</div><div class="ttdef"><b>Definition</b> defStela.hpp:24</div></div>
+<div class="ttc" id="aclassby_1_1root_stela_html"><div class="ttname"><a href="classby_1_1root_stela.html">by::rootStela</a></div><div class="ttdoc">The compilation unit — the one node with no source form of its own.</div><div class="ttdef"><b>Definition</b> rootStela.hpp:22</div></div>
+<div class="ttc" id="adef_stela_8hpp_html"><div class="ttname"><a href="def_stela_8hpp.html">defStela.hpp</a></div></div>
+<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

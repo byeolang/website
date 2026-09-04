@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['watcher_0',['watcher',['../classby_1_1watcher.html',1,'by']]],
-  ['weaktactic_1',['weakTactic',['../classby_1_1weak_tactic.html',1,'by']]]
+  ['valstela_0',['valStela',['../classby_1_1val_stela.html',1,'by']]],
+  ['vault_1',['vault',['../classby_1_1instance_1_1vault.html',1,'by::instance']]],
+  ['verstela_2',['verStela',['../classby_1_1ver_stela.html',1,'by']]]
 ];
