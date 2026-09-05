@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['has_0',['has',['../classby_1_1chunk.html#a4f2bb4a0e92d20bfba7728da7e28e1f7',1,'by::chunk::has()'],['../classby_1_1chunks.html#aa326054a3541992f15545483117c9013',1,'by::chunks::has()'],['../classby_1_1memory_haver.html#a1ec7fcb4322c082bbca8ce12f761fd2b',1,'by::memoryHaver::has()']]]
+  ['link_0',['link',['../classby_1_1tnchain.html#a2951a107e09c70a690b24d590e187fa9',1,'by::tnchain']]],
+  ['load_1',['load',['../classby_1_1pod_loader.html#ab0cb7eaa4fd4cfb8729e6ff1ed5e8d91',1,'by::podLoader']]],
+  ['loopexpr_2',['loopExpr',['../group__core.html#ga494838df7950fa14a036d73e544f82a6',1,'by::loopExpr']]]
 ];

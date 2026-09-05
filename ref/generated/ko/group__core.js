@@ -233,15 +233,9 @@ var group__core =
     [ "by::tucontainable< T, R, RSquare >", "classby_1_1tucontainable.html", [
       [ "del", "classby_1_1tucontainable.html#a9063ac34e9e2d84809351afc737edf31", null ]
     ] ],
-    [ "by::baseErr", "classby_1_1base_err.html", [
-      [ "dump", "classby_1_1base_err.html#a07e1f7d0bb289ce113a1215e3b7093c7", null ],
-      [ "logStack", "classby_1_1base_err.html#afeec5beb75a64d87ede96cc40d3a7bb9", null ]
-    ] ],
-    [ "by::err", "classby_1_1err.html", [
-      [ "log", "classby_1_1err.html#a693c2074091503ed5ddc79da08d140fe", null ]
-    ] ],
+    [ "by::baseErr", "classby_1_1base_err.html", null ],
+    [ "by::err", "classby_1_1err.html", null ],
     [ "by::errReport", "classby_1_1err_report.html", [
-      [ "dump", "classby_1_1err_report.html#af141278b9e6372ec50694fe0fcd3e845", null ],
       [ "inErr", "classby_1_1err_report.html#aacb54f37a2369283c98284ca34a3bd5c", null ],
       [ "inWarn", "classby_1_1err_report.html#a8bb3cd20273f55d7793b0bd800b5075d", null ]
     ] ],
@@ -269,7 +263,6 @@ var group__core =
       [ "addLocal", "classby_1_1frame.html#abee3665856ff696c4cf35244ad66cfca", null ],
       [ "del", "classby_1_1frame.html#a90b49749292b634e0869b464d79a7251", null ],
       [ "delFunc", "classby_1_1frame.html#af61f86f2f5a2ec6a6379cf8b8ebad5e0", null ],
-      [ "dump", "classby_1_1frame.html#a6a58ecf5d9ebce9589f6b7c9ea59c89e", null ],
       [ "getFunc", "classby_1_1frame.html#a9ea8612c2528baf708999019dce9616e", null ],
       [ "getLocals", "classby_1_1frame.html#a43189705523e4decb75a4053655c9a1e", null ],
       [ "getMeHaving", "classby_1_1frame.html#aa140a328a21c758697027943ef61a1fb", null ],
@@ -278,9 +271,7 @@ var group__core =
       [ "setRet", "classby_1_1frame.html#a990636d0626c72b90533641cf2bd8e9d", null ]
     ] ],
     [ "by::frameInteractable", "classby_1_1frame_interactable.html", null ],
-    [ "by::frames", "classby_1_1frames.html", [
-      [ "dump", "classby_1_1frames.html#ac469f251fd3ad356ed29256b2ba53e37", null ]
-    ] ],
+    [ "by::frames", "classby_1_1frames.html", null ],
     [ "by::sig", "structby_1_1sig.html", null ],
     [ "by::signaler", "classby_1_1signaler.html", [
       [ "onSignal", "classby_1_1signaler.html#a54d04b615cca02f7f05b6f0b63f2ea93", null ]
@@ -291,7 +282,6 @@ var group__core =
     ] ],
     [ "by::thread", "classby_1_1thread.html", [
       [ "thread", "classby_1_1thread.html#a83196c76226b9b2a3e89b5e90f2e778a", null ],
-      [ "dump", "classby_1_1thread.html#a4437c950295a6348a986aa6e4f20d4d8", null ],
       [ "getEx", "classby_1_1thread.html#a0c91aebec84cb85f862b429ce6bb4a4a", null ],
       [ "getEx", "classby_1_1thread.html#a83fb0879a389bbdb19eec84bcc4ad7fa", null ],
       [ "getPods", "classby_1_1thread.html#a1cdb1907de6ad6e5cb5af85dca3f7d48", null ],
@@ -326,7 +316,6 @@ var group__core =
       [ "operator==", "classby_1_1func_type.html#a2a02405c114437ad3e88301ed89fd3c9", null ]
     ] ],
     [ "by::mgdType", "classby_1_1mgd_type.html", [
-      [ "make", "classby_1_1mgd_type.html#aef1673945bda18fb8287deb0905871a1", null ],
       [ "onCloneDeep", "classby_1_1mgd_type.html#ac0826c2f41cee2dac6dd0298999848ba", null ]
     ] ],
     [ "by::ntype", "classby_1_1ntype.html", [
