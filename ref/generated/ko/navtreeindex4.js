@@ -1,12 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"param_8hpp.html":[10,0,0,0,23],
-"param_8hpp_source.html":[10,0,0,0,23],
-"param_convergence_8hpp.html":[10,0,0,8,2,0,0,3],
-"param_convergence_8hpp_source.html":[10,0,0,8,2,0,0,3],
-"params_8hpp.html":[10,0,0,0,24],
-"params_8hpp_source.html":[10,0,0,0,24],
-"parser_8hpp.html":[10,0,0,8,5],
 "parser_8hpp_source.html":[10,0,0,8,5],
 "pkgs_8hpp.html":[10,0,0,2,6],
 "pkgs_8hpp_source.html":[10,0,0,2,6],

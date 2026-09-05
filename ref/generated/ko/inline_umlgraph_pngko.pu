@@ -1181,51 +1181,16 @@ package "Parser Package" {
 
 package "AST Package" {
     class "stela" as stela {
-        + sub(name) : stela&
-        + sub(index) : stela&
-        + operator[](name) : stela&
-        + add(child) : void
-        + del(name) : void
-        + has(name) : nbool
-        + len() : ncnt
         + asInt() : int
         + asStr() : string
-        + accept(info, visitor) : void
+        + sub(name) : stela&
+        + operator[](name) : stela&
     }
 
     class "valStela" as valStela
-    class "strStela" as strStela
     class "verStela" as verStela
-    class "arrStela" as arrStela
     class "nulStela" as nulStela
 }
-
-package "Visitor Package" {
-    class "stelaVisitor" as visitor {
-        + work(root) : void
-        + visit(info, it) : void
-        + onVisit(info, it) : nbool
-        + onTraverse(info, it) : void
-        + onLeave(info, it) : void
-    }
-
-    class "stelaWriter" as writer {
-        + write(root) : string
-        + writeFile(root, path) : nbool
-    }
-
-    class "stelaVisitInfo" as visitInfo {
-        + name : string
-        + parent : stela*
-        + index : nidx
-        + len : ncnt
-        + depth : nint
-    }
-}
-
-writer --|> visitor
-visitor ..> visitInfo : Hand to every callback
-stela ..> visitor : accept()
 
 stelaParser *-- scanner
 stelaParser *-- smartDedent
@@ -1242,40 +1207,28 @@ parser ..> stelaParser : Event Callback
 stelaParser ..> stela : Create
 
 valStela --|> stela
-arrStela --|> stela
+verStela --|> stela
 nulStela --|> stela
-strStela --|> valStela
-verStela --|> valStela
 @enduml
 @startuml inline_umlgraph_16.png
 package "Result Hierarchy" {
     class "stela" as stela {
-        + sub(name) : stela&
-        + sub(index) : stela&
-        + operator[](name) : stela&
-        + add(child) : void
-        + del(name) : void
-        + has(name) : nbool
-        + len() : ncnt
         + asInt() : int
         + asStr() : string
-        + accept(info, visitor) : void
+        + sub(name) : stela&
+        + operator[](name) : stela&
     }
 
     class "valStela" as valStela
-    class "strStela" as strStela
     class "verStela" as verStela
-    class "arrStela" as arrStela
     class "nulStela" as nulStela
 }
 
 stelaParser ..> stela : Create
 
 valStela --|> stela
-arrStela --|> stela
+verStela --|> stela
 nulStela --|> stela
-strStela --|> valStela
-verStela --|> valStela
 @enduml
 @startuml inline_umlgraph_17.png
 package "Parser Layer" {
@@ -1389,47 +1342,6 @@ indentScan --|> tokenScan
 parser ..> stelaParser : Event Callback
 @enduml
 @startuml inline_umlgraph_18.png
-participant "stelaVisitor" as visitor
-participant "stela" as node
-participant "child" as child
-
-visitor -> node : accept(info, visitor)
-activate node
-node -> visitor : visit(info, *this)
-deactivate node
-
-activate visitor
-
-note right of visitor
-  <b>1) onVisit</b>
-  노드를 살펴본다.
-  false를 반환하면
-  그 아래로 내려가지 않는다.
-end note
-
-visitor -> visitor : onVisit(info, it)
-
-note right of visitor
-  <b>2) onTraverse</b>
-  자식으로 내려간다.
-  기본 구현은 자식 map을 순회한다.
-end note
-
-visitor -> visitor : onTraverse(info, it)
-visitor -> child : accept(childInfo, visitor)
-activate child
-child -> visitor : visit(childInfo, *this)
-deactivate child
-
-note right of visitor
-  <b>3) onLeave</b>
-  자식까지 모두 끝난 뒤 불린다.
-end note
-
-visitor -> visitor : onLeave(info, it)
-deactivate visitor
-@enduml
-@startuml inline_umlgraph_19.png
 participant "stelaParser" as parser
 participant "normalScan" as normalScan
 participant "indentScan" as indentScan
@@ -1587,7 +1499,7 @@ deactivate normalScan
 
 parser -> parser : Process DEF token
 @enduml
-@startuml inline_umlgraph_20.png
+@startuml inline_umlgraph_19.png
 actor "User/CLI" as user
 participant "interpreter" as ip
 participant "parser" as pa
@@ -1676,7 +1588,7 @@ node --> s: final output
 s --> user: output
 deactivate s
 @enduml
-@startuml inline_umlgraph_21.png
+@startuml inline_umlgraph_20.png
 package container {
   class tnarr
   class tnmap
@@ -1785,7 +1697,7 @@ interpreter *-- expander
 interpreter *-- verifier
 parser --> AST: make AST
 @enduml
-@startuml inline_umlgraph_22.png
+@startuml inline_umlgraph_21.png
 abstract class "node" as node {
     + eval(args) : str
     + infer() : str
@@ -1864,7 +1776,7 @@ func *-- blockExpr
 obj *-- scope
 scope o-- "n" node
 @enduml
-@startuml inline_umlgraph_23.png
+@startuml inline_umlgraph_22.png
 abstract class node {
     + subs() : scope&
     + eval(args) : str
@@ -1965,7 +1877,7 @@ note bottom of nInt
   (Defined in C++)
 end note
 @enduml
-@startuml inline_umlgraph_24.png
+@startuml inline_umlgraph_23.png
 abstract class "expr" as expr {
     + eval(thread&) : str
     + run(thread&) : str
@@ -2069,7 +1981,7 @@ retStateExpr <|-- retExpr
 retStateExpr <|-- breakExpr
 retStateExpr <|-- continueExpr
 @enduml
-@startuml inline_umlgraph_25.png
+@startuml inline_umlgraph_24.png
 package "Container Interface" {
     abstract class "tucontainable<T, R, RSquare>" as tucontainable {
         + operator[](idx) : R
@@ -2158,7 +2070,7 @@ tnarr <|-- arr
 tnmap <|-- map
 tnseq <|-- seq
 @enduml
-@startuml inline_umlgraph_26.png
+@startuml inline_umlgraph_25.png
 object "chn1" as chn1 {
     _container = tnmap
     {"0": node(0), "1": node(1)}
@@ -2224,7 +2136,7 @@ chn2 -right-> chn3 : next
 chn2 -left-> chn1 : prev
 chn3 -left-> chn2 : prev
 @enduml
-@startuml inline_umlgraph_27.png
+@startuml inline_umlgraph_26.png
 participant "User Code" as user
 participant "getGenericExpr" as expr
 participant "genericOrigin" as genOrigin
@@ -2291,7 +2203,7 @@ deactivate genOrigin
 expr --> user : Return origin
 deactivate expr
 @enduml
-@startuml inline_umlgraph_28.png
+@startuml inline_umlgraph_27.png
 package "Native Environment (C++)" {
     class "window" as window {
         - _y : int
@@ -2375,7 +2287,7 @@ tbridge ..> origin
 nInt .up.> tmarshaling : Convert to c++ int
 nStr .up.> tmarshaling : Convert to c++ std::string
 @enduml
-@startuml inline_umlgraph_29.png
+@startuml inline_umlgraph_28.png
 actor "Byeol Code" as byeol
 participant "tbridge<window>" as tbridge
 participant "tbridgeFunc" as tbridgeFunc
@@ -2551,7 +2463,7 @@ end note
 
 deactivate byeol
 @enduml
-@startuml inline_umlgraph_30.png
+@startuml inline_umlgraph_29.png
 class thread {
     - _frames : frames
     - _errReport : errReport*
@@ -2611,7 +2523,7 @@ frames "1" *-- "0..*" frame : Manage
 frame "1" *-- "1..*" scope : Integrate
 scope "1" *-- "1" tnchain : Base
 @enduml
-@startuml inline_umlgraph_31.png
+@startuml inline_umlgraph_30.png
 start
 
 :Request search by symbol name;
@@ -2644,7 +2556,7 @@ partition "Chain of Responsibility" {
 
 stop
 @enduml
-@startuml inline_umlgraph_32.png
+@startuml inline_umlgraph_31.png
 actor "User Code" as user
 participant "pod" as loader
 participant "autopod" as autopod
@@ -2810,7 +2722,7 @@ deactivate podLoading
 autopod --> user : Return symbol or error
 deactivate autopod
 @enduml
-@startuml inline_umlgraph_33.png
+@startuml inline_umlgraph_32.png
 [*] --> RELEASED : Create autopod
 
 state RELEASED {
@@ -2870,7 +2782,7 @@ note right of LINKED
   depending on this as failed
 end note
 @enduml
-@startuml inline_umlgraph_34.png
+@startuml inline_umlgraph_33.png
 participant "Client" as client
 participant "visitor" as visitor
 participant "func (node)" as func
@@ -3041,7 +2953,7 @@ deactivate visitor
 func --> client : Traversal complete
 deactivate func
 @enduml
-@startuml inline_umlgraph_35.png
+@startuml inline_umlgraph_34.png
 participant "Client" as client
 participant "visitor\n(verifier)" as visitor
 participant "node*\n(Runtime Type:\nnInt)" as node
@@ -3097,7 +3009,7 @@ deactivate node
 visitor --> client
 deactivate visitor
 @enduml
-@startuml inline_umlgraph_36.png
+@startuml inline_umlgraph_35.png
 actor "User" as user
 participant "parser" as parser
 participant "expander" as expander
@@ -3216,7 +3128,7 @@ deactivate ast
 interpreter --> user : Execution result
 deactivate interpreterp
 @enduml
-@startuml inline_umlgraph_37.png
+@startuml inline_umlgraph_36.png
 package "Callstack Composition" {
     class "frames" as frames {
         - _stack : tnarr<frame>
@@ -3299,7 +3211,7 @@ nerr --|> baseErr
 errReport o-- "n" baseErr : Collect
 nerr --> errCode : Use
 @enduml
-@startuml inline_umlgraph_38.png
+@startuml inline_umlgraph_37.png
 participant "verifier/parser" as worker
 participant "node" as node
 participant "nerr" as nerr
@@ -3452,7 +3364,7 @@ end note
 
 deactivate frame
 @enduml
-@startuml inline_umlgraph_39.png
+@startuml inline_umlgraph_38.png
 package "Core Module" {
     class "tworker<programRes, flagArgs>" as tworker {
     }
@@ -3486,7 +3398,7 @@ package "Frontend Module" {
     cli "1" *-- "many" flag : Manage
 }
 @enduml
-@startuml inline_umlgraph_40.png
+@startuml inline_umlgraph_39.png
 actor User
 participant "cli" as cli
 participant "flagArgs" as flags
@@ -3536,7 +3448,7 @@ end
 
 deactivate cli
 @enduml
-@startuml inline_umlgraph_41.png
+@startuml inline_umlgraph_40.png
 abstract class flag {
     + take(flagArgs, cli, interpreter, starter) : res
     # {abstract} _getRegExpr() : strings&
@@ -3610,7 +3522,7 @@ note bottom of bufferSrcFlag
   Add code string as bufSupply
 end note
 @enduml
-@startuml inline_umlgraph_42.png
+@startuml inline_umlgraph_41.png
 participant "cli" as c
 participant "arguments" as a
 participant "flag" as f

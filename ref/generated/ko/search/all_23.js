@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['결과물_0',['pod 클래스 - pod의 결과물',['../ak-architecture-core.html#autotoc_md440',1,'']]],
-  ['결과_20검증_1',['파싱 결과 검증',['../an-testing-guide.html#autotoc_md523',1,'']]]
+  ['결과물_0',['pod 클래스 - pod의 결과물',['../ak-architecture-core.html#autotoc_md432',1,'']]],
+  ['결과_20검증_1',['파싱 결과 검증',['../an-testing-guide.html#autotoc_md515',1,'']]]
 ];
