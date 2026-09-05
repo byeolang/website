@@ -9,18 +9,7 @@ var group__stela =
     ] ],
     [ "by::point", "structby_1_1point.html", null ],
     [ "by::area", "structby_1_1area.html", null ],
-    [ "by::stela", "classby_1_1stela.html", [
-      [ "stela", "classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163", null ],
-      [ "add", "classby_1_1stela.html#a0b2f66a7e4de8302ceb4d5898eb45c75", null ],
-      [ "add", "classby_1_1stela.html#a2040bd961bd3df0f3544c20b6f0df0a4", null ],
-      [ "add", "classby_1_1stela.html#af0972c02471ab7877a31507945dcd1b6", null ],
-      [ "asBool", "classby_1_1stela.html#acd5b8e1aa12105bdadf07fc197113284", null ],
-      [ "asChar", "classby_1_1stela.html#ade9f6865e42459e4cd3348912fac604c", null ],
-      [ "asInt", "classby_1_1stela.html#a67b76252cb3535b91157d46430826611", null ],
-      [ "asStr", "classby_1_1stela.html#a14f7c34ed4fd17bc16daad2a41669411", null ],
-      [ "isExist", "classby_1_1stela.html#a0f135d3a966dde9b13386358142111aa", null ],
-      [ "operator nbool", "classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650", null ]
-    ] ],
+    [ "by::strStela", "classby_1_1str_stela.html", null ],
     [ "by::valStela", "classby_1_1val_stela.html", [
       [ "asBool", "classby_1_1val_stela.html#aa4487667d04a78efb8c54e1daa26603c", null ],
       [ "asChar", "classby_1_1val_stela.html#a37f0e6ef1ed3647449cca6cfc6502549", null ],
@@ -74,5 +63,11 @@ var group__stela =
     [ "by::stelaTokenScanable", "classby_1_1stela_token_scanable.html", [
       [ "onScan", "classby_1_1stela_token_scanable.html#a8015252731a807792d7b4259dfd50686", null ],
       [ "onScan", "classby_1_1stela_token_scanable.html#a90e07f1a1661efce2498fe520694fd0c", null ]
+    ] ],
+    [ "by::stelaVisitInfo", "classby_1_1stela_visit_info.html", null ],
+    [ "by::stelaVisitor", "classby_1_1stela_visitor.html", null ],
+    [ "by::stelaWriter", "classby_1_1stela_writer.html", [
+      [ "write", "classby_1_1stela_writer.html#a17d3f204bb0f74664134d5ea53e67cc9", null ],
+      [ "writeFile", "classby_1_1stela_writer.html#a672aed820f4d3198cae5138212e50cc5", null ]
     ] ]
 ];

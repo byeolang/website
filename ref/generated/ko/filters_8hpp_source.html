@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/byeol/byeol/module/clog/filter/filters.hpp 소스 파일</title>
+<title>byeol: _deps/stela_dep-src/module/clog/filter/filters.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
@@ -135,7 +135,7 @@ $(function(){initNavTree('filters_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_class" href="classby_1_1filters.html">filters</a>() {}</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a6eff2a58e971d5e86dc9bc9c1af6b8c5">   29</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Es&gt; <span class="keyword">explicit</span> <a class="code hl_function" href="classby_1_1filters.html#a6eff2a58e971d5e86dc9bc9c1af6b8c5">filters</a>(<span class="keyword">const</span> Es*... elems) { (add(elems), ...); }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a6eff2a58e971d5e86dc9bc9c1af6b8c5">   29</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... <a class="code hl_class" href="classby_1_1tweak.html">Es</a>&gt; <span class="keyword">explicit</span> <a class="code hl_function" href="classby_1_1filters.html#a6eff2a58e971d5e86dc9bc9c1af6b8c5">filters</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1tweak.html">Es</a>*... <a class="code hl_class" href="classby_1_1tweak.html">elems</a>) { (add(<a class="code hl_class" href="classby_1_1tweak.html">elems</a>), ...); }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classby_1_1filters.html">~filters</a>();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -145,7 +145,7 @@ $(function(){initNavTree('filters_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a7bdf89e8fb124b193c9264f1564004b1">   43</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1filters.html#a7bdf89e8fb124b193c9264f1564004b1">add</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1filterable.html">filterable</a>&amp; new1);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#aeda278e5a34f87e9588855aa1b718d24">   48</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1filters.html#aeda278e5a34f87e9588855aa1b718d24">add</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1filterable.html">filterable</a>* new1);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a9c802685b95256a394d5450791dfebe5">   53</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classby_1_1filters.html#a9c802685b95256a394d5450791dfebe5">del</a>();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a4d602b2e3ef7dca6f6197f7e4f3140d1">   62</a></span>        nbool <a class="code hl_function" href="classby_1_1filters.html#a4d602b2e3ef7dca6f6197f7e4f3140d1">filt</a>(errLv::level lv, <span class="keyword">const</span> std::string&amp; tag) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classby_1_1filters.html#a4d602b2e3ef7dca6f6197f7e4f3140d1">   62</a></span>        <a class="code hl_class" href="classby_1_1tweak.html">nbool</a> <a class="code hl_function" href="classby_1_1filters.html#a4d602b2e3ef7dca6f6197f7e4f3140d1">filt</a>(errLv::level lv, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classby_1_1tweak.html">tag</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::vector&lt;const filterable*&gt; _arr;</div>
@@ -160,10 +160,12 @@ $(function(){initNavTree('filters_8hpp_source.html',''); initResizable(); });
 <div class="ttc" id="aclassby_1_1filters_html_a7bdf89e8fb124b193c9264f1564004b1"><div class="ttname"><a href="classby_1_1filters.html#a7bdf89e8fb124b193c9264f1564004b1">by::filters::add</a></div><div class="ttdeci">void add(const filterable &amp;new1)</div><div class="ttdoc">Adds a filterable object to the collection.</div></div>
 <div class="ttc" id="aclassby_1_1filters_html_a9c802685b95256a394d5450791dfebe5"><div class="ttname"><a href="classby_1_1filters.html#a9c802685b95256a394d5450791dfebe5">by::filters::del</a></div><div class="ttdeci">void del()</div><div class="ttdoc">Deletes all owned filterable objects and clears the collection.</div></div>
 <div class="ttc" id="aclassby_1_1filters_html_aeda278e5a34f87e9588855aa1b718d24"><div class="ttname"><a href="classby_1_1filters.html#aeda278e5a34f87e9588855aa1b718d24">by::filters::add</a></div><div class="ttdeci">void add(const filterable *new1)</div><div class="ttdoc">Adds a filterable object to the collection.</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
 <div class="ttc" id="afilterable_8hpp_html"><div class="ttname"><a href="filterable_8hpp.html">filterable.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

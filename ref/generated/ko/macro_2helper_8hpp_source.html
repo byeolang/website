@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/byeol/byeol/module/indep/macro/helper.hpp 소스 파일</title>
+<title>byeol: _deps/indep_dep-src/module/indep/macro/helper.hpp 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
@@ -145,13 +145,15 @@ $(function(){initNavTree('macro_2helper_8hpp_source.html',''); initResizable(); 
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define BY_CONCAT(x, y) _CONCAT(x, y)</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//    why delaying comma expression?:</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//        it can causes delimiter issue on expanding macros for template parameters.</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define _COMMA() ,</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define BY_COMMA() BY_DELAY(_COMMA)()</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define __FILENAME__ (strrchr(__FILE__, &#39;/&#39;) ? strrchr(__FILE__, &#39;/&#39;) + 1 : __FILE__)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//        it can causes delimiter issue on expanding macros for template</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//        parameters.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define _COMMA() ,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define BY_COMMA() BY_DELAY(_COMMA)()</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define __FILENAME__ (strrchr(__FILE__, &#39;/&#39;) ? strrchr(__FILE__, &#39;/&#39;) + 1 : __FILE__)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

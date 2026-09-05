@@ -97,121 +97,113 @@ var ae_architecture_overview =
         [ "stela 클래스", "aj-architecture-stela.html#autotoc_md294", null ],
         [ "nulStela 클래스 - Null Object 패턴", "aj-architecture-stela.html#autotoc_md295", null ],
         [ "valStela 클래스 - Scalar 값 표현", "aj-architecture-stela.html#autotoc_md296", null ],
-        [ "strStela 클래스 - 문자열 값", "aj-architecture-stela.html#autotoc_md297", null ],
-        [ "verStela 클래스 - 버전 타입", "aj-architecture-stela.html#autotoc_md298", null ],
-        [ "arrStela 클래스 - 배열", "aj-architecture-stela.html#autotoc_md299", null ]
+        [ "verStela 클래스 - 버전 타입", "aj-architecture-stela.html#autotoc_md297", null ]
       ] ],
-      [ "stela 파서 구조", "aj-architecture-stela.html#autotoc_md301", [
-        [ "stelaParser 클래스 - 파싱 진입점", "aj-architecture-stela.html#autotoc_md302", null ]
+      [ "stela 파서 구조", "aj-architecture-stela.html#autotoc_md299", [
+        [ "stelaParser 클래스 - 파싱 진입점", "aj-architecture-stela.html#autotoc_md300", null ]
       ] ],
-      [ "Indentation 처리", "aj-architecture-stela.html#autotoc_md304", [
-        [ "indentation rule", "aj-architecture-stela.html#autotoc_md305", null ],
-        [ "tokenDispatcher", "aj-architecture-stela.html#autotoc_md306", null ],
-        [ "stelaTokenScan 클래스 - 스캔 모드 전략", "aj-architecture-stela.html#autotoc_md307", null ],
-        [ "stelaSmartDedent 클래스 - Scope 관리", "aj-architecture-stela.html#autotoc_md308", null ]
+      [ "Indentation 처리", "aj-architecture-stela.html#autotoc_md302", [
+        [ "indentation rule", "aj-architecture-stela.html#autotoc_md303", null ],
+        [ "tokenDispatcher", "aj-architecture-stela.html#autotoc_md304", null ],
+        [ "stelaTokenScan 클래스 - 스캔 모드 전략", "aj-architecture-stela.html#autotoc_md305", null ],
+        [ "stelaSmartDedent 클래스 - Scope 관리", "aj-architecture-stela.html#autotoc_md306", null ]
       ] ],
-      [ "Visitor와 직렬화", "aj-architecture-stela.html#autotoc_md310", [
-        [ "stelaVisitor 클래스 - 트리 순회", "aj-architecture-stela.html#autotoc_md311", null ],
-        [ "accept와 VISIT 매크로", "aj-architecture-stela.html#autotoc_md312", null ],
-        [ "stelaVisitInfo 클래스 - 순회 문맥", "aj-architecture-stela.html#autotoc_md313", null ],
-        [ "stelaWriter 클래스", "aj-architecture-stela.html#autotoc_md314", null ]
-      ] ],
-      [ "정리하기", "aj-architecture-stela.html#autotoc_md316", null ]
+      [ "정리하기", "aj-architecture-stela.html#autotoc_md308", null ]
     ] ],
     [ "core 모듈 - 언어 구현의 핵심", "ak-architecture-core.html", [
-      [ "주요 흐름", "ak-architecture-core.html#autotoc_md318", null ],
-      [ "개요를 마무리하며", "ak-architecture-core.html#autotoc_md320", null ],
-      [ "Native와 Scripted", "ak-architecture-core.html#autotoc_md322", null ],
-      [ "AST 기본 구조", "ak-architecture-core.html#autotoc_md324", [
-        [ "node 클래스 - AST의 기반", "ak-architecture-core.html#autotoc_md325", null ],
-        [ "src, srcFile 클래스 - 소스 위치 정보", "ak-architecture-core.html#autotoc_md337", null ],
-        [ "args 클래스 - 함수 인자", "ak-architecture-core.html#autotoc_md339", null ],
-        [ "param 클래스 - 파라메터 정의", "ak-architecture-core.html#autotoc_md341", null ]
+      [ "주요 흐름", "ak-architecture-core.html#autotoc_md310", null ],
+      [ "개요를 마무리하며", "ak-architecture-core.html#autotoc_md312", null ],
+      [ "Native와 Scripted", "ak-architecture-core.html#autotoc_md314", null ],
+      [ "AST 기본 구조", "ak-architecture-core.html#autotoc_md316", [
+        [ "node 클래스 - AST의 기반", "ak-architecture-core.html#autotoc_md317", null ],
+        [ "src, srcFile 클래스 - 소스 위치 정보", "ak-architecture-core.html#autotoc_md329", null ],
+        [ "args 클래스 - 함수 인자", "ak-architecture-core.html#autotoc_md331", null ],
+        [ "param 클래스 - 파라메터 정의", "ak-architecture-core.html#autotoc_md333", null ]
       ] ],
-      [ "객체 모델", "ak-architecture-core.html#autotoc_md343", [
-        [ "baseObj 클래스 - 객체의 기반", "ak-architecture-core.html#autotoc_md345", null ],
-        [ "obj 클래스 - script 객체", "ak-architecture-core.html#autotoc_md350", null ],
-        [ "origin 클래스 - 타입의 원본", "ak-architecture-core.html#autotoc_md353", null ],
-        [ "tbaseObjOrigin 클래스 - baseObj Origin 템플릿", "ak-architecture-core.html#autotoc_md356", null ],
-        [ "modifier 클래스 - 접근 제한자", "ak-architecture-core.html#autotoc_md359", null ],
-        [ "defaultCopyCtor 클래스 - 기본 복사 생성자", "ak-architecture-core.html#autotoc_md361", null ],
-        [ "immutableTactic 클래스 - Immutable 타입 처리", "ak-architecture-core.html#autotoc_md363", null ],
-        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md365", null ],
-        [ "tmock 클래스 - Proxy 객체", "ak-architecture-core.html#autotoc_md367", null ]
+      [ "객체 모델", "ak-architecture-core.html#autotoc_md335", [
+        [ "baseObj 클래스 - 객체의 기반", "ak-architecture-core.html#autotoc_md337", null ],
+        [ "obj 클래스 - script 객체", "ak-architecture-core.html#autotoc_md342", null ],
+        [ "origin 클래스 - 타입의 원본", "ak-architecture-core.html#autotoc_md345", null ],
+        [ "tbaseObjOrigin 클래스 - baseObj Origin 템플릿", "ak-architecture-core.html#autotoc_md348", null ],
+        [ "modifier 클래스 - 접근 제한자", "ak-architecture-core.html#autotoc_md351", null ],
+        [ "defaultCopyCtor 클래스 - 기본 복사 생성자", "ak-architecture-core.html#autotoc_md353", null ],
+        [ "immutableTactic 클래스 - Immutable 타입 처리", "ak-architecture-core.html#autotoc_md355", null ],
+        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md357", null ],
+        [ "tmock 클래스 - Proxy 객체", "ak-architecture-core.html#autotoc_md359", null ]
       ] ],
-      [ "표현식 (Expression) 시스템", "ak-architecture-core.html#autotoc_md369", [
-        [ "FBOExpr, FUOExpr 클래스 - 연산자 표현식", "ak-architecture-core.html#autotoc_md371", null ],
-        [ "assignExpr 클래스 - 할당 표현식", "ak-architecture-core.html#autotoc_md373", null ],
-        [ "blockExpr 클래스 - 블록 표현식", "ak-architecture-core.html#autotoc_md375", null ],
-        [ "defArrayExpr 클래스 - 배열 리터럴", "ak-architecture-core.html#autotoc_md377", null ],
-        [ "defNestedFuncExpr 클래스 - 중첩 함수 정의", "ak-architecture-core.html#autotoc_md379", null ],
-        [ "defSeqExpr 클래스 - 시퀀스 표현식", "ak-architecture-core.html#autotoc_md381", null ],
-        [ "endExpr 클래스 - End 키워드", "ak-architecture-core.html#autotoc_md383", null ],
-        [ "retStateExpr 클래스 - 블록 종료 키워드", "ak-architecture-core.html#autotoc_md385", null ]
+      [ "표현식 (Expression) 시스템", "ak-architecture-core.html#autotoc_md361", [
+        [ "FBOExpr, FUOExpr 클래스 - 연산자 표현식", "ak-architecture-core.html#autotoc_md363", null ],
+        [ "assignExpr 클래스 - 할당 표현식", "ak-architecture-core.html#autotoc_md365", null ],
+        [ "blockExpr 클래스 - 블록 표현식", "ak-architecture-core.html#autotoc_md367", null ],
+        [ "defArrayExpr 클래스 - 배열 리터럴", "ak-architecture-core.html#autotoc_md369", null ],
+        [ "defNestedFuncExpr 클래스 - 중첩 함수 정의", "ak-architecture-core.html#autotoc_md371", null ],
+        [ "defSeqExpr 클래스 - 시퀀스 표현식", "ak-architecture-core.html#autotoc_md373", null ],
+        [ "endExpr 클래스 - End 키워드", "ak-architecture-core.html#autotoc_md375", null ],
+        [ "retStateExpr 클래스 - 블록 종료 키워드", "ak-architecture-core.html#autotoc_md377", null ]
       ] ],
-      [ "컨테이너 시스템", "ak-architecture-core.html#autotoc_md387", [
-        [ "tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스", "ak-architecture-core.html#autotoc_md388", null ],
-        [ "tnchain 클래스 - Chain으로 연결되는 컨테이너", "ak-architecture-core.html#autotoc_md393", null ],
-        [ "arr 클래스 - scripted 배열", "ak-architecture-core.html#autotoc_md397", null ],
-        [ "nseq 클래스 - 범위형 컨테이너", "ak-architecture-core.html#autotoc_md399", null ],
-        [ "smultimap 클래스 - 삽입 순서를 기억하는 Multimap", "ak-architecture-core.html#autotoc_md401", null ]
+      [ "컨테이너 시스템", "ak-architecture-core.html#autotoc_md379", [
+        [ "tucontainable, tbicontainable 클래스 - 컨테이너 인터페이스", "ak-architecture-core.html#autotoc_md380", null ],
+        [ "tnchain 클래스 - Chain으로 연결되는 컨테이너", "ak-architecture-core.html#autotoc_md385", null ],
+        [ "arr 클래스 - scripted 배열", "ak-architecture-core.html#autotoc_md389", null ],
+        [ "nseq 클래스 - 범위형 컨테이너", "ak-architecture-core.html#autotoc_md391", null ],
+        [ "smultimap 클래스 - 삽입 순서를 기억하는 Multimap", "ak-architecture-core.html#autotoc_md393", null ]
       ] ],
-      [ "Generic 시스템", "ak-architecture-core.html#autotoc_md404", [
-        [ "getGenericExpr 클래스 - Generic 타입 참조의 진입점", "ak-architecture-core.html#autotoc_md406", null ],
-        [ "genericOrigin 클래스 - Generic 타입의 생성과 관리", "ak-architecture-core.html#autotoc_md408", null ],
-        [ "generalizer 클래스 - Generic 타입의 구체화", "ak-architecture-core.html#autotoc_md410", null ]
+      [ "Generic 시스템", "ak-architecture-core.html#autotoc_md396", [
+        [ "getGenericExpr 클래스 - Generic 타입 참조의 진입점", "ak-architecture-core.html#autotoc_md398", null ],
+        [ "genericOrigin 클래스 - Generic 타입의 생성과 관리", "ak-architecture-core.html#autotoc_md400", null ],
+        [ "generalizer 클래스 - Generic 타입의 구체화", "ak-architecture-core.html#autotoc_md402", null ]
       ] ],
-      [ "Native-Script 브리징", "ak-architecture-core.html#autotoc_md412", [
-        [ "tbridger 클래스 - Bridge 컴포넌트의 진입점", "ak-architecture-core.html#autotoc_md414", null ],
-        [ "tbridge 클래스 - Native 클래스의 Script 표현", "ak-architecture-core.html#autotoc_md416", null ],
-        [ "tmock 클래스 - Proxy와 Dummy 객체", "ak-architecture-core.html#autotoc_md418", null ]
+      [ "Native-Script 브리징", "ak-architecture-core.html#autotoc_md404", [
+        [ "tbridger 클래스 - Bridge 컴포넌트의 진입점", "ak-architecture-core.html#autotoc_md406", null ],
+        [ "tbridge 클래스 - Native 클래스의 Script 표현", "ak-architecture-core.html#autotoc_md408", null ],
+        [ "tmock 클래스 - Proxy와 Dummy 객체", "ak-architecture-core.html#autotoc_md410", null ]
       ] ],
-      [ "스코프와 실행 컨텍스트", "ak-architecture-core.html#autotoc_md420", [
-        [ "scope 클래스 - Symbol 저장소", "ak-architecture-core.html#autotoc_md422", null ],
-        [ "frame 클래스 - Scope들의 동적 연결", "ak-architecture-core.html#autotoc_md428", null ],
-        [ "frames 클래스 - Frame 적층 관리", "ak-architecture-core.html#autotoc_md431", null ],
-        [ "thread 클래스 - 실행 흐름의 관리자", "ak-architecture-core.html#autotoc_md433", null ]
+      [ "스코프와 실행 컨텍스트", "ak-architecture-core.html#autotoc_md412", [
+        [ "scope 클래스 - Symbol 저장소", "ak-architecture-core.html#autotoc_md414", null ],
+        [ "frame 클래스 - Scope들의 동적 연결", "ak-architecture-core.html#autotoc_md420", null ],
+        [ "frames 클래스 - Frame 적층 관리", "ak-architecture-core.html#autotoc_md423", null ],
+        [ "thread 클래스 - 실행 흐름의 관리자", "ak-architecture-core.html#autotoc_md425", null ]
       ] ],
-      [ "패키지 시스템", "ak-architecture-core.html#autotoc_md436", [
-        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md438", null ],
-        [ "pod 클래스 - pod의 결과물", "ak-architecture-core.html#autotoc_md440", null ],
-        [ "autopod 클래스 - Lazy pod 로딩", "ak-architecture-core.html#autotoc_md442", null ],
-        [ "podLoader 클래스 - pod 로더", "ak-architecture-core.html#autotoc_md447", null ],
-        [ "podLoading 클래스 - Pod 로딩 추상 클래스", "ak-architecture-core.html#autotoc_md450", null ],
-        [ "cppPodLoading 클래스 - C++ Pod 로더", "ak-architecture-core.html#autotoc_md452", null ]
+      [ "패키지 시스템", "ak-architecture-core.html#autotoc_md428", [
+        [ "manifest 클래스 - pod 메타데이터", "ak-architecture-core.html#autotoc_md430", null ],
+        [ "pod 클래스 - pod의 결과물", "ak-architecture-core.html#autotoc_md432", null ],
+        [ "autopod 클래스 - Lazy pod 로딩", "ak-architecture-core.html#autotoc_md434", null ],
+        [ "podLoader 클래스 - pod 로더", "ak-architecture-core.html#autotoc_md439", null ],
+        [ "podLoading 클래스 - Pod 로딩 추상 클래스", "ak-architecture-core.html#autotoc_md442", null ],
+        [ "cppPodLoading 클래스 - C++ Pod 로더", "ak-architecture-core.html#autotoc_md444", null ]
       ] ],
-      [ "Visitor 패턴 및 AST 순회", "ak-architecture-core.html#autotoc_md454", [
-        [ "visitor 클래스 - AST 순회의 핵심", "ak-architecture-core.html#autotoc_md456", null ],
-        [ "graphVisitor 클래스 - AST 로깅", "ak-architecture-core.html#autotoc_md460", null ]
+      [ "Visitor 패턴 및 AST 순회", "ak-architecture-core.html#autotoc_md446", [
+        [ "visitor 클래스 - AST 순회의 핵심", "ak-architecture-core.html#autotoc_md448", null ],
+        [ "graphVisitor 클래스 - AST 로깅", "ak-architecture-core.html#autotoc_md452", null ]
       ] ],
-      [ "파싱", "ak-architecture-core.html#autotoc_md462", [
-        [ "parser 클래스 - 파싱의 진입점", "ak-architecture-core.html#autotoc_md464", null ],
-        [ "smartDedent, tokenScan 클래스 - Indentation 관리", "ak-architecture-core.html#autotoc_md467", null ],
-        [ "srcSupply 클래스 - 소스 코드 공급 추상화", "ak-architecture-core.html#autotoc_md469", null ],
-        [ "expander 클래스 - 사전 타입 추론", "ak-architecture-core.html#autotoc_md471", null ]
+      [ "파싱", "ak-architecture-core.html#autotoc_md454", [
+        [ "parser 클래스 - 파싱의 진입점", "ak-architecture-core.html#autotoc_md456", null ],
+        [ "smartDedent, tokenScan 클래스 - Indentation 관리", "ak-architecture-core.html#autotoc_md459", null ],
+        [ "srcSupply 클래스 - 소스 코드 공급 추상화", "ak-architecture-core.html#autotoc_md461", null ],
+        [ "expander 클래스 - 사전 타입 추론", "ak-architecture-core.html#autotoc_md463", null ]
       ] ],
-      [ "코드 검증", "ak-architecture-core.html#autotoc_md474", [
-        [ "tworker 클래스 - 배치 작업의 기반", "ak-architecture-core.html#autotoc_md475", null ],
-        [ "verifier 클래스 - 코드 검증", "ak-architecture-core.html#autotoc_md480", null ]
+      [ "코드 검증", "ak-architecture-core.html#autotoc_md466", [
+        [ "tworker 클래스 - 배치 작업의 기반", "ak-architecture-core.html#autotoc_md467", null ],
+        [ "verifier 클래스 - 코드 검증", "ak-architecture-core.html#autotoc_md472", null ]
       ] ],
-      [ "starter 클래스 - AST 실행", "ak-architecture-core.html#autotoc_md485", null ],
-      [ "sigZone 클래스 - Signal 처리", "ak-architecture-core.html#autotoc_md488", null ],
-      [ "에러 처리", "ak-architecture-core.html#autotoc_md490", [
-        [ "baseErr 클래스 - 에러의 기반", "ak-architecture-core.html#autotoc_md491", null ],
-        [ "errReport 클래스 - 에러 수집", "ak-architecture-core.html#autotoc_md492", null ],
-        [ "에러 처리흐름 정리", "ak-architecture-core.html#autotoc_md494", null ]
+      [ "starter 클래스 - AST 실행", "ak-architecture-core.html#autotoc_md477", null ],
+      [ "sigZone 클래스 - Signal 처리", "ak-architecture-core.html#autotoc_md480", null ],
+      [ "에러 처리", "ak-architecture-core.html#autotoc_md482", [
+        [ "baseErr 클래스 - 에러의 기반", "ak-architecture-core.html#autotoc_md483", null ],
+        [ "errReport 클래스 - 에러 수집", "ak-architecture-core.html#autotoc_md484", null ],
+        [ "에러 처리흐름 정리", "ak-architecture-core.html#autotoc_md486", null ]
       ] ],
-      [ "core 모듈을 마무리 하며", "ak-architecture-core.html#autotoc_md496", null ]
+      [ "core 모듈을 마무리 하며", "ak-architecture-core.html#autotoc_md488", null ]
     ] ],
     [ "frontend 모듈 - CLI 인터페이스", "al-architecture-frontend.html", [
-      [ "cli 클래스 - Frontend의 핵심", "al-architecture-frontend.html#autotoc_md499", null ],
-      [ "flag 클래스 - 명령줄 플래그 처리", "al-architecture-frontend.html#autotoc_md501", [
-        [ "기본 동작", "al-architecture-frontend.html#autotoc_md502", null ],
-        [ "정규식에 의한 패턴매칭", "al-architecture-frontend.html#autotoc_md503", null ],
-        [ "복수 패턴 매칭", "al-architecture-frontend.html#autotoc_md504", null ],
-        [ "복수의 flag 인자를 consume하기", "al-architecture-frontend.html#autotoc_md505", null ],
-        [ "중단 가능한 flag", "al-architecture-frontend.html#autotoc_md506", null ]
+      [ "cli 클래스 - Frontend의 핵심", "al-architecture-frontend.html#autotoc_md491", null ],
+      [ "flag 클래스 - 명령줄 플래그 처리", "al-architecture-frontend.html#autotoc_md493", [
+        [ "기본 동작", "al-architecture-frontend.html#autotoc_md494", null ],
+        [ "정규식에 의한 패턴매칭", "al-architecture-frontend.html#autotoc_md495", null ],
+        [ "복수 패턴 매칭", "al-architecture-frontend.html#autotoc_md496", null ],
+        [ "복수의 flag 인자를 consume하기", "al-architecture-frontend.html#autotoc_md497", null ],
+        [ "중단 가능한 flag", "al-architecture-frontend.html#autotoc_md498", null ]
       ] ],
-      [ "긴 여정을 함께하느라 고생하셨습니다.", "al-architecture-frontend.html#autotoc_md508", null ]
+      [ "긴 여정을 함께하느라 고생하셨습니다.", "al-architecture-frontend.html#autotoc_md500", null ]
     ] ]
 ];

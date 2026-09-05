@@ -129,23 +129,24 @@ $(function(){initNavTree('structby_1_1tname_getter.html',''); initResizable(); }
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 정적 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a43e076dbeb6089c975cce2ee5ae6d44d" id="r_a43e076dbeb6089c975cce2ee5ae6d44d"><td class="memItemLeft" align="right" valign="top"><a id="a43e076dbeb6089c975cce2ee5ae6d44d" name="a43e076dbeb6089c975cce2ee5ae6d44d"></a>
-<a class="el" href="structby_1_1no_wrap.html">static</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getRawName</b> ()</td></tr>
+<a class="el" href="classby_1_1tweak.html">static</a> <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">nchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getRawName</b> ()</td></tr>
 <tr class="separator:a43e076dbeb6089c975cce2ee5ae6d44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0360e303e33333f5d0fdbe50c45e75ca" id="r_a0360e303e33333f5d0fdbe50c45e75ca"><td class="memItemLeft" align="right" valign="top"><a id="a0360e303e33333f5d0fdbe50c45e75ca" name="a0360e303e33333f5d0fdbe50c45e75ca"></a>
-<a class="el" href="structby_1_1no_wrap.html">static</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<a class="el" href="classby_1_1tweak.html">static</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
 <tr class="separator:a0360e303e33333f5d0fdbe50c45e75ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T&gt;<br />
 struct by::tnameGetter&lt; T &gt;</div><p>Template name getter for type introspection </p>
 <p>TClass is a class template using monostate pattern. so it duplicates all static variables on each modules and it causes that can't check hierarchy properly. sure, I can exports them,template classes, as external symbol for 3rd party modules to link and make it act well. but this requires user to declare another macro or statements such as burden to get them be annoy. instead of that, I put those inside of static symbols at normal nested private class. now, TClass of course will be duplicated on each modules and code bloated but it will act like proxy pointing this nested class.</p>
 <p>in conclusion, users can ignore this background reasons and use CLASS macro without additional consideration. </p>
 </div><hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>/home/runner/work/byeol/byeol/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
+<li>_deps/stela_dep-src/module/meta/rtti/<a class="el" href="rtti_2rtti_8hpp_source.html">rtti.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

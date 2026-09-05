@@ -147,25 +147,26 @@ Public 멤버 함수</h2></td></tr>
 <p>In byeolang, end registers code to be executed when exiting the current function. In C++, this is implemented using RAII and is limited to scope boundaries rather than function boundaries.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p>Use the provided macros for convenient deferred execution: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">processFile</a>() {</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">FILE</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">f</a> = <a class="code hl_struct" href="structby_1_1no_wrap.html">fopen</a>(<span class="stringliteral">&quot;data.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line">    BY_END(<a class="code hl_struct" href="structby_1_1no_wrap.html">fclose</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">f</a>)); <span class="comment">// Automatically closes file when leaving scope</span></div>
+<p>Use the provided macros for convenient deferred execution: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_class" href="classby_1_1tweak.html">processFile</a>() {</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">FILE</a>* <a class="code hl_class" href="classby_1_1tweak.html">f</a> = <a class="code hl_class" href="classby_1_1tweak.html">fopen</a>(<span class="stringliteral">&quot;data.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line">    BY_END(<a class="code hl_class" href="classby_1_1tweak.html">fclose</a>(<a class="code hl_class" href="classby_1_1tweak.html">f</a>)); <span class="comment">// Automatically closes file when leaving scope</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Or use block form for multiple statements:</span></div>
 <div class="line">    BY_END_BLOCK({</div>
-<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">cleanupResource</a>();</div>
-<div class="line">        <a class="code hl_struct" href="structby_1_1no_wrap.html">logCompletion</a>();</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1tweak.html">cleanupResource</a>();</div>
+<div class="line">        <a class="code hl_class" href="classby_1_1tweak.html">logCompletion</a>();</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ... do work with file ...</span></div>
 <div class="line">} <span class="comment">// fclose(f) executes here automatically</span></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
 </div><!-- fragment --> </div><hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>/home/runner/work/byeol/byeol/module/indep/helper/<a class="el" href="end_8hpp_source.html">end.hpp</a></li>
+<li>_deps/indep_dep-src/module/indep/helper/<a class="el" href="end_8hpp_source.html">end.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

@@ -137,27 +137,27 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a8f35e4fbf2c848211db264ee5e2b6169" id="r_a8f35e4fbf2c848211db264ee5e2b6169"><td class="memItemLeft" align="right" valign="top">me &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f35e4fbf2c848211db264ee5e2b6169">useLater</a> ()</td></tr>
 <tr class="memdesc:a8f35e4fbf2c848211db264ee5e2b6169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables dedent tracking for future parsing, deferring any pending dedents.  <br /></td></tr>
 <tr class="separator:a8f35e4fbf2c848211db264ee5e2b6169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2fcb5f9d2c15b3640c191ff09cb98f7" id="r_af2fcb5f9d2c15b3640c191ff09cb98f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2fcb5f9d2c15b3640c191ff09cb98f7">dedent</a> ()</td></tr>
+<tr class="memitem:af2fcb5f9d2c15b3640c191ff09cb98f7" id="r_af2fcb5f9d2c15b3640c191ff09cb98f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2fcb5f9d2c15b3640c191ff09cb98f7">dedent</a> ()</td></tr>
 <tr class="memdesc:af2fcb5f9d2c15b3640c191ff09cb98f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates and returns a dedent token based on the internal count.  <br /></td></tr>
 <tr class="separator:af2fcb5f9d2c15b3640c191ff09cb98f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcc2648ad599fe49a79f67528594c85" id="r_a1bcc2648ad599fe49a79f67528594c85"><td class="memItemLeft" align="right" valign="top"><a id="a1bcc2648ad599fe49a79f67528594c85" name="a1bcc2648ad599fe49a79f67528594c85"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <tr class="separator:a1bcc2648ad599fe49a79f67528594c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfb9447e5f29081a999c0d349611476" id="r_afcfb9447e5f29081a999c0d349611476"><td class="memItemLeft" align="right" valign="top"><a id="afcfb9447e5f29081a999c0d349611476" name="afcfb9447e5f29081a999c0d349611476"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canDedent</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canDedent</b> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:afcfb9447e5f29081a999c0d349611476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e70c5328fe058746248ef9117657807" id="r_a4e70c5328fe058746248ef9117657807"><td class="memItemLeft" align="right" valign="top"><a id="a4e70c5328fe058746248ef9117657807" name="a4e70c5328fe058746248ef9117657807"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isOn</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isOn</b> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a4e70c5328fe058746248ef9117657807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>Smart dedent handler for indentation-based parsing </p>
 <p>A class that counts and manages in an array how many leading spaces exist whenever <a class="el" href="classby_1_1stela_parser.html">stelaParser</a> creates a scope based on indentation.</p>
-<p>For example, when parsing this stela code: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">def</a> config</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">def</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">device</a></div>
+<p>For example, when parsing this stela code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tweak.html">def</a> config</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">def</a> <a class="code hl_class" href="classby_1_1tweak.html">device</a></div>
 <div class="line">      name := <span class="stringliteral">&quot;my device&quot;</span></div>
 <div class="line"><span class="preprocessor">      # position 1</span></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
 </div><!-- fragment --><p>If the parser is parsing at position 1, <a class="el" href="classby_1_1smart_dedent.html" title="Smart indentation management for code parsing">smartDedent</a>'s internal array is [0, 4, 6]. This means the outermost scope's whitespace count is <a class="el" href="classby_1_1smart_dedent.html" title="Smart indentation management for code parsing">smartDedent</a>[0] = 0, and the innermost device scope's whitespace count is <a class="el" href="classby_1_1smart_dedent.html" title="Smart indentation management for code parsing">smartDedent</a>[smartDedent.len() - 1] = 6, meaning 6 leading spaces are required. </p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="af6c1a6369f8f5a6be1d7c1e000989d19" name="af6c1a6369f8f5a6be1d7c1e000989d19"></a>
@@ -207,7 +207,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nint</a> by::stelaSmartDedent::dedent </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nint</a> by::stelaSmartDedent::dedent </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -241,11 +241,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rel</b> ()</td></tr>
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>/home/runner/work/byeol/byeol/module/stela/parser/<a class="el" href="stela_smart_dedent_8hpp_source.html">stelaSmartDedent.hpp</a></li>
+<li>_deps/stela_dep-src/module/stela/parser/<a class="el" href="stela_smart_dedent_8hpp_source.html">stelaSmartDedent.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

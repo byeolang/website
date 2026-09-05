@@ -137,7 +137,7 @@ Inheritance diagram for by::errPassFilter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a039644372a909eec9ef88c5c0967ade6" id="r_a039644372a909eec9ef88c5c0967ade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a039644372a909eec9ef88c5c0967ade6">filt</a> (errLv::level <a class="el" href="structby_1_1no_wrap.html">lv</a>, <a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">tag</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:a039644372a909eec9ef88c5c0967ade6" id="r_a039644372a909eec9ef88c5c0967ade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a039644372a909eec9ef88c5c0967ade6">filt</a> (errLv::level lv, <a class="el" href="classby_1_1tweak.html">const</a> std::string &amp;<a class="el" href="classby_1_1tweak.html">tag</a>) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="memdesc:a039644372a909eec9ef88c5c0967ade6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a log entry should be filtered out.  <br /></td></tr>
 <tr class="separator:a039644372a909eec9ef88c5c0967ade6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -147,17 +147,17 @@ Public Member Functions</h2></td></tr>
 <p>Not used directly; instead, create an instance and add it to logger.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p>Example of using <a class="el" href="classby_1_1err_pass_filter.html" title="Filter that passes through error-level log messages only.">errPassFilter</a>: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classby_1_1filters.html">filters</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">prevFilters</a> = <a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().getFilters();</div>
-<div class="line"><a class="code hl_class" href="classby_1_1filters.html">filters</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">fs</a>(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1err_pass_filter.html">errPassFilter</a>());</div>
-<div class="line"><a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setFilters(<a class="code hl_struct" href="structby_1_1no_wrap.html">fs</a>);</div>
+<p>Example of using <a class="el" href="classby_1_1err_pass_filter.html" title="Filter that passes through error-level log messages only.">errPassFilter</a>: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classby_1_1filters.html">filters</a>&amp; <a class="code hl_class" href="classby_1_1tweak.html">prevFilters</a> = <a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().getFilters();</div>
+<div class="line"><a class="code hl_class" href="classby_1_1filters.html">filters</a> <a class="code hl_class" href="classby_1_1tweak.html">fs</a>(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1err_pass_filter.html">errPassFilter</a>());</div>
+<div class="line"><a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setFilters(<a class="code hl_class" href="classby_1_1tweak.html">fs</a>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Now only error-level logs will be output</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setFilters(<a class="code hl_struct" href="structby_1_1no_wrap.html">prevFilters</a>); <span class="comment">// Restore previous filters</span></div>
+<div class="line"><a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setFilters(<a class="code hl_class" href="classby_1_1tweak.html">prevFilters</a>); <span class="comment">// Restore previous filters</span></div>
 <div class="ttc" id="aclassby_1_1err_pass_filter_html"><div class="ttname"><a href="classby_1_1err_pass_filter.html">by::errPassFilter</a></div><div class="ttdoc">Filter that passes through error-level log messages only.</div><div class="ttdef"><b>Definition</b> errPassFilter.hpp:27</div></div>
 <div class="ttc" id="aclassby_1_1filters_html"><div class="ttname"><a href="classby_1_1filters.html">by::filters</a></div><div class="ttdoc">Collection of filterable objects for logging control.</div><div class="ttdef"><b>Definition</b> filters.hpp:16</div></div>
 <div class="ttc" id="aclassby_1_1logger_html_ad017486e7f948b1d25558c97758400cc"><div class="ttname"><a href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">by::logger::get</a></div><div class="ttdeci">static logger &amp; get()</div><div class="ttdoc">Get singleton logger instance.</div></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access.</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a039644372a909eec9ef88c5c0967ade6" name="a039644372a909eec9ef88c5c0967ade6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a039644372a909eec9ef88c5c0967ade6">&#9670;&#160;</a></span>filt()</h2>
@@ -169,14 +169,14 @@ Usage</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::errPassFilter::filt </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::errPassFilter::filt </td>
           <td>(</td>
           <td class="paramtype">errLv::level</td>          <td class="paramname"><span class="paramname"><em>lv</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -201,11 +201,12 @@ Usage</h1>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/stela/stela/module/clog/filter/<a class="el" href="err_pass_filter_8hpp_source.html">errPassFilter.hpp</a></li>
+<li>_deps/stela_dep-src/module/clog/filter/<a class="el" href="err_pass_filter_8hpp_source.html">errPassFilter.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

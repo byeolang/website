@@ -18,9 +18,7 @@ var group__memlite =
     [ "by::tbindable< T >", "classby_1_1tbindable.html", [
       [ "bind", "classby_1_1tbindable.html#a69159b910a8dbc6b07409dfe68da90de", null ]
     ] ],
-    [ "by::tstr< T, TACTIC >", "classby_1_1tstr.html", [
-      [ "tstr", "classby_1_1tstr.html#a756225b757274b181c7dbfef0a1e2614", null ]
-    ] ],
+    [ "by::tstr< T, TACTIC >", "classby_1_1tstr.html", null ],
     [ "by::tweak< T, TACTIC >", "classby_1_1tweak.html", [
       [ "bind", "classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd", null ]
     ] ],

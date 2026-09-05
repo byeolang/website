@@ -1,7 +1,5 @@
 var group__stela =
 [
-    [ "by::arrStela", "classby_1_1arr_stela.html", null ],
-    [ "by::defStela", "classby_1_1def_stela.html", null ],
     [ "by::nulStela", "classby_1_1nul_stela.html", [
       [ "asBool", "classby_1_1nul_stela.html#aa662a693dd496ab136946241cb84c83d", null ],
       [ "asChar", "classby_1_1nul_stela.html#a6724f91d87907e34d5f99e4f2e0f73d0", null ],
@@ -11,7 +9,6 @@ var group__stela =
     ] ],
     [ "by::point", "structby_1_1point.html", null ],
     [ "by::area", "structby_1_1area.html", null ],
-    [ "by::rootStela", "classby_1_1root_stela.html", null ],
     [ "by::strStela", "classby_1_1str_stela.html", null ],
     [ "by::valStela", "classby_1_1val_stela.html", [
       [ "asBool", "classby_1_1val_stela.html#aa4487667d04a78efb8c54e1daa26603c", null ],
