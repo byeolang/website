@@ -131,13 +131,13 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structby_1_1worker_adapter.html">    8</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1worker_adapter.html">workerAdapter</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">static</span> <a class="code hl_class" href="classby_1_1tweak.html">R</a> adaptWork(<a class="code hl_class" href="classby_1_1tweak.html">tworker&lt;R, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tweak.html">w</a>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">static</span> <a class="code hl_class" href="classby_1_1tnarr.html">R</a> adaptWork(<a class="code hl_class" href="classby_1_1tnarr.html">tworker&lt;R, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">w</a>);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    };</div>
 </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structby_1_1worker_adapter_3_01void_00_01_t_01_4.html">   12</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structby_1_1worker_adapter.html">workerAdapter</a>&lt;void, T&gt; {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> adaptWork(<a class="code hl_class" href="classby_1_1tweak.html">tworker&lt;void, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tweak.html">w</a>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> adaptWork(<a class="code hl_class" href="classby_1_1tnarr.html">tworker&lt;void, T&gt;</a>&amp; <a class="code hl_class" href="classby_1_1tnarr.html">w</a>);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    };</div>
 </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
@@ -152,7 +152,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    TEMPLATE</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    ME&amp; ME::setReport(errReport&amp; rpt) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        _rpt.<a class="code hl_function" href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">bind</a>(rpt);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        _rpt.bind(rpt);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -180,7 +180,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    TEMPLATE</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    ME&amp; ME::setTask(<span class="keyword">const</span> T&amp; task) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        _task.<a class="code hl_function" href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">bind</a>(task);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        _task.bind(task);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
@@ -190,7 +190,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    TEMPLATE</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> ME::_rel() {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        _rpt.<a class="code hl_function" href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">bind</a>(dummyErrReport::singleton);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        _rpt.bind(dummyErrReport::singleton);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        _task.rel();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        _logFlag = 0;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
@@ -241,7 +241,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    TEMPLATE</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    R ME::adaptWork(tworker&lt;R, T&gt;&amp; w) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;R, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">line::incLv</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            line::incLv();</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            BY_I(<span class="stringliteral">&quot;▶ %s.work()&quot;</span>, w);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
@@ -258,7 +258,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        w._onEndWork();</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;R, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_function" href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">line::decLv</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            line::decLv();</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            BY_I(<span class="stringliteral">&quot;◀ %s ends!&quot;</span>, w);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> ret;</div>
@@ -273,7 +273,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> ME::adaptWork(tworker&lt;void, T&gt;&amp; w) {</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;void, T&gt;::GUARD)) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            BY_I(<span class="stringliteral">&quot;▶ %s.work()&quot;</span>, w);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <a class="code hl_function" href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">line::incLv</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            line::incLv();</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        w._prepare();</div>
@@ -281,7 +281,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        enablesZone prev;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            enablesZone internal;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span>(!w.isFlag(tworker&lt;void, T&gt;::INTERNAL)) <a class="code hl_function" href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">logger::get</a>().setEnable(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span>(!w.isFlag(tworker&lt;void, T&gt;::INTERNAL)) logger::get().setEnable(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            w._onWork();</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
@@ -291,7 +291,7 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        w._onEndWork();</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span>(w.isFlag(tworker&lt;void, T&gt;::GUARD)) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_function" href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">line::decLv</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            line::decLv();</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            BY_I(<span class="stringliteral">&quot;◀ %s ends!&quot;</span>, w);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
@@ -299,12 +299,8 @@ $(function(){initNavTree('tworker_8inl_source.html',''); initResizable(); });
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#undef ME</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#undef TEMPLATE</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>} <span class="comment">// namespace by</span></div>
-<div class="ttc" id="aclassby_1_1line_html_a4edc878d49948fd15dc8bff7fcb88915"><div class="ttname"><a href="classby_1_1line.html#a4edc878d49948fd15dc8bff7fcb88915">by::line::incLv</a></div><div class="ttdeci">static void incLv()</div><div class="ttdoc">Increases the current depth level.</div><div class="ttdef"><b>Definition</b> line.cpp:33</div></div>
-<div class="ttc" id="aclassby_1_1line_html_a7171a51e94c4dbbacb004cf86ec11aa2"><div class="ttname"><a href="classby_1_1line.html#a7171a51e94c4dbbacb004cf86ec11aa2">by::line::decLv</a></div><div class="ttdeci">static void decLv()</div><div class="ttdoc">Decreases the current depth level.</div><div class="ttdef"><b>Definition</b> line.cpp:38</div></div>
-<div class="ttc" id="aclassby_1_1logger_html_ad017486e7f948b1d25558c97758400cc"><div class="ttname"><a href="classby_1_1logger.html#ad017486e7f948b1d25558c97758400cc">by::logger::get</a></div><div class="ttdeci">static logger &amp; get()</div><div class="ttdoc">Get singleton logger instance.</div></div>
 <div class="ttc" id="aclassby_1_1thread_html"><div class="ttname"><a href="classby_1_1thread.html">by::thread</a></div><div class="ttdoc">Thread execution context for byeol runtime.</div><div class="ttdef"><b>Definition</b> thread.hpp:46</div></div>
-<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access.</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
-<div class="ttc" id="aclassby_1_1tweak_html_aad93c7f516f18ef4f1369a2af0d0a3bd"><div class="ttname"><a href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">by::tweak::bind</a></div><div class="ttdeci">const T *get() const BY_CONST_FUNC(get()) using super nbool bind(const T &amp;new1)</div><div class="ttdoc">Binds a weak reference to the specified instance.</div></div>
+<div class="ttc" id="aclassby_1_1tnarr_html"><div class="ttname"><a href="classby_1_1tnarr.html">by::tnarr</a></div><div class="ttdef"><b>Definition</b> tnarr.hpp:9</div></div>
 <div class="ttc" id="aclassby_1_1tworker_html"><div class="ttname"><a href="classby_1_1tworker.html">by::tworker</a></div><div class="ttdoc">Base worker template for processing tasks.</div><div class="ttdef"><b>Definition</b> tworker.hpp:58</div></div>
 <div class="ttc" id="astructby_1_1worker_adapter_html"><div class="ttname"><a href="structby_1_1worker_adapter.html">by::workerAdapter</a></div><div class="ttdef"><b>Definition</b> tworker.inl:8</div></div>
 <div class="ttc" id="athread_8hpp_html"><div class="ttname"><a href="thread_8hpp.html">thread.hpp</a></div></div>

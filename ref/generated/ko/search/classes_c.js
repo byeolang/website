@@ -14,11 +14,9 @@ var searchData=
   ['nmapiteration_11',['nmapIteration',['../classnmap_iteration.html',1,'']]],
   ['node_12',['node',['../classby_1_1node.html',1,'by']]],
   ['normalscan_13',['normalScan',['../classby_1_1normal_scan.html',1,'by']]],
-  ['nowrap_14',['noWrap',['../structby_1_1no_wrap.html',1,'by']]],
-  ['nseq_15',['nseq',['../classby_1_1nseq.html',1,'by']]],
-  ['nseqiteration_16',['nseqIteration',['../classnseq_iteration.html',1,'']]],
-  ['nstr_17',['nStr',['../classby_1_1n_str.html',1,'by']]],
-  ['ntype_18',['ntype',['../classby_1_1ntype.html',1,'by']]],
-  ['nulstela_19',['nulStela',['../classby_1_1nul_stela.html',1,'by']]],
-  ['nvoid_20',['nVoid',['../classby_1_1n_void.html',1,'by']]]
+  ['nseq_14',['nseq',['../classby_1_1nseq.html',1,'by']]],
+  ['nseqiteration_15',['nseqIteration',['../classnseq_iteration.html',1,'']]],
+  ['nstr_16',['nStr',['../classby_1_1n_str.html',1,'by']]],
+  ['ntype_17',['ntype',['../classby_1_1ntype.html',1,'by']]],
+  ['nvoid_18',['nVoid',['../classby_1_1n_void.html',1,'by']]]
 ];
