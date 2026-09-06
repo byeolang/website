@@ -721,8 +721,8 @@ TO 매크로 사용</h3>
 <div class="line"> </div>
 <div class="line"><span class="comment">// ✅ TO 매크로 사용 - 체이닝으로 간결하게</span></div>
 <div class="line"><span class="keywordtype">int</span> getBrushColorCode(Resource r) {</div>
-<div class="line">    <span class="keywordtype">int</span>* code = r TO(getPallete()) TO(getCanvas())</div>
-<div class="line">                  TO(getBrush(BrushType.SYSTEM)) TO(getColorCode());</div>
+<div class="line">    <span class="keywordtype">int</span>* code = r <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(getPallete()) <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(getCanvas())</div>
+<div class="line">                  <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(getBrush(BrushType.SYSTEM)) <a class="code hl_define" href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a>(getColorCode());</div>
 <div class="line">    if(!code) {</div>
 <div class="line">        log(<span class="stringliteral">&quot;code is null&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
@@ -730,6 +730,7 @@ TO 매크로 사용</h3>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> *code;</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup__indep_html_gab66a6cdf25aca4c8eeb667e884fc905a"><div class="ttname"><a href="group__indep.html#gab66a6cdf25aca4c8eeb667e884fc905a">TO</a></div><div class="ttdeci">#define TO(fn)</div><div class="ttdef"><b>Definition</b> to.hpp:175</div></div>
 </div><!-- fragment --><p><code>WHEN</code>, <code>TO</code>등 매크로에 대한 자세한 내용은 <a class="el" href="ae-architecture-overview.html">아키텍쳐와 설계</a> 문서를 참조하세요.</p>
 <h2><a class="anchor" id="autotoc_md155"></a>
 구현 파일 (.cpp) 규칙</h2>
