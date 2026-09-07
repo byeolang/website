@@ -13,6 +13,6 @@ var searchData=
   ['for_20accessing_20life_20objects_10',['tagN used for accessing life objects',['../structby_1_1id.html#tagn_field',1,'']]],
   ['for_20retrieving_20chunk_20objects_11',['chkN used for retrieving chunk objects',['../structby_1_1id.html#chkn_field',1,'']]],
   ['forms_12',['Concrete forms',['..//home/runner/work/stela/stela/module/stela/ast/stela.hpp#forms',1,'']]],
-  ['fourth_20segment_13',['The fourth segment',['../classby_1_1ver_stela.html#bundle',1,'']]],
+  ['fourth_20segment_13',['The fourth segment',['../classby_1_1ver_stela.html#revision',1,'']]],
   ['frontend_14',['Frontend',['../group__frontend.html',1,'']]]
 ];

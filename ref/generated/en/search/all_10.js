@@ -3,7 +3,7 @@ var searchData=
   ['scopelog_0',['scopeLog',['../classby_1_1scope_log.html',1,'by']]],
   ['scopelog_2ehpp_1',['scopeLog.hpp',['../scope_log_8hpp.html',1,'']]],
   ['search_20algorithm_2',['Available chunk search algorithm',['../classby_1_1chunks.html#chunk_search_algorithm',1,'']]],
-  ['segment_3',['The fourth segment',['../classby_1_1ver_stela.html#bundle',1,'']]],
+  ['segment_3',['The fourth segment',['../classby_1_1ver_stela.html#revision',1,'']]],
   ['serial_20is_20instance_20creation_20count_20during_20process_20execution_4',['serial is instance creation count during process execution',['../structby_1_1id.html#serial_field',1,'']]],
   ['setenable_5',['setEnable',['../classby_1_1enables_zone.html#add08945d619d727e02841317dcae635f',1,'by::enablesZone::setEnable(nbool newVal)'],['../classby_1_1enables_zone.html#a94814a86e092ebf55a740d0647ca7486',1,'by::enablesZone::setEnable(const std::string &amp;streamName, nbool newVal)']]],
   ['setfilters_6',['setFilters',['../classby_1_1logger.html#a67776480bd4461e1f3301f73bda384b2',1,'by::logger::setFilters(const filters &amp;newFilters)'],['../classby_1_1logger.html#aa5aa2c1441a633923699a824450ef863',1,'by::logger::setFilters()']]],

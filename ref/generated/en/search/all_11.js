@@ -7,7 +7,7 @@ var searchData=
   ['tbindable_4',['tbindable',['../classby_1_1tbindable.html',1,'by']]],
   ['tbindable_2ehpp_5',['tbindable.hpp',['../tbindable_8hpp.html',1,'']]],
   ['tbindable_3c_20instance_20_3e_6',['tbindable&lt; instance &gt;',['../classby_1_1tbindable.html',1,'by']]],
-  ['the_20fourth_20segment_7',['The fourth segment',['../classby_1_1ver_stela.html#bundle',1,'']]],
+  ['the_20fourth_20segment_7',['The fourth segment',['../classby_1_1ver_stela.html#revision',1,'']]],
   ['tifhasdefaultctor_8',['tifHasDefaultCtor',['../structby_1_1tif_has_default_ctor.html',1,'by']]],
   ['tifhasmetatypedef_9',['tifHasMetaTypeDef',['../structby_1_1tif_has_meta_type_def.html',1,'by']]],
   ['tifhasmetatypedef_3c_20t_2c_20typename_20taemptycan_3c_20typename_20t_3a_3ametatype_20_3e_3a_3ais_20_3e_10',['tifHasMetaTypeDef&lt; T, typename taEmptyCan&lt; typename T::metaType &gt;::is &gt;',['../structby_1_1tif_has_meta_type_def_3_01_t_00_01typename_01ta_empty_can_3_01typename_01_t_1_1meta_type_01_4_1_1is_01_4.html',1,'by']]],
