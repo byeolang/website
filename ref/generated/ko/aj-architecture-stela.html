@@ -136,7 +136,7 @@ stela 클래스</h2>
 <li><b>타입 변환 API</b>: asInt(), asChar(), asStr(), asBool() 등 기본 타입으로 변환을 시도합니다.</li>
 <li><b>값이 있는 경우</b>: <a class="el" href="classby_1_1val_stela.html">valStela</a> 의 API가 실행되며, 적절한 값으로 변환됩니다. 예를들어 <code>verStela(22)</code>의 경우 <code>asStr()</code>을 하면 <code>std::string("22")</code>가 반환됩니다.</li>
 <li><b>값이 없는 경우</b>: <a class="el" href="classby_1_1nul_stela.html">nulStela</a> 로 표현됩니다. 이 경우 어떠한 타입변환 시도에도 기본값(빈 문자열 혹은 0)이 반환됩니다.</li>
-<li><b>버전 타입</b>: major, minor, patch 버전을 가지고 있으며, 범위로도 표현이 가능합니다.</li>
+<li><b>버전 타입</b>: major, minor, patch 와 선택적인 revision 버전을 가지고 있으며, 범위로도 표현이 가능합니다.</li>
 <li><b>트리 구조</b>: <a class="el" href="classby_1_1stela.html">stela</a> 는 또다른 <a class="el" href="classby_1_1stela.html">stela</a> 를 자식으로 둘 수 있습니다. 각 <a class="el" href="classby_1_1stela.html">stela</a> 객체마다 이름이 존재하므로, 자식을 찾을 때는 이름으로 검색하거나 순회합니다. 주어진 이름에 맞는 자식이 없는 경우 <a class="el" href="classby_1_1nul_stela.html">nulStela</a> 가 반환됩니다.</li>
 </ol>
 <p><b>사용 예제</b></p>
@@ -161,13 +161,13 @@ stela 클래스</h2>
 <div class="line">ASSERT_STREQ(ver.asStr().c_str(), &quot;1.0.8&quot;);</div>
 <div class="line">ASSERT_EQ(ver.asMajor(), 1);</div>
 <div class="line">ASSERT_EQ(ver.asMinor(), 0);</div>
-<div class="line">ASSERT_EQ(ver.asFix(), 8);</div>
+<div class="line">ASSERT_EQ(ver.asPatch(), 8);</div>
 </div><!-- fragment --><p><b>트리를 다루는 API</b></p>
 <p>자식은 이름을 key로 하는 <code>std::map</code>에 담깁니다. 그래서 이름으로 찾는 <code>sub(name)</code> 외에도 n번째 자식을 꺼내는 <code>sub(index)</code>, 자식 수를 세는 <code>len()</code>, 존재를 확인하는 <code>has(name)</code>, 그리고 직접 순회할 수 있는 <code>begin()</code>과 <code>end()</code>가 제공됩니다. 트리를 고칠 때는 <code>add()</code>와 <code>del()</code>을 씁니다.</p>
 <p>여기서 주의할 점이 두 가지 있습니다. 먼저 <code>add()</code>는 자식이 스스로 가진 이름을 key로 삼기 때문에, 같은 이름의 자식이 이미 있으면 <b>덮어씁니다</b>. 그리고 <code>sub(name)</code>은 찾지 못했을 때 <a class="el" href="classby_1_1nul_stela.html">nulStela</a> 를 돌려줄 뿐 트리에 빈 자식을 만들어 두지 않습니다. 조회가 트리를 바꾸지 않으므로 <code>has()</code>로 먼저 확인하지 않고 바로 <code>sub()</code>를 불러도 괜찮아요.</p>
 <p>자식이 map에 담긴다는 건 순회 순서가 <b>이름의 사전순</b>이라는 뜻이기도 합니다. 원본 소스에 적힌 순서는 보존되지 않습니다. 배열만은 예외인데, 이는 <a class="el" href="classby_1_1arr_stela.html">arrStela</a> 에서 설명합니다.</p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
-<div class="line">stela root(&quot;root&quot;);</div>
+<div class="line">rootStela root(&quot;root&quot;);</div>
 <div class="line">root.add(new strStela(&quot;byeol&quot;, &quot;name&quot;));</div>
 <div class="line">root.add(new valStela(3, &quot;count&quot;));</div>
 <div class="line"> </div>
@@ -220,7 +220,9 @@ strStela 클래스 - 문자열 값</h2>
 verStela 클래스 - 버전 타입</h2>
 <p><a class="el" href="classby_1_1ver_stela.html">verStela</a> 는 <a class="el" href="classby_1_1val_stela.html">valStela</a> 와 비슷하게 <b>version</b>이라는 타입의 값을 가지고 있는 <a class="el" href="classby_1_1stela.html">stela</a> 입니다.</p>
 <p><b>version 타입</b></p>
-<p><a class="el" href="classby_1_1stela.html">stela</a> 언어는 byeol 언어의 경량화된 언어로, manifest나 옵션과 같은 특수 목적용 언어입니다. version 타입은 <code>major.minor.fix</code>의 3가지 변수를 가지고 있으며 범위 표현 또한 가능한 타입입니다.</p>
+<p><a class="el" href="classby_1_1stela.html">stela</a> 언어는 byeol 언어의 경량화된 언어로, manifest나 옵션과 같은 특수 목적용 언어입니다. version 타입은 <code>major.minor.patch</code>에 선택적인 네 번째 자리 <code>revision</code>을 더한 형태이며, 범위 표현 또한 가능한 타입입니다.</p>
+<p><code>revision</code>은 같은 상위 버전을 다시 낸 횟수를 세며, 위쪽 자리가 하나라도 움직이면 0으로 돌아갑니다. <code>1.2.3.0</code>, <code>1.2.3.1</code>, 그 다음은 <code>1.2.4.0</code>입니다. .NET의 <code>major.minor.build.revision</code>과 Debian의 <code>upstream_version-debian_revision</code>이 같은 의미로 쓰는 이름입니다. semver에는 네 번째 자리가 아예 없고, 그 <code>+build</code> 메타데이터는 규격상 버전 비교에서 <b>무시되어야</b> 하므로 여기에 쓸 수 없습니다 — revision은 비교에 참여해야 하니까요.</p>
+<p>세 자리가 일반적인 경우라 세 자리로 다시 쓰입니다. <code>verStela("1.2")</code>는 <code>"1.2.0"</code>으로 채워지지만, 없는 네 번째 자리는 없는 채로 남습니다. <code>asRevision()</code>이 이를 0으로 읽고, 비교 연산자는 <code>1.2.3</code>과 <code>1.2.3.0</code>을 같은 버전으로 봅니다.</p>
 <p><b>사용 예제</b></p>
 <div class="fragment"><div class="line">@style: language-cpp verified</div>
 <div class="line">const std::string script = R&quot;SRC(</div>
@@ -240,7 +242,7 @@ verStela 클래스 - 버전 타입</h2>
 <div class="line">verStela&amp; ver = *pkg[&quot;version&quot;].cast&lt;verStela&gt;();</div>
 <div class="line">ASSERT_EQ(ver.asMajor(), 2);</div>
 <div class="line">ASSERT_EQ(ver.asMinor(), 1);</div>
-<div class="line">ASSERT_EQ(ver.asFix(), 5);</div>
+<div class="line">ASSERT_EQ(ver.asPatch(), 5);</div>
 <div class="line">ASSERT_STREQ(ver.asStr().c_str(), &quot;2.1.5&quot;);</div>
 <div class="line"> </div>
 <div class="line">// 버전 범위 체크. 비교 연산자가 모두 정의되어 있습니다.</div>

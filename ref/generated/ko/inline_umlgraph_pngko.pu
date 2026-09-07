@@ -1244,7 +1244,7 @@ verStela --|> valStela
 @enduml
 @startuml inline_umlgraph_16.png
 package "Result Hierarchy" {
-    class "stela" as stela {
+    abstract class "stela" as stela {
         + sub(name) : stela&
         + add(child) : void
         + del(name) : void
@@ -1252,6 +1252,8 @@ package "Result Hierarchy" {
         + accept(info, visitor) : void
     }
 
+    class "defStela" as defStela
+    class "rootStela" as rootStela
     class "valStela" as valStela
     class "strStela" as strStela
     class "verStela" as verStela
@@ -1259,11 +1261,13 @@ package "Result Hierarchy" {
     class "nulStela" as nulStela
 }
 
-stelaParser ..> stela : Create
+stelaParser ..> rootStela : Create
 
+defStela --|> stela
 valStela --|> stela
 arrStela --|> stela
 nulStela --|> stela
+rootStela --|> defStela
 strStela --|> valStela
 verStela --|> valStela
 @enduml
