@@ -409,7 +409,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 </div><div class="memdoc">
 
 <p>Creates a value stela node from a primitive value. </p>
-<p>One node type per literal form, so the distinction the scanner already made survives into the AST: <a class="el" href="classby_1_1stela_writer.html">stelaWriter</a> needs it to re-emit strings with the quotes the grammar requires, and a visitor needs it to tell a number from a boolean without re-parsing. </p>
+<p>Strings become <a class="el" href="classby_1_1str_stela.html">strStela</a>; numeric / boolean values become <a class="el" href="classby_1_1val_stela.html">valStela</a> The distinction lets <a class="el" href="classby_1_1stela_writer.html">stelaWriter</a> re-emit strings with the surrounding quotes required by the grammar. </p>
 
 </div>
 </div>

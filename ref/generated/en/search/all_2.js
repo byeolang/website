@@ -9,10 +9,8 @@ var searchData=
   ['bison_20stelaparser_20structure_6',['- bison - stelaParser structure',['../classby_1_1stela_parser.html#scanner',1,'']]],
   ['block_20size_7',['Block size',['../classby_1_1chunk.html#block_size',1,'Block size'],['../classby_1_1chunk.html#real_block_size',1,'Real block size']]],
   ['block_20statement_8',['careful when you use BY_?_SCOPE macro in &apos;if&apos; block statement',['../clog_2common_2macro_8hpp.html#be',1,'']]],
-  ['boolstela_9',['boolStela',['../classby_1_1bool_stela.html',1,'by']]],
-  ['boolstela_2ehpp_10',['boolStela.hpp',['../bool_stela_8hpp.html',1,'']]],
-  ['by_5f_20_5fscope_20macro_20in_20if_20block_20statement_11',['careful when you use BY_?_SCOPE macro in &apos;if&apos; block statement',['../clog_2common_2macro_8hpp.html#be',1,'']]],
-  ['by_5fe_12',['BY_E',['../clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4',1,'macro.hpp']]],
-  ['by_5fe_5fscope_13',['BY_E_SCOPE',['../clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39',1,'macro.hpp']]],
-  ['byeol_20parser_14',['Similar structure to byeol parser',['../classby_1_1stela_parser.html#similar_structure',1,'']]]
+  ['by_5f_20_5fscope_20macro_20in_20if_20block_20statement_9',['careful when you use BY_?_SCOPE macro in &apos;if&apos; block statement',['../clog_2common_2macro_8hpp.html#be',1,'']]],
+  ['by_5fe_10',['BY_E',['../clog_2common_2macro_8hpp.html#a39decaf05c8269cf9d21c83ff19014a4',1,'macro.hpp']]],
+  ['by_5fe_5fscope_11',['BY_E_SCOPE',['../clog_2common_2macro_8hpp.html#a862837f5771166743978a6d8f69fbf39',1,'macro.hpp']]],
+  ['byeol_20parser_12',['Similar structure to byeol parser',['../classby_1_1stela_parser.html#similar_structure',1,'']]]
 ];
