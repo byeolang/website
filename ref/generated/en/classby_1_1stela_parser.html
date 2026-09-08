@@ -241,14 +241,6 @@ std::vector&lt; <a class="el" href="structby_1_1no_wrap.html">ncnt</a> &gt; &amp
 <tr class="memitem:ab1dd5523034af2a1707e6a0a38b2594b" id="r_ab1dd5523034af2a1707e6a0a38b2594b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1dd5523034af2a1707e6a0a38b2594b">report</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">msg</a>)</td></tr>
 <tr class="memdesc:ab1dd5523034af2a1707e6a0a38b2594b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports a message, typically an error or warning, encountered during parsing.  <br /></td></tr>
 <tr class="separator:ab1dd5523034af2a1707e6a0a38b2594b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a474afeee7396733a6f0ffc65b4dc92d1" id="r_a474afeee7396733a6f0ffc65b4dc92d1"><td class="memItemLeft" align="right" valign="top"><a id="a474afeee7396733a6f0ffc65b4dc92d1" name="a474afeee7396733a6f0ffc65b4dc92d1"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a474afeee7396733a6f0ffc65b4dc92d1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onPrimitive</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> &amp;<a class="el" href="structby_1_1no_wrap.html">arg</a>)</td></tr>
-<tr class="separator:a474afeee7396733a6f0ffc65b4dc92d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28d817e1127f35d53da7f08d2a9dbb32" id="r_a28d817e1127f35d53da7f08d2a9dbb32"><td class="memItemLeft" align="right" valign="top"><a id="a28d817e1127f35d53da7f08d2a9dbb32" name="a28d817e1127f35d53da7f08d2a9dbb32"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a28d817e1127f35d53da7f08d2a9dbb32"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onPrimitive</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">arg</a>)</td></tr>
-<tr class="separator:a28d817e1127f35d53da7f08d2a9dbb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8015252731a807792d7b4259dfd50686" id="r_a8015252731a807792d7b4259dfd50686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8015252731a807792d7b4259dfd50686">onScan</a> (<a class="el" href="classby_1_1stela_parser.html">stelaParser</a> &amp;<a class="el" href="structby_1_1no_wrap.html">ps</a>, ZZSTYPE *<a class="el" href="structby_1_1no_wrap.html">val</a>, ZZLTYPE *<a class="el" href="structby_1_1no_wrap.html">loc</a>, zzscan_t <a class="el" href="structby_1_1no_wrap.html">scanner</a>)</td></tr>
 <tr class="memdesc:a8015252731a807792d7b4259dfd50686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default entry point for token scanning.  <br /></td></tr>
 <tr class="separator:a8015252731a807792d7b4259dfd50686"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -417,7 +409,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 </div><div class="memdoc">
 
 <p>Creates a value stela node from a primitive value. </p>
-<p>One node type per literal form, so the distinction the scanner already made survives into the AST. Numbers are the primary; every other form specializes below. </p>
+<p>Strings become <a class="el" href="classby_1_1str_stela.html">strStela</a>; numeric / boolean values become <a class="el" href="classby_1_1val_stela.html">valStela</a> The distinction lets <a class="el" href="classby_1_1stela_writer.html">stelaWriter</a> re-emit strings with the surrounding quotes required by the grammar. </p>
 
 </div>
 </div>
