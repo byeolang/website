@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['helpflag_0',['helpFlag',['../classby_1_1help_flag.html',1,'by']]]
+  ['life_0',['life',['../classby_1_1life.html',1,'by']]],
+  ['logger_1',['logger',['../classby_1_1logger.html',1,'by']]]
 ];
