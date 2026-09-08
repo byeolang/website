@@ -124,7 +124,7 @@ $(function(){initNavTree('classby_1_1binder.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>Generalized binding class for managing <a class="el" href="classby_1_1instance.html">instance</a> lifecycles.  
+<p>Generalized binding class for managing instance lifecycles.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="binder_2binder_8hpp_source.html">binder.hpp</a>&gt;</code></p>
@@ -134,166 +134,187 @@ Inheritance diagram for by::binder:</div>
  <div class="center">
   <img src="classby_1_1binder.png" usemap="#by::binder_map" alt=""/>
   <map id="by::binder_map" name="by::binder_map">
-<area href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information." alt="by::typeProvidable" shape="rect" coords="100,0,291,24"/>
-<area href="classby_1_1tbindable.html" alt="by::tbindable&lt; instance &gt;" shape="rect" coords="301,0,492,24"/>
-<area href="classby_1_1tweak.html" alt="by::tweak&lt; T, strTactic &gt;" shape="rect" coords="0,112,191,136"/>
-<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::stela, strTactic &gt;" shape="rect" coords="201,112,392,136"/>
-<area href="classby_1_1tweak.html" title="Weak reference smart pointer with type-safe access." alt="by::tweak&lt; T, TACTIC &gt;" shape="rect" coords="402,112,593,136"/>
-<area href="classby_1_1tstr.html" alt="by::tstr&lt; by::stela &gt;" shape="rect" coords="301,168,492,192"/>
-<area href="classby_1_1tstr.html" title="Strong reference smart pointer with strict type checking." alt="by::tstr&lt; T, TACTIC &gt;" shape="rect" coords="502,168,693,192"/>
+<area href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information." alt="by::typeProvidable" shape="rect" coords="0,0,221,24"/>
+<area href="classby_1_1tbindable.html" alt="by::tbindable&lt; instance &gt;" shape="rect" coords="231,0,452,24"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::errReport, strTactic &gt;" shape="rect" coords="346,112,567,136"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; flagStrs, strTactic &gt;" shape="rect" coords="346,168,567,192"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::baseObj, strTactic &gt;" shape="rect" coords="346,224,567,248"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::baseFunc, strTactic &gt;" shape="rect" coords="346,280,567,304"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; pod, strTactic &gt;" shape="rect" coords="346,336,567,360"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; node, strTactic &gt;" shape="rect" coords="346,392,567,416"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::src, strTactic &gt;" shape="rect" coords="346,448,567,472"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; super, strTactic &gt;" shape="rect" coords="346,504,567,528"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; T, strTactic &gt;" shape="rect" coords="346,560,567,584"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::frames, strTactic &gt;" shape="rect" coords="346,616,567,640"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::modifier, strTactic &gt;" shape="rect" coords="346,672,567,696"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::arr, strTactic &gt;" shape="rect" coords="346,728,567,752"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::tnchain, strTactic &gt;" shape="rect" coords="346,784,567,808"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::tnarr, strTactic &gt;" shape="rect" coords="346,840,567,864"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::func, strTactic &gt;" shape="rect" coords="346,896,567,920"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::nStr, strTactic &gt;" shape="rect" coords="346,952,567,976"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::obj &gt;" shape="rect" coords="346,1008,567,1032"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::func &gt;" shape="rect" coords="346,1064,567,1088"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::srcFile, strTactic &gt;" shape="rect" coords="346,1120,567,1144"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::obj, strTactic &gt;" shape="rect" coords="346,1176,567,1200"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::blockExpr, strTactic &gt;" shape="rect" coords="346,1232,567,1256"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::args, strTactic &gt;" shape="rect" coords="346,1288,567,1312"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::tnmap, strTactic &gt;" shape="rect" coords="346,1344,567,1368"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::stela, strTactic &gt;" shape="rect" coords="346,1400,567,1424"/>
+<area href="classby_1_1tweak.html" alt="by::tweak&lt; by::thread, strTactic &gt;" shape="rect" coords="346,1456,567,1480"/>
+<area href="classby_1_1tweak.html" title="Weak reference smart pointer with type-safe access." alt="by::tweak&lt; T, TACTIC &gt;" shape="rect" coords="346,1512,567,1536"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a49b4b4287d4d23a1b5f4475a81a5e31f" id="r_a49b4b4287d4d23a1b5f4475a81a5e31f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49b4b4287d4d23a1b5f4475a81a5e31f">binder</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1type.html">type</a>, <a class="el" href="classby_1_1bind_tacticable.html">bindTacticable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">tactic</a>)</td></tr>
+<tr class="memitem:a49b4b4287d4d23a1b5f4475a81a5e31f" id="r_a49b4b4287d4d23a1b5f4475a81a5e31f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49b4b4287d4d23a1b5f4475a81a5e31f">binder</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1type.html">type</a>, <a class="el" href="classby_1_1bind_tacticable.html">bindTacticable</a> &amp;<a class="el" href="classby_1_1tweak.html">tactic</a>)</td></tr>
 <tr class="memdesc:a49b4b4287d4d23a1b5f4475a81a5e31f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a binder with a specific type and binding tactic.  <br /></td></tr>
 <tr class="separator:a49b4b4287d4d23a1b5f4475a81a5e31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d95f032d5114b8f4c52ba614e50d0f1" id="r_a2d95f032d5114b8f4c52ba614e50d0f1"><td class="memItemLeft" align="right" valign="top"><a id="a2d95f032d5114b8f4c52ba614e50d0f1" name="a2d95f032d5114b8f4c52ba614e50d0f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>binder</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>binder</b> (<a class="el" href="classby_1_1tweak.html">const</a> me &amp;rhs)</td></tr>
 <tr class="separator:a2d95f032d5114b8f4c52ba614e50d0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31ae31b7732a4dbcf9ed895308f56c8e" id="r_a31ae31b7732a4dbcf9ed895308f56c8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31ae31b7732a4dbcf9ed895308f56c8e">operator-&gt;</a> ()</td></tr>
 <tr class="memdesc:a31ae31b7732a4dbcf9ed895308f56c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference operator to access bound instance.  <br /></td></tr>
 <tr class="separator:a31ae31b7732a4dbcf9ed895308f56c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107f543708422700dd361477d6b1f2d8" id="r_a107f543708422700dd361477d6b1f2d8"><td class="memItemLeft" align="right" valign="top"><a id="a107f543708422700dd361477d6b1f2d8" name="a107f543708422700dd361477d6b1f2d8"></a>
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>-&gt;()) <a class="el" href="classby_1_1instance.html">instance</a> &amp;<a class="el" href="structby_1_1no_wrap.html">operator</a>*()</td></tr>
+<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(<a class="el" href="classby_1_1tweak.html">operator</a>-&gt;()) <a class="el" href="classby_1_1instance.html">instance</a> &amp;<a class="el" href="classby_1_1tweak.html">operator</a>*()</td></tr>
 <tr class="separator:a107f543708422700dd361477d6b1f2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e8d38d79c0911aeb647047784660d2" id="r_a50e8d38d79c0911aeb647047784660d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e8d38d79c0911aeb647047784660d2">operator*</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(<a class="el" href="structby_1_1no_wrap.html">operator</a>*()) <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">operator</a></td></tr>
+<tr class="memitem:a50e8d38d79c0911aeb647047784660d2" id="r_a50e8d38d79c0911aeb647047784660d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e8d38d79c0911aeb647047784660d2">operator*</a> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(<a class="el" href="classby_1_1tweak.html">operator</a>*()) me &amp;<a class="el" href="classby_1_1tweak.html">operator</a></td></tr>
 <tr class="memdesc:a50e8d38d79c0911aeb647047784660d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns another binder's bound instance to this binder.  <br /></td></tr>
 <tr class="separator:a50e8d38d79c0911aeb647047784660d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9e19ad120640f64ba322a497cae7a10" id="r_ab9e19ad120640f64ba322a497cae7a10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9e19ad120640f64ba322a497cae7a10">getItsId</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memitem:ab9e19ad120640f64ba322a497cae7a10" id="r_ab9e19ad120640f64ba322a497cae7a10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9e19ad120640f64ba322a497cae7a10">getItsId</a> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="memdesc:ab9e19ad120640f64ba322a497cae7a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the unique ID of the instance currently bound by this binder.  <br /></td></tr>
 <tr class="separator:ab9e19ad120640f64ba322a497cae7a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9096a1115c2e48a07f7464f2a1c1bb1a" id="r_a9096a1115c2e48a07f7464f2a1c1bb1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9096a1115c2e48a07f7464f2a1c1bb1a">isBind</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:a9096a1115c2e48a07f7464f2a1c1bb1a" id="r_a9096a1115c2e48a07f7464f2a1c1bb1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9096a1115c2e48a07f7464f2a1c1bb1a">isBind</a> () <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="separator:a9096a1115c2e48a07f7464f2a1c1bb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038ea5de5075f5815ca96352ec350422" id="r_a038ea5de5075f5815ca96352ec350422"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a038ea5de5075f5815ca96352ec350422">rel</a> () <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:a038ea5de5075f5815ca96352ec350422" id="r_a038ea5de5075f5815ca96352ec350422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a038ea5de5075f5815ca96352ec350422">rel</a> () <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="separator:a038ea5de5075f5815ca96352ec350422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62644cd115f0e1dc528fde6447e2f0a0" id="r_a62644cd115f0e1dc528fde6447e2f0a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62644cd115f0e1dc528fde6447e2f0a0">canBind</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:a62644cd115f0e1dc528fde6447e2f0a0" id="r_a62644cd115f0e1dc528fde6447e2f0a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62644cd115f0e1dc528fde6447e2f0a0">canBind</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="memdesc:a62644cd115f0e1dc528fde6447e2f0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if given type can be bound to this binder.  <br /></td></tr>
 <tr class="separator:a62644cd115f0e1dc528fde6447e2f0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a876d0a090326604be8e4116408ea734f" id="r_a876d0a090326604be8e4116408ea734f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876d0a090326604be8e4116408ea734f">bind</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:a876d0a090326604be8e4116408ea734f" id="r_a876d0a090326604be8e4116408ea734f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876d0a090326604be8e4116408ea734f">bind</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="memdesc:a876d0a090326604be8e4116408ea734f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds instance to this binder with reference counting.  <br /></td></tr>
 <tr class="separator:a876d0a090326604be8e4116408ea734f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd00708a081a71c3c0ba528f051ea40" id="r_acbd00708a081a71c3c0ba528f051ea40"><td class="memItemLeft" align="right" valign="top"><a id="acbd00708a081a71c3c0ba528f051ea40" name="acbd00708a081a71c3c0ba528f051ea40"></a>
 <a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
 <tr class="separator:acbd00708a081a71c3c0ba528f051ea40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a899afabf57bd5908c175bbe9bc954a" id="r_a0a899afabf57bd5908c175bbe9bc954a"><td class="memItemLeft" align="right" valign="top"><a id="a0a899afabf57bd5908c175bbe9bc954a" name="a0a899afabf57bd5908c175bbe9bc954a"></a>
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(get()) <a class="el" href="structby_1_1no_wrap.html">template</a>&lt; <a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">E</a> &gt; <a class="el" href="structby_1_1no_wrap.html">E</a> *get()</td></tr>
+<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(get()) <a class="el" href="classby_1_1tweak.html">template</a>&lt; <a class="el" href="classby_1_1tweak.html">typename</a> <a class="el" href="classby_1_1tweak.html">E</a> &gt; <a class="el" href="classby_1_1tweak.html">E</a> *get()</td></tr>
 <tr class="separator:a0a899afabf57bd5908c175bbe9bc954a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d2757a9525364fa2b2fa9998ccbcda" id="r_ab5d2757a9525364fa2b2fa9998ccbcda"><td class="memTemplParams" colspan="2"><a id="ab5d2757a9525364fa2b2fa9998ccbcda" name="ab5d2757a9525364fa2b2fa9998ccbcda"></a>
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">E</a> &gt; </td></tr>
-<tr class="memitem:ab5d2757a9525364fa2b2fa9998ccbcda"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">E</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(get&lt; <a class="el" href="structby_1_1no_wrap.html">E</a> &gt;()) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;getType() <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> <a class="el" href="classby_1_1tweak.html">E</a> &gt; </td></tr>
+<tr class="memitem:ab5d2757a9525364fa2b2fa9998ccbcda"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">E</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(get&lt; <a class="el" href="classby_1_1tweak.html">E</a> &gt;()) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;getType() <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="separator:ab5d2757a9525364fa2b2fa9998ccbcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3f0db699fff7666bf08a1f0d23084d" id="r_afc3f0db699fff7666bf08a1f0d23084d"><td class="memItemLeft" align="right" valign="top"><a id="afc3f0db699fff7666bf08a1f0d23084d" name="afc3f0db699fff7666bf08a1f0d23084d"></a>
-<a class="el" href="structby_1_1no_wrap.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1tweak.html">to</a>) <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="separator:afc3f0db699fff7666bf08a1f0d23084d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9a21c2610ea2c73b81a6c2657acb4be" id="r_ab9a21c2610ea2c73b81a6c2657acb4be"><td class="memItemLeft" align="right" valign="top"><a id="ab9a21c2610ea2c73b81a6c2657acb4be" name="ab9a21c2610ea2c73b81a6c2657acb4be"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> T &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:ab9a21c2610ea2c73b81a6c2657acb4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43b847a63dcc863bd21352cccc2f8c03" id="r_a43b847a63dcc863bd21352cccc2f8c03"><td class="memItemLeft" align="right" valign="top"><a id="a43b847a63dcc863bd21352cccc2f8c03" name="a43b847a63dcc863bd21352cccc2f8c03"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(canBind)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> T *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(canBind)</td></tr>
 <tr class="separator:a43b847a63dcc863bd21352cccc2f8c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ed58531270d88871826faf1f3472ee" id="r_a42ed58531270d88871826faf1f3472ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ed58531270d88871826faf1f3472ee">canBind</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a>=0</td></tr>
+<tr class="memitem:a42ed58531270d88871826faf1f3472ee" id="r_a42ed58531270d88871826faf1f3472ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">virtual</a> <a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ed58531270d88871826faf1f3472ee">canBind</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="classby_1_1tweak.html">const</a>=0</td></tr>
 <tr class="separator:a42ed58531270d88871826faf1f3472ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9178875b22b692a75582354be6292918" id="r_a9178875b22b692a75582354be6292918"><td class="memItemLeft" align="right" valign="top"><a id="a9178875b22b692a75582354be6292918" name="a9178875b22b692a75582354be6292918"></a>
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(canBind)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(canBind)</td></tr>
 <tr class="separator:a9178875b22b692a75582354be6292918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e3f362fc3c6183ce44b2997aec3e6d" id="r_a69e3f362fc3c6183ce44b2997aec3e6d"><td class="memItemLeft" align="right" valign="top"><a id="a69e3f362fc3c6183ce44b2997aec3e6d" name="a69e3f362fc3c6183ce44b2997aec3e6d"></a>
-<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &amp;it)</td></tr>
+<a class="el" href="classby_1_1tweak.html">virtual</a> <a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (<a class="el" href="classby_1_1tweak.html">const</a> T &amp;it)</td></tr>
 <tr class="separator:a69e3f362fc3c6183ce44b2997aec3e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69159b910a8dbc6b07409dfe68da90de" id="r_a69159b910a8dbc6b07409dfe68da90de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69159b910a8dbc6b07409dfe68da90de">bind</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> *it)</td></tr>
+<tr class="memitem:a69159b910a8dbc6b07409dfe68da90de" id="r_a69159b910a8dbc6b07409dfe68da90de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69159b910a8dbc6b07409dfe68da90de">bind</a> (<a class="el" href="classby_1_1tweak.html">const</a> T *it)</td></tr>
 <tr class="memdesc:a69159b910a8dbc6b07409dfe68da90de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind to instance pointer.  <br /></td></tr>
 <tr class="separator:a69159b910a8dbc6b07409dfe68da90de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329" id="r_af6f60075f199d6eb48d39ed8e33b4329"><td class="memTemplParams" colspan="2"><a id="af6f60075f199d6eb48d39ed8e33b4329" name="af6f60075f199d6eb48d39ed8e33b4329"></a>
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> ()</td></tr>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> ()</td></tr>
 <tr class="separator:af6f60075f199d6eb48d39ed8e33b4329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3" id="r_ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(cast&lt; <a class="el" href="structby_1_1no_wrap.html">T</a> &gt;()) <a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">void</a> *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>)</td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3" id="r_ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(cast&lt; T &gt;()) <a class="el" href="classby_1_1tweak.html">virtual</a> void *cast(<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1tweak.html">to</a>)</td></tr>
 <tr class="memdesc:ad05c9ba2164853c3e8db3af3cb5198c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe cast to target type using type hierarchy information.  <br /></td></tr>
 <tr class="separator:ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d50919c02f16448bc84396c625dd5b" id="r_a09d50919c02f16448bc84396c625dd5b"><td class="memItemLeft" align="right" valign="top"><a id="a09d50919c02f16448bc84396c625dd5b" name="a09d50919c02f16448bc84396c625dd5b"></a>
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(cast(<a class="el" href="structby_1_1no_wrap.html">to</a>)) <a class="el" href="structby_1_1no_wrap.html">void</a> *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(cast)</td></tr>
+<a class="el" href="classby_1_1tweak.html">const</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1tweak.html">to</a>) <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(cast(<a class="el" href="classby_1_1tweak.html">to</a>)) void *cast(<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(cast)</td></tr>
 <tr class="separator:a09d50919c02f16448bc84396c625dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1type_providable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1type_providable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1type_providable.html">by::typeProvidable</a></td></tr>
 <tr class="memitem:ae79a4ecc80915511509195a4d6949643 inherit pub_methods_classby_1_1type_providable" id="r_ae79a4ecc80915511509195a4d6949643"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classby_1_1tweak.html">const</a> me &amp;rhs) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:ae79a4ecc80915511509195a4d6949643 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable" id="r_a588f51a220cf4eca9e7df44ff04977e7"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="classby_1_1tweak.html">const</a> me &amp;rhs) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a588f51a220cf4eca9e7df44ff04977e7 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable" id="r_aa4e69312548672dbcad53a369ded5630"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () <a class="el" href="structby_1_1no_wrap.html">const</a> =0</td></tr>
+<a class="el" href="classby_1_1tweak.html">virtual</a> <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () <a class="el" href="classby_1_1tweak.html">const</a> =0</td></tr>
 <tr class="separator:aa4e69312548672dbcad53a369ded5630 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable" id="r_a2f07327fb7b52a45b6fbaa48ae0eb89f"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a2f07327fb7b52a45b6fbaa48ae0eb89f inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a390706279ba9b1d3edc72b8e24096931 inherit pub_methods_classby_1_1type_providable" id="r_a390706279ba9b1d3edc72b8e24096931"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(isSub)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
 <tr class="separator:a390706279ba9b1d3edc72b8e24096931 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159b7129535e10f7455631f9dd83ef44 inherit pub_methods_classby_1_1type_providable" id="r_a159b7129535e10f7455631f9dd83ef44"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="classby_1_1tweak.html">const</a> me &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a159b7129535e10f7455631f9dd83ef44 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2461c92af9ee4f424a197beb341135a2 inherit pub_methods_classby_1_1type_providable" id="r_a2461c92af9ee4f424a197beb341135a2"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(isSub)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSub</b> (<a class="el" href="classby_1_1tweak.html">const</a> me *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSub)</td></tr>
 <tr class="separator:a2461c92af9ee4f424a197beb341135a2 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a58d5c9754baf2cac10f00d3c464fb4 inherit pub_methods_classby_1_1type_providable" id="r_a9a58d5c9754baf2cac10f00d3c464fb4"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a9a58d5c9754baf2cac10f00d3c464fb4 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88afd96107b542735244fcc761385f08 inherit pub_methods_classby_1_1type_providable" id="r_a88afd96107b542735244fcc761385f08"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(isSuper)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
 <tr class="separator:a88afd96107b542735244fcc761385f08 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a93289f111e4000ee98a943149409c4 inherit pub_methods_classby_1_1type_providable" id="r_a6a93289f111e4000ee98a943149409c4"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="classby_1_1tweak.html">const</a> me &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a6a93289f111e4000ee98a943149409c4 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24df0319e39a1ebd35cfdd3b9ea09f72 inherit pub_methods_classby_1_1type_providable" id="r_a24df0319e39a1ebd35cfdd3b9ea09f72"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">me</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(isSuper)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSuper</b> (<a class="el" href="classby_1_1tweak.html">const</a> me *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(isSuper)</td></tr>
 <tr class="separator:a24df0319e39a1ebd35cfdd3b9ea09f72 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable" id="r_aacf82d8ddf74c862902802dfad217ddc"><td class="memTemplParams" colspan="2">
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSub</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSub</b> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:aacf82d8ddf74c862902802dfad217ddc inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable" id="r_aa64bd64ab1354fb0dc0689389bc485c6"><td class="memTemplParams" colspan="2">
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSuper</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSuper</b> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:aa64bd64ab1354fb0dc0689389bc485c6 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable" id="r_af6f60075f199d6eb48d39ed8e33b4329"><td class="memTemplParams" colspan="2">
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> ()</td></tr>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> ()</td></tr>
 <tr class="separator:af6f60075f199d6eb48d39ed8e33b4329 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable" id="r_ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </td></tr>
-<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1type_providable.html#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(cast&lt; <a class="el" href="structby_1_1no_wrap.html">T</a> &gt;()) <a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">void</a> *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>)</td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable" id="r_ad05c9ba2164853c3e8db3af3cb5198c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">const</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classby_1_1type_providable.html#ad05c9ba2164853c3e8db3af3cb5198c3">cast</a> () <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(cast&lt; T &gt;()) <a class="el" href="classby_1_1tweak.html">virtual</a> void *cast(<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1tweak.html">to</a>)</td></tr>
 <tr class="memdesc:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe cast to target type using type hierarchy information.  <br /></td></tr>
 <tr class="separator:ad05c9ba2164853c3e8db3af3cb5198c3 inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d50919c02f16448bc84396c625dd5b inherit pub_methods_classby_1_1type_providable" id="r_a09d50919c02f16448bc84396c625dd5b"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="structby_1_1no_wrap.html">to</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_CONST_FUNC</a>(cast(<a class="el" href="structby_1_1no_wrap.html">to</a>)) <a class="el" href="structby_1_1no_wrap.html">void</a> *cast(<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(cast)</td></tr>
+<a class="el" href="classby_1_1tweak.html">const</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;<a class="el" href="classby_1_1tweak.html">to</a>) <a class="el" href="classby_1_1tweak.html">const</a> BY_CONST_FUNC(cast(<a class="el" href="classby_1_1tweak.html">to</a>)) void *cast(<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(cast)</td></tr>
 <tr class="separator:a09d50919c02f16448bc84396c625dd5b inherit pub_methods_classby_1_1type_providable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classby_1_1tbindable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classby_1_1tbindable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classby_1_1tbindable.html">by::tbindable&lt; instance &gt;</a></td></tr>
 <tr class="memitem:a1308e87b9ed85ad6d75856303e1066c7 inherit pub_methods_classby_1_1tbindable" id="r_a1308e87b9ed85ad6d75856303e1066c7"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator nbool</b> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator nbool</b> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:a1308e87b9ed85ad6d75856303e1066c7 inherit pub_methods_classby_1_1tbindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69159b910a8dbc6b07409dfe68da90de inherit pub_methods_classby_1_1tbindable" id="r_a69159b910a8dbc6b07409dfe68da90de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbindable.html#a69159b910a8dbc6b07409dfe68da90de">bind</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it)</td></tr>
+<tr class="memitem:a69159b910a8dbc6b07409dfe68da90de inherit pub_methods_classby_1_1tbindable" id="r_a69159b910a8dbc6b07409dfe68da90de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classby_1_1tbindable.html#a69159b910a8dbc6b07409dfe68da90de">bind</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it)</td></tr>
 <tr class="memdesc:a69159b910a8dbc6b07409dfe68da90de inherit pub_methods_classby_1_1tbindable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind to instance pointer.  <br /></td></tr>
 <tr class="separator:a69159b910a8dbc6b07409dfe68da90de inherit pub_methods_classby_1_1tbindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9a21c2610ea2c73b81a6c2657acb4be inherit pub_methods_classby_1_1tbindable" id="r_ab9a21c2610ea2c73b81a6c2657acb4be"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;it) <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="separator:ab9a21c2610ea2c73b81a6c2657acb4be inherit pub_methods_classby_1_1tbindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43b847a63dcc863bd21352cccc2f8c03 inherit pub_methods_classby_1_1tbindable" id="r_a43b847a63dcc863bd21352cccc2f8c03"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(canBind)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(canBind)</td></tr>
 <tr class="separator:a43b847a63dcc863bd21352cccc2f8c03 inherit pub_methods_classby_1_1tbindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9178875b22b692a75582354be6292918 inherit pub_methods_classby_1_1tbindable" id="r_a9178875b22b692a75582354be6292918"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">BY_SIDE_FUNC</a>(canBind)</td></tr>
+<a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>canBind</b> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *it) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="group__indep.html#gaf9728243b720c9bd25896286411e6e11">BY_SIDE_FUNC</a>(canBind)</td></tr>
 <tr class="separator:a9178875b22b692a75582354be6292918 inherit pub_methods_classby_1_1tbindable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a67a771ff88056d4cb4bdfcca5db681e4" id="r_a67a771ff88056d4cb4bdfcca5db681e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a771ff88056d4cb4bdfcca5db681e4">_assign</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1binder.html">binder</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>)</td></tr>
+<tr class="memitem:a67a771ff88056d4cb4bdfcca5db681e4" id="r_a67a771ff88056d4cb4bdfcca5db681e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a771ff88056d4cb4bdfcca5db681e4">_assign</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1binder.html">binder</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a67a771ff88056d4cb4bdfcca5db681e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns binder from another binder.  <br /></td></tr>
 <tr class="separator:a67a771ff88056d4cb4bdfcca5db681e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcad99d72defbd4df3e158119ba51c2d" id="r_afcad99d72defbd4df3e158119ba51c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcad99d72defbd4df3e158119ba51c2d">_onSame</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>) <a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">override</a></td></tr>
+<tr class="memitem:afcad99d72defbd4df3e158119ba51c2d" id="r_afcad99d72defbd4df3e158119ba51c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1tweak.html">nbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcad99d72defbd4df3e158119ba51c2d">_onSame</a> (<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;rhs) <a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1tweak.html">override</a></td></tr>
 <tr class="memdesc:afcad99d72defbd4df3e158119ba51c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two <a class="el" href="classby_1_1type_providable.html" title="Interface for objects that can provide their type information.">typeProvidable</a> objects are same instance.  <br /></td></tr>
 <tr class="separator:afcad99d72defbd4df3e158119ba51c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a74d172ef4ab08dd3a0b479485f87e9" id="r_a7a74d172ef4ab08dd3a0b479485f87e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1life.html">life</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a74d172ef4ab08dd3a0b479485f87e9">_getBindTag</a> () <a class="el" href="structby_1_1no_wrap.html">const</a></td></tr>
+<tr class="memitem:a7a74d172ef4ab08dd3a0b479485f87e9" id="r_a7a74d172ef4ab08dd3a0b479485f87e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1life.html">life</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a74d172ef4ab08dd3a0b479485f87e9">_getBindTag</a> () <a class="el" href="classby_1_1tweak.html">const</a></td></tr>
 <tr class="memdesc:a7a74d172ef4ab08dd3a0b479485f87e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves life object associated with bound instance.  <br /></td></tr>
 <tr class="separator:a7a74d172ef4ab08dd3a0b479485f87e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -303,7 +324,7 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="structby_1_1id.html">id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_itsId</b></td></tr>
 <tr class="separator:a1043ee5517c728dbef01b8313ebc8612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40ebcb1b13f1f0511f9f5941e435506" id="r_ae40ebcb1b13f1f0511f9f5941e435506"><td class="memItemLeft" align="right" valign="top"><a id="ae40ebcb1b13f1f0511f9f5941e435506" name="ae40ebcb1b13f1f0511f9f5941e435506"></a>
-<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_type</b></td></tr>
+<a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_type</b></td></tr>
 <tr class="separator:ae40ebcb1b13f1f0511f9f5941e435506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7209f84466e60b52215735ea0c5776" id="r_a2a7209f84466e60b52215735ea0c5776"><td class="memItemLeft" align="right" valign="top"><a id="a2a7209f84466e60b52215735ea0c5776" name="a2a7209f84466e60b52215735ea0c5776"></a>
 <a class="el" href="classby_1_1bind_tacticable.html">bindTacticable</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_tactic</b></td></tr>
@@ -312,42 +333,43 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a60519f1c6bd00b89a29ae86c8942f82d" id="r_a60519f1c6bd00b89a29ae86c8942f82d"><td class="memItemLeft" align="right" valign="top"><a id="a60519f1c6bd00b89a29ae86c8942f82d" name="a60519f1c6bd00b89a29ae86c8942f82d"></a>
-<a class="el" href="structby_1_1no_wrap.html">struct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>::binderTest</b></td></tr>
+<a class="el" href="classby_1_1tweak.html">struct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>::binderTest</b></td></tr>
 <tr class="separator:a60519f1c6bd00b89a29ae86c8942f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generalized binding class for managing <a class="el" href="classby_1_1instance.html">instance</a> lifecycles. </p>
-<p>Can bind any object inheriting from <a class="el" href="classby_1_1instance.html">instance</a>. Uses reference counting to properly destroy objects at appropriate times. Similar to std::weak_ptr and std::shared_ptr, with <a class="el" href="classby_1_1tweak.html">tweak</a> handling weak pointers and <a class="el" href="classby_1_1tstr.html">tstr</a> handling strong pointers.</p>
+<div class="textblock"><p>Generalized binding class for managing instance lifecycles. </p>
+<p>Can bind any object inheriting from instance. Uses reference counting to properly destroy objects at appropriate times. Similar to std::weak_ptr and std::shared_ptr, with <a class="el" href="classby_1_1tweak.html">tweak</a> handling weak pointers and <a class="el" href="classby_1_1tstr.html">tstr</a> handling strong pointers.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
-<p>Basic usage with <a class="el" href="#a876d0a090326604be8e4116408ea734f" title="Binds instance to this binder with reference counting.">bind()</a>, isBind(), and get(): </p><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code hl_struct" href="structby_1_1no_wrap.html">A</a> : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1instance.html">instance</a> {}; <span class="comment">// Inherits instance, so bindable</span></div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">A</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a> = <span class="keyword">new</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">A</a>();</div>
+<p>Basic usage with <a class="el" href="#a876d0a090326604be8e4116408ea734f" title="Binds instance to this binder with reference counting.">bind()</a>, isBind(), and get(): </p><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code hl_class" href="classby_1_1tweak.html">A</a> : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1instance.html">instance</a> {}; <span class="comment">// Inherits instance, so bindable</span></div>
+<div class="line"><a class="code hl_class" href="classby_1_1tweak.html">A</a>* <a class="code hl_class" href="classby_1_1tweak.html">a</a> = <span class="keyword">new</span> <a class="code hl_class" href="classby_1_1tweak.html">A</a>();</div>
 <div class="line"> </div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;A&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">strBinder</a>;</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">strBinder</a>.bind(<a class="code hl_struct" href="structby_1_1no_wrap.html">a</a>);</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">tstr&lt;A&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">strBinder</a>;</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">strBinder</a>.<a class="code hl_function" href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">bind</a>(<a class="code hl_class" href="classby_1_1tweak.html">a</a>);</div>
 <div class="line">    <span class="comment">// a&#39;s life count becomes 1</span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">strBinder</a>.isBind(); <span class="comment">// true</span></div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">a</a> == <a class="code hl_struct" href="structby_1_1no_wrap.html">strBinder</a>.get(); <span class="comment">// true</span></div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">strBinder</a>.isBind(); <span class="comment">// true</span></div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">a</a> == <a class="code hl_class" href="classby_1_1tweak.html">strBinder</a>.get(); <span class="comment">// true</span></div>
 <div class="line">} <span class="comment">// strBinder destroys, life count becomes 0, a automatically destroyed</span></div>
 <div class="line"> </div>
 <div class="line">*a; <span class="comment">// Error: using destroyed object</span></div>
 <div class="ttc" id="aclassby_1_1instance_html"><div class="ttname"><a href="classby_1_1instance.html">by::instance</a></div><div class="ttdoc">Base class for all managed instances in memlite system.</div><div class="ttdef"><b>Definition</b> instance.hpp:41</div></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
-</div><!-- fragment --><p>More concise real-world usage: </p><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code hl_struct" href="structby_1_1no_wrap.html">shell</a> : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1instance.html">instance</a> {</div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access.</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html_aad93c7f516f18ef4f1369a2af0d0a3bd"><div class="ttname"><a href="classby_1_1tweak.html#aad93c7f516f18ef4f1369a2af0d0a3bd">by::tweak::bind</a></div><div class="ttdeci">const T *get() const BY_CONST_FUNC(get()) using super nbool bind(const T &amp;new1)</div><div class="ttdoc">Binds a weak reference to the specified instance.</div></div>
+</div><!-- fragment --><p>More concise real-world usage: </p><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code hl_class" href="classby_1_1tweak.html">shell</a> : <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1instance.html">instance</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="keywordtype">int</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">age</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_class" href="classby_1_1tweak.html">age</a>;</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;shell&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">foo</a>() {</div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">tstr&lt;shell&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">ptr</a>(<span class="keyword">new</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">shell</a>()); <span class="comment">// Create and bind simultaneously</span></div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">ptr</a>-&gt;age = 57; <span class="comment">// Supports operator-&gt;</span></div>
+<div class="line"><a class="code hl_class" href="classby_1_1tweak.html">tstr&lt;shell&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">foo</a>() {</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">tstr&lt;shell&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">ptr</a>(<span class="keyword">new</span> <a class="code hl_class" href="classby_1_1tweak.html">shell</a>()); <span class="comment">// Create and bind simultaneously</span></div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">ptr</a>-&gt;age = 57; <span class="comment">// Supports operator-&gt;</span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">tweak&lt;shell&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">weak</a> = <a class="code hl_struct" href="structby_1_1no_wrap.html">ptr</a>; <span class="comment">// Binders can be compatible</span></div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">callShell</a>(*<a class="code hl_struct" href="structby_1_1no_wrap.html">weak</a>); <span class="comment">// Supports operator* too</span></div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">tweak&lt;shell&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">weak</a> = <a class="code hl_class" href="classby_1_1tweak.html">ptr</a>; <span class="comment">// Binders can be compatible</span></div>
+<div class="line">    <a class="code hl_class" href="classby_1_1tweak.html">callShell</a>(*<a class="code hl_class" href="classby_1_1tweak.html">weak</a>); <span class="comment">// Supports operator* too</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">ptr</a>; <span class="comment">// Returns by value, count maintained</span></div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_class" href="classby_1_1tweak.html">ptr</a>; <span class="comment">// Returns by value, count maintained</span></div>
 <div class="line">                <span class="comment">// shell object created with new won&#39;t be destroyed</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="why_not_shared_ptr"></a>
@@ -355,20 +377,21 @@ Why not use shared_ptr?</h1>
 <p>Several advantages over shared_ptr:</p>
 <ol type="1">
 <li>Reference counting block attached to instance itself<ul>
-<li>shared_ptr creates a "Control block" on the heap for reference counting. This makes the following dangerous: <div class="fragment"><div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">Foo</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">raw</a> = <span class="keyword">new</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">Foo</a>();</div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">shared_ptr&lt;Foo&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">foo1</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">raw</a>);</div>
-<div class="line"><a class="code hl_struct" href="structby_1_1no_wrap.html">shared_ptr&lt;Foo&gt;</a> <a class="code hl_struct" href="structby_1_1no_wrap.html">foo2</a>(<a class="code hl_struct" href="structby_1_1no_wrap.html">raw</a>); <span class="comment">// Separate control blocks -&gt; double delete</span></div>
+<li>shared_ptr creates a "Control block" on the heap for reference counting. This makes the following dangerous: <div class="fragment"><div class="line"><a class="code hl_class" href="classby_1_1tweak.html">Foo</a>* <a class="code hl_class" href="classby_1_1tweak.html">raw</a> = <span class="keyword">new</span> <a class="code hl_class" href="classby_1_1tweak.html">Foo</a>();</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tweak.html">shared_ptr&lt;Foo&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">foo1</a>(<a class="code hl_class" href="classby_1_1tweak.html">raw</a>);</div>
+<div class="line"><a class="code hl_class" href="classby_1_1tweak.html">shared_ptr&lt;Foo&gt;</a> <a class="code hl_class" href="classby_1_1tweak.html">foo2</a>(<a class="code hl_class" href="classby_1_1tweak.html">raw</a>); <span class="comment">// Separate control blocks -&gt; double delete</span></div>
 </div><!-- fragment --></li>
 <li>memlite uses <a class="el" href="classby_1_1life.html">life</a> class for reference counting, assigned per instance by <a class="el" href="classby_1_1watcher.html">watcher</a>. No double deletion problem.</li>
 </ul>
 </li>
 <li>Provides ADT (Abstract Data Type)<ul>
-<li>tstr and tweak share same binder base, enabling generic logic: <div class="fragment"><div class="line"><span class="keywordtype">void</span> me::rel(<a class="code hl_class" href="classby_1_1binder.html">binder</a>&amp; <a class="code hl_struct" href="structby_1_1no_wrap.html">me</a>) { <span class="comment">// Works for both tstr and tweak</span></div>
-<div class="line">    <a class="code hl_struct" href="structby_1_1no_wrap.html">WHEN</a>(!<a class="code hl_struct" href="structby_1_1no_wrap.html">me</a>.isBind()) .ret();</div>
-<div class="line">    <a class="code hl_class" href="classby_1_1life.html">life</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">l</a> = <a class="code hl_struct" href="structby_1_1no_wrap.html">me</a>._getBindTag();</div>
-<div class="line">    <span class="keywordflow">if</span>(<a class="code hl_struct" href="structby_1_1no_wrap.html">l</a>) <a class="code hl_struct" href="structby_1_1no_wrap.html">l</a>-&gt;_onStrong(-1);</div>
+<li>tstr and tweak share same binder base, enabling generic logic: <div class="fragment"><div class="line"><span class="keywordtype">void</span> me::rel(<a class="code hl_class" href="classby_1_1binder.html">binder</a>&amp; me) { <span class="comment">// Works for both tstr and tweak</span></div>
+<div class="line">    WHEN(!me.isBind()) .ret();</div>
+<div class="line">    <a class="code hl_class" href="classby_1_1life.html">life</a>* l = me.<a class="code hl_function" href="#a7a74d172ef4ab08dd3a0b479485f87e9">_getBindTag</a>();</div>
+<div class="line">    <span class="keywordflow">if</span>(l) l-&gt;_onStrong(-1);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassby_1_1binder_html"><div class="ttname"><a href="classby_1_1binder.html">by::binder</a></div><div class="ttdoc">Generalized binding class for managing instance lifecycles.</div><div class="ttdef"><b>Definition</b> binder.hpp:108</div></div>
+<div class="ttc" id="aclassby_1_1binder_html_a7a74d172ef4ab08dd3a0b479485f87e9"><div class="ttname"><a href="#a7a74d172ef4ab08dd3a0b479485f87e9">by::binder::_getBindTag</a></div><div class="ttdeci">life * _getBindTag() const</div><div class="ttdoc">Retrieves life object associated with bound instance.</div></div>
 <div class="ttc" id="aclassby_1_1life_html"><div class="ttname"><a href="classby_1_1life.html">by::life</a></div><div class="ttdoc">Binding tag for instance reference tracking and lifecycle management.</div><div class="ttdef"><b>Definition</b> life.hpp:21</div></div>
 </div><!-- fragment --></li>
 </ul>
@@ -398,7 +421,7 @@ Additional information</h1>
         <tr>
           <td class="memname">by::binder::binder </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em>, </span></td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -430,9 +453,9 @@ Additional information</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::binder::_assign </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::binder::_assign </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1binder.html">binder</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1binder.html">binder</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -488,9 +511,9 @@ Additional information</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::binder::_onSame </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::binder::_onSame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type_providable.html">typeProvidable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -517,9 +540,9 @@ Additional information</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::binder::bind </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::binder::bind </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -545,9 +568,9 @@ Additional information</h1>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> <a class="el" href="classby_1_1tbindable.html">by::tbindable</a>&lt; <a class="el" href="structby_1_1no_wrap.html">T</a> &gt;::bind </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> <a class="el" href="classby_1_1tbindable.html">by::tbindable</a>&lt; T &gt;::bind </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> *</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> T *</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -568,9 +591,9 @@ Additional information</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::binder::canBind </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::binder::canBind </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -599,9 +622,9 @@ Additional information</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">virtual</a> <a class="el" href="structby_1_1no_wrap.html">nbool</a> <a class="el" href="classby_1_1tbindable.html">by::tbindable</a>&lt; <a class="el" href="structby_1_1no_wrap.html">T</a> &gt;::canBind </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">virtual</a> <a class="el" href="classby_1_1tweak.html">nbool</a> <a class="el" href="classby_1_1tbindable.html">by::tbindable</a>&lt; T &gt;::canBind </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1type.html">type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -622,10 +645,10 @@ Additional information</h1>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class="el" href="structby_1_1no_wrap.html">T</a> &gt; </div>
+template&lt;<a class="el" href="classby_1_1tweak.html">typename</a> T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">T</a> * by::typeProvidable::cast </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">const</a> T * by::typeProvidable::cast </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const &amp;</td>
@@ -669,7 +692,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nbool</a> by::binder::isBind </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">nbool</a> by::binder::isBind </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -693,7 +716,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp; by::binder::operator* </td>
+          <td class="memname"><a class="el" href="classby_1_1tweak.html">const</a> <a class="el" href="classby_1_1instance.html">instance</a> &amp; by::binder::operator* </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const &amp;</td>
@@ -742,7 +765,7 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">void</a> by::binder::rel </td>
+          <td class="memname">void by::binder::rel </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -760,12 +783,13 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/stela/stela/module/memlite/binder/<a class="el" href="binder_2binder_8hpp_source.html">binder.hpp</a></li>
-<li>/home/runner/work/stela/stela/module/memlite/binder/<b>binder.cpp</b></li>
+<li>_deps/stela_dep-src/module/memlite/binder/<a class="el" href="binder_2binder_8hpp_source.html">binder.hpp</a></li>
+<li>_deps/stela_dep-src/module/memlite/binder/<b>binder.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

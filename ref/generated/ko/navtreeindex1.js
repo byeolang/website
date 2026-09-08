@@ -175,6 +175,8 @@ var NAVTREEINDEX1 =
 "biteration_8hpp_source.html":[10,1,0,2,0,0,3],
 "block_expr_8hpp.html":[10,1,0,0,1,2],
 "block_expr_8hpp_source.html":[10,1,0,0,1,2],
+"bool_stela_8hpp.html":[10,0,1,0,3,0,1],
+"bool_stela_8hpp_source.html":[10,0,1,0,3,0,1],
 "break_expr_8hpp.html":[10,1,0,0,1,3],
 "break_expr_8hpp_source.html":[10,1,0,0,1,3],
 "bridge_2cpp_8hpp.html":[10,1,0,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "build_information_8hpp_source.html":[10,0,0,0,0,1,1],
 "builtin_8hpp.html":[10,1,0,11],
 "builtin_8hpp_source.html":[10,1,0,11],
-"byeol_8hpp_source.html":[10,1,0,6,0,2],
-"byeol_meta_8hpp.html":[10,0,0,0,0,4,2],
-"byeol_meta_8hpp_source.html":[10,0,0,0,0,4,2]
+"byeol_8hpp_source.html":[10,1,0,6,0,2]
 };

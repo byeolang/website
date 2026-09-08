@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>byeol: /home/runner/work/stela/stela/module/clog/stream/consoleStream.hpp Source File</title>
+<title>byeol: _deps/stela_dep-src/module/clog/stream/consoleStream.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" rel="stylesheet" href="../../../assets/css/galmuri.css" />
@@ -131,7 +131,7 @@ $(function(){initNavTree('console_stream_8hpp_source.html',''); initResizable();
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classby_1_1console_stream.html">   13</a></span>    <span class="keyword">class </span>_nout <a class="code hl_class" href="classby_1_1console_stream.html">consoleStream</a>: <span class="keyword">public</span> <a class="code hl_class" href="classby_1_1stream.html">stream</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">BY_ME</a>(<a class="code hl_class" href="classby_1_1console_stream.html">consoleStream</a>, <a class="code hl_class" href="classby_1_1stream.html">stream</a>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        BY_ME(<a class="code hl_class" href="classby_1_1console_stream.html">consoleStream</a>, <a class="code hl_class" href="classby_1_1stream.html">stream</a>)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="classby_1_1console_stream.html">consoleStream</a>();</div>
@@ -141,18 +141,19 @@ $(function(){initNavTree('console_stream_8hpp_source.html',''); initResizable();
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">const</span> std::string&amp; getName() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">using </span>super::logBypass;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b">   24</a></span>        <a class="code hl_struct" href="structby_1_1no_wrap.html">nbool</a> <a class="code hl_function" href="classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b">logBypass</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structby_1_1no_wrap.html">nchar</a>* <a class="code hl_struct" href="structby_1_1no_wrap.html">msg</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b">   24</a></span>        <a class="code hl_class" href="classby_1_1tweak.html">nbool</a> <a class="code hl_function" href="classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b">logBypass</a>(<span class="keyword">const</span> nchar* msg) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    };</div>
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="ttc" id="aclassby_1_1console_stream_html"><div class="ttname"><a href="classby_1_1console_stream.html">by::consoleStream</a></div><div class="ttdoc">Console output stream for logging to standard output.</div><div class="ttdef"><b>Definition</b> consoleStream.hpp:13</div></div>
 <div class="ttc" id="aclassby_1_1console_stream_html_a227780ae707503508295c2e4e0f7a00b"><div class="ttname"><a href="classby_1_1console_stream.html#a227780ae707503508295c2e4e0f7a00b">by::consoleStream::logBypass</a></div><div class="ttdeci">nbool logBypass(const nchar *msg) override</div><div class="ttdoc">Log message directly without formatting.</div></div>
 <div class="ttc" id="aclassby_1_1stream_html"><div class="ttname"><a href="classby_1_1stream.html">by::stream</a></div><div class="ttdoc">Base class for all logging output streams.</div><div class="ttdef"><b>Definition</b> stream.hpp:13</div></div>
+<div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access.</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
 <div class="ttc" id="astream_2stream_8hpp_html"><div class="ttname"><a href="stream_2stream_8hpp.html">stream.hpp</a></div></div>
-<div class="ttc" id="astructby_1_1no_wrap_html"><div class="ttname"><a href="structby_1_1no_wrap.html">by::noWrap</a></div><div class="ttdoc">Rich logging support with polymorphic type conversion.</div><div class="ttdef"><b>Definition</b> richLog.hpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
+<a id="scroll-to-top" class="to-top-button" href="#top" aria-label="Move to the top of this page" title="to Top">to Top</a>
 </body>
 </html>

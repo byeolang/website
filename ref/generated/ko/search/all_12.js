@@ -37,9 +37,11 @@ var searchData=
   ['richlog_20확장_34',['richLog 확장',['../ag-architecture-clog.html#autotoc_md224',1,'']]],
   ['richlog_2ehpp_35',['richLog.hpp',['../build_2__deps_2stela__dep-src_2module_2clog_2rich_log_8hpp.html',1,'(전역 이름공간)'],['../build_2__deps_2stela__dep-src_2module_2meta_2common_2rich_log_8hpp.html',1,'(전역 이름공간)'],['../build_2__deps_2stela__dep-src_2module_2stela_2common_2rich_log_8hpp.html',1,'(전역 이름공간)'],['../module_2core_2common_2rich_log_8hpp.html',1,'(전역 이름공간)']]],
   ['root_20handling_36',['Root handling',['../classby_1_1stela_writer.html#root_handling',1,'']]],
-  ['rtti_2ehpp_37',['rtti.hpp',['../rtti_8hpp.html',1,'(전역 이름공간)'],['../rtti_2rtti_8hpp.html',1,'(전역 이름공간)']]],
-  ['rule_38',['Rule',['../aj-architecture-stela.html#autotoc_md305',1,'indentation rule'],['../classby_1_1stela_parser.html#indentation_rule',1,'Indentation rule']]],
-  ['rule_20after_20using_20dispatcher_39',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]],
-  ['run_40',['Run',['../an-testing-guide.html#autotoc_md533',1,'parse와 run'],['../an-testing-guide.html#autotoc_md540',1,'shouldParsed vs shouldVerified vs run()']]],
-  ['run_20an_20autopod_41',['is required to run an autopod',['../classby_1_1autopod.html#thread',1,'']]]
+  ['rootstela_37',['rootStela',['../classby_1_1root_stela.html',1,'by']]],
+  ['rootstela_2ehpp_38',['rootStela.hpp',['../root_stela_8hpp.html',1,'']]],
+  ['rtti_2ehpp_39',['rtti.hpp',['../rtti_8hpp.html',1,'(전역 이름공간)'],['../rtti_2rtti_8hpp.html',1,'(전역 이름공간)']]],
+  ['rule_40',['Rule',['../aj-architecture-stela.html#autotoc_md305',1,'indentation rule'],['../classby_1_1stela_parser.html#indentation_rule',1,'Indentation rule']]],
+  ['rule_20after_20using_20dispatcher_41',['must return token in your rule after using dispatcher',['../classby_1_1token_dispatcher.html#you',1,'']]],
+  ['run_42',['Run',['../an-testing-guide.html#autotoc_md533',1,'parse와 run'],['../an-testing-guide.html#autotoc_md540',1,'shouldParsed vs shouldVerified vs run()']]],
+  ['run_20an_20autopod_43',['is required to run an autopod',['../classby_1_1autopod.html#thread',1,'']]]
 ];

@@ -63,6 +63,8 @@ var searchData=
   ['nulstela_20클래스_20null_20object_20패턴_60',['nulStela 클래스 - Null Object 패턴',['../aj-architecture-stela.html#autotoc_md295',1,'']]],
   ['nulstela_2ehpp_61',['nulStela.hpp',['../nul_stela_8hpp.html',1,'']]],
   ['numeric_5fmatch_62',['NUMERIC_MATCH',['../tpriorities_8hpp.html#a1a65fd37188763b1ebe002fc60d4608ea54c23a8ed10f61e0444ae8dca709cf37',1,'by']]],
-  ['nvoid_63',['nVoid',['../classby_1_1n_void.html',1,'by']]],
-  ['nvoid_2ehpp_64',['nVoid.hpp',['../n_void_8hpp.html',1,'']]]
+  ['numstela_63',['numStela',['../classby_1_1num_stela.html',1,'by']]],
+  ['numstela_2ehpp_64',['numStela.hpp',['../num_stela_8hpp.html',1,'']]],
+  ['nvoid_65',['nVoid',['../classby_1_1n_void.html',1,'by']]],
+  ['nvoid_2ehpp_66',['nVoid.hpp',['../n_void_8hpp.html',1,'']]]
 ];

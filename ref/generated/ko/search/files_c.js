@@ -17,5 +17,6 @@ var searchData=
   ['nstr_2ehpp_14',['nStr.hpp',['../n_str_8hpp.html',1,'']]],
   ['ntype_2ehpp_15',['ntype.hpp',['../ntype_8hpp.html',1,'']]],
   ['nulstela_2ehpp_16',['nulStela.hpp',['../nul_stela_8hpp.html',1,'']]],
-  ['nvoid_2ehpp_17',['nVoid.hpp',['../n_void_8hpp.html',1,'']]]
+  ['numstela_2ehpp_17',['numStela.hpp',['../num_stela_8hpp.html',1,'']]],
+  ['nvoid_2ehpp_18',['nVoid.hpp',['../n_void_8hpp.html',1,'']]]
 ];

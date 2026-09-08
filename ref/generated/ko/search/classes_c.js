@@ -20,5 +20,6 @@ var searchData=
   ['nstr_17',['nStr',['../classby_1_1n_str.html',1,'by']]],
   ['ntype_18',['ntype',['../classby_1_1ntype.html',1,'by']]],
   ['nulstela_19',['nulStela',['../classby_1_1nul_stela.html',1,'by']]],
-  ['nvoid_20',['nVoid',['../classby_1_1n_void.html',1,'by']]]
+  ['numstela_20',['numStela',['../classby_1_1num_stela.html',1,'by']]],
+  ['nvoid_21',['nVoid',['../classby_1_1n_void.html',1,'by']]]
 ];

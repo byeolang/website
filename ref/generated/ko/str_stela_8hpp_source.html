@@ -134,13 +134,16 @@ $(function(){initNavTree('str_stela_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        BY(<a class="code hl_class" href="classby_1_1tweak.html">CLASS</a>(<a class="code hl_class" href="classby_1_1str_stela.html">strStela</a>, <a class="code hl_class" href="classby_1_1val_stela.html">valStela</a>), <a class="code hl_class" href="classby_1_1tweak.html">VISIT</a>())</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">using </span>super::valStela;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// spelled out rather than `using super::valStela`: that would inherit the</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">// numeric ctors too, and strStela(42) would silently store &quot;42&quot;.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classby_1_1str_stela.html">strStela</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classby_1_1tweak.html">rawVal</a>, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="classby_1_1str_stela.html">strStela</a>(<span class="keyword">const</span> <a class="code hl_class" href="classby_1_1tweak.html">nchar</a>* <a class="code hl_class" href="classby_1_1tweak.html">rawVal</a>, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace by</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// namespace by</span></div>
 <div class="ttc" id="aclassby_1_1str_stela_html"><div class="ttname"><a href="classby_1_1str_stela.html">by::strStela</a></div><div class="ttdoc">String-value marker over valStela.</div><div class="ttdef"><b>Definition</b> strStela.hpp:15</div></div>
 <div class="ttc" id="aclassby_1_1tweak_html"><div class="ttname"><a href="classby_1_1tweak.html">by::tweak</a></div><div class="ttdoc">Weak reference smart pointer with type-safe access</div><div class="ttdef"><b>Definition</b> tweak.hpp:16</div></div>
-<div class="ttc" id="aclassby_1_1val_stela_html"><div class="ttname"><a href="classby_1_1val_stela.html">by::valStela</a></div><div class="ttdoc">ADT base for value-holding stela nodes.</div><div class="ttdef"><b>Definition</b> valStela.hpp:19</div></div>
+<div class="ttc" id="aclassby_1_1val_stela_html"><div class="ttname"><a href="classby_1_1val_stela.html">by::valStela</a></div><div class="ttdoc">Scalar value — the abstract base of every leaf form.</div><div class="ttdef"><b>Definition</b> valStela.hpp:21</div></div>
 <div class="ttc" id="aval_stela_8hpp_html"><div class="ttname"><a href="val_stela_8hpp.html">valStela.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
