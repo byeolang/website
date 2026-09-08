@@ -123,20 +123,20 @@ $(function(){initNavTree('visitee_8inl_source.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// visitee list for stelaVisitor.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//   The base `stela` itself is dispatched through its own hand-written accept /</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//   visit overloads and does not appear here: it is abstract, and the `def` block</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//   it used to stand for is `defStela`. Every type listed here is concrete, so a</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//   node of it can reach `visit()` at runtime. A type that does not override a</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//   given onVisit / onLeave chains up to its `super` overload.</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//   When a new leaf-typed stela subclass is added:</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//     - register it with an X(T) line here;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//     - put BY(CLASS(T, ...), VISIT()) in its header;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//     - put BY(DEF_ME(T), DEF_VISIT()) in its impl.</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>X(defStela)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>X(rootStela)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>X(valStela)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>X(arrStela)</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//   Abstract types do not appear here: `stela` and `valStela` are dispatched through</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//   hand-written overloads in stelaVisitor instead, since no node of theirs exists at</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//   runtime to reach `visit()`. Every type listed here is concrete. A type that does</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//   not override a given onVisit / onLeave chains up to its `super` overload.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//   When a new leaf-typed stela subclass is added:</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//     - register it with an X(T) line here;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//     - put BY(CLASS(T, ...), VISIT()) in its header;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//     - put BY(DEF_ME(T), DEF_VISIT()) in its impl.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>X(defStela)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>X(rootStela)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>X(arrStela)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>X(numStela)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>X(boolStela)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>X(strStela)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>X(verStela)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>X(nulStela)</div>
