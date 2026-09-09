@@ -1,11 +1,11 @@
 var topics =
 [
-    [ "Indep", "group__indep.html", "group__indep" ],
+    [ "Indep", "group__indep.html", null ],
     [ "Clog", "group__clog.html", "group__clog" ],
     [ "Meta", "group__meta.html", "group__meta" ],
     [ "Memlite", "group__memlite.html", "group__memlite" ],
     [ "Stela", "group__stela.html", "group__stela" ],
-    [ "Core", "group__core.html", "group__core" ],
+    [ "Core", "group__core.html", null ],
     [ "Sys", "group__sys.html", null ],
-    [ "Frontend", "group__frontend.html", "group__frontend" ]
+    [ "Frontend", "group__frontend.html", null ]
 ];
