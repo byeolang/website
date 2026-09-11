@@ -34,7 +34,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "adam_8hpp.html",
-"group__memlite.html"
+"filterable_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

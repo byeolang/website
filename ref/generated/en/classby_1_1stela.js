@@ -9,6 +9,8 @@ var classby_1_1stela =
     [ "asChar", "classby_1_1stela.html#ade9f6865e42459e4cd3348912fac604c", null ],
     [ "asInt", "classby_1_1stela.html#a67b76252cb3535b91157d46430826611", null ],
     [ "asStr", "classby_1_1stela.html#a14f7c34ed4fd17bc16daad2a41669411", null ],
+    [ "getPostfix", "classby_1_1stela.html#a84f99fcee05615262ff199866ce225bb", null ],
+    [ "getPrefix", "classby_1_1stela.html#aa1a6f49c1810a666838fb58ddbb3a5c1", null ],
     [ "isExist", "classby_1_1stela.html#a0f135d3a966dde9b13386358142111aa", null ],
     [ "operator nbool", "classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650", null ]
 ];

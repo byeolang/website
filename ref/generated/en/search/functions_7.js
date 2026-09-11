@@ -4,6 +4,9 @@ var searchData=
   ['getbindtag_1',['getBindTag',['../classby_1_1instance.html#a838b3f5841bf020b5f5e421db1efa7ce',1,'by::instance::getBindTag()'],['../classby_1_1life.html#a1c6863710d9d5ae14182ef3950e993bd',1,'by::life::getBindTag()']]],
   ['getitsid_2',['getItsId',['../classby_1_1binder.html#ab9e19ad120640f64ba322a497cae7a10',1,'by::binder']]],
   ['getleafs_3',['getLeafs',['../classby_1_1type.html#a38c802ba295c8b05a322a118d2e16a7f',1,'by::type']]],
-  ['getstatic_4',['getStatic',['../classby_1_1type.html#a03f76be2976586efd88e5f13b22474a5',1,'by::type']]],
-  ['getstrongcnt_5',['getStrongCnt',['../classby_1_1life.html#a66ba365b6d156e251dfa34d98386964d',1,'by::life']]]
+  ['getpostfix_4',['getPostfix',['../classby_1_1stela.html#a84f99fcee05615262ff199866ce225bb',1,'by::stela']]],
+  ['getprefix_5',['getPrefix',['../classby_1_1stela.html#aa1a6f49c1810a666838fb58ddbb3a5c1',1,'by::stela']]],
+  ['getrepr_6',['getRepr',['../classby_1_1val_stela.html#a700330d406f21b433d2d905b1992acb0',1,'by::valStela']]],
+  ['getstatic_7',['getStatic',['../classby_1_1type.html#a03f76be2976586efd88e5f13b22474a5',1,'by::type']]],
+  ['getstrongcnt_8',['getStrongCnt',['../classby_1_1life.html#a66ba365b6d156e251dfa34d98386964d',1,'by::life']]]
 ];

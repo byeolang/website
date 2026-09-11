@@ -1,5 +1,12 @@
 var NAVTREEINDEX1 =
 {
+"filterable_8hpp_source.html":[2,0,0,1,1],
+"filters_8hpp.html":[2,0,0,1,2],
+"filters_8hpp_source.html":[2,0,0,1,2],
+"group__clog.html":[0,1],
+"group__core.html":[0,5],
+"group__frontend.html":[0,7],
+"group__indep.html":[0,0],
 "group__memlite.html":[0,3],
 "group__meta.html":[0,2],
 "group__stela.html":[0,4],

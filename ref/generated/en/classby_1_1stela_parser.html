@@ -198,6 +198,18 @@ std::vector&lt; <a class="el" href="structby_1_1no_wrap.html">ncnt</a> &gt; &amp
 <tr class="memitem:aa28a51c35babe9656a0e61519512d79f" id="r_aa28a51c35babe9656a0e61519512d79f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nchar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa28a51c35babe9656a0e61519512d79f">onScanUnexpected</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">token</a>)</td></tr>
 <tr class="memdesc:aa28a51c35babe9656a0e61519512d79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an unexpected token encountered during scanning.  <br /></td></tr>
 <tr class="separator:aa28a51c35babe9656a0e61519512d79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12fefc1b72951bb67cd72a6efa3f8fc" id="r_ad12fefc1b72951bb67cd72a6efa3f8fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad12fefc1b72951bb67cd72a6efa3f8fc">onComment</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">text</a>)</td></tr>
+<tr class="memdesc:ad12fefc1b72951bb67cd72a6efa3f8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects a piece of comment text the scanner would otherwise drop.  <br /></td></tr>
+<tr class="separator:ad12fefc1b72951bb67cd72a6efa3f8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac9d4a84beca9325551f2804cecc325" id="r_a0ac9d4a84beca9325551f2804cecc325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac9d4a84beca9325551f2804cecc325">onCommentBegin</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *<a class="el" href="structby_1_1no_wrap.html">text</a>, <a class="el" href="structby_1_1no_wrap.html">ncnt</a> col)</td></tr>
+<tr class="memdesc:a0ac9d4a84beca9325551f2804cecc325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects the <code>#</code> or <code>##</code> that opens a comment.  <br /></td></tr>
+<tr class="separator:a0ac9d4a84beca9325551f2804cecc325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ee40eb42a2af0ebadf6d79e1488371" id="r_ab7ee40eb42a2af0ebadf6d79e1488371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7ee40eb42a2af0ebadf6d79e1488371">onTokenDef</a> (<a class="el" href="structby_1_1no_wrap.html">nint</a> <a class="el" href="structby_1_1no_wrap.html">tok</a>)</td></tr>
+<tr class="memdesc:ab7ee40eb42a2af0ebadf6d79e1488371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the start of a <code>def</code> header so its comments can be held aside.  <br /></td></tr>
+<tr class="separator:ab7ee40eb42a2af0ebadf6d79e1488371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cc74985db075b1566509613140fdca" id="r_a90cc74985db075b1566509613140fdca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structby_1_1no_wrap.html">nint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90cc74985db075b1566509613140fdca">onTokenDefAssign</a> (<a class="el" href="structby_1_1no_wrap.html">nint</a> <a class="el" href="structby_1_1no_wrap.html">tok</a>)</td></tr>
+<tr class="memdesc:a90cc74985db075b1566509613140fdca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds aside the comments above an assignment until its value is complete.  <br /></td></tr>
+<tr class="separator:a90cc74985db075b1566509613140fdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91e8fef814ae424ebee6c255ee9df291" id="r_a91e8fef814ae424ebee6c255ee9df291"><td class="memItemLeft" align="right" valign="top"><a id="a91e8fef814ae424ebee6c255ee9df291" name="a91e8fef814ae424ebee6c255ee9df291"></a>
 <a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>onDefBlock</b> (<a class="el" href="classby_1_1stela.html">stela</a> *<a class="el" href="structby_1_1no_wrap.html">stmt</a>)</td></tr>
 <tr class="separator:a91e8fef814ae424ebee6c255ee9df291"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +226,13 @@ std::vector&lt; <a class="el" href="structby_1_1no_wrap.html">ncnt</a> &gt; &amp
 <tr class="memitem:ae44ca826671ba20cc08a7a56c7ecb719" id="r_ae44ca826671ba20cc08a7a56c7ecb719"><td class="memItemLeft" align="right" valign="top"><a id="ae44ca826671ba20cc08a7a56c7ecb719" name="ae44ca826671ba20cc08a7a56c7ecb719"></a>
 <a class="el" href="classby_1_1ver_stela.html">verStela</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>onVer</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">version</a>)</td></tr>
 <tr class="separator:ae44ca826671ba20cc08a7a56c7ecb719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a8539bc6d3a3458e847ede9c026c81" id="r_a17a8539bc6d3a3458e847ede9c026c81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a8539bc6d3a3458e847ede9c026c81">onInt</a> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">repr</a>)</td></tr>
+<tr class="memdesc:a17a8539bc6d3a3458e847ede9c026c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a number node from an integer literal, keeping its spelling.  <br /></td></tr>
+<tr class="separator:a17a8539bc6d3a3458e847ede9c026c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b52ed5e26067118c92302708dc7111" id="r_a88b52ed5e26067118c92302708dc7111"><td class="memItemLeft" align="right" valign="top"><a id="a88b52ed5e26067118c92302708dc7111" name="a88b52ed5e26067118c92302708dc7111"></a>
+<a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>onFlt</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;<a class="el" href="structby_1_1no_wrap.html">repr</a>)</td></tr>
+<tr class="memdesc:a88b52ed5e26067118c92302708dc7111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a number node from a float literal, keeping its spelling. <br /></td></tr>
+<tr class="separator:a88b52ed5e26067118c92302708dc7111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b6e4c183ab26470e6b17f084082a040" id="r_a7b6e4c183ab26470e6b17f084082a040"><td class="memItemLeft" align="right" valign="top"><a id="a7b6e4c183ab26470e6b17f084082a040" name="a7b6e4c183ab26470e6b17f084082a040"></a>
 <a class="el" href="classby_1_1stela.html">stela</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>onDefProp</b> (<a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;name, <a class="el" href="classby_1_1stela.html">stela</a> &amp;<a class="el" href="structby_1_1no_wrap.html">rhs</a>)</td></tr>
 <tr class="separator:a7b6e4c183ab26470e6b17f084082a040"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,6 +292,60 @@ Similar structure to byeol parser</h1>
 Indentation rule</h1>
 <p>Like the byeol language, stela applies the offside rule, making it very sensitive to indentation. Unlike typical languages, it must count whitespace after newlines. Once indentation is confirmed and determines which scope the code line belongs to, whitespace should be ignored afterward. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad12fefc1b72951bb67cd72a6efa3f8fc" name="ad12fefc1b72951bb67cd72a6efa3f8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12fefc1b72951bb67cd72a6efa3f8fc">&#9670;&#160;</a></span>onComment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">void</a> by::stelaParser::onComment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collects a piece of comment text the scanner would otherwise drop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The matched text, <code>#</code> and <code>##</code> markers included. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ac9d4a84beca9325551f2804cecc325" name="a0ac9d4a84beca9325551f2804cecc325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac9d4a84beca9325551f2804cecc325">&#9670;&#160;</a></span>onCommentBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">void</a> by::stelaParser::onCommentBegin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> <a class="el" href="structby_1_1no_wrap.html">nchar</a> *</td>          <td class="paramname"><span class="paramname"><em>text</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">ncnt</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collects the <code>#</code> or <code>##</code> that opens a comment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">col</td><td>The column it opens at. Later lines of a <code>##</code> comment are kept relative to it, since the writer re-indents every line to its node's depth. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae86562b13cfeec03f8bf61ccc0226154" name="ae86562b13cfeec03f8bf61ccc0226154"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae86562b13cfeec03f8bf61ccc0226154">&#9670;&#160;</a></span>onDedent()</h2>
 
@@ -358,6 +431,31 @@ Indentation rule</h1>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The token ID for INDENT. </dd></dl>
+
+</div>
+</div>
+<a id="a17a8539bc6d3a3458e847ede9c026c81" name="a17a8539bc6d3a3458e847ede9c026c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a8539bc6d3a3458e847ede9c026c81">&#9670;&#160;</a></span>onInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classby_1_1stela.html">stela</a> * by::stelaParser::onInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">const</a> std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>repr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a number node from an integer literal, keeping its spelling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repr</td><td>The literal as written, decimal or <code>0x</code> hex. One wider than nint is reported as a parse error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -657,6 +755,46 @@ template&lt;<a class="el" href="structby_1_1no_wrap.html">typename</a> <a class=
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The token ID. </dd></dl>
+
+</div>
+</div>
+<a id="ab7ee40eb42a2af0ebadf6d79e1488371" name="ab7ee40eb42a2af0ebadf6d79e1488371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ee40eb42a2af0ebadf6d79e1488371">&#9670;&#160;</a></span>onTokenDef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nint</a> by::stelaParser::onTokenDef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">nint</a></td>          <td class="paramname"><span class="paramname"><em>tok</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks the start of a <code>def</code> header so its comments can be held aside. </p>
+<p>The <a class="el" href="classby_1_1def_stela.html">defStela</a> is not created until its whole block has reduced, by which time the pending comments belong to its first child instead. </p>
+
+</div>
+</div>
+<a id="a90cc74985db075b1566509613140fdca" name="a90cc74985db075b1566509613140fdca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cc74985db075b1566509613140fdca">&#9670;&#160;</a></span>onTokenDefAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structby_1_1no_wrap.html">nint</a> by::stelaParser::onTokenDefAssign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structby_1_1no_wrap.html">nint</a></td>          <td class="paramname"><span class="paramname"><em>tok</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Holds aside the comments above an assignment until its value is complete. </p>
+<p>A value is not always created first: an array is created after its elements, and the first one would otherwise take the comment. </p>
 
 </div>
 </div>

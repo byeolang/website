@@ -265,13 +265,13 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Serializes a stela tree back to stela source text. </p>
-<p>Implemented as a <a class="el" href="classby_1_1stela_visitor.html">stelaVisitor</a>. writes a canonical, lossy form. What is NOT preserved:</p><ul>
-<li>comments in the original file</li>
-<li>original whitespace, blank lines, and indentation width beyond the writer's configured indent</li>
-<li>the original insertion order of children (<code>std::map</code> inside <a class="el" href="group__stela.html">Stela</a> sorts them alphabetically)</li>
-<li>the exact literal spelling of numbers (e.g. <code>1_000</code> becomes <code>1000</code>)</li>
+<p>Implemented as a <a class="el" href="classby_1_1stela_visitor.html">stelaVisitor</a>. writes a canonical form.</p>
+<p>What IS preserved: values, structure, child order, comments, and the spelling of number literals (<code>0xFF</code> stays <code>0xFF</code>). Round-trip <code>parse -&gt; edit -&gt; write -&gt; parse</code> gives the same value tree, and <code>write -&gt; parse -&gt; write</code> produces the same string (canonical fixed point).</p>
+<p>What is NOT preserved:</p><ul>
+<li>original indentation width and any hand alignment: indentation is generated from depth, so a node inserted into a hand-written block still lands right</li>
+<li>blank lines</li>
+<li>where a comment closing a block sits: it becomes the prefix of the node after the block</li>
 </ul>
-<p>What IS preserved: values and structure. Round-trip <code>parse -&gt; edit -&gt; write -&gt; parse</code> gives the same value tree, and <code>write -&gt; parse -&gt; write</code> produces the same string (canonical fixed point).</p>
 <h1><a class="anchor" id="root_handling"></a>
 Root handling</h1>
 <p>The writer serializes a compilation unit, so it accepts only a rootStela: handing <a class="el" href="#a17d3f204bb0f74664134d5ea53e67cc9" title="Serializes root and its subtree to a string.">write()</a> or <a class="el" href="#a672aed820f4d3198cae5138212e50cc5" title="Serializes root and writes the result to path (LF, UTF-8, non-atomic).">writeFile()</a> any other node is rejected (empty string / false). The <a class="el" href="classby_1_1root_stela.html">rootStela</a> itself is never emitted as <code>def &lt;name&gt;</code> — only its children are — matching the shape of stela source, where the top level is implicit.</p>
