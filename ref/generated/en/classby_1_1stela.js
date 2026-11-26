@@ -1,6 +1,6 @@
 var classby_1_1stela =
 [
-    [ "stela", "classby_1_1stela.html#a94b8ebbb3bb9577e5002b146a83a0163", null ],
+    [ "stela", "classby_1_1stela.html#ae4de547b9f4dea562c1a96efbe539ad1", null ],
     [ "accept", "classby_1_1stela.html#a51222c3c3823b10c8a717b0492c88c68", null ],
     [ "add", "classby_1_1stela.html#a0b2f66a7e4de8302ceb4d5898eb45c75", null ],
     [ "add", "classby_1_1stela.html#a2040bd961bd3df0f3544c20b6f0df0a4", null ],
@@ -9,8 +9,8 @@ var classby_1_1stela =
     [ "asChar", "classby_1_1stela.html#ade9f6865e42459e4cd3348912fac604c", null ],
     [ "asInt", "classby_1_1stela.html#a67b76252cb3535b91157d46430826611", null ],
     [ "asStr", "classby_1_1stela.html#a14f7c34ed4fd17bc16daad2a41669411", null ],
-    [ "getPostfix", "classby_1_1stela.html#a84f99fcee05615262ff199866ce225bb", null ],
-    [ "getPrefix", "classby_1_1stela.html#aa1a6f49c1810a666838fb58ddbb3a5c1", null ],
+    [ "getComment", "classby_1_1stela.html#a46f161ee430b7c2de776aed51a05010f", null ],
+    [ "getParent", "classby_1_1stela.html#aebb8e321d72ee6feec5b521b2b52646b", null ],
     [ "isExist", "classby_1_1stela.html#a0f135d3a966dde9b13386358142111aa", null ],
     [ "operator nbool", "classby_1_1stela.html#add66eeb73db8dfa18546871281f4c650", null ]
 ];

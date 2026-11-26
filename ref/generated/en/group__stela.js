@@ -3,6 +3,12 @@ var group__stela =
     [ "by::arrStela", "classby_1_1arr_stela.html", null ],
     [ "by::boolStela", "classby_1_1bool_stela.html", null ],
     [ "by::defStela", "classby_1_1def_stela.html", null ],
+    [ "by::emptyStela", "classby_1_1empty_stela.html", [
+      [ "asBool", "classby_1_1empty_stela.html#a6fca04808eb6dc84b91110b99d0f700d", null ],
+      [ "asChar", "classby_1_1empty_stela.html#a105946bc321969e874d9146fee1731c6", null ],
+      [ "asInt", "classby_1_1empty_stela.html#a939396d900d2fcfa3747ec9c2cdd2949", null ],
+      [ "asStr", "classby_1_1empty_stela.html#a80b835d780f48202a2ef8ed3d82ce17c", null ]
+    ] ],
     [ "by::nulStela", "classby_1_1nul_stela.html", [
       [ "asBool", "classby_1_1nul_stela.html#aa662a693dd496ab136946241cb84c83d", null ],
       [ "asChar", "classby_1_1nul_stela.html#a6724f91d87907e34d5f99e4f2e0f73d0", null ],
@@ -13,14 +19,12 @@ var group__stela =
     [ "by::numStela", "classby_1_1num_stela.html", null ],
     [ "by::point", "structby_1_1point.html", null ],
     [ "by::area", "structby_1_1area.html", null ],
-    [ "by::rootStela", "classby_1_1root_stela.html", null ],
     [ "by::strStela", "classby_1_1str_stela.html", null ],
     [ "by::valStela", "classby_1_1val_stela.html", [
       [ "asBool", "classby_1_1val_stela.html#aa4487667d04a78efb8c54e1daa26603c", null ],
       [ "asChar", "classby_1_1val_stela.html#a37f0e6ef1ed3647449cca6cfc6502549", null ],
       [ "asInt", "classby_1_1val_stela.html#a706fc0eb1acfef5e24ae440dcf8502f2", null ],
-      [ "asStr", "classby_1_1val_stela.html#a2c6b8c1214253068af60f9a016af77d4", null ],
-      [ "getRepr", "classby_1_1val_stela.html#a700330d406f21b433d2d905b1992acb0", null ]
+      [ "asStr", "classby_1_1val_stela.html#a2c6b8c1214253068af60f9a016af77d4", null ]
     ] ],
     [ "by::verStela", "classby_1_1ver_stela.html", null ],
     [ "by::stelaTokenScan", "classby_1_1stela_token_scan.html", [
@@ -36,12 +40,9 @@ var group__stela =
     ] ],
     [ "by::stelaParser", "classby_1_1stela_parser.html", [
       [ "onComment", "classby_1_1stela_parser.html#ad12fefc1b72951bb67cd72a6efa3f8fc", null ],
-      [ "onCommentBegin", "classby_1_1stela_parser.html#a0ac9d4a84beca9325551f2804cecc325", null ],
       [ "onDedent", "classby_1_1stela_parser.html#ae86562b13cfeec03f8bf61ccc0226154", null ],
-      [ "onFlt", "classby_1_1stela_parser.html#a88b52ed5e26067118c92302708dc7111", null ],
       [ "onIgnoreIndent", "classby_1_1stela_parser.html#aa8126f9843f87ccbc37510c074a0ce28", null ],
       [ "onIndent", "classby_1_1stela_parser.html#a2eeb608b2f3a2679d7483803eaedc7b3", null ],
-      [ "onInt", "classby_1_1stela_parser.html#a17a8539bc6d3a3458e847ede9c026c81", null ],
       [ "onParseErr", "classby_1_1stela_parser.html#a6e1284a605428cf15c4f41fd69fc26a4", null ],
       [ "onPrimitive", "classby_1_1stela_parser.html#aaef4803bc084bc2ec2467126fc47a136", null ],
       [ "onScan", "classby_1_1stela_parser.html#a8015252731a807792d7b4259dfd50686", null ],
@@ -50,8 +51,6 @@ var group__stela =
       [ "onScanUnexpected", "classby_1_1stela_parser.html#aa28a51c35babe9656a0e61519512d79f", null ],
       [ "onTokenColon", "classby_1_1stela_parser.html#a729fa1d82ee9d25247be9da1e54392ef", null ],
       [ "onTokenComma", "classby_1_1stela_parser.html#a6a7cc336cb31b6bb393af9b37989976f", null ],
-      [ "onTokenDef", "classby_1_1stela_parser.html#ab7ee40eb42a2af0ebadf6d79e1488371", null ],
-      [ "onTokenDefAssign", "classby_1_1stela_parser.html#a90cc74985db075b1566509613140fdca", null ],
       [ "onTokenEndOfFile", "classby_1_1stela_parser.html#ae798717c044a3fa9e47419230f1382fe", null ],
       [ "onTokenNewLine", "classby_1_1stela_parser.html#ae5c6b199ffc51752f6c0f9f81dd507d6", null ],
       [ "parse", "classby_1_1stela_parser.html#a84863e34bd7231a123123be99fb79b64", null ],
@@ -68,6 +67,10 @@ var group__stela =
       [ "countUp", "classby_1_1stela_smart_dedent.html#a7bc29e06927de235262827df9d1211ec", null ],
       [ "dedent", "classby_1_1stela_smart_dedent.html#af2fcb5f9d2c15b3640c191ff09cb98f7", null ],
       [ "useLater", "classby_1_1stela_smart_dedent.html#a8f35e4fbf2c848211db264ee5e2b6169", null ]
+    ] ],
+    [ "by::stelaState", "classby_1_1stela_state.html", [
+      [ "state", "classby_1_1stela_state_1_1state.html", null ],
+      [ "onLeave", "classby_1_1stela_state.html#a4398a131c9933e9b75b83a13d1d051d1", null ]
     ] ],
     [ "by::stelaTokenDispatcher", "classby_1_1stela_token_dispatcher.html", [
       [ "pop", "classby_1_1stela_token_dispatcher.html#a266771f883f1910866277b233f10dd21", null ]
